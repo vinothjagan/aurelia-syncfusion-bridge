@@ -8,5 +8,10 @@ export function configure(aurelia: Aurelia, configCallback?: (builder: EjConfigB
     configCallback(builder);
   }
 
-  aurelia.globalResources(builder.globalResources);
+      // Pull the data off the builder
+  let resources = builder.resources;
+
+  if (builder.useGlobalResources) {
+    aurelia.globalResources(resources);
+  }
 }

@@ -1,5 +1,5 @@
 import {customElement} from 'aurelia-templating';
-import {constants} from './common/constants';
+import {constants} from '../common/constants';
 
 @customElement(`${constants.elementPrefix}click-counter`)
 export class ClickCounter {
