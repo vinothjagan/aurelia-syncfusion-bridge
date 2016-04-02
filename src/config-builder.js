@@ -1,16 +1,16 @@
 /**
 * Plugin configuration builder
 */
-export class EJConfigBuilder {
+export class ConfigBuilder {
 
   globalResources = [];
 
-  web() : EJConfigBuilder {
-    return this.ejDatePicker();
+  useAll() : ConfigBuilder {
+    return this.useClickCounter();
   }
 
-  ejDatePicker(): EJConfigBuilder {
-    this.globalResources.push('./web/ej.datepicker');
+  useClickCounter(): ConfigBuilder {
+    this.globalResources.push('./click-counter');
     return this;
   }
 }

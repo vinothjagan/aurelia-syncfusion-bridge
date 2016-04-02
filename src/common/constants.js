@@ -1,6 +1,5 @@
-export const ejConstants = {
-  eventPrefix: 'e-on-',
-  bindablePrefix: 'e-',
+export const constants = {
+  bindablePrefix: 'ej-',
   attributePrefix: 'ej-',
   elementPrefix: 'ej-'
 };

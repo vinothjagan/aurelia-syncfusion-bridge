@@ -1,8 +1,8 @@
 import {Aurelia} from 'aurelia-framework';
-import {EJConfigBuilder} from './config-builder';
+import {ConfigBuilder} from './config-builder';
 
-export function configure(aurelia: Aurelia, configCallback?: (builder: EJConfigBuilder) => void) {
-  let builder = new EJConfigBuilder();
+export function configure(aurelia: Aurelia, configCallback?: (builder: ConfigBuilder) => void) {
+  let builder = new ConfigBuilder();
 
   if (configCallback !== undefined && typeof(configCallback) === 'function') {
     configCallback(builder);
