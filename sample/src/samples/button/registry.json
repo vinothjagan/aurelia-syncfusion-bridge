@@ -1,0 +1,9 @@
+{
+  "title": "Button",
+  "samples": {
+    "basic-use": {
+      "default" : true,
+      "files": ["html", "js"]
+    }
+  }
+}

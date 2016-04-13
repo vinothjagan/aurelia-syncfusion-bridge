@@ -11,7 +11,7 @@ export class EjConfigBuilder {
   */
   useAll() : EjConfigBuilder {
     this.ejClickCounter();
-
+    this.ejButton();
     return this;
   }
 
@@ -27,6 +27,10 @@ export class EjConfigBuilder {
 
   ejClickCounter(): EjConfigBuilder {
     this.resources.push('./clickcounter/clickcounter');
+    return this;
+  }
+  ejButton(): EjConfigBuilder {
+    this.resources.push('./button/button');
     return this;
   }
 }

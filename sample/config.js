@@ -13,7 +13,8 @@ System.config({
   paths: {
     "*": "src/*",
     "github:*": "jspm_packages/github/*",
-    "npm:*": "jspm_packages/npm/*"
+    "npm:*": "jspm_packages/npm/*",
+    "ej.*": "src/root/vendors/scripts/web/ej.*.js"
   },
 
   meta: {
