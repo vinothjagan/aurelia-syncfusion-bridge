@@ -2,10 +2,6 @@ import {Util} from './util';
 import {Container} from 'aurelia-dependency-injection';
 import {constants} from './constants';
 
-/**
-* To get binded events from the element
-* @param element The Element from which events acquired
-*/
 export function getEventOption(element) {
   let name;
   let attr;
