@@ -1,0 +1,9 @@
+{
+  "title": "Menu",
+  "samples": {
+    "basic-use": {
+      "default" : true,
+      "files": ["html", "js"]
+    }
+  }
+}
