@@ -10,7 +10,7 @@ export class EjConfigBuilder {
   * Globally register all EJ wrappers including templating support
   */
   useAll() : EjConfigBuilder {
-    this.ejClickCounter().ejButton().ejMenu().ejAutocomplete();
+    this.ejClickCounter().ejButton().ejMenu();
     return this;
   }
 
