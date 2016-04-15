@@ -1,6 +1,7 @@
 export class EjButton {
   textValue = 'Click Here';
+  checkValue=true;
   changeText() {
-    $('#button').data('ejButton').option('text', 'Clicked');
+    this.textValue = 'Clicked';
   }
 }
