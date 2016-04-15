@@ -12,7 +12,7 @@ System.config({
   paths: {
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*",
-   "ej.*": "vendors/js/ej.*.js"
+   "ej.*": "vendors/scripts/web/ej.*.js",
   },
 
   map: {
