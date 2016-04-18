@@ -12,7 +12,7 @@ System.config({
   paths: {
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*",
-   "ej.*": "vendors/scripts/web/ej.*.js",
+    "ej.*": "vendors/scripts/web/ej.*.js"
   },
 
   map: {
@@ -35,6 +35,7 @@ System.config({
     "bootstrap": "github:twbs/bootstrap@3.3.6",
     "core-js": "npm:core-js@1.2.6",
     "jquery": "github:components/jquery@2.2.1",
+    "jquery-easing": "npm:jquery.easing@1.3.2",
     "polymer/mutationobservers": "github:polymer/mutationobservers@0.4.2",
     "text": "github:systemjs/plugin-text@0.0.4",
     "github:jspm/nodelibs-assert@0.1.0": {
@@ -196,6 +197,9 @@ System.config({
     },
     "npm:inherits@2.0.1": {
       "util": "github:jspm/nodelibs-util@0.1.0"
+    },
+    "npm:jquery.easing@1.3.2": {
+      "jquery": "npm:jquery@2.2.3"
     },
     "npm:path-browserify@0.0.0": {
       "process": "github:jspm/nodelibs-process@0.1.2"

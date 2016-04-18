@@ -46,6 +46,7 @@ System.config({
     "font-awesome": "npm:font-awesome@4.5.0",
     "google/code-prettify": "github:google/code-prettify@master",
     "jquery": "github:components/jquery@2.1.4",
+    "jquery-easing": "npm:jquery.easing@1.3.2",
     "json": "github:systemjs/plugin-json@0.1.0",
     "prettify": "npm:prettify@0.1.7",
     "prism": "github:PrismJS/prism@1.3.0",
@@ -265,6 +266,9 @@ System.config({
     },
     "npm:is-fullwidth-code-point@1.0.0": {
       "number-is-nan": "npm:number-is-nan@1.0.0"
+    },
+    "npm:jquery.easing@1.3.2": {
+      "jquery": "npm:jquery@2.2.3"
     },
     "npm:js-prettify@1.4.0": {
       "config-chain": "npm:config-chain@1.1.10",
