@@ -4,6 +4,9 @@
     "basic-use": {
       "default" : true,
       "files": ["html", "js"]
+    },
+    "checkbox":{
+      "files":["html","js"]
     }
   }
 }

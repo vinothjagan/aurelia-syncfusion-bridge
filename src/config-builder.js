@@ -10,7 +10,7 @@ export class EjConfigBuilder {
   * Globally register all EJ wrappers including templating support
   */
   useAll() : EjConfigBuilder {
-    this.ejClickCounter().ejButton().ejMenu();
+    this.ejClickCounter().ejButton().ejMenu().ejCheckBox();
     return this;
   }
 
@@ -32,9 +32,13 @@ export class EjConfigBuilder {
     this.resources.push('./button/button');
     return this;
   }
-  
+
   ejMenu(): EjConfigBuilder {
     this.resources.push('./menu/menu');
+    return this;
+  }
+  ejCheckBox():EjConfigBuilder {
+    this.resources.push('./checkbox/checkbox');
     return this;
   }
 }
