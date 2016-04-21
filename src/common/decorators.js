@@ -3,13 +3,14 @@ import {Container} from 'aurelia-dependency-injection';
 import {metadata} from 'aurelia-metadata';
 import {Util} from './util';
 
-export function generateBindables(controlName, inputs) {
+export function generateBindables(controlName, inputs, twoWayProperties) {
   return function(target, key, descriptor) {
     let behaviorResource = metadata.getOrCreateOwn(metadata.resource, HtmlBehaviorResource, target);
     let container = (Container.instance || new Container());
     let util = container.get(Util);
     let len = inputs.length;
     target.prototype.controlName = controlName;
+    target.prototype.twoWays = twoWayProperties ? twoWayProperties : [];
     if (len) {
       target.prototype.controlProperties = inputs;
       for (let i = 0; i < len; i++) {
