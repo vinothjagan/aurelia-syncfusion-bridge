@@ -1,7 +1,8 @@
 {
   "Most popular": {
     "Click counter": { "status": "done", "moduleId": "click-counter" },
-    "Button":{"status":"done","moduleId":"button"}
+    "Button":{"status":"done","moduleId":"button"},
+    "Grid":{"status":"done","moduleId":"grid"}
   },
   "Navigation":{
      "Button":{"status":"done","moduleId":"button"},

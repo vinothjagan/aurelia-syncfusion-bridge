@@ -11,10 +11,10 @@ export class Util {
     return name.replace(/-([a-z])/g, (g) => g[1].toUpperCase());
   }
 
-  getOptions(options) {
+  getOptions(model, properties ) {
     let bindableproperites = {};
-    for (let prop of options.controlProperties) {
-      let value = options[this.getBindablePropertyName(prop)];
+    for (let prop of properties) {
+      let value = model[this.getBindablePropertyName(prop)];
       if (this.hasValue(value)) {
         bindableproperites[prop] = value;
       }
@@ -25,7 +25,7 @@ export class Util {
   getControlPropertyName(options, propertyName) {
     let property;
     for (let prop of options.controlProperties) {
-      if(propertyName === this.getBindablePropertyName(prop)) {
+      if (propertyName === this.getBindablePropertyName(prop)) {
         property = prop;
         break;
       }
