@@ -1,0 +1,9 @@
+{
+  "title": "Tab",
+  "samples": {
+    "basic-use": {
+      "default" : true,
+      "files": ["html", "js"]
+    }
+  }
+}

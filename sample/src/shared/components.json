@@ -6,6 +6,7 @@
   },
   "Navigation":{
      "Button":{"status":"done","moduleId":"button"},
-     "Menu" : {"status" : "done", "moduleId" : "menu"}
+     "Menu" : {"status" : "done", "moduleId" : "menu"},
+     "Tab" : {"status" : "done", "moduleId" : "tab"}
   }
 }

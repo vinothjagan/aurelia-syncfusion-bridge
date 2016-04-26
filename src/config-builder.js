@@ -10,7 +10,7 @@ export class EjConfigBuilder {
   * Globally register all EJ wrappers including templating support
   */
   useAll() : EjConfigBuilder {
-    this.ejClickCounter().ejButton().ejMenu().ejCheckBox().ejGrid().ejTemplate();
+    this.ejClickCounter().ejButton().ejMenu().ejCheckBox().ejGrid().ejTemplate().ejTab();
     return this;
   }
 
@@ -48,6 +48,11 @@ export class EjConfigBuilder {
   }
   ejTemplate(): EjConfigBuilder {
     this.resources.push('./common/template');
+    return this;
+  }
+  
+  ejTab(): EjConfigBuilder {
+    this.resources.push('./tab/tab');
     return this;
   }
 }
