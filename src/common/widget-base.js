@@ -1,5 +1,7 @@
 import {getEventOption} from './events';
 import {TaskQueue} from 'aurelia-task-queue';
+import {Util} from '../common/util';
+
 let firstValue = {};
 export class WidgetBase {
 
@@ -7,11 +9,13 @@ export class WidgetBase {
 * To Create an widget
 * @param option Object which contains  Element in which  widget will be created
 */
-
   createWidget(option) {
     this.allOption = this.getWidgetOptions(option.element);
     this.createTwoWays();
     this.widget = jQuery($(option.element))[this.controlName](this.allOption ).data(this.controlName);
+    if (this.templateProcessor) {
+      this.templateProcessor.initWidgetDependancies(this);
+    }
   }
 
   createTwoWays() {
@@ -28,7 +32,7 @@ export class WidgetBase {
     let model = this;
     let value = firstValue;
     return function(newVal, isApp) {
-      if(value === firstValue) {
+      if (value === firstValue) {
         let viewModelProp = model.util.getBindablePropertyName(prop);
         value = model[viewModelProp];
         return value;
@@ -51,12 +55,29 @@ export class WidgetBase {
 * @param element Element from which options are acquired
 */
   getWidgetOptions(element) {
-    let propOptions = this.util.getOptions(this);
+    let propOptions = this.util.getOptions(this, this.controlProperties );
     let eventOption = getEventOption(element);
+    if(this.hasChildProperty) {
+      this.getChildProperties(propOptions);
+    }
     return Object.assign({}, propOptions, eventOption);
   }
 
+  getChildProperties(options) {
+    let PropertyName = this.childPropertyName;
+    let childCollection = this[PropertyName];
+    let len = childCollection.length;
+    if(len) {
+      options[PropertyName] = [];
+      let childProperties = childCollection[0].controlProperties;
+      for (let i = 0; i < len; i++) {
+        options[PropertyName].push(this.util.getOptions(childCollection[i], childProperties));
+      }
+    }
+  }
+
   attached() {
+    this.util = new Util();
     this.createWidget({ element: this.element });
   }
 /**
@@ -85,6 +106,10 @@ export class WidgetBase {
     }
   }
   detached() {
+    if (this.templateProcessor) {
+      this.templateProcessor.clearTempalte();
+    }
     this.widget.destroy();
   }
 }
+

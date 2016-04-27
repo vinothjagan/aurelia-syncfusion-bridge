@@ -1,9 +1,5 @@
-import {inject} from 'aurelia-dependency-injection';
-import {customAttribute, bindable} from 'aurelia-templating';
-import {generateBindables} from '../common/decorators';
-import {constants} from '../common/constants';
-import {WidgetBase} from '../common/widget-base';
-import {Util} from '../common/util';
+import {customAttribute, inject, WidgetBase, constants, generateBindables} from '../common/common';
+
 import 'ej.menu.min';
 
 @customAttribute(`${constants.attributePrefix}menu`)
@@ -11,11 +7,10 @@ import 'ej.menu.min';
     'openOnClick', 'subMenuDirection', 'enableCenterAlign', 'showRootLevelArrows', 'showSubLevelArrows', 'enableAnimation', 'enableSeparator', 'enabled', 'fields', 'enableRTL',
     'titleText', 'excludeTarget'])
 
-@inject(Element, Util)
+@inject(Element)
 export class ejMenu extends WidgetBase {
-    constructor(element, util) {
+    constructor(element) {
         super();
         this.element = element;
-        this.util = util;
     }
 }

@@ -48,6 +48,7 @@ System.config({
     "jquery": "github:components/jquery@2.1.4",
     "jquery-easing": "npm:jquery.easing@1.3.2",
     "json": "github:systemjs/plugin-json@0.1.0",
+    "jsrender": "npm:jsrender@0.9.75",
     "prettify": "npm:prettify@0.1.7",
     "prism": "github:PrismJS/prism@1.3.0",
     "showdown": "github:showdownjs/showdown@1.3.0",
@@ -279,6 +280,11 @@ System.config({
       "process": "github:jspm/nodelibs-process@0.1.2",
       "systemjs-json": "github:systemjs/plugin-json@0.1.0"
     },
+    "npm:jsrender@0.9.75": {
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "path": "github:jspm/nodelibs-path@0.1.0",
+      "through2": "npm:through2@2.0.1"
+    },
     "npm:lcid@1.0.0": {
       "invert-kv": "npm:invert-kv@1.0.0",
       "systemjs-json": "github:systemjs/plugin-json@0.1.0"
@@ -312,6 +318,9 @@ System.config({
       "js-prettify": "npm:js-prettify@1.4.0",
       "lodash": "npm:lodash@1.3.1"
     },
+    "npm:process-nextick-args@1.0.6": {
+      "process": "github:jspm/nodelibs-process@0.1.2"
+    },
     "npm:process@0.11.2": {
       "assert": "github:jspm/nodelibs-assert@0.1.0"
     },
@@ -327,6 +336,17 @@ System.config({
       "process": "github:jspm/nodelibs-process@0.1.2",
       "stream-browserify": "npm:stream-browserify@1.0.0",
       "string_decoder": "npm:string_decoder@0.10.31"
+    },
+    "npm:readable-stream@2.0.6": {
+      "buffer": "github:jspm/nodelibs-buffer@0.1.0",
+      "core-util-is": "npm:core-util-is@1.0.2",
+      "events": "github:jspm/nodelibs-events@0.1.1",
+      "inherits": "npm:inherits@2.0.1",
+      "isarray": "npm:isarray@1.0.0",
+      "process": "github:jspm/nodelibs-process@0.1.2",
+      "process-nextick-args": "npm:process-nextick-args@1.0.6",
+      "string_decoder": "npm:string_decoder@0.10.31",
+      "util-deprecate": "npm:util-deprecate@1.0.2"
     },
     "npm:showdown-prettify@1.3.0": {
       "showdown": "npm:showdown@1.3.0"
@@ -353,10 +373,19 @@ System.config({
     "npm:strip-ansi@3.0.1": {
       "ansi-regex": "npm:ansi-regex@2.0.0"
     },
+    "npm:through2@2.0.1": {
+      "process": "github:jspm/nodelibs-process@0.1.2",
+      "readable-stream": "npm:readable-stream@2.0.6",
+      "util": "github:jspm/nodelibs-util@0.1.0",
+      "xtend": "npm:xtend@4.0.1"
+    },
     "npm:url@0.10.3": {
       "assert": "github:jspm/nodelibs-assert@0.1.0",
       "punycode": "npm:punycode@1.3.2",
       "querystring": "npm:querystring@0.2.0",
+      "util": "github:jspm/nodelibs-util@0.1.0"
+    },
+    "npm:util-deprecate@1.0.2": {
       "util": "github:jspm/nodelibs-util@0.1.0"
     },
     "npm:util@0.10.3": {

@@ -1,20 +1,15 @@
-import {inject} from 'aurelia-dependency-injection';
-import {customAttribute, bindable} from 'aurelia-templating';
-import {generateBindables} from '../common/decorators';
-import {constants} from '../common/constants';
-import {WidgetBase} from '../common/widget-base';
-import {Util} from '../common/util';
+import {customAttribute, bindable, inject, WidgetBase, constants, generateBindables} from '../common/common';
+
 import 'ej.button.min';
 
 @customAttribute(`${constants.attributePrefix}button`)
 @generateBindables('ejButton', ['contentType', 'cssClass', 'enabled', 'enableRTL', 'height', 'htmlAttributes', 'imagePosition',
-'prefixIcon', 'repeatButton', 'showRoundedCorner', 'size', 'suffixIcon', 'text', 'timeInterval', 'type', 'width'])
+    'prefixIcon', 'repeatButton', 'showRoundedCorner', 'size', 'suffixIcon', 'text', 'timeInterval', 'type', 'width'])
 
-@inject(Element, Util)
+@inject(Element)
 export class ejButton extends WidgetBase {
-  constructor(element, util) {
-    super();
-    this.element = element;
-    this.util = util;
-  }
+    constructor(element) {
+        super();
+        this.element = element;
+    }
 }
