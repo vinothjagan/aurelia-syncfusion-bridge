@@ -4,17 +4,18 @@ import {Util} from '../common/util';
 
 let firstValue = {};
 export class WidgetBase {
-
 /**
 * To Create an widget
 * @param option Object which contains  Element in which  widget will be created
 */
   createWidget(option) {
     this.allOption = this.getWidgetOptions(option.element);
-    this.createTwoWays();
+    if (!this.ejOptions) {
+      this.createTwoWays();
+    }
     this.widget = jQuery($(option.element))[this.controlName](this.allOption ).data(this.controlName);
     if (this.templateProcessor) {
-      this.templateProcessor.initWidgetDependancies(this);
+      this.templateProcessor.initWidgetDependancies();
     }
   }
 
@@ -35,19 +36,23 @@ export class WidgetBase {
       if (value === firstValue) {
         let viewModelProp = model.util.getBindablePropertyName(prop);
         value = model[viewModelProp];
+        if (value === undefined) {
+          value = this.defaults[prop];
+        }
         return value;
       }
       if (newVal === undefined) {
         return value;
       }
-      if(value === newVal) {
-        return;
+      if (value === newVal) {
+        return null;
       }
       value = newVal;
-      if(!isApp && model.util.hasValue(newVal) ) {
+      if (!isApp && model.util.hasValue(newVal) ) {
         let viewModelProp = model.util.getBindablePropertyName(prop);
         model[viewModelProp] = newVal;
       }
+      return null;
     };
   }
 /**
@@ -55,9 +60,14 @@ export class WidgetBase {
 * @param element Element from which options are acquired
 */
   getWidgetOptions(element) {
-    let propOptions = this.util.getOptions(this, this.controlProperties );
+    let propOptions;
+    if (this.ejOptions) {
+      propOptions = this.ejOptions;
+    } else {
+      propOptions = this.util.getOptions(this, this.controlProperties);
+    }
     let eventOption = getEventOption(element);
-    if(this.hasChildProperty) {
+    if (this.hasChildProperty) {
       this.getChildProperties(propOptions);
     }
     return Object.assign({}, propOptions, eventOption);
@@ -67,7 +77,7 @@ export class WidgetBase {
     let PropertyName = this.childPropertyName;
     let childCollection = this[PropertyName];
     let len = childCollection.length;
-    if(len) {
+    if (len) {
       options[PropertyName] = [];
       let childProperties = childCollection[0].controlProperties;
       for (let i = 0; i < len; i++) {
@@ -87,20 +97,24 @@ export class WidgetBase {
  * @param oldvalue Pld value of the property
  */
   propertyChanged(property, newValue, oldValue) {
-    if(this.widget) {
+    if (this.widget) {
       let modelValue;
       let prop = this.util.getControlPropertyName(this, property);
-      if(prop) {
-        modelValue = this.widget.model[prop];
-        let isTwoway = typeof modelValue === 'function';
-        if(isTwoway) {
-          modelValue = modelValue();
-        }
-        if (modelValue !== newValue) {
-          if(isTwoway) {
-            newValue = this.addTwoways(prop);
+      if (prop) {
+        if (prop !== 'options') {
+          modelValue = this.widget.model[prop];
+          let isTwoway = typeof modelValue === 'function';
+          if (isTwoway) {
+            modelValue = modelValue();
           }
-          this.widget.option(prop, newValue);
+          if (modelValue !== newValue) {
+            if (isTwoway) {
+              newValue = this.addTwoways(prop);
+            }
+            this.widget.option(prop, newValue);
+          }
+        } else {
+          this.widget.option(newValue);
         }
       }
     }

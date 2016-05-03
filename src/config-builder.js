@@ -10,7 +10,8 @@ export class EjConfigBuilder {
   * Globally register all EJ wrappers including templating support
   */
   useAll() : EjConfigBuilder {
-    this.ejClickCounter().ejButton().ejMenu().ejCheckBox().ejGrid().ejTemplate().ejTab();
+    this.ejClickCounter().ejButton().ejMenu().ejCheckBox().ejGrid().ejTemplate().ejTab()
+    .ejToggleButton().ejToolbar().ejListBox();
     return this;
   }
 
@@ -22,8 +23,6 @@ export class EjConfigBuilder {
     this.useGlobalResources = false;
     return this;
   }
-
-
   ejClickCounter(): EjConfigBuilder {
     this.resources.push('./clickcounter/clickcounter');
     return this;
@@ -50,9 +49,20 @@ export class EjConfigBuilder {
     this.resources.push('./common/template');
     return this;
   }
-  
   ejTab(): EjConfigBuilder {
     this.resources.push('./tab/tab');
+    return this;
+  }
+  ejToolbar() : EjConfigBuilder {
+    this.resources.push('./toolbar/toolbar');
+    return this;
+  }
+  ejToggleButton() : EjConfigBuilder {
+    this.resources.push('./togglebutton/togglebutton');
+    return this;
+  }
+  ejListBox() : EjConfigBuilder {
+    this.resources.push('./listbox/listbox');
     return this;
   }
 }

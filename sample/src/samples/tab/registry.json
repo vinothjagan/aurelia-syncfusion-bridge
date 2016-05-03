@@ -1,5 +1,6 @@
 {
   "title": "Tab",
+  "documentation":"http://help.syncfusion.com/js/api/ejTab",
   "samples": {
     "basic-use": {
       "default" : true,

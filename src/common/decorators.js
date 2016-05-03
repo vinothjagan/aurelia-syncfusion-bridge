@@ -8,6 +8,7 @@ export function generateBindables(controlName, inputs, twoWayProperties) {
     let behaviorResource = metadata.getOrCreateOwn(metadata.resource, HtmlBehaviorResource, target);
     let container = (Container.instance || new Container());
     let util = container.get(Util);
+    inputs.push('options');
     let len = inputs.length;
     target.prototype.controlName = controlName;
     target.prototype.twoWays = twoWayProperties ? twoWayProperties : [];
