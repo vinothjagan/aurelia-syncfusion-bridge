@@ -13,9 +13,7 @@ export class SampleRunner {
 
   activate(params, route) {
     let sample = route.navModel.config.sample;
-
     if (!sample) throw new Error('Route does not contain a \'sample\' property');
-
     this.sample = sample;
   }
 

@@ -1,11 +1,22 @@
+
 <template>
-    <div class="root-menu">
-        <ul id="contols-menu" ej-menu="ej-width:100%">
-            <li repeat.for="category of categories" id="${category.title}"><a>${category.title}</a>
-                <ul>
-                    <li repeat.for="ctrl of category.controls"><a href.bind="ctrl.link">${ ctrl.title }</a></li>
-                </ul>
-            </li>
+    <div >
+        <div if.bind="parentVisible" id="category-toolbar" ej-toolbar="ej-width:100%">
+           <ul>
+             <li repeat.for="category of categories">
+             <input  type="checkbox" id="${category}" ej-toggle-button="ej-show-rounded-corner:true;" ej-on-click.trigger="toolbarNavigation($event)"/>
+             <label for="${category}">${category}</label>
+           </li>
+           </ul>
         </ul>
     </div>
+    <div if.bind="childVisible" id="control-toolbar" ej-toolbar="ej-width:100%">
+      <ul>
+             <li repeat.for="sub of subCategory">
+             <input  type="checkbox" id="${sub}" ej-toggle-button="ej-show-rounded-corner:true;" ej-on-click.trigger="toolbarNavigation($event)"/>
+             <label for="${sub}">${sub}</label>
+           </li>
+           </ul>
+        </ul>
+     </div>
 </template>

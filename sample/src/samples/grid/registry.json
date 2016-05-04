@@ -1,5 +1,6 @@
 {
   "title": "Grid",
+  "documentation":"http://help.syncfusion.com/js/api/ejgrid",
   "samples": {
     "basic-use": {
       "default" : true,

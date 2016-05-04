@@ -7,7 +7,7 @@ describe('Util', () =>{
     util = new Util();
   });
 
-  it('getBindablePropertyName returns viewmodel property corretly',()=>{
+  it('getBindablePropertyName returns viewmodel property corretly', ()=>{
     let result = util.getBindablePropertyName('text');
     expect(result).toBe('ejText');
   });
@@ -19,8 +19,9 @@ describe('Util', () =>{
   });
 
   it('getOptions returns the controlproperties with value', ()=>{
-    let options = {controlProperties: ['text'], ejText: 'Syncfusion'};
-    let result = util.getOptions(options);
+    let properties =  ['text'];
+    let model = {ejText: 'Syncfusion'};
+    let result = util.getOptions(model, properties);
     expect(result).toEqual({text: 'Syncfusion'});
   });
 

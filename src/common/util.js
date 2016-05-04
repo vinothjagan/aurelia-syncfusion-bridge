@@ -16,6 +16,9 @@ export class Util {
     for (let prop of properties) {
       let value = model[this.getBindablePropertyName(prop)];
       if (this.hasValue(value)) {
+        if (typeof value === 'string' ) {
+          value = this.processData(value);
+        }
         bindableproperites[prop] = value;
       }
     }
@@ -37,4 +40,14 @@ export class Util {
     return typeof (prop) !== 'undefined' && prop !== null;
   }
 
+  processData(value) {
+    if (value === 'true') {
+      return true;
+    } else if (value === 'false') {
+      return false;
+    } else if (+value + '' === value) {
+      return +value;
+    }
+    return value;
+  }
 }

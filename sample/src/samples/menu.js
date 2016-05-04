@@ -1,57 +1,43 @@
 import {inject, bindable} from 'aurelia-framework';
-import {DOM} from 'aurelia-pal';
-import { ComponentService } from '../shared/component-service';
 import json from './menu.json!';
-
-@inject(Element, ComponentService)
+@inject(Element)
 export class Menu {
-
   @bindable router;
-
-  constructor(element, componentService) {
-    this.categories = componentService.getIterableComponents(true);
+  constructor(element) {
+    this.setMenuValues(json);
     this.element = element;
-    this.componentService = componentService;
+    this.parentVisible = true;
+    this.childVisible = false;
+  }
+  setMenuValues(data) {
+    this.dataSource = data;
+    this.categories = Object.keys(data);
   }
 
-  attached() {
-    // this.generateRow(json);
-  }
-
-  generateRow(data) {
-    let div = DOM.createElement('div');
-    div.className = 'btn-group';
-    div.setAttribute('role', 'group');
-
-    this.element.appendChild(div);
-
-    for (let key of Object.keys(data)) {
-      let buttonDiv = DOM.createElement('div');
-      buttonDiv.className = 'btn-group';
-      buttonDiv.setAttribute('role', 'group');
-
-      let button = DOM.createElement('button');
-      button.className = 'btn btn-default dropdown-toggle';
-      button.setAttribute('data-toggle', 'dropdown');
-      button.setAttribute('aria-haspopup', 'true');
-      button.setAttribute('aria-expanded', 'false');
-      button.innerHTML = key + ' <span class="caret"></span>';
-      buttonDiv.appendChild(button);
-
-      let ulItem = DOM.createElement('ul');
-      ulItem.className = 'dropdown-menu';
-      for (let subNav of Object.keys(data[key])) {
-        let liItem = DOM.createElement('li');
-        let aItem = DOM.createElement('a');
-        aItem.setAttribute('href', `#/samples/${data[key][subNav]}`);
-        aItem.innerHTML = subNav;
-
-        liItem.appendChild(aItem);
-        ulItem.appendChild(liItem);
+  toolbarNavigation(args) {
+    let id = args.target.id;
+    if (this.categories.indexOf(id) > -1) {
+      this.changeToggleState(this.previousCategoryButtonId, id);
+      this.childVisible = true;
+      this.currentCategory = id;
+      this.subCategory = Object.keys(this.dataSource[id]);
+      this.previousCategoryButtonId = id;
+    } else if (this.currentCategory && this.dataSource[this.currentCategory][id]) {
+      this.changeToggleState(this.previousControlButtonId, id);
+      let moduleId = this.dataSource[this.currentCategory][id];
+      if (moduleId) {
+        this.router.navigateToRoute(moduleId);
       }
-
-      buttonDiv.appendChild(ulItem);
-      div.appendChild(buttonDiv);
+      this.previousControlButtonId = id;
     }
   }
+  changeToggleState(prevId, curId) {
+    if (prevId && prevId !== curId) {
+      let instance = $(document.getElementById(prevId)).data('ejToggleButton');
+      if (instance) {
+        instance.option('toggleState', false);
+      }
+    }
+  }
+
 }
