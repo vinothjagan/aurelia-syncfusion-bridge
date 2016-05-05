@@ -3,10 +3,10 @@ import {customAttribute, inject, WidgetBase, constants, generateBindables} from 
 import 'ej.menu.min';
 
 @customAttribute(`${constants.attributePrefix}menu`)
-@generateBindables('ejMenu', ['height', 'width', 'animationType', 'orientation', 'menuType', 'contextMenuTarget', 'htmlAttributes', 'cssClass',
-    'openOnClick', 'subMenuDirection', 'enableCenterAlign', 'showRootLevelArrows', 'showSubLevelArrows', 'enableAnimation', 'enableSeparator', 'enabled', 'fields', 'enableRTL',
-    'titleText', 'excludeTarget'])
 
+@generateBindables('ejMenu', ['animationType', 'contextMenuTarget', 'cssClass', 'enableAnimation', 'enableCenterAlign', 'enabled', 'enableRTL',
+    'enableSeparator', 'excludeTarget', 'fields', 'height', 'htmlAttributes', 'menuType', 'openOnClick', 
+    'orientation', 'showRootLevelArrows', 'showSubLevelArrows', 'subMenuDirection', 'titleText', 'width'])
 @inject(Element)
 export class ejMenu extends WidgetBase {
     constructor(element) {

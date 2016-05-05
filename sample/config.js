@@ -14,6 +14,8 @@ System.config({
     "*": "src/*",
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*",
+    "common/ej.*": "src/root/vendors/scripts/common/ej.*.js",
+    "datavisualization/ej.*": "src/root/vendors/scripts/datavisualization/ej.*.js",
     "ej.*": "src/root/vendors/scripts/web/ej.*.js"
   },
 

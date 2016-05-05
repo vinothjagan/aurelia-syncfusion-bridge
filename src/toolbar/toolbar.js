@@ -5,13 +5,11 @@ import 'ej.toolbar.min';
 @customAttribute(`${constants.attributePrefix}toolbar`)
 
 @generateBindables('ejToolbar', ['cssClass', 'dataSource', 'enabled', 'enableRTL', 'enableSeparator', 'fields', 'height', 'hide', 'isResponsive', 'orientation', 'query',
-  'showRoundedCorner', 'width'])
+    'showRoundedCorner', 'width'])
 @inject(Element)
 export class ejToolbar extends WidgetBase {
-  constructor(element, templateEngine) {
-    super();
-    this.element = element;
-  }
+    constructor(element) {
+        super();
+        this.element = element;
+    }
 }
-
-

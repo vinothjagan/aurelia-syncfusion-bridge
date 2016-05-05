@@ -10,8 +10,8 @@
             </div>
         </collapse-panel>
         <collapse-panel title="Code Preview">
-            <div id="codepreview" ej-tab>
-                <ul ej-tab>
+            <ej-tab id="codepreview" ej-allow-keyboard-navigation=false>
+                <ul>
                     <li show.bind="sample.html"><a href="#html">HTML</a></li>
                     <li show.bind="sample.js"><a href="#javascript">Javascript</a></li>
                     <li show.bind="sample.css"><a href="#css">CSS</a></li>
@@ -43,7 +43,7 @@
                     </div>
 
                 </ul>
-            </div>
+            </ej-tab>
         </collapse-panel>
     </section>
 </template>

@@ -1,12 +1,14 @@
-import {customAttribute, inject, WidgetBase, constants, generateBindables} from '../common/common';
+import {customElement, inlineView, inject, WidgetBase, constants, generateBindables} from '../common/common';
 
 import 'ej.tab.min';
 
-@customAttribute(`${constants.attributePrefix}tab`)
-@generateBindables('ejTab', ['collapsible', 'enableAnimation', 'ajaxSettings', 'disabledItemIndex', 'enabledItemIndex', 'hiddenItemIndex', 'events', 'idPrefix',
-    'heightAdjustMode', 'selectedItemIndex', 'cssClass', 'showCloseButton', 'htmlAttributes', 'enableTabScroll', 'showReloadIcon', 'headerPosition', 'width', 'height',
-    'headerSize', 'enableRTL', 'allowKeyboardNavigation', 'showRoundedCorner', 'enablePersistence', 'enabled',])
+@customElement(`${constants.elementPrefix}tab`)
+@inlineView('<template><content></content></template>')
 
+@generateBindables('ejTab', ['ajaxSettings', 'allowKeyboardNavigation', 'collapsible', 'cssClass', 'disabledItemIndex', 'enableAnimation', 'enabled',
+    'enabledItemIndex', 'enablePersistence', 'enableRTL', 'enableTabScroll', 'events', 'headerPosition',
+    'headerSize', 'height', 'heightAdjustMode', 'hiddenItemIndex', 'htmlAttributes', 'idPrefix',
+    'selectedItemIndex', 'showCloseButton', 'showReloadIcon', 'showRoundedCorner', 'width'], ['selectedItemIndex'])
 @inject(Element)
 export class ejTab extends WidgetBase {
     constructor(element) {
