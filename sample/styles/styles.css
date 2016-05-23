@@ -269,7 +269,7 @@ div#list_container.e-ddl-popup.e-scroller{
 }
 /** Code Preview **/
 #codepreview.e-tab .e-activetop, #codepreview.e-tab .e-activebottom{
-  border: none;
+  border: 1px solid #ccc !important;
 }
 #codepreview.e-tab .e-header.e-addborderbottom{
   border-bottom: none;
