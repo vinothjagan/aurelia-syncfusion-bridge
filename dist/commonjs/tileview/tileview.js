@@ -11,21 +11,21 @@ var _commonCommon = require('../common/common');
 require('ej.tile.min');
 
 var ejTileView = (function (_WidgetBase) {
-    _inherits(ejTileView, _WidgetBase);
+  _inherits(ejTileView, _WidgetBase);
 
-    function ejTileView(element) {
-        _classCallCheck(this, _ejTileView);
+  function ejTileView(element) {
+    _classCallCheck(this, _ejTileView);
 
-        _WidgetBase.call(this);
-        this.element = element;
-    }
+    _WidgetBase.call(this);
+    this.element = element;
+  }
 
-    var _ejTileView = ejTileView;
-    ejTileView = _commonCommon.inject(Element)(ejTileView) || ejTileView;
-    ejTileView = _commonCommon.generateBindables('ejTileView', ['badge', 'caption', 'cssClass', 'enablePersistence', 'height', 'imageClass', 'imagePosition', 'imageTemplateId', 'imageUrl', 'livetile', 'tileSize', 'width', 'showRoundedCorner', 'allowSelection', 'backgroundColor'])(ejTileView) || ejTileView;
-    ejTileView = _commonCommon.inlineView('<template><content></content></template>')(ejTileView) || ejTileView;
-    ejTileView = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'tile-view')(ejTileView) || ejTileView;
-    return ejTileView;
+  var _ejTileView = ejTileView;
+  ejTileView = _commonCommon.inject(Element)(ejTileView) || ejTileView;
+  ejTileView = _commonCommon.generateBindables('ejTileView', ['badge', 'caption', 'cssClass', 'enablePersistence', 'height', 'imageClass', 'imagePosition', 'imageTemplateId', 'imageUrl', 'livetile', 'tileSize', 'width', 'showRoundedCorner', 'allowSelection', 'backgroundColor'])(ejTileView) || ejTileView;
+  ejTileView = _commonCommon.inlineView('<template><content></content></template>')(ejTileView) || ejTileView;
+  ejTileView = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'tile-view')(ejTileView) || ejTileView;
+  return ejTileView;
 })(_commonCommon.WidgetBase);
 
 exports.ejTileView = ejTileView;

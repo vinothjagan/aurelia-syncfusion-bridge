@@ -5,7 +5,7 @@ System.register(['aurelia-templating', 'aurelia-dependency-injection', 'aurelia-
 
   _export('generateBindables', generateBindables);
 
-  function generateBindables(controlName, inputs, twoWayProperties) {
+  function generateBindables(controlName, inputs, twoWayProperties, abbrevProperties) {
     return function (target, key, descriptor) {
       var behaviorResource = metadata.getOrCreateOwn(metadata.resource, HtmlBehaviorResource, target);
       var container = Container.instance || new Container();
@@ -14,10 +14,14 @@ System.register(['aurelia-templating', 'aurelia-dependency-injection', 'aurelia-
       var len = inputs.length;
       target.prototype.controlName = controlName;
       target.prototype.twoWays = twoWayProperties ? twoWayProperties : [];
+      target.prototype.abbrevProperties = abbrevProperties ? abbrevProperties : [];
       if (len) {
         target.prototype.controlProperties = inputs;
         for (var i = 0; i < len; i++) {
           var option = inputs[i];
+          if (abbrevProperties && option in abbrevProperties) {
+            option = abbrevProperties[option];
+          }
           var nameOrConfigOrTarget = {
             name: util.getBindablePropertyName(option)
           };

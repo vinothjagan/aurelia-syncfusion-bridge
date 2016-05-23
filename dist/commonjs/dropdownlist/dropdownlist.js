@@ -11,20 +11,20 @@ var _commonCommon = require('../common/common');
 require('ej.dropdownlist.min');
 
 var ejDropDownList = (function (_WidgetBase) {
-	_inherits(ejDropDownList, _WidgetBase);
+  _inherits(ejDropDownList, _WidgetBase);
 
-	function ejDropDownList(element) {
-		_classCallCheck(this, _ejDropDownList);
+  function ejDropDownList(element) {
+    _classCallCheck(this, _ejDropDownList);
 
-		_WidgetBase.call(this);
-		this.element = element;
-	}
+    _WidgetBase.call(this);
+    this.element = element;
+  }
 
-	var _ejDropDownList = ejDropDownList;
-	ejDropDownList = _commonCommon.inject(Element)(ejDropDownList) || ejDropDownList;
-	ejDropDownList = _commonCommon.generateBindables('ejDropDownList', ['cascadeTo', 'caseSensitiveSearch', 'cssClass', 'dataSource', 'delimiterChar', 'enableAnimation', 'enabled', 'enableIncrementalSearch', 'enableFilterSearch', 'enablePersistence', 'enablePopupResize', 'enableRTL', 'enableSorting', 'fields', 'filterType', 'headerTemplate', 'height', 'htmlAttributes', 'itemsCount', 'maxPopupHeight', 'minPopupHeight', 'maxPopupWidth', 'minPopupWidth', 'multiSelectMode', 'popupHeight', 'popupWidth', 'query', 'readOnly', 'selectedIndex', 'selectedIndices', 'showCheckbox', 'showPopupOnLoad', 'showRoundedCorner', 'sortOrder', 'targetID', 'template', 'text', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'width', 'virtualScrollMode'], ['value'])(ejDropDownList) || ejDropDownList;
-	ejDropDownList = _commonCommon.customAttribute(_commonCommon.constants.attributePrefix + 'drop-down-list')(ejDropDownList) || ejDropDownList;
-	return ejDropDownList;
+  var _ejDropDownList = ejDropDownList;
+  ejDropDownList = _commonCommon.inject(Element)(ejDropDownList) || ejDropDownList;
+  ejDropDownList = _commonCommon.generateBindables('ejDropDownList', ['cascadeTo', 'caseSensitiveSearch', 'cssClass', 'dataSource', 'delimiterChar', 'enableAnimation', 'enabled', 'enableIncrementalSearch', 'enableFilterSearch', 'enablePersistence', 'enablePopupResize', 'enableRTL', 'enableSorting', 'fields', 'filterType', 'headerTemplate', 'height', 'htmlAttributes', 'itemsCount', 'maxPopupHeight', 'minPopupHeight', 'maxPopupWidth', 'minPopupWidth', 'multiSelectMode', 'popupHeight', 'popupWidth', 'query', 'readOnly', 'selectedIndex', 'selectedIndices', 'showCheckbox', 'showPopupOnLoad', 'showRoundedCorner', 'sortOrder', 'targetID', 'template', 'text', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'width', 'virtualScrollMode'], ['value'], { 'enableRTL': 'enableRtl', 'targetID': 'targetId' })(ejDropDownList) || ejDropDownList;
+  ejDropDownList = _commonCommon.customAttribute(_commonCommon.constants.attributePrefix + 'drop-down-list')(ejDropDownList) || ejDropDownList;
+  return ejDropDownList;
 })(_commonCommon.WidgetBase);
 
 exports.ejDropDownList = ejDropDownList;

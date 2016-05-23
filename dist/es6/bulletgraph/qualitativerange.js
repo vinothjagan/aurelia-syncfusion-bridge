@@ -1,4 +1,4 @@
-import {inlineView, customElement, children, constants, generateBindables, Util} from '../common/common';
+import {inlineView, customElement, constants, generateBindables} from '../common/common';
 
 @inlineView('<template><content></content></template>')
 @customElement(`${constants.elementPrefix}qualitative-range`)
@@ -6,3 +6,4 @@ import {inlineView, customElement, children, constants, generateBindables, Util}
 
 export class QualitativeRange {
 }
+

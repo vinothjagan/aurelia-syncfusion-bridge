@@ -15,35 +15,35 @@ var _commonCommon = require('../common/common');
 require('datavisualization/ej.chart.min');
 
 var ejChart = (function (_WidgetBase) {
-    var _instanceInitializers = {};
+  var _instanceInitializers = {};
 
-    _inherits(ejChart, _WidgetBase);
+  _inherits(ejChart, _WidgetBase);
 
-    _createDecoratedClass(ejChart, [{
-        key: 'series',
-        decorators: [_commonCommon.children(_commonCommon.constants.elementPrefix + 'series')],
-        initializer: null,
-        enumerable: true
-    }], null, _instanceInitializers);
+  _createDecoratedClass(ejChart, [{
+    key: 'series',
+    decorators: [_commonCommon.children(_commonCommon.constants.elementPrefix + 'series')],
+    initializer: null,
+    enumerable: true
+  }], null, _instanceInitializers);
 
-    function ejChart(element) {
-        _classCallCheck(this, _ejChart);
+  function ejChart(element) {
+    _classCallCheck(this, _ejChart);
 
-        _WidgetBase.call(this);
+    _WidgetBase.call(this);
 
-        _defineDecoratedPropertyDescriptor(this, 'series', _instanceInitializers);
+    _defineDecoratedPropertyDescriptor(this, 'series', _instanceInitializers);
 
-        this.element = element;
-        this.hasChildProperty = true;
-        this.childPropertyName = 'series';
-    }
+    this.element = element;
+    this.hasChildProperty = true;
+    this.childPropertyName = 'series';
+  }
 
-    var _ejChart = ejChart;
-    ejChart = _commonCommon.inject(Element)(ejChart) || ejChart;
-    ejChart = _commonCommon.generateBindables('ejChart', ['annotations', 'backGroundImageUrl', 'border', 'exportSettings', 'chartArea', 'columnDefinitions', 'commonSeriesOptions', 'crosshair', 'depth', 'enable3D', 'enableCanvasRendering', 'enableRotation', 'indicators', 'isResponsive', 'legend', 'locale', 'palette', 'Margin', 'perspectiveAngle', 'primaryXAxis', 'primaryYAxis', 'rotation', 'rowDefinitions', 'series', 'sideBySideSeriesPlacement', 'size', 'theme', 'tilt', 'title', 'wallSize', 'zooming'])(ejChart) || ejChart;
-    ejChart = _commonCommon.inlineView('<template><content></content></template>')(ejChart) || ejChart;
-    ejChart = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'chart')(ejChart) || ejChart;
-    return ejChart;
+  var _ejChart = ejChart;
+  ejChart = _commonCommon.inject(Element)(ejChart) || ejChart;
+  ejChart = _commonCommon.generateBindables('ejChart', ['annotations', 'backGroundImageUrl', 'border', 'exportSettings', 'chartArea', 'columnDefinitions', 'commonSeriesOptions', 'crosshair', 'depth', 'enable3D', 'enableCanvasRendering', 'enableRotation', 'indicators', 'isResponsive', 'legend', 'locale', 'palette', 'Margin', 'perspectiveAngle', 'primaryXAxis', 'primaryYAxis', 'rotation', 'rowDefinitions', 'series', 'sideBySideSeriesPlacement', 'size', 'theme', 'tilt', 'title', 'wallSize', 'zooming'])(ejChart) || ejChart;
+  ejChart = _commonCommon.inlineView('<template><content></content></template>')(ejChart) || ejChart;
+  ejChart = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'chart')(ejChart) || ejChart;
+  return ejChart;
 })(_commonCommon.WidgetBase);
 
 exports.ejChart = ejChart;

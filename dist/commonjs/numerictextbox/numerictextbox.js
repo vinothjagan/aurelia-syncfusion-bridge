@@ -11,20 +11,20 @@ var _commonCommon = require('../common/common');
 require('ej.editor.min');
 
 var ejNumericTextbox = (function (_WidgetBase) {
-    _inherits(ejNumericTextbox, _WidgetBase);
+  _inherits(ejNumericTextbox, _WidgetBase);
 
-    function ejNumericTextbox(element) {
-        _classCallCheck(this, _ejNumericTextbox);
+  function ejNumericTextbox(element) {
+    _classCallCheck(this, _ejNumericTextbox);
 
-        _WidgetBase.call(this);
-        this.element = element;
-    }
+    _WidgetBase.call(this);
+    this.element = element;
+  }
 
-    var _ejNumericTextbox = ejNumericTextbox;
-    ejNumericTextbox = _commonCommon.inject(Element)(ejNumericTextbox) || ejNumericTextbox;
-    ejNumericTextbox = _commonCommon.generateBindables('ejNumericTextbox', ['cssClass', 'decimalPlaces', 'enabled', 'enablePersistence', 'enableRTL', 'enableStrictMode', 'groupSeparator', 'height', 'htmlAttributes', 'incrementStep', 'locale', 'maxValue', 'minValue', 'name', 'readOnly', 'showRoundedCorner', 'showSpinButton', 'validateOnType', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'width'])(ejNumericTextbox) || ejNumericTextbox;
-    ejNumericTextbox = _commonCommon.customAttribute(_commonCommon.constants.attributePrefix + 'numeric-textbox')(ejNumericTextbox) || ejNumericTextbox;
-    return ejNumericTextbox;
+  var _ejNumericTextbox = ejNumericTextbox;
+  ejNumericTextbox = _commonCommon.inject(Element)(ejNumericTextbox) || ejNumericTextbox;
+  ejNumericTextbox = _commonCommon.generateBindables('ejNumericTextbox', ['cssClass', 'decimalPlaces', 'enabled', 'enablePersistence', 'enableRTL', 'enableStrictMode', 'groupSeparator', 'height', 'htmlAttributes', 'incrementStep', 'locale', 'maxValue', 'minValue', 'name', 'readOnly', 'showRoundedCorner', 'showSpinButton', 'validateOnType', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'width'], [], { 'enableRTL': 'enableRtl' })(ejNumericTextbox) || ejNumericTextbox;
+  ejNumericTextbox = _commonCommon.customAttribute(_commonCommon.constants.attributePrefix + 'numeric-textbox')(ejNumericTextbox) || ejNumericTextbox;
+  return ejNumericTextbox;
 })(_commonCommon.WidgetBase);
 
 exports.ejNumericTextbox = ejNumericTextbox;

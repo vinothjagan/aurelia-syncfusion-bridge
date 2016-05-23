@@ -11,20 +11,20 @@ var _commonCommon = require('../common/common');
 require('ej.button.min');
 
 var ejButton = (function (_WidgetBase) {
-    _inherits(ejButton, _WidgetBase);
+  _inherits(ejButton, _WidgetBase);
 
-    function ejButton(element) {
-        _classCallCheck(this, _ejButton);
+  function ejButton(element) {
+    _classCallCheck(this, _ejButton);
 
-        _WidgetBase.call(this);
-        this.element = element;
-    }
+    _WidgetBase.call(this);
+    this.element = element;
+  }
 
-    var _ejButton = ejButton;
-    ejButton = _commonCommon.inject(Element)(ejButton) || ejButton;
-    ejButton = _commonCommon.generateBindables('ejButton', ['contentType', 'cssClass', 'enabled', 'enableRTL', 'height', 'htmlAttributes', 'imagePosition', 'prefixIcon', 'repeatButton', 'showRoundedCorner', 'size', 'suffixIcon', 'text', 'timeInterval', 'type', 'width'])(ejButton) || ejButton;
-    ejButton = _commonCommon.customAttribute(_commonCommon.constants.attributePrefix + 'button')(ejButton) || ejButton;
-    return ejButton;
+  var _ejButton = ejButton;
+  ejButton = _commonCommon.inject(Element)(ejButton) || ejButton;
+  ejButton = _commonCommon.generateBindables('ejButton', ['contentType', 'cssClass', 'enabled', 'enableRTL', 'height', 'htmlAttributes', 'imagePosition', 'prefixIcon', 'repeatButton', 'showRoundedCorner', 'size', 'suffixIcon', 'text', 'timeInterval', 'type', 'width'], [], { 'enableRTL': 'enableRtl' })(ejButton) || ejButton;
+  ejButton = _commonCommon.customAttribute(_commonCommon.constants.attributePrefix + 'button')(ejButton) || ejButton;
+  return ejButton;
 })(_commonCommon.WidgetBase);
 
 exports.ejButton = ejButton;

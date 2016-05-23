@@ -3,8 +3,8 @@ declare module 'aurelia-syncfusion-bridge' {
   import { customAttribute, bindable, customElement, children, TemplatingEngine, BindableProperty, HtmlBehaviorResource, noView, processContent, TargetInstruction }  from 'aurelia-templating';
   import { inject, Container }  from 'aurelia-dependency-injection';
   import { metadata }  from 'aurelia-metadata';
-  import { TaskQueue }  from 'aurelia-task-queue';
   import 'ej.accordion.min';
+  import 'ej.autocomplete.min';
   import 'datavisualization/ej.barcode.min';
   import 'datavisualization/ej.bulletgraph.min';
   import 'ej.button.min';
@@ -15,6 +15,7 @@ declare module 'aurelia-syncfusion-bridge' {
   import 'ej.editor.min';
   import 'ej.datepicker.min';
   import 'ej.datetimepicker.min';
+  import 'datavisualization/ej.diagram.min';
   import 'ej.dialog.min';
   import 'datavisualization/ej.digitalgauge.min';
   import 'ej.dropdownlist.min';
@@ -27,26 +28,36 @@ declare module 'aurelia-syncfusion-bridge' {
   import 'ej.listview.min';
   import 'ej.maskedit.min';
   import 'ej.menu.min';
+  import 'ej.navigationdrawer.min';
   import 'ej.editor.min';
   import 'ej.pdfviewer.min';
   import 'ej.editor.min';
+  import 'ej.pivotgrid.min';
+  import 'ej.pivotschemadesigner.min';
   import 'ej.progressbar.min';
-  import 'ej.radiobutton.min';
   import 'ej.radialmenu.min';
+  import 'ej.radialslider.min';
+  import 'ej.radiobutton.min';
+  import 'datavisualization/ej.rangenavigator.min';
   import 'ej.rating.min';
   import 'ej.ribbon.min';
   import 'ej.rotator.min';
   import 'ej.rte.min';
+  import 'ej.schedule.min';
   import 'common/ej.scroller.min';
   import 'ej.slider.min';
   import 'ej.splitter.min';
+  import 'ej.spreadsheet.min';
+  import 'datavisualization/ej.diagram.min';
   import 'ej.tab.min';
   import 'ej.tagcloud.min';
   import 'ej.tile.min';
   import 'ej.timepicker.min';
   import 'ej.togglebutton.min';
   import 'ej.toolbar.min';
+  import 'ej.treegrid.min';
   import 'ej.treeview.min';
+  import 'ej.waitingpopup.min';
   
   /**
   * Plugin configuration builder
@@ -61,12 +72,15 @@ declare module 'aurelia-syncfusion-bridge' {
     useAll(): EjConfigBuilder;
     
     /**
-       * Don't globalize any resources
-       * Allows you to import wrappers yourself via <require></require>
-       */
+      * Don't globalize any resources
+      * Allows you to import wrappers yourself via <require></require>
+      */
     withoutGlobalResources(): EjConfigBuilder;
     ejGrid(): EjConfigBuilder;
     ejChart(): EjConfigBuilder;
+    ejRangeNavigator(): EjConfigBuilder;
+    ejDiagram(): EjConfigBuilder;
+    ejSymbolPalette(): EjConfigBuilder;
     ejBulletGraph(): EjConfigBuilder;
     ejCircularGauge(): EjConfigBuilder;
     ejLinearGauge(): EjConfigBuilder;
@@ -74,6 +88,7 @@ declare module 'aurelia-syncfusion-bridge' {
     ejSplitter(): EjConfigBuilder;
     ejDatePicker(): EjConfigBuilder;
     ejGantt(): EjConfigBuilder;
+    ejTreeGrid(): EjConfigBuilder;
     ejColorPicker(): EjConfigBuilder;
     ejDialog(): EjConfigBuilder;
     ejScroller(): EjConfigBuilder;
@@ -87,15 +102,18 @@ declare module 'aurelia-syncfusion-bridge' {
     ejMenu(): EjConfigBuilder;
     ejMaskEdit(): EjConfigBuilder;
     ejTreeView(): EjConfigBuilder;
-    ejKanban(): EjConfigBuilder;
     ejRibbon(): EjConfigBuilder;
+    ejSpreadsheet(): EjConfigBuilder;
     ejRating(): EjConfigBuilder;
     ejListBox(): EjConfigBuilder;
     ejListView(): EjConfigBuilder;
+    ejNavigationDrawer(): EjConfigBuilder;
     ejRotator(): EjConfigBuilder;
     ejRTE(): EjConfigBuilder;
     ejDropDownList(): EjConfigBuilder;
+    ejAutocomplete(): EjConfigBuilder;
     ejRadialMenu(): EjConfigBuilder;
+    ejRadialSlider(): EjConfigBuilder;
     ejTileView(): EjConfigBuilder;
     ejAccordion(): EjConfigBuilder;
     ejTab(): EjConfigBuilder;
@@ -108,10 +126,17 @@ declare module 'aurelia-syncfusion-bridge' {
     ejButton(): EjConfigBuilder;
     ejSlider(): EjConfigBuilder;
     ejFileExplorer(): EjConfigBuilder;
+    ejPivotGrid(): EjConfigBuilder;
+    ejPivotSchemaDesigner(): EjConfigBuilder;
+    ejWaitingPopup(): EjConfigBuilder;
+    ejSchedule(): EjConfigBuilder;
     ejTemplate(): EjConfigBuilder;
   }
   export function configure(aurelia: Aurelia, configCallback?: ((builder: EjConfigBuilder) => void)): any;
   export class ejAccordion extends WidgetBase {
+    constructor(element: any);
+  }
+  export class ejAutocomplete extends WidgetBase {
     constructor(element: any);
   }
   export class ejBarcode extends WidgetBase {
@@ -142,7 +167,7 @@ declare module 'aurelia-syncfusion-bridge' {
     constructor(element: any);
   }
   export const constants: any;
-  export function generateBindables(controlName: any, inputs: any, twoWayProperties: any): any;
+  export function generateBindables(controlName: any, inputs: any, twoWayProperties: any, abbrevProperties: any): any;
   
   /**
   * To get binded events from the element
@@ -213,6 +238,9 @@ declare module 'aurelia-syncfusion-bridge' {
   export class ejDateTimePicker extends WidgetBase {
     constructor(element: any);
   }
+  export class ejDiagram extends WidgetBase {
+    constructor(element: any);
+  }
   export class ejDialog extends WidgetBase {
     constructor(element: any);
   }
@@ -249,7 +277,6 @@ declare module 'aurelia-syncfusion-bridge' {
     constructor(element: any);
   }
   export class ejListView extends WidgetBase {
-    items: any;
     constructor(element: any);
   }
   export class ListViewItem {
@@ -258,6 +285,9 @@ declare module 'aurelia-syncfusion-bridge' {
     constructor(element: any);
   }
   export class ejMenu extends WidgetBase {
+    constructor(element: any);
+  }
+  export class ejNavigationDrawer extends WidgetBase {
     constructor(element: any);
   }
   export class ejNumericTextbox extends WidgetBase {
@@ -269,14 +299,29 @@ declare module 'aurelia-syncfusion-bridge' {
   export class ejPercentageTextbox extends WidgetBase {
     constructor(element: any);
   }
+  export class ejPivotGrid extends WidgetBase {
+    constructor(element: any);
+  }
+  export class ejPivotSchemaDesigner extends WidgetBase {
+    constructor(element: any);
+  }
   export class ejProgressBar extends WidgetBase {
+    constructor(element: any);
+  }
+  export class ejRadialMenu extends WidgetBase {
+    constructor(element: any);
+  }
+  export class ejRadialSlider extends WidgetBase {
     constructor(element: any);
   }
   export class ejRadioButton extends WidgetBase {
     constructor(element: any);
   }
-  export class ejRadialMenu extends WidgetBase {
+  export class ejRangeNavigator extends WidgetBase {
+    series: any;
     constructor(element: any);
+  }
+  export class RangeSeries {
   }
   export class ejRating extends WidgetBase {
     constructor(element: any);
@@ -290,6 +335,12 @@ declare module 'aurelia-syncfusion-bridge' {
   export class ejRTE extends WidgetBase {
     constructor(element: any);
   }
+  export class ejSchedule extends WidgetBase {
+    resources: any;
+    constructor(element: any);
+  }
+  export class ScheduleResource {
+  }
   export class ejScroller extends WidgetBase {
     constructor(element: any);
   }
@@ -297,6 +348,15 @@ declare module 'aurelia-syncfusion-bridge' {
     constructor(element: any);
   }
   export class ejSplitter extends WidgetBase {
+    constructor(element: any);
+  }
+  export class Sheet {
+  }
+  export class ejSpreadsheet extends WidgetBase {
+    sheets: any;
+    constructor(element: any);
+  }
+  export class ejSymbolPalette extends WidgetBase {
     constructor(element: any);
   }
   export class ejTab extends WidgetBase {
@@ -317,7 +377,18 @@ declare module 'aurelia-syncfusion-bridge' {
   export class ejToolbar extends WidgetBase {
     constructor(element: any);
   }
+  export class ejTreeGrid extends WidgetBase {
+    columns: any;
+    constructor(element: any, templateEngine: any);
+  }
+  export class TreeGridColumn {
+    template: any;
+    bind(): any;
+  }
   export class ejTreeView extends WidgetBase {
+    constructor(element: any);
+  }
+  export class ejWaitingPopup extends WidgetBase {
     constructor(element: any);
   }
 }

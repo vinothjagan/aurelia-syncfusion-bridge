@@ -1,0 +1,13 @@
+{
+  "title": "DigitalGauge",
+  "documentation":"http://help.syncfusion.com/js/api/ejdigitalgauge",
+  "samples": {
+    "basic-use": {
+      "default" : true,
+      "files": ["html", "js"]
+    },
+	"digital-clock": {
+      "files": ["html", "js"]
+    },
+  }
+}

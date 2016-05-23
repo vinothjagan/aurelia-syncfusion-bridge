@@ -54,6 +54,9 @@ export class Logger {
       };
     });
   }
+  clear() {
+    $('.console').html('');
+  }
 }
 
 

@@ -11,20 +11,20 @@ var _commonCommon = require('../common/common');
 require('ej.menu.min');
 
 var ejMenu = (function (_WidgetBase) {
-    _inherits(ejMenu, _WidgetBase);
+  _inherits(ejMenu, _WidgetBase);
 
-    function ejMenu(element) {
-        _classCallCheck(this, _ejMenu);
+  function ejMenu(element) {
+    _classCallCheck(this, _ejMenu);
 
-        _WidgetBase.call(this);
-        this.element = element;
-    }
+    _WidgetBase.call(this);
+    this.element = element;
+  }
 
-    var _ejMenu = ejMenu;
-    ejMenu = _commonCommon.inject(Element)(ejMenu) || ejMenu;
-    ejMenu = _commonCommon.generateBindables('ejMenu', ['animationType', 'contextMenuTarget', 'cssClass', 'enableAnimation', 'enableCenterAlign', 'enabled', 'enableRTL', 'enableSeparator', 'excludeTarget', 'fields', 'height', 'htmlAttributes', 'menuType', 'openOnClick', 'orientation', 'showRootLevelArrows', 'showSubLevelArrows', 'subMenuDirection', 'titleText', 'width'])(ejMenu) || ejMenu;
-    ejMenu = _commonCommon.customAttribute(_commonCommon.constants.attributePrefix + 'menu')(ejMenu) || ejMenu;
-    return ejMenu;
+  var _ejMenu = ejMenu;
+  ejMenu = _commonCommon.inject(Element)(ejMenu) || ejMenu;
+  ejMenu = _commonCommon.generateBindables('ejMenu', ['animationType', 'contextMenuTarget', 'cssClass', 'enableAnimation', 'enableCenterAlign', 'enabled', 'enableRTL', 'enableSeparator', 'excludeTarget', 'fields', 'height', 'htmlAttributes', 'menuType', 'openOnClick', 'orientation', 'showRootLevelArrows', 'showSubLevelArrows', 'subMenuDirection', 'titleText', 'width'], [], { 'enableRTL': 'enableRtl' })(ejMenu) || ejMenu;
+  ejMenu = _commonCommon.customAttribute(_commonCommon.constants.attributePrefix + 'menu')(ejMenu) || ejMenu;
+  return ejMenu;
 })(_commonCommon.WidgetBase);
 
 exports.ejMenu = ejMenu;

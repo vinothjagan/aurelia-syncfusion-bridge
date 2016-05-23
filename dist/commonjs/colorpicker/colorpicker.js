@@ -11,20 +11,20 @@ var _commonCommon = require('../common/common');
 require('ej.colorpicker.min');
 
 var ejColorPicker = (function (_WidgetBase) {
-    _inherits(ejColorPicker, _WidgetBase);
+  _inherits(ejColorPicker, _WidgetBase);
 
-    function ejColorPicker(element) {
-        _classCallCheck(this, _ejColorPicker);
+  function ejColorPicker(element) {
+    _classCallCheck(this, _ejColorPicker);
 
-        _WidgetBase.call(this);
-        this.element = element;
-    }
+    _WidgetBase.call(this);
+    this.element = element;
+  }
 
-    var _ejColorPicker = ejColorPicker;
-    ejColorPicker = _commonCommon.inject(Element)(ejColorPicker) || ejColorPicker;
-    ejColorPicker = _commonCommon.generateBindables('ejColorPicker', ['buttonText', 'buttonMode', 'columns', 'cssClass', 'custom', 'displayInline', 'enabled', 'enableOpacity', 'htmlAttributes', 'modelType', 'opacityValue', 'palette', 'presetType', 'showApplyCancel', 'showClearButton', 'showPreview', 'showRecentColors', 'showTooltip', 'toolIcon', 'tooltipText', 'value'], ['value'])(ejColorPicker) || ejColorPicker;
-    ejColorPicker = _commonCommon.customAttribute(_commonCommon.constants.attributePrefix + 'color-picker')(ejColorPicker) || ejColorPicker;
-    return ejColorPicker;
+  var _ejColorPicker = ejColorPicker;
+  ejColorPicker = _commonCommon.inject(Element)(ejColorPicker) || ejColorPicker;
+  ejColorPicker = _commonCommon.generateBindables('ejColorPicker', ['buttonText', 'buttonMode', 'columns', 'cssClass', 'custom', 'displayInline', 'enabled', 'enableOpacity', 'htmlAttributes', 'modelType', 'opacityValue', 'palette', 'presetType', 'showApplyCancel', 'showClearButton', 'showPreview', 'showRecentColors', 'showTooltip', 'toolIcon', 'tooltipText', 'value'], ['value'])(ejColorPicker) || ejColorPicker;
+  ejColorPicker = _commonCommon.customAttribute(_commonCommon.constants.attributePrefix + 'color-picker')(ejColorPicker) || ejColorPicker;
+  return ejColorPicker;
 })(_commonCommon.WidgetBase);
 
 exports.ejColorPicker = ejColorPicker;

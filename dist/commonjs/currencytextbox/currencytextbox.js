@@ -11,20 +11,20 @@ var _commonCommon = require('../common/common');
 require('ej.editor.min');
 
 var ejCurrencyTextbox = (function (_WidgetBase) {
-    _inherits(ejCurrencyTextbox, _WidgetBase);
+  _inherits(ejCurrencyTextbox, _WidgetBase);
 
-    function ejCurrencyTextbox(element) {
-        _classCallCheck(this, _ejCurrencyTextbox);
+  function ejCurrencyTextbox(element) {
+    _classCallCheck(this, _ejCurrencyTextbox);
 
-        _WidgetBase.call(this);
-        this.element = element;
-    }
+    _WidgetBase.call(this);
+    this.element = element;
+  }
 
-    var _ejCurrencyTextbox = ejCurrencyTextbox;
-    ejCurrencyTextbox = _commonCommon.inject(Element)(ejCurrencyTextbox) || ejCurrencyTextbox;
-    ejCurrencyTextbox = _commonCommon.generateBindables('ejCurrencyTextbox', ['cssClass', 'decimalPlaces', 'enabled', 'enablePersistence', 'enableRTL', 'enableStrictMode', 'groupSeparator', 'height', 'htmlAttributes', 'incrementStep', 'locale', 'maxValue', 'minValue', 'name', 'readOnly', 'showRoundedCorner', 'showSpinButton', 'validateOnType', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'width'])(ejCurrencyTextbox) || ejCurrencyTextbox;
-    ejCurrencyTextbox = _commonCommon.customAttribute(_commonCommon.constants.attributePrefix + 'currency-textbox')(ejCurrencyTextbox) || ejCurrencyTextbox;
-    return ejCurrencyTextbox;
+  var _ejCurrencyTextbox = ejCurrencyTextbox;
+  ejCurrencyTextbox = _commonCommon.inject(Element)(ejCurrencyTextbox) || ejCurrencyTextbox;
+  ejCurrencyTextbox = _commonCommon.generateBindables('ejCurrencyTextbox', ['cssClass', 'decimalPlaces', 'enabled', 'enablePersistence', 'enableRTL', 'enableStrictMode', 'groupSeparator', 'height', 'htmlAttributes', 'incrementStep', 'locale', 'maxValue', 'minValue', 'name', 'readOnly', 'showRoundedCorner', 'showSpinButton', 'validateOnType', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'width'], [], { 'enableRTL': 'enableRtl' })(ejCurrencyTextbox) || ejCurrencyTextbox;
+  ejCurrencyTextbox = _commonCommon.customAttribute(_commonCommon.constants.attributePrefix + 'currency-textbox')(ejCurrencyTextbox) || ejCurrencyTextbox;
+  return ejCurrencyTextbox;
 })(_commonCommon.WidgetBase);
 
 exports.ejCurrencyTextbox = ejCurrencyTextbox;

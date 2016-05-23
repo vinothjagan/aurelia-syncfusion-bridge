@@ -3,15 +3,12 @@ import {customAttribute, inject, WidgetBase, constants, generateBindables} from 
 import 'ej.timepicker.min';
 
 @customAttribute(`${constants.attributePrefix}time-picker`)
-
-@generateBindables('ejTimePicker', ['cssClass', 'enableAnimation', 'enabled', 'enablePersistence', 'enableRTL', 'enableStrictMode', 'height',
-    'hourInterval', 'htmlAttributes', 'interval', 'locale', 'maxTime', 'minTime',
-    'minutesInterval', 'popupHeight', 'popupWidth', 'readOnly', 'secondsInterval', 'showPopupButton',
-    'showRoundedCorner', 'timeFormat', 'value', 'width'], ['value'])
+@generateBindables('ejTimePicker', ['cssClass', 'enableAnimation', 'enabled', 'enablePersistence', 'enableRTL', 'enableStrictMode', 'height', 'hourInterval', 'htmlAttributes', 'interval', 'locale', 'maxTime', 'minTime', 'minutesInterval', 'popupHeight', 'popupWidth', 'readOnly', 'secondsInterval', 'showPopupButton', 'showRoundedCorner', 'timeFormat', 'value', 'width'], ['value'], {'enableRTL': 'enableRtl'})
 @inject(Element)
 export class ejTimePicker extends WidgetBase {
-    constructor(element) {
-        super();
-        this.element = element;
-    }
+  constructor(element) {
+    super();
+    this.element = element;
+  }
 }
+

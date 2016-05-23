@@ -11,21 +11,21 @@ var _commonCommon = require('../common/common');
 require('ej.tab.min');
 
 var ejTab = (function (_WidgetBase) {
-    _inherits(ejTab, _WidgetBase);
+  _inherits(ejTab, _WidgetBase);
 
-    function ejTab(element) {
-        _classCallCheck(this, _ejTab);
+  function ejTab(element) {
+    _classCallCheck(this, _ejTab);
 
-        _WidgetBase.call(this);
-        this.element = element;
-    }
+    _WidgetBase.call(this);
+    this.element = element;
+  }
 
-    var _ejTab = ejTab;
-    ejTab = _commonCommon.inject(Element)(ejTab) || ejTab;
-    ejTab = _commonCommon.generateBindables('ejTab', ['ajaxSettings', 'allowKeyboardNavigation', 'collapsible', 'cssClass', 'disabledItemIndex', 'enableAnimation', 'enabled', 'enabledItemIndex', 'enablePersistence', 'enableRTL', 'enableTabScroll', 'events', 'headerPosition', 'headerSize', 'height', 'heightAdjustMode', 'hiddenItemIndex', 'htmlAttributes', 'idPrefix', 'selectedItemIndex', 'showCloseButton', 'showReloadIcon', 'showRoundedCorner', 'width'], ['selectedItemIndex'])(ejTab) || ejTab;
-    ejTab = _commonCommon.inlineView('<template><content></content></template>')(ejTab) || ejTab;
-    ejTab = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'tab')(ejTab) || ejTab;
-    return ejTab;
+  var _ejTab = ejTab;
+  ejTab = _commonCommon.inject(Element)(ejTab) || ejTab;
+  ejTab = _commonCommon.generateBindables('ejTab', ['ajaxSettings', 'allowKeyboardNavigation', 'collapsible', 'cssClass', 'disabledItemIndex', 'enableAnimation', 'enabled', 'enabledItemIndex', 'enablePersistence', 'enableRTL', 'enableTabScroll', 'events', 'headerPosition', 'headerSize', 'height', 'heightAdjustMode', 'hiddenItemIndex', 'htmlAttributes', 'idPrefix', 'selectedItemIndex', 'showCloseButton', 'showReloadIcon', 'showRoundedCorner', 'width'], ['selectedItemIndex'], { 'enableRTL': 'enableRtl' })(ejTab) || ejTab;
+  ejTab = _commonCommon.inlineView('<template><content></content></template>')(ejTab) || ejTab;
+  ejTab = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'tab')(ejTab) || ejTab;
+  return ejTab;
 })(_commonCommon.WidgetBase);
 
 exports.ejTab = ejTab;

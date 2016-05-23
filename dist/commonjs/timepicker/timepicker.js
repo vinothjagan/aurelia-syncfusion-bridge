@@ -11,20 +11,20 @@ var _commonCommon = require('../common/common');
 require('ej.timepicker.min');
 
 var ejTimePicker = (function (_WidgetBase) {
-    _inherits(ejTimePicker, _WidgetBase);
+  _inherits(ejTimePicker, _WidgetBase);
 
-    function ejTimePicker(element) {
-        _classCallCheck(this, _ejTimePicker);
+  function ejTimePicker(element) {
+    _classCallCheck(this, _ejTimePicker);
 
-        _WidgetBase.call(this);
-        this.element = element;
-    }
+    _WidgetBase.call(this);
+    this.element = element;
+  }
 
-    var _ejTimePicker = ejTimePicker;
-    ejTimePicker = _commonCommon.inject(Element)(ejTimePicker) || ejTimePicker;
-    ejTimePicker = _commonCommon.generateBindables('ejTimePicker', ['cssClass', 'enableAnimation', 'enabled', 'enablePersistence', 'enableRTL', 'enableStrictMode', 'height', 'hourInterval', 'htmlAttributes', 'interval', 'locale', 'maxTime', 'minTime', 'minutesInterval', 'popupHeight', 'popupWidth', 'readOnly', 'secondsInterval', 'showPopupButton', 'showRoundedCorner', 'timeFormat', 'value', 'width'], ['value'])(ejTimePicker) || ejTimePicker;
-    ejTimePicker = _commonCommon.customAttribute(_commonCommon.constants.attributePrefix + 'time-picker')(ejTimePicker) || ejTimePicker;
-    return ejTimePicker;
+  var _ejTimePicker = ejTimePicker;
+  ejTimePicker = _commonCommon.inject(Element)(ejTimePicker) || ejTimePicker;
+  ejTimePicker = _commonCommon.generateBindables('ejTimePicker', ['cssClass', 'enableAnimation', 'enabled', 'enablePersistence', 'enableRTL', 'enableStrictMode', 'height', 'hourInterval', 'htmlAttributes', 'interval', 'locale', 'maxTime', 'minTime', 'minutesInterval', 'popupHeight', 'popupWidth', 'readOnly', 'secondsInterval', 'showPopupButton', 'showRoundedCorner', 'timeFormat', 'value', 'width'], ['value'], { 'enableRTL': 'enableRtl' })(ejTimePicker) || ejTimePicker;
+  ejTimePicker = _commonCommon.customAttribute(_commonCommon.constants.attributePrefix + 'time-picker')(ejTimePicker) || ejTimePicker;
+  return ejTimePicker;
 })(_commonCommon.WidgetBase);
 
 exports.ejTimePicker = ejTimePicker;

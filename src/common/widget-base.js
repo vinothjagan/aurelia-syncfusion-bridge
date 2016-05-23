@@ -1,5 +1,4 @@
 import {getEventOption} from './events';
-import {TaskQueue} from 'aurelia-task-queue';
 import {Util} from '../common/util';
 
 let firstValue = {};
@@ -10,12 +9,19 @@ export class WidgetBase {
 */
   createWidget(option) {
     this.allOption = this.getWidgetOptions(option.element);
-    if (!this.ejOptions) {
+    if (!this.ejOptions && !this.isEditor) {
       this.createTwoWays();
     }
     this.widget = jQuery($(option.element))[this.controlName](this.allOption ).data(this.controlName);
     if (this.templateProcessor) {
       this.templateProcessor.initWidgetDependancies();
+    }
+    if (this.isEditor) {
+      this.widget.model._change = (evt) => {
+        if ('ejValue' in this) {
+          this[this.util.getBindablePropertyName('value')] = evt.value;
+        }
+      };
     }
   }
 

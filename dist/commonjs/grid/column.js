@@ -11,33 +11,33 @@ function _defineDecoratedPropertyDescriptor(target, key, descriptors) { var _des
 var _commonCommon = require('../common/common');
 
 var Column = (function () {
-    var _instanceInitializers = {};
+  var _instanceInitializers = {};
 
-    function Column() {
-        _classCallCheck(this, _Column);
+  function Column() {
+    _classCallCheck(this, _Column);
 
-        _defineDecoratedPropertyDescriptor(this, 'template', _instanceInitializers);
+    _defineDecoratedPropertyDescriptor(this, 'template', _instanceInitializers);
+  }
+
+  Column.prototype.bind = function bind() {
+    if (this.template[0]) {
+      var util = new _commonCommon.Util();
+      this[util.getBindablePropertyName('template')] = this.template[0].template;
     }
+  };
 
-    Column.prototype.bind = function bind() {
-        if (this.template[0]) {
-            var util = new _commonCommon.Util();
-            this[util.getBindablePropertyName('template')] = this.template[0].template;
-        }
-    };
+  _createDecoratedClass(Column, [{
+    key: 'template',
+    decorators: [_commonCommon.children(_commonCommon.constants.elementPrefix + 'template')],
+    initializer: null,
+    enumerable: true
+  }], null, _instanceInitializers);
 
-    _createDecoratedClass(Column, [{
-        key: 'template',
-        decorators: [_commonCommon.children(_commonCommon.constants.elementPrefix + 'template')],
-        initializer: null,
-        enumerable: true
-    }], null, _instanceInitializers);
-
-    var _Column = Column;
-    Column = _commonCommon.generateBindables('columns', ['allowEditing', 'allowFiltering', 'allowGrouping', 'allowSorting', 'allowResizing', 'showInColumnChooser', 'commands', 'cssClass', 'customAttributes', 'dataSource', 'defaultValue', 'disableHtmlEncode', 'displayAsCheckBox', 'editParams', 'editTemplate', 'editType', 'field', 'foreignKeyField', 'foreignKeyValue', 'format', 'headerTemplateID', 'headerText', 'headerTextAlign', 'isFrozen', 'isIdentity', 'isPrimaryKey', 'isUnbound', 'template', 'templateID', 'textAlign', 'tooltip', 'clipMode', 'type', 'validationRules', 'visible', 'width'])(Column) || Column;
-    Column = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'column')(Column) || Column;
-    Column = _commonCommon.inlineView('<template><content></content></template>')(Column) || Column;
-    return Column;
+  var _Column = Column;
+  Column = _commonCommon.generateBindables('columns', ['allowEditing', 'allowFiltering', 'allowGrouping', 'allowSorting', 'allowResizing', 'showInColumnChooser', 'commands', 'cssClass', 'customAttributes', 'dataSource', 'defaultValue', 'disableHtmlEncode', 'displayAsCheckBox', 'editParams', 'editTemplate', 'editType', 'field', 'foreignKeyField', 'foreignKeyValue', 'format', 'headerTemplateID', 'headerText', 'headerTextAlign', 'isFrozen', 'isIdentity', 'isPrimaryKey', 'isUnbound', 'template', 'templateID', 'textAlign', 'tooltip', 'clipMode', 'type', 'validationRules', 'visible', 'width'])(Column) || Column;
+  Column = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'column')(Column) || Column;
+  Column = _commonCommon.inlineView('<template><content></content></template>')(Column) || Column;
+  return Column;
 })();
 
 exports.Column = Column;

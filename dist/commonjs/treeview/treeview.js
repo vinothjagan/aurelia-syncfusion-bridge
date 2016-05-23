@@ -11,20 +11,20 @@ var _commonCommon = require('../common/common');
 require('ej.treeview.min');
 
 var ejTreeView = (function (_WidgetBase) {
-    _inherits(ejTreeView, _WidgetBase);
+  _inherits(ejTreeView, _WidgetBase);
 
-    function ejTreeView(element) {
-        _classCallCheck(this, _ejTreeView);
+  function ejTreeView(element) {
+    _classCallCheck(this, _ejTreeView);
 
-        _WidgetBase.call(this);
-        this.element = element;
-    }
+    _WidgetBase.call(this);
+    this.element = element;
+  }
 
-    var _ejTreeView = ejTreeView;
-    ejTreeView = _commonCommon.inject(Element)(ejTreeView) || ejTreeView;
-    ejTreeView = _commonCommon.generateBindables('ejTreeView', ['allowDragAndDrop', 'allowDragAndDropAcrossControl', 'allowDropSibling', 'allowDropChild', 'allowEditing', 'allowKeyboardNavigation', 'autoCheck', 'autoCheckParentNode', 'checkedNodes', 'cssClass', 'enableAnimation', 'enabled', 'enableMultipleExpand', 'enablePersistence', 'enableRTL', 'expandedNodes', 'expandOn', 'fields', 'height', 'htmlAttributes', 'loadOnDemand', 'selectedNode', 'showCheckbox', 'sortSettings', 'template', 'width'])(ejTreeView) || ejTreeView;
-    ejTreeView = _commonCommon.customAttribute(_commonCommon.constants.attributePrefix + 'tree-view')(ejTreeView) || ejTreeView;
-    return ejTreeView;
+  var _ejTreeView = ejTreeView;
+  ejTreeView = _commonCommon.inject(Element)(ejTreeView) || ejTreeView;
+  ejTreeView = _commonCommon.generateBindables('ejTreeView', ['allowDragAndDrop', 'allowDragAndDropAcrossControl', 'allowDropSibling', 'allowDropChild', 'allowEditing', 'allowKeyboardNavigation', 'autoCheck', 'autoCheckParentNode', 'checkedNodes', 'cssClass', 'enableAnimation', 'enabled', 'enableMultipleExpand', 'enablePersistence', 'enableRTL', 'expandedNodes', 'expandOn', 'fields', 'height', 'htmlAttributes', 'loadOnDemand', 'selectedNode', 'showCheckbox', 'sortSettings', 'template', 'width'], [], { 'enableRTL': 'enableRtl' })(ejTreeView) || ejTreeView;
+  ejTreeView = _commonCommon.customAttribute(_commonCommon.constants.attributePrefix + 'tree-view')(ejTreeView) || ejTreeView;
+  return ejTreeView;
 })(_commonCommon.WidgetBase);
 
 exports.ejTreeView = ejTreeView;

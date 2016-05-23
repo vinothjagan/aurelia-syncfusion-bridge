@@ -15,35 +15,35 @@ var _commonCommon = require('../common/common');
 require('datavisualization/ej.bulletgraph.min');
 
 var ejBulletGraph = (function (_WidgetBase) {
-    var _instanceInitializers = {};
+  var _instanceInitializers = {};
 
-    _inherits(ejBulletGraph, _WidgetBase);
+  _inherits(ejBulletGraph, _WidgetBase);
 
-    _createDecoratedClass(ejBulletGraph, [{
-        key: 'qualitativeRanges',
-        decorators: [_commonCommon.children(_commonCommon.constants.elementPrefix + 'qualitativeRange')],
-        initializer: null,
-        enumerable: true
-    }], null, _instanceInitializers);
+  _createDecoratedClass(ejBulletGraph, [{
+    key: 'qualitativeRanges',
+    decorators: [_commonCommon.children(_commonCommon.constants.elementPrefix + 'qualitative-range')],
+    initializer: null,
+    enumerable: true
+  }], null, _instanceInitializers);
 
-    function ejBulletGraph(element) {
-        _classCallCheck(this, _ejBulletGraph);
+  function ejBulletGraph(element) {
+    _classCallCheck(this, _ejBulletGraph);
 
-        _WidgetBase.call(this);
+    _WidgetBase.call(this);
 
-        _defineDecoratedPropertyDescriptor(this, 'qualitativeRanges', _instanceInitializers);
+    _defineDecoratedPropertyDescriptor(this, 'qualitativeRanges', _instanceInitializers);
 
-        this.element = element;
-        this.hasChildProperty = true;
-        this.childPropertyName = 'qualitativeRanges';
-    }
+    this.element = element;
+    this.hasChildProperty = true;
+    this.childPropertyName = 'qualitativeRanges';
+  }
 
-    var _ejBulletGraph = ejBulletGraph;
-    ejBulletGraph = _commonCommon.inject(Element)(ejBulletGraph) || ejBulletGraph;
-    ejBulletGraph = _commonCommon.generateBindables('ejBulletGraph', ['applyRangeStrokeToLabels', 'applyRangeStrokeToTicks', 'captionSettings', 'comparativeMeasureValue', 'enableAnimation', 'flowDirection', 'height', 'isResponsive', 'orientation', 'qualitativeRanges', 'qualitativeRangeSize', 'quantitativeScaleLength', 'quantitativeScaleSettings', 'theme', 'tooltipSettings', 'value', 'width'])(ejBulletGraph) || ejBulletGraph;
-    ejBulletGraph = _commonCommon.inlineView('<template><content></content></template>')(ejBulletGraph) || ejBulletGraph;
-    ejBulletGraph = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'bullet-graph')(ejBulletGraph) || ejBulletGraph;
-    return ejBulletGraph;
+  var _ejBulletGraph = ejBulletGraph;
+  ejBulletGraph = _commonCommon.inject(Element)(ejBulletGraph) || ejBulletGraph;
+  ejBulletGraph = _commonCommon.generateBindables('ejBulletGraph', ['applyRangeStrokeToLabels', 'applyRangeStrokeToTicks', 'captionSettings', 'comparativeMeasureValue', 'enableAnimation', 'flowDirection', 'height', 'isResponsive', 'orientation', 'qualitativeRanges', 'qualitativeRangeSize', 'quantitativeScaleLength', 'quantitativeScaleSettings', 'theme', 'tooltipSettings', 'value', 'width'])(ejBulletGraph) || ejBulletGraph;
+  ejBulletGraph = _commonCommon.inlineView('<template><content></content></template>')(ejBulletGraph) || ejBulletGraph;
+  ejBulletGraph = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'bullet-graph')(ejBulletGraph) || ejBulletGraph;
+  return ejBulletGraph;
 })(_commonCommon.WidgetBase);
 
 exports.ejBulletGraph = ejBulletGraph;

@@ -15,35 +15,35 @@ var _commonCommon = require('../common/common');
 require('ej.kanban.min');
 
 var ejKanban = (function (_WidgetBase) {
-    var _instanceInitializers = {};
+  var _instanceInitializers = {};
 
-    _inherits(ejKanban, _WidgetBase);
+  _inherits(ejKanban, _WidgetBase);
 
-    _createDecoratedClass(ejKanban, [{
-        key: 'columns',
-        decorators: [_commonCommon.children(_commonCommon.constants.elementPrefix + 'kanbanColumn')],
-        initializer: null,
-        enumerable: true
-    }], null, _instanceInitializers);
+  _createDecoratedClass(ejKanban, [{
+    key: 'columns',
+    decorators: [_commonCommon.children(_commonCommon.constants.elementPrefix + 'kanban-column')],
+    initializer: null,
+    enumerable: true
+  }], null, _instanceInitializers);
 
-    function ejKanban(element) {
-        _classCallCheck(this, _ejKanban);
+  function ejKanban(element) {
+    _classCallCheck(this, _ejKanban);
 
-        _WidgetBase.call(this);
+    _WidgetBase.call(this);
 
-        _defineDecoratedPropertyDescriptor(this, 'columns', _instanceInitializers);
+    _defineDecoratedPropertyDescriptor(this, 'columns', _instanceInitializers);
 
-        this.element = element;
-        this.hasChildProperty = true;
-        this.childPropertyName = 'columns';
-    }
+    this.element = element;
+    this.hasChildProperty = true;
+    this.childPropertyName = 'columns';
+  }
 
-    var _ejKanban = ejKanban;
-    ejKanban = _commonCommon.inject(Element)(ejKanban) || ejKanban;
-    ejKanban = _commonCommon.generateBindables('ejKanban', ['allowDragAndDrop', 'allowTitle', 'swimlaneSettings', 'allowToggleColumn', 'allowSearching', 'allowSelection', 'allowHover', 'allowKeyboardNavigation', 'allowScrolling', 'contextMenuSettings', 'columns', 'cardSettings', 'cssClass', 'dataSource', 'enableRTL', 'enableTotalCount', 'editSettings', 'fields', 'keyField', 'isResponsive', 'minWidth', 'filterSettings', 'query', 'keySettings', 'scrollSettings', 'searchSettings', 'selectionType', 'stackedHeaderRows', 'tooltipSettings', 'locale'], ['dataSource'])(ejKanban) || ejKanban;
-    ejKanban = _commonCommon.inlineView('<template><content></content></template>')(ejKanban) || ejKanban;
-    ejKanban = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'kanban')(ejKanban) || ejKanban;
-    return ejKanban;
+  var _ejKanban = ejKanban;
+  ejKanban = _commonCommon.inject(Element)(ejKanban) || ejKanban;
+  ejKanban = _commonCommon.generateBindables('ejKanban', ['allowDragAndDrop', 'allowTitle', 'swimlaneSettings', 'allowToggleColumn', 'allowSearching', 'allowSelection', 'allowHover', 'allowKeyboardNavigation', 'allowScrolling', 'contextMenuSettings', 'columns', 'cardSettings', 'cssClass', 'dataSource', 'enableRTL', 'enableTotalCount', 'editSettings', 'fields', 'keyField', 'isResponsive', 'minWidth', 'filterSettings', 'query', 'keySettings', 'scrollSettings', 'searchSettings', 'selectionType', 'stackedHeaderRows', 'tooltipSettings', 'locale'], ['dataSource'], { 'enableRTL': 'enableRtl' })(ejKanban) || ejKanban;
+  ejKanban = _commonCommon.inlineView('<template><content></content></template>')(ejKanban) || ejKanban;
+  ejKanban = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'kanban')(ejKanban) || ejKanban;
+  return ejKanban;
 })(_commonCommon.WidgetBase);
 
 exports.ejKanban = ejKanban;

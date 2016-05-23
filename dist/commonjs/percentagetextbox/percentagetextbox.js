@@ -11,20 +11,20 @@ var _commonCommon = require('../common/common');
 require('ej.editor.min');
 
 var ejPercentageTextbox = (function (_WidgetBase) {
-    _inherits(ejPercentageTextbox, _WidgetBase);
+  _inherits(ejPercentageTextbox, _WidgetBase);
 
-    function ejPercentageTextbox(element) {
-        _classCallCheck(this, _ejPercentageTextbox);
+  function ejPercentageTextbox(element) {
+    _classCallCheck(this, _ejPercentageTextbox);
 
-        _WidgetBase.call(this);
-        this.element = element;
-    }
+    _WidgetBase.call(this);
+    this.element = element;
+  }
 
-    var _ejPercentageTextbox = ejPercentageTextbox;
-    ejPercentageTextbox = _commonCommon.inject(Element)(ejPercentageTextbox) || ejPercentageTextbox;
-    ejPercentageTextbox = _commonCommon.generateBindables('ejPercentageTextbox', ['cssClass', 'decimalPlaces', 'enabled', 'enablePersistence', 'enableRTL', 'enableStrictMode', 'groupSeparator', 'height', 'htmlAttributes', 'incrementStep', 'locale', 'maxValue', 'minValue', 'name', 'readOnly', 'showRoundedCorner', 'showSpinButton', 'validateOnType', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'width'])(ejPercentageTextbox) || ejPercentageTextbox;
-    ejPercentageTextbox = _commonCommon.customAttribute(_commonCommon.constants.attributePrefix + 'percentage-textbox')(ejPercentageTextbox) || ejPercentageTextbox;
-    return ejPercentageTextbox;
+  var _ejPercentageTextbox = ejPercentageTextbox;
+  ejPercentageTextbox = _commonCommon.inject(Element)(ejPercentageTextbox) || ejPercentageTextbox;
+  ejPercentageTextbox = _commonCommon.generateBindables('ejPercentageTextbox', ['cssClass', 'decimalPlaces', 'enabled', 'enablePersistence', 'enableRTL', 'enableStrictMode', 'groupSeparator', 'height', 'htmlAttributes', 'incrementStep', 'locale', 'maxValue', 'minValue', 'name', 'readOnly', 'showRoundedCorner', 'showSpinButton', 'validateOnType', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'width'], [], { 'enableRTL': 'enableRtl' })(ejPercentageTextbox) || ejPercentageTextbox;
+  ejPercentageTextbox = _commonCommon.customAttribute(_commonCommon.constants.attributePrefix + 'percentage-textbox')(ejPercentageTextbox) || ejPercentageTextbox;
+  return ejPercentageTextbox;
 })(_commonCommon.WidgetBase);
 
 exports.ejPercentageTextbox = ejPercentageTextbox;

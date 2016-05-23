@@ -11,21 +11,21 @@ var _commonCommon = require('../common/common');
 require('ej.splitter.min');
 
 var ejSplitter = (function (_WidgetBase) {
-    _inherits(ejSplitter, _WidgetBase);
+  _inherits(ejSplitter, _WidgetBase);
 
-    function ejSplitter(element) {
-        _classCallCheck(this, _ejSplitter);
+  function ejSplitter(element) {
+    _classCallCheck(this, _ejSplitter);
 
-        _WidgetBase.call(this);
-        this.element = element;
-    }
+    _WidgetBase.call(this);
+    this.element = element;
+  }
 
-    var _ejSplitter = ejSplitter;
-    ejSplitter = _commonCommon.inject(Element)(ejSplitter) || ejSplitter;
-    ejSplitter = _commonCommon.generateBindables('ejSplitter', ['allowKeyboardNavigation', 'animationSpeed', 'cssClass', 'enableAnimation', 'enableRTL', 'height', 'htmlAttributes', 'isResponsive', 'orientation', 'properties', 'width'])(ejSplitter) || ejSplitter;
-    ejSplitter = _commonCommon.inlineView('<template><content></content></template>')(ejSplitter) || ejSplitter;
-    ejSplitter = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'splitter')(ejSplitter) || ejSplitter;
-    return ejSplitter;
+  var _ejSplitter = ejSplitter;
+  ejSplitter = _commonCommon.inject(Element)(ejSplitter) || ejSplitter;
+  ejSplitter = _commonCommon.generateBindables('ejSplitter', ['allowKeyboardNavigation', 'animationSpeed', 'cssClass', 'enableAnimation', 'enableRTL', 'height', 'htmlAttributes', 'isResponsive', 'orientation', 'properties', 'width'], [], { 'enableRTL': 'enableRtl' })(ejSplitter) || ejSplitter;
+  ejSplitter = _commonCommon.inlineView('<template><content></content></template>')(ejSplitter) || ejSplitter;
+  ejSplitter = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'splitter')(ejSplitter) || ejSplitter;
+  return ejSplitter;
 })(_commonCommon.WidgetBase);
 
 exports.ejSplitter = ejSplitter;

@@ -6,8 +6,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 var _events = require('./events');
 
-var _aureliaTaskQueue = require('aurelia-task-queue');
-
 var _commonUtil = require('../common/util');
 
 var firstValue = {};
@@ -18,13 +16,22 @@ var WidgetBase = (function () {
   }
 
   WidgetBase.prototype.createWidget = function createWidget(option) {
+    var _this = this;
+
     this.allOption = this.getWidgetOptions(option.element);
-    if (!this.ejOptions) {
+    if (!this.ejOptions && !this.isEditor) {
       this.createTwoWays();
     }
     this.widget = jQuery($(option.element))[this.controlName](this.allOption).data(this.controlName);
     if (this.templateProcessor) {
       this.templateProcessor.initWidgetDependancies();
+    }
+    if (this.isEditor) {
+      this.widget.model._change = function (evt) {
+        if ('ejValue' in _this) {
+          _this[_this.util.getBindablePropertyName('value')] = evt.value;
+        }
+      };
     }
   };
 

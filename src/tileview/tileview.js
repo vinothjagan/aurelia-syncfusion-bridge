@@ -4,13 +4,12 @@ import 'ej.tile.min';
 
 @customElement(`${constants.elementPrefix}tile-view`)
 @inlineView('<template><content></content></template>')
-
-@generateBindables('ejTileView', ['badge', 'caption', 'cssClass', 'enablePersistence', 'height', 'imageClass', 'imagePosition', 'imageTemplateId',
-    'imageUrl', 'livetile', 'tileSize', 'width', 'showRoundedCorner', 'allowSelection', 'backgroundColor'])
+@generateBindables('ejTileView', ['badge', 'caption', 'cssClass', 'enablePersistence', 'height', 'imageClass', 'imagePosition', 'imageTemplateId', 'imageUrl', 'livetile', 'tileSize', 'width', 'showRoundedCorner', 'allowSelection', 'backgroundColor'])
 @inject(Element)
 export class ejTileView extends WidgetBase {
-    constructor(element) {
-        super();
-        this.element = element;
-    }
+  constructor(element) {
+    super();
+    this.element = element;
+  }
 }
+

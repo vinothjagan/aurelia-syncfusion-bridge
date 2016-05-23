@@ -1,4 +1,4 @@
-define(['exports', './events', 'aurelia-task-queue', '../common/util'], function (exports, _events, _aureliaTaskQueue, _commonUtil) {
+define(['exports', './events', '../common/util'], function (exports, _events, _commonUtil) {
   'use strict';
 
   exports.__esModule = true;
@@ -13,13 +13,22 @@ define(['exports', './events', 'aurelia-task-queue', '../common/util'], function
     }
 
     WidgetBase.prototype.createWidget = function createWidget(option) {
+      var _this = this;
+
       this.allOption = this.getWidgetOptions(option.element);
-      if (!this.ejOptions) {
+      if (!this.ejOptions && !this.isEditor) {
         this.createTwoWays();
       }
       this.widget = jQuery($(option.element))[this.controlName](this.allOption).data(this.controlName);
       if (this.templateProcessor) {
         this.templateProcessor.initWidgetDependancies();
+      }
+      if (this.isEditor) {
+        this.widget.model._change = function (evt) {
+          if ('ejValue' in _this) {
+            _this[_this.util.getBindablePropertyName('value')] = evt.value;
+          }
+        };
       }
     };
 

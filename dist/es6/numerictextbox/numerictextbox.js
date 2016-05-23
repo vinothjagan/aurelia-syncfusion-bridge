@@ -3,15 +3,12 @@ import {customAttribute, inject, WidgetBase, constants, generateBindables} from 
 import 'ej.editor.min';
 
 @customAttribute(`${constants.attributePrefix}numeric-textbox`)
-
-@generateBindables('ejNumericTextbox', ['cssClass', 'decimalPlaces', 'enabled', 'enablePersistence', 'enableRTL', 'enableStrictMode', 'groupSeparator',
-    'height', 'htmlAttributes', 'incrementStep', 'locale', 'maxValue', 'minValue',
-    'name', 'readOnly', 'showRoundedCorner', 'showSpinButton', 'validateOnType', 'validationMessage',
-    'validationRules', 'value', 'watermarkText', 'width'])
+@generateBindables('ejNumericTextbox', ['cssClass', 'decimalPlaces', 'enabled', 'enablePersistence', 'enableRTL', 'enableStrictMode', 'groupSeparator', 'height', 'htmlAttributes', 'incrementStep', 'locale', 'maxValue', 'minValue', 'name', 'readOnly', 'showRoundedCorner', 'showSpinButton', 'validateOnType', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'width'], [], {'enableRTL': 'enableRtl'})
 @inject(Element)
 export class ejNumericTextbox extends WidgetBase {
-    constructor(element) {
-        super();
-        this.element = element;
-    }
+  constructor(element) {
+    super();
+    this.element = element;
+  }
 }
+

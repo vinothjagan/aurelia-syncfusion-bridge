@@ -13,8 +13,13 @@ export class Util {
 
   getOptions(model, properties ) {
     let bindableproperites = {};
+    let value;
     for (let prop of properties) {
-      let value = model[this.getBindablePropertyName(prop)];
+      if (model.abbrevProperties && prop in model.abbrevProperties) {
+        value = model[this.getBindablePropertyName(model.abbrevProperties[prop])];
+      }else {
+        value = model[this.getBindablePropertyName(prop)];
+      }
       if (this.hasValue(value)) {
         if (typeof value === 'string' ) {
           value = this.processData(value);

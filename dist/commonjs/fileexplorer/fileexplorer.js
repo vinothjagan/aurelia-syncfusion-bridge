@@ -11,21 +11,21 @@ var _commonCommon = require('../common/common');
 require('ej.fileexplorer.min');
 
 var ejFileExplorer = (function (_WidgetBase) {
-    _inherits(ejFileExplorer, _WidgetBase);
+  _inherits(ejFileExplorer, _WidgetBase);
 
-    function ejFileExplorer(element) {
-        _classCallCheck(this, _ejFileExplorer);
+  function ejFileExplorer(element) {
+    _classCallCheck(this, _ejFileExplorer);
 
-        _WidgetBase.call(this);
-        this.element = element;
-    }
+    _WidgetBase.call(this);
+    this.element = element;
+  }
 
-    var _ejFileExplorer = ejFileExplorer;
-    ejFileExplorer = _commonCommon.inject(Element)(ejFileExplorer) || ejFileExplorer;
-    ejFileExplorer = _commonCommon.generateBindables('ejFileExplorer', ['ajaxAction', 'ajaxDataType', 'ajaxSettings', 'allowMultiSelection', 'cssClass', 'enableResize', 'enableRTL', 'fileTypes', 'filterSettings', 'gridSettings', 'height', 'isResponsive', 'layout', 'locale', 'maxHeight', 'maxWidth', 'minHeight', 'minWidth', 'path', 'selectedFolder', 'selectedItems', 'showContextMenu', 'showFooter', 'showToolbar', 'showNavigationPane', 'tools', 'toolsList', 'uploadSettings', 'width'])(ejFileExplorer) || ejFileExplorer;
-    ejFileExplorer = _commonCommon.inlineView('<template><content></content></template>')(ejFileExplorer) || ejFileExplorer;
-    ejFileExplorer = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'file-explorer')(ejFileExplorer) || ejFileExplorer;
-    return ejFileExplorer;
+  var _ejFileExplorer = ejFileExplorer;
+  ejFileExplorer = _commonCommon.inject(Element)(ejFileExplorer) || ejFileExplorer;
+  ejFileExplorer = _commonCommon.generateBindables('ejFileExplorer', ['ajaxAction', 'ajaxDataType', 'ajaxSettings', 'allowMultiSelection', 'cssClass', 'enableResize', 'enableRTL', 'fileTypes', 'filterSettings', 'gridSettings', 'height', 'isResponsive', 'layout', 'locale', 'maxHeight', 'maxWidth', 'minHeight', 'minWidth', 'path', 'selectedFolder', 'selectedItems', 'showContextMenu', 'showFooter', 'showToolbar', 'showNavigationPane', 'tools', 'toolsList', 'uploadSettings', 'width'], [], { 'enableRTL': 'enableRtl' })(ejFileExplorer) || ejFileExplorer;
+  ejFileExplorer = _commonCommon.inlineView('<template><content></content></template>')(ejFileExplorer) || ejFileExplorer;
+  ejFileExplorer = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'file-explorer')(ejFileExplorer) || ejFileExplorer;
+  return ejFileExplorer;
 })(_commonCommon.WidgetBase);
 
 exports.ejFileExplorer = ejFileExplorer;

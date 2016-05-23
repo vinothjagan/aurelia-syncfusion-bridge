@@ -11,20 +11,20 @@ var _commonCommon = require('../common/common');
 require('ej.toolbar.min');
 
 var ejToolbar = (function (_WidgetBase) {
-    _inherits(ejToolbar, _WidgetBase);
+  _inherits(ejToolbar, _WidgetBase);
 
-    function ejToolbar(element) {
-        _classCallCheck(this, _ejToolbar);
+  function ejToolbar(element) {
+    _classCallCheck(this, _ejToolbar);
 
-        _WidgetBase.call(this);
-        this.element = element;
-    }
+    _WidgetBase.call(this);
+    this.element = element;
+  }
 
-    var _ejToolbar = ejToolbar;
-    ejToolbar = _commonCommon.inject(Element)(ejToolbar) || ejToolbar;
-    ejToolbar = _commonCommon.generateBindables('ejToolbar', ['cssClass', 'dataSource', 'enabled', 'enableRTL', 'enableSeparator', 'fields', 'height', 'hide', 'isResponsive', 'orientation', 'query', 'showRoundedCorner', 'width'])(ejToolbar) || ejToolbar;
-    ejToolbar = _commonCommon.customAttribute(_commonCommon.constants.attributePrefix + 'toolbar')(ejToolbar) || ejToolbar;
-    return ejToolbar;
+  var _ejToolbar = ejToolbar;
+  ejToolbar = _commonCommon.inject(Element)(ejToolbar) || ejToolbar;
+  ejToolbar = _commonCommon.generateBindables('ejToolbar', ['cssClass', 'dataSource', 'enabled', 'enableRTL', 'enableSeparator', 'fields', 'height', 'hide', 'isResponsive', 'orientation', 'query', 'showRoundedCorner', 'width'], [], { 'enableRTL': 'enableRtl' })(ejToolbar) || ejToolbar;
+  ejToolbar = _commonCommon.customAttribute(_commonCommon.constants.attributePrefix + 'toolbar')(ejToolbar) || ejToolbar;
+  return ejToolbar;
 })(_commonCommon.WidgetBase);
 
 exports.ejToolbar = ejToolbar;

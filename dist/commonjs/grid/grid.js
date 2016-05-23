@@ -15,37 +15,37 @@ var _commonCommon = require('../common/common');
 require('ej.grid.min');
 
 var ejGrid = (function (_WidgetBase) {
-    var _instanceInitializers = {};
+  var _instanceInitializers = {};
 
-    _inherits(ejGrid, _WidgetBase);
+  _inherits(ejGrid, _WidgetBase);
 
-    _createDecoratedClass(ejGrid, [{
-        key: 'columns',
-        decorators: [_commonCommon.children(_commonCommon.constants.elementPrefix + 'column')],
-        initializer: null,
-        enumerable: true
-    }], null, _instanceInitializers);
+  _createDecoratedClass(ejGrid, [{
+    key: 'columns',
+    decorators: [_commonCommon.children(_commonCommon.constants.elementPrefix + 'column')],
+    initializer: null,
+    enumerable: true
+  }], null, _instanceInitializers);
 
-    function ejGrid(element, templateEngine) {
-        _classCallCheck(this, _ejGrid);
+  function ejGrid(element, templateEngine) {
+    _classCallCheck(this, _ejGrid);
 
-        _WidgetBase.call(this);
+    _WidgetBase.call(this);
 
-        _defineDecoratedPropertyDescriptor(this, 'columns', _instanceInitializers);
+    _defineDecoratedPropertyDescriptor(this, 'columns', _instanceInitializers);
 
-        this.element = element;
-        this.hasChildProperty = true;
-        this.childPropertyName = 'columns';
-        this.templateProcessor = new _commonCommon.TemplateProcessor(this, templateEngine);
-        this.templateProcessor.initTemplate();
-    }
+    this.element = element;
+    this.hasChildProperty = true;
+    this.childPropertyName = 'columns';
+    this.templateProcessor = new _commonCommon.TemplateProcessor(this, templateEngine);
+    this.templateProcessor.initTemplate();
+  }
 
-    var _ejGrid = ejGrid;
-    ejGrid = _commonCommon.inject(Element, _commonCommon.TemplatingEngine)(ejGrid) || ejGrid;
-    ejGrid = _commonCommon.generateBindables('ejGrid', ['allowCellMerging', 'allowGrouping', 'allowKeyboardNavigation', 'allowFiltering', 'allowSorting', 'allowMultiSorting', 'allowPaging', 'allowReordering', 'allowResizeToFit', 'allowResizing', 'allowScrolling', 'allowSearching', 'allowSelection', 'allowTextWrap', 'allowMultipleExporting', 'commonWidth', 'gridLines', 'childGrid', 'columnLayout', 'columns', 'contextMenuSettings', 'cssClass', 'dataSource', 'detailsTemplate', 'editSettings', 'enableAltRow', 'enableAutoSaveOnSelectionChange', 'enableHeaderHover', 'enablePersistence', 'enableResponsiveRow', 'enableRowHover', 'enableRTL', 'enableTouch', 'filterSettings', 'groupSettings', 'textWrapSettings', 'isResponsive', 'keySettings', 'locale', 'minWidth', 'pageSettings', 'query', 'rowTemplate', 'scrollSettings', 'searchSettings', 'selectedRecords', 'selectedRowIndex', 'selectionSettings', 'selectionType', 'showAddNewRow', 'showColumnChooser', 'showInColumnChooser', 'showStackedHeader', 'showSummary', 'sortSettings', 'stackedHeaderRows', 'summaryRows', 'toolbarSettings'], ['dataSource'])(ejGrid) || ejGrid;
-    ejGrid = _commonCommon.inlineView('<template><content></content></template>')(ejGrid) || ejGrid;
-    ejGrid = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'grid')(ejGrid) || ejGrid;
-    return ejGrid;
+  var _ejGrid = ejGrid;
+  ejGrid = _commonCommon.inject(Element, _commonCommon.TemplatingEngine)(ejGrid) || ejGrid;
+  ejGrid = _commonCommon.generateBindables('ejGrid', ['allowCellMerging', 'allowGrouping', 'allowKeyboardNavigation', 'allowFiltering', 'allowSorting', 'allowMultiSorting', 'allowPaging', 'allowReordering', 'allowResizeToFit', 'allowResizing', 'allowScrolling', 'allowSearching', 'allowSelection', 'allowTextWrap', 'allowMultipleExporting', 'commonWidth', 'gridLines', 'childGrid', 'columnLayout', 'columns', 'contextMenuSettings', 'cssClass', 'dataSource', 'detailsTemplate', 'editSettings', 'enableAltRow', 'enableAutoSaveOnSelectionChange', 'enableHeaderHover', 'enablePersistence', 'enableResponsiveRow', 'enableRowHover', 'enableRTL', 'enableTouch', 'filterSettings', 'groupSettings', 'textWrapSettings', 'isResponsive', 'keySettings', 'locale', 'minWidth', 'pageSettings', 'query', 'rowTemplate', 'scrollSettings', 'searchSettings', 'selectedRecords', 'selectedRowIndex', 'selectionSettings', 'selectionType', 'showAddNewRow', 'showColumnChooser', 'showInColumnChooser', 'showStackedHeader', 'showSummary', 'sortSettings', 'stackedHeaderRows', 'summaryRows', 'toolbarSettings'], ['dataSource'], { 'enableRTL': 'enableRtl' })(ejGrid) || ejGrid;
+  ejGrid = _commonCommon.inlineView('<template><content></content></template>')(ejGrid) || ejGrid;
+  ejGrid = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'grid')(ejGrid) || ejGrid;
+  return ejGrid;
 })(_commonCommon.WidgetBase);
 
 exports.ejGrid = ejGrid;

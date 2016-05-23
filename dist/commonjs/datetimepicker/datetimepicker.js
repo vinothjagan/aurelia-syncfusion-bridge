@@ -11,20 +11,20 @@ var _commonCommon = require('../common/common');
 require('ej.datetimepicker.min');
 
 var ejDateTimePicker = (function (_WidgetBase) {
-	_inherits(ejDateTimePicker, _WidgetBase);
+  _inherits(ejDateTimePicker, _WidgetBase);
 
-	function ejDateTimePicker(element) {
-		_classCallCheck(this, _ejDateTimePicker);
+  function ejDateTimePicker(element) {
+    _classCallCheck(this, _ejDateTimePicker);
 
-		_WidgetBase.call(this);
-		this.element = element;
-	}
+    _WidgetBase.call(this);
+    this.element = element;
+  }
 
-	var _ejDateTimePicker = ejDateTimePicker;
-	ejDateTimePicker = _commonCommon.inject(Element)(ejDateTimePicker) || ejDateTimePicker;
-	ejDateTimePicker = _commonCommon.generateBindables('ejDateTimePicker', ['buttonText', 'cssClass', 'dateTimeFormat', 'dayHeaderFormat', 'depthLevel', 'enableAnimation', 'enabled', 'enablePersistence', 'enableRTL', 'enableStrictMode', 'headerFormat', 'height', 'htmlAttributes', 'interval', 'locale', 'maxDateTime', 'minDateTime', 'popupPosition', 'readOnly', 'showOtherMonths', 'showPopupButton', 'showRoundedCorner', 'startDay', 'startLevel', 'stepMonths', 'timeDisplayFormat', 'timeDrillDown', 'timePopupWidth', 'validationMessage', 'validationRules', 'value', 'width'], ['value'])(ejDateTimePicker) || ejDateTimePicker;
-	ejDateTimePicker = _commonCommon.customAttribute(_commonCommon.constants.attributePrefix + 'date-time-picker')(ejDateTimePicker) || ejDateTimePicker;
-	return ejDateTimePicker;
+  var _ejDateTimePicker = ejDateTimePicker;
+  ejDateTimePicker = _commonCommon.inject(Element)(ejDateTimePicker) || ejDateTimePicker;
+  ejDateTimePicker = _commonCommon.generateBindables('ejDateTimePicker', ['buttonText', 'cssClass', 'dateTimeFormat', 'dayHeaderFormat', 'depthLevel', 'enableAnimation', 'enabled', 'enablePersistence', 'enableRTL', 'enableStrictMode', 'headerFormat', 'height', 'htmlAttributes', 'interval', 'locale', 'maxDateTime', 'minDateTime', 'popupPosition', 'readOnly', 'showOtherMonths', 'showPopupButton', 'showRoundedCorner', 'startDay', 'startLevel', 'stepMonths', 'timeDisplayFormat', 'timeDrillDown', 'timePopupWidth', 'validationMessage', 'validationRules', 'value', 'width'], ['value'], { 'enableRTL': 'enableRtl' })(ejDateTimePicker) || ejDateTimePicker;
+  ejDateTimePicker = _commonCommon.customAttribute(_commonCommon.constants.attributePrefix + 'date-time-picker')(ejDateTimePicker) || ejDateTimePicker;
+  return ejDateTimePicker;
 })(_commonCommon.WidgetBase);
 
 exports.ejDateTimePicker = ejDateTimePicker;

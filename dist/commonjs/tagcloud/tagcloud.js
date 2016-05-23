@@ -11,21 +11,21 @@ var _commonCommon = require('../common/common');
 require('ej.tagcloud.min');
 
 var ejTagCloud = (function (_WidgetBase) {
-    _inherits(ejTagCloud, _WidgetBase);
+  _inherits(ejTagCloud, _WidgetBase);
 
-    function ejTagCloud(element) {
-        _classCallCheck(this, _ejTagCloud);
+  function ejTagCloud(element) {
+    _classCallCheck(this, _ejTagCloud);
 
-        _WidgetBase.call(this);
-        this.element = element;
-    }
+    _WidgetBase.call(this);
+    this.element = element;
+  }
 
-    var _ejTagCloud = ejTagCloud;
-    ejTagCloud = _commonCommon.inject(Element)(ejTagCloud) || ejTagCloud;
-    ejTagCloud = _commonCommon.generateBindables('ejTagCloud', ['cssClass', 'dataSource', 'enableRTL', 'fields', 'format', 'maxFontSize', 'minFontSize', 'query', 'showTitle', 'titleImage', 'titleText'])(ejTagCloud) || ejTagCloud;
-    ejTagCloud = _commonCommon.inlineView('<template><content></content></template>')(ejTagCloud) || ejTagCloud;
-    ejTagCloud = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'tag-cloud')(ejTagCloud) || ejTagCloud;
-    return ejTagCloud;
+  var _ejTagCloud = ejTagCloud;
+  ejTagCloud = _commonCommon.inject(Element)(ejTagCloud) || ejTagCloud;
+  ejTagCloud = _commonCommon.generateBindables('ejTagCloud', ['cssClass', 'dataSource', 'enableRTL', 'fields', 'format', 'maxFontSize', 'minFontSize', 'query', 'showTitle', 'titleImage', 'titleText'], [], { 'enableRTL': 'enableRtl' })(ejTagCloud) || ejTagCloud;
+  ejTagCloud = _commonCommon.inlineView('<template><content></content></template>')(ejTagCloud) || ejTagCloud;
+  ejTagCloud = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'tag-cloud')(ejTagCloud) || ejTagCloud;
+  return ejTagCloud;
 })(_commonCommon.WidgetBase);
 
 exports.ejTagCloud = ejTagCloud;

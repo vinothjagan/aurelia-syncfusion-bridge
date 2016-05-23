@@ -3,13 +3,12 @@ import {customAttribute, inject, WidgetBase, constants, generateBindables} from 
 import 'ej.radialmenu.min';
 
 @customAttribute(`${constants.attributePrefix}radial-menu`)
-
-@generateBindables('ejRadialMenu', ['autoOpen', 'backImageClass', 'cssClass', 'enableAnimation', 'imageClass', 'radius', 'targetElementId',
-    'position'])
+@generateBindables('ejRadialMenu', ['autoOpen', 'backImageClass', 'cssClass', 'enableAnimation', 'imageClass', 'radius', 'targetElementId', 'position'])
 @inject(Element)
 export class ejRadialMenu extends WidgetBase {
-    constructor(element) {
-        super();
-        this.element = element;
-    }
+  constructor(element) {
+    super();
+    this.element = element;
+  }
 }
+

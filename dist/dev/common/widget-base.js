@@ -1,15 +1,13 @@
-System.register(['./events', 'aurelia-task-queue', '../common/util'], function (_export) {
+System.register(['./events', '../common/util'], function (_export) {
   'use strict';
 
-  var getEventOption, TaskQueue, Util, firstValue, WidgetBase;
+  var getEventOption, Util, firstValue, WidgetBase;
 
   function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
   return {
     setters: [function (_events) {
       getEventOption = _events.getEventOption;
-    }, function (_aureliaTaskQueue) {
-      TaskQueue = _aureliaTaskQueue.TaskQueue;
     }, function (_commonUtil) {
       Util = _commonUtil.Util;
     }],
@@ -22,13 +20,22 @@ System.register(['./events', 'aurelia-task-queue', '../common/util'], function (
         }
 
         WidgetBase.prototype.createWidget = function createWidget(option) {
+          var _this = this;
+
           this.allOption = this.getWidgetOptions(option.element);
-          if (!this.ejOptions) {
+          if (!this.ejOptions && !this.isEditor) {
             this.createTwoWays();
           }
           this.widget = jQuery($(option.element))[this.controlName](this.allOption).data(this.controlName);
           if (this.templateProcessor) {
             this.templateProcessor.initWidgetDependancies();
+          }
+          if (this.isEditor) {
+            this.widget.model._change = function (evt) {
+              if ('ejValue' in _this) {
+                _this[_this.util.getBindablePropertyName('value')] = evt.value;
+              }
+            };
           }
         };
 

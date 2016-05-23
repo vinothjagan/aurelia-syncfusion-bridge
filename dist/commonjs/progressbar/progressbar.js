@@ -11,20 +11,20 @@ var _commonCommon = require('../common/common');
 require('ej.progressbar.min');
 
 var ejProgressBar = (function (_WidgetBase) {
-    _inherits(ejProgressBar, _WidgetBase);
+  _inherits(ejProgressBar, _WidgetBase);
 
-    function ejProgressBar(element) {
-        _classCallCheck(this, _ejProgressBar);
+  function ejProgressBar(element) {
+    _classCallCheck(this, _ejProgressBar);
 
-        _WidgetBase.call(this);
-        this.element = element;
-    }
+    _WidgetBase.call(this);
+    this.element = element;
+  }
 
-    var _ejProgressBar = ejProgressBar;
-    ejProgressBar = _commonCommon.inject(Element)(ejProgressBar) || ejProgressBar;
-    ejProgressBar = _commonCommon.generateBindables('ejProgressBar', ['cssClass', 'enabled', 'enablePersistence', 'enableRTL', 'height', 'htmlAttributes', 'maxValue', 'minValue', 'percentage', 'showRoundedCorner', 'text', 'value', 'width'])(ejProgressBar) || ejProgressBar;
-    ejProgressBar = _commonCommon.customAttribute(_commonCommon.constants.attributePrefix + 'progress-bar')(ejProgressBar) || ejProgressBar;
-    return ejProgressBar;
+  var _ejProgressBar = ejProgressBar;
+  ejProgressBar = _commonCommon.inject(Element)(ejProgressBar) || ejProgressBar;
+  ejProgressBar = _commonCommon.generateBindables('ejProgressBar', ['cssClass', 'enabled', 'enablePersistence', 'enableRTL', 'height', 'htmlAttributes', 'maxValue', 'minValue', 'percentage', 'showRoundedCorner', 'text', 'value', 'width'], [], { 'enableRTL': 'enableRtl' })(ejProgressBar) || ejProgressBar;
+  ejProgressBar = _commonCommon.customAttribute(_commonCommon.constants.attributePrefix + 'progress-bar')(ejProgressBar) || ejProgressBar;
+  return ejProgressBar;
 })(_commonCommon.WidgetBase);
 
 exports.ejProgressBar = ejProgressBar;

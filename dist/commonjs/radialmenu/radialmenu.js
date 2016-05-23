@@ -11,20 +11,20 @@ var _commonCommon = require('../common/common');
 require('ej.radialmenu.min');
 
 var ejRadialMenu = (function (_WidgetBase) {
-    _inherits(ejRadialMenu, _WidgetBase);
+  _inherits(ejRadialMenu, _WidgetBase);
 
-    function ejRadialMenu(element) {
-        _classCallCheck(this, _ejRadialMenu);
+  function ejRadialMenu(element) {
+    _classCallCheck(this, _ejRadialMenu);
 
-        _WidgetBase.call(this);
-        this.element = element;
-    }
+    _WidgetBase.call(this);
+    this.element = element;
+  }
 
-    var _ejRadialMenu = ejRadialMenu;
-    ejRadialMenu = _commonCommon.inject(Element)(ejRadialMenu) || ejRadialMenu;
-    ejRadialMenu = _commonCommon.generateBindables('ejRadialMenu', ['autoOpen', 'backImageClass', 'cssClass', 'enableAnimation', 'imageClass', 'radius', 'targetElementId', 'position'])(ejRadialMenu) || ejRadialMenu;
-    ejRadialMenu = _commonCommon.customAttribute(_commonCommon.constants.attributePrefix + 'radial-menu')(ejRadialMenu) || ejRadialMenu;
-    return ejRadialMenu;
+  var _ejRadialMenu = ejRadialMenu;
+  ejRadialMenu = _commonCommon.inject(Element)(ejRadialMenu) || ejRadialMenu;
+  ejRadialMenu = _commonCommon.generateBindables('ejRadialMenu', ['autoOpen', 'backImageClass', 'cssClass', 'enableAnimation', 'imageClass', 'radius', 'targetElementId', 'position'])(ejRadialMenu) || ejRadialMenu;
+  ejRadialMenu = _commonCommon.customAttribute(_commonCommon.constants.attributePrefix + 'radial-menu')(ejRadialMenu) || ejRadialMenu;
+  return ejRadialMenu;
 })(_commonCommon.WidgetBase);
 
 exports.ejRadialMenu = ejRadialMenu;

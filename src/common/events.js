@@ -21,7 +21,7 @@ export function getEventOption(element) {
     }
     let actualEventName = name.split('.')[0];//Event name with constants event prefix
     let eventName = util._unhyphenate(actualEventName.split(constants.eventPrefix)[1]);
-    option[eventName] = e => fireEvent(element, actualEventName, e);
+    option[eventName] = e => fireEvent(element, actualEventName, e);  // eslint-disable-line no-loop-func
   }
   return option;
 }

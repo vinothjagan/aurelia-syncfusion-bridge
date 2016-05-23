@@ -11,20 +11,20 @@ var _commonCommon = require('../common/common');
 require('ej.rte.min');
 
 var ejRTE = (function (_WidgetBase) {
-	_inherits(ejRTE, _WidgetBase);
+  _inherits(ejRTE, _WidgetBase);
 
-	function ejRTE(element) {
-		_classCallCheck(this, _ejRTE);
+  function ejRTE(element) {
+    _classCallCheck(this, _ejRTE);
 
-		_WidgetBase.call(this);
-		this.element = element;
-	}
+    _WidgetBase.call(this);
+    this.element = element;
+  }
 
-	var _ejRTE = ejRTE;
-	ejRTE = _commonCommon.inject(Element)(ejRTE) || ejRTE;
-	ejRTE = _commonCommon.generateBindables('ejRTE', ['allowEditing', 'allowKeyboardNavigation', 'autoFocus', 'autoHeight', 'colorCode', 'colorPaletteColumns', 'colorPaletteRows', 'cssClass', 'enabled', 'enableHtmlEncode', 'enablePersistence', 'enableResize', 'enableRTL', 'enableXHTML', 'enableTabKeyNavigation', 'externalCSS', 'fileBrowser', 'fontName', 'fontSize', 'format', 'height', 'htmlAttributes', 'iframeAttributes', 'imageBrowser', 'isResponsive', 'locale', 'maxHeight', 'maxLength', 'maxWidth', 'minHeight', 'minWidth', 'name', 'showClearAll', 'showClearFormat', 'showCustomTable', 'showContextMenu', 'showDimensions', 'showFontOption', 'showFooter', 'showHtmlSource', 'showHtmlTagInfo', 'showToolbar', 'showCharCount', 'showWordCount', 'tableColumns', 'tableRows', 'tools', 'toolsList', 'undoStackLimit', 'value', 'validationRules', 'validationMessage', 'width', 'zoomStep'], ['value'])(ejRTE) || ejRTE;
-	ejRTE = _commonCommon.customAttribute(_commonCommon.constants.attributePrefix + 'r-t-e')(ejRTE) || ejRTE;
-	return ejRTE;
+  var _ejRTE = ejRTE;
+  ejRTE = _commonCommon.inject(Element)(ejRTE) || ejRTE;
+  ejRTE = _commonCommon.generateBindables('ejRTE', ['allowEditing', 'allowKeyboardNavigation', 'autoFocus', 'autoHeight', 'colorCode', 'colorPaletteColumns', 'colorPaletteRows', 'cssClass', 'enabled', 'enableHtmlEncode', 'enablePersistence', 'enableResize', 'enableRTL', 'enableXHTML', 'enableTabKeyNavigation', 'externalCSS', 'fileBrowser', 'fontName', 'fontSize', 'format', 'height', 'htmlAttributes', 'iframeAttributes', 'imageBrowser', 'isResponsive', 'locale', 'maxHeight', 'maxLength', 'maxWidth', 'minHeight', 'minWidth', 'name', 'showClearAll', 'showClearFormat', 'showCustomTable', 'showContextMenu', 'showDimensions', 'showFontOption', 'showFooter', 'showHtmlSource', 'showHtmlTagInfo', 'showToolbar', 'showCharCount', 'showWordCount', 'tableColumns', 'tableRows', 'tools', 'toolsList', 'undoStackLimit', 'value', 'validationRules', 'validationMessage', 'width', 'zoomStep'], ['value'], { 'enableRTL': 'enableRtl' })(ejRTE) || ejRTE;
+  ejRTE = _commonCommon.customAttribute(_commonCommon.constants.attributePrefix + 'r-t-e')(ejRTE) || ejRTE;
+  return ejRTE;
 })(_commonCommon.WidgetBase);
 
 exports.ejRTE = ejRTE;

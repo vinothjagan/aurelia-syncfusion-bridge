@@ -1,0 +1,11 @@
+<template>
+ 
+ <div class="cols-sample-area"  style="height:500px;">
+ <button id="btnOpen" class="e-btn" ej-button="ej-text:Click to open dialog; size: medium, type: button, height: 30, width: 150" ej-on-click.trigger="onOpen()"></button>
+ <div class="control">
+                    <ej-dialog  id="ajaxDialog" ej-title="Twitter"  ej-width="500" ej-content-type="ajax"  ej-content=".cols-sample-area" ej-content-url="./twitter.html" ej-on-close.trigger="onDialogClose()">
+                   
+                    </ej-dialog>
+ </div>
+ </div>
+</template>

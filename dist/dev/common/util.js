@@ -28,6 +28,7 @@ System.register(['./constants'], function (_export) {
 
         Util.prototype.getOptions = function getOptions(model, properties) {
           var bindableproperites = {};
+          var value = undefined;
           for (var _iterator = properties, _isArray = Array.isArray(_iterator), _i = 0, _iterator = _isArray ? _iterator : _iterator[Symbol.iterator]();;) {
             var _ref;
 
@@ -42,7 +43,11 @@ System.register(['./constants'], function (_export) {
 
             var prop = _ref;
 
-            var value = model[this.getBindablePropertyName(prop)];
+            if (model.abbrevProperties && prop in model.abbrevProperties) {
+              value = model[this.getBindablePropertyName(model.abbrevProperties[prop])];
+            } else {
+              value = model[this.getBindablePropertyName(prop)];
+            }
             if (this.hasValue(value)) {
               if (typeof value === 'string') {
                 value = this.processData(value);

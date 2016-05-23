@@ -11,20 +11,20 @@ var _commonCommon = require('../common/common');
 require('ej.maskedit.min');
 
 var ejMaskEdit = (function (_WidgetBase) {
-    _inherits(ejMaskEdit, _WidgetBase);
+  _inherits(ejMaskEdit, _WidgetBase);
 
-    function ejMaskEdit(element) {
-        _classCallCheck(this, _ejMaskEdit);
+  function ejMaskEdit(element) {
+    _classCallCheck(this, _ejMaskEdit);
 
-        _WidgetBase.call(this);
-        this.element = element;
-    }
+    _WidgetBase.call(this);
+    this.element = element;
+  }
 
-    var _ejMaskEdit = ejMaskEdit;
-    ejMaskEdit = _commonCommon.inject(Element)(ejMaskEdit) || ejMaskEdit;
-    ejMaskEdit = _commonCommon.generateBindables('ejMaskEdit', ['cssClass', 'customCharacter', 'enabled', 'enablePersistence', 'height', 'hidePromptOnLeave', 'htmlAttributes', 'inputMode', 'maskFormat', 'name', 'readOnly', 'showError', 'showRoundedCorner', 'textAlign', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'width'], ['value'])(ejMaskEdit) || ejMaskEdit;
-    ejMaskEdit = _commonCommon.customAttribute(_commonCommon.constants.attributePrefix + 'mask-edit')(ejMaskEdit) || ejMaskEdit;
-    return ejMaskEdit;
+  var _ejMaskEdit = ejMaskEdit;
+  ejMaskEdit = _commonCommon.inject(Element)(ejMaskEdit) || ejMaskEdit;
+  ejMaskEdit = _commonCommon.generateBindables('ejMaskEdit', ['cssClass', 'customCharacter', 'enabled', 'enablePersistence', 'height', 'hidePromptOnLeave', 'htmlAttributes', 'inputMode', 'maskFormat', 'name', 'readOnly', 'showError', 'showRoundedCorner', 'textAlign', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'width'], ['value'])(ejMaskEdit) || ejMaskEdit;
+  ejMaskEdit = _commonCommon.customAttribute(_commonCommon.constants.attributePrefix + 'mask-edit')(ejMaskEdit) || ejMaskEdit;
+  return ejMaskEdit;
 })(_commonCommon.WidgetBase);
 
 exports.ejMaskEdit = ejMaskEdit;

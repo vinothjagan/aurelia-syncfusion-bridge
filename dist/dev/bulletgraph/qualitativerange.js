@@ -1,7 +1,7 @@
 System.register(['../common/common'], function (_export) {
   'use strict';
 
-  var inlineView, customElement, children, constants, generateBindables, Util, QualitativeRange;
+  var inlineView, customElement, constants, generateBindables, QualitativeRange;
 
   function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
@@ -9,10 +9,8 @@ System.register(['../common/common'], function (_export) {
     setters: [function (_commonCommon) {
       inlineView = _commonCommon.inlineView;
       customElement = _commonCommon.customElement;
-      children = _commonCommon.children;
       constants = _commonCommon.constants;
       generateBindables = _commonCommon.generateBindables;
-      Util = _commonCommon.Util;
     }],
     execute: function () {
       QualitativeRange = (function () {

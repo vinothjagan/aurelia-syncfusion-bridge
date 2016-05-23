@@ -11,20 +11,20 @@ var _commonCommon = require('../common/common');
 require('ej.checkbox.min');
 
 var ejCheckBox = (function (_WidgetBase) {
-    _inherits(ejCheckBox, _WidgetBase);
+  _inherits(ejCheckBox, _WidgetBase);
 
-    function ejCheckBox(element) {
-        _classCallCheck(this, _ejCheckBox);
+  function ejCheckBox(element) {
+    _classCallCheck(this, _ejCheckBox);
 
-        _WidgetBase.call(this);
-        this.element = element;
-    }
+    _WidgetBase.call(this);
+    this.element = element;
+  }
 
-    var _ejCheckBox = ejCheckBox;
-    ejCheckBox = _commonCommon.inject(Element)(ejCheckBox) || ejCheckBox;
-    ejCheckBox = _commonCommon.generateBindables('ejCheckBox', ['checked', 'checkState', 'cssClass', 'enabled', 'enablePersistence', 'enableRTL', 'enableTriState', 'htmlAttributes', 'id', 'idPrefix', 'name', 'showRoundedCorner', 'size', 'text', 'validationMessage', 'validationRules', 'value'], ['checked'])(ejCheckBox) || ejCheckBox;
-    ejCheckBox = _commonCommon.customAttribute(_commonCommon.constants.attributePrefix + 'check-box')(ejCheckBox) || ejCheckBox;
-    return ejCheckBox;
+  var _ejCheckBox = ejCheckBox;
+  ejCheckBox = _commonCommon.inject(Element)(ejCheckBox) || ejCheckBox;
+  ejCheckBox = _commonCommon.generateBindables('ejCheckBox', ['checked', 'checkState', 'cssClass', 'enabled', 'enablePersistence', 'enableRTL', 'enableTriState', 'htmlAttributes', 'id', 'idPrefix', 'name', 'showRoundedCorner', 'size', 'text', 'validationMessage', 'validationRules', 'value'], ['checked'], { 'enableRTL': 'enableRtl' })(ejCheckBox) || ejCheckBox;
+  ejCheckBox = _commonCommon.customAttribute(_commonCommon.constants.attributePrefix + 'check-box')(ejCheckBox) || ejCheckBox;
+  return ejCheckBox;
 })(_commonCommon.WidgetBase);
 
 exports.ejCheckBox = ejCheckBox;

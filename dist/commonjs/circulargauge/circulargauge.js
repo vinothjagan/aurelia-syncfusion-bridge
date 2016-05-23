@@ -11,21 +11,21 @@ var _commonCommon = require('../common/common');
 require('datavisualization/ej.circulargauge.min');
 
 var ejCircularGauge = (function (_WidgetBase) {
-    _inherits(ejCircularGauge, _WidgetBase);
+  _inherits(ejCircularGauge, _WidgetBase);
 
-    function ejCircularGauge(element) {
-        _classCallCheck(this, _ejCircularGauge);
+  function ejCircularGauge(element) {
+    _classCallCheck(this, _ejCircularGauge);
 
-        _WidgetBase.call(this);
-        this.element = element;
-    }
+    _WidgetBase.call(this);
+    this.element = element;
+  }
 
-    var _ejCircularGauge = ejCircularGauge;
-    ejCircularGauge = _commonCommon.inject(Element)(ejCircularGauge) || ejCircularGauge;
-    ejCircularGauge = _commonCommon.generateBindables('ejCircularGauge', ['animationSpeed', 'backgroundColor', 'distanceFromCorner', 'enableAnimation', 'frame', 'gaugePosition', 'height', 'interiorGradient', 'isRadialGradient', 'isResponsive', 'maximum', 'minimum', 'outerCustomLabelPosition', 'radius', 'readOnly', 'scales', 'theme', 'tooltip', 'value', 'width'], ['value', 'minimum', 'maximum'])(ejCircularGauge) || ejCircularGauge;
-    ejCircularGauge = _commonCommon.inlineView('<template><content></content></template>')(ejCircularGauge) || ejCircularGauge;
-    ejCircularGauge = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'circular-gauge')(ejCircularGauge) || ejCircularGauge;
-    return ejCircularGauge;
+  var _ejCircularGauge = ejCircularGauge;
+  ejCircularGauge = _commonCommon.inject(Element)(ejCircularGauge) || ejCircularGauge;
+  ejCircularGauge = _commonCommon.generateBindables('ejCircularGauge', ['animationSpeed', 'backgroundColor', 'distanceFromCorner', 'enableAnimation', 'frame', 'gaugePosition', 'height', 'interiorGradient', 'isRadialGradient', 'isResponsive', 'maximum', 'minimum', 'outerCustomLabelPosition', 'radius', 'readOnly', 'scales', 'theme', 'tooltip', 'value', 'width'], ['value', 'minimum', 'maximum'])(ejCircularGauge) || ejCircularGauge;
+  ejCircularGauge = _commonCommon.inlineView('<template><content></content></template>')(ejCircularGauge) || ejCircularGauge;
+  ejCircularGauge = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'circular-gauge')(ejCircularGauge) || ejCircularGauge;
+  return ejCircularGauge;
 })(_commonCommon.WidgetBase);
 
 exports.ejCircularGauge = ejCircularGauge;

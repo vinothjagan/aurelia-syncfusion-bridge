@@ -11,21 +11,21 @@ var _commonCommon = require('../common/common');
 require('common/ej.scroller.min');
 
 var ejScroller = (function (_WidgetBase) {
-    _inherits(ejScroller, _WidgetBase);
+  _inherits(ejScroller, _WidgetBase);
 
-    function ejScroller(element) {
-        _classCallCheck(this, _ejScroller);
+  function ejScroller(element) {
+    _classCallCheck(this, _ejScroller);
 
-        _WidgetBase.call(this);
-        this.element = element;
-    }
+    _WidgetBase.call(this);
+    this.element = element;
+  }
 
-    var _ejScroller = ejScroller;
-    ejScroller = _commonCommon.inject(Element)(ejScroller) || ejScroller;
-    ejScroller = _commonCommon.generateBindables('ejScroller', ['autoHide', 'buttonSize', 'enabled', 'enablePersistence', 'enableRTL', 'enableTouchScroll', 'height', 'scrollerSize', 'scrollLeft', 'scrollOneStepBy', 'scrollTop', 'targetPane', 'width'])(ejScroller) || ejScroller;
-    ejScroller = _commonCommon.inlineView('<template><content></content></template>')(ejScroller) || ejScroller;
-    ejScroller = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'scroller')(ejScroller) || ejScroller;
-    return ejScroller;
+  var _ejScroller = ejScroller;
+  ejScroller = _commonCommon.inject(Element)(ejScroller) || ejScroller;
+  ejScroller = _commonCommon.generateBindables('ejScroller', ['autoHide', 'buttonSize', 'enabled', 'enablePersistence', 'enableRTL', 'enableTouchScroll', 'height', 'scrollerSize', 'scrollLeft', 'scrollOneStepBy', 'scrollTop', 'targetPane', 'width'], [], { 'enableRTL': 'enableRtl' })(ejScroller) || ejScroller;
+  ejScroller = _commonCommon.inlineView('<template><content></content></template>')(ejScroller) || ejScroller;
+  ejScroller = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'scroller')(ejScroller) || ejScroller;
+  return ejScroller;
 })(_commonCommon.WidgetBase);
 
 exports.ejScroller = ejScroller;
