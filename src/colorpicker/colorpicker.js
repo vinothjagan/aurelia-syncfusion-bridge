@@ -3,7 +3,7 @@ import {customAttribute, inject, WidgetBase, constants, generateBindables} from 
 import 'ej.colorpicker.min';
 
 @customAttribute(`${constants.attributePrefix}color-picker`)
-@generateBindables('ejColorPicker', ['buttonText', 'buttonMode', 'columns', 'cssClass', 'custom', 'displayInline', 'enabled', 'enableOpacity', 'htmlAttributes', 'modelType', 'opacityValue', 'palette', 'presetType', 'showApplyCancel', 'showClearButton', 'showPreview', 'showRecentColors', 'showTooltip', 'toolIcon', 'tooltipText', 'value'], ['value'])
+@generateBindables('ejColorPicker', ['buttonText', 'buttonMode', 'columns', 'cssClass', 'custom', 'displayInline', 'enabled', 'enableOpacity', 'htmlAttributes', 'modelType', 'opacityValue', 'palette', 'presetType', 'showApplyCancel', 'showClearButton', 'showPreview', 'showRecentColors', 'showTooltip', 'toolIcon', 'tooltipText', 'value'], ['value', 'opacityValue'])
 @inject(Element)
 export class ejColorPicker extends WidgetBase {
   constructor(element) {

@@ -8,6 +8,7 @@ import 'ej.maskedit.min';
 export class ejMaskEdit extends WidgetBase {
   constructor(element) {
     super();
+    this.isEditor = true;
     this.element = element;
   }
 }

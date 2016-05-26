@@ -5,6 +5,12 @@
     "basic-use": {
       "default" : true,
       "files": ["html", "js"]
+    },
+	"numeric": {
+      "files": ["html", "js"]
+    },
+	"scrollbar": {
+      "files": ["html", "js"]
     }
   }
 }

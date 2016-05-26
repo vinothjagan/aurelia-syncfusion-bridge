@@ -6,8 +6,5 @@
       "default" : true,
       "files": ["html", "js"]
     },
-	"digital-clock": {
-      "files": ["html", "js"]
-    },
   }
 }

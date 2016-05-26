@@ -8,6 +8,7 @@ import 'ej.timepicker.min';
 export class ejTimePicker extends WidgetBase {
   constructor(element) {
     super();
+    this.isEditor = true;
     this.element = element;
   }
 }

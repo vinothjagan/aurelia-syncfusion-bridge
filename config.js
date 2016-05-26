@@ -12,9 +12,9 @@ System.config({
   paths: {
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*",
-    "common/ej.*": "src/root/vendors/scripts/common/ej.*.js",
-    "datavisualization/ej.*": "src/root/vendors/scripts/datavisualization/ej.*.js",
-    "ej.*": "src/root/vendors/scripts/web/ej.*.js"
+    "common/ej.*": "vendors/scripts/common/ej.*.js",
+    "datavisualization/ej.*": "vendors/scripts/datavisualization/ej.*.js",
+    "ej.*": "vendors/scripts/web/ej.*.js"
   },
 
   map: {
@@ -39,6 +39,7 @@ System.config({
     "jquery": "github:components/jquery@2.2.1",
     "jquery-easing": "npm:jquery.easing@1.3.2",
     "jquery-validation": "npm:jquery-validation@1.15.0",
+    "jquery-validation-unobtrusive": "npm:jquery-validation-unobtrusive@3.2.6",
     "jsrender": "npm:jsrender@0.9.75",
     "polymer/mutationobservers": "github:polymer/mutationobservers@0.4.2",
     "text": "github:systemjs/plugin-text@0.0.4",
@@ -225,6 +226,10 @@ System.config({
     },
     "npm:inherits@2.0.1": {
       "util": "github:jspm/nodelibs-util@0.1.0"
+    },
+    "npm:jquery-validation-unobtrusive@3.2.6": {
+      "jquery": "npm:jquery@2.2.4",
+      "jquery-validation": "npm:jquery-validation@1.15.0"
     },
     "npm:jquery-validation@1.15.0": {
       "process": "github:jspm/nodelibs-process@0.1.2"

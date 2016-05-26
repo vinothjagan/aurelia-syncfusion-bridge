@@ -6,10 +6,10 @@
       "default" : true,
       "files": ["html", "js"]
     },
-	"remote-data": {
+	"local-data": {
       "files": ["html", "js"]
     },
-	"local-data": {
+	"indicator": {
       "files": ["html", "js"]
     }
   }

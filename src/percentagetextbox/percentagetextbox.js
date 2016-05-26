@@ -8,6 +8,7 @@ import 'ej.editor.min';
 export class ejPercentageTextbox extends WidgetBase {
   constructor(element) {
     super();
+    this.isEditor = true;
     this.element = element;
   }
 }

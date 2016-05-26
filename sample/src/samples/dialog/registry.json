@@ -6,9 +6,6 @@
       "default" : true,
       "files": ["html", "js","css"]
     },
-    "ajax-content":{
-      "files":["html","js"]
-    },
     "icons":{
       "files":["html","js","css"]
     },

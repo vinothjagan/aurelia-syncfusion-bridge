@@ -1,1 +1,1 @@
-export class BasicUse{}
+export class BasicUse {}

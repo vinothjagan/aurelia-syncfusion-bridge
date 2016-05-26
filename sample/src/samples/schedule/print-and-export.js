@@ -32,7 +32,7 @@ export class PrintAndExport {
       this.orientation = ['Vertical', 'Horizontal'];
       this.buttonText = { browse: 'Import' };
       this.dialogAction = { closeOnComplete: true };
-      let dataManager = ej.DataManager({
+      let dataManager = ej.DataManager({ //eslint-disable-line new-cap
         url: 'http://js.syncfusion.com/ScheduleExport/api/JSScheduleExport/GetScheduleData',
         crossDomain: true
       });

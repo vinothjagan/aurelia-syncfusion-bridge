@@ -1,5 +1,5 @@
 export class CustomResourceDays {
-
+    /* eslint-disable radix */
     onChange() {
       let weekDays = ej.cultureObject.calendar.days.names;
       let nancydays = $('#nancyworkdays').data('ejDropDownList');

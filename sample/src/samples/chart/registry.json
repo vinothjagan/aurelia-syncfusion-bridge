@@ -39,8 +39,8 @@
 	"candle":{
 	   "files": ["html", "js"]
 	},
-	"tooltip-template":{
-	   "files": ["html", "js", "css"]
+	"3d-bar":{
+	   "files": ["html", "js"]
 	},
 	"live":{
 	   "files": ["html", "js"]

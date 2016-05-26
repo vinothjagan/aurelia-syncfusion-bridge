@@ -15,9 +15,6 @@
 	"pointer-image": {
 	  "files": ["html", "js"]
     },
-	"speedometer": {
-	  "files": ["html", "js"]
-    },
 	"unit-label": {
 	  "files": ["html", "js"]
     },

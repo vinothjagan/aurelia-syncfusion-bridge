@@ -1,158 +1,55 @@
 export class BasicUse {
   constructor() {
- this.primaryXAxis=
-                           {
-                               rangePadding: "none"
-                           } ;
-						   this.primaryYAxis=
-                          {
-                              labelFormat: '${value}',
-						   range:{min:60, max:160, interval:20}
-                          };
-						  this.crosshair= {
-                               visible: true,
-							type:'trackball',
-                            marker:
-                           {
-                               shape: 'circle',
-
-                               size:
-                               {
-                                   height: 9, width: 9
-                               },
-                               visible: true,
-                               border: {width: 1 }
-                           },
-                            line: {
-                                color: 'transparent'
-                            }
-                           };
-						   this.series=series: [{
-                            type: 'line',
-                            name: 'Product X',
-                            enableAnimation: true, 
-							tooltip: {format: "#point.x#  : #point.y#", visible: true},
-                            border: {width: 2 },
-							tooltip :
-					                {					             	 
-					            	format:"#point.x#  : ej.format(#point.y#,n2)"
-				                	},
-                        },
-                            {
-                                type: 'line',
-                                name: 'Product Y',
-                                enableAnimation: true, 
-								tooltip: {format: "#point.x#  : #point.y#", visible: true},
-                                border:{ width: 2 },
-								tooltip :
-					                {					             	 
-					            	format:"#point.x#  : ej.format(#point.y#,n2)"
-				                	},
-                            }
-
-                        ];
-						   this.size= { height: "400" };
-						   this.legend= { visible: true };
-						   this.selectedRangeSettings={
-               start:"2010/5/1", end:"2011/10/1"
-           };
-		   this.tooltipSettings= {
-                visible: true, backgroundColor: "gray", tooltipDisplayMode: "ondemand",
-                
-                    font: {
-                        color: 'white',
-                        family: 'Segoe UI',
-                        style: 'Normal',
-                        size: '12px',
-                        opacity: 1,
-                        weight: 'regular'
-                    }
-                
-                
-            };
-			this.rangeSeries= [
-                            {                      
-
-                                name: 'Product A',
-                                enableAnimation: false,
-                                type: 'line',
-                                dataSource: data.Open, xName: "XValue", yName: "YValue",
-								opacity: 0.5, fill: '#69D2E7',
-                                border: {color: 'transparent', width: 2 }
-
-                            }
-
-            ];
-			this.seriesSettings= {
-                type: 'column', enableAnimation: true,
-            };
-			
-
+    this.dataSource = this.getdata().Open;
+    this.legend = {visible: false};
+    this.style =  {borderWidth: 2 };
+    this.crosshair = {visible: true, type: 'trackball', marker: {shape: 'circle', size: {height: 9, width: 9}, visible: true, border: {width: 1}}, line: {color: 'transparent'}};
+    this.tooltip = {visible: true, format: '#point.x#  :  ej.format(#point.y#,n2)'};
+    this.selectedRangeSettings = {start: '100', end: '250'};
+    this.sizeSettings = {width: '950', height: '100'};
+    this.size = {width: '1000', height: '300'};
   }
-  
-	
-		onchartload(sender) {
-		var data;
-		    loadTheme(sender);
-            data = GetData();
-            sender.detail.model.series[0].dataSource = data.Open;
-			sender.detail.model.series[0].xName= "XValue";
-			sender.detail.model.series[0].yName= "YValue";
-            sender.detail.model.series[1].dataSource = data.Close;
-			sender.detail.model.series[1].xName= "XValue";
-			sender.detail.model.series[1].yName= "YValue";
-        }
-		loadingtheme(sender) {
-		   var theme=QueryString["theme"]
-		  if (theme) {
-        switch (theme) {           
-            case "azure":            
-                theme = "azurelight";
-                break;            
-            case "lime":
-			theme="limelight";
-			break;
-            case "saffron":
-			theme="saffronlight";            
-            default:
-                theme = theme;
-                break;
-        }
-        sender.detail.model.theme = theme;
-		  }
-		}
-		onchartloaded(sender) {
-		var chartobj = $("#container").data("ejChart");
-            if (chartobj != null) {
-                chartobj.model.primaryXAxis.zoomPosition = sender.detail.zoomPosition;
-                chartobj.model.primaryXAxis.zoomFactor = sender.detail.zoomFactor;
-            }
-            $("#container").ejChart("redraw");
-        }
-		 
-        GetData() {
-            var series1 = [];
-            var series2 = [];
-            var value = 100;
-            var value1 = 120;
-            for (var i = 0; i < 351; i++) {
 
-                if (Math.random() > .5) {
-                    value += Math.random();
-                    value1 += Math.random();
-                } else {
-                    value -= Math.random();
-                    value1 -= Math.random();
-                }
-                var point1 = { XValue: i, YValue: value };
-                var point2 = { XValue: i, YValue: value1 };
-                series1.push(point1);
-                series2.push(point2);
-            }
-
-            data = { Open: series1, Close: series2 };
-            return data;
-        }
-
-	
+  onchartloaded(sender) {
+    let chartobj = $('#chart').data('ejChart');
+    if (chartobj) {
+      chartobj.model.primaryXAxis.zoomPosition = sender.detail.zoomPosition;
+      chartobj.model.primaryXAxis.zoomFactor = sender.detail.zoomFactor;
+      $('#chart').ejChart('redraw');
+    }
   }
+  onchartload(sender) {
+    let data = this.getdata();
+    sender.detail.model.series[0].dataSource = data.Open;
+    sender.detail.model.series[0].xName = 'XValue';
+    sender.detail.model.series[0].yName = 'YValue';
+    sender.detail.model.series[1].dataSource = data.Close;
+    sender.detail.model.series[1].xName = 'XValue';
+    sender.detail.model.series[1].yName = 'YValue';
+  }
+
+  getdata() {
+    let series1 = [];
+    let series2 = [];
+    let data;
+    let value = 100;
+    let value1 = 120;
+    let point1;
+    let point2;
+    for (let i = 0; i < 351; i++) {
+      if (Math.random() > 0.5) {
+        value += Math.random();
+        value1 += Math.random();
+      } else {
+        value -= Math.random();
+        value1 -= Math.random();
+      }
+      point1 = { XValue: i, YValue: value };
+      point2 = { XValue: i, YValue: value1 };
+      series1.push(point1);
+      series2.push(point2);
+    }
+    data = { Open: series1, Close: series2 };
+    return data;
+  }
+}

@@ -1,5 +1,3 @@
-export class BasicUse{
-    constructor() {
-      
-     
-  }}
+export class BasicUse {
+
+}

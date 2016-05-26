@@ -5,13 +5,13 @@ import {Registry} from 'shared/registry';
 @inject(Registry)
 export class Index {
 
-    constructor(registry) {
-        this.registry = registry;
-    }
+  constructor(registry) {
+    this.registry = registry;
+  }
 
-    configureRouter(config, router) {
-        this.router = router;
+  configureRouter(config, router) {
+    this.router = router;
 
-        return this.registry.load(config, 'tab');
-    }
+    return this.registry.load(config, 'tab');
+  }
 }

@@ -1,9 +1,8 @@
-import {customElement, inlineView, inject, WidgetBase, constants, generateBindables} from '../common/common';
+import {customAttribute, inject, WidgetBase, constants, generateBindables} from '../common/common';
 
 import 'ej.waitingpopup.min';
 
-@customElement(`${constants.elementPrefix}waiting-popup`)
-@inlineView('<template><content></content></template>')
+@customAttribute(`${constants.attributePrefix}waiting-popup`)
 @generateBindables('ejWaitingPopup', ['cssClass', 'showImage', 'showOnInit', 'template', 'text'])
 @inject(Element)
 export class ejWaitingPopup extends WidgetBase {

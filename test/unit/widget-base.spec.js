@@ -1,13 +1,11 @@
 import './setup';
 import {WidgetBase} from 'src/common/widget-base';
-import {constants} from 'src/common/constants';
 import {Util} from 'src/common/util';
 import {initialize} from 'aurelia-pal-browser';
 import {DOM} from 'aurelia-pal';
 import 'ej.checkbox.min';
 describe('Events', () => {
   let widgetBase;
-  let util;
   let  element:Element;
   beforeEach(() => {
     initialize();

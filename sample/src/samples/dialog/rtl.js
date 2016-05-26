@@ -1,12 +1,12 @@
 export class BasicUse {
   constructor() {
-    this.tooltip={ close: "بند کریں" };
+    this.tooltip = { close: 'بند کریں' };
   }
-onOpen(args){
-    $("#btnOpen").hide();
-    $("#rtlDialog").ejDialog("open");
+onOpen(args) {
+  $('#btnOpen').hide();
+  $('#rtlDialog').ejDialog('open');
 }
  onDialogClose(args) {
-            $("#btnOpen").show();
-        }
+   $('#btnOpen').show();
+ }
 }
