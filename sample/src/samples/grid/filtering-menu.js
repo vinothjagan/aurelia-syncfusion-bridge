@@ -1,7 +1,7 @@
-import '../scripts/jsondata.js'; 
+import '../scripts/jsondata.js';
 export class gridfilteringmenu {
     constructor() {
-        this.OrderList = window.gridData;
-        this.filtertype = {filterType: 'menu'};
+      this.OrderList = window.gridData;
+      this.filtertype = {filterType: 'menu'};
     }
 }

@@ -4,10 +4,11 @@ import {Registry} from 'shared/registry';
 @inject(Registry)
 export class Index {
     constructor(registry) {
-        this.registry = registry;
+      this.registry = registry;
     }
     configureRouter(config, router) {
-        this.router = router;
-        return this.registry.load(config, 'grid');
+      this.router = router;
+      return this.registry.load(config, 'grid');
     }
 }
+

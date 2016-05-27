@@ -1,7 +1,7 @@
-import '../scripts/jsondata.js'; 
+import '../scripts/jsondata.js';
 export class gridgrouping {
     constructor() {
-        this.CustomerList = window.gridData;
-        this.groupedcolumn = {groupedColumns: ['ShipCountry']};
+      this.CustomerList = window.gridData;
+      this.groupedcolumn = {groupedColumns: ['ShipCountry']};
     }
 }

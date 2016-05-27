@@ -1,6 +1,6 @@
-import '../scripts/jsondata.js'; 
+import '../scripts/jsondata.js';
 export class  defaultfunctionalities {
     constructor() {
-        this.OrdersList = window.gridData;
+      this.OrdersList = window.gridData;
     }
 }
