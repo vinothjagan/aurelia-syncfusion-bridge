@@ -4,7 +4,7 @@ import 'ej.radialmenu.min';
 
 @customElement(`${constants.elementPrefix}radial-menu`)
 @inlineView('<template><content></content></template>')
-@generateBindables('ejRadialMenu', ['autoOpen', 'backImageClass', 'cssClass', 'enableAnimation', 'imageClass', 'radius', 'targetElementId', 'position'])
+@generateBindables('ejRadialMenu', ['autoOpen', 'backImageClass', 'cssClass', 'enableAnimation', 'imageClass', 'items', 'radius', 'targetElementId', 'position'])
 @inject(Element, TemplatingEngine)
 export class ejRadialMenu extends WidgetBase {
   @children(`${constants.elementPrefix}item`) items

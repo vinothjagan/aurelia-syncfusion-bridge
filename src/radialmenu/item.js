@@ -2,7 +2,7 @@ import {inlineView, customElement, children, constants, generateBindables, Util}
 
 @inlineView('<template><content></content></template>')
 @customElement(`${constants.elementPrefix}item`)
-@generateBindables('items', [])
+@generateBindables('items', ['imageUrl', 'text', 'enabled', 'click', 'type'])
 
 export class Item {
   @children(`${constants.elementPrefix}template`) template

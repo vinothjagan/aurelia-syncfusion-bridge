@@ -1,6 +1,6 @@
 <template>
     <div>
-        <ej-tab id="apiTab" style="width: 500px" ej-on-create.trigger="create()">
+        <ej-tab id="apiTab" style="width: 500px" e-on-create.trigger="create()">
             <ul>
                 <li><a href="#javaScript">JavaScript</a></li>
                 <li><a href="#cSharp">C Sharp (C#)</a></li>
@@ -29,8 +29,8 @@
                 Disable Item
             </div>
             <div class="col-md-6">
-                <select name="disableItem" class="e-ddl" id="optDisable" ej-drop-down-list="ej-watermark-text:Select;ej-width.bind:width"
-                ej-on-create.trigger="disableDDL()" ej-on-change.trigger="onDisableChange($event)">
+                <select name="disableItem" class="e-ddl" id="optDisable" ej-drop-down-list="e-watermark-text:Select;e-width.bind:width"
+                e-on-create.trigger="disableDDL()" e-on-change.trigger="onDisableChange($event)">
                     <option value="0">Item 1</option>
                     <option value="1">Item 2</option>
                     <option value="2">Item 3</option>
@@ -42,8 +42,8 @@
                 Enable Item
             </div>
             <div class="col-md-6">
-                <select name="enableItem" class="e-ddl" id="optEnable" ej-drop-down-list="ej-watermark-text:Select;ej-width.bind:width" ej-on-create.trigger="enableDDL()"
-                ej-on-change.trigger="onEnableChange($event)">
+                <select name="enableItem" class="e-ddl" id="optEnable" ej-drop-down-list="e-watermark-text:Select;e-width.bind:width" e-on-create.trigger="enableDDL()"
+                e-on-change.trigger="onEnableChange($event)">
                     <option value="0">Item 1</option>
                     <option value="1">Item 2</option>
                     <option value="2">Item 3</option>
@@ -56,8 +56,8 @@
                 Remove Tab
             </div>
             <div class="col-md-6">
-                <select name="enableItem" class="e-ddl" id="optRemove" ej-drop-down-list="ej-watermark-text:Select;ej-width.bind:width" ej-on-create.trigger="removeDDL()"
-                ej-on-change.trigger="onRemoveChange($event)">
+                <select name="enableItem" class="e-ddl" id="optRemove" ej-drop-down-list="e-watermark-text:Select;e-width.bind:width" e-on-create.trigger="removeDDL()"
+                e-on-change.trigger="onRemoveChange($event)">
                     <option value="0">Item 1</option>
                     <option value="1">Item 2</option>
                     <option value="2">Item 3</option>
@@ -69,8 +69,8 @@
                 Destroy
             </div>
             <div class="col-md-6">
-                <input type="checkbox" id="chkDestroy" class="e-togglebtn" ej-toggle-button="ej-default-text:Destroy;ej-active-text:Restore;ej-width.bind:width"
-                ej-on-change.trigger="onDestroyRestore($event)" />
+                <input type="checkbox" id="chkDestroy" class="e-togglebtn" ej-toggle-button="e-default-text:Destroy;e-active-text:Restore;e-width.bind:width"
+                e-on-change.trigger="onDestroyRestore($event)" />
             </div>
         </div>
     </div>

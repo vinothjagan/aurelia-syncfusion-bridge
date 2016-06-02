@@ -4,7 +4,7 @@ import 'ej.navigationdrawer.min';
 
 @customElement(`${constants.elementPrefix}navigation-drawer`)
 @inlineView('<template><content></content></template>')
-@generateBindables('ejNavigationDrawer', ['contentid', 'cssclass', 'direction', 'enablelistview', 'items', 'listviewsettings', 'position', 'targetid', 'type', 'width'])
+@generateBindables('ejNavigationDrawer', ['contentId', 'cssClass', 'direction', 'enableListView', 'items', 'listViewSettings', 'position', 'targetId', 'type', 'width'])
 @inject(Element)
 export class ejNavigationDrawer extends WidgetBase {
   constructor(element) {

@@ -1,12 +1,12 @@
 <template>
     <require from="./Keyboard-Interaction.css"></require> 
-    <div>            
+    <div style="width:375px;border-radius:5px;border:1px solid #5C5C5C;padding:20px">
         <table class='container-fluid'>
             <tbody class='container-fluid'>                           
                 <tr class='row'>                  
                     <td colspan="2">
-                        <ul id="treeView" ej-tree-view="ej-width:250px;
-                        ej-show-checkbox:true">
+                        <ul id="treeView" ej-tree-view="e-width:250px;
+                        e-show-checkbox:true">
                             <li>Cricket
                                 <ul>
                                     <li>Princeton Club</li>
@@ -64,81 +64,81 @@
                 <div>Expand / Collapse All </div>               
             </div>
             <div class="col-md-3">
-                <input type="checkbox" id="expandAll" ej-toggle-button="ej-size: large;
-                                ej-show-rounded-corner: true;
-                                ej-height:34px;
-                                ej-active-text: Collapse All;
-                                ej-default-text: Expand All" ej-on-change.trigger="expandAll($event)"></input>
+                <input type="checkbox" id="expandAll" ej-toggle-button="e-size: large;
+                                e-show-rounded-corner: true;
+                                e-height:34px;
+                                e-active-text: Collapse All;
+                                e-default-text: Expand All" e-on-change.trigger="expandAll($event)"></input>
                                 <label for="expandAll">Toggle</label>
             </div>   
             <div class="col-md-3">   
                 <div>Check / Uncheck All </div>               
             </div>
             <div class="col-md-3">
-                <input type="checkbox" id="checkAll" ej-toggle-button="ej-size: large;
-                                ej-show-rounded-corner: true;
-                                ej-height:34px;
-                                ej-active-text: UnCheck All;
-                                ej-default-text: Check All" ej-on-change.trigger="checkAll($event)"></input>
+                <input type="checkbox" id="checkAll" ej-toggle-button="e-size: large;
+                                e-show-rounded-corner: true;
+                                e-height:34px;
+                                e-active-text: UnCheck All;
+                                e-default-text: Check All" e-on-change.trigger="checkAll($event)"></input>
                                 <label for="checkAll">Toggle</label>
             </div>  
             <div class="col-md-3">   
                 <div>Selected Node </div>               
             </div>
             <div class="col-md-3">
-                <button id="expand" ej-button="ej-width: 130px" ej-on-click.trigger='nodeExpand($event)'>Expand</button>
+                <button id="expand" ej-button="e-width: 130px" e-on-click.trigger='nodeExpand($event)'>Expand</button>
             </div>  
             <div class="col-md-3">   
                 <div>Selected Node </div>               
             </div>
             <div class="col-md-3">
-                <button id="collapse" ej-button="ej-width: 130px" ej-on-click.trigger='nodeCollpase($event)'>Collapse</button>
+                <button id="collapse" ej-button="e-width: 130px" e-on-click.trigger='nodeCollpase($event)'>Collapse</button>
             </div>  
             <div class="col-md-3">   
                 <div>Selected Node </div>               
             </div>
             <div class="col-md-3">
-                <button id="check" ej-button="ej-width: 130px" ej-on-click.trigger='nodeChecked($event)'>Check</button>
+                <button id="check" ej-button="e-width: 130px" e-on-click.trigger='nodeChecked($event)'>Check</button>
             </div>  
             <div class="col-md-3">   
                 <div>Selected Node </div>               
             </div>
             <div class="col-md-3">
-                <button id="unCheck" ej-button="ej-width: 130px" ej-on-click.trigger='nodeUnchecked($event)'>Uncheck</button>
+                <button id="unCheck" ej-button="e-width: 130px" e-on-click.trigger='nodeUnchecked($event)'>Uncheck</button>
             </div>  
             <div class="col-md-3">   
                 <div>Selected Node</div>               
             </div>
             <div class="col-md-3">
-                <button id="disableNode" ej-button="ej-width: 130px" ej-on-click.trigger='nodeDisable($event)'>Disable</button>
+                <button id="disableNode" ej-button="e-width: 130px" e-on-click.trigger='nodeDisable($event)'>Disable</button>
             </div>  
             <div class="col-md-3">   
                 <div>Disable Node </div>               
             </div>
             <div class="col-md-3">
-                <button id="enableNode" ej-button="ej-width: 130px" ej-on-click.trigger='nodeEnable($event)'>Enable</button>
+                <button id="enableNode" ej-button="e-width: 130px" e-on-click.trigger='nodeEnable($event)'>Enable</button>
             </div>  
             <div class="col-md-3">   
                 <div>Add New node </div>               
             </div>
             <div class="col-md-3">
-                <button id="newNode" ej-button="ej-width: 130px" ej-on-click.trigger='addNewNode($event)'>Add New Node</button>
+                <button id="newNode" ej-button="e-width: 130px" e-on-click.trigger='addNewNode($event)'>Add New Node</button>
             </div>  
             <div class="col-md-3">   
                 <div>Remove node </div>               
             </div>
             <div class="col-md-3">
-                <button id="removeNode" ej-button="ej-width: 130px" ej-on-click.trigger='removeNode($event)'>Remove Node</button>
+                <button id="removeNode" ej-button="e-width: 130px" e-on-click.trigger='removeNode($event)'>Remove Node</button>
             </div>    
             <div class="col-md-3">   
                 <div>Destroy </div>               
             </div>
             <div class="col-md-3">
-                <input type="checkbox" id="destroy" ej-toggle-button="ej-size:large;
-                                ej-show-rounded-corner: true;
-                                ej-height:34px;
-                                ej-active-text: Restore;
-                                ej-default-text: Destroy" ej-on-change.trigger="onDestroy($event)"></input>
+                <input type="checkbox" id="destroy" ej-toggle-button="e-size:large;
+                                e-show-rounded-corner: true;
+                                e-height:34px;
+                                e-active-text: Restore;
+                                e-default-text: Destroy" e-on-change.trigger="onDestroy($event)"></input>
                                 <label for="destroy">Toggle</label>
             </div>    
         </div>

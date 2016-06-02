@@ -1,8 +1,8 @@
 <template>
     <div>
-        <ej-schedule id="Schedule1" ej-width="100%" ej-height="525px" ej-start-hour="0" ej-end-hour="24" ej-time-mode="24" ej-priority-settings.bind="Priority"
-                     ej-appointment-settings.bind="AppointmentList" ej-categorize-settings.bind="CategorizeSettings" ej-context-menu-settings.bind="contextMenu"
-                     ej-current-date="04/03/2014">
+        <ej-schedule id="Schedule1" e-width="100%" e-height="525px" e-start-hour="0" e-end-hour="24" e-time-mode="24" e-priority-settings.bind="Priority"
+                     e-appointment-settings.bind="AppointmentList" e-categorize-settings.bind="CategorizeSettings" e-context-menu-settings.bind="contextMenu"
+                     e-current-date="04/03/2014">
         </ej-schedule>
     </div>
     <div id="property-window" class="box wide">
@@ -13,7 +13,7 @@
                 </label>
             </div>
             <div class="col-sm-2">
-                <select ej-drop-down-list="ej-data-source.bind:orientation;ej-selected-index:0;width:100px" ej-on-select.trigger="orientation($event)" id="orientation"></select>
+                <select ej-drop-down-list="e-data-source.bind:orientation;e-selected-index:0;width:100px" e-on-select.trigger="orientation($event)" id="orientation"></select>
             </div>       
             <div class="col-sm-2">
                 <label>
@@ -21,7 +21,7 @@
                 </label>
             </div>
             <div class="col-sm-2">
-                <input ej-check-box="ej-checked.two-way:readOnly" ej-on-change.trigger="readOnlyMode($event)" id="readonly" />
+                <input ej-check-box="e-checked.two-way:readOnly" e-on-change.trigger="readOnlyMode($event)" id="readonly" />
             </div>
             <div class="col-sm-2">
                 <label>
@@ -29,7 +29,7 @@
                 </label>
             </div>
             <div class="col-sm-2">
-                <input ej-check-box="ej-checked.two-way:allDay" ej-on-change.trigger="allDayRow($event)" id="alldayrow" />
+                <input ej-check-box="e-checked.two-way:allDay" e-on-change.trigger="allDayRow($event)" id="alldayrow" />
             </div>
          </div>
          <div class="row">      
@@ -39,7 +39,7 @@
                 </label>
             </div>
             <div class="col-sm-2">
-                <input ej-check-box="ej-checked.two-way:priority" ej-on-change.trigger="appointmentPriority($event)" class="nodetext" id="appointmentpriority" />
+                <input ej-check-box="e-checked.two-way:priority" e-on-change.trigger="appointmentPriority($event)" class="nodetext" id="appointmentpriority" />
             </div>
             <div class="col-sm-2">
                 <label>
@@ -47,7 +47,7 @@
                 </label>
             </div>
             <div class="col-sm-2">
-                <input ej-check-box="ej-checked.two-way:categorize" ej-on-change.trigger="appointmentCategorize($event)" id="appointmentCategorize" />
+                <input ej-check-box="e-checked.two-way:categorize" e-on-change.trigger="appointmentCategorize($event)" id="appointmentCategorize" />
             </div>
             <div class="col-sm-2">
                 <label>
@@ -55,7 +55,7 @@
                 </label>
             </div>
             <div class="col-sm-2">
-                <input ej-check-box="ej-checked.two-way:contextMenuEnable" ej-on-change.trigger="contextmenu($event)" class="nodetext" id="contextMenu" />
+                <input ej-check-box="e-checked.two-way:contextMenuEnable" e-on-change.trigger="contextmenu($event)" class="nodetext" id="contextMenu" />
             </div>
         </div>
         <div class="row">
@@ -65,7 +65,7 @@
                 </label>
             </div>
             <div class="col-sm-2">
-                <input ej-check-box="ej-checked.two-way:autofit" ej-on-change.trigger="onAutoChange($event)" class="nodetext" id="disableAuto" />
+                <input ej-check-box="e-checked.two-way:autofit" e-on-change.trigger="onAutoChange($event)" class="nodetext" id="disableAuto" />
             </div>
             <div class="col-sm-2">
                 <label>
@@ -73,7 +73,7 @@
                 </label>
             </div>
             <div class="col-sm-2">
-                <input ej-check-box="ej-checked.two-way:tooltip" id="enableToolTip" ej-on-change.trigger="onTooltipChange($event)" />
+                <input ej-check-box="e-checked.two-way:tooltip" id="enableToolTip" e-on-change.trigger="onTooltipChange($event)" />
             </div>
             <div class="col-sm-2">
                 <label>
@@ -81,7 +81,7 @@
                 </label>
             </div>
             <div class="col-sm-2">
-                <input ej-check-box="ej-checked.two-way:tooltipTemp" id="enableToolTipTemp" ej-on-change.trigger="onTooltipTemp($event)" />
+                <input ej-check-box="e-checked.two-way:tooltipTemp" id="enableToolTipTemp" e-on-change.trigger="onTooltipTemp($event)" />
             </div>   
         </div>
         <div class="row">
@@ -91,7 +91,7 @@
                 </label>
             </div>
             <div class="col-sm-2">
-                <select ej-drop-down-list="ej-data-source.bind:DropDownData;ej-fields.bind:fields;ej-width:110px;ej-selected-index:0" ej-on-change.trigger="onChange($event)"
+                <select ej-drop-down-list="e-data-source.bind:DropDownData;e-fields.bind:fields;e-width:110px;e-selected-index:0" e-on-change.trigger="onChange($event)"
                         id="dayofweek" class="e-ddl"></select>
             </div>  
             <div class="col-sm-2">
@@ -100,7 +100,7 @@
                 </label>
             </div>
             <div class="col-sm-2">
-                <input ej-numeric-textbox="ej-name:numeric;ej-value:0;ej-width:110px;ej-min-value.two-way:0;ej-max-value.two-way:24"
+                <input ej-numeric-textbox="e-name:numeric;e-value:0;e-width:110px;e-min-value.two-way:0;e-max-value.two-way:24"
                        id="stime" />
             </div>
             <div class="col-sm-2">
@@ -109,13 +109,13 @@
                 </label>
             </div>
             <div class="col-sm-2">
-                <input ej-numeric-textbox="ej-name:numeric;ej-value:24;ej-width:110px;ej-min-value.two-way:0;ej-max-value.two-way:24"
+                <input ej-numeric-textbox="e-name:numeric;e-value:24;e-width:110px;e-min-value.two-way:0;e-max-value.two-way:24"
                        id="etime" />
             </div>
         </div>
         <div class="row">
             <div class="col-sm-1">
-                <button class="e-btn" ej-button="ej-width:80px;ej-height:25px" ej-on-click.trigger="changeTime()" id="submit ">Submit</button>
+                <button class="e-btn" ej-button="e-width:80px;e-height:25px" e-on-click.trigger="changeTime()" id="submit ">Submit</button>
             </div>
         </div>
     </div>

@@ -3,7 +3,7 @@
     <div>
         <div class="posupload">Select a file to upload </div>
         <div class="control">
-            <ej-uploadbox id="UploadMethods" ej-save-url.bind="save" ej-remove-url.bind="remove" ej-on-create.trigger="create()">
+            <ej-uploadbox id="UploadMethods" e-save-url.bind="save" e-remove-url.bind="remove" e-on-create.trigger="create()">
             </ej-uploadbox>
         </div>
     </div>
@@ -13,7 +13,9 @@
             <div class="col-md-6">
                 Enable / Disable</div>
             <div class="col-md-6">
-                <input type="checkbox" id="btnchkunchk" class="e-togglebtn" value="checkuncheck" ej-toggle-button="ej-default-text:Disable;ej-active-text:Enable;ej-size:normal;ej-width:110px" ej-on-change.trigger="onCheckUncheckAll($event)" />
+                <input type="checkbox" id="btnchkunchk" class="e-togglebtn" value="checkuncheck"
+                 ej-toggle-button="e-default-text:Disable;e-active-text:Enable;e-size:normal;e-width:110px" 
+                 e-on-change.trigger="onCheckUncheckAll($event)" />
             </div>
         </div>
         <br />
@@ -21,7 +23,7 @@
             <div class="col-md-6">Multiple Files Selection</div>
             <div class="col-md-6">
 
-                <input type="checkbox" id="check1" ej-check-box="ej-checked:true" ej-on-change.trigger="onCheck($event)" />
+                <input type="checkbox" id="check1" ej-check-box="e-checked:true" e-on-change.trigger="onCheck($event)" />
             </div>
         </div>
     </div>

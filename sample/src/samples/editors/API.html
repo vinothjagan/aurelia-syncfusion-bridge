@@ -13,7 +13,7 @@
                                         <label>Kilometers</label>
                                     </td></tr> <tr>
                                     <td>
-                                        <input id="numeric" type="text" ej-numeric-textbox="ej-value.bind:numericValue;ej-width.bind:cwidth;ej-enabled.bind:status;" />
+                                        <input id="numeric" type="text" ej-numeric-textbox="e-value.bind:numericValue;e-width.bind:cwidth;e-enabled.bind:status;" />
                                     </td>
                                 </tr>
                                 <tr>
@@ -21,7 +21,7 @@
                                         <label>Service Tax</label>
                                     </td></tr> <tr>
                                     <td>
-                                        <input id="percent" type="text" ej-percentage-textbox="ej-value.bind:percentValue;ej-width.bind:cwidth;ej-enabled.bind:status;" />
+                                        <input id="percent" type="text" ej-percentage-textbox="e-value.bind:percentValue;e-width.bind:cwidth;e-enabled.bind:status;" />
                                     </td>
                                 </tr>
                                 <tr>
@@ -29,7 +29,7 @@
                                         <label>Fare</label>
                                     </td></tr> <tr>
                                     <td>
-                                        <input id="currency" type="text" ej-currency-textbox="ej-value.bind:currencyValue;ej-width.bind:cwidth;ej-enabled.bind:status;" />
+                                        <input id="currency" type="text" ej-currency-textbox="e-value.bind:currencyValue;e-width.bind:cwidth;e-enabled.bind:status;" />
                                     </td>
                                 </tr>                               
                             </tbody>
@@ -46,7 +46,7 @@
             <label>Enable / Disable</label> 
        </div>
        <div class="col-sm-2">         
-            <input type="checkbox" id="status" ej-toggle-button="ej-size.bind:'small';ej-show-rounded-corner.bind:true;ej-active-text.bind:'Enable';ej-default-text.bind:'Disable'" ej-on-change.trigger="onEnable($event)"></input>
+            <input type="checkbox" id="status" ej-toggle-button="e-size.bind:'small';e-show-rounded-corner.bind:true;e-active-text.bind:'Enable';e-default-text.bind:'Disable'" e-on-change.trigger="onEnable($event)"></input>
             <label for="status">Toggle</label> 
        </div>
        <div class="col-sm-2">        
@@ -77,7 +77,7 @@
            <input type="text" id="decimalValue" class="form-control input-sm" placeholder="Decimal Value" />
        </div> 
        <div class="col-sm-3">        
-        <button ej-button="ej-text.bind:'Apply';ej-size.bind:'small';" ej-on-click.trigger="onApply($event)" id="applyBtn" />
+        <button ej-button="e-text.bind:'Apply';e-size.bind:'small';" e-on-click.trigger="onApply($event)" id="applyBtn" />
        </div>        
      </div>    
      <div class="row">

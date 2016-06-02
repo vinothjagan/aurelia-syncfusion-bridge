@@ -1,28 +1,28 @@
 <template>
     <require from="./API.css"></require>
-    <div>            
+    <div style="width:470px;border-radius:5px;border:1px solid #5C5C5C;padding:20px;margin:0 auto;">          
         <table class='container-fluid'>
             <tbody class='container-fluid'>           
             <tr class='row'>
                         <td class='col-md-4'> Button</td>
                         <td class='col-md-4'>
                             <button id="btn" 
-                            ej-button="ej-size.bind: largeBtnValue;
-                            ej-show-rounded-corner.bind: roundedCorner;
-                            ej-enabled.bind: status;
-                            ej-width : 154px;
-                            ej-text : Play;"></button>
+                            ej-button="e-size.bind: largeBtnValue;
+                            e-show-rounded-corner.bind: roundedCorner;
+                            e-enabled.bind: status;
+                            e-width : 154px;
+                            e-text : Play;"></button>
                         </td>
                     </tr>
                     <tr class='row'>
                         <td class='col-md-4'> Toggle Button</td>
                         <td class='col-md-4'>
-                            <input type="checkbox" id="ToggleBtn" ej-toggle-button="ej-size.bind: largeBtnValue;
-                            ej-show-rounded-corner.bind: roundedCorner;
-                            ej-active-text : Pause;
-                            ej-enabled.bind: status;
-                            ej-width : 154px;
-                            ej-default-text : Play"></input>
+                            <input type="checkbox" id="ToggleBtn" ej-toggle-button="e-size.bind: largeBtnValue;
+                            e-show-rounded-corner.bind: roundedCorner;
+                            e-active-text : Pause;
+                            e-enabled.bind: status;
+                            e-width : 154px;
+                            e-default-text : Play"></input>
                             <label for="ToggleBtn">Toggle</label>
                         </td>
                     </tr>
@@ -30,13 +30,13 @@
                     <tr class='row'>
                         <td class='col-md-4'> Split Button</td>
                         <td class='col-md-4 splttd'>
-                            <button id="splitBtn" ej-split-button="ej-size.bind: largeBtnValue;
-                            ej-show-rounded-corner.bind: roundedCorner;
-                            ej-text : Play;
-                            ej-width : 154px;
-                            ej-arrow-position.bind: arrowPosition;
-                            ej-enabled.bind: status;
-                            ej-target-id : subMenu"></button>
+                            <button id="splitBtn" ej-split-button="e-size.bind: largeBtnValue;
+                            e-show-rounded-corner.bind: roundedCorner;
+                            e-text : Play;
+                            e-width : 154px;
+                            e-arrow-position.bind: arrowPosition;
+                            e-enabled.bind: status;
+                            e-target-id : subMenu"></button>
                             <ul id="subMenu">
                                 <li><span>Pause</span></li>
                                 <li><span>Resume</span></li>
@@ -47,15 +47,15 @@
                 <tr class='row'>
                         <td class='col-md-4'> DropDown Button</td>
                         <td class='col-md-4 splttd'>
-                            <button id="splitBtn" ej-split-button="ej-size.bind: largeBtnValue;
-                            ej-show-rounded-corner.bind: roundedCorner;
-                            ej-text: Play;
-                            ej-enabled.bind: status;
-                            ej-width: 154px;
-                            ej-arrow-position.bind: arrowPosition;
-                            ej-target-id: subMenu;
-                            ej-button-mode: dropdown;
-                            ej-enable-rtl.bind: rtl"></button>
+                            <button id="splitBtn" ej-split-button="e-size.bind: largeBtnValue;
+                            e-show-rounded-corner.bind: roundedCorner;
+                            e-text: Play;
+                            e-enabled.bind: status;
+                            e-width: 154px;
+                            e-arrow-position.bind: arrowPosition;
+                            e-target-id: subMenu;
+                            e-button-mode: dropdown;
+                            e-enable-rtl.bind: rtl"></button>
                             <ul id="subMenu">
                                 <li><span>Pause</span></li>
                                 <li><span>Resume</span></li>
@@ -72,17 +72,17 @@
                 <div>Enable / Disable </div>               
             </div>
             <div class="col-sm-2">          
-            <input type="checkbox" id="state" ej-toggle-button="ej-size.bind: largeBtnValue;
-                            ej-show-rounded-corner.bind: roundedCorner;
-                            ej-active-text: Enable;
-                            ej-default-text: Disable" ej-on-change.trigger="onChange($event)"></input>
+            <input type="checkbox" id="state" ej-toggle-button="e-size.bind: largeBtnValue;
+                            e-show-rounded-corner.bind: roundedCorner;
+                            e-active-text: Enable;
+                            e-default-text: Disable" e-on-change.trigger="onChange($event)"></input>
                             <label for="state">Toggle</label>
             </div>   
             <div class="col-sm-3">   
                 <div>Arrow Position </div>               
             </div>
             <div class="col-sm-2">          
-                <select id="propbutton" ej-drop-down-list="ej-text: Right" ej-on-select.trigger="onArrowChange($event)">
+                <select id="propbutton" ej-drop-down-list="e-text: Right" e-on-select.trigger="onArrowChange($event)">
                         <option value="right">Right</option>
                         <option value="left">Left</option>
                         <option value="top">Top</option>

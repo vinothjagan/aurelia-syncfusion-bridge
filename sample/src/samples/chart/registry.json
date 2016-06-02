@@ -19,6 +19,7 @@
 	   "files": ["html", "js"]
 	},
 	"3d-column":{
+		"title" : "3D Column",
 	   "files": ["html", "js"]
 	},
 	"pyramid":{
@@ -40,6 +41,7 @@
 	   "files": ["html", "js"]
 	},
 	"3d-bar":{
+		"title" : "3D Bar",
 	   "files": ["html", "js"]
 	},
 	"live":{

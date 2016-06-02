@@ -12,6 +12,8 @@ export class EjConfigBuilder {
   useAll() : EjConfigBuilder {
     this.ejGrid()
     .ejChart()
+    .ejMap()
+    .ejTreeMap()
     .ejRangeNavigator()
     .ejDiagram()
     .ejSymbolPalette()
@@ -90,6 +92,16 @@ export class EjConfigBuilder {
   ejChart(): EjConfigBuilder {
     this.resources.push('./chart/chart');
     this.resources.push('./chart/series');
+    return this;
+  }
+  ejMap(): EjConfigBuilder {
+    this.resources.push('./map/map');
+    this.resources.push('./map/layer');
+    return this;
+  }
+  ejTreeMap(): EjConfigBuilder {
+    this.resources.push('./treemap/treemap');
+    this.resources.push('./treemap/level');
     return this;
   }
   ejRangeNavigator(): EjConfigBuilder {

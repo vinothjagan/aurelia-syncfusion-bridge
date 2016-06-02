@@ -6,4 +6,5 @@ ej-pivot-chart {
     min-width: 525px; 
     float:left;
     margin: 20px 0px 0px 20px;
+    position: relative !important;
 }

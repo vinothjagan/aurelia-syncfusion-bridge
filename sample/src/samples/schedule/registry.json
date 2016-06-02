@@ -93,6 +93,7 @@
             ]
         },
         "api": {
+            "title" : "API",
             "files": [
                 "html",
                 "js"

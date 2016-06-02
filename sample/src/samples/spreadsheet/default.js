@@ -7,6 +7,8 @@ export class Default {
     this.export = { excelUrl: 'http://js.syncfusion.com/ExportingServices/api/JSXLExport/ExportToExcel',
                     csvUrl: 'http://js.syncfusion.com/ExportingServices/api/JSXLExport/ExportToCsv',
 					          pdfUrl: 'http://js.syncfusion.com/ExportingServices/api/JSXLExport/ExportToPdf'};
+    this.waiting = 'block';
+    this.visibility = 'hidden';
   }
   loadcomplete(event) {
     let xlObj = $('#Spreadsheet1').ejSpreadsheet('instance');
@@ -17,5 +19,7 @@ export class Default {
       xlFormat.format({ 'type': 'currency' }, 'E2:H11');
       xlObj.XLRibbon.updateRibbonIcons();
     }
+    this.waiting = 'none';
+    this.visibility = 'visible';
   }
 }

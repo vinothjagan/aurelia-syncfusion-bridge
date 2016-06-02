@@ -1,13 +1,13 @@
 <template>
     <div>
-        <input type="text" id="bookSelect" ej-drop-down-list="ej-data-source.bind:dataSource;ej-fields.bind:fields;ej-watermark-text:Select a section" ej-on-create.trigger="create()" />
+        <input type="text" id="bookSelect" ej-drop-down-list="e-data-source.bind:dataSource;e-fields.bind:fields;e-watermark-text:Select a section" e-on-create.trigger="create()" />
     </div>
     <div id="property-window" class="box wide">
         <h4>Properties</h4>
         <div class="row">
             <div class="col-md-6">Select an item by index</div>
             <div class="col-md-6">
-                <select name="selectIndex" class="e-ddl" id="optIndexChange" ej-drop-down-list="ej-watermark-text:select..;ej-width.bind:width" ej-on-change.trigger="onActiveIndexChange($event)">
+                <select name="selectIndex" class="e-ddl" id="optIndexChange" ej-drop-down-list="e-watermark-text:select..;e-width.bind:width" e-on-change.trigger="onActiveIndexChange($event)">
                     <option value="0">1 Item</option>
                     <option value="1">2 Item</option>
                     <option value="2">3 Item</option>
@@ -32,7 +32,7 @@
             </div>
             <div class="col-md-6">Select an item by value</div>
             <div class="col-md-6">
-                <select name="selectIndex" class="e-ddl" id="optValueChange" ej-drop-down-list="ej-watermark-text:select..;ej-width.bind:width" ej-on-change.trigger="onActiveValueChange($event)">
+                <select name="selectIndex" class="e-ddl" id="optValueChange" ej-drop-down-list="e-watermark-text:select..;e-width.bind:width" e-on-change.trigger="onActiveValueChange($event)">
                     <option value="Art">Art</option>
                     <option value="Architecture">Architecture</option>
                     <option value="Biographies">Biographies</option>
@@ -59,7 +59,7 @@
         <div class="row">
             <div class="col-md-6">Select an item by text</div>
             <div class="col-md-6">
-                <select name="selectIndex" class="e-ddl" id="optTextChange" ej-drop-down-list="ej-watermark-text:select..;ej-width.bind:width" ej-on-change.trigger="onActiveTextChange($event)">
+                <select name="selectIndex" class="e-ddl" id="optTextChange" ej-drop-down-list="e-watermark-text:select..;e-width.bind:width" e-on-change.trigger="onActiveTextChange($event)">
                     <option value="Art">Art</option>
                     <option value="Architecture">Architecture</option>
                     <option value="Biographies">Biographies</option>
@@ -86,25 +86,25 @@
         <div class="row">
             <div class="col-md-6">TextBox Value</div>
             <div class="col-md-6">
-                <input type="button" id="Button8" name="check me" class="e-btn" value="Value" ej-button="ej-width.bind:width" ej-on-click.trigger="valueText($event)" />
+                <input type="button" id="Button8" name="check me" class="e-btn" value="Value" ej-button="e-width.bind:width" e-on-click.trigger="valueText($event)" />
             </div>
         </div>
         <div class="row">
             <div class="col-md-6">Disable\Enable</div>
             <div class="col-md-6">
-                <input type="checkbox" id="btnenabledisable" class="e-togglebtn" ej-toggle-button="ej-default-text:Disable;ej-active-text:Enable;ej-width.bind:width" ej-on-change.trigger="onEnableDisable($event)" />
+                <input type="checkbox" id="btnenabledisable" class="e-togglebtn" ej-toggle-button="e-default-text:Disable;e-active-text:Enable;e-width.bind:width" e-on-change.trigger="onEnableDisable($event)" />
             </div>
         </div>
         <div class="row">
             <div class="col-md-6">Filter Search </div>
             <div class="col-md-6">
-                <input type="checkbox" id="filterbutton" class="e-togglebtn" ej-toggle-button="ej-default-text:Disable;ej-active-text:Enable;ej-width.bind:width" ej-on-change.trigger="filterChange($event)" />
+                <input type="checkbox" id="filterbutton" class="e-togglebtn" ej-toggle-button="e-default-text:Disable;e-active-text:Enable;e-width.bind:width" e-on-change.trigger="filterChange($event)" />
             </div>
         </div>
         <div class="row">
             <div class="col-md-6">Case-Sensitive Search </div>
             <div class="col-md-6">
-                <input type="checkbox" id="casesensitivebutton" class="e-togglebtn" ej-toggle-button="ej-default-text:Disable;ej-active-text:Enable;ej-width.bind:width" ej-on-change.trigger="casesensitiveChange($event)" />
+                <input type="checkbox" id="casesensitivebutton" class="e-togglebtn" ej-toggle-button="e-default-text:Disable;e-active-text:Enable;e-width.bind:width" e-on-change.trigger="casesensitiveChange($event)" />
             </div>
         </div>
     </div>

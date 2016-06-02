@@ -1,6 +1,6 @@
 <template>
     <div>
-        <textarea id="rteSample" rows="10" cols="30" ej-rte="ej-width:100%;ej-min-width:150px" ej-on-create.trigger="create()">
+        <textarea id="rteSample" rows="10" cols="30" ej-rte="e-width:100%;e-min-width:150px" e-on-create.trigger="create()">
                   &lt;p&gt;&lt;b&gt;Description:&lt;/b&gt;&lt;/p&gt;
     &lt;p&gt;The Rich Text Editor (RTE) control is an easy to render in
     client side. Customer easy to edit the contents and get the HTML content for
@@ -22,36 +22,36 @@
         <h4>Properties</h4>
         <div class="row">
                         <div class="col-md-12">
-                            <button class="e-btn inputbtn" value="disableToolbarItem" ej-button="ej-width.bind:width" ej-on-click.trigger="ongetHtmlString()">Get HTML</button>
+                            <button class="e-btn inputbtn" value="disableToolbarItem" ej-button="e-width.bind:width" e-on-click.trigger="ongetHtmlString()">Get HTML</button>
                         </div>
                         <div class="col-md-12">
-                            <button class="e-btn inputbtn" value="disableToolbarItem" ej-button="ej-width.bind:width" ej-on-click.trigger="ongetText()">Get Text</button>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <button class="e-btn inputbtn" value="disableToolbarItem" ej-button="ej-width.bind:width" ej-on-click.trigger="onexec()">Exec Bold</button>
-                        </div>
-                        <div class="col-md-12">
-                            <button class="e-btn inputbtn" value="disableToolbarItem" ej-button="ej-width.bind:width" ej-on-click.trigger="oncmdStatus()">Bold Status</button>
+                            <button class="e-btn inputbtn" value="disableToolbarItem" ej-button="e-width.bind:width" e-on-click.trigger="ongetText()">Get Text</button>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <button class="e-btn inputbtn" value="selectALL" ej-button="ej-width.bind:width" ej-on-click.trigger="onSelectAll()">Select All</button>
+                            <button class="e-btn inputbtn" value="disableToolbarItem" ej-button="e-width.bind:width" e-on-click.trigger="onexec()">Exec Bold</button>
                         </div>
                         <div class="col-md-12">
-                            <button class="e-btn inputbtn" value="selectRange" ej-button="ej-width.bind:width" ej-on-click.trigger="onSeletcRange()">Select Range</button>
+                            <button class="e-btn inputbtn" value="disableToolbarItem" ej-button="e-width.bind:width" e-on-click.trigger="oncmdStatus()">Bold Status</button>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <button class="e-btn inputbtn" value="pasteContent" ej-button="ej-width.bind:width" ej-on-click.trigger="onPasteContent()">Paste Content</button>
+                            <button class="e-btn inputbtn" value="selectALL" ej-button="e-width.bind:width" e-on-click.trigger="onSelectAll()">Select All</button>
+                        </div>
+                        <div class="col-md-12">
+                            <button class="e-btn inputbtn" value="selectRange" ej-button="e-width.bind:width" e-on-click.trigger="onSeletcRange()">Select Range</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button class="e-btn inputbtn" value="pasteContent" ej-button="e-width.bind:width" e-on-click.trigger="onPasteContent()">Paste Content</button>
                         </div>                        
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <input type="checkbox" id="chkDestroy" class="e-togglebtn" ej-toggle-button="ej-width.bind:width;ej-default-text:Destroy;ej-active-text:Restore" ej-on-change.trigger="onDestroyRestore($event)" />
+                            <input type="checkbox" id="chkDestroy" class="e-togglebtn" ej-toggle-button="e-width.bind:width;e-default-text:Destroy;e-active-text:Restore" e-on-change.trigger="onDestroyRestore($event)" />
                         </div>
                     </div>
     </div>

@@ -61,15 +61,15 @@ export class BasicUse {
     };
   }
   valueCellClick() {
-    customAlert('Value Cell Clicked');
+    alert('Value Cell Clicked');
   }
   summaryCellClick() {
-    customAlert('Sumary Cell Clicked');
+    alert('Sumary Cell Clicked');
   }
   rowCellClick() {
-    customAlert('Row Header Cell Clicked');
+    alert('Row Header Cell Clicked');
   }
   columnCellClick() {
-    customAlert('Column Header Cell Clicked');
+    alert('Column Header Cell Clicked');
   }
 }

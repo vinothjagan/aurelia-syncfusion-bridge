@@ -33,17 +33,8 @@ export class APITooltip {
   }
   onEffectChange(event) {
     let args = event.detail;
-    let content;
-    if (args.value === 'back') {
-      content = 'Go back one page';
-    } else if (args.value === 'go') {
-      content = 'search';
-    } else {
-      content = 'Reload current page';
-    }
-    this.target.setModel({ content: content });
-    this.target.refresh($('#' + args.value));
-    this.target.setModel({ content: content });
+    this.target.show($('#' + args.value));
+    $('#hideButton').ejButton({ text: 'Hide'});
   }
   onEnableDisable(event) {
     let text;
@@ -74,17 +65,7 @@ export class APITooltip {
       text = 'Show';
       enableBtn.disable();
     } else {
-      let content;
-      if (value === 'back') {
-        content = 'Go back one page';
-      } else if (value === 'go') {
-        value = 'search';
-      } else {
-        content = 'Reload current page';
-      }
-      this.target.setModel({ content: content });
-      this.target.refresh($('#' + value));
-      this.target.show();
+      this.target.show($('#' + value));
       text = 'Hide';
       enableBtn.enable();
     }

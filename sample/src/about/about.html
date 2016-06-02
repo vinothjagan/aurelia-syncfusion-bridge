@@ -41,24 +41,24 @@
                     <h4>Example</h4>
                     <div class="row">
                         <div class="col-sm-12">
-                            <ej-grid ej-data-source.bind="EmployeesList" ej-page-settings.bind="page" ej-allow-paging=t rue>
-                                <ej-column ej-field="EmployeeImage" ej-header-text="Employee Image" ej-text-align="center" ej-width="110">
+                            <ej-grid id="about_grid" e-data-source.bind="EmployeesList" e-page-settings.bind="page" e-allow-paging=t rue>
+                                <ej-column e-field="EmployeeImage" e-header-text="Employee Image" e-text-align="center" e-width="110">
                                     <ej-template>
                                         <div><img style="width: 45px; height: 45px" src="images/grid/Employees/${EmployeeID}.png" /> </div>
                                     </ej-template>
                                 </ej-column>
-                                <ej-column ej-field="EmployeeID" ej-header-text="Employee ID" ej-text-align="right" ej-width="90"></ej-column>
-                                <ej-column ej-field="FirstName" ej-header-text="First Name" ej-width="90"></ej-column>
-                                <ej-column ej-field="LastName" ej-header-text="Last Name" ej-width="90"></ej-column>
-                                <ej-column ej-field="BirthDate" ej-header-text="Birth Date" ej-format="{0:MM/dd/yyyy}" ej-text-align="right" ej-width="90"></ej-column>
-                                <ej-column ej-field="Country" ej-header-text="Country" ej-width="80"></ej-column>
+                                <ej-column e-field="EmployeeID" e-header-text="Employee ID" e-text-align="right" e-width="90"></ej-column>
+                                <ej-column e-field="FirstName" e-header-text="First Name" e-width="90"></ej-column>
+                                <ej-column e-field="LastName" e-header-text="Last Name" e-width="90"></ej-column>
+                                <ej-column e-field="BirthDate" e-header-text="Birth Date" e-format="{0:MM/dd/yyyy}" e-text-align="right" e-width="90"></ej-column>
+                                <ej-column e-field="Country" e-header-text="Country" e-width="80"></ej-column>
                             </ej-grid>
                         </div>
                     </div>
                     
                     <div class="row" style="margin-top: 10px">
                         <div class="col-sm-12">
-                            <ej-tab id="codepreview-about" ej-allow-keyboard-navigation=false>
+                            <ej-tab id="codepreview-about" e-allow-keyboard-navigation=false>
                                 <ul>
                                     <li><a href="#ej-init">Without Bridge</a></li>
                                     <li><a href="#aurelia-ej-init">With Bridge (View)</a></li>

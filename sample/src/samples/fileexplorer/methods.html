@@ -3,7 +3,7 @@
     <div class="row">
         <div class="frame">
             <div>
-                <ej-file-explorer id="fileexplorer" ej-path.bind="path" ej-ajax-action.bind="ajaxAction" ej-width.bind="width" ej-height.bind="height" style="display:block"></ej-file-explorer>
+                <ej-file-explorer id="fileexplorer" e-path.bind="path" e-ajax-action.bind="ajaxAction" e-width.bind="width" e-height.bind="height" style="display:block"></ej-file-explorer>
             </div>
         </div>
     </div>
@@ -12,28 +12,28 @@
     <div id="property-window" class="box wide">
         <div class="row">
             <div class="col-sm-2">
-                <button id="propbutton" ej-button="ej-text:adjustSize" ej-on-click.trigger="adjustSize()"></button>
+                <button id="propbutton" ej-button="e-text:adjustSize" e-on-click.trigger="adjustSize()"></button>
             </div>
             <div class="col-sm-2">
-                <button id="propbutton" ej-button="ej-text:disableMenuItem" ej-on-click.trigger="DisableMenuitem()"></button>
+                <button id="propbutton" ej-button="e-text:disableMenuItem" e-on-click.trigger="DisableMenuitem()"></button>
             </div>
             <div class="col-sm-2">
-                <button id="propbutton" ej-button="ej-text:disableToolbarItem" ej-on-click.trigger="disableToolbarItem()"></button>
-            </div>
-
-            <div class="col-sm-2">
-                <button id="propbutton" ej-button="ej-text:enableMenuItem" ej-on-click.trigger="enableMenuItem()"></button>
+                <button id="propbutton" ej-button="e-text:disableToolbarItem" e-on-click.trigger="disableToolbarItem()"></button>
             </div>
 
             <div class="col-sm-2">
-                <button id="propbutton" ej-button="ej-text:enableToolbarItem" ej-on-click.trigger="enableToolbarItem()"></button>
+                <button id="propbutton" ej-button="e-text:enableMenuItem" e-on-click.trigger="enableMenuItem()"></button>
             </div>
 
             <div class="col-sm-2">
-                <button id="propbutton" ej-button="ej-text:refresh" ej-on-click.trigger="refresh()"></button>
+                <button id="propbutton" ej-button="e-text:enableToolbarItem" e-on-click.trigger="enableToolbarItem()"></button>
+            </div>
+
+            <div class="col-sm-2">
+                <button id="propbutton" ej-button="e-text:refresh" e-on-click.trigger="refresh()"></button>
             </div>
             <div class="col-sm-2">
-                <button id="propbutton" ej-button="ej-text:removeToolbarItem" ej-on-click.trigger="removeToolbarItem()"></button>
+                <button id="propbutton" ej-button="e-text:removeToolbarItem" e-on-click.trigger="removeToolbarItem()"></button>
             </div>
 
 

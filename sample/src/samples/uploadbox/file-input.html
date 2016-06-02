@@ -3,8 +3,8 @@
     <div>
         <div class="posupload">Select a file to upload </div>
         <div class="control">
-            <ej-uploadbox id="UploadInput" ej-save-url.bind="save" ej-remove-url.bind="remove" ej-multiple-files-selection.bind="multipleFiles"
-            ej-on-create.trigger="create()" ej-on-error.trigger="error($event)">
+            <ej-uploadbox id="UploadInput" e-save-url.bind="save" e-remove-url.bind="remove" e-multiple-files-selection.bind="multipleFiles"
+            e-on-create.trigger="create()" e-on-error.trigger="error($event)">
             </ej-uploadbox>
         </div>
     </div>
@@ -20,7 +20,7 @@
                 <input type="text" id="fileallow" class="tb6 ejinputtext" placeholder="Format" />
             </div>
             <div class="col-md-6">
-                <input type="button" class="e-btn" id="upbutton1" value="Allow" ej-button="" ej-on-click.trigger="allowFileType($event)"
+                <input type="button" class="e-btn" id="upbutton1" value="Allow" ej-button="" e-on-click.trigger="allowFileType($event)"
                 />
             </div>
         </div>
@@ -29,7 +29,7 @@
                 <input type="text" id="filedeny" class="tb6 ejinputtext" placeholder="Format" />
             </div>
             <div class="col-md-6">
-                <input type="button" class="e-btn" id="upbutton2" value="Deny" ej-button="" ej-on-click.trigger="denyFileType($event)" />
+                <input type="button" class="e-btn" id="upbutton2" value="Deny" ej-button="" e-on-click.trigger="denyFileType($event)" />
             </div>
         </div>
     </div>

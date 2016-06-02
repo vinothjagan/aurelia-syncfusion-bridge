@@ -1,6 +1,6 @@
 <template>
     <div>
-        <ul id="JobSearch" ej-menu="" ej-on-create.trigger="create()">
+        <ul id="JobSearch" ej-menu="" e-on-create.trigger="create()">
             <li id="Home"><a>Home</a></li>
             <li><a>Search Jobs</a>
                 <ul>
@@ -38,7 +38,7 @@
                 Disable Item
             </div>
             <div class="col-md-6">
-                <select id="Disable" class="e-ddl" ej-drop-down-list="ej-width.bind:width" ej-on-change.trigger="disableChange($event)">
+                <select id="Disable" class="e-ddl" ej-drop-down-list="e-width.bind:width" e-on-change.trigger="disableChange($event)">
                     <option>Home</option>
                     <option>Search Jobs</option>
                     <option>Post Resume</option>
@@ -51,7 +51,7 @@
                 Enable Item
             </div>
             <div class="col-md-6">
-                <select id="Enable" class="e-ddl" ej-drop-down-list="ej-width.bind:width" ej-on-change.trigger="enableChange($event)">
+                <select id="Enable" class="e-ddl" ej-drop-down-list="e-width.bind:width" e-on-change.trigger="enableChange($event)">
                     <option>Home</option>
                     <option>Search Jobs</option>
                     <option>Post Resume</option>
@@ -66,8 +66,8 @@
                 Disable All\Enable All
             </div>
             <div class="col-md-6">
-                <input type="checkbox" id="btnchkunchk" class="e-togglebtn" value="checkuncheck" ej-toggle-button="ej-default-text:Disable;ej-active-text:Enable;ej-width.bind:width"
-                ej-on-change.trigger="disbaleEnableChange($event)" />
+                <input type="checkbox" id="btnchkunchk" class="e-togglebtn" value="checkuncheck" ej-toggle-button="e-default-text:Disable;e-active-text:Enable;e-width.bind:width"
+                e-on-change.trigger="disbaleEnableChange($event)" />
             </div>
         </div>
     </div>

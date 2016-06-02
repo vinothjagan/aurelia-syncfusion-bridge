@@ -46,7 +46,9 @@ export class Registry {
   }
 
   getTitleFromRoute(route) {
-    route = route.replace(/-/g, ' ');
+    route = route.replace(/-(.)/g, function(match, text) {
+      return ' ' + text.toUpperCase();
+    });
     route = route.charAt(0).toUpperCase() + route.slice(1);
     return route;
   }

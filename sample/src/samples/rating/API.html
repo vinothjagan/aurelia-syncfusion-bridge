@@ -1,6 +1,6 @@
 <template>
     <div>
-        <input id="apiRating" type="text" class="rating" ej-rating="" ej-on-create.trigger="create()" />
+        <input id="apiRating" type="text" class="rating" ej-rating="" e-on-create.trigger="create()" />
     </div>
     <div id="property-window" class="box wide">
         <h4>Properties</h4>
@@ -9,7 +9,7 @@
                             Set Value
                         </div>
                         <div class="col-md-6">
-                            <select name="ddlSetValue" id="ddlRating" class="e-ddl" ej-drop-down-list="ej-width.bind:width;ej-watermark-text:Select;ej-selected-index:1" ej-on-create.trigger="dropdownCreate()" ej-on-change.trigger="setRatingValue($event)">
+                            <select name="ddlSetValue" id="ddlRating" class="e-ddl" ej-drop-down-list="e-width.bind:width;e-watermark-text:Select;e-selected-index:1" e-on-create.trigger="dropdownCreate()" e-on-change.trigger="setRatingValue($event)">
                                 <option value="0">0</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -24,7 +24,7 @@
                             Get Current Value
                         </div>
                         <div class="col-md-6">
-                            <input type="button" id="btnGetValue" value="GetValue" class="e-btn" ej-button="ej-width.bind:width" ej-on-click.trigger="getValue($event)" />
+                            <input type="button" id="btnGetValue" value="GetValue" class="e-btn" ej-button="e-width.bind:width" e-on-click.trigger="getValue($event)" />
                         </div>
                     </div>
 
@@ -33,7 +33,7 @@
                             Reset
                         </div>
                         <div class="col-md-6">
-                            <input type="button" id="btnReset" class="e-btn" value="Reset" ej-button="ej-width.bind:width" ej-on-click.trigger="reset($event)" />
+                            <input type="button" id="btnReset" class="e-btn" value="Reset" ej-button="e-width.bind:width" e-on-click.trigger="reset($event)" />
                         </div>
 					</div>
 					<div class="row">
@@ -41,7 +41,7 @@
                             Reset Button
                         </div>
                         <div class="col-md-6">
-                            <input type="checkbox" id="chkResetbtn" class="e-togglebtn" ej-toggle-button="ej-width.bind:width;ej-default-text:Hide;ej-active-text:Show" ej-on-change.trigger="showHideReset($event)" />
+                            <input type="checkbox" id="chkResetbtn" class="e-togglebtn" ej-toggle-button="e-width.bind:width;e-default-text:Hide;e-active-text:Show" e-on-change.trigger="showHideReset($event)" />
                         </div>
                     </div>
 					<div class="row">
@@ -49,7 +49,7 @@
                             Rating
                         </div>
                         <div class="col-md-6">
-                            <input type="checkbox" id="chkShowHideRating" class="e-togglebtn" ej-toggle-button="ej-width.bind:width;ej-default-text:Hide;ej-active-text:Show" ej-on-change.trigger="showHideRating($event)" />
+                            <input type="checkbox" id="chkShowHideRating" class="e-togglebtn" ej-toggle-button="e-width.bind:width;e-default-text:Hide;e-active-text:Show" e-on-change.trigger="showHideRating($event)" />
                         </div>
 					</div>
 					<div class="row">
@@ -57,7 +57,7 @@
                             Destroy
                         </div>
                         <div class="col-md-6">
-                            <input type="checkbox" id="chkDestroy" class="e-togglebtn" ej-toggle-button="ej-width.bind:width;ej-default-text:Destroy;ej-active-text:Restore" ej-on-change.trigger="destroyRestore($event)" />
+                            <input type="checkbox" id="chkDestroy" class="e-togglebtn" ej-toggle-button="e-width.bind:width;e-default-text:Destroy;e-active-text:Restore" e-on-change.trigger="destroyRestore($event)" />
                         </div>
                     </div>
     </div>

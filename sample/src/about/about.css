@@ -24,3 +24,7 @@ pre {
 #codepreview-about.e-tab .e-activetop{
   border: 1px solid #cccccc;
 }
+
+#about_grid{
+  position: relative !important;
+}

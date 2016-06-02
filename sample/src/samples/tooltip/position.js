@@ -1,4 +1,18 @@
 export class PositionTooltip {
+  constructor() {
+    this.tooltipTarget = '.CanSelect';
+    this.containment = '.cols-sample-area';
+    this.position = {
+      stem: {
+        horizontal: 'left',
+        vertical: 'center'
+      },
+      target: {
+        horizontal: 'right',
+        vertical: 'center'
+      }
+    };
+  }
   onCreate() {
     let firstHead = $('.e-treeview-wrap> #treeView > .first').find('a');
     let firstTitle = $('.e-treeview-wrap> #treeView > .first').attr('title');
@@ -12,27 +26,7 @@ export class PositionTooltip {
     let secondElement = $('.e-treeview-wrap> #treeView > .last > .e-treeview-ul').find('li');
     this.onCopy(firstElement);
     this.onCopy(secondElement);
-
-    this.target = $('#treeView').ejTooltip(
-      {
-        width: '230px',
-        height: '65px',
-        target: '.CanSelect',
-        containment: '.cols-sample-area',
-        position: { stem: {
-          horizontal: 'left',
-          vertical: 'center'
-        },
-        target: {
-          horizontal: 'right',
-          vertical: 'center'
-        }
-        },
-        beforeOpen: 'onOpen',
-        hover: 'onHover',
-        tracking: 'onOpen'
-
-      }).data('ejTooltip');
+    this.target = $('#treeView').data('ejTooltip');
   }
 
   onCopy(element) {

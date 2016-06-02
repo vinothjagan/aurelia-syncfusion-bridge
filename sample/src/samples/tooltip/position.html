@@ -2,7 +2,9 @@
     <require from="./position.css"></require>
 <div class="cols-sample-area">
                 <div style="width: 250px">
-                    <ul id="treeView" ej-tree-view="" ej-on-create.trigger="onCreate()">
+                    <ul id="treeView" ej-tree-view="" e-on-create.trigger="onCreate()" ej-tooltip="e-width:230px;e-height:65px;e-target.bind:tooltipTarget;
+                    e-containment.bind:containment" e-on-before-open.trigger="onOpen($event)" e-on-hover.trigger="onHover($event)" 
+                    e-on-tracking.trigger="onOpen($event)" >
                         <li class="expanded" title="Fiction Book Lists">Fiction Book Lists
 							<ul>
                                 <li title="To Kill a Mockingbird">To Kill a Mockingbird</li>
@@ -27,7 +29,7 @@
             <div class="row">
                         <div class="col-md-6"> Associate </div>
                         <div class="col-md-6">
-                            <select id="associate" ej-drop-down-list="ej-selected-index:0;ej-width:110px" ej-on-change.trigger="associateChange($event)">
+                            <select id="associate" ej-drop-down-list="e-selected-index:0;e-width:110px" e-on-change.trigger="associateChange($event)">
                                 <option value="target">Target</option>
                                 <option value="window">Window</option>
                                 <option value="mouse">Mouse</option>
@@ -39,7 +41,7 @@
                     <div class="row targetValue">
                         <div class="col-md-6"> Target Position</div>
                         <div class="col-md-6">
-                            <select id="targetHorizontal" ej-drop-down-list="ej-selected-index:0;ej-width:110px" ej-on-change.trigger="targetHorizontalChange($event)">
+                            <select id="targetHorizontal" ej-drop-down-list="e-selected-index:0;e-width:110px" e-on-change.trigger="targetHorizontalChange($event)">
                                 <option value="right-center">Right Center</option>
 								<option value="right-top">Right Top</option>
 								<option value="right-bottom">Right Bottom</option>
@@ -56,7 +58,7 @@
                     <div class="row stemValue">
                         <div class="col-md-6"> Tooltip Position</div>
                         <div class="col-md-6">
-                            <select id="stemHorizontal" ej-drop-down-list="ej-selected-index:0;ej-width:110px" ej-on-change.trigger="stemHorizontalChange($event)">
+                            <select id="stemHorizontal" ej-drop-down-list="e-selected-index:0;e-width:110px" e-on-change.trigger="stemHorizontalChange($event)">
                                 <option value="left-center">Left Center</option>
 								<option value="left-top">Left Top</option>
 								<option value="left-bottom">Left Bottom</option>
@@ -72,11 +74,11 @@
                     <div class="row" id="axisValue">
                         <div class="col-md-6"> x-Axis </div>
                         <div class="col-md-6">
-                            <input type="text" id="xAxis" ej-numeric-textbox="ej-value:110;ej-width:100%;ej-decimal-places:0" ej-on-change.trigger="change($event)" />
+                            <input type="text" id="xAxis" ej-numeric-textbox="e-value:110;e-width:100%;e-decimal-places:0" e-on-change.trigger="change($event)" />
                         </div>
                         <div class="col-md-6"> y-Axis </div>
                         <div class="col-md-6">
-                            <input type="text" id="yAxis" ej-numeric-textbox="ej-value:110;ej-width:100%;ej-decimal-places:0" ej-on-change.trigger="change($event)" />
+                            <input type="text" id="yAxis" ej-numeric-textbox="e-value:110;e-width:100%;e-decimal-places:0" e-on-change.trigger="change($event)" />
                         </div>
                     </div>
         </div>
