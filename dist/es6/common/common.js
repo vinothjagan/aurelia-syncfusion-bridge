@@ -1,6 +1,5 @@
-import {customAttribute, bindable, customElement, children, TemplatingEngine} from 'aurelia-templating';
+import {customAttribute, bindable, customElement, children, TemplatingEngine, inlineView} from 'aurelia-templating';
 import {inject} from 'aurelia-dependency-injection';
-import {inlineView} from 'aurelia-framework';
 
 import {WidgetBase} from './widget-base';
 import {constants} from './constants';

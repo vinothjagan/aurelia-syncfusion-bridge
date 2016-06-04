@@ -6,8 +6,6 @@ var _aureliaTemplating = require('aurelia-templating');
 
 var _aureliaDependencyInjection = require('aurelia-dependency-injection');
 
-var _aureliaFramework = require('aurelia-framework');
-
 var _widgetBase = require('./widget-base');
 
 var _constants = require('./constants');
@@ -24,7 +22,7 @@ exports.inject = _aureliaDependencyInjection.inject;
 exports.WidgetBase = _widgetBase.WidgetBase;
 exports.constants = _constants.constants;
 exports.generateBindables = _decorators.generateBindables;
-exports.inlineView = _aureliaFramework.inlineView;
+exports.inlineView = _aureliaTemplating.inlineView;
 exports.customElement = _aureliaTemplating.customElement;
 exports.children = _aureliaTemplating.children;
 exports.TemplatingEngine = _aureliaTemplating.TemplatingEngine;

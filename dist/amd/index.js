@@ -1,4 +1,4 @@
-define(['exports', 'aurelia-framework', './config-builder'], function (exports, _aureliaFramework, _configBuilder) {
+define(['exports', './config-builder'], function (exports, _configBuilder) {
   'use strict';
 
   exports.__esModule = true;

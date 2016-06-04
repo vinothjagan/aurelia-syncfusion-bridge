@@ -14,12 +14,13 @@ define(['exports', '../common/common', 'ej.editor.min'], function (exports, _com
       _classCallCheck(this, _ejCurrencyTextbox);
 
       _WidgetBase.call(this);
+      this.isEditor = true;
       this.element = element;
     }
 
     var _ejCurrencyTextbox = ejCurrencyTextbox;
     ejCurrencyTextbox = _commonCommon.inject(Element)(ejCurrencyTextbox) || ejCurrencyTextbox;
-    ejCurrencyTextbox = _commonCommon.generateBindables('ejCurrencyTextbox', ['cssClass', 'decimalPlaces', 'enabled', 'enablePersistence', 'enableRTL', 'enableStrictMode', 'groupSeparator', 'height', 'htmlAttributes', 'incrementStep', 'locale', 'maxValue', 'minValue', 'name', 'readOnly', 'showRoundedCorner', 'showSpinButton', 'validateOnType', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'width'], [], { 'enableRTL': 'enableRtl' })(ejCurrencyTextbox) || ejCurrencyTextbox;
+    ejCurrencyTextbox = _commonCommon.generateBindables('ejCurrencyTextbox', ['cssClass', 'decimalPlaces', 'enabled', 'enablePersistence', 'enableRTL', 'enableStrictMode', 'groupSize', 'groupSeparator', 'height', 'htmlAttributes', 'incrementStep', 'locale', 'maxValue', 'minValue', 'name', 'negativePattern', 'positivePattern', 'readOnly', 'showRoundedCorner', 'showSpinButton', 'validateOnType', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'width'], [], { 'enableRTL': 'enableRtl' })(ejCurrencyTextbox) || ejCurrencyTextbox;
     ejCurrencyTextbox = _commonCommon.customAttribute(_commonCommon.constants.attributePrefix + 'currency-textbox')(ejCurrencyTextbox) || ejCurrencyTextbox;
     return ejCurrencyTextbox;
   })(_commonCommon.WidgetBase);

@@ -6,8 +6,8 @@ System.register([], function (_export) {
     setters: [],
     execute: function () {
       constants = {
-        eventPrefix: 'ej-on-',
-        bindablePrefix: 'ej-',
+        eventPrefix: 'e-on-',
+        bindablePrefix: 'e-',
         attributePrefix: 'ej-',
         elementPrefix: 'ej-'
       };

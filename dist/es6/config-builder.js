@@ -12,6 +12,8 @@ export class EjConfigBuilder {
   useAll() : EjConfigBuilder {
     this.ejGrid()
     .ejChart()
+    .ejMap()
+    .ejTreeMap()
     .ejRangeNavigator()
     .ejDiagram()
     .ejSymbolPalette()
@@ -36,6 +38,7 @@ export class EjConfigBuilder {
     .ejMenu()
     .ejMaskEdit()
     .ejTreeView()
+    .ejKanban()
     .ejRibbon()
     .ejSpreadsheet()
     .ejRating()
@@ -48,12 +51,14 @@ export class EjConfigBuilder {
     .ejAutocomplete()
     .ejRadialMenu()
     .ejRadialSlider()
-    .ejTileView()
+    .ejTile()
     .ejAccordion()
     .ejTab()
     .ejCheckBox()
     .ejRadioButton()
     .ejToggleButton()
+    .ejSplitButton()
+    .ejGroupButton()
     .ejDateTimePicker()
     .ejProgressBar()
     .ejTagCloud()
@@ -61,9 +66,13 @@ export class EjConfigBuilder {
     .ejSlider()
     .ejFileExplorer()
     .ejPivotGrid()
+    .ejPivotChart()
     .ejPivotSchemaDesigner()
     .ejWaitingPopup()
+    .ejReportViewer()
     .ejSchedule()
+    .ejUploadbox()
+    .ejTooltip()
     .ejTemplate();
     return this;
   }
@@ -83,6 +92,16 @@ export class EjConfigBuilder {
   ejChart(): EjConfigBuilder {
     this.resources.push('./chart/chart');
     this.resources.push('./chart/series');
+    return this;
+  }
+  ejMap(): EjConfigBuilder {
+    this.resources.push('./map/map');
+    this.resources.push('./map/layer');
+    return this;
+  }
+  ejTreeMap(): EjConfigBuilder {
+    this.resources.push('./treemap/treemap');
+    this.resources.push('./treemap/level');
     return this;
   }
   ejRangeNavigator(): EjConfigBuilder {
@@ -184,6 +203,11 @@ export class EjConfigBuilder {
     this.resources.push('./treeview/treeview');
     return this;
   }
+  ejKanban(): EjConfigBuilder {
+    this.resources.push('./kanban/kanban');
+    this.resources.push('./kanban/kanbancolumn');
+    return this;
+  }
   ejRibbon(): EjConfigBuilder {
     this.resources.push('./ribbon/ribbon');
     return this;
@@ -227,14 +251,15 @@ export class EjConfigBuilder {
   }
   ejRadialMenu(): EjConfigBuilder {
     this.resources.push('./radialmenu/radialmenu');
+    this.resources.push('./radialmenu/item');
     return this;
   }
   ejRadialSlider(): EjConfigBuilder {
     this.resources.push('./radialslider/radialslider');
     return this;
   }
-  ejTileView(): EjConfigBuilder {
-    this.resources.push('./tileview/tileview');
+  ejTile(): EjConfigBuilder {
+    this.resources.push('./tile/tile');
     return this;
   }
   ejAccordion(): EjConfigBuilder {
@@ -255,6 +280,14 @@ export class EjConfigBuilder {
   }
   ejToggleButton(): EjConfigBuilder {
     this.resources.push('./togglebutton/togglebutton');
+    return this;
+  }
+  ejSplitButton(): EjConfigBuilder {
+    this.resources.push('./splitbutton/splitbutton');
+    return this;
+  }
+  ejGroupButton(): EjConfigBuilder {
+    this.resources.push('./groupbutton/groupbutton');
     return this;
   }
   ejDateTimePicker(): EjConfigBuilder {
@@ -285,6 +318,10 @@ export class EjConfigBuilder {
     this.resources.push('./pivotgrid/pivotgrid');
     return this;
   }
+  ejPivotChart(): EjConfigBuilder {
+    this.resources.push('./pivotchart/pivotchart');
+    return this;
+  }
   ejPivotSchemaDesigner(): EjConfigBuilder {
     this.resources.push('./pivotschemadesigner/pivotschemadesigner');
     return this;
@@ -293,9 +330,21 @@ export class EjConfigBuilder {
     this.resources.push('./waitingpopup/waitingpopup');
     return this;
   }
+  ejReportViewer(): EjConfigBuilder {
+    this.resources.push('./reportviewer/reportviewer');
+    return this;
+  }
   ejSchedule(): EjConfigBuilder {
     this.resources.push('./schedule/schedule');
     this.resources.push('./schedule/scheduleresource');
+    return this;
+  }
+  ejUploadbox(): EjConfigBuilder {
+    this.resources.push('./uploadbox/uploadbox');
+    return this;
+  }
+  ejTooltip(): EjConfigBuilder {
+    this.resources.push('./tooltip/tooltip');
     return this;
   }
   ejTemplate(): EjConfigBuilder {

@@ -23,8 +23,7 @@ var ejWaitingPopup = (function (_WidgetBase) {
   var _ejWaitingPopup = ejWaitingPopup;
   ejWaitingPopup = _commonCommon.inject(Element)(ejWaitingPopup) || ejWaitingPopup;
   ejWaitingPopup = _commonCommon.generateBindables('ejWaitingPopup', ['cssClass', 'showImage', 'showOnInit', 'template', 'text'])(ejWaitingPopup) || ejWaitingPopup;
-  ejWaitingPopup = _commonCommon.inlineView('<template><content></content></template>')(ejWaitingPopup) || ejWaitingPopup;
-  ejWaitingPopup = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'waiting-popup')(ejWaitingPopup) || ejWaitingPopup;
+  ejWaitingPopup = _commonCommon.customAttribute(_commonCommon.constants.attributePrefix + 'waiting-popup')(ejWaitingPopup) || ejWaitingPopup;
   return ejWaitingPopup;
 })(_commonCommon.WidgetBase);
 

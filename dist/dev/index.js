@@ -1,7 +1,7 @@
-System.register(['aurelia-framework', './config-builder'], function (_export) {
+System.register(['./config-builder'], function (_export) {
   'use strict';
 
-  var Aurelia, EjConfigBuilder;
+  var EjConfigBuilder;
 
   _export('configure', configure);
 
@@ -20,9 +20,7 @@ System.register(['aurelia-framework', './config-builder'], function (_export) {
   }
 
   return {
-    setters: [function (_aureliaFramework) {
-      Aurelia = _aureliaFramework.Aurelia;
-    }, function (_configBuilder) {
+    setters: [function (_configBuilder) {
       EjConfigBuilder = _configBuilder.EjConfigBuilder;
     }],
     execute: function () {}

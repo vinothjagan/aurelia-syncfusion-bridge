@@ -43,7 +43,7 @@ System.register(['../common/common'], function (_export) {
         }], null, _instanceInitializers);
 
         var _Column = Column;
-        Column = generateBindables('columns', ['allowEditing', 'allowFiltering', 'allowGrouping', 'allowSorting', 'allowResizing', 'showInColumnChooser', 'commands', 'cssClass', 'customAttributes', 'dataSource', 'defaultValue', 'disableHtmlEncode', 'displayAsCheckBox', 'editParams', 'editTemplate', 'editType', 'field', 'foreignKeyField', 'foreignKeyValue', 'format', 'headerTemplateID', 'headerText', 'headerTextAlign', 'isFrozen', 'isIdentity', 'isPrimaryKey', 'isUnbound', 'template', 'templateID', 'textAlign', 'tooltip', 'clipMode', 'type', 'validationRules', 'visible', 'width'])(Column) || Column;
+        Column = generateBindables('columns', ['clipMode', 'allowEditing', 'allowFiltering', 'allowGrouping', 'allowSorting', 'allowResizing', 'commands', 'cssClass', 'customAttributes', 'dataSource', 'defaultValue', 'disableHtmlEncode', 'displayAsCheckBox', 'editParams', 'editTemplate', 'editType', 'field', 'foreignKeyField', 'foreignKeyValue', 'format', 'headerTemplateID', 'headerText', 'headerTextAlign', 'isFrozen', 'isIdentity', 'isPrimaryKey', 'showInColumnChooser', 'template', 'textAlign', 'tooltip', 'type', 'validationRules', 'visible', 'width'])(Column) || Column;
         Column = customElement(constants.elementPrefix + 'column')(Column) || Column;
         Column = inlineView('<template><content></content></template>')(Column) || Column;
         return Column;

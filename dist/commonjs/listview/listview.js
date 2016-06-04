@@ -22,7 +22,7 @@ var ejListView = (function (_WidgetBase) {
 
   var _ejListView = ejListView;
   ejListView = _commonCommon.inject(Element)(ejListView) || ejListView;
-  ejListView = _commonCommon.generateBindables('ejListView', ['cssClass', 'dataSource', 'enableAjax', 'enableCache', 'enableCheckMark', 'enableFiltering', 'enableGroupList', 'enablePersistence', 'fieldSettings', 'headerBackButtonText', 'headerTitle', 'height', 'persistSelection', 'preventSelection', 'query', 'renderTemplate', 'selectedItemIndex', 'showHeader', 'templateId', 'width'], ['dataSource'])(ejListView) || ejListView;
+  ejListView = _commonCommon.generateBindables('ejListView', ['cssClass', 'dataSource', 'enableAjax', 'enableCache', 'enableCheckMark', 'enableFiltering', 'enableGroupList', 'enablePersistence', 'fieldSettings', 'headerBackButtonText', 'headerTitle', 'height', 'persistSelection', 'preventSelection', 'query', 'renderTemplate', 'selectedItemIndex', 'showHeader', 'templateId', 'width'], ['dataSource', 'selectedItemIndex'])(ejListView) || ejListView;
   ejListView = _commonCommon.inlineView('<template><content></content></template>')(ejListView) || ejListView;
   ejListView = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'list-view')(ejListView) || ejListView;
   return ejListView;

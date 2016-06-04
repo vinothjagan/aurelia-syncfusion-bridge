@@ -23,6 +23,7 @@ System.register(['../common/common', 'ej.datetimepicker.min'], function (_export
           _classCallCheck(this, _ejDateTimePicker);
 
           _WidgetBase.call(this);
+          this.isEditor = true;
           this.element = element;
         }
 

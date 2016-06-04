@@ -29,7 +29,7 @@ System.register(['../common/common', 'ej.listview.min'], function (_export) {
 
         var _ejListView = ejListView;
         ejListView = inject(Element)(ejListView) || ejListView;
-        ejListView = generateBindables('ejListView', ['cssClass', 'dataSource', 'enableAjax', 'enableCache', 'enableCheckMark', 'enableFiltering', 'enableGroupList', 'enablePersistence', 'fieldSettings', 'headerBackButtonText', 'headerTitle', 'height', 'persistSelection', 'preventSelection', 'query', 'renderTemplate', 'selectedItemIndex', 'showHeader', 'templateId', 'width'], ['dataSource'])(ejListView) || ejListView;
+        ejListView = generateBindables('ejListView', ['cssClass', 'dataSource', 'enableAjax', 'enableCache', 'enableCheckMark', 'enableFiltering', 'enableGroupList', 'enablePersistence', 'fieldSettings', 'headerBackButtonText', 'headerTitle', 'height', 'persistSelection', 'preventSelection', 'query', 'renderTemplate', 'selectedItemIndex', 'showHeader', 'templateId', 'width'], ['dataSource', 'selectedItemIndex'])(ejListView) || ejListView;
         ejListView = inlineView('<template><content></content></template>')(ejListView) || ejListView;
         ejListView = customElement(constants.elementPrefix + 'list-view')(ejListView) || ejListView;
         return ejListView;

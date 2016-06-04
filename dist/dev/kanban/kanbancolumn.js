@@ -19,7 +19,7 @@ System.register(['../common/common'], function (_export) {
         }
 
         var _KanbanColumn = KanbanColumn;
-        KanbanColumn = generateBindables('columns', ['headerText', 'key', 'isCollapsed', 'constraints', 'headerTemplate', 'width', 'visible'])(KanbanColumn) || KanbanColumn;
+        KanbanColumn = generateBindables('columns', ['headerText', 'key', 'isCollapsed', 'constraints', 'headerTemplate', 'width', 'visible', 'showAddButton'])(KanbanColumn) || KanbanColumn;
         KanbanColumn = customElement(constants.elementPrefix + 'kanban-column')(KanbanColumn) || KanbanColumn;
         KanbanColumn = inlineView('<template><content></content></template>')(KanbanColumn) || KanbanColumn;
         return KanbanColumn;

@@ -1,4 +1,4 @@
-define(['exports', 'aurelia-templating', 'aurelia-dependency-injection', 'aurelia-framework', './widget-base', './constants', './decorators', './template-processor', './util'], function (exports, _aureliaTemplating, _aureliaDependencyInjection, _aureliaFramework, _widgetBase, _constants, _decorators, _templateProcessor, _util) {
+define(['exports', 'aurelia-templating', 'aurelia-dependency-injection', './widget-base', './constants', './decorators', './template-processor', './util'], function (exports, _aureliaTemplating, _aureliaDependencyInjection, _widgetBase, _constants, _decorators, _templateProcessor, _util) {
   'use strict';
 
   exports.__esModule = true;
@@ -8,7 +8,7 @@ define(['exports', 'aurelia-templating', 'aurelia-dependency-injection', 'aureli
   exports.WidgetBase = _widgetBase.WidgetBase;
   exports.constants = _constants.constants;
   exports.generateBindables = _decorators.generateBindables;
-  exports.inlineView = _aureliaFramework.inlineView;
+  exports.inlineView = _aureliaTemplating.inlineView;
   exports.customElement = _aureliaTemplating.customElement;
   exports.children = _aureliaTemplating.children;
   exports.TemplatingEngine = _aureliaTemplating.TemplatingEngine;

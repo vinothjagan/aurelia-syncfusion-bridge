@@ -13,7 +13,7 @@ var EjConfigBuilder = (function () {
   }
 
   EjConfigBuilder.prototype.useAll = function useAll() {
-    this.ejGrid().ejChart().ejRangeNavigator().ejDiagram().ejSymbolPalette().ejBulletGraph().ejCircularGauge().ejLinearGauge().ejDigitalGauge().ejSplitter().ejDatePicker().ejGantt().ejTreeGrid().ejColorPicker().ejDialog().ejScroller().ejBarcode().ejPdfViewer().ejNumericTextbox().ejCurrencyTextbox().ejPercentageTextbox().ejTimePicker().ejToolbar().ejMenu().ejMaskEdit().ejTreeView().ejRibbon().ejSpreadsheet().ejRating().ejListBox().ejListView().ejNavigationDrawer().ejRotator().ejRTE().ejDropDownList().ejAutocomplete().ejRadialMenu().ejRadialSlider().ejTileView().ejAccordion().ejTab().ejCheckBox().ejRadioButton().ejToggleButton().ejDateTimePicker().ejProgressBar().ejTagCloud().ejButton().ejSlider().ejFileExplorer().ejPivotGrid().ejPivotSchemaDesigner().ejWaitingPopup().ejSchedule().ejTemplate();
+    this.ejGrid().ejChart().ejMap().ejTreeMap().ejRangeNavigator().ejDiagram().ejSymbolPalette().ejBulletGraph().ejCircularGauge().ejLinearGauge().ejDigitalGauge().ejSplitter().ejDatePicker().ejGantt().ejTreeGrid().ejColorPicker().ejDialog().ejScroller().ejBarcode().ejPdfViewer().ejNumericTextbox().ejCurrencyTextbox().ejPercentageTextbox().ejTimePicker().ejToolbar().ejMenu().ejMaskEdit().ejTreeView().ejKanban().ejRibbon().ejSpreadsheet().ejRating().ejListBox().ejListView().ejNavigationDrawer().ejRotator().ejRTE().ejDropDownList().ejAutocomplete().ejRadialMenu().ejRadialSlider().ejTile().ejAccordion().ejTab().ejCheckBox().ejRadioButton().ejToggleButton().ejSplitButton().ejGroupButton().ejDateTimePicker().ejProgressBar().ejTagCloud().ejButton().ejSlider().ejFileExplorer().ejPivotGrid().ejPivotChart().ejPivotSchemaDesigner().ejWaitingPopup().ejReportViewer().ejSchedule().ejUploadbox().ejTooltip().ejTemplate();
     return this;
   };
 
@@ -31,6 +31,18 @@ var EjConfigBuilder = (function () {
   EjConfigBuilder.prototype.ejChart = function ejChart() {
     this.resources.push('./chart/chart');
     this.resources.push('./chart/series');
+    return this;
+  };
+
+  EjConfigBuilder.prototype.ejMap = function ejMap() {
+    this.resources.push('./map/map');
+    this.resources.push('./map/layer');
+    return this;
+  };
+
+  EjConfigBuilder.prototype.ejTreeMap = function ejTreeMap() {
+    this.resources.push('./treemap/treemap');
+    this.resources.push('./treemap/level');
     return this;
   };
 
@@ -157,6 +169,12 @@ var EjConfigBuilder = (function () {
     return this;
   };
 
+  EjConfigBuilder.prototype.ejKanban = function ejKanban() {
+    this.resources.push('./kanban/kanban');
+    this.resources.push('./kanban/kanbancolumn');
+    return this;
+  };
+
   EjConfigBuilder.prototype.ejRibbon = function ejRibbon() {
     this.resources.push('./ribbon/ribbon');
     return this;
@@ -210,6 +228,7 @@ var EjConfigBuilder = (function () {
 
   EjConfigBuilder.prototype.ejRadialMenu = function ejRadialMenu() {
     this.resources.push('./radialmenu/radialmenu');
+    this.resources.push('./radialmenu/item');
     return this;
   };
 
@@ -218,8 +237,8 @@ var EjConfigBuilder = (function () {
     return this;
   };
 
-  EjConfigBuilder.prototype.ejTileView = function ejTileView() {
-    this.resources.push('./tileview/tileview');
+  EjConfigBuilder.prototype.ejTile = function ejTile() {
+    this.resources.push('./tile/tile');
     return this;
   };
 
@@ -245,6 +264,16 @@ var EjConfigBuilder = (function () {
 
   EjConfigBuilder.prototype.ejToggleButton = function ejToggleButton() {
     this.resources.push('./togglebutton/togglebutton');
+    return this;
+  };
+
+  EjConfigBuilder.prototype.ejSplitButton = function ejSplitButton() {
+    this.resources.push('./splitbutton/splitbutton');
+    return this;
+  };
+
+  EjConfigBuilder.prototype.ejGroupButton = function ejGroupButton() {
+    this.resources.push('./groupbutton/groupbutton');
     return this;
   };
 
@@ -283,6 +312,11 @@ var EjConfigBuilder = (function () {
     return this;
   };
 
+  EjConfigBuilder.prototype.ejPivotChart = function ejPivotChart() {
+    this.resources.push('./pivotchart/pivotchart');
+    return this;
+  };
+
   EjConfigBuilder.prototype.ejPivotSchemaDesigner = function ejPivotSchemaDesigner() {
     this.resources.push('./pivotschemadesigner/pivotschemadesigner');
     return this;
@@ -293,9 +327,24 @@ var EjConfigBuilder = (function () {
     return this;
   };
 
+  EjConfigBuilder.prototype.ejReportViewer = function ejReportViewer() {
+    this.resources.push('./reportviewer/reportviewer');
+    return this;
+  };
+
   EjConfigBuilder.prototype.ejSchedule = function ejSchedule() {
     this.resources.push('./schedule/schedule');
     this.resources.push('./schedule/scheduleresource');
+    return this;
+  };
+
+  EjConfigBuilder.prototype.ejUploadbox = function ejUploadbox() {
+    this.resources.push('./uploadbox/uploadbox');
+    return this;
+  };
+
+  EjConfigBuilder.prototype.ejTooltip = function ejTooltip() {
+    this.resources.push('./tooltip/tooltip');
     return this;
   };
 

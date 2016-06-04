@@ -1,7 +1,7 @@
 System.register(['../common/common', 'ej.waitingpopup.min'], function (_export) {
   'use strict';
 
-  var customElement, inlineView, inject, WidgetBase, constants, generateBindables, ejWaitingPopup;
+  var customAttribute, inject, WidgetBase, constants, generateBindables, ejWaitingPopup;
 
   function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
@@ -9,8 +9,7 @@ System.register(['../common/common', 'ej.waitingpopup.min'], function (_export) 
 
   return {
     setters: [function (_commonCommon) {
-      customElement = _commonCommon.customElement;
-      inlineView = _commonCommon.inlineView;
+      customAttribute = _commonCommon.customAttribute;
       inject = _commonCommon.inject;
       WidgetBase = _commonCommon.WidgetBase;
       constants = _commonCommon.constants;
@@ -30,8 +29,7 @@ System.register(['../common/common', 'ej.waitingpopup.min'], function (_export) 
         var _ejWaitingPopup = ejWaitingPopup;
         ejWaitingPopup = inject(Element)(ejWaitingPopup) || ejWaitingPopup;
         ejWaitingPopup = generateBindables('ejWaitingPopup', ['cssClass', 'showImage', 'showOnInit', 'template', 'text'])(ejWaitingPopup) || ejWaitingPopup;
-        ejWaitingPopup = inlineView('<template><content></content></template>')(ejWaitingPopup) || ejWaitingPopup;
-        ejWaitingPopup = customElement(constants.elementPrefix + 'waiting-popup')(ejWaitingPopup) || ejWaitingPopup;
+        ejWaitingPopup = customAttribute(constants.attributePrefix + 'waiting-popup')(ejWaitingPopup) || ejWaitingPopup;
         return ejWaitingPopup;
       })(WidgetBase);
 

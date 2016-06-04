@@ -22,7 +22,7 @@ var ejNavigationDrawer = (function (_WidgetBase) {
 
   var _ejNavigationDrawer = ejNavigationDrawer;
   ejNavigationDrawer = _commonCommon.inject(Element)(ejNavigationDrawer) || ejNavigationDrawer;
-  ejNavigationDrawer = _commonCommon.generateBindables('ejNavigationDrawer', ['contentid', 'cssclass', 'direction', 'enablelistview', 'items', 'listviewsettings', 'position', 'targetid', 'type', 'width'])(ejNavigationDrawer) || ejNavigationDrawer;
+  ejNavigationDrawer = _commonCommon.generateBindables('ejNavigationDrawer', ['contentId', 'cssClass', 'direction', 'enableListView', 'items', 'listViewSettings', 'position', 'targetId', 'type', 'width'])(ejNavigationDrawer) || ejNavigationDrawer;
   ejNavigationDrawer = _commonCommon.inlineView('<template><content></content></template>')(ejNavigationDrawer) || ejNavigationDrawer;
   ejNavigationDrawer = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'navigation-drawer')(ejNavigationDrawer) || ejNavigationDrawer;
   return ejNavigationDrawer;

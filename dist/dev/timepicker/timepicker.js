@@ -23,6 +23,7 @@ System.register(['../common/common', 'ej.timepicker.min'], function (_export) {
           _classCallCheck(this, _ejTimePicker);
 
           _WidgetBase.call(this);
+          this.isEditor = true;
           this.element = element;
         }
 

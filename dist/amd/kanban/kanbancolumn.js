@@ -11,7 +11,7 @@ define(['exports', '../common/common'], function (exports, _commonCommon) {
     }
 
     var _KanbanColumn = KanbanColumn;
-    KanbanColumn = _commonCommon.generateBindables('columns', ['headerText', 'key', 'isCollapsed', 'constraints', 'headerTemplate', 'width', 'visible'])(KanbanColumn) || KanbanColumn;
+    KanbanColumn = _commonCommon.generateBindables('columns', ['headerText', 'key', 'isCollapsed', 'constraints', 'headerTemplate', 'width', 'visible', 'showAddButton'])(KanbanColumn) || KanbanColumn;
     KanbanColumn = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'kanban-column')(KanbanColumn) || KanbanColumn;
     KanbanColumn = _commonCommon.inlineView('<template><content></content></template>')(KanbanColumn) || KanbanColumn;
     return KanbanColumn;

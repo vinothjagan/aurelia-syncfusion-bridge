@@ -32,7 +32,7 @@ System.register(['./events', '../common/util'], function (_export) {
           }
           if (this.isEditor) {
             this.widget.model._change = function (evt) {
-              if ('ejValue' in _this) {
+              if ('eValue' in _this) {
                 _this[_this.util.getBindablePropertyName('value')] = evt.value;
               }
             };

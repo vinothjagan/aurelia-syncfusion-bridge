@@ -14,6 +14,7 @@ define(['exports', '../common/common', 'ej.timepicker.min'], function (exports, 
       _classCallCheck(this, _ejTimePicker);
 
       _WidgetBase.call(this);
+      this.isEditor = true;
       this.element = element;
     }
 

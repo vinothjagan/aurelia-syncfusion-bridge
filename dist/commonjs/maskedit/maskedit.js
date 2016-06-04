@@ -17,6 +17,7 @@ var ejMaskEdit = (function (_WidgetBase) {
     _classCallCheck(this, _ejMaskEdit);
 
     _WidgetBase.call(this);
+    this.isEditor = true;
     this.element = element;
   }
 

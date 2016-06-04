@@ -1,7 +1,7 @@
-System.register(['aurelia-templating', 'aurelia-dependency-injection', 'aurelia-framework', './widget-base', './constants', './decorators', './template-processor', './util'], function (_export) {
+System.register(['aurelia-templating', 'aurelia-dependency-injection', './widget-base', './constants', './decorators', './template-processor', './util'], function (_export) {
   'use strict';
 
-  var customAttribute, bindable, customElement, children, TemplatingEngine, inject, inlineView, WidgetBase, constants, generateBindables, TemplateProcessor, Util;
+  var customAttribute, bindable, customElement, children, TemplatingEngine, inlineView, inject, WidgetBase, constants, generateBindables, TemplateProcessor, Util;
   return {
     setters: [function (_aureliaTemplating) {
       customAttribute = _aureliaTemplating.customAttribute;
@@ -9,10 +9,9 @@ System.register(['aurelia-templating', 'aurelia-dependency-injection', 'aurelia-
       customElement = _aureliaTemplating.customElement;
       children = _aureliaTemplating.children;
       TemplatingEngine = _aureliaTemplating.TemplatingEngine;
+      inlineView = _aureliaTemplating.inlineView;
     }, function (_aureliaDependencyInjection) {
       inject = _aureliaDependencyInjection.inject;
-    }, function (_aureliaFramework) {
-      inlineView = _aureliaFramework.inlineView;
     }, function (_widgetBase) {
       WidgetBase = _widgetBase.WidgetBase;
     }, function (_constants) {

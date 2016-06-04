@@ -19,9 +19,8 @@ define(['exports', '../common/common', 'common/ej.scroller.min'], function (expo
 
     var _ejScroller = ejScroller;
     ejScroller = _commonCommon.inject(Element)(ejScroller) || ejScroller;
-    ejScroller = _commonCommon.generateBindables('ejScroller', ['autoHide', 'buttonSize', 'enabled', 'enablePersistence', 'enableRTL', 'enableTouchScroll', 'height', 'scrollerSize', 'scrollLeft', 'scrollOneStepBy', 'scrollTop', 'targetPane', 'width'], [], { 'enableRTL': 'enableRtl' })(ejScroller) || ejScroller;
-    ejScroller = _commonCommon.inlineView('<template><content></content></template>')(ejScroller) || ejScroller;
-    ejScroller = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'scroller')(ejScroller) || ejScroller;
+    ejScroller = _commonCommon.generateBindables('ejScroller', ['autoHide', 'buttonSize', 'enabled', 'enablePersistence', 'enableRTL', 'enableTouchScroll', 'height', 'scrollerSize', 'scrollLeft', 'scrollOneStepBy', 'scrollTop', 'targetPane', 'width'], ['scrollLeft', 'scrollTop'], { 'enableRTL': 'enableRtl' })(ejScroller) || ejScroller;
+    ejScroller = _commonCommon.customAttribute(_commonCommon.constants.attributePrefix + 'scroller')(ejScroller) || ejScroller;
     return ejScroller;
   })(_commonCommon.WidgetBase);
 

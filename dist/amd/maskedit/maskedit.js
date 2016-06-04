@@ -14,6 +14,7 @@ define(['exports', '../common/common', 'ej.maskedit.min'], function (exports, _c
       _classCallCheck(this, _ejMaskEdit);
 
       _WidgetBase.call(this);
+      this.isEditor = true;
       this.element = element;
     }
 

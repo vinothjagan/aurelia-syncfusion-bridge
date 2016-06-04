@@ -17,6 +17,7 @@ var ejTimePicker = (function (_WidgetBase) {
     _classCallCheck(this, _ejTimePicker);
 
     _WidgetBase.call(this);
+    this.isEditor = true;
     this.element = element;
   }
 

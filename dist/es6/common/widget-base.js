@@ -18,7 +18,7 @@ export class WidgetBase {
     }
     if (this.isEditor) {
       this.widget.model._change = (evt) => {
-        if ('ejValue' in this) {
+        if ('eValue' in this) {
           this[this.util.getBindablePropertyName('value')] = evt.value;
         }
       };

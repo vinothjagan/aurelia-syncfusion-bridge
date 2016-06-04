@@ -19,7 +19,7 @@ define(['exports', '../common/common', 'ej.fileexplorer.min'], function (exports
 
     var _ejFileExplorer = ejFileExplorer;
     ejFileExplorer = _commonCommon.inject(Element)(ejFileExplorer) || ejFileExplorer;
-    ejFileExplorer = _commonCommon.generateBindables('ejFileExplorer', ['ajaxAction', 'ajaxDataType', 'ajaxSettings', 'allowMultiSelection', 'cssClass', 'enableResize', 'enableRTL', 'fileTypes', 'filterSettings', 'gridSettings', 'height', 'isResponsive', 'layout', 'locale', 'maxHeight', 'maxWidth', 'minHeight', 'minWidth', 'path', 'selectedFolder', 'selectedItems', 'showContextMenu', 'showFooter', 'showToolbar', 'showNavigationPane', 'tools', 'toolsList', 'uploadSettings', 'width'], [], { 'enableRTL': 'enableRtl' })(ejFileExplorer) || ejFileExplorer;
+    ejFileExplorer = _commonCommon.generateBindables('ejFileExplorer', ['ajaxAction', 'ajaxDataType', 'ajaxSettings', 'allowMultiSelection', 'cssClass', 'enableResize', 'enableRTL', 'fileTypes', 'filterSettings', 'gridSettings', 'height', 'isResponsive', 'layout', 'locale', 'maxHeight', 'maxWidth', 'minHeight', 'minWidth', 'path', 'selectedFolder', 'selectedItems', 'showCheckbox', 'showContextMenu', 'showFooter', 'showRoundedCorner', 'showThumbnail', 'showToolbar', 'showNavigationPane', 'tools', 'toolsList', 'uploadSettings', 'width'], [], { 'enableRTL': 'enableRtl' })(ejFileExplorer) || ejFileExplorer;
     ejFileExplorer = _commonCommon.inlineView('<template><content></content></template>')(ejFileExplorer) || ejFileExplorer;
     ejFileExplorer = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'file-explorer')(ejFileExplorer) || ejFileExplorer;
     return ejFileExplorer;

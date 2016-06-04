@@ -14,6 +14,7 @@ define(['exports', '../common/common', 'ej.datetimepicker.min'], function (expor
       _classCallCheck(this, _ejDateTimePicker);
 
       _WidgetBase.call(this);
+      this.isEditor = true;
       this.element = element;
     }
 
