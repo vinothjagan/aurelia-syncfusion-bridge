@@ -1,7 +1,7 @@
 <template>
     <require from="./about.css"></require>
-    <div class="container-fluid"> <br/>
-        <ej-tab>
+    <div class="container-fluid user-select about"> <br/>
+        <ej-tab e-allow-keyboard-navigation=false>
             <ul>
                 <li><a href="#aurelia-syncfusion">What is Aurelia-Syncfusion Bridge</a></li>
                 <li><a href="#grid-example">GRID - example of an Aurelia-Syncfusion component</a></li>
@@ -15,25 +15,32 @@
                             <!--<span>Version 0.6.2</span>-->
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row row-no-padding">
                         <div class="col-xs-12 col-sm-4 text-center">
-                            <a href="http://aurelia.io" target="_blank"><img src="images/aurelia-logo-04.png" /></a>
+                            <div class="logo-circle aurelia">
+                                <a draggable="false" href="http://aurelia.io" target="_blank"><img draggable="false" src="images/aurelia-logo-04.png" /></a>
+                            </div>
                         </div>
                         <div class="col-xs-12 col-sm-4 text-center">
-                            <img src="images/bridge.png">
+                            <div class="logo-circle bridge rotate90">
+                                <div class="bridge-icon">
+                                    <img draggable="false" src="images/aurelia-syncfusion-connect.png">
+                                </div>                                                            
+                            </div>
                         </div>
                         <div class="col-xs-12 col-sm-4 text-center">
-                            <a href="http://js.syncfusion.com/" target="_blank"><img src="images/syncfusion_logo.png" /></a>
+                            <div class="logo-circle syncfusion">
+                                <a draggable="false" href="http://js.syncfusion.com/" target="_blank"><img draggable="false" src="images/syncfusion_logo.png" /></a>
+                            </div>
                         </div>
-                    </div>
-                    
-                     <h4 class="text-center">
+                    </div>                   
+                   <div class="feature-wrap">
                         <ul class="features">                            
-                            <li>Use Syncfusion JavaScript UI components in your Aurelia application <i style="text-decoration:underline">without writing any wrapper code</i></li>
-                            <li>Powerful binding expressions <i>directly in your markup</i></li>
-                            <li>Full support for Aurelia's templating system in Syncfusion JavaScript Widgets templates</li>                            
+                            <li>Use Syncfusion JavaScript UI components in your Aurelia application <b>without writing any wrapper code</b></li>
+                            <li>Powerful binding expressions directly in your markup</li>
+                            <li></span>Full support for Aurelia's templating system in <span class="highlight">Syncfusion JavaScript Widgets templates<span></li>                            
                         </ul>
-                     </h4>
+                    </div>
                 </section>
             </div>
             <div id="grid-example">

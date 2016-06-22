@@ -1,17 +1,13 @@
 <template>
     <require from="./Toggle-Buttons.css"></require>
-    <div style="width:470px;border-radius:5px;border:1px solid #5C5C5C;padding:20px;margin:0 auto;">           
         <table class='container-fluid'>
             <tbody class='container-fluid'>
-                <tr class='row'>
-                <th colspan="2" style="padding-left:28%"> Toggle Buttons </th>
-                </tr>
+                
                 <tr class='row'>
                     <td class='col-md-4'> Normal</td>
                     <td class='col-md-4'>
                         <input id="normalBtn" type="checkbox" 
-                        ej-toggle-button="e-width: 50px;
-                        e-show-rounded-corner.bind: roundedCorner;
+                        ej-toggle-button="e-show-rounded-corner.bind: roundedCorner;
                         e-content-type: imageonly;
                         e-default-prefix-icon: e-mediaplay e-uiLight;
                         e-active-prefix-icon: e-mediapause e-uiLight"></input>
@@ -65,5 +61,4 @@
                 </tr>            
             </tbody>
         </table>      
-    </div>
 </template>

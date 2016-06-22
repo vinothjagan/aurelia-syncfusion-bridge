@@ -18,7 +18,7 @@
         "FileExplorer": "fileexplorer",
         "Toolbar": "toolbar"
     },
-    "LAYOUT": {
+    "Layout": {
         "Splitter": "splitter",
         "ListView": "listview",
         "Dialog": "dialog",
@@ -26,15 +26,16 @@
         "Tile": "tile",
         "Tooltip": "tooltip"
     },
-    "DATA VISUALIZATION": {
+    "Data Visualization": {
         "Schedule": "schedule",
         "Kanban Board": "kanban",
         "Barcode": "barcode",
         "Diagram": "diagram",
-		"Map": "map",
-		"TreeMap": "treemap",
+        "Map": "map",
+        "TreeMap": "treemap",
         "Gantt": "gantt",
         "Chart": "chart",
+		"Sparkline": "sparkline",
         "Circular Gauge": "circulargauge",
         "Linear Gauge": "lineargauge",
         "Digital Gauge": "digitalgauge",
@@ -56,7 +57,7 @@
         "Slider": "slider",
         "RTE": "rte"
     },
-    "File Formats": {
+    "File Viewer": {
         "PDF Viewer": "pdfviewer"
     },
     "Pivot Grid": {
@@ -67,7 +68,7 @@
     "Pivot Chart": {
         "PivotChart": "pivotchart"
     },
-	"Pivot Gauge": {
+    "Pivot Gauge": {
         "PivotGauge": "pivotgauge"
     },
     "Notification": {

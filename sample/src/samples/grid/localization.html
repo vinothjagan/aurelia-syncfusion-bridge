@@ -1,12 +1,12 @@
 <template>
-    <require from="./basic-use.css"></require>
+	<require from="syncfusion-javascript/scripts/i18n/ej.culture.de-DE.min.js"></require>
     <div>
         <ej-grid e-data-source.bind="OrdersList" e-allow-paging=true e-page-settings.bind="page" e-allow-grouping=true
-                 e-group-settings.bind="group" e-locale="de-DE">
-            <ej-column e-field="OrderID" e-header-text="Order ID" e-is-primary-key=true e-text-align="right"></ej-column>
-            <ej-column e-field="CustomerID" e-header-text="Customer ID"></ej-column>
-            <ej-column e-field="EmployeeID" e-header-text="Employee ID" e-text-align="right"></ej-column>
-            <ej-column e-field="Freight" e-header-text="Freight" e-format="{0:C}" e-text-align="right"></ej-column>
+                 e-group-settings.bind="group" e-locale="de-DE" e-allow-filtering=true e-filter-settings.bind="filtertype">
+            <ej-column e-field="OrderID" e-is-primary-key=true e-text-align="right"></ej-column>
+            <ej-column e-field="CustomerID" ></ej-column>
+            <ej-column e-field="EmployeeID" e-text-align="right"></ej-column>
+            <ej-column e-field="Freight" e-format="{0:C}" e-text-align="right"></ej-column>
         </ej-grid>
     </div>
 </template>

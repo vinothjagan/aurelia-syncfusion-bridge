@@ -55,7 +55,7 @@ export class BasicUse {
     };
     this.rowsCount = 2;
     this.columnsCount = 3;
-    this.backgroundColor = "transparent";
+    this.backgroundColor = 'transparent';
     this.loadGaugeTheme = 'loadGaugeTheme';
     this.scales = [{
       showRanges: true,
@@ -71,47 +71,47 @@ export class BasicUse {
         width: 7
       },
       {
-        type: "marker",
-        markerType: "diamond",
+        type: 'marker',
+        markerType: 'diamond',
         distanceFromScale: 5,
-        placement: "center",
-        backgroundColor: "#29A4D9",
+        placement: 'center',
+        backgroundColor: '#29A4D9',
         length: 25,
         width: 15
       }],
       ticks: [{
-        type: "major",
+        type: 'major',
         distanceFromScale: 2,
         height: 16,
-        width: 1, color: "#8c8c8c"
+        width: 1, color: '#8c8c8c'
       }, {
-        type: "minor",
+        type: 'minor',
         height: 6,
         width: 1,
         distanceFromScale: 2,
-        color: "#8c8c8c"
+        color: '#8c8c8c'
       }],
       labels: [{
-        color: "#8c8c8c"
+        color: '#8c8c8c'
       }],
       ranges: [{
         distanceFromScale: -5,
-        backgroundColor: "#fc0606",
+        backgroundColor: '#fc0606',
         border: {
-            color: "#fc0606"
+          color: '#fc0606'
         }
       }, {
         distanceFromScale: -5
       }],
       customLabels: [{
         position: { x: 180, y: 290 },
-        font: { size: "10px", fontFamily: "Segoe UI", fontStyle: "Normal" }, color: "#666666"
+        font: { size: '10px', fontFamily: 'Segoe UI', fontStyle: 'Normal' }, color: '#666666'
       }, {
         position: { x: 180, y: 320 },
-        font: { size: "10px", fontFamily: "Segoe UI", fontStyle: "Normal" }, lcolor: "#666666"
+        font: { size: '10px', fontFamily: 'Segoe UI', fontStyle: 'Normal' }, lcolor: '#666666'
       }, {
         position: { x: 180, y: 150 },
-        font: { size: "12px", fontFamily: "Segoe UI", fontStyle: "Normal" }, color: "#666666"
+        font: { size: '12px', fontFamily: 'Segoe UI', fontStyle: 'Normal' }, color: '#666666'
       }]
     }];
   }

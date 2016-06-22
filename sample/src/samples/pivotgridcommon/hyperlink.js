@@ -61,15 +61,19 @@ export class BasicUse {
     };
   }
   valueCellClick() {
+    /* eslint-disable */
     alert('Value Cell Clicked');
   }
   summaryCellClick() {
+    /* eslint-disable */
     alert('Sumary Cell Clicked');
   }
   rowCellClick() {
+    /* eslint-disable */
     alert('Row Header Cell Clicked');
   }
   columnCellClick() {
+    /* eslint-disable */
     alert('Column Header Cell Clicked');
   }
 }

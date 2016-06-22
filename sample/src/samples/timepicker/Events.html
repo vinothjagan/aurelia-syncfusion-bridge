@@ -4,7 +4,7 @@
      <div class="frame"><div>
         <label>Select Time</label> 
         <input id="timepick" ej-time-picker="e-value.bind:timeValue;e-width.bind:'100%'" e-on-create.trigger="logger.log('TimePicker has been created')"
-         e-on-focusIn.trigger="logger.log('TimePicker is in focus.')" e-on-focusOut.trigger="logger.log('TimePicker is out of focus.')" e-on-change.trigger="onChange($event)" ></input>
+         e-on-focus-in.trigger="logger.log('TimePicker is in focus.')" e-on-focus-out.trigger="logger.log('TimePicker is out of focus.')" e-on-change.trigger="onChange($event)" ></input>
      </div>
    </div>
   </div>  
@@ -12,7 +12,7 @@
      <h4>Event Trace</h4>
      <logger view-model.ref="logger"></logger>
      <div>
-         <button class="logger-button" ej-button="e-text:clear" e-on-click.trigger = "logger.clear()" ></button>
+         <button class="logger-button" ej-button="e-text:Clear" e-on-click.trigger = "logger.clear()" ></button>
      </div>
   </div>
 </template>

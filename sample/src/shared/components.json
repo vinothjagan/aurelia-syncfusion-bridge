@@ -67,7 +67,7 @@
             "moduleId": "toolbar"
         }
     },
-    "LAYOUT": {
+    "Layout": {
         "Splitter": {
             "status": "done",
             "moduleId": "splitter"
@@ -121,6 +121,10 @@
         "Chart": {
             "status": "done",
             "moduleId": "chart"
+        },
+		"Sparkline": {
+            "status": "done",
+            "moduleId": "sparkline"
         },
         "Circular Gauge": {
             "status": "done",
@@ -197,7 +201,7 @@
             "moduleId": "rte"
         }
     },
-    "File Formats": {
+    "File Viewer": {
         "PDF Viewer": {
             "status": "done",
             "moduleId": "pdfviewer"

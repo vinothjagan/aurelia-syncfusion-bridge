@@ -1,21 +1,20 @@
 <template>
     <require from="./Split-Buttons.css"></require>
-    <div style="width:470px;border-radius:5px;border:1px solid #5C5C5C;padding:20px;margin:0 auto;">            
         <table class='container-fluid'>
             <tbody class='container-fluid'>
-                <tr class='row'>
-                <th colspan="2" style="padding-left:28%"> Split Buttons </th>
-                </tr>
-                <tr class='row'>
+                
+                 <tr class='row'>
                     <td class='col-md-4'> Normal</td>
                     <td class='col-md-4'>
                         <button id="normalBtn" 
-                        ej-split-button="e-size.bind: normalBtnValue;
+                        ej-split-button="e-size: normal;
                         e-show-rounded-corner.bind: roundedCorner;
-                        e-content-type: imageonly;
+                        e-content-type.bind :'imageonly';
                         e-target-id: subMenu1;
                         e-button-mode.bind: buttonMode;
-                        e-prefix-icon: e-uiLight e-login"></button>
+                        e-prefix-icon: e-uiLight e-login;
+                        e-width:50px;
+                        "></button>
                         <ul id="subMenu1">
                             <li><span>User</span></li>
                             <li><span>Guest</span></li>
@@ -69,7 +68,6 @@
                         </ul>
                     </td>
                 </tr>
-
                 <tr class='row'>
                     <td class='col-md-4'> Large</td>
                     <td class='col-md-4'>
@@ -89,13 +87,12 @@
                 </tr>
             </tbody>
         </table>      
-    </div>
     <div id="property-window" class="box wide">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-2">
             Button Mode
             </div>
-            <div class="col-md-4"> 
+            <div class="col-md-2"> 
                 <select id="propbutton" ej-drop-down-list="e-text: Split" e-on-select.trigger="onChange($event)">
                     <option value="split">Split</option>
                     <option value="dropdown">Dropdown</option>

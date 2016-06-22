@@ -1,9 +1,7 @@
 <template>
-  <div style="width:470px;border-radius:5px;border:1px solid #5C5C5C;padding:20px;margin:0 auto;">            
       <table class='container-fluid'>         
         <tbody class='container-fluid'>           
             <tr class='row'>
-                <td class='col-md-4'> Repeat Button</td>
                 <td class='col-md-4'>
                     <button id="normalBtn" 
                     ej-button="e-size.bind: largeBtnValue;
@@ -14,12 +12,11 @@
             </tr>            
           </tbody>
       </table>      
-  </div>
   <div id="Logger" class="box">
        <h4>Event Trace</h4>
        <logger view-model.ref="logger"></logger>
        <div>
-           <button class="logger-button" ej-button="e-text:clear" e-on-click.trigger = "logger.clear()" ></button>
+           <button class="logger-button" ej-button="e-text:Clear" e-on-click.trigger = "logger.clear()" ></button>
        </div>
       </div>
 </template>

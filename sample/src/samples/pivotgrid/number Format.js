@@ -64,7 +64,7 @@ export class BasicUse {
   onChange(args) {
     let pivotGrid = $('.e-pivotgrid').data('ejPivotGrid');
     for (let i = 0; i < pivotGrid.model.dataSource.values.length; i++) {
-      if (args.target.id.indexOf(pivotGrid.model.dataSource.values[i].fieldName)!== -1) {
+      if (args.target.id.indexOf(pivotGrid.model.dataSource.values[i].fieldName) !== -1) {
         pivotGrid.model.dataSource.values[i].format = args.detail.text.toLowerCase();
       }
     }

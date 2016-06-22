@@ -1,18 +1,16 @@
 <template>
-  <require from="./basic-use.css"></require>
+  <require from="./localization.css"></require>
   
-  <require from="../../root/vendors/scripts/common/ej.globalize.min.js"></require>
-  <require from="../../root/vendors/scripts/i18n/ej.culture.fr-FR.min.js"></require>
-  <require from="../../root/vendors/scripts/i18n/ej.culture.es-ES.min.js"></require>
+  <require from="syncfusion-javascript/scripts/common/ej.globalize.min.js"></require>
+  <require from="syncfusion-javascript/scripts/i18n/ej.culture.fr-FR.min.js"></require>
+  <require from="syncfusion-javascript/scripts/i18n/ej.culture.es-ES.min.js"></require>
     <div>
-        <table>
-            <tr>
-                <td>
+        <div style="width: 70%">
         <ej-pivot-grid e-data-source.bind="pivotData" e-locale.bind="locale">
         </ej-pivot-grid>
-        </td>
-        <td style="float:left;margin-left:15px">
-        <div style="float:left;margin: 10px 10px 10px 5px">Localization</div>
+        </div>
+        <div style="float: left; margin-left:20px">
+        <div style="float:left;margin: 20px 10px 10px 5px">Localization</div>
         <input type="text" ej-drop-down-list="e-target-id.bind:target;e-value.bind:Amount" e-on-change.trigger="onChange($event)" id="selectAmount" />
         <div id="Amount">
             <ul>
@@ -20,9 +18,6 @@
                 <li>fr-FR</li>
                 <li>es-ES</li>
             </ul>
-        </div>
-        </td>
-        </tr>
-        </table>      
+        </div>   
 	</div>
 </template>

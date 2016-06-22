@@ -2,11 +2,11 @@
   <require from="./number Format.css"></require>
   
     <div>
-        <table><tr><td>
-        <ej-pivot-grid e-data-source.bind="pivotData">
-        </ej-pivot-grid>
-        </td>
-        <td style="float:left">
+        <div style="width:80%"> 
+            <ej-pivot-grid e-data-source.bind="pivotData">
+            </ej-pivot-grid>
+        </div>
+        <div style="float:left; margin-left: 20px">
         <div style="margin: 10px 10px 10px 0px">Amount</div>
         <input type="text" ej-drop-down-list="e-target-id.bind:target;e-value.bind:Amount" e-on-change.trigger="onChange($event)" id="selectAmount" />
         <div id="Amount">
@@ -36,7 +36,7 @@
                 <li>Accounting</li>
                 <li>Fraction</li>
             </ul>
-        </div> 
-        </td></tr></table>       
+        </div>
+        </div>       
 	</div>
 </template>
