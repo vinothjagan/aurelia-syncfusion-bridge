@@ -29,7 +29,7 @@ System.register(['../common/common', 'ej.timepicker.min'], function (_export) {
 
         var _ejTimePicker = ejTimePicker;
         ejTimePicker = inject(Element)(ejTimePicker) || ejTimePicker;
-        ejTimePicker = generateBindables('ejTimePicker', ['cssClass', 'enableAnimation', 'enabled', 'enablePersistence', 'enableRTL', 'enableStrictMode', 'height', 'hourInterval', 'htmlAttributes', 'interval', 'locale', 'maxTime', 'minTime', 'minutesInterval', 'popupHeight', 'popupWidth', 'readOnly', 'secondsInterval', 'showPopupButton', 'showRoundedCorner', 'timeFormat', 'value', 'width'], ['value'], { 'enableRTL': 'enableRtl' })(ejTimePicker) || ejTimePicker;
+        ejTimePicker = generateBindables('ejTimePicker', ['cssClass', 'enableAnimation', 'enabled', 'enablePersistence', 'enableRTL', 'enableStrictMode', 'disableTimeRanges', 'height', 'hourInterval', 'htmlAttributes', 'interval', 'locale', 'maxTime', 'minTime', 'minutesInterval', 'popupHeight', 'popupWidth', 'readOnly', 'secondsInterval', 'showPopupButton', 'showRoundedCorner', 'timeFormat', 'value', 'width'], ['value'], { 'enableRTL': 'enableRtl' })(ejTimePicker) || ejTimePicker;
         ejTimePicker = customAttribute(constants.attributePrefix + 'time-picker')(ejTimePicker) || ejTimePicker;
         return ejTimePicker;
       })(WidgetBase);

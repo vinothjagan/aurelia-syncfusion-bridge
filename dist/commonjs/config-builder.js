@@ -13,7 +13,7 @@ var EjConfigBuilder = (function () {
   }
 
   EjConfigBuilder.prototype.useAll = function useAll() {
-    this.ejGrid().ejChart().ejMap().ejTreeMap().ejRangeNavigator().ejDiagram().ejSymbolPalette().ejBulletGraph().ejCircularGauge().ejLinearGauge().ejDigitalGauge().ejSplitter().ejDatePicker().ejGantt().ejTreeGrid().ejColorPicker().ejDialog().ejScroller().ejBarcode().ejPdfViewer().ejNumericTextbox().ejCurrencyTextbox().ejPercentageTextbox().ejTimePicker().ejToolbar().ejMenu().ejMaskEdit().ejTreeView().ejKanban().ejRibbon().ejSpreadsheet().ejRating().ejListBox().ejListView().ejNavigationDrawer().ejRotator().ejRTE().ejDropDownList().ejAutocomplete().ejRadialMenu().ejRadialSlider().ejTile().ejAccordion().ejTab().ejCheckBox().ejRadioButton().ejToggleButton().ejSplitButton().ejGroupButton().ejDateTimePicker().ejProgressBar().ejTagCloud().ejButton().ejSlider().ejFileExplorer().ejPivotGrid().ejPivotChart().ejPivotSchemaDesigner().ejWaitingPopup().ejReportViewer().ejSchedule().ejUploadbox().ejTooltip().ejTemplate();
+    this.ejGrid().ejChart().ejMap().ejTreeMap().ejRangeNavigator().ejDiagram().ejSparkline().ejSymbolPalette().ejOverview().ejBulletGraph().ejCircularGauge().ejLinearGauge().ejDigitalGauge().ejSplitter().ejDatePicker().ejGantt().ejTreeGrid().ejColorPicker().ejDialog().ejScroller().ejBarcode().ejPdfViewer().ejNumericTextbox().ejCurrencyTextbox().ejPercentageTextbox().ejTimePicker().ejToolbar().ejMenu().ejMaskEdit().ejTreeView().ejKanban().ejRibbon().ejSpreadsheet().ejRating().ejListBox().ejListView().ejNavigationDrawer().ejRotator().ejRTE().ejDropDownList().ejAutocomplete().ejRadialMenu().ejRadialSlider().ejTile().ejAccordion().ejTab().ejCheckBox().ejRadioButton().ejToggleButton().ejSplitButton().ejGroupButton().ejDateTimePicker().ejProgressBar().ejTagCloud().ejButton().ejSlider().ejFileExplorer().ejPivotGrid().ejPivotChart().ejPivotGauge().ejPivotSchemaDesigner().ejWaitingPopup().ejReportViewer().ejSchedule().ejUploadbox().ejTooltip().ejTemplate();
     return this;
   };
 
@@ -57,8 +57,18 @@ var EjConfigBuilder = (function () {
     return this;
   };
 
+  EjConfigBuilder.prototype.ejSparkline = function ejSparkline() {
+    this.resources.push('./sparkline/sparkline');
+    return this;
+  };
+
   EjConfigBuilder.prototype.ejSymbolPalette = function ejSymbolPalette() {
     this.resources.push('./symbolpalette/symbolpalette');
+    return this;
+  };
+
+  EjConfigBuilder.prototype.ejOverview = function ejOverview() {
+    this.resources.push('./overview/overview');
     return this;
   };
 
@@ -314,6 +324,11 @@ var EjConfigBuilder = (function () {
 
   EjConfigBuilder.prototype.ejPivotChart = function ejPivotChart() {
     this.resources.push('./pivotchart/pivotchart');
+    return this;
+  };
+
+  EjConfigBuilder.prototype.ejPivotGauge = function ejPivotGauge() {
+    this.resources.push('./pivotgauge/pivotgauge');
     return this;
   };
 

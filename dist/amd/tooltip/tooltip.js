@@ -19,7 +19,7 @@ define(['exports', '../common/common', 'ej.tooltip.min'], function (exports, _co
 
     var _ejTooltip = ejTooltip;
     ejTooltip = _commonCommon.inject(Element)(ejTooltip) || ejTooltip;
-    ejTooltip = _commonCommon.generateBindables('ejTooltip', ['allowKeyboardNavigation', 'animation', 'associate', 'autoCloseTimeout', 'closeMode', 'collision', 'containment', 'content', 'cssClass', 'enabled', 'enableRTL', 'height', 'isBalloon', 'position', 'showRoundedCorner', 'target', 'title', 'trigger', 'width'], [], { 'enableRTL': 'enableRtl' })(ejTooltip) || ejTooltip;
+    ejTooltip = _commonCommon.generateBindables('ejTooltip', ['allowKeyboardNavigation', 'animation', 'associate', 'autoCloseTimeout', 'closeMode', 'collision', 'containment', 'content', 'cssClass', 'enabled', 'enableRTL', 'height', 'isBalloon', 'position', 'showRoundedCorner', 'showShadow', 'target', 'title', 'trigger', 'width'], [], { 'enableRTL': 'enableRtl' })(ejTooltip) || ejTooltip;
     ejTooltip = _commonCommon.customAttribute(_commonCommon.constants.attributePrefix + 'tooltip')(ejTooltip) || ejTooltip;
     return ejTooltip;
   })(_commonCommon.WidgetBase);

@@ -34,7 +34,7 @@ var Item = (function () {
   }], null, _instanceInitializers);
 
   var _Item = Item;
-  Item = _commonCommon.generateBindables('items', ['imageUrl', 'text', 'enabled', 'click', 'type'])(Item) || Item;
+  Item = _commonCommon.generateBindables('items', ['imageUrl', 'text', 'enabled', 'click', 'badge', 'type', 'sliderSettings'])(Item) || Item;
   Item = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'item')(Item) || Item;
   Item = _commonCommon.inlineView('<template><content></content></template>')(Item) || Item;
   return Item;

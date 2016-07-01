@@ -28,7 +28,7 @@ System.register(['../common/common', 'ej.slider.min'], function (_export) {
 
         var _ejSlider = ejSlider;
         ejSlider = inject(Element)(ejSlider) || ejSlider;
-        ejSlider = generateBindables('ejSlider', ['animationSpeed', 'cssClass', 'enableAnimation', 'enabled', 'enablePersistence', 'enableRTL', 'height', 'htmlAttributes', 'incrementStep', 'largeStep', 'maxValue', 'minValue', 'orientation', 'readOnly', 'showRoundedCorner', 'showScale', 'showSmallTicks', 'showTooltip', 'sliderType', 'smallStep', 'value', 'values', 'width'], ['value'], { 'enableRTL': 'enableRtl' })(ejSlider) || ejSlider;
+        ejSlider = generateBindables('ejSlider', ['allowMouseWheel', 'animationSpeed', 'cssClass', 'enableAnimation', 'enabled', 'enablePersistence', 'enableRTL', 'height', 'htmlAttributes', 'incrementStep', 'largeStep', 'maxValue', 'minValue', 'orientation', 'readOnly', 'showRoundedCorner', 'showScale', 'showSmallTicks', 'showTooltip', 'sliderType', 'smallStep', 'value', 'values', 'width'], ['value'], { 'enableRTL': 'enableRtl' })(ejSlider) || ejSlider;
         ejSlider = customAttribute(constants.attributePrefix + 'slider')(ejSlider) || ejSlider;
         return ejSlider;
       })(WidgetBase);

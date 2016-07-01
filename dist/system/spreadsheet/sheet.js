@@ -19,7 +19,7 @@ System.register(['../common/common'], function (_export) {
         }
 
         var _Sheet = Sheet;
-        Sheet = generateBindables('sheets', ['colCount', 'columnWidth', 'dataSource', 'fieldAsColumnHeader', 'headerStyles', 'primaryKey', 'query', 'rangeSettings', 'rowCount', 'showGridlines', 'showHeader', 'showHeadings', 'startCell'])(Sheet) || Sheet;
+        Sheet = generateBindables('sheets', ['colCount', 'columnWidth', 'dataSource', 'fieldAsColumnHeader', 'headerStyles', 'primaryKey', 'query', 'rangeSettings', 'rowCount', 'sheetName', 'showGridlines', 'showHeader', 'showHeadings', 'startCell'])(Sheet) || Sheet;
         Sheet = customElement(constants.elementPrefix + 'sheet')(Sheet) || Sheet;
         Sheet = inlineView('<template><content></content></template>')(Sheet) || Sheet;
         return Sheet;

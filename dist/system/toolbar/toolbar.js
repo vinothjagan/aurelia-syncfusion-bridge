@@ -28,7 +28,7 @@ System.register(['../common/common', 'ej.toolbar.min'], function (_export) {
 
         var _ejToolbar = ejToolbar;
         ejToolbar = inject(Element)(ejToolbar) || ejToolbar;
-        ejToolbar = generateBindables('ejToolbar', ['cssClass', 'dataSource', 'enabled', 'enableRTL', 'enableSeparator', 'fields', 'height', 'hide', 'isResponsive', 'orientation', 'query', 'showRoundedCorner', 'width'], [], { 'enableRTL': 'enableRtl' })(ejToolbar) || ejToolbar;
+        ejToolbar = generateBindables('ejToolbar', ['cssClass', 'dataSource', 'enabled', 'enableRTL', 'enableSeparator', 'fields', 'height', 'hide', 'isResponsive', 'orientation', 'query', 'showRoundedCorner', 'targetID', 'width'], [], { 'enableRTL': 'enableRtl', 'targetID': 'targetId' })(ejToolbar) || ejToolbar;
         ejToolbar = customAttribute(constants.attributePrefix + 'toolbar')(ejToolbar) || ejToolbar;
         return ejToolbar;
       })(WidgetBase);

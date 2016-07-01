@@ -19,7 +19,7 @@ define(['exports', '../common/common', 'ej.rotator.min'], function (exports, _co
 
     var _ejRotator = ejRotator;
     ejRotator = _commonCommon.inject(Element)(ejRotator) || ejRotator;
-    ejRotator = _commonCommon.generateBindables('ejRotator', ['allowKeyboardNavigation', 'animationSpeed', 'animationType', 'circularMode', 'cssClass', 'dataSource', 'delay', 'displayItemsCount', 'enableAutoPlay', 'enabled', 'enableRTL', 'fields', 'frameSpace', 'isResponsive', 'navigateSteps', 'orientation', 'pagerPosition', 'query', 'showCaption', 'showNavigateButton', 'showPager', 'showPlayButton', 'showThumbnail', 'slideHeight', 'slideWidth', 'startIndex', 'stopOnHover', 'thumbnailSourceID'], [], { 'enableRTL': 'enableRtl', 'thumbnailSourceID': 'thumbnailSourceId' })(ejRotator) || ejRotator;
+    ejRotator = _commonCommon.generateBindables('ejRotator', ['allowKeyboardNavigation', 'animationSpeed', 'animationType', 'circularMode', 'cssClass', 'dataSource', 'delay', 'displayItemsCount', 'enableAutoPlay', 'enabled', 'enableRTL', 'fields', 'frameSpace', 'isResponsive', 'navigateSteps', 'orientation', 'pagerPosition', 'query', 'showCaption', 'showNavigateButton', 'showPager', 'showPlayButton', 'showThumbnail', 'slideHeight', 'slideWidth', 'startIndex', 'stopOnHover', 'template', 'thumbnailSourceID'], [], { 'enableRTL': 'enableRtl', 'thumbnailSourceID': 'thumbnailSourceId' })(ejRotator) || ejRotator;
     ejRotator = _commonCommon.customAttribute(_commonCommon.constants.attributePrefix + 'rotator')(ejRotator) || ejRotator;
     return ejRotator;
   })(_commonCommon.WidgetBase);

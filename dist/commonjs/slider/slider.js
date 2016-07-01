@@ -22,7 +22,7 @@ var ejSlider = (function (_WidgetBase) {
 
   var _ejSlider = ejSlider;
   ejSlider = _commonCommon.inject(Element)(ejSlider) || ejSlider;
-  ejSlider = _commonCommon.generateBindables('ejSlider', ['animationSpeed', 'cssClass', 'enableAnimation', 'enabled', 'enablePersistence', 'enableRTL', 'height', 'htmlAttributes', 'incrementStep', 'largeStep', 'maxValue', 'minValue', 'orientation', 'readOnly', 'showRoundedCorner', 'showScale', 'showSmallTicks', 'showTooltip', 'sliderType', 'smallStep', 'value', 'values', 'width'], ['value'], { 'enableRTL': 'enableRtl' })(ejSlider) || ejSlider;
+  ejSlider = _commonCommon.generateBindables('ejSlider', ['allowMouseWheel', 'animationSpeed', 'cssClass', 'enableAnimation', 'enabled', 'enablePersistence', 'enableRTL', 'height', 'htmlAttributes', 'incrementStep', 'largeStep', 'maxValue', 'minValue', 'orientation', 'readOnly', 'showRoundedCorner', 'showScale', 'showSmallTicks', 'showTooltip', 'sliderType', 'smallStep', 'value', 'values', 'width'], ['value'], { 'enableRTL': 'enableRtl' })(ejSlider) || ejSlider;
   ejSlider = _commonCommon.customAttribute(_commonCommon.constants.attributePrefix + 'slider')(ejSlider) || ejSlider;
   return ejSlider;
 })(_commonCommon.WidgetBase);

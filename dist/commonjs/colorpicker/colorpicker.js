@@ -22,7 +22,7 @@ var ejColorPicker = (function (_WidgetBase) {
 
   var _ejColorPicker = ejColorPicker;
   ejColorPicker = _commonCommon.inject(Element)(ejColorPicker) || ejColorPicker;
-  ejColorPicker = _commonCommon.generateBindables('ejColorPicker', ['buttonText', 'buttonMode', 'columns', 'cssClass', 'custom', 'displayInline', 'enabled', 'enableOpacity', 'htmlAttributes', 'modelType', 'opacityValue', 'palette', 'presetType', 'showApplyCancel', 'showClearButton', 'showPreview', 'showRecentColors', 'showTooltip', 'toolIcon', 'tooltipText', 'value'], ['value', 'opacityValue'])(ejColorPicker) || ejColorPicker;
+  ejColorPicker = _commonCommon.generateBindables('ejColorPicker', ['buttonText', 'buttonMode', 'columns', 'cssClass', 'custom', 'displayInline', 'enabled', 'enableOpacity', 'htmlAttributes', 'modelType', 'opacityValue', 'palette', 'presetType', 'showApplyCancel', 'showClearButton', 'showPreview', 'showRecentColors', 'showSwitcher', 'showTooltip', 'toolIcon', 'tooltipText', 'value'], ['value', 'opacityValue'])(ejColorPicker) || ejColorPicker;
   ejColorPicker = _commonCommon.customAttribute(_commonCommon.constants.attributePrefix + 'color-picker')(ejColorPicker) || ejColorPicker;
   return ejColorPicker;
 })(_commonCommon.WidgetBase);

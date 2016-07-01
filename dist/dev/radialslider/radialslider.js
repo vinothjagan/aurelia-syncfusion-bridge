@@ -1,7 +1,7 @@
 System.register(['../common/common', 'ej.radialslider.min'], function (_export) {
   'use strict';
 
-  var customAttribute, inject, WidgetBase, constants, generateBindables, ejRadialSlider;
+  var customElement, inlineView, inject, WidgetBase, constants, generateBindables, ejRadialSlider;
 
   function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
@@ -9,7 +9,8 @@ System.register(['../common/common', 'ej.radialslider.min'], function (_export) 
 
   return {
     setters: [function (_commonCommon) {
-      customAttribute = _commonCommon.customAttribute;
+      customElement = _commonCommon.customElement;
+      inlineView = _commonCommon.inlineView;
       inject = _commonCommon.inject;
       WidgetBase = _commonCommon.WidgetBase;
       constants = _commonCommon.constants;
@@ -29,7 +30,8 @@ System.register(['../common/common', 'ej.radialslider.min'], function (_export) 
         var _ejRadialSlider = ejRadialSlider;
         ejRadialSlider = inject(Element)(ejRadialSlider) || ejRadialSlider;
         ejRadialSlider = generateBindables('ejRadialSlider', ['autoOpen', 'cssClass', 'enableAnimation', 'enableRoundOff', 'endAngle', 'inline', 'innerCircleImageClass', 'innerCircleImageUrl', 'radius', 'strokeWidth'])(ejRadialSlider) || ejRadialSlider;
-        ejRadialSlider = customAttribute(constants.attributePrefix + 'radial-slider')(ejRadialSlider) || ejRadialSlider;
+        ejRadialSlider = inlineView('<template><content></content></template>')(ejRadialSlider) || ejRadialSlider;
+        ejRadialSlider = customElement(constants.elementPrefix + 'radial-slider')(ejRadialSlider) || ejRadialSlider;
         return ejRadialSlider;
       })(WidgetBase);
 

@@ -43,7 +43,7 @@ System.register(['../common/common'], function (_export) {
         }], null, _instanceInitializers);
 
         var _Item = Item;
-        Item = generateBindables('items', ['imageUrl', 'text', 'enabled', 'click', 'type'])(Item) || Item;
+        Item = generateBindables('items', ['imageUrl', 'text', 'enabled', 'click', 'badge', 'type', 'sliderSettings'])(Item) || Item;
         Item = customElement(constants.elementPrefix + 'item')(Item) || Item;
         Item = inlineView('<template><content></content></template>')(Item) || Item;
         return Item;

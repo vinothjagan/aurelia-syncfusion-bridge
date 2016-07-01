@@ -31,9 +31,11 @@ declare module 'aurelia-syncfusion-bridge' {
   import 'ej.menu.min';
   import 'ej.navigationdrawer.min';
   import 'ej.editor.min';
+  import 'datavisualization/ej.diagram.min';
   import 'ej.pdfviewer.min';
   import 'ej.editor.min';
   import 'ej.pivotchart.min';
+  import 'ej.pivotgauge.min';
   import 'ej.pivotgrid.min';
   import 'ej.pivotschemadesigner.min';
   import 'ej.progressbar.min';
@@ -49,6 +51,7 @@ declare module 'aurelia-syncfusion-bridge' {
   import 'ej.schedule.min';
   import 'common/ej.scroller.min';
   import 'ej.slider.min';
+  import 'datavisualization/ej.sparkline.min';
   import 'ej.splitbutton.min';
   import 'ej.splitter.min';
   import 'ej.spreadsheet.min';
@@ -89,7 +92,9 @@ declare module 'aurelia-syncfusion-bridge' {
     ejTreeMap(): EjConfigBuilder;
     ejRangeNavigator(): EjConfigBuilder;
     ejDiagram(): EjConfigBuilder;
+    ejSparkline(): EjConfigBuilder;
     ejSymbolPalette(): EjConfigBuilder;
+    ejOverview(): EjConfigBuilder;
     ejBulletGraph(): EjConfigBuilder;
     ejCircularGauge(): EjConfigBuilder;
     ejLinearGauge(): EjConfigBuilder;
@@ -140,6 +145,7 @@ declare module 'aurelia-syncfusion-bridge' {
     ejFileExplorer(): EjConfigBuilder;
     ejPivotGrid(): EjConfigBuilder;
     ejPivotChart(): EjConfigBuilder;
+    ejPivotGauge(): EjConfigBuilder;
     ejPivotSchemaDesigner(): EjConfigBuilder;
     ejWaitingPopup(): EjConfigBuilder;
     ejReportViewer(): EjConfigBuilder;
@@ -316,6 +322,9 @@ declare module 'aurelia-syncfusion-bridge' {
   export class ejNumericTextbox extends WidgetBase {
     constructor(element: any);
   }
+  export class ejOverview extends WidgetBase {
+    constructor(element: any);
+  }
   export class ejPdfViewer extends WidgetBase {
     constructor(element: any);
   }
@@ -323,6 +332,9 @@ declare module 'aurelia-syncfusion-bridge' {
     constructor(element: any);
   }
   export class ejPivotChart extends WidgetBase {
+    constructor(element: any);
+  }
+  export class ejPivotGauge extends WidgetBase {
     constructor(element: any);
   }
   export class ejPivotGrid extends WidgetBase {
@@ -379,6 +391,9 @@ declare module 'aurelia-syncfusion-bridge' {
     constructor(element: any);
   }
   export class ejSlider extends WidgetBase {
+    constructor(element: any);
+  }
+  export class ejSparkline extends WidgetBase {
     constructor(element: any);
   }
   export class ejSplitButton extends WidgetBase {

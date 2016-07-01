@@ -28,7 +28,7 @@ System.register(['../common/common', 'ej.tooltip.min'], function (_export) {
 
         var _ejTooltip = ejTooltip;
         ejTooltip = inject(Element)(ejTooltip) || ejTooltip;
-        ejTooltip = generateBindables('ejTooltip', ['allowKeyboardNavigation', 'animation', 'associate', 'autoCloseTimeout', 'closeMode', 'collision', 'containment', 'content', 'cssClass', 'enabled', 'enableRTL', 'height', 'isBalloon', 'position', 'showRoundedCorner', 'target', 'title', 'trigger', 'width'], [], { 'enableRTL': 'enableRtl' })(ejTooltip) || ejTooltip;
+        ejTooltip = generateBindables('ejTooltip', ['allowKeyboardNavigation', 'animation', 'associate', 'autoCloseTimeout', 'closeMode', 'collision', 'containment', 'content', 'cssClass', 'enabled', 'enableRTL', 'height', 'isBalloon', 'position', 'showRoundedCorner', 'showShadow', 'target', 'title', 'trigger', 'width'], [], { 'enableRTL': 'enableRtl' })(ejTooltip) || ejTooltip;
         ejTooltip = customAttribute(constants.attributePrefix + 'tooltip')(ejTooltip) || ejTooltip;
         return ejTooltip;
       })(WidgetBase);

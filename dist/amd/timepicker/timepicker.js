@@ -20,7 +20,7 @@ define(['exports', '../common/common', 'ej.timepicker.min'], function (exports, 
 
     var _ejTimePicker = ejTimePicker;
     ejTimePicker = _commonCommon.inject(Element)(ejTimePicker) || ejTimePicker;
-    ejTimePicker = _commonCommon.generateBindables('ejTimePicker', ['cssClass', 'enableAnimation', 'enabled', 'enablePersistence', 'enableRTL', 'enableStrictMode', 'height', 'hourInterval', 'htmlAttributes', 'interval', 'locale', 'maxTime', 'minTime', 'minutesInterval', 'popupHeight', 'popupWidth', 'readOnly', 'secondsInterval', 'showPopupButton', 'showRoundedCorner', 'timeFormat', 'value', 'width'], ['value'], { 'enableRTL': 'enableRtl' })(ejTimePicker) || ejTimePicker;
+    ejTimePicker = _commonCommon.generateBindables('ejTimePicker', ['cssClass', 'enableAnimation', 'enabled', 'enablePersistence', 'enableRTL', 'enableStrictMode', 'disableTimeRanges', 'height', 'hourInterval', 'htmlAttributes', 'interval', 'locale', 'maxTime', 'minTime', 'minutesInterval', 'popupHeight', 'popupWidth', 'readOnly', 'secondsInterval', 'showPopupButton', 'showRoundedCorner', 'timeFormat', 'value', 'width'], ['value'], { 'enableRTL': 'enableRtl' })(ejTimePicker) || ejTimePicker;
     ejTimePicker = _commonCommon.customAttribute(_commonCommon.constants.attributePrefix + 'time-picker')(ejTimePicker) || ejTimePicker;
     return ejTimePicker;
   })(_commonCommon.WidgetBase);

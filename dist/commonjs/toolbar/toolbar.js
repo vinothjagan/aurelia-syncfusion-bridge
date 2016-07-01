@@ -22,7 +22,7 @@ var ejToolbar = (function (_WidgetBase) {
 
   var _ejToolbar = ejToolbar;
   ejToolbar = _commonCommon.inject(Element)(ejToolbar) || ejToolbar;
-  ejToolbar = _commonCommon.generateBindables('ejToolbar', ['cssClass', 'dataSource', 'enabled', 'enableRTL', 'enableSeparator', 'fields', 'height', 'hide', 'isResponsive', 'orientation', 'query', 'showRoundedCorner', 'width'], [], { 'enableRTL': 'enableRtl' })(ejToolbar) || ejToolbar;
+  ejToolbar = _commonCommon.generateBindables('ejToolbar', ['cssClass', 'dataSource', 'enabled', 'enableRTL', 'enableSeparator', 'fields', 'height', 'hide', 'isResponsive', 'orientation', 'query', 'showRoundedCorner', 'targetID', 'width'], [], { 'enableRTL': 'enableRtl', 'targetID': 'targetId' })(ejToolbar) || ejToolbar;
   ejToolbar = _commonCommon.customAttribute(_commonCommon.constants.attributePrefix + 'toolbar')(ejToolbar) || ejToolbar;
   return ejToolbar;
 })(_commonCommon.WidgetBase);

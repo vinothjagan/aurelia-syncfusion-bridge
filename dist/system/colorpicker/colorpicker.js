@@ -28,7 +28,7 @@ System.register(['../common/common', 'ej.colorpicker.min'], function (_export) {
 
         var _ejColorPicker = ejColorPicker;
         ejColorPicker = inject(Element)(ejColorPicker) || ejColorPicker;
-        ejColorPicker = generateBindables('ejColorPicker', ['buttonText', 'buttonMode', 'columns', 'cssClass', 'custom', 'displayInline', 'enabled', 'enableOpacity', 'htmlAttributes', 'modelType', 'opacityValue', 'palette', 'presetType', 'showApplyCancel', 'showClearButton', 'showPreview', 'showRecentColors', 'showTooltip', 'toolIcon', 'tooltipText', 'value'], ['value', 'opacityValue'])(ejColorPicker) || ejColorPicker;
+        ejColorPicker = generateBindables('ejColorPicker', ['buttonText', 'buttonMode', 'columns', 'cssClass', 'custom', 'displayInline', 'enabled', 'enableOpacity', 'htmlAttributes', 'modelType', 'opacityValue', 'palette', 'presetType', 'showApplyCancel', 'showClearButton', 'showPreview', 'showRecentColors', 'showSwitcher', 'showTooltip', 'toolIcon', 'tooltipText', 'value'], ['value', 'opacityValue'])(ejColorPicker) || ejColorPicker;
         ejColorPicker = customAttribute(constants.attributePrefix + 'color-picker')(ejColorPicker) || ejColorPicker;
         return ejColorPicker;
       })(WidgetBase);
