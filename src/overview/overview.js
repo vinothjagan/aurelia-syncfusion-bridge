@@ -3,7 +3,7 @@ import {customElement, inlineView, inject, WidgetBase, constants, generateBindab
 import 'datavisualization/ej.diagram.min';
 
 @customElement(`${constants.elementPrefix}overview`)
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejOverview', ['sourceID', 'height', 'width'], [], {'sourceID': 'sourceId'})
 @inject(Element)
 export class ejOverview extends WidgetBase {

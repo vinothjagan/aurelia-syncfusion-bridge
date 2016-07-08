@@ -3,7 +3,7 @@ import {customElement, inlineView, inject, WidgetBase, constants, generateBindab
 import 'ej.radialslider.min';
 
 @customElement(`${constants.elementPrefix}radial-slider`)
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejRadialSlider', ['autoOpen', 'cssClass', 'enableAnimation', 'enableRoundOff', 'endAngle', 'inline', 'innerCircleImageClass', 'innerCircleImageUrl', 'radius', 'strokeWidth'])
 @inject(Element)
 export class ejRadialSlider extends WidgetBase {

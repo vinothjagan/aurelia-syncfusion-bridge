@@ -1,5 +1,6 @@
 import {getEventOption} from './events';
 import {Util} from '../common/util';
+import {delayed} from '../common/decorators';
 
 let firstValue = {};
 export class WidgetBase {
@@ -12,7 +13,7 @@ export class WidgetBase {
     if (!this.ejOptions && !this.isEditor) {
       this.createTwoWays();
     }
-    this.widget = jQuery($(option.element))[this.controlName](this.allOption ).data(this.controlName);
+    this.widget = jQuery($(option.element))[this.controlName](this.allOption).data(this.controlName);
     if (this.templateProcessor) {
       this.templateProcessor.initWidgetDependancies();
     }
@@ -92,7 +93,11 @@ export class WidgetBase {
     }
   }
 
+  @delayed()
   attached() {
+    if (this.templateProcessor) {
+      this[this.childPropertyName].forEach(template => template.setTemplates());
+    }
     this.util = new Util();
     this.createWidget({ element: this.element });
   }
@@ -129,7 +134,9 @@ export class WidgetBase {
     if (this.templateProcessor) {
       this.templateProcessor.clearTempalte();
     }
-    this.widget.destroy();
+    if (this.widget) {
+      this.widget.destroy();
+    }
   }
 }
 
