@@ -30,7 +30,9 @@ System.register(['../common/common', 'datavisualization/ej.rangenavigator.min'],
         _createDecoratedClass(ejRangeNavigator, [{
           key: 'series',
           decorators: [children(constants.elementPrefix + 'range-series')],
-          initializer: null,
+          initializer: function initializer() {
+            return [];
+          },
           enumerable: true
         }], null, _instanceInitializers);
 
@@ -49,7 +51,7 @@ System.register(['../common/common', 'datavisualization/ej.rangenavigator.min'],
         var _ejRangeNavigator = ejRangeNavigator;
         ejRangeNavigator = inject(Element)(ejRangeNavigator) || ejRangeNavigator;
         ejRangeNavigator = generateBindables('ejRangeNavigator', ['allowSnapping', 'border', 'dataSource', 'enableDeferredUpdate', 'enableScrollbar', 'enableRTL', 'isResponsive', 'labelSettings', 'locale', 'navigatorStyleSettings', 'padding', 'rangePadding', 'rangeSettings', 'selectedData', 'selectedRangeSettings', 'scrollRangeSettings', 'sizeSettings', 'theme', 'tooltipSettings', 'valueAxisSettings', 'valueType', 'xName', 'yName'], [], { 'enableRTL': 'enableRtl' })(ejRangeNavigator) || ejRangeNavigator;
-        ejRangeNavigator = inlineView('<template><content></content></template>')(ejRangeNavigator) || ejRangeNavigator;
+        ejRangeNavigator = inlineView('' + constants.aureliaTemplateString)(ejRangeNavigator) || ejRangeNavigator;
         ejRangeNavigator = customElement(constants.elementPrefix + 'range-navigator')(ejRangeNavigator) || ejRangeNavigator;
         return ejRangeNavigator;
       })(WidgetBase);

@@ -30,7 +30,9 @@ System.register(['../common/common', 'datavisualization/ej.map.min'], function (
         _createDecoratedClass(ejMap, [{
           key: 'layers',
           decorators: [children(constants.elementPrefix + 'layer')],
-          initializer: null,
+          initializer: function initializer() {
+            return [];
+          },
           enumerable: true
         }], null, _instanceInitializers);
 
@@ -49,7 +51,7 @@ System.register(['../common/common', 'datavisualization/ej.map.min'], function (
         var _ejMap = ejMap;
         ejMap = inject(Element)(ejMap) || ejMap;
         ejMap = generateBindables('ejMap', ['background', 'baseMapIndex', 'centerPosition', 'enableAnimation', 'enableLayerChangeAnimation', 'enablePan', 'enableResize', 'zoomSettings', 'navigationControl', 'layers'], ['baseMapIndex', 'enablePan', 'enableResize', 'enableAnimation', 'zoomSettings.level', 'zoomSettings.minValue', 'zoomSettings.maxValue', 'zoomSettings.factor', 'zoomSettings.enableZoom', 'zoomSettings.enableZoomOnSelection', 'navigationControl.enableNavigation', 'navigationControl.orientation', 'navigationControl.absolutePosition', 'navigationControl.dockPosition'])(ejMap) || ejMap;
-        ejMap = inlineView('<template><content></content></template>')(ejMap) || ejMap;
+        ejMap = inlineView('' + constants.aureliaTemplateString)(ejMap) || ejMap;
         ejMap = customElement(constants.elementPrefix + 'map')(ejMap) || ejMap;
         return ejMap;
       })(WidgetBase);

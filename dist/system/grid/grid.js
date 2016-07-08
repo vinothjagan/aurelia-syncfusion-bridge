@@ -32,7 +32,9 @@ System.register(['../common/common', 'ej.grid.min'], function (_export) {
         _createDecoratedClass(ejGrid, [{
           key: 'columns',
           decorators: [children(constants.elementPrefix + 'column')],
-          initializer: null,
+          initializer: function initializer() {
+            return [];
+          },
           enumerable: true
         }], null, _instanceInitializers);
 
@@ -53,7 +55,7 @@ System.register(['../common/common', 'ej.grid.min'], function (_export) {
         var _ejGrid = ejGrid;
         ejGrid = inject(Element, TemplatingEngine)(ejGrid) || ejGrid;
         ejGrid = generateBindables('ejGrid', ['allowCellMerging', 'allowGrouping', 'allowKeyboardNavigation', 'allowFiltering', 'allowSorting', 'allowMultiSorting', 'allowPaging', 'allowReordering', 'allowResizeToFit', 'allowResizing', 'allowRowDragAndDrop', 'allowScrolling', 'allowSearching', 'allowSelection', 'allowTextWrap', 'allowMultipleExporting', 'commonWidth', 'gridLines', 'childGrid', 'columnLayout', 'columns', 'contextMenuSettings', 'cssClass', 'dataSource', 'detailsTemplate', 'editSettings', 'enableAltRow', 'enableAutoSaveOnSelectionChange', 'enableHeaderHover', 'enablePersistence', 'enableResponsiveRow', 'enableRowHover', 'enableRTL', 'enableTouch', 'filterSettings', 'groupSettings', 'isResponsive', 'keySettings', 'locale', 'minWidth', 'pageSettings', 'query', 'rowTemplate', 'rowDropSettings', 'searchSettings', 'selectedRecords', 'selectedRowIndex', 'selectionSettings', 'selectionType', 'scrollSettings', 'showColumnChooser', 'showStackedHeader', 'showSummary', 'sortSettings', 'stackedHeaderRows', 'summaryRows', 'textWrapSettings', 'toolbarSettings'], ['dataSource'], { 'enableRTL': 'enableRtl' })(ejGrid) || ejGrid;
-        ejGrid = inlineView('<template><content></content></template>')(ejGrid) || ejGrid;
+        ejGrid = inlineView('' + constants.aureliaTemplateString)(ejGrid) || ejGrid;
         ejGrid = customElement(constants.elementPrefix + 'grid')(ejGrid) || ejGrid;
         return ejGrid;
       })(WidgetBase);

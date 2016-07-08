@@ -20,7 +20,7 @@ define(['exports', '../common/common', 'ej.accordion.min'], function (exports, _
     var _ejAccordion = ejAccordion;
     ejAccordion = _commonCommon.inject(Element)(ejAccordion) || ejAccordion;
     ejAccordion = _commonCommon.generateBindables('ejAccordion', ['ajaxSettings', 'allowKeyboardNavigation', 'collapseSpeed', 'collapsible', 'cssClass', 'customIcon', 'disabledItems', 'enableAnimation', 'enabled', 'enabledItems', 'enableMultipleOpen', 'enablePersistence', 'enableRTL', 'events', 'expandSpeed', 'headerSize', 'height', 'heightAdjustMode', 'htmlAttributes', 'selectedItemIndex', 'selectedItems', 'showCloseButton', 'showRoundedCorner', 'width'], [], { 'enableRTL': 'enableRtl' })(ejAccordion) || ejAccordion;
-    ejAccordion = _commonCommon.inlineView('<template><content></content></template>')(ejAccordion) || ejAccordion;
+    ejAccordion = _commonCommon.inlineView('' + _commonCommon.constants.aureliaTemplateString)(ejAccordion) || ejAccordion;
     ejAccordion = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'accordion')(ejAccordion) || ejAccordion;
     return ejAccordion;
   })(_commonCommon.WidgetBase);

@@ -30,7 +30,7 @@ System.register(['../common/common', 'datavisualization/ej.digitalgauge.min'], f
         var _ejDigitalGauge = ejDigitalGauge;
         ejDigitalGauge = inject(Element)(ejDigitalGauge) || ejDigitalGauge;
         ejDigitalGauge = generateBindables('ejDigitalGauge', ['frame', 'height', 'isResponsive', 'items', 'matrixSegmentData', 'segmentData', 'themes', 'value', 'width'], ['value'])(ejDigitalGauge) || ejDigitalGauge;
-        ejDigitalGauge = inlineView('<template><content></content></template>')(ejDigitalGauge) || ejDigitalGauge;
+        ejDigitalGauge = inlineView('' + constants.aureliaTemplateString)(ejDigitalGauge) || ejDigitalGauge;
         ejDigitalGauge = customElement(constants.elementPrefix + 'digital-gauge')(ejDigitalGauge) || ejDigitalGauge;
         return ejDigitalGauge;
       })(WidgetBase);

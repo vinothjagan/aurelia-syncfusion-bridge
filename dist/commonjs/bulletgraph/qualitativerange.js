@@ -14,7 +14,7 @@ var QualitativeRange = (function () {
   var _QualitativeRange = QualitativeRange;
   QualitativeRange = _commonCommon.generateBindables('qualitativeRanges', ['rangeEnd', 'rangeOpacity', 'rangeStroke'])(QualitativeRange) || QualitativeRange;
   QualitativeRange = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'qualitative-range')(QualitativeRange) || QualitativeRange;
-  QualitativeRange = _commonCommon.inlineView('<template><content></content></template>')(QualitativeRange) || QualitativeRange;
+  QualitativeRange = _commonCommon.inlineView('' + _commonCommon.constants.aureliaTemplateString)(QualitativeRange) || QualitativeRange;
   return QualitativeRange;
 })();
 

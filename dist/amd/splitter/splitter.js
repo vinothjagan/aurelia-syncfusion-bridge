@@ -20,7 +20,7 @@ define(['exports', '../common/common', 'ej.splitter.min'], function (exports, _c
     var _ejSplitter = ejSplitter;
     ejSplitter = _commonCommon.inject(Element)(ejSplitter) || ejSplitter;
     ejSplitter = _commonCommon.generateBindables('ejSplitter', ['allowKeyboardNavigation', 'animationSpeed', 'cssClass', 'enableAnimation', 'enableRTL', 'height', 'htmlAttributes', 'isResponsive', 'orientation', 'properties', 'width'], [], { 'enableRTL': 'enableRtl' })(ejSplitter) || ejSplitter;
-    ejSplitter = _commonCommon.inlineView('<template><content></content></template>')(ejSplitter) || ejSplitter;
+    ejSplitter = _commonCommon.inlineView('' + _commonCommon.constants.aureliaTemplateString)(ejSplitter) || ejSplitter;
     ejSplitter = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'splitter')(ejSplitter) || ejSplitter;
     return ejSplitter;
   })(_commonCommon.WidgetBase);

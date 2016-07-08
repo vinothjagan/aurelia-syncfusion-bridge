@@ -23,7 +23,7 @@ var ejTile = (function (_WidgetBase) {
   var _ejTile = ejTile;
   ejTile = _commonCommon.inject(Element)(ejTile) || ejTile;
   ejTile = _commonCommon.generateBindables('ejTile', ['badge', 'caption', 'cssClass', 'enablePersistence', 'height', 'imageClass', 'imagePosition', 'imageTemplateId', 'imageUrl', 'liveTile', 'tileSize', 'width', 'showRoundedCorner', 'allowSelection', 'backgroundColor'])(ejTile) || ejTile;
-  ejTile = _commonCommon.inlineView('<template><content></content></template>')(ejTile) || ejTile;
+  ejTile = _commonCommon.inlineView('' + _commonCommon.constants.aureliaTemplateString)(ejTile) || ejTile;
   ejTile = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'tile')(ejTile) || ejTile;
   return ejTile;
 })(_commonCommon.WidgetBase);

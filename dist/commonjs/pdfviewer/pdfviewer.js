@@ -23,7 +23,7 @@ var ejPdfViewer = (function (_WidgetBase) {
   var _ejPdfViewer = ejPdfViewer;
   ejPdfViewer = _commonCommon.inject(Element)(ejPdfViewer) || ejPdfViewer;
   ejPdfViewer = _commonCommon.generateBindables('ejPdfViewer', ['locale', 'toolbarSettings', 'toolbarItems', 'serviceUrl', 'pageCount', 'currentPageNumber', 'zoomPercentage', 'pdfService'])(ejPdfViewer) || ejPdfViewer;
-  ejPdfViewer = _commonCommon.inlineView('<template><content></content></template>')(ejPdfViewer) || ejPdfViewer;
+  ejPdfViewer = _commonCommon.inlineView('' + _commonCommon.constants.aureliaTemplateString)(ejPdfViewer) || ejPdfViewer;
   ejPdfViewer = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'pdf-viewer')(ejPdfViewer) || ejPdfViewer;
   return ejPdfViewer;
 })(_commonCommon.WidgetBase);

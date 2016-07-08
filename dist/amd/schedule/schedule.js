@@ -19,7 +19,9 @@ define(['exports', '../common/common', 'ej.schedule.min'], function (exports, _c
     _createDecoratedClass(ejSchedule, [{
       key: 'resources',
       decorators: [_commonCommon.children(_commonCommon.constants.elementPrefix + 'schedule-resource')],
-      initializer: null,
+      initializer: function initializer() {
+        return [];
+      },
       enumerable: true
     }], null, _instanceInitializers);
 
@@ -38,7 +40,7 @@ define(['exports', '../common/common', 'ej.schedule.min'], function (exports, _c
     var _ejSchedule = ejSchedule;
     ejSchedule = _commonCommon.inject(Element)(ejSchedule) || ejSchedule;
     ejSchedule = _commonCommon.generateBindables('ejSchedule', ['allowDragAndDrop', 'allowKeyboardNavigation', 'appointmentSettings', 'appointmentTemplateId', 'cssClass', 'categorizeSettings', 'cellHeight', 'cellWidth', 'contextMenuSettings', 'currentDate', 'currentView', 'dateFormat', 'showAppointmentNavigator', 'enableAppointmentResize', 'enableLoadOnDemand', 'enablePersistence', 'enableRTL', 'endHour', 'group', 'height', 'workHours', 'isDST', 'isResponsive', 'locale', 'maxDate', 'minDate', 'orientation', 'prioritySettings', 'readOnly', 'reminderSettings', 'renderDates', 'resourceHeaderTemplateId', 'resources', 'showAllDayRow', 'showCurrentTimeIndicator', 'showHeaderBar', 'showLocationField', 'showQuickWindow', 'startHour', 'timeMode', 'timeZone', 'timeZoneCollection', 'views', 'width', 'enableRecurrenceValidation', 'agendaViewSettings', 'firstDayOfWeek', 'workWeek', 'tooltipSettings', 'timeScale', 'showDeleteConfirmationDialog', 'allDayCellsTemplateId', 'workCellsTemplateId', 'dateHeaderTemplateId', 'showOverflowButton', 'appointmentDragArea', 'showNextPrevMonth', 'blockoutSettings'], ['currentView', 'currentDate'], { 'enableRTL': 'enableRtl' })(ejSchedule) || ejSchedule;
-    ejSchedule = _commonCommon.inlineView('<template><content></content></template>')(ejSchedule) || ejSchedule;
+    ejSchedule = _commonCommon.inlineView('' + _commonCommon.constants.aureliaTemplateString)(ejSchedule) || ejSchedule;
     ejSchedule = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'schedule')(ejSchedule) || ejSchedule;
     return ejSchedule;
   })(_commonCommon.WidgetBase);

@@ -23,7 +23,7 @@ var ejTab = (function (_WidgetBase) {
   var _ejTab = ejTab;
   ejTab = _commonCommon.inject(Element)(ejTab) || ejTab;
   ejTab = _commonCommon.generateBindables('ejTab', ['ajaxSettings', 'allowKeyboardNavigation', 'collapsible', 'cssClass', 'disabledItemIndex', 'enableAnimation', 'enabled', 'enabledItemIndex', 'enablePersistence', 'enableRTL', 'enableTabScroll', 'events', 'headerPosition', 'headerSize', 'height', 'heightAdjustMode', 'hiddenItemIndex', 'htmlAttributes', 'idPrefix', 'selectedItemIndex', 'showCloseButton', 'showReloadIcon', 'showRoundedCorner', 'width'], ['selectedItemIndex'], { 'enableRTL': 'enableRtl' })(ejTab) || ejTab;
-  ejTab = _commonCommon.inlineView('<template><content></content></template>')(ejTab) || ejTab;
+  ejTab = _commonCommon.inlineView('' + _commonCommon.constants.aureliaTemplateString)(ejTab) || ejTab;
   ejTab = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'tab')(ejTab) || ejTab;
   return ejTab;
 })(_commonCommon.WidgetBase);

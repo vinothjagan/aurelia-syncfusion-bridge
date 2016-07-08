@@ -30,7 +30,7 @@ System.register(['../common/common', 'datavisualization/ej.barcode.min'], functi
         var _ejBarcode = ejBarcode;
         ejBarcode = inject(Element)(ejBarcode) || ejBarcode;
         ejBarcode = generateBindables('ejBarcode', ['barcodeToTextGapHeight', 'barHeight', 'darkBarColor', 'displayText', 'enabled', 'encodeStartStopSymbol', 'lightBarColor', 'narrowBarWidth', 'quietZone', 'symbologyType', 'text', 'textColor', 'wideBarWidth', 'xDimension'])(ejBarcode) || ejBarcode;
-        ejBarcode = inlineView('<template><content></content></template>')(ejBarcode) || ejBarcode;
+        ejBarcode = inlineView('' + constants.aureliaTemplateString)(ejBarcode) || ejBarcode;
         ejBarcode = customElement(constants.elementPrefix + 'barcode')(ejBarcode) || ejBarcode;
         return ejBarcode;
       })(WidgetBase);

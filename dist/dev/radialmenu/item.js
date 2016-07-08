@@ -28,7 +28,7 @@ System.register(['../common/common'], function (_export) {
           _defineDecoratedPropertyDescriptor(this, 'template', _instanceInitializers);
         }
 
-        Item.prototype.bind = function bind() {
+        Item.prototype.setTemplates = function setTemplates() {
           if (this.template[0]) {
             var util = new Util();
             this[util.getBindablePropertyName('template')] = this.template[0].template;
@@ -38,14 +38,16 @@ System.register(['../common/common'], function (_export) {
         _createDecoratedClass(Item, [{
           key: 'template',
           decorators: [children(constants.elementPrefix + 'template')],
-          initializer: null,
+          initializer: function initializer() {
+            return [];
+          },
           enumerable: true
         }], null, _instanceInitializers);
 
         var _Item = Item;
         Item = generateBindables('items', ['imageUrl', 'text', 'enabled', 'click', 'badge', 'type', 'sliderSettings'])(Item) || Item;
         Item = customElement(constants.elementPrefix + 'item')(Item) || Item;
-        Item = inlineView('<template><content></content></template>')(Item) || Item;
+        Item = inlineView('' + constants.aureliaTemplateString)(Item) || Item;
         return Item;
       })();
 

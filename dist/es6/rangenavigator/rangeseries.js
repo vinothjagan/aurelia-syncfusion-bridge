@@ -1,6 +1,6 @@
 import {inlineView, customElement, constants, generateBindables} from '../common/common';
 
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @customElement(`${constants.elementPrefix}range-series`)
 @generateBindables('series', [])
 

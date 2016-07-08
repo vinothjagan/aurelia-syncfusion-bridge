@@ -30,7 +30,7 @@ System.register(['../common/common', 'datavisualization/ej.diagram.min'], functi
         var _ejOverview = ejOverview;
         ejOverview = inject(Element)(ejOverview) || ejOverview;
         ejOverview = generateBindables('ejOverview', ['sourceID', 'height', 'width'], [], { 'sourceID': 'sourceId' })(ejOverview) || ejOverview;
-        ejOverview = inlineView('<template><content></content></template>')(ejOverview) || ejOverview;
+        ejOverview = inlineView('' + constants.aureliaTemplateString)(ejOverview) || ejOverview;
         ejOverview = customElement(constants.elementPrefix + 'overview')(ejOverview) || ejOverview;
         return ejOverview;
       })(WidgetBase);

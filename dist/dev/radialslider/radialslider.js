@@ -30,7 +30,7 @@ System.register(['../common/common', 'ej.radialslider.min'], function (_export) 
         var _ejRadialSlider = ejRadialSlider;
         ejRadialSlider = inject(Element)(ejRadialSlider) || ejRadialSlider;
         ejRadialSlider = generateBindables('ejRadialSlider', ['autoOpen', 'cssClass', 'enableAnimation', 'enableRoundOff', 'endAngle', 'inline', 'innerCircleImageClass', 'innerCircleImageUrl', 'radius', 'strokeWidth'])(ejRadialSlider) || ejRadialSlider;
-        ejRadialSlider = inlineView('<template><content></content></template>')(ejRadialSlider) || ejRadialSlider;
+        ejRadialSlider = inlineView('' + constants.aureliaTemplateString)(ejRadialSlider) || ejRadialSlider;
         ejRadialSlider = customElement(constants.elementPrefix + 'radial-slider')(ejRadialSlider) || ejRadialSlider;
         return ejRadialSlider;
       })(WidgetBase);

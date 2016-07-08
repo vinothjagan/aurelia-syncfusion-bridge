@@ -30,7 +30,7 @@ System.register(['../common/common', 'ej.pivotgauge.min'], function (_export) {
         var _ejPivotGauge = ejPivotGauge;
         ejPivotGauge = inject(Element)(ejPivotGauge) || ejPivotGauge;
         ejPivotGauge = generateBindables('ejPivotGauge', ['backgroundColor', 'columnsCount', 'cssClass', 'customObject', 'dataSource', 'enableTooltip', 'isResponsive', 'labelFormatSettings', 'locale', 'rowsCount', 'scales', 'serviceMethodSettings', 'showHeaderLabel', 'url'])(ejPivotGauge) || ejPivotGauge;
-        ejPivotGauge = inlineView('<template><content></content></template>')(ejPivotGauge) || ejPivotGauge;
+        ejPivotGauge = inlineView('' + constants.aureliaTemplateString)(ejPivotGauge) || ejPivotGauge;
         ejPivotGauge = customElement(constants.elementPrefix + 'pivot-gauge')(ejPivotGauge) || ejPivotGauge;
         return ejPivotGauge;
       })(WidgetBase);

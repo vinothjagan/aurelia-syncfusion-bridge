@@ -3,7 +3,7 @@ import {customElement, inlineView, inject, WidgetBase, constants, generateBindab
 import 'datavisualization/ej.sparkline.min';
 
 @customElement(`${constants.elementPrefix}sparkline`)
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejSparkline', ['background', 'fill', 'stroke', 'strokeWidth', 'opacity', 'bandOpacity', 'highPointColor', 'lowPointColor', 'startPointColor', 'endPointColor', 'negativePointColor', 'startRange', 'endRange', 'enableCanvasRendering', 'dataSource', 'xName', 'yName', 'padding', 'type', 'theme', 'tooltip', 'markerSettings', 'size', 'border', 'showAxis', 'axisLine'])
 @inject(Element)
 export class ejSparkline extends WidgetBase {

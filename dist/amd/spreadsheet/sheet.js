@@ -13,7 +13,7 @@ define(['exports', '../common/common'], function (exports, _commonCommon) {
     var _Sheet = Sheet;
     Sheet = _commonCommon.generateBindables('sheets', ['colCount', 'columnWidth', 'dataSource', 'fieldAsColumnHeader', 'headerStyles', 'primaryKey', 'query', 'rangeSettings', 'rowCount', 'sheetName', 'showGridlines', 'showHeader', 'showHeadings', 'startCell'])(Sheet) || Sheet;
     Sheet = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'sheet')(Sheet) || Sheet;
-    Sheet = _commonCommon.inlineView('<template><content></content></template>')(Sheet) || Sheet;
+    Sheet = _commonCommon.inlineView('' + _commonCommon.constants.aureliaTemplateString)(Sheet) || Sheet;
     return Sheet;
   })();
 

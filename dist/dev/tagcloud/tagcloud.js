@@ -30,7 +30,7 @@ System.register(['../common/common', 'ej.tagcloud.min'], function (_export) {
         var _ejTagCloud = ejTagCloud;
         ejTagCloud = inject(Element)(ejTagCloud) || ejTagCloud;
         ejTagCloud = generateBindables('ejTagCloud', ['cssClass', 'dataSource', 'enableRTL', 'fields', 'format', 'maxFontSize', 'minFontSize', 'query', 'showTitle', 'titleImage', 'titleText'], [], { 'enableRTL': 'enableRtl' })(ejTagCloud) || ejTagCloud;
-        ejTagCloud = inlineView('<template><content></content></template>')(ejTagCloud) || ejTagCloud;
+        ejTagCloud = inlineView('' + constants.aureliaTemplateString)(ejTagCloud) || ejTagCloud;
         ejTagCloud = customElement(constants.elementPrefix + 'tag-cloud')(ejTagCloud) || ejTagCloud;
         return ejTagCloud;
       })(WidgetBase);

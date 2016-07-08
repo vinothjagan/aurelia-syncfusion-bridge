@@ -30,7 +30,7 @@ System.register(['../common/common', 'ej.tab.min'], function (_export) {
         var _ejTab = ejTab;
         ejTab = inject(Element)(ejTab) || ejTab;
         ejTab = generateBindables('ejTab', ['ajaxSettings', 'allowKeyboardNavigation', 'collapsible', 'cssClass', 'disabledItemIndex', 'enableAnimation', 'enabled', 'enabledItemIndex', 'enablePersistence', 'enableRTL', 'enableTabScroll', 'events', 'headerPosition', 'headerSize', 'height', 'heightAdjustMode', 'hiddenItemIndex', 'htmlAttributes', 'idPrefix', 'selectedItemIndex', 'showCloseButton', 'showReloadIcon', 'showRoundedCorner', 'width'], ['selectedItemIndex'], { 'enableRTL': 'enableRtl' })(ejTab) || ejTab;
-        ejTab = inlineView('<template><content></content></template>')(ejTab) || ejTab;
+        ejTab = inlineView('' + constants.aureliaTemplateString)(ejTab) || ejTab;
         ejTab = customElement(constants.elementPrefix + 'tab')(ejTab) || ejTab;
         return ejTab;
       })(WidgetBase);

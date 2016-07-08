@@ -20,7 +20,7 @@ define(['exports', '../common/common', 'ej.listview.min'], function (exports, _c
     var _ejListView = ejListView;
     ejListView = _commonCommon.inject(Element)(ejListView) || ejListView;
     ejListView = _commonCommon.generateBindables('ejListView', ['cssClass', 'dataSource', 'enableAjax', 'enableCache', 'enableCheckMark', 'enableFiltering', 'enableGroupList', 'enablePersistence', 'fieldSettings', 'headerBackButtonText', 'headerTitle', 'height', 'persistSelection', 'preventSelection', 'query', 'renderTemplate', 'selectedItemIndex', 'showHeader', 'templateId', 'width'], ['dataSource', 'selectedItemIndex'])(ejListView) || ejListView;
-    ejListView = _commonCommon.inlineView('<template><content></content></template>')(ejListView) || ejListView;
+    ejListView = _commonCommon.inlineView('' + _commonCommon.constants.aureliaTemplateString)(ejListView) || ejListView;
     ejListView = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'list-view')(ejListView) || ejListView;
     return ejListView;
   })(_commonCommon.WidgetBase);

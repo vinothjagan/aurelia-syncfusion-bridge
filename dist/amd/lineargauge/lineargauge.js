@@ -20,7 +20,7 @@ define(['exports', '../common/common', 'datavisualization/ej.lineargauge.min'], 
     var _ejLinearGauge = ejLinearGauge;
     ejLinearGauge = _commonCommon.inject(Element)(ejLinearGauge) || ejLinearGauge;
     ejLinearGauge = _commonCommon.generateBindables('ejLinearGauge', ['animationSpeed', 'backgroundColor', 'borderColor', 'enableAnimation', 'enableMarkerPointerAnimation', 'isResponsive', 'frame', 'height', 'labelColor', 'maximum', 'minimum', 'orientation', 'outerCustomLabelPosition', 'pointerGradient1', 'pointerGradient2', 'readOnly', 'scales', 'theme', 'tickColor', 'tooltip', 'value', 'width'], ['value', 'minimum', 'maximum'])(ejLinearGauge) || ejLinearGauge;
-    ejLinearGauge = _commonCommon.inlineView('<template><content></content></template>')(ejLinearGauge) || ejLinearGauge;
+    ejLinearGauge = _commonCommon.inlineView('' + _commonCommon.constants.aureliaTemplateString)(ejLinearGauge) || ejLinearGauge;
     ejLinearGauge = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'linear-gauge')(ejLinearGauge) || ejLinearGauge;
     return ejLinearGauge;
   })(_commonCommon.WidgetBase);

@@ -20,7 +20,7 @@ define(['exports', '../common/common', 'ej.pivotgauge.min'], function (exports, 
     var _ejPivotGauge = ejPivotGauge;
     ejPivotGauge = _commonCommon.inject(Element)(ejPivotGauge) || ejPivotGauge;
     ejPivotGauge = _commonCommon.generateBindables('ejPivotGauge', ['backgroundColor', 'columnsCount', 'cssClass', 'customObject', 'dataSource', 'enableTooltip', 'isResponsive', 'labelFormatSettings', 'locale', 'rowsCount', 'scales', 'serviceMethodSettings', 'showHeaderLabel', 'url'])(ejPivotGauge) || ejPivotGauge;
-    ejPivotGauge = _commonCommon.inlineView('<template><content></content></template>')(ejPivotGauge) || ejPivotGauge;
+    ejPivotGauge = _commonCommon.inlineView('' + _commonCommon.constants.aureliaTemplateString)(ejPivotGauge) || ejPivotGauge;
     ejPivotGauge = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'pivot-gauge')(ejPivotGauge) || ejPivotGauge;
     return ejPivotGauge;
   })(_commonCommon.WidgetBase);

@@ -30,7 +30,7 @@ System.register(['../common/common', 'datavisualization/ej.lineargauge.min'], fu
         var _ejLinearGauge = ejLinearGauge;
         ejLinearGauge = inject(Element)(ejLinearGauge) || ejLinearGauge;
         ejLinearGauge = generateBindables('ejLinearGauge', ['animationSpeed', 'backgroundColor', 'borderColor', 'enableAnimation', 'enableMarkerPointerAnimation', 'isResponsive', 'frame', 'height', 'labelColor', 'maximum', 'minimum', 'orientation', 'outerCustomLabelPosition', 'pointerGradient1', 'pointerGradient2', 'readOnly', 'scales', 'theme', 'tickColor', 'tooltip', 'value', 'width'], ['value', 'minimum', 'maximum'])(ejLinearGauge) || ejLinearGauge;
-        ejLinearGauge = inlineView('<template><content></content></template>')(ejLinearGauge) || ejLinearGauge;
+        ejLinearGauge = inlineView('' + constants.aureliaTemplateString)(ejLinearGauge) || ejLinearGauge;
         ejLinearGauge = customElement(constants.elementPrefix + 'linear-gauge')(ejLinearGauge) || ejLinearGauge;
         return ejLinearGauge;
       })(WidgetBase);

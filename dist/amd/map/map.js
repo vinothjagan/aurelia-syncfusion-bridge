@@ -19,7 +19,9 @@ define(['exports', '../common/common', 'datavisualization/ej.map.min'], function
     _createDecoratedClass(ejMap, [{
       key: 'layers',
       decorators: [_commonCommon.children(_commonCommon.constants.elementPrefix + 'layer')],
-      initializer: null,
+      initializer: function initializer() {
+        return [];
+      },
       enumerable: true
     }], null, _instanceInitializers);
 
@@ -38,7 +40,7 @@ define(['exports', '../common/common', 'datavisualization/ej.map.min'], function
     var _ejMap = ejMap;
     ejMap = _commonCommon.inject(Element)(ejMap) || ejMap;
     ejMap = _commonCommon.generateBindables('ejMap', ['background', 'baseMapIndex', 'centerPosition', 'enableAnimation', 'enableLayerChangeAnimation', 'enablePan', 'enableResize', 'zoomSettings', 'navigationControl', 'layers'], ['baseMapIndex', 'enablePan', 'enableResize', 'enableAnimation', 'zoomSettings.level', 'zoomSettings.minValue', 'zoomSettings.maxValue', 'zoomSettings.factor', 'zoomSettings.enableZoom', 'zoomSettings.enableZoomOnSelection', 'navigationControl.enableNavigation', 'navigationControl.orientation', 'navigationControl.absolutePosition', 'navigationControl.dockPosition'])(ejMap) || ejMap;
-    ejMap = _commonCommon.inlineView('<template><content></content></template>')(ejMap) || ejMap;
+    ejMap = _commonCommon.inlineView('' + _commonCommon.constants.aureliaTemplateString)(ejMap) || ejMap;
     ejMap = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'map')(ejMap) || ejMap;
     return ejMap;
   })(_commonCommon.WidgetBase);

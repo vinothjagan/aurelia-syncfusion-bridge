@@ -23,7 +23,7 @@ var ejDiagram = (function (_WidgetBase) {
   var _ejDiagram = ejDiagram;
   ejDiagram = _commonCommon.inject(Element)(ejDiagram) || ejDiagram;
   ejDiagram = _commonCommon.generateBindables('ejDiagram', ['backgroundColor', 'backgroundImage', 'bridgeDirection', 'commandManager', 'connectors', 'connectorTemplate', 'constraints', 'contextMenu', 'dataSourceSettings', 'defaultSettings', 'drawType', 'enableAutoScroll', 'enableContextMenu', 'height', 'historyManager', 'layout', 'locale', 'nodes', 'nodeTemplate', 'pageSettings', 'scrollSettings', 'selectedItems', 'showTooltip', 'snapSettings', 'tool', 'tooltip', 'width', 'zoomFactor'])(ejDiagram) || ejDiagram;
-  ejDiagram = _commonCommon.inlineView('<template><content></content></template>')(ejDiagram) || ejDiagram;
+  ejDiagram = _commonCommon.inlineView('' + _commonCommon.constants.aureliaTemplateString)(ejDiagram) || ejDiagram;
   ejDiagram = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'diagram')(ejDiagram) || ejDiagram;
   return ejDiagram;
 })(_commonCommon.WidgetBase);

@@ -9,7 +9,8 @@ System.register([], function (_export) {
         eventPrefix: 'e-on-',
         bindablePrefix: 'e-',
         attributePrefix: 'ej-',
-        elementPrefix: 'ej-'
+        elementPrefix: 'ej-',
+        aureliaTemplateString: '<template><slot></slot></template>'
       };
 
       _export('constants', constants);

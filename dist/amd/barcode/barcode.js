@@ -20,7 +20,7 @@ define(['exports', '../common/common', 'datavisualization/ej.barcode.min'], func
     var _ejBarcode = ejBarcode;
     ejBarcode = _commonCommon.inject(Element)(ejBarcode) || ejBarcode;
     ejBarcode = _commonCommon.generateBindables('ejBarcode', ['barcodeToTextGapHeight', 'barHeight', 'darkBarColor', 'displayText', 'enabled', 'encodeStartStopSymbol', 'lightBarColor', 'narrowBarWidth', 'quietZone', 'symbologyType', 'text', 'textColor', 'wideBarWidth', 'xDimension'])(ejBarcode) || ejBarcode;
-    ejBarcode = _commonCommon.inlineView('<template><content></content></template>')(ejBarcode) || ejBarcode;
+    ejBarcode = _commonCommon.inlineView('' + _commonCommon.constants.aureliaTemplateString)(ejBarcode) || ejBarcode;
     ejBarcode = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'barcode')(ejBarcode) || ejBarcode;
     return ejBarcode;
   })(_commonCommon.WidgetBase);

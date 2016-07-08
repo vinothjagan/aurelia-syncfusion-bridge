@@ -21,7 +21,7 @@ System.register(['../common/common'], function (_export) {
         var _ScheduleResource = ScheduleResource;
         ScheduleResource = generateBindables('resources', ['field', 'title', 'name', 'allowMultiple', 'resourceSettings'])(ScheduleResource) || ScheduleResource;
         ScheduleResource = customElement(constants.elementPrefix + 'schedule-resource')(ScheduleResource) || ScheduleResource;
-        ScheduleResource = inlineView('<template><content></content></template>')(ScheduleResource) || ScheduleResource;
+        ScheduleResource = inlineView('' + constants.aureliaTemplateString)(ScheduleResource) || ScheduleResource;
         return ScheduleResource;
       })();
 

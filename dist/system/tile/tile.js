@@ -30,7 +30,7 @@ System.register(['../common/common', 'ej.tile.min'], function (_export) {
         var _ejTile = ejTile;
         ejTile = inject(Element)(ejTile) || ejTile;
         ejTile = generateBindables('ejTile', ['badge', 'caption', 'cssClass', 'enablePersistence', 'height', 'imageClass', 'imagePosition', 'imageTemplateId', 'imageUrl', 'liveTile', 'tileSize', 'width', 'showRoundedCorner', 'allowSelection', 'backgroundColor'])(ejTile) || ejTile;
-        ejTile = inlineView('<template><content></content></template>')(ejTile) || ejTile;
+        ejTile = inlineView('' + constants.aureliaTemplateString)(ejTile) || ejTile;
         ejTile = customElement(constants.elementPrefix + 'tile')(ejTile) || ejTile;
         return ejTile;
       })(WidgetBase);

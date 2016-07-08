@@ -20,7 +20,7 @@ define(['exports', '../common/common', 'datavisualization/ej.circulargauge.min']
     var _ejCircularGauge = ejCircularGauge;
     ejCircularGauge = _commonCommon.inject(Element)(ejCircularGauge) || ejCircularGauge;
     ejCircularGauge = _commonCommon.generateBindables('ejCircularGauge', ['animationSpeed', 'backgroundColor', 'distanceFromCorner', 'enableAnimation', 'frame', 'gaugePosition', 'height', 'interiorGradient', 'isRadialGradient', 'isResponsive', 'maximum', 'minimum', 'outerCustomLabelPosition', 'radius', 'readOnly', 'scales', 'theme', 'tooltip', 'value', 'width'], ['value', 'minimum', 'maximum'])(ejCircularGauge) || ejCircularGauge;
-    ejCircularGauge = _commonCommon.inlineView('<template><content></content></template>')(ejCircularGauge) || ejCircularGauge;
+    ejCircularGauge = _commonCommon.inlineView('' + _commonCommon.constants.aureliaTemplateString)(ejCircularGauge) || ejCircularGauge;
     ejCircularGauge = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'circular-gauge')(ejCircularGauge) || ejCircularGauge;
     return ejCircularGauge;
   })(_commonCommon.WidgetBase);

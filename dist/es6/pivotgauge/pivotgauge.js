@@ -3,7 +3,7 @@ import {customElement, inlineView, inject, WidgetBase, constants, generateBindab
 import 'ej.pivotgauge.min';
 
 @customElement(`${constants.elementPrefix}pivot-gauge`)
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejPivotGauge', ['backgroundColor', 'columnsCount', 'cssClass', 'customObject', 'dataSource', 'enableTooltip', 'isResponsive', 'labelFormatSettings', 'locale', 'rowsCount', 'scales', 'serviceMethodSettings', 'showHeaderLabel', 'url'])
 @inject(Element)
 export class ejPivotGauge extends WidgetBase {

@@ -30,7 +30,7 @@ System.register(['../common/common', 'ej.uploadbox.min'], function (_export) {
         var _ejUploadbox = ejUploadbox;
         ejUploadbox = inject(Element)(ejUploadbox) || ejUploadbox;
         ejUploadbox = generateBindables('ejUploadbox', ['allowDragAndDrop', 'asyncUpload', 'autoUpload', 'buttonText', 'cssClass', 'customFileDetails', 'dialogAction', 'dialogPosition', 'dialogText', 'dropAreaText', 'dropAreaHeight', 'dropAreaWidth', 'enabled', 'enableRTL', 'extensionsAllow', 'extensionsDeny', 'fileSize', 'height', 'locale', 'multipleFilesSelection', 'pushFile', 'removeUrl', 'saveUrl', 'showBrowseButton', 'showFileDetails', 'uploadName', 'width'], [], { 'enableRTL': 'enableRtl' })(ejUploadbox) || ejUploadbox;
-        ejUploadbox = inlineView('<template><content></content></template>')(ejUploadbox) || ejUploadbox;
+        ejUploadbox = inlineView('' + constants.aureliaTemplateString)(ejUploadbox) || ejUploadbox;
         ejUploadbox = customElement(constants.elementPrefix + 'uploadbox')(ejUploadbox) || ejUploadbox;
         return ejUploadbox;
       })(WidgetBase);

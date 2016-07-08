@@ -18,7 +18,7 @@ define(['exports', '../common/common'], function (exports, _commonCommon) {
       _defineDecoratedPropertyDescriptor(this, 'template', _instanceInitializers);
     }
 
-    Column.prototype.bind = function bind() {
+    Column.prototype.setTemplates = function setTemplates() {
       if (this.template[0]) {
         var util = new _commonCommon.Util();
         this[util.getBindablePropertyName('template')] = this.template[0].template;
@@ -28,14 +28,16 @@ define(['exports', '../common/common'], function (exports, _commonCommon) {
     _createDecoratedClass(Column, [{
       key: 'template',
       decorators: [_commonCommon.children(_commonCommon.constants.elementPrefix + 'template')],
-      initializer: null,
+      initializer: function initializer() {
+        return [];
+      },
       enumerable: true
     }], null, _instanceInitializers);
 
     var _Column = Column;
     Column = _commonCommon.generateBindables('columns', ['clipMode', 'allowEditing', 'allowFiltering', 'allowGrouping', 'allowSorting', 'allowResizing', 'commands', 'cssClass', 'customAttributes', 'dataSource', 'defaultValue', 'disableHtmlEncode', 'displayAsCheckBox', 'editParams', 'editTemplate', 'editType', 'field', 'foreignKeyField', 'foreignKeyValue', 'format', 'headerTemplateID', 'headerText', 'headerTextAlign', 'isFrozen', 'isIdentity', 'isPrimaryKey', 'showInColumnChooser', 'template', 'textAlign', 'tooltip', 'type', 'validationRules', 'visible', 'width'])(Column) || Column;
     Column = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'column')(Column) || Column;
-    Column = _commonCommon.inlineView('<template><content></content></template>')(Column) || Column;
+    Column = _commonCommon.inlineView('' + _commonCommon.constants.aureliaTemplateString)(Column) || Column;
     return Column;
   })();
 

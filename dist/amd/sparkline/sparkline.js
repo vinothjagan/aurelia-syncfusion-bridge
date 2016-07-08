@@ -20,7 +20,7 @@ define(['exports', '../common/common', 'datavisualization/ej.sparkline.min'], fu
     var _ejSparkline = ejSparkline;
     ejSparkline = _commonCommon.inject(Element)(ejSparkline) || ejSparkline;
     ejSparkline = _commonCommon.generateBindables('ejSparkline', ['background', 'fill', 'stroke', 'strokeWidth', 'opacity', 'bandOpacity', 'highPointColor', 'lowPointColor', 'startPointColor', 'endPointColor', 'negativePointColor', 'startRange', 'endRange', 'enableCanvasRendering', 'dataSource', 'xName', 'yName', 'padding', 'type', 'theme', 'tooltip', 'markerSettings', 'size', 'border', 'showAxis', 'axisLine'])(ejSparkline) || ejSparkline;
-    ejSparkline = _commonCommon.inlineView('<template><content></content></template>')(ejSparkline) || ejSparkline;
+    ejSparkline = _commonCommon.inlineView('' + _commonCommon.constants.aureliaTemplateString)(ejSparkline) || ejSparkline;
     ejSparkline = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'sparkline')(ejSparkline) || ejSparkline;
     return ejSparkline;
   })(_commonCommon.WidgetBase);

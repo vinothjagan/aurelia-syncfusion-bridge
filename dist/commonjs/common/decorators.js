@@ -2,12 +2,15 @@
 
 exports.__esModule = true;
 exports.generateBindables = generateBindables;
+exports.delayed = delayed;
 
 var _aureliaTemplating = require('aurelia-templating');
 
 var _aureliaDependencyInjection = require('aurelia-dependency-injection');
 
 var _aureliaMetadata = require('aurelia-metadata');
+
+var _aureliaTaskQueue = require('aurelia-task-queue');
 
 var _util = require('./util');
 
@@ -35,5 +38,30 @@ function generateBindables(controlName, inputs, twoWayProperties, abbrevProperti
         prop.registerWith(target, behaviorResource, descriptor);
       }
     }
+  };
+}
+
+function delayed() {
+  return function (target, key, descriptor) {
+    var taskQueue = (_aureliaDependencyInjection.Container.instance || new _aureliaDependencyInjection.Container()).get(_aureliaTaskQueue.TaskQueue);
+    var ptr = descriptor.value;
+
+    descriptor.value = function () {
+      var _this = this;
+
+      for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+        args[_key] = arguments[_key];
+      }
+
+      if (this.childPropertyName) {
+        taskQueue.queueTask(function () {
+          return ptr.apply(_this, args);
+        });
+      } else {
+        ptr.apply(this, args);
+      }
+    };
+
+    return descriptor;
   };
 }

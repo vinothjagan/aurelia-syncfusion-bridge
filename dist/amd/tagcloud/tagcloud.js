@@ -20,7 +20,7 @@ define(['exports', '../common/common', 'ej.tagcloud.min'], function (exports, _c
     var _ejTagCloud = ejTagCloud;
     ejTagCloud = _commonCommon.inject(Element)(ejTagCloud) || ejTagCloud;
     ejTagCloud = _commonCommon.generateBindables('ejTagCloud', ['cssClass', 'dataSource', 'enableRTL', 'fields', 'format', 'maxFontSize', 'minFontSize', 'query', 'showTitle', 'titleImage', 'titleText'], [], { 'enableRTL': 'enableRtl' })(ejTagCloud) || ejTagCloud;
-    ejTagCloud = _commonCommon.inlineView('<template><content></content></template>')(ejTagCloud) || ejTagCloud;
+    ejTagCloud = _commonCommon.inlineView('' + _commonCommon.constants.aureliaTemplateString)(ejTagCloud) || ejTagCloud;
     ejTagCloud = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'tag-cloud')(ejTagCloud) || ejTagCloud;
     return ejTagCloud;
   })(_commonCommon.WidgetBase);

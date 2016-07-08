@@ -21,7 +21,7 @@ System.register(['../common/common'], function (_export) {
         var _RangeSeries = RangeSeries;
         RangeSeries = generateBindables('series', [])(RangeSeries) || RangeSeries;
         RangeSeries = customElement(constants.elementPrefix + 'range-series')(RangeSeries) || RangeSeries;
-        RangeSeries = inlineView('<template><content></content></template>')(RangeSeries) || RangeSeries;
+        RangeSeries = inlineView('' + constants.aureliaTemplateString)(RangeSeries) || RangeSeries;
         return RangeSeries;
       })();
 

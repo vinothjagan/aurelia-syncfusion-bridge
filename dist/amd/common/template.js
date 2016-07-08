@@ -34,7 +34,7 @@ define(['exports', 'aurelia-dependency-injection', 'aurelia-templating', './cons
       if (html !== '') {
         instruction.template = html;
       }
-      return true;
+      element.innerHTML = '';
     })(Template) || Template;
     Template = _aureliaTemplating.noView()(Template) || Template;
     Template = _aureliaTemplating.customElement(_constants.constants.elementPrefix + 'template')(Template) || Template;

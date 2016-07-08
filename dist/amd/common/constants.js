@@ -6,7 +6,8 @@ define(['exports'], function (exports) {
     eventPrefix: 'e-on-',
     bindablePrefix: 'e-',
     attributePrefix: 'ej-',
-    elementPrefix: 'ej-'
+    elementPrefix: 'ej-',
+    aureliaTemplateString: '<template><slot></slot></template>'
   };
   exports.constants = constants;
 });

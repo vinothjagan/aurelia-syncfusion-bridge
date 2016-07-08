@@ -30,7 +30,7 @@ System.register(['../common/common', 'datavisualization/ej.sparkline.min'], func
         var _ejSparkline = ejSparkline;
         ejSparkline = inject(Element)(ejSparkline) || ejSparkline;
         ejSparkline = generateBindables('ejSparkline', ['background', 'fill', 'stroke', 'strokeWidth', 'opacity', 'bandOpacity', 'highPointColor', 'lowPointColor', 'startPointColor', 'endPointColor', 'negativePointColor', 'startRange', 'endRange', 'enableCanvasRendering', 'dataSource', 'xName', 'yName', 'padding', 'type', 'theme', 'tooltip', 'markerSettings', 'size', 'border', 'showAxis', 'axisLine'])(ejSparkline) || ejSparkline;
-        ejSparkline = inlineView('<template><content></content></template>')(ejSparkline) || ejSparkline;
+        ejSparkline = inlineView('' + constants.aureliaTemplateString)(ejSparkline) || ejSparkline;
         ejSparkline = customElement(constants.elementPrefix + 'sparkline')(ejSparkline) || ejSparkline;
         return ejSparkline;
       })(WidgetBase);

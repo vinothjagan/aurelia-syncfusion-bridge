@@ -30,7 +30,7 @@ System.register(['../common/common', 'ej.navigationdrawer.min'], function (_expo
         var _ejNavigationDrawer = ejNavigationDrawer;
         ejNavigationDrawer = inject(Element)(ejNavigationDrawer) || ejNavigationDrawer;
         ejNavigationDrawer = generateBindables('ejNavigationDrawer', ['contentId', 'cssClass', 'direction', 'enableListView', 'items', 'listViewSettings', 'position', 'targetId', 'type', 'width'])(ejNavigationDrawer) || ejNavigationDrawer;
-        ejNavigationDrawer = inlineView('<template><content></content></template>')(ejNavigationDrawer) || ejNavigationDrawer;
+        ejNavigationDrawer = inlineView('' + constants.aureliaTemplateString)(ejNavigationDrawer) || ejNavigationDrawer;
         ejNavigationDrawer = customElement(constants.elementPrefix + 'navigation-drawer')(ejNavigationDrawer) || ejNavigationDrawer;
         return ejNavigationDrawer;
       })(WidgetBase);

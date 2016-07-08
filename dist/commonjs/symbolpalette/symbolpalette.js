@@ -23,7 +23,7 @@ var ejSymbolPalette = (function (_WidgetBase) {
   var _ejSymbolPalette = ejSymbolPalette;
   ejSymbolPalette = _commonCommon.inject(Element)(ejSymbolPalette) || ejSymbolPalette;
   ejSymbolPalette = _commonCommon.generateBindables('ejSymbolPalette', ['allowDrag', 'cssClass', 'defaultSettings', 'diagramId', 'headerHeight', 'height', 'paletteItemHeight', 'paletteItemWidth', 'palettes', 'previewHeight', 'previewOffset', 'previewWidth', 'showPaletteItemText', 'width'])(ejSymbolPalette) || ejSymbolPalette;
-  ejSymbolPalette = _commonCommon.inlineView('<template><content></content></template>')(ejSymbolPalette) || ejSymbolPalette;
+  ejSymbolPalette = _commonCommon.inlineView('' + _commonCommon.constants.aureliaTemplateString)(ejSymbolPalette) || ejSymbolPalette;
   ejSymbolPalette = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'symbol-palette')(ejSymbolPalette) || ejSymbolPalette;
   return ejSymbolPalette;
 })(_commonCommon.WidgetBase);

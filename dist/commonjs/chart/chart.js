@@ -22,7 +22,9 @@ var ejChart = (function (_WidgetBase) {
   _createDecoratedClass(ejChart, [{
     key: 'series',
     decorators: [_commonCommon.children(_commonCommon.constants.elementPrefix + 'series')],
-    initializer: null,
+    initializer: function initializer() {
+      return [];
+    },
     enumerable: true
   }], null, _instanceInitializers);
 
@@ -41,7 +43,7 @@ var ejChart = (function (_WidgetBase) {
   var _ejChart = ejChart;
   ejChart = _commonCommon.inject(Element)(ejChart) || ejChart;
   ejChart = _commonCommon.generateBindables('ejChart', ['annotations', 'backGroundImageUrl', 'border', 'exportSettings', 'chartArea', 'columnDefinitions', 'commonSeriesOptions', 'crosshair', 'depth', 'enable3D', 'enableCanvasRendering', 'enableRotation', 'indicators', 'isResponsive', 'legend', 'locale', 'palette', 'Margin', 'perspectiveAngle', 'primaryXAxis', 'primaryYAxis', 'rotation', 'rowDefinitions', 'series', 'sideBySideSeriesPlacement', 'size', 'theme', 'tilt', 'title', 'wallSize', 'zooming'])(ejChart) || ejChart;
-  ejChart = _commonCommon.inlineView('<template><content></content></template>')(ejChart) || ejChart;
+  ejChart = _commonCommon.inlineView('' + _commonCommon.constants.aureliaTemplateString)(ejChart) || ejChart;
   ejChart = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'chart')(ejChart) || ejChart;
   return ejChart;
 })(_commonCommon.WidgetBase);

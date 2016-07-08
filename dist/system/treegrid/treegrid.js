@@ -32,7 +32,9 @@ System.register(['../common/common', 'ej.treegrid.min'], function (_export) {
         _createDecoratedClass(ejTreeGrid, [{
           key: 'columns',
           decorators: [children(constants.elementPrefix + 'tree-grid-column')],
-          initializer: null,
+          initializer: function initializer() {
+            return [];
+          },
           enumerable: true
         }], null, _instanceInitializers);
 
@@ -53,7 +55,7 @@ System.register(['../common/common', 'ej.treegrid.min'], function (_export) {
         var _ejTreeGrid = ejTreeGrid;
         ejTreeGrid = inject(Element, TemplatingEngine)(ejTreeGrid) || ejTreeGrid;
         ejTreeGrid = generateBindables('ejTreeGrid', ['allowColumnResize', 'allowDragAndDrop', 'allowFiltering', 'allowKeyboardNavigation', 'allowMultiSorting', 'allowSelection', 'allowSorting', 'altRowTemplateID', 'childMapping', 'columns', 'contextMenuSettings', 'dataSource', 'headerTextOverflow', 'dragTooltip', 'editSettings', 'enableAltRow', 'enableCollapseAll', 'enableResize', 'enableVirtualization', 'filterBarMode', 'idMapping', 'parentIdMapping', 'query', 'rowHeight', 'rowTemplateID', 'selectedRowIndex', 'selectionType', 'showColumnChooser', 'showGridCellTooltip', 'showGridExpandCellTooltip', 'sizeSettings', 'sortSettings', 'toolbarSettings', 'treeColumnIndex'], ['dataSource', 'selectedRowIndex'], { 'altRowTemplateID': 'altRowTemplateId', 'rowTemplateID': 'rowTemplateId' })(ejTreeGrid) || ejTreeGrid;
-        ejTreeGrid = inlineView('<template><content></content></template>')(ejTreeGrid) || ejTreeGrid;
+        ejTreeGrid = inlineView('' + constants.aureliaTemplateString)(ejTreeGrid) || ejTreeGrid;
         ejTreeGrid = customElement(constants.elementPrefix + 'tree-grid')(ejTreeGrid) || ejTreeGrid;
         return ejTreeGrid;
       })(WidgetBase);

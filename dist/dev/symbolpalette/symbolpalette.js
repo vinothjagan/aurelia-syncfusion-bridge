@@ -30,7 +30,7 @@ System.register(['../common/common', 'datavisualization/ej.diagram.min'], functi
         var _ejSymbolPalette = ejSymbolPalette;
         ejSymbolPalette = inject(Element)(ejSymbolPalette) || ejSymbolPalette;
         ejSymbolPalette = generateBindables('ejSymbolPalette', ['allowDrag', 'cssClass', 'defaultSettings', 'diagramId', 'headerHeight', 'height', 'paletteItemHeight', 'paletteItemWidth', 'palettes', 'previewHeight', 'previewOffset', 'previewWidth', 'showPaletteItemText', 'width'])(ejSymbolPalette) || ejSymbolPalette;
-        ejSymbolPalette = inlineView('<template><content></content></template>')(ejSymbolPalette) || ejSymbolPalette;
+        ejSymbolPalette = inlineView('' + constants.aureliaTemplateString)(ejSymbolPalette) || ejSymbolPalette;
         ejSymbolPalette = customElement(constants.elementPrefix + 'symbol-palette')(ejSymbolPalette) || ejSymbolPalette;
         return ejSymbolPalette;
       })(WidgetBase);

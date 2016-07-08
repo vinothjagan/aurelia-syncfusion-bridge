@@ -30,7 +30,9 @@ System.register(['../common/common', 'datavisualization/ej.treemap.min'], functi
         _createDecoratedClass(ejTreeMap, [{
           key: 'levels',
           decorators: [children(constants.elementPrefix + 'level')],
-          initializer: null,
+          initializer: function initializer() {
+            return [];
+          },
           enumerable: true
         }], null, _instanceInitializers);
 
@@ -49,7 +51,7 @@ System.register(['../common/common', 'datavisualization/ej.treemap.min'], functi
         var _ejTreeMap = ejTreeMap;
         ejTreeMap = inject(Element)(ejTreeMap) || ejTreeMap;
         ejTreeMap = generateBindables('ejTreeMap', ['borderBrush', 'borderThickness', 'uniColorMapping', 'desaturationColorMapping', 'paletteColorMapping', 'colorValuePath', 'dataSource', 'dockPosition', 'drillDownHeaderColor', 'drillDownSelectionColor', 'enableDrillDown', 'enableResize', 'groupColorMapping', 'legendSettings', 'highlightBorderBrush', 'highlightBorderThickness', 'highlightGroupBorderBrush', 'highlightGroupBorderThickness', 'highlightGroupOnSelection', 'highlightOnSelection', 'itemsLayoutMode', 'leafItemSettings', 'rangeColorMapping', 'groupSelectionMode', 'showLegend', 'showTooltip', 'tooltipTemplate', 'treeMapItems', 'levels', 'weightValuePath'], ['dataSource', 'weightValuePath'])(ejTreeMap) || ejTreeMap;
-        ejTreeMap = inlineView('<template><content></content></template>')(ejTreeMap) || ejTreeMap;
+        ejTreeMap = inlineView('' + constants.aureliaTemplateString)(ejTreeMap) || ejTreeMap;
         ejTreeMap = customElement(constants.elementPrefix + 'tree-map')(ejTreeMap) || ejTreeMap;
         return ejTreeMap;
       })(WidgetBase);

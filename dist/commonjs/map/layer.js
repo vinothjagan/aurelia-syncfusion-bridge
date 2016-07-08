@@ -14,7 +14,7 @@ var Layer = (function () {
   var _Layer = Layer;
   Layer = _commonCommon.generateBindables('layers', ['bingMapType', 'bubbleSettings', 'dataSource', 'shapeDataPath', 'shapePropertyPath', 'enableMouseHover', 'enableSelection', 'key', 'labelSettings', 'layerType', 'legendSettings', 'mapItemsTemplate', 'markers', 'markerTemplate', 'selectedMapShapes', 'selectionMode', 'shapeData', 'shapeSettings', 'showMapItems', 'showTooltip', 'tooltipTemplate', 'urlTemplate'])(Layer) || Layer;
   Layer = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'layer')(Layer) || Layer;
-  Layer = _commonCommon.inlineView('<template><content></content></template>')(Layer) || Layer;
+  Layer = _commonCommon.inlineView('' + _commonCommon.constants.aureliaTemplateString)(Layer) || Layer;
   return Layer;
 })();
 

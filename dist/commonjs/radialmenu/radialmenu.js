@@ -22,7 +22,9 @@ var ejRadialMenu = (function (_WidgetBase) {
   _createDecoratedClass(ejRadialMenu, [{
     key: 'items',
     decorators: [_commonCommon.children(_commonCommon.constants.elementPrefix + 'item')],
-    initializer: null,
+    initializer: function initializer() {
+      return [];
+    },
     enumerable: true
   }], null, _instanceInitializers);
 
@@ -43,7 +45,7 @@ var ejRadialMenu = (function (_WidgetBase) {
   var _ejRadialMenu = ejRadialMenu;
   ejRadialMenu = _commonCommon.inject(Element, _commonCommon.TemplatingEngine)(ejRadialMenu) || ejRadialMenu;
   ejRadialMenu = _commonCommon.generateBindables('ejRadialMenu', ['autoOpen', 'backImageClass', 'cssClass', 'enableAnimation', 'imageClass', 'items', 'radius', 'targetElementId', 'position'])(ejRadialMenu) || ejRadialMenu;
-  ejRadialMenu = _commonCommon.inlineView('<template><content></content></template>')(ejRadialMenu) || ejRadialMenu;
+  ejRadialMenu = _commonCommon.inlineView('' + _commonCommon.constants.aureliaTemplateString)(ejRadialMenu) || ejRadialMenu;
   ejRadialMenu = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'radial-menu')(ejRadialMenu) || ejRadialMenu;
   return ejRadialMenu;
 })(_commonCommon.WidgetBase);

@@ -3,11 +3,11 @@ import {inject, WidgetBase, constants, generateBindables, inlineView, customElem
 import 'ej.radialmenu.min';
 
 @customElement(`${constants.elementPrefix}radial-menu`)
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejRadialMenu', ['autoOpen', 'backImageClass', 'cssClass', 'enableAnimation', 'imageClass', 'items', 'radius', 'targetElementId', 'position'])
 @inject(Element, TemplatingEngine)
 export class ejRadialMenu extends WidgetBase {
-  @children(`${constants.elementPrefix}item`) items
+  @children(`${constants.elementPrefix}item`) items = [];
   constructor(element, templateEngine) {
     super();
     this.element = element;

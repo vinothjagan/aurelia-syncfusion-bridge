@@ -13,7 +13,7 @@ define(['exports', '../common/common'], function (exports, _commonCommon) {
     var _ScheduleResource = ScheduleResource;
     ScheduleResource = _commonCommon.generateBindables('resources', ['field', 'title', 'name', 'allowMultiple', 'resourceSettings'])(ScheduleResource) || ScheduleResource;
     ScheduleResource = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'schedule-resource')(ScheduleResource) || ScheduleResource;
-    ScheduleResource = _commonCommon.inlineView('<template><content></content></template>')(ScheduleResource) || ScheduleResource;
+    ScheduleResource = _commonCommon.inlineView('' + _commonCommon.constants.aureliaTemplateString)(ScheduleResource) || ScheduleResource;
     return ScheduleResource;
   })();
 

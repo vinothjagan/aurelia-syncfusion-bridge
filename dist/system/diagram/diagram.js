@@ -30,7 +30,7 @@ System.register(['../common/common', 'datavisualization/ej.diagram.min'], functi
         var _ejDiagram = ejDiagram;
         ejDiagram = inject(Element)(ejDiagram) || ejDiagram;
         ejDiagram = generateBindables('ejDiagram', ['backgroundColor', 'backgroundImage', 'bridgeDirection', 'commandManager', 'connectors', 'connectorTemplate', 'constraints', 'contextMenu', 'dataSourceSettings', 'defaultSettings', 'drawType', 'enableAutoScroll', 'enableContextMenu', 'height', 'historyManager', 'layout', 'locale', 'nodes', 'nodeTemplate', 'pageSettings', 'scrollSettings', 'selectedItems', 'showTooltip', 'snapSettings', 'tool', 'tooltip', 'width', 'zoomFactor'])(ejDiagram) || ejDiagram;
-        ejDiagram = inlineView('<template><content></content></template>')(ejDiagram) || ejDiagram;
+        ejDiagram = inlineView('' + constants.aureliaTemplateString)(ejDiagram) || ejDiagram;
         ejDiagram = customElement(constants.elementPrefix + 'diagram')(ejDiagram) || ejDiagram;
         return ejDiagram;
       })(WidgetBase);

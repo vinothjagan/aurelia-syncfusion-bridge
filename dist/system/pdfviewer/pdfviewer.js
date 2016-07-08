@@ -30,7 +30,7 @@ System.register(['../common/common', 'ej.pdfviewer.min'], function (_export) {
         var _ejPdfViewer = ejPdfViewer;
         ejPdfViewer = inject(Element)(ejPdfViewer) || ejPdfViewer;
         ejPdfViewer = generateBindables('ejPdfViewer', ['locale', 'toolbarSettings', 'toolbarItems', 'serviceUrl', 'pageCount', 'currentPageNumber', 'zoomPercentage', 'pdfService'])(ejPdfViewer) || ejPdfViewer;
-        ejPdfViewer = inlineView('<template><content></content></template>')(ejPdfViewer) || ejPdfViewer;
+        ejPdfViewer = inlineView('' + constants.aureliaTemplateString)(ejPdfViewer) || ejPdfViewer;
         ejPdfViewer = customElement(constants.elementPrefix + 'pdf-viewer')(ejPdfViewer) || ejPdfViewer;
         return ejPdfViewer;
       })(WidgetBase);

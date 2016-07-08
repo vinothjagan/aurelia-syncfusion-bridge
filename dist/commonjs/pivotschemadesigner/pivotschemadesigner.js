@@ -23,7 +23,7 @@ var ejPivotSchemaDesigner = (function (_WidgetBase) {
   var _ejPivotSchemaDesigner = ejPivotSchemaDesigner;
   ejPivotSchemaDesigner = _commonCommon.inject(Element)(ejPivotSchemaDesigner) || ejPivotSchemaDesigner;
   ejPivotSchemaDesigner = _commonCommon.generateBindables('ejPivotSchemaDesigner', ['cssClass', 'customObject', 'enableWrapper', 'filters', 'height', 'locale', 'pivotCalculations', 'pivotColumns', 'pivotControl', 'pivotRows', 'pivotTableFields', 'serviceMethod', 'url', 'width'])(ejPivotSchemaDesigner) || ejPivotSchemaDesigner;
-  ejPivotSchemaDesigner = _commonCommon.inlineView('<template><content></content></template>')(ejPivotSchemaDesigner) || ejPivotSchemaDesigner;
+  ejPivotSchemaDesigner = _commonCommon.inlineView('' + _commonCommon.constants.aureliaTemplateString)(ejPivotSchemaDesigner) || ejPivotSchemaDesigner;
   ejPivotSchemaDesigner = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'pivot-schema-designer')(ejPivotSchemaDesigner) || ejPivotSchemaDesigner;
   return ejPivotSchemaDesigner;
 })(_commonCommon.WidgetBase);

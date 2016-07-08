@@ -22,7 +22,9 @@ var ejGrid = (function (_WidgetBase) {
   _createDecoratedClass(ejGrid, [{
     key: 'columns',
     decorators: [_commonCommon.children(_commonCommon.constants.elementPrefix + 'column')],
-    initializer: null,
+    initializer: function initializer() {
+      return [];
+    },
     enumerable: true
   }], null, _instanceInitializers);
 
@@ -43,7 +45,7 @@ var ejGrid = (function (_WidgetBase) {
   var _ejGrid = ejGrid;
   ejGrid = _commonCommon.inject(Element, _commonCommon.TemplatingEngine)(ejGrid) || ejGrid;
   ejGrid = _commonCommon.generateBindables('ejGrid', ['allowCellMerging', 'allowGrouping', 'allowKeyboardNavigation', 'allowFiltering', 'allowSorting', 'allowMultiSorting', 'allowPaging', 'allowReordering', 'allowResizeToFit', 'allowResizing', 'allowRowDragAndDrop', 'allowScrolling', 'allowSearching', 'allowSelection', 'allowTextWrap', 'allowMultipleExporting', 'commonWidth', 'gridLines', 'childGrid', 'columnLayout', 'columns', 'contextMenuSettings', 'cssClass', 'dataSource', 'detailsTemplate', 'editSettings', 'enableAltRow', 'enableAutoSaveOnSelectionChange', 'enableHeaderHover', 'enablePersistence', 'enableResponsiveRow', 'enableRowHover', 'enableRTL', 'enableTouch', 'filterSettings', 'groupSettings', 'isResponsive', 'keySettings', 'locale', 'minWidth', 'pageSettings', 'query', 'rowTemplate', 'rowDropSettings', 'searchSettings', 'selectedRecords', 'selectedRowIndex', 'selectionSettings', 'selectionType', 'scrollSettings', 'showColumnChooser', 'showStackedHeader', 'showSummary', 'sortSettings', 'stackedHeaderRows', 'summaryRows', 'textWrapSettings', 'toolbarSettings'], ['dataSource'], { 'enableRTL': 'enableRtl' })(ejGrid) || ejGrid;
-  ejGrid = _commonCommon.inlineView('<template><content></content></template>')(ejGrid) || ejGrid;
+  ejGrid = _commonCommon.inlineView('' + _commonCommon.constants.aureliaTemplateString)(ejGrid) || ejGrid;
   ejGrid = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'grid')(ejGrid) || ejGrid;
   return ejGrid;
 })(_commonCommon.WidgetBase);

@@ -23,7 +23,7 @@ var ejOverview = (function (_WidgetBase) {
   var _ejOverview = ejOverview;
   ejOverview = _commonCommon.inject(Element)(ejOverview) || ejOverview;
   ejOverview = _commonCommon.generateBindables('ejOverview', ['sourceID', 'height', 'width'], [], { 'sourceID': 'sourceId' })(ejOverview) || ejOverview;
-  ejOverview = _commonCommon.inlineView('<template><content></content></template>')(ejOverview) || ejOverview;
+  ejOverview = _commonCommon.inlineView('' + _commonCommon.constants.aureliaTemplateString)(ejOverview) || ejOverview;
   ejOverview = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'overview')(ejOverview) || ejOverview;
   return ejOverview;
 })(_commonCommon.WidgetBase);

@@ -19,7 +19,9 @@ define(['exports', '../common/common', 'datavisualization/ej.treemap.min'], func
     _createDecoratedClass(ejTreeMap, [{
       key: 'levels',
       decorators: [_commonCommon.children(_commonCommon.constants.elementPrefix + 'level')],
-      initializer: null,
+      initializer: function initializer() {
+        return [];
+      },
       enumerable: true
     }], null, _instanceInitializers);
 
@@ -38,7 +40,7 @@ define(['exports', '../common/common', 'datavisualization/ej.treemap.min'], func
     var _ejTreeMap = ejTreeMap;
     ejTreeMap = _commonCommon.inject(Element)(ejTreeMap) || ejTreeMap;
     ejTreeMap = _commonCommon.generateBindables('ejTreeMap', ['borderBrush', 'borderThickness', 'uniColorMapping', 'desaturationColorMapping', 'paletteColorMapping', 'colorValuePath', 'dataSource', 'dockPosition', 'drillDownHeaderColor', 'drillDownSelectionColor', 'enableDrillDown', 'enableResize', 'groupColorMapping', 'legendSettings', 'highlightBorderBrush', 'highlightBorderThickness', 'highlightGroupBorderBrush', 'highlightGroupBorderThickness', 'highlightGroupOnSelection', 'highlightOnSelection', 'itemsLayoutMode', 'leafItemSettings', 'rangeColorMapping', 'groupSelectionMode', 'showLegend', 'showTooltip', 'tooltipTemplate', 'treeMapItems', 'levels', 'weightValuePath'], ['dataSource', 'weightValuePath'])(ejTreeMap) || ejTreeMap;
-    ejTreeMap = _commonCommon.inlineView('<template><content></content></template>')(ejTreeMap) || ejTreeMap;
+    ejTreeMap = _commonCommon.inlineView('' + _commonCommon.constants.aureliaTemplateString)(ejTreeMap) || ejTreeMap;
     ejTreeMap = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'tree-map')(ejTreeMap) || ejTreeMap;
     return ejTreeMap;
   })(_commonCommon.WidgetBase);

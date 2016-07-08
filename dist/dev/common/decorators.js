@@ -1,9 +1,11 @@
-System.register(['aurelia-templating', 'aurelia-dependency-injection', 'aurelia-metadata', './util'], function (_export) {
+System.register(['aurelia-templating', 'aurelia-dependency-injection', 'aurelia-metadata', 'aurelia-task-queue', './util'], function (_export) {
   'use strict';
 
-  var BindableProperty, HtmlBehaviorResource, Container, metadata, Util;
+  var BindableProperty, HtmlBehaviorResource, Container, metadata, TaskQueue, Util;
 
   _export('generateBindables', generateBindables);
+
+  _export('delayed', delayed);
 
   function generateBindables(controlName, inputs, twoWayProperties, abbrevProperties) {
     return function (target, key, descriptor) {
@@ -32,6 +34,31 @@ System.register(['aurelia-templating', 'aurelia-dependency-injection', 'aurelia-
     };
   }
 
+  function delayed() {
+    return function (target, key, descriptor) {
+      var taskQueue = (Container.instance || new Container()).get(TaskQueue);
+      var ptr = descriptor.value;
+
+      descriptor.value = function () {
+        var _this = this;
+
+        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+          args[_key] = arguments[_key];
+        }
+
+        if (this.childPropertyName) {
+          taskQueue.queueTask(function () {
+            return ptr.apply(_this, args);
+          });
+        } else {
+          ptr.apply(this, args);
+        }
+      };
+
+      return descriptor;
+    };
+  }
+
   return {
     setters: [function (_aureliaTemplating) {
       BindableProperty = _aureliaTemplating.BindableProperty;
@@ -40,6 +67,8 @@ System.register(['aurelia-templating', 'aurelia-dependency-injection', 'aurelia-
       Container = _aureliaDependencyInjection.Container;
     }, function (_aureliaMetadata) {
       metadata = _aureliaMetadata.metadata;
+    }, function (_aureliaTaskQueue) {
+      TaskQueue = _aureliaTaskQueue.TaskQueue;
     }, function (_util) {
       Util = _util.Util;
     }],

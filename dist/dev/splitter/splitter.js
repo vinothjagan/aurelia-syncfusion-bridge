@@ -30,7 +30,7 @@ System.register(['../common/common', 'ej.splitter.min'], function (_export) {
         var _ejSplitter = ejSplitter;
         ejSplitter = inject(Element)(ejSplitter) || ejSplitter;
         ejSplitter = generateBindables('ejSplitter', ['allowKeyboardNavigation', 'animationSpeed', 'cssClass', 'enableAnimation', 'enableRTL', 'height', 'htmlAttributes', 'isResponsive', 'orientation', 'properties', 'width'], [], { 'enableRTL': 'enableRtl' })(ejSplitter) || ejSplitter;
-        ejSplitter = inlineView('<template><content></content></template>')(ejSplitter) || ejSplitter;
+        ejSplitter = inlineView('' + constants.aureliaTemplateString)(ejSplitter) || ejSplitter;
         ejSplitter = customElement(constants.elementPrefix + 'splitter')(ejSplitter) || ejSplitter;
         return ejSplitter;
       })(WidgetBase);

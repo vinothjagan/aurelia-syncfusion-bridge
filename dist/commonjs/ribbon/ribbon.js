@@ -23,7 +23,7 @@ var ejRibbon = (function (_WidgetBase) {
   var _ejRibbon = ejRibbon;
   ejRibbon = _commonCommon.inject(Element)(ejRibbon) || ejRibbon;
   ejRibbon = _commonCommon.generateBindables('ejRibbon', ['allowResizing', 'buttonDefaults', 'showQAT', 'collapsePinSettings', 'expandPinSettings', 'applicationTab', 'contextualTabs', 'disabledItemIndex', 'enabledItemIndex', 'selectedItemIndex', 'tabs', 'locale', 'width'])(ejRibbon) || ejRibbon;
-  ejRibbon = _commonCommon.inlineView('<template><content></content></template>')(ejRibbon) || ejRibbon;
+  ejRibbon = _commonCommon.inlineView('' + _commonCommon.constants.aureliaTemplateString)(ejRibbon) || ejRibbon;
   ejRibbon = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'ribbon')(ejRibbon) || ejRibbon;
   return ejRibbon;
 })(_commonCommon.WidgetBase);

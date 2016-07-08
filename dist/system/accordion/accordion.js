@@ -30,7 +30,7 @@ System.register(['../common/common', 'ej.accordion.min'], function (_export) {
         var _ejAccordion = ejAccordion;
         ejAccordion = inject(Element)(ejAccordion) || ejAccordion;
         ejAccordion = generateBindables('ejAccordion', ['ajaxSettings', 'allowKeyboardNavigation', 'collapseSpeed', 'collapsible', 'cssClass', 'customIcon', 'disabledItems', 'enableAnimation', 'enabled', 'enabledItems', 'enableMultipleOpen', 'enablePersistence', 'enableRTL', 'events', 'expandSpeed', 'headerSize', 'height', 'heightAdjustMode', 'htmlAttributes', 'selectedItemIndex', 'selectedItems', 'showCloseButton', 'showRoundedCorner', 'width'], [], { 'enableRTL': 'enableRtl' })(ejAccordion) || ejAccordion;
-        ejAccordion = inlineView('<template><content></content></template>')(ejAccordion) || ejAccordion;
+        ejAccordion = inlineView('' + constants.aureliaTemplateString)(ejAccordion) || ejAccordion;
         ejAccordion = customElement(constants.elementPrefix + 'accordion')(ejAccordion) || ejAccordion;
         return ejAccordion;
       })(WidgetBase);

@@ -20,7 +20,7 @@ define(['exports', '../common/common', 'ej.dialog.min'], function (exports, _com
     var _ejDialog = ejDialog;
     ejDialog = _commonCommon.inject(Element)(ejDialog) || ejDialog;
     ejDialog = _commonCommon.generateBindables('ejDialog', ['actionButtons', 'allowDraggable', 'allowKeyboardNavigation', 'animation', 'closeOnEscape', 'containment', 'contentType', 'contentUrl', 'cssClass', 'enableAnimation', 'enabled', 'enableModal', 'enablePersistence', 'enableResize', 'enableRTL', 'faviconCSS', 'height', 'isResponsive', 'locale', 'maxHeight', 'maxWidth', 'minHeight', 'minWidth', 'position', 'showHeader', 'showOnInit', 'showRoundedCorner', 'target', 'title', 'tooltip', 'width', 'zIndex'], [], { 'enableRTL': 'enableRtl' })(ejDialog) || ejDialog;
-    ejDialog = _commonCommon.inlineView('<template><content></content></template>')(ejDialog) || ejDialog;
+    ejDialog = _commonCommon.inlineView('' + _commonCommon.constants.aureliaTemplateString)(ejDialog) || ejDialog;
     ejDialog = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'dialog')(ejDialog) || ejDialog;
     return ejDialog;
   })(_commonCommon.WidgetBase);

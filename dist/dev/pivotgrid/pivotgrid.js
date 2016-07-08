@@ -30,7 +30,7 @@ System.register(['../common/common', 'ej.pivotgrid.min'], function (_export) {
         var _ejPivotGrid = ejPivotGrid;
         ejPivotGrid = inject(Element)(ejPivotGrid) || ejPivotGrid;
         ejPivotGrid = generateBindables('ejPivotGrid', ['analysisMode', 'cssClass', 'currentReport', 'dataSource', 'drilledItems', 'customObject', 'enableCellContext', 'enableCellSelection', 'enableCollapseByDefault', 'enableColumnGrandTotal', 'enableConditionalFormatting', 'enableDeferUpdate', 'enableGroupingBar', 'enableGrandTotal', 'enableJSONRendering', 'enablePivotFieldList', 'enableRowGrandTotal', 'enableRTL', 'enableToolTip', 'enableVirtualScrolling', 'hyperlinkSettings', 'isNamedSets', 'isResponsive', 'jsonRecords', 'layout', 'locale', 'operationalMode', 'serviceMethodSettings', 'url'], [], { 'enableRTL': 'enableRtl' })(ejPivotGrid) || ejPivotGrid;
-        ejPivotGrid = inlineView('<template><content></content></template>')(ejPivotGrid) || ejPivotGrid;
+        ejPivotGrid = inlineView('' + constants.aureliaTemplateString)(ejPivotGrid) || ejPivotGrid;
         ejPivotGrid = customElement(constants.elementPrefix + 'pivot-grid')(ejPivotGrid) || ejPivotGrid;
         return ejPivotGrid;
       })(WidgetBase);

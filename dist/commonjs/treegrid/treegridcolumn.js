@@ -19,7 +19,7 @@ var TreeGridColumn = (function () {
     _defineDecoratedPropertyDescriptor(this, 'template', _instanceInitializers);
   }
 
-  TreeGridColumn.prototype.bind = function bind() {
+  TreeGridColumn.prototype.setTemplates = function setTemplates() {
     if (this.template[0]) {
       var util = new _commonCommon.Util();
       this[util.getBindablePropertyName('template')] = this.template[0].template;
@@ -29,14 +29,16 @@ var TreeGridColumn = (function () {
   _createDecoratedClass(TreeGridColumn, [{
     key: 'template',
     decorators: [_commonCommon.children(_commonCommon.constants.elementPrefix + 'template')],
-    initializer: null,
+    initializer: function initializer() {
+      return [];
+    },
     enumerable: true
   }], null, _instanceInitializers);
 
   var _TreeGridColumn = TreeGridColumn;
   TreeGridColumn = _commonCommon.generateBindables('columns', ['allowFiltering', 'allowSorting', 'editType', 'field', 'filterEditType', 'headerText', 'visible', 'headerTemplateID', 'isFrozen', 'allowFreezing'])(TreeGridColumn) || TreeGridColumn;
   TreeGridColumn = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'tree-grid-column')(TreeGridColumn) || TreeGridColumn;
-  TreeGridColumn = _commonCommon.inlineView('<template><content></content></template>')(TreeGridColumn) || TreeGridColumn;
+  TreeGridColumn = _commonCommon.inlineView('' + _commonCommon.constants.aureliaTemplateString)(TreeGridColumn) || TreeGridColumn;
   return TreeGridColumn;
 })();
 

@@ -20,7 +20,7 @@ define(['exports', '../common/common', 'ej.reportviewer.min'], function (exports
     var _ejReportViewer = ejReportViewer;
     ejReportViewer = _commonCommon.inject(Element)(ejReportViewer) || ejReportViewer;
     ejReportViewer = _commonCommon.generateBindables('ejReportViewer', ['dataSources', 'enablePageCache', 'exportSettings', 'isResponsive', 'locale', 'pageSettings', 'parameters', 'printMode', 'printOptions', 'processingMode', 'renderMode', 'reportPath', 'reportServerUrl', 'reportServiceUrl', 'toolbarSettings', 'zoomFactor'])(ejReportViewer) || ejReportViewer;
-    ejReportViewer = _commonCommon.inlineView('<template><content></content></template>')(ejReportViewer) || ejReportViewer;
+    ejReportViewer = _commonCommon.inlineView('' + _commonCommon.constants.aureliaTemplateString)(ejReportViewer) || ejReportViewer;
     ejReportViewer = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'report-viewer')(ejReportViewer) || ejReportViewer;
     return ejReportViewer;
   })(_commonCommon.WidgetBase);

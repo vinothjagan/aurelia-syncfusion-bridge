@@ -30,7 +30,9 @@ System.register(['../common/common', 'datavisualization/ej.chart.min'], function
         _createDecoratedClass(ejChart, [{
           key: 'series',
           decorators: [children(constants.elementPrefix + 'series')],
-          initializer: null,
+          initializer: function initializer() {
+            return [];
+          },
           enumerable: true
         }], null, _instanceInitializers);
 
@@ -49,7 +51,7 @@ System.register(['../common/common', 'datavisualization/ej.chart.min'], function
         var _ejChart = ejChart;
         ejChart = inject(Element)(ejChart) || ejChart;
         ejChart = generateBindables('ejChart', ['annotations', 'backGroundImageUrl', 'border', 'exportSettings', 'chartArea', 'columnDefinitions', 'commonSeriesOptions', 'crosshair', 'depth', 'enable3D', 'enableCanvasRendering', 'enableRotation', 'indicators', 'isResponsive', 'legend', 'locale', 'palette', 'Margin', 'perspectiveAngle', 'primaryXAxis', 'primaryYAxis', 'rotation', 'rowDefinitions', 'series', 'sideBySideSeriesPlacement', 'size', 'theme', 'tilt', 'title', 'wallSize', 'zooming'])(ejChart) || ejChart;
-        ejChart = inlineView('<template><content></content></template>')(ejChart) || ejChart;
+        ejChart = inlineView('' + constants.aureliaTemplateString)(ejChart) || ejChart;
         ejChart = customElement(constants.elementPrefix + 'chart')(ejChart) || ejChart;
         return ejChart;
       })(WidgetBase);

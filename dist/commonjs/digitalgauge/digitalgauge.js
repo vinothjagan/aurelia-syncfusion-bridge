@@ -23,7 +23,7 @@ var ejDigitalGauge = (function (_WidgetBase) {
   var _ejDigitalGauge = ejDigitalGauge;
   ejDigitalGauge = _commonCommon.inject(Element)(ejDigitalGauge) || ejDigitalGauge;
   ejDigitalGauge = _commonCommon.generateBindables('ejDigitalGauge', ['frame', 'height', 'isResponsive', 'items', 'matrixSegmentData', 'segmentData', 'themes', 'value', 'width'], ['value'])(ejDigitalGauge) || ejDigitalGauge;
-  ejDigitalGauge = _commonCommon.inlineView('<template><content></content></template>')(ejDigitalGauge) || ejDigitalGauge;
+  ejDigitalGauge = _commonCommon.inlineView('' + _commonCommon.constants.aureliaTemplateString)(ejDigitalGauge) || ejDigitalGauge;
   ejDigitalGauge = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'digital-gauge')(ejDigitalGauge) || ejDigitalGauge;
   return ejDigitalGauge;
 })(_commonCommon.WidgetBase);

@@ -22,7 +22,9 @@ var ejBulletGraph = (function (_WidgetBase) {
   _createDecoratedClass(ejBulletGraph, [{
     key: 'qualitativeRanges',
     decorators: [_commonCommon.children(_commonCommon.constants.elementPrefix + 'qualitative-range')],
-    initializer: null,
+    initializer: function initializer() {
+      return [];
+    },
     enumerable: true
   }], null, _instanceInitializers);
 
@@ -41,7 +43,7 @@ var ejBulletGraph = (function (_WidgetBase) {
   var _ejBulletGraph = ejBulletGraph;
   ejBulletGraph = _commonCommon.inject(Element)(ejBulletGraph) || ejBulletGraph;
   ejBulletGraph = _commonCommon.generateBindables('ejBulletGraph', ['applyRangeStrokeToLabels', 'applyRangeStrokeToTicks', 'captionSettings', 'comparativeMeasureValue', 'enableAnimation', 'flowDirection', 'height', 'isResponsive', 'orientation', 'qualitativeRanges', 'qualitativeRangeSize', 'quantitativeScaleLength', 'quantitativeScaleSettings', 'theme', 'tooltipSettings', 'value', 'width'])(ejBulletGraph) || ejBulletGraph;
-  ejBulletGraph = _commonCommon.inlineView('<template><content></content></template>')(ejBulletGraph) || ejBulletGraph;
+  ejBulletGraph = _commonCommon.inlineView('' + _commonCommon.constants.aureliaTemplateString)(ejBulletGraph) || ejBulletGraph;
   ejBulletGraph = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'bullet-graph')(ejBulletGraph) || ejBulletGraph;
   return ejBulletGraph;
 })(_commonCommon.WidgetBase);

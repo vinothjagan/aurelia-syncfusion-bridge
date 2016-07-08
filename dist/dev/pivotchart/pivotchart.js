@@ -30,7 +30,7 @@ System.register(['../common/common', 'ej.pivotchart.min'], function (_export) {
         var _ejPivotChart = ejPivotChart;
         ejPivotChart = inject(Element)(ejPivotChart) || ejPivotChart;
         ejPivotChart = generateBindables('ejPivotChart', ['analysisMode', 'cssClass', 'commonSeriesOptions', 'currentReport', 'dataSource', 'customObject', 'enable3D', 'isResponsive', 'legend', 'locale', 'operationalMode', 'primaryXAxis', 'primaryYAxis', 'rotation', 'serviceMethodSettings', 'size', 'url'])(ejPivotChart) || ejPivotChart;
-        ejPivotChart = inlineView('<template><content></content></template>')(ejPivotChart) || ejPivotChart;
+        ejPivotChart = inlineView('' + constants.aureliaTemplateString)(ejPivotChart) || ejPivotChart;
         ejPivotChart = customElement(constants.elementPrefix + 'pivot-chart')(ejPivotChart) || ejPivotChart;
         return ejPivotChart;
       })(WidgetBase);

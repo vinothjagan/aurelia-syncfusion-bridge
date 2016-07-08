@@ -30,7 +30,7 @@ System.register(['../common/common', 'ej.ribbon.min'], function (_export) {
         var _ejRibbon = ejRibbon;
         ejRibbon = inject(Element)(ejRibbon) || ejRibbon;
         ejRibbon = generateBindables('ejRibbon', ['allowResizing', 'buttonDefaults', 'showQAT', 'collapsePinSettings', 'expandPinSettings', 'applicationTab', 'contextualTabs', 'disabledItemIndex', 'enabledItemIndex', 'selectedItemIndex', 'tabs', 'locale', 'width'])(ejRibbon) || ejRibbon;
-        ejRibbon = inlineView('<template><content></content></template>')(ejRibbon) || ejRibbon;
+        ejRibbon = inlineView('' + constants.aureliaTemplateString)(ejRibbon) || ejRibbon;
         ejRibbon = customElement(constants.elementPrefix + 'ribbon')(ejRibbon) || ejRibbon;
         return ejRibbon;
       })(WidgetBase);

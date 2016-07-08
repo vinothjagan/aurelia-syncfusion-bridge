@@ -21,7 +21,7 @@ System.register(['../common/common'], function (_export) {
         var _Level = Level;
         Level = generateBindables('levels', ['groupBackground', 'groupBorderColor', 'groupBorderThickness', 'groupGap', 'groupPadding', 'groupPath', 'headerHeight', 'headerTemplate', 'headerVisibilityMode', 'labelPosition', 'labelTemplate', 'labelVisibilityMode', 'showHeader', 'showLabels'])(Level) || Level;
         Level = customElement(constants.elementPrefix + 'level')(Level) || Level;
-        Level = inlineView('<template><content></content></template>')(Level) || Level;
+        Level = inlineView('' + constants.aureliaTemplateString)(Level) || Level;
         return Level;
       })();
 

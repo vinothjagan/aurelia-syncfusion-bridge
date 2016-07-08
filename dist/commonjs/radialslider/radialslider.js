@@ -23,7 +23,7 @@ var ejRadialSlider = (function (_WidgetBase) {
   var _ejRadialSlider = ejRadialSlider;
   ejRadialSlider = _commonCommon.inject(Element)(ejRadialSlider) || ejRadialSlider;
   ejRadialSlider = _commonCommon.generateBindables('ejRadialSlider', ['autoOpen', 'cssClass', 'enableAnimation', 'enableRoundOff', 'endAngle', 'inline', 'innerCircleImageClass', 'innerCircleImageUrl', 'radius', 'strokeWidth'])(ejRadialSlider) || ejRadialSlider;
-  ejRadialSlider = _commonCommon.inlineView('<template><content></content></template>')(ejRadialSlider) || ejRadialSlider;
+  ejRadialSlider = _commonCommon.inlineView('' + _commonCommon.constants.aureliaTemplateString)(ejRadialSlider) || ejRadialSlider;
   ejRadialSlider = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'radial-slider')(ejRadialSlider) || ejRadialSlider;
   return ejRadialSlider;
 })(_commonCommon.WidgetBase);

@@ -1,6 +1,7 @@
 import {customAttribute,bindable,customElement,children,TemplatingEngine,inlineView,BindableProperty,HtmlBehaviorResource,noView,processContent,TargetInstruction} from 'aurelia-templating';
 import {inject,Container} from 'aurelia-dependency-injection';
 import {metadata} from 'aurelia-metadata';
+import {TaskQueue} from 'aurelia-task-queue';
 
 /**
 * Plugin configuration builder
@@ -391,7 +392,7 @@ export function configure(aurelia, configCallback?: (builder: EjConfigBuilder) =
 import 'ej.accordion.min';
 
 @customElement(`${constants.elementPrefix}accordion`)
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejAccordion', ['ajaxSettings', 'allowKeyboardNavigation', 'collapseSpeed', 'collapsible', 'cssClass', 'customIcon', 'disabledItems', 'enableAnimation', 'enabled', 'enabledItems', 'enableMultipleOpen', 'enablePersistence', 'enableRTL', 'events', 'expandSpeed', 'headerSize', 'height', 'heightAdjustMode', 'htmlAttributes', 'selectedItemIndex', 'selectedItems', 'showCloseButton', 'showRoundedCorner', 'width'], [], {'enableRTL': 'enableRtl'})
 @inject(Element)
 export class ejAccordion extends WidgetBase {
@@ -418,7 +419,7 @@ export class ejAutocomplete extends WidgetBase {
 import 'datavisualization/ej.barcode.min';
 
 @customElement(`${constants.elementPrefix}barcode`)
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejBarcode', ['barcodeToTextGapHeight', 'barHeight', 'darkBarColor', 'displayText', 'enabled', 'encodeStartStopSymbol', 'lightBarColor', 'narrowBarWidth', 'quietZone', 'symbologyType', 'text', 'textColor', 'wideBarWidth', 'xDimension'])
 @inject(Element)
 export class ejBarcode extends WidgetBase {
@@ -432,11 +433,11 @@ export class ejBarcode extends WidgetBase {
 import 'datavisualization/ej.bulletgraph.min';
 
 @customElement(`${constants.elementPrefix}bullet-graph`)
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejBulletGraph', ['applyRangeStrokeToLabels', 'applyRangeStrokeToTicks', 'captionSettings', 'comparativeMeasureValue', 'enableAnimation', 'flowDirection', 'height', 'isResponsive', 'orientation', 'qualitativeRanges', 'qualitativeRangeSize', 'quantitativeScaleLength', 'quantitativeScaleSettings', 'theme', 'tooltipSettings', 'value', 'width'])
 @inject(Element)
 export class ejBulletGraph extends WidgetBase {
-  @children(`${constants.elementPrefix}qualitative-range`) qualitativeRanges
+  @children(`${constants.elementPrefix}qualitative-range`) qualitativeRanges = [];
   constructor(element) {
     super();
     this.element = element;
@@ -446,7 +447,7 @@ export class ejBulletGraph extends WidgetBase {
 }
 
 
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @customElement(`${constants.elementPrefix}qualitative-range`)
 @generateBindables('qualitativeRanges', ['rangeEnd', 'rangeOpacity', 'rangeStroke'])
 
@@ -470,11 +471,11 @@ export class ejButton extends WidgetBase {
 import 'datavisualization/ej.chart.min';
 
 @customElement(`${constants.elementPrefix}chart`)
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejChart', ['annotations', 'backGroundImageUrl', 'border', 'exportSettings', 'chartArea', 'columnDefinitions', 'commonSeriesOptions', 'crosshair', 'depth', 'enable3D', 'enableCanvasRendering', 'enableRotation', 'indicators', 'isResponsive', 'legend', 'locale', 'palette', 'Margin', 'perspectiveAngle', 'primaryXAxis', 'primaryYAxis', 'rotation', 'rowDefinitions', 'series', 'sideBySideSeriesPlacement', 'size', 'theme', 'tilt', 'title', 'wallSize', 'zooming'])
 @inject(Element)
 export class ejChart extends WidgetBase {
-  @children(`${constants.elementPrefix}series`) series
+  @children(`${constants.elementPrefix}series`) series = [];
   constructor(element) {
     super();
     this.element = element;
@@ -484,7 +485,7 @@ export class ejChart extends WidgetBase {
 }
 
 
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @customElement(`${constants.elementPrefix}series`)
 @generateBindables('series', ['bearFillColor', 'border', 'bullFillColor', 'dashArray', 'dataSource', 'doughnutCoefficient', 'doughnutSize', 'drawType', 'enableAnimation', 'enableSmartLabels', 'endAngle', 'explode', 'explodeAll', 'explodeIndex', 'explodeOffset', 'fill', 'font', 'funnelHeight', 'funnelWidth', 'gapRatio', 'isClosed', 'isStacking', 'isTransposed', 'labelPosition', 'lineCap', 'lineJoin', 'marker', 'name', 'opacity', 'palette', 'pieCoefficient', 'emptyPointSettings', 'positiveFill', 'connectorLine', 'errorBar', 'points', 'pyramidMode', 'query', 'startAngle', 'tooltip', 'type', 'visibility', 'visibleOnLegend', 'xAxisName', 'xName', 'yAxisName', 'yName', 'high', 'low', 'open', 'close', 'size', 'trendlines', 'highlightSettings', 'selectionSettings'])
 
@@ -508,7 +509,7 @@ export class ejCheckBox extends WidgetBase {
 import 'datavisualization/ej.circulargauge.min';
 
 @customElement(`${constants.elementPrefix}circular-gauge`)
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejCircularGauge', ['animationSpeed', 'backgroundColor', 'distanceFromCorner', 'enableAnimation', 'frame', 'gaugePosition', 'height', 'interiorGradient', 'isRadialGradient', 'isResponsive', 'maximum', 'minimum', 'outerCustomLabelPosition', 'radius', 'readOnly', 'scales', 'theme', 'tooltip', 'value', 'width'], ['value', 'minimum', 'maximum'])
 @inject(Element)
 export class ejCircularGauge extends WidgetBase {
@@ -538,7 +539,8 @@ export const constants = {
   eventPrefix: 'e-on-',
   bindablePrefix: 'e-',
   attributePrefix: 'ej-',
-  elementPrefix: 'ej-'
+  elementPrefix: 'ej-',
+  aureliaTemplateString: '<template><slot></slot></template>'
 };
 
 export function generateBindables(controlName, inputs, twoWayProperties, abbrevProperties) {
@@ -565,6 +567,23 @@ export function generateBindables(controlName, inputs, twoWayProperties, abbrevP
         prop.registerWith(target, behaviorResource, descriptor);
       }
     }
+  };
+}
+
+export function delayed() {
+  return function(target, key, descriptor) {
+    let taskQueue = (Container.instance || new Container()).get(TaskQueue);
+    let ptr = descriptor.value;
+
+    descriptor.value = function(...args) {
+      if (this.childPropertyName) {
+        taskQueue.queueTask(() => ptr.apply(this, args));
+      }else {
+        ptr.apply(this, args);
+      }
+    };
+
+    return descriptor;
   };
 }
 
@@ -697,7 +716,7 @@ export class TemplateProcessor {
   if (html !== '') {
     instruction.template = html;
   }
-  return true;
+  element.innerHTML = '';
 })
 @inject(TargetInstruction)
 export class Template {
@@ -776,7 +795,7 @@ export class WidgetBase {
     if (!this.ejOptions && !this.isEditor) {
       this.createTwoWays();
     }
-    this.widget = jQuery($(option.element))[this.controlName](this.allOption ).data(this.controlName);
+    this.widget = jQuery($(option.element))[this.controlName](this.allOption).data(this.controlName);
     if (this.templateProcessor) {
       this.templateProcessor.initWidgetDependancies();
     }
@@ -856,7 +875,11 @@ export class WidgetBase {
     }
   }
 
+  @delayed()
   attached() {
+    if (this.templateProcessor) {
+      this[this.childPropertyName].forEach(template => template.setTemplates());
+    }
     this.util = new Util();
     this.createWidget({ element: this.element });
   }
@@ -893,7 +916,9 @@ export class WidgetBase {
     if (this.templateProcessor) {
       this.templateProcessor.clearTempalte();
     }
-    this.widget.destroy();
+    if (this.widget) {
+      this.widget.destroy();
+    }
   }
 }
 
@@ -943,7 +968,7 @@ export class ejDateTimePicker extends WidgetBase {
 import 'datavisualization/ej.diagram.min';
 
 @customElement(`${constants.elementPrefix}diagram`)
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejDiagram', ['backgroundColor', 'backgroundImage', 'bridgeDirection', 'commandManager', 'connectors', 'connectorTemplate', 'constraints', 'contextMenu', 'dataSourceSettings', 'defaultSettings', 'drawType', 'enableAutoScroll', 'enableContextMenu', 'height', 'historyManager', 'layout', 'locale', 'nodes', 'nodeTemplate', 'pageSettings', 'scrollSettings', 'selectedItems', 'showTooltip', 'snapSettings', 'tool', 'tooltip', 'width', 'zoomFactor'])
 @inject(Element)
 export class ejDiagram extends WidgetBase {
@@ -957,7 +982,7 @@ export class ejDiagram extends WidgetBase {
 import 'ej.dialog.min';
 
 @customElement(`${constants.elementPrefix}dialog`)
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejDialog', ['actionButtons', 'allowDraggable', 'allowKeyboardNavigation', 'animation', 'closeOnEscape', 'containment', 'contentType', 'contentUrl', 'cssClass', 'enableAnimation', 'enabled', 'enableModal', 'enablePersistence', 'enableResize', 'enableRTL', 'faviconCSS', 'height', 'isResponsive', 'locale', 'maxHeight', 'maxWidth', 'minHeight', 'minWidth', 'position', 'showHeader', 'showOnInit', 'showRoundedCorner', 'target', 'title', 'tooltip', 'width', 'zIndex'], [], {'enableRTL': 'enableRtl'})
 @inject(Element)
 export class ejDialog extends WidgetBase {
@@ -971,7 +996,7 @@ export class ejDialog extends WidgetBase {
 import 'datavisualization/ej.digitalgauge.min';
 
 @customElement(`${constants.elementPrefix}digital-gauge`)
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejDigitalGauge', ['frame', 'height', 'isResponsive', 'items', 'matrixSegmentData', 'segmentData', 'themes', 'value', 'width'], ['value'])
 @inject(Element)
 export class ejDigitalGauge extends WidgetBase {
@@ -998,7 +1023,7 @@ export class ejDropDownList extends WidgetBase {
 import 'ej.fileexplorer.min';
 
 @customElement(`${constants.elementPrefix}file-explorer`)
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejFileExplorer', ['ajaxAction', 'ajaxDataType', 'ajaxSettings', 'allowMultiSelection', 'cssClass', 'enableResize', 'enableRTL', 'fileTypes', 'filterSettings', 'gridSettings', 'height', 'isResponsive', 'layout', 'locale', 'maxHeight', 'maxWidth', 'minHeight', 'minWidth', 'path', 'selectedFolder', 'selectedItems', 'showCheckbox', 'showContextMenu', 'showFooter', 'showRoundedCorner', 'showThumbnail', 'showToolbar', 'showNavigationPane', 'tools', 'toolsList', 'uploadSettings', 'width'], [], {'enableRTL': 'enableRtl'})
 @inject(Element)
 export class ejFileExplorer extends WidgetBase {
@@ -1012,7 +1037,7 @@ export class ejFileExplorer extends WidgetBase {
 import 'ej.gantt.min';
 
 @customElement(`${constants.elementPrefix}gantt`)
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejGantt', ['addDialogFields', 'allowColumnResize', 'allowGanttChartEditing', 'allowKeyboardNavigation', 'allowMultiSorting', 'allowSelection', 'allowSorting', 'enablePredecessorValidation', 'baselineColor', 'baselineEndDateMapping', 'baselineStartDateMapping', 'childMapping', 'connectorLineBackground', 'connectorlineWidth', 'cssClass', 'dataSource', 'dateFormat', 'durationMapping', 'durationUnit', 'editDialogFields', 'splitterSettings', 'editSettings', 'enableAltRow', 'enableCollapseAll', 'enableContextMenu', 'enableProgressBarResizing', 'enableResize', 'enableTaskbarDragTooltip', 'enableTaskbarTooltip', 'enableVirtualization', 'endDateMapping', 'highlightWeekends', 'holidays', 'includeWeekend', 'locale', 'milestoneMapping', 'parentProgressbarBackground', 'parentTaskbarBackground', 'parentTaskIdMapping', 'predecessorMapping', 'progressbarBackground', 'progressbarHeight', 'progressbarTooltipTemplate', 'progressbarTooltipTemplateId', 'progressMapping', 'query', 'renderBaseline', 'resourceIdMapping', 'resourceInfoMapping', 'resourceNameMapping', 'resources', 'roundOffDayworkingTime', 'rowHeight', 'scheduleEndDate', 'scheduleHeaderSettings', 'scheduleStartDate', 'selectedItem', 'selectedRowIndex', 'showColumnChooser', 'showGridCellTooltip', 'showGridExpandCellTooltip', 'showProgressStatus', 'showResourceNames', 'showTaskNames', 'sizeSettings', 'sortSettings', 'splitterPosition', 'startDateMapping', 'stripLines', 'taskbarBackground', 'taskbarEditingTooltipTemplate', 'taskbarEditingTooltipTemplateId', 'taskbarTooltipTemplate', 'taskbarTooltipTemplateId', 'taskIdMapping', 'taskNameMapping', 'toolbarSettings', 'treeColumnIndex', 'weekendBackground', 'workingTimeScale'], ['dataSource', 'selectedRowIndex'])
 @inject(Element)
 export class ejGantt extends WidgetBase {
@@ -1023,13 +1048,13 @@ export class ejGantt extends WidgetBase {
 }
 
 
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @customElement(`${constants.elementPrefix}column`)
 @generateBindables('columns', ['clipMode', 'allowEditing', 'allowFiltering', 'allowGrouping', 'allowSorting', 'allowResizing', 'commands', 'cssClass', 'customAttributes', 'dataSource', 'defaultValue', 'disableHtmlEncode', 'displayAsCheckBox', 'editParams', 'editTemplate', 'editType', 'field', 'foreignKeyField', 'foreignKeyValue', 'format', 'headerTemplateID', 'headerText', 'headerTextAlign', 'isFrozen', 'isIdentity', 'isPrimaryKey', 'showInColumnChooser', 'template', 'textAlign', 'tooltip', 'type', 'validationRules', 'visible', 'width'])
 
 export class Column {
-  @children(`${constants.elementPrefix}template`) template
-  bind() {
+  @children(`${constants.elementPrefix}template`) template = [];
+  setTemplates() {
     if (this.template[0]) {
       let util = new Util();
       this[util.getBindablePropertyName('template')] = this.template[0].template;
@@ -1041,11 +1066,11 @@ export class Column {
 import 'ej.grid.min';
 
 @customElement(`${constants.elementPrefix}grid`)
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejGrid', ['allowCellMerging', 'allowGrouping', 'allowKeyboardNavigation', 'allowFiltering', 'allowSorting', 'allowMultiSorting', 'allowPaging', 'allowReordering', 'allowResizeToFit', 'allowResizing', 'allowRowDragAndDrop', 'allowScrolling', 'allowSearching', 'allowSelection', 'allowTextWrap', 'allowMultipleExporting', 'commonWidth', 'gridLines', 'childGrid', 'columnLayout', 'columns', 'contextMenuSettings', 'cssClass', 'dataSource', 'detailsTemplate', 'editSettings', 'enableAltRow', 'enableAutoSaveOnSelectionChange', 'enableHeaderHover', 'enablePersistence', 'enableResponsiveRow', 'enableRowHover', 'enableRTL', 'enableTouch', 'filterSettings', 'groupSettings', 'isResponsive', 'keySettings', 'locale', 'minWidth', 'pageSettings', 'query', 'rowTemplate', 'rowDropSettings', 'searchSettings', 'selectedRecords', 'selectedRowIndex', 'selectionSettings', 'selectionType', 'scrollSettings', 'showColumnChooser', 'showStackedHeader', 'showSummary', 'sortSettings', 'stackedHeaderRows', 'summaryRows', 'textWrapSettings', 'toolbarSettings'], ['dataSource'], {'enableRTL': 'enableRtl'})
 @inject(Element, TemplatingEngine)
 export class ejGrid extends WidgetBase {
-  @children(`${constants.elementPrefix}column`) columns
+  @children(`${constants.elementPrefix}column`) columns = [];
   constructor(element, templateEngine) {
     super();
     this.element = element;
@@ -1073,11 +1098,11 @@ export class ejGroupButton extends WidgetBase {
 import 'ej.kanban.min';
 
 @customElement(`${constants.elementPrefix}kanban`)
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejKanban', ['allowDragAndDrop', 'allowTitle', 'swimlaneSettings', 'allowToggleColumn', 'allowSearching', 'allowSelection', 'allowHover', 'allowKeyboardNavigation', 'allowScrolling', 'contextMenuSettings', 'columns', 'cardSettings', 'customToolbarItems', 'cssClass', 'dataSource', 'enableRTL', 'enableTotalCount', 'editSettings', 'fields', 'keyField', 'isResponsive', 'minWidth', 'filterSettings', 'query', 'keySettings', 'scrollSettings', 'searchSettings', 'selectionType', 'stackedHeaderRows', 'tooltipSettings', 'locale'], ['dataSource'], {'enableRTL': 'enableRtl'})
 @inject(Element)
 export class ejKanban extends WidgetBase {
-  @children(`${constants.elementPrefix}kanban-column`) columns
+  @children(`${constants.elementPrefix}kanban-column`) columns = [];
   constructor(element) {
     super();
     this.element = element;
@@ -1087,7 +1112,7 @@ export class ejKanban extends WidgetBase {
 }
 
 
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @customElement(`${constants.elementPrefix}kanban-column`)
 @generateBindables('columns', ['headerText', 'key', 'isCollapsed', 'constraints', 'headerTemplate', 'width', 'visible', 'showAddButton'])
 
@@ -1098,7 +1123,7 @@ export class KanbanColumn {
 import 'datavisualization/ej.lineargauge.min';
 
 @customElement(`${constants.elementPrefix}linear-gauge`)
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejLinearGauge', ['animationSpeed', 'backgroundColor', 'borderColor', 'enableAnimation', 'enableMarkerPointerAnimation', 'isResponsive', 'frame', 'height', 'labelColor', 'maximum', 'minimum', 'orientation', 'outerCustomLabelPosition', 'pointerGradient1', 'pointerGradient2', 'readOnly', 'scales', 'theme', 'tickColor', 'tooltip', 'value', 'width'], ['value', 'minimum', 'maximum'])
 @inject(Element)
 export class ejLinearGauge extends WidgetBase {
@@ -1125,7 +1150,7 @@ export class ejListBox extends WidgetBase {
 import 'ej.listview.min';
 
 @customElement(`${constants.elementPrefix}list-view`)
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejListView', ['cssClass', 'dataSource', 'enableAjax', 'enableCache', 'enableCheckMark', 'enableFiltering', 'enableGroupList', 'enablePersistence', 'fieldSettings', 'headerBackButtonText', 'headerTitle', 'height', 'persistSelection', 'preventSelection', 'query', 'renderTemplate', 'selectedItemIndex', 'showHeader', 'templateId', 'width'], ['dataSource', 'selectedItemIndex'])
 @inject(Element)
 export class ejListView extends WidgetBase {
@@ -1136,7 +1161,7 @@ export class ejListView extends WidgetBase {
 }
 
 
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @customElement(`${constants.elementPrefix}layer`)
 @generateBindables('layers', ['bingMapType', 'bubbleSettings', 'dataSource', 'shapeDataPath', 'shapePropertyPath', 'enableMouseHover', 'enableSelection', 'key', 'labelSettings', 'layerType', 'legendSettings', 'mapItemsTemplate', 'markers', 'markerTemplate', 'selectedMapShapes', 'selectionMode', 'shapeData', 'shapeSettings', 'showMapItems', 'showTooltip', 'tooltipTemplate', 'urlTemplate'])
 
@@ -1147,11 +1172,11 @@ export class Layer {
 import 'datavisualization/ej.map.min';
 
 @customElement(`${constants.elementPrefix}map`)
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejMap', ['background', 'baseMapIndex', 'centerPosition', 'enableAnimation', 'enableLayerChangeAnimation', 'enablePan', 'enableResize', 'zoomSettings', 'navigationControl', 'layers'], ['baseMapIndex', 'enablePan', 'enableResize', 'enableAnimation', 'zoomSettings.level', 'zoomSettings.minValue', 'zoomSettings.maxValue', 'zoomSettings.factor', 'zoomSettings.enableZoom', 'zoomSettings.enableZoomOnSelection', 'navigationControl.enableNavigation', 'navigationControl.orientation', 'navigationControl.absolutePosition', 'navigationControl.dockPosition'])
 @inject(Element)
 export class ejMap extends WidgetBase {
-  @children(`${constants.elementPrefix}layer`) layers
+  @children(`${constants.elementPrefix}layer`) layers = [];
   constructor(element) {
     super();
     this.element = element;
@@ -1191,7 +1216,7 @@ export class ejMenu extends WidgetBase {
 import 'ej.navigationdrawer.min';
 
 @customElement(`${constants.elementPrefix}navigation-drawer`)
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejNavigationDrawer', ['contentId', 'cssClass', 'direction', 'enableListView', 'items', 'listViewSettings', 'position', 'targetId', 'type', 'width'])
 @inject(Element)
 export class ejNavigationDrawer extends WidgetBase {
@@ -1219,7 +1244,7 @@ export class ejNumericTextbox extends WidgetBase {
 import 'datavisualization/ej.diagram.min';
 
 @customElement(`${constants.elementPrefix}overview`)
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejOverview', ['sourceID', 'height', 'width'], [], {'sourceID': 'sourceId'})
 @inject(Element)
 export class ejOverview extends WidgetBase {
@@ -1233,7 +1258,7 @@ export class ejOverview extends WidgetBase {
 import 'ej.pdfviewer.min';
 
 @customElement(`${constants.elementPrefix}pdf-viewer`)
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejPdfViewer', ['locale', 'toolbarSettings', 'toolbarItems', 'serviceUrl', 'pageCount', 'currentPageNumber', 'zoomPercentage', 'pdfService'])
 @inject(Element)
 export class ejPdfViewer extends WidgetBase {
@@ -1261,7 +1286,7 @@ export class ejPercentageTextbox extends WidgetBase {
 import 'ej.pivotchart.min';
 
 @customElement(`${constants.elementPrefix}pivot-chart`)
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejPivotChart', ['analysisMode', 'cssClass', 'commonSeriesOptions', 'currentReport', 'dataSource', 'customObject', 'enable3D', 'isResponsive', 'legend', 'locale', 'operationalMode', 'primaryXAxis', 'primaryYAxis', 'rotation', 'serviceMethodSettings', 'size', 'url'])
 @inject(Element)
 export class ejPivotChart extends WidgetBase {
@@ -1275,7 +1300,7 @@ export class ejPivotChart extends WidgetBase {
 import 'ej.pivotgauge.min';
 
 @customElement(`${constants.elementPrefix}pivot-gauge`)
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejPivotGauge', ['backgroundColor', 'columnsCount', 'cssClass', 'customObject', 'dataSource', 'enableTooltip', 'isResponsive', 'labelFormatSettings', 'locale', 'rowsCount', 'scales', 'serviceMethodSettings', 'showHeaderLabel', 'url'])
 @inject(Element)
 export class ejPivotGauge extends WidgetBase {
@@ -1289,7 +1314,7 @@ export class ejPivotGauge extends WidgetBase {
 import 'ej.pivotgrid.min';
 
 @customElement(`${constants.elementPrefix}pivot-grid`)
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejPivotGrid', ['analysisMode', 'cssClass', 'currentReport', 'dataSource', 'drilledItems', 'customObject', 'enableCellContext', 'enableCellSelection', 'enableCollapseByDefault', 'enableColumnGrandTotal', 'enableConditionalFormatting', 'enableDeferUpdate', 'enableGroupingBar', 'enableGrandTotal', 'enableJSONRendering', 'enablePivotFieldList', 'enableRowGrandTotal', 'enableRTL', 'enableToolTip', 'enableVirtualScrolling', 'hyperlinkSettings', 'isNamedSets', 'isResponsive', 'jsonRecords', 'layout', 'locale', 'operationalMode', 'serviceMethodSettings', 'url'], [], {'enableRTL': 'enableRtl'})
 @inject(Element)
 export class ejPivotGrid extends WidgetBase {
@@ -1303,7 +1328,7 @@ export class ejPivotGrid extends WidgetBase {
 import 'ej.pivotschemadesigner.min';
 
 @customElement(`${constants.elementPrefix}pivot-schema-designer`)
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejPivotSchemaDesigner', ['cssClass', 'customObject', 'enableWrapper', 'filters', 'height', 'locale', 'pivotCalculations', 'pivotColumns', 'pivotControl', 'pivotRows', 'pivotTableFields', 'serviceMethod', 'url', 'width'])
 @inject(Element)
 export class ejPivotSchemaDesigner extends WidgetBase {
@@ -1327,13 +1352,13 @@ export class ejProgressBar extends WidgetBase {
 }
 
 
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @customElement(`${constants.elementPrefix}item`)
 @generateBindables('items', ['imageUrl', 'text', 'enabled', 'click', 'badge', 'type', 'sliderSettings'])
 
 export class Item {
-  @children(`${constants.elementPrefix}template`) template
-  bind() {
+  @children(`${constants.elementPrefix}template`) template = [];
+  setTemplates() {
     if (this.template[0]) {
       let util = new Util();
       this[util.getBindablePropertyName('template')] = this.template[0].template;
@@ -1345,11 +1370,11 @@ export class Item {
 import 'ej.radialmenu.min';
 
 @customElement(`${constants.elementPrefix}radial-menu`)
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejRadialMenu', ['autoOpen', 'backImageClass', 'cssClass', 'enableAnimation', 'imageClass', 'items', 'radius', 'targetElementId', 'position'])
 @inject(Element, TemplatingEngine)
 export class ejRadialMenu extends WidgetBase {
-  @children(`${constants.elementPrefix}item`) items
+  @children(`${constants.elementPrefix}item`) items = [];
   constructor(element, templateEngine) {
     super();
     this.element = element;
@@ -1364,7 +1389,7 @@ export class ejRadialMenu extends WidgetBase {
 import 'ej.radialslider.min';
 
 @customElement(`${constants.elementPrefix}radial-slider`)
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejRadialSlider', ['autoOpen', 'cssClass', 'enableAnimation', 'enableRoundOff', 'endAngle', 'inline', 'innerCircleImageClass', 'innerCircleImageUrl', 'radius', 'strokeWidth'])
 @inject(Element)
 export class ejRadialSlider extends WidgetBase {
@@ -1391,11 +1416,11 @@ export class ejRadioButton extends WidgetBase {
 import 'datavisualization/ej.rangenavigator.min';
 
 @customElement(`${constants.elementPrefix}range-navigator`)
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejRangeNavigator', ['allowSnapping', 'border', 'dataSource', 'enableDeferredUpdate', 'enableScrollbar', 'enableRTL', 'isResponsive', 'labelSettings', 'locale', 'navigatorStyleSettings', 'padding', 'rangePadding', 'rangeSettings', 'selectedData', 'selectedRangeSettings', 'scrollRangeSettings', 'sizeSettings', 'theme', 'tooltipSettings', 'valueAxisSettings', 'valueType', 'xName', 'yName'], [], {'enableRTL': 'enableRtl'})
 @inject(Element)
 export class ejRangeNavigator extends WidgetBase {
-  @children(`${constants.elementPrefix}range-series`) series
+  @children(`${constants.elementPrefix}range-series`) series = [];
   constructor(element) {
     super();
     this.element = element;
@@ -1405,7 +1430,7 @@ export class ejRangeNavigator extends WidgetBase {
 }
 
 
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @customElement(`${constants.elementPrefix}range-series`)
 @generateBindables('series', [])
 
@@ -1429,7 +1454,7 @@ export class ejRating extends WidgetBase {
 import 'ej.reportviewer.min';
 
 @customElement(`${constants.elementPrefix}report-viewer`)
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejReportViewer', ['dataSources', 'enablePageCache', 'exportSettings', 'isResponsive', 'locale', 'pageSettings', 'parameters', 'printMode', 'printOptions', 'processingMode', 'renderMode', 'reportPath', 'reportServerUrl', 'reportServiceUrl', 'toolbarSettings', 'zoomFactor'])
 @inject(Element)
 export class ejReportViewer extends WidgetBase {
@@ -1443,7 +1468,7 @@ export class ejReportViewer extends WidgetBase {
 import 'ej.ribbon.min';
 
 @customElement(`${constants.elementPrefix}ribbon`)
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejRibbon', ['allowResizing', 'buttonDefaults', 'showQAT', 'collapsePinSettings', 'expandPinSettings', 'applicationTab', 'contextualTabs', 'disabledItemIndex', 'enabledItemIndex', 'selectedItemIndex', 'tabs', 'locale', 'width'])
 @inject(Element)
 export class ejRibbon extends WidgetBase {
@@ -1483,11 +1508,11 @@ export class ejRte extends WidgetBase {
 import 'ej.schedule.min';
 
 @customElement(`${constants.elementPrefix}schedule`)
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejSchedule', ['allowDragAndDrop', 'allowKeyboardNavigation', 'appointmentSettings', 'appointmentTemplateId', 'cssClass', 'categorizeSettings', 'cellHeight', 'cellWidth', 'contextMenuSettings', 'currentDate', 'currentView', 'dateFormat', 'showAppointmentNavigator', 'enableAppointmentResize', 'enableLoadOnDemand', 'enablePersistence', 'enableRTL', 'endHour', 'group', 'height', 'workHours', 'isDST', 'isResponsive', 'locale', 'maxDate', 'minDate', 'orientation', 'prioritySettings', 'readOnly', 'reminderSettings', 'renderDates', 'resourceHeaderTemplateId', 'resources', 'showAllDayRow', 'showCurrentTimeIndicator', 'showHeaderBar', 'showLocationField', 'showQuickWindow', 'startHour', 'timeMode', 'timeZone', 'timeZoneCollection', 'views', 'width', 'enableRecurrenceValidation', 'agendaViewSettings', 'firstDayOfWeek', 'workWeek', 'tooltipSettings', 'timeScale', 'showDeleteConfirmationDialog', 'allDayCellsTemplateId', 'workCellsTemplateId', 'dateHeaderTemplateId', 'showOverflowButton', 'appointmentDragArea', 'showNextPrevMonth', 'blockoutSettings'], ['currentView', 'currentDate'], {'enableRTL': 'enableRtl'})
 @inject(Element)
 export class ejSchedule extends WidgetBase {
-  @children(`${constants.elementPrefix}schedule-resource`) resources
+  @children(`${constants.elementPrefix}schedule-resource`) resources = [];
   constructor(element) {
     super();
     this.element = element;
@@ -1497,7 +1522,7 @@ export class ejSchedule extends WidgetBase {
 }
 
 
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @customElement(`${constants.elementPrefix}schedule-resource`)
 @generateBindables('resources', ['field', 'title', 'name', 'allowMultiple', 'resourceSettings'])
 
@@ -1534,7 +1559,7 @@ export class ejSlider extends WidgetBase {
 import 'datavisualization/ej.sparkline.min';
 
 @customElement(`${constants.elementPrefix}sparkline`)
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejSparkline', ['background', 'fill', 'stroke', 'strokeWidth', 'opacity', 'bandOpacity', 'highPointColor', 'lowPointColor', 'startPointColor', 'endPointColor', 'negativePointColor', 'startRange', 'endRange', 'enableCanvasRendering', 'dataSource', 'xName', 'yName', 'padding', 'type', 'theme', 'tooltip', 'markerSettings', 'size', 'border', 'showAxis', 'axisLine'])
 @inject(Element)
 export class ejSparkline extends WidgetBase {
@@ -1561,7 +1586,7 @@ export class ejSplitButton extends WidgetBase {
 import 'ej.splitter.min';
 
 @customElement(`${constants.elementPrefix}splitter`)
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejSplitter', ['allowKeyboardNavigation', 'animationSpeed', 'cssClass', 'enableAnimation', 'enableRTL', 'height', 'htmlAttributes', 'isResponsive', 'orientation', 'properties', 'width'], [], {'enableRTL': 'enableRtl'})
 @inject(Element)
 export class ejSplitter extends WidgetBase {
@@ -1572,7 +1597,7 @@ export class ejSplitter extends WidgetBase {
 }
 
 
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @customElement(`${constants.elementPrefix}sheet`)
 @generateBindables('sheets', ['colCount', 'columnWidth', 'dataSource', 'fieldAsColumnHeader', 'headerStyles', 'primaryKey', 'query', 'rangeSettings', 'rowCount', 'sheetName', 'showGridlines', 'showHeader', 'showHeadings', 'startCell'])
 
@@ -1583,11 +1608,11 @@ export class Sheet {
 import 'ej.spreadsheet.min';
 
 @customElement(`${constants.elementPrefix}spreadsheet`)
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejSpreadsheet', ['activeSheetIndex', 'allowAutoCellType', 'allowAutoFill', 'allowAutoSum', 'allowCellFormatting', 'allowCellType', 'allowCharts', 'allowClipboard', 'allowComments', 'allowConditionalFormats', 'allowDataValidation', 'allowDelete', 'allowDragAndDrop', 'allowEditing', 'allowFiltering', 'allowFormatAsTable', 'allowFormatPainter', 'allowFormulaBar', 'allowFreezing', 'allowHyperlink', 'allowImport', 'allowInsert', 'allowKeyboardNavigation', 'allowLockCell', 'allowMerging', 'allowResizing', 'allowSearching', 'allowSelection', 'allowSorting', 'allowUndoRedo', 'allowWrap', 'apWidth', 'autoFillSettings', 'chartSettings', 'columnCount', 'columnWidth', 'cssClass', 'customFormulas', 'enableContextMenu', 'enablePivotTable', 'exportSettings', 'formatSettings', 'importOnLoad', 'importSettings', 'locale', 'pictureSettings', 'printSettings', 'rowCount', 'rowHeight', 'scrollSettings', 'selectionSettings', 'sheetCount', 'sheets', 'showRibbon', 'undoRedoStep', 'userName'])
 @inject(Element)
 export class ejSpreadsheet extends WidgetBase {
-  @children(`${constants.elementPrefix}sheet`) sheets
+  @children(`${constants.elementPrefix}sheet`) sheets = [];
   constructor(element) {
     super();
     this.element = element;
@@ -1600,7 +1625,7 @@ export class ejSpreadsheet extends WidgetBase {
 import 'datavisualization/ej.diagram.min';
 
 @customElement(`${constants.elementPrefix}symbol-palette`)
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejSymbolPalette', ['allowDrag', 'cssClass', 'defaultSettings', 'diagramId', 'headerHeight', 'height', 'paletteItemHeight', 'paletteItemWidth', 'palettes', 'previewHeight', 'previewOffset', 'previewWidth', 'showPaletteItemText', 'width'])
 @inject(Element)
 export class ejSymbolPalette extends WidgetBase {
@@ -1614,7 +1639,7 @@ export class ejSymbolPalette extends WidgetBase {
 import 'ej.tab.min';
 
 @customElement(`${constants.elementPrefix}tab`)
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejTab', ['ajaxSettings', 'allowKeyboardNavigation', 'collapsible', 'cssClass', 'disabledItemIndex', 'enableAnimation', 'enabled', 'enabledItemIndex', 'enablePersistence', 'enableRTL', 'enableTabScroll', 'events', 'headerPosition', 'headerSize', 'height', 'heightAdjustMode', 'hiddenItemIndex', 'htmlAttributes', 'idPrefix', 'selectedItemIndex', 'showCloseButton', 'showReloadIcon', 'showRoundedCorner', 'width'], ['selectedItemIndex'], {'enableRTL': 'enableRtl'})
 @inject(Element)
 export class ejTab extends WidgetBase {
@@ -1628,7 +1653,7 @@ export class ejTab extends WidgetBase {
 import 'ej.tagcloud.min';
 
 @customElement(`${constants.elementPrefix}tag-cloud`)
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejTagCloud', ['cssClass', 'dataSource', 'enableRTL', 'fields', 'format', 'maxFontSize', 'minFontSize', 'query', 'showTitle', 'titleImage', 'titleText'], [], {'enableRTL': 'enableRtl'})
 @inject(Element)
 export class ejTagCloud extends WidgetBase {
@@ -1642,7 +1667,7 @@ export class ejTagCloud extends WidgetBase {
 import 'ej.tile.min';
 
 @customElement(`${constants.elementPrefix}tile`)
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejTile', ['badge', 'caption', 'cssClass', 'enablePersistence', 'height', 'imageClass', 'imagePosition', 'imageTemplateId', 'imageUrl', 'liveTile', 'tileSize', 'width', 'showRoundedCorner', 'allowSelection', 'backgroundColor'])
 @inject(Element)
 export class ejTile extends WidgetBase {
@@ -1709,11 +1734,11 @@ export class ejTooltip extends WidgetBase {
 import 'ej.treegrid.min';
 
 @customElement(`${constants.elementPrefix}tree-grid`)
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejTreeGrid', ['allowColumnResize', 'allowDragAndDrop', 'allowFiltering', 'allowKeyboardNavigation', 'allowMultiSorting', 'allowSelection', 'allowSorting', 'altRowTemplateID', 'childMapping', 'columns', 'contextMenuSettings', 'dataSource', 'headerTextOverflow', 'dragTooltip', 'editSettings', 'enableAltRow', 'enableCollapseAll', 'enableResize', 'enableVirtualization', 'filterBarMode', 'idMapping', 'parentIdMapping', 'query', 'rowHeight', 'rowTemplateID', 'selectedRowIndex', 'selectionType', 'showColumnChooser', 'showGridCellTooltip', 'showGridExpandCellTooltip', 'sizeSettings', 'sortSettings', 'toolbarSettings', 'treeColumnIndex'], ['dataSource', 'selectedRowIndex'], {'altRowTemplateID': 'altRowTemplateId', 'rowTemplateID': 'rowTemplateId'})
 @inject(Element, TemplatingEngine)
 export class ejTreeGrid extends WidgetBase {
-  @children(`${constants.elementPrefix}tree-grid-column`) columns
+  @children(`${constants.elementPrefix}tree-grid-column`) columns = [];
   constructor(element, templateEngine) {
     super();
     this.element = element;
@@ -1725,13 +1750,13 @@ export class ejTreeGrid extends WidgetBase {
 }
 
 
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @customElement(`${constants.elementPrefix}tree-grid-column`)
 @generateBindables('columns', ['allowFiltering', 'allowSorting', 'editType', 'field', 'filterEditType', 'headerText', 'visible', 'headerTemplateID', 'isFrozen', 'allowFreezing'])
 
 export class TreeGridColumn {
-  @children(`${constants.elementPrefix}template`) template
-  bind() {
+  @children(`${constants.elementPrefix}template`) template = [];
+  setTemplates() {
     if (this.template[0]) {
       let util = new Util();
       this[util.getBindablePropertyName('template')] = this.template[0].template;
@@ -1740,7 +1765,7 @@ export class TreeGridColumn {
 }
 
 
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @customElement(`${constants.elementPrefix}level`)
 @generateBindables('levels', ['groupBackground', 'groupBorderColor', 'groupBorderThickness', 'groupGap', 'groupPadding', 'groupPath', 'headerHeight', 'headerTemplate', 'headerVisibilityMode', 'labelPosition', 'labelTemplate', 'labelVisibilityMode', 'showHeader', 'showLabels'])
 
@@ -1751,11 +1776,11 @@ export class Level {
 import 'datavisualization/ej.treemap.min';
 
 @customElement(`${constants.elementPrefix}tree-map`)
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejTreeMap', ['borderBrush', 'borderThickness', 'uniColorMapping', 'desaturationColorMapping', 'paletteColorMapping', 'colorValuePath', 'dataSource', 'dockPosition', 'drillDownHeaderColor', 'drillDownSelectionColor', 'enableDrillDown', 'enableResize', 'groupColorMapping', 'legendSettings', 'highlightBorderBrush', 'highlightBorderThickness', 'highlightGroupBorderBrush', 'highlightGroupBorderThickness', 'highlightGroupOnSelection', 'highlightOnSelection', 'itemsLayoutMode', 'leafItemSettings', 'rangeColorMapping', 'groupSelectionMode', 'showLegend', 'showTooltip', 'tooltipTemplate', 'treeMapItems', 'levels', 'weightValuePath'], ['dataSource', 'weightValuePath'])
 @inject(Element)
 export class ejTreeMap extends WidgetBase {
-  @children(`${constants.elementPrefix}level`) levels
+  @children(`${constants.elementPrefix}level`) levels = [];
   constructor(element) {
     super();
     this.element = element;
@@ -1781,7 +1806,7 @@ export class ejTreeView extends WidgetBase {
 import 'ej.uploadbox.min';
 
 @customElement(`${constants.elementPrefix}uploadbox`)
-@inlineView('<template><content></content></template>')
+@inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejUploadbox', ['allowDragAndDrop', 'asyncUpload', 'autoUpload', 'buttonText', 'cssClass', 'customFileDetails', 'dialogAction', 'dialogPosition', 'dialogText', 'dropAreaText', 'dropAreaHeight', 'dropAreaWidth', 'enabled', 'enableRTL', 'extensionsAllow', 'extensionsDeny', 'fileSize', 'height', 'locale', 'multipleFilesSelection', 'pushFile', 'removeUrl', 'saveUrl', 'showBrowseButton', 'showFileDetails', 'uploadName', 'width'], [], {'enableRTL': 'enableRtl'})
 @inject(Element)
 export class ejUploadbox extends WidgetBase {

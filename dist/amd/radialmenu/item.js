@@ -18,7 +18,7 @@ define(['exports', '../common/common'], function (exports, _commonCommon) {
       _defineDecoratedPropertyDescriptor(this, 'template', _instanceInitializers);
     }
 
-    Item.prototype.bind = function bind() {
+    Item.prototype.setTemplates = function setTemplates() {
       if (this.template[0]) {
         var util = new _commonCommon.Util();
         this[util.getBindablePropertyName('template')] = this.template[0].template;
@@ -28,14 +28,16 @@ define(['exports', '../common/common'], function (exports, _commonCommon) {
     _createDecoratedClass(Item, [{
       key: 'template',
       decorators: [_commonCommon.children(_commonCommon.constants.elementPrefix + 'template')],
-      initializer: null,
+      initializer: function initializer() {
+        return [];
+      },
       enumerable: true
     }], null, _instanceInitializers);
 
     var _Item = Item;
     Item = _commonCommon.generateBindables('items', ['imageUrl', 'text', 'enabled', 'click', 'badge', 'type', 'sliderSettings'])(Item) || Item;
     Item = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'item')(Item) || Item;
-    Item = _commonCommon.inlineView('<template><content></content></template>')(Item) || Item;
+    Item = _commonCommon.inlineView('' + _commonCommon.constants.aureliaTemplateString)(Item) || Item;
     return Item;
   })();
 

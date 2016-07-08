@@ -30,7 +30,9 @@ System.register(['../common/common', 'ej.schedule.min'], function (_export) {
         _createDecoratedClass(ejSchedule, [{
           key: 'resources',
           decorators: [children(constants.elementPrefix + 'schedule-resource')],
-          initializer: null,
+          initializer: function initializer() {
+            return [];
+          },
           enumerable: true
         }], null, _instanceInitializers);
 
@@ -49,7 +51,7 @@ System.register(['../common/common', 'ej.schedule.min'], function (_export) {
         var _ejSchedule = ejSchedule;
         ejSchedule = inject(Element)(ejSchedule) || ejSchedule;
         ejSchedule = generateBindables('ejSchedule', ['allowDragAndDrop', 'allowKeyboardNavigation', 'appointmentSettings', 'appointmentTemplateId', 'cssClass', 'categorizeSettings', 'cellHeight', 'cellWidth', 'contextMenuSettings', 'currentDate', 'currentView', 'dateFormat', 'showAppointmentNavigator', 'enableAppointmentResize', 'enableLoadOnDemand', 'enablePersistence', 'enableRTL', 'endHour', 'group', 'height', 'workHours', 'isDST', 'isResponsive', 'locale', 'maxDate', 'minDate', 'orientation', 'prioritySettings', 'readOnly', 'reminderSettings', 'renderDates', 'resourceHeaderTemplateId', 'resources', 'showAllDayRow', 'showCurrentTimeIndicator', 'showHeaderBar', 'showLocationField', 'showQuickWindow', 'startHour', 'timeMode', 'timeZone', 'timeZoneCollection', 'views', 'width', 'enableRecurrenceValidation', 'agendaViewSettings', 'firstDayOfWeek', 'workWeek', 'tooltipSettings', 'timeScale', 'showDeleteConfirmationDialog', 'allDayCellsTemplateId', 'workCellsTemplateId', 'dateHeaderTemplateId', 'showOverflowButton', 'appointmentDragArea', 'showNextPrevMonth', 'blockoutSettings'], ['currentView', 'currentDate'], { 'enableRTL': 'enableRtl' })(ejSchedule) || ejSchedule;
-        ejSchedule = inlineView('<template><content></content></template>')(ejSchedule) || ejSchedule;
+        ejSchedule = inlineView('' + constants.aureliaTemplateString)(ejSchedule) || ejSchedule;
         ejSchedule = customElement(constants.elementPrefix + 'schedule')(ejSchedule) || ejSchedule;
         return ejSchedule;
       })(WidgetBase);

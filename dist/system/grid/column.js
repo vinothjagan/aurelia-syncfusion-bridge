@@ -28,7 +28,7 @@ System.register(['../common/common'], function (_export) {
           _defineDecoratedPropertyDescriptor(this, 'template', _instanceInitializers);
         }
 
-        Column.prototype.bind = function bind() {
+        Column.prototype.setTemplates = function setTemplates() {
           if (this.template[0]) {
             var util = new Util();
             this[util.getBindablePropertyName('template')] = this.template[0].template;
@@ -38,14 +38,16 @@ System.register(['../common/common'], function (_export) {
         _createDecoratedClass(Column, [{
           key: 'template',
           decorators: [children(constants.elementPrefix + 'template')],
-          initializer: null,
+          initializer: function initializer() {
+            return [];
+          },
           enumerable: true
         }], null, _instanceInitializers);
 
         var _Column = Column;
         Column = generateBindables('columns', ['clipMode', 'allowEditing', 'allowFiltering', 'allowGrouping', 'allowSorting', 'allowResizing', 'commands', 'cssClass', 'customAttributes', 'dataSource', 'defaultValue', 'disableHtmlEncode', 'displayAsCheckBox', 'editParams', 'editTemplate', 'editType', 'field', 'foreignKeyField', 'foreignKeyValue', 'format', 'headerTemplateID', 'headerText', 'headerTextAlign', 'isFrozen', 'isIdentity', 'isPrimaryKey', 'showInColumnChooser', 'template', 'textAlign', 'tooltip', 'type', 'validationRules', 'visible', 'width'])(Column) || Column;
         Column = customElement(constants.elementPrefix + 'column')(Column) || Column;
-        Column = inlineView('<template><content></content></template>')(Column) || Column;
+        Column = inlineView('' + constants.aureliaTemplateString)(Column) || Column;
         return Column;
       })();
 

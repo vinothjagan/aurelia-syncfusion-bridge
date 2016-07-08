@@ -20,7 +20,7 @@ define(['exports', '../common/common', 'ej.pivotgrid.min'], function (exports, _
     var _ejPivotGrid = ejPivotGrid;
     ejPivotGrid = _commonCommon.inject(Element)(ejPivotGrid) || ejPivotGrid;
     ejPivotGrid = _commonCommon.generateBindables('ejPivotGrid', ['analysisMode', 'cssClass', 'currentReport', 'dataSource', 'drilledItems', 'customObject', 'enableCellContext', 'enableCellSelection', 'enableCollapseByDefault', 'enableColumnGrandTotal', 'enableConditionalFormatting', 'enableDeferUpdate', 'enableGroupingBar', 'enableGrandTotal', 'enableJSONRendering', 'enablePivotFieldList', 'enableRowGrandTotal', 'enableRTL', 'enableToolTip', 'enableVirtualScrolling', 'hyperlinkSettings', 'isNamedSets', 'isResponsive', 'jsonRecords', 'layout', 'locale', 'operationalMode', 'serviceMethodSettings', 'url'], [], { 'enableRTL': 'enableRtl' })(ejPivotGrid) || ejPivotGrid;
-    ejPivotGrid = _commonCommon.inlineView('<template><content></content></template>')(ejPivotGrid) || ejPivotGrid;
+    ejPivotGrid = _commonCommon.inlineView('' + _commonCommon.constants.aureliaTemplateString)(ejPivotGrid) || ejPivotGrid;
     ejPivotGrid = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'pivot-grid')(ejPivotGrid) || ejPivotGrid;
     return ejPivotGrid;
   })(_commonCommon.WidgetBase);

@@ -47,7 +47,7 @@ System.register(['aurelia-dependency-injection', 'aurelia-templating', './consta
           if (html !== '') {
             instruction.template = html;
           }
-          return true;
+          element.innerHTML = '';
         })(Template) || Template;
         Template = noView()(Template) || Template;
         Template = customElement(constants.elementPrefix + 'template')(Template) || Template;

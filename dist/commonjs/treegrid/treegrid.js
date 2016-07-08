@@ -22,7 +22,9 @@ var ejTreeGrid = (function (_WidgetBase) {
   _createDecoratedClass(ejTreeGrid, [{
     key: 'columns',
     decorators: [_commonCommon.children(_commonCommon.constants.elementPrefix + 'tree-grid-column')],
-    initializer: null,
+    initializer: function initializer() {
+      return [];
+    },
     enumerable: true
   }], null, _instanceInitializers);
 
@@ -43,7 +45,7 @@ var ejTreeGrid = (function (_WidgetBase) {
   var _ejTreeGrid = ejTreeGrid;
   ejTreeGrid = _commonCommon.inject(Element, _commonCommon.TemplatingEngine)(ejTreeGrid) || ejTreeGrid;
   ejTreeGrid = _commonCommon.generateBindables('ejTreeGrid', ['allowColumnResize', 'allowDragAndDrop', 'allowFiltering', 'allowKeyboardNavigation', 'allowMultiSorting', 'allowSelection', 'allowSorting', 'altRowTemplateID', 'childMapping', 'columns', 'contextMenuSettings', 'dataSource', 'headerTextOverflow', 'dragTooltip', 'editSettings', 'enableAltRow', 'enableCollapseAll', 'enableResize', 'enableVirtualization', 'filterBarMode', 'idMapping', 'parentIdMapping', 'query', 'rowHeight', 'rowTemplateID', 'selectedRowIndex', 'selectionType', 'showColumnChooser', 'showGridCellTooltip', 'showGridExpandCellTooltip', 'sizeSettings', 'sortSettings', 'toolbarSettings', 'treeColumnIndex'], ['dataSource', 'selectedRowIndex'], { 'altRowTemplateID': 'altRowTemplateId', 'rowTemplateID': 'rowTemplateId' })(ejTreeGrid) || ejTreeGrid;
-  ejTreeGrid = _commonCommon.inlineView('<template><content></content></template>')(ejTreeGrid) || ejTreeGrid;
+  ejTreeGrid = _commonCommon.inlineView('' + _commonCommon.constants.aureliaTemplateString)(ejTreeGrid) || ejTreeGrid;
   ejTreeGrid = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'tree-grid')(ejTreeGrid) || ejTreeGrid;
   return ejTreeGrid;
 })(_commonCommon.WidgetBase);

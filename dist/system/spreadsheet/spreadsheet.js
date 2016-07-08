@@ -30,7 +30,9 @@ System.register(['../common/common', 'ej.spreadsheet.min'], function (_export) {
         _createDecoratedClass(ejSpreadsheet, [{
           key: 'sheets',
           decorators: [children(constants.elementPrefix + 'sheet')],
-          initializer: null,
+          initializer: function initializer() {
+            return [];
+          },
           enumerable: true
         }], null, _instanceInitializers);
 
@@ -49,7 +51,7 @@ System.register(['../common/common', 'ej.spreadsheet.min'], function (_export) {
         var _ejSpreadsheet = ejSpreadsheet;
         ejSpreadsheet = inject(Element)(ejSpreadsheet) || ejSpreadsheet;
         ejSpreadsheet = generateBindables('ejSpreadsheet', ['activeSheetIndex', 'allowAutoCellType', 'allowAutoFill', 'allowAutoSum', 'allowCellFormatting', 'allowCellType', 'allowCharts', 'allowClipboard', 'allowComments', 'allowConditionalFormats', 'allowDataValidation', 'allowDelete', 'allowDragAndDrop', 'allowEditing', 'allowFiltering', 'allowFormatAsTable', 'allowFormatPainter', 'allowFormulaBar', 'allowFreezing', 'allowHyperlink', 'allowImport', 'allowInsert', 'allowKeyboardNavigation', 'allowLockCell', 'allowMerging', 'allowResizing', 'allowSearching', 'allowSelection', 'allowSorting', 'allowUndoRedo', 'allowWrap', 'apWidth', 'autoFillSettings', 'chartSettings', 'columnCount', 'columnWidth', 'cssClass', 'customFormulas', 'enableContextMenu', 'enablePivotTable', 'exportSettings', 'formatSettings', 'importOnLoad', 'importSettings', 'locale', 'pictureSettings', 'printSettings', 'rowCount', 'rowHeight', 'scrollSettings', 'selectionSettings', 'sheetCount', 'sheets', 'showRibbon', 'undoRedoStep', 'userName'])(ejSpreadsheet) || ejSpreadsheet;
-        ejSpreadsheet = inlineView('<template><content></content></template>')(ejSpreadsheet) || ejSpreadsheet;
+        ejSpreadsheet = inlineView('' + constants.aureliaTemplateString)(ejSpreadsheet) || ejSpreadsheet;
         ejSpreadsheet = customElement(constants.elementPrefix + 'spreadsheet')(ejSpreadsheet) || ejSpreadsheet;
         return ejSpreadsheet;
       })(WidgetBase);

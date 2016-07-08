@@ -22,7 +22,9 @@ var ejSpreadsheet = (function (_WidgetBase) {
   _createDecoratedClass(ejSpreadsheet, [{
     key: 'sheets',
     decorators: [_commonCommon.children(_commonCommon.constants.elementPrefix + 'sheet')],
-    initializer: null,
+    initializer: function initializer() {
+      return [];
+    },
     enumerable: true
   }], null, _instanceInitializers);
 
@@ -41,7 +43,7 @@ var ejSpreadsheet = (function (_WidgetBase) {
   var _ejSpreadsheet = ejSpreadsheet;
   ejSpreadsheet = _commonCommon.inject(Element)(ejSpreadsheet) || ejSpreadsheet;
   ejSpreadsheet = _commonCommon.generateBindables('ejSpreadsheet', ['activeSheetIndex', 'allowAutoCellType', 'allowAutoFill', 'allowAutoSum', 'allowCellFormatting', 'allowCellType', 'allowCharts', 'allowClipboard', 'allowComments', 'allowConditionalFormats', 'allowDataValidation', 'allowDelete', 'allowDragAndDrop', 'allowEditing', 'allowFiltering', 'allowFormatAsTable', 'allowFormatPainter', 'allowFormulaBar', 'allowFreezing', 'allowHyperlink', 'allowImport', 'allowInsert', 'allowKeyboardNavigation', 'allowLockCell', 'allowMerging', 'allowResizing', 'allowSearching', 'allowSelection', 'allowSorting', 'allowUndoRedo', 'allowWrap', 'apWidth', 'autoFillSettings', 'chartSettings', 'columnCount', 'columnWidth', 'cssClass', 'customFormulas', 'enableContextMenu', 'enablePivotTable', 'exportSettings', 'formatSettings', 'importOnLoad', 'importSettings', 'locale', 'pictureSettings', 'printSettings', 'rowCount', 'rowHeight', 'scrollSettings', 'selectionSettings', 'sheetCount', 'sheets', 'showRibbon', 'undoRedoStep', 'userName'])(ejSpreadsheet) || ejSpreadsheet;
-  ejSpreadsheet = _commonCommon.inlineView('<template><content></content></template>')(ejSpreadsheet) || ejSpreadsheet;
+  ejSpreadsheet = _commonCommon.inlineView('' + _commonCommon.constants.aureliaTemplateString)(ejSpreadsheet) || ejSpreadsheet;
   ejSpreadsheet = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'spreadsheet')(ejSpreadsheet) || ejSpreadsheet;
   return ejSpreadsheet;
 })(_commonCommon.WidgetBase);

@@ -1,7 +1,9 @@
-System.register(['./events', '../common/util'], function (_export) {
+System.register(['./events', '../common/util', '../common/decorators'], function (_export) {
   'use strict';
 
-  var getEventOption, Util, firstValue, WidgetBase;
+  var getEventOption, Util, delayed, firstValue, WidgetBase;
+
+  var _createDecoratedClass = (function () { function defineProperties(target, descriptors, initializers) { for (var i = 0; i < descriptors.length; i++) { var descriptor = descriptors[i]; var decorators = descriptor.decorators; var key = descriptor.key; delete descriptor.key; delete descriptor.decorators; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor || descriptor.initializer) descriptor.writable = true; if (decorators) { for (var f = 0; f < decorators.length; f++) { var decorator = decorators[f]; if (typeof decorator === 'function') { descriptor = decorator(target, key, descriptor) || descriptor; } else { throw new TypeError('The decorator for method ' + descriptor.key + ' is of the invalid type ' + typeof decorator); } } if (descriptor.initializer !== undefined) { initializers[key] = descriptor; continue; } } Object.defineProperty(target, key, descriptor); } } return function (Constructor, protoProps, staticProps, protoInitializers, staticInitializers) { if (protoProps) defineProperties(Constructor.prototype, protoProps, protoInitializers); if (staticProps) defineProperties(Constructor, staticProps, staticInitializers); return Constructor; }; })();
 
   function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
@@ -10,6 +12,8 @@ System.register(['./events', '../common/util'], function (_export) {
       getEventOption = _events.getEventOption;
     }, function (_commonUtil) {
       Util = _commonUtil.Util;
+    }, function (_commonDecorators) {
+      delayed = _commonDecorators.delayed;
     }],
     execute: function () {
       firstValue = {};
@@ -103,11 +107,6 @@ System.register(['./events', '../common/util'], function (_export) {
           }
         };
 
-        WidgetBase.prototype.attached = function attached() {
-          this.util = new Util();
-          this.createWidget({ element: this.element });
-        };
-
         WidgetBase.prototype.propertyChanged = function propertyChanged(property, newValue, oldValue) {
           if (this.widget) {
             var modelValue = undefined;
@@ -136,8 +135,24 @@ System.register(['./events', '../common/util'], function (_export) {
           if (this.templateProcessor) {
             this.templateProcessor.clearTempalte();
           }
-          this.widget.destroy();
+          if (this.widget) {
+            this.widget.destroy();
+          }
         };
+
+        _createDecoratedClass(WidgetBase, [{
+          key: 'attached',
+          decorators: [delayed()],
+          value: function attached() {
+            if (this.templateProcessor) {
+              this[this.childPropertyName].forEach(function (template) {
+                return template.setTemplates();
+              });
+            }
+            this.util = new Util();
+            this.createWidget({ element: this.element });
+          }
+        }]);
 
         return WidgetBase;
       })();

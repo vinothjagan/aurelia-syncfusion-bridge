@@ -20,7 +20,7 @@ define(['exports', '../common/common', 'ej.pivotchart.min'], function (exports, 
     var _ejPivotChart = ejPivotChart;
     ejPivotChart = _commonCommon.inject(Element)(ejPivotChart) || ejPivotChart;
     ejPivotChart = _commonCommon.generateBindables('ejPivotChart', ['analysisMode', 'cssClass', 'commonSeriesOptions', 'currentReport', 'dataSource', 'customObject', 'enable3D', 'isResponsive', 'legend', 'locale', 'operationalMode', 'primaryXAxis', 'primaryYAxis', 'rotation', 'serviceMethodSettings', 'size', 'url'])(ejPivotChart) || ejPivotChart;
-    ejPivotChart = _commonCommon.inlineView('<template><content></content></template>')(ejPivotChart) || ejPivotChart;
+    ejPivotChart = _commonCommon.inlineView('' + _commonCommon.constants.aureliaTemplateString)(ejPivotChart) || ejPivotChart;
     ejPivotChart = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'pivot-chart')(ejPivotChart) || ejPivotChart;
     return ejPivotChart;
   })(_commonCommon.WidgetBase);

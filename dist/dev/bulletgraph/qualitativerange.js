@@ -21,7 +21,7 @@ System.register(['../common/common'], function (_export) {
         var _QualitativeRange = QualitativeRange;
         QualitativeRange = generateBindables('qualitativeRanges', ['rangeEnd', 'rangeOpacity', 'rangeStroke'])(QualitativeRange) || QualitativeRange;
         QualitativeRange = customElement(constants.elementPrefix + 'qualitative-range')(QualitativeRange) || QualitativeRange;
-        QualitativeRange = inlineView('<template><content></content></template>')(QualitativeRange) || QualitativeRange;
+        QualitativeRange = inlineView('' + constants.aureliaTemplateString)(QualitativeRange) || QualitativeRange;
         return QualitativeRange;
       })();
 

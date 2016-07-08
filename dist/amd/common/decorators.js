@@ -1,8 +1,9 @@
-define(['exports', 'aurelia-templating', 'aurelia-dependency-injection', 'aurelia-metadata', './util'], function (exports, _aureliaTemplating, _aureliaDependencyInjection, _aureliaMetadata, _util) {
+define(['exports', 'aurelia-templating', 'aurelia-dependency-injection', 'aurelia-metadata', 'aurelia-task-queue', './util'], function (exports, _aureliaTemplating, _aureliaDependencyInjection, _aureliaMetadata, _aureliaTaskQueue, _util) {
   'use strict';
 
   exports.__esModule = true;
   exports.generateBindables = generateBindables;
+  exports.delayed = delayed;
 
   function generateBindables(controlName, inputs, twoWayProperties, abbrevProperties) {
     return function (target, key, descriptor) {
@@ -28,6 +29,31 @@ define(['exports', 'aurelia-templating', 'aurelia-dependency-injection', 'aureli
           prop.registerWith(target, behaviorResource, descriptor);
         }
       }
+    };
+  }
+
+  function delayed() {
+    return function (target, key, descriptor) {
+      var taskQueue = (_aureliaDependencyInjection.Container.instance || new _aureliaDependencyInjection.Container()).get(_aureliaTaskQueue.TaskQueue);
+      var ptr = descriptor.value;
+
+      descriptor.value = function () {
+        var _this = this;
+
+        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+          args[_key] = arguments[_key];
+        }
+
+        if (this.childPropertyName) {
+          taskQueue.queueTask(function () {
+            return ptr.apply(_this, args);
+          });
+        } else {
+          ptr.apply(this, args);
+        }
+      };
+
+      return descriptor;
     };
   }
 });

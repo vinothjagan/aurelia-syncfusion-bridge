@@ -30,7 +30,7 @@ System.register(['../common/common', 'ej.pivotschemadesigner.min'], function (_e
         var _ejPivotSchemaDesigner = ejPivotSchemaDesigner;
         ejPivotSchemaDesigner = inject(Element)(ejPivotSchemaDesigner) || ejPivotSchemaDesigner;
         ejPivotSchemaDesigner = generateBindables('ejPivotSchemaDesigner', ['cssClass', 'customObject', 'enableWrapper', 'filters', 'height', 'locale', 'pivotCalculations', 'pivotColumns', 'pivotControl', 'pivotRows', 'pivotTableFields', 'serviceMethod', 'url', 'width'])(ejPivotSchemaDesigner) || ejPivotSchemaDesigner;
-        ejPivotSchemaDesigner = inlineView('<template><content></content></template>')(ejPivotSchemaDesigner) || ejPivotSchemaDesigner;
+        ejPivotSchemaDesigner = inlineView('' + constants.aureliaTemplateString)(ejPivotSchemaDesigner) || ejPivotSchemaDesigner;
         ejPivotSchemaDesigner = customElement(constants.elementPrefix + 'pivot-schema-designer')(ejPivotSchemaDesigner) || ejPivotSchemaDesigner;
         return ejPivotSchemaDesigner;
       })(WidgetBase);

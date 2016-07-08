@@ -2,6 +2,7 @@ declare module 'aurelia-syncfusion-bridge' {
   import { customAttribute, bindable, customElement, children, TemplatingEngine, inlineView, BindableProperty, HtmlBehaviorResource, noView, processContent, TargetInstruction }  from 'aurelia-templating';
   import { inject, Container }  from 'aurelia-dependency-injection';
   import { metadata }  from 'aurelia-metadata';
+  import { TaskQueue }  from 'aurelia-task-queue';
   import 'ej.accordion.min';
   import 'ej.autocomplete.min';
   import 'datavisualization/ej.barcode.min';
@@ -190,6 +191,7 @@ declare module 'aurelia-syncfusion-bridge' {
   }
   export const constants: any;
   export function generateBindables(controlName: any, inputs: any, twoWayProperties: any, abbrevProperties: any): any;
+  export function delayed(): any;
   
   /**
   * To get binded events from the element
@@ -280,7 +282,7 @@ declare module 'aurelia-syncfusion-bridge' {
   }
   export class Column {
     template: any;
-    bind(): any;
+    setTemplates(): any;
   }
   export class ejGrid extends WidgetBase {
     columns: any;
@@ -348,7 +350,7 @@ declare module 'aurelia-syncfusion-bridge' {
   }
   export class Item {
     template: any;
-    bind(): any;
+    setTemplates(): any;
   }
   export class ejRadialMenu extends WidgetBase {
     items: any;
@@ -438,7 +440,7 @@ declare module 'aurelia-syncfusion-bridge' {
   }
   export class TreeGridColumn {
     template: any;
-    bind(): any;
+    setTemplates(): any;
   }
   export class Level {
   }

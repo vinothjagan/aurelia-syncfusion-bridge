@@ -30,7 +30,9 @@ System.register(['../common/common', 'datavisualization/ej.bulletgraph.min'], fu
         _createDecoratedClass(ejBulletGraph, [{
           key: 'qualitativeRanges',
           decorators: [children(constants.elementPrefix + 'qualitative-range')],
-          initializer: null,
+          initializer: function initializer() {
+            return [];
+          },
           enumerable: true
         }], null, _instanceInitializers);
 
@@ -49,7 +51,7 @@ System.register(['../common/common', 'datavisualization/ej.bulletgraph.min'], fu
         var _ejBulletGraph = ejBulletGraph;
         ejBulletGraph = inject(Element)(ejBulletGraph) || ejBulletGraph;
         ejBulletGraph = generateBindables('ejBulletGraph', ['applyRangeStrokeToLabels', 'applyRangeStrokeToTicks', 'captionSettings', 'comparativeMeasureValue', 'enableAnimation', 'flowDirection', 'height', 'isResponsive', 'orientation', 'qualitativeRanges', 'qualitativeRangeSize', 'quantitativeScaleLength', 'quantitativeScaleSettings', 'theme', 'tooltipSettings', 'value', 'width'])(ejBulletGraph) || ejBulletGraph;
-        ejBulletGraph = inlineView('<template><content></content></template>')(ejBulletGraph) || ejBulletGraph;
+        ejBulletGraph = inlineView('' + constants.aureliaTemplateString)(ejBulletGraph) || ejBulletGraph;
         ejBulletGraph = customElement(constants.elementPrefix + 'bullet-graph')(ejBulletGraph) || ejBulletGraph;
         return ejBulletGraph;
       })(WidgetBase);

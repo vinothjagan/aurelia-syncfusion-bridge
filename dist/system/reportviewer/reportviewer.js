@@ -30,7 +30,7 @@ System.register(['../common/common', 'ej.reportviewer.min'], function (_export) 
         var _ejReportViewer = ejReportViewer;
         ejReportViewer = inject(Element)(ejReportViewer) || ejReportViewer;
         ejReportViewer = generateBindables('ejReportViewer', ['dataSources', 'enablePageCache', 'exportSettings', 'isResponsive', 'locale', 'pageSettings', 'parameters', 'printMode', 'printOptions', 'processingMode', 'renderMode', 'reportPath', 'reportServerUrl', 'reportServiceUrl', 'toolbarSettings', 'zoomFactor'])(ejReportViewer) || ejReportViewer;
-        ejReportViewer = inlineView('<template><content></content></template>')(ejReportViewer) || ejReportViewer;
+        ejReportViewer = inlineView('' + constants.aureliaTemplateString)(ejReportViewer) || ejReportViewer;
         ejReportViewer = customElement(constants.elementPrefix + 'report-viewer')(ejReportViewer) || ejReportViewer;
         return ejReportViewer;
       })(WidgetBase);

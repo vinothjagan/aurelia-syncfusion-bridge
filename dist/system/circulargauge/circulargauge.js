@@ -30,7 +30,7 @@ System.register(['../common/common', 'datavisualization/ej.circulargauge.min'], 
         var _ejCircularGauge = ejCircularGauge;
         ejCircularGauge = inject(Element)(ejCircularGauge) || ejCircularGauge;
         ejCircularGauge = generateBindables('ejCircularGauge', ['animationSpeed', 'backgroundColor', 'distanceFromCorner', 'enableAnimation', 'frame', 'gaugePosition', 'height', 'interiorGradient', 'isRadialGradient', 'isResponsive', 'maximum', 'minimum', 'outerCustomLabelPosition', 'radius', 'readOnly', 'scales', 'theme', 'tooltip', 'value', 'width'], ['value', 'minimum', 'maximum'])(ejCircularGauge) || ejCircularGauge;
-        ejCircularGauge = inlineView('<template><content></content></template>')(ejCircularGauge) || ejCircularGauge;
+        ejCircularGauge = inlineView('' + constants.aureliaTemplateString)(ejCircularGauge) || ejCircularGauge;
         ejCircularGauge = customElement(constants.elementPrefix + 'circular-gauge')(ejCircularGauge) || ejCircularGauge;
         return ejCircularGauge;
       })(WidgetBase);

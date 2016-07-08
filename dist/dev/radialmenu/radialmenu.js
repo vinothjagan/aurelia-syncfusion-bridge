@@ -32,7 +32,9 @@ System.register(['../common/common', 'ej.radialmenu.min'], function (_export) {
         _createDecoratedClass(ejRadialMenu, [{
           key: 'items',
           decorators: [children(constants.elementPrefix + 'item')],
-          initializer: null,
+          initializer: function initializer() {
+            return [];
+          },
           enumerable: true
         }], null, _instanceInitializers);
 
@@ -53,7 +55,7 @@ System.register(['../common/common', 'ej.radialmenu.min'], function (_export) {
         var _ejRadialMenu = ejRadialMenu;
         ejRadialMenu = inject(Element, TemplatingEngine)(ejRadialMenu) || ejRadialMenu;
         ejRadialMenu = generateBindables('ejRadialMenu', ['autoOpen', 'backImageClass', 'cssClass', 'enableAnimation', 'imageClass', 'items', 'radius', 'targetElementId', 'position'])(ejRadialMenu) || ejRadialMenu;
-        ejRadialMenu = inlineView('<template><content></content></template>')(ejRadialMenu) || ejRadialMenu;
+        ejRadialMenu = inlineView('' + constants.aureliaTemplateString)(ejRadialMenu) || ejRadialMenu;
         ejRadialMenu = customElement(constants.elementPrefix + 'radial-menu')(ejRadialMenu) || ejRadialMenu;
         return ejRadialMenu;
       })(WidgetBase);

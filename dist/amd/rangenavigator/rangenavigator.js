@@ -19,7 +19,9 @@ define(['exports', '../common/common', 'datavisualization/ej.rangenavigator.min'
     _createDecoratedClass(ejRangeNavigator, [{
       key: 'series',
       decorators: [_commonCommon.children(_commonCommon.constants.elementPrefix + 'range-series')],
-      initializer: null,
+      initializer: function initializer() {
+        return [];
+      },
       enumerable: true
     }], null, _instanceInitializers);
 
@@ -38,7 +40,7 @@ define(['exports', '../common/common', 'datavisualization/ej.rangenavigator.min'
     var _ejRangeNavigator = ejRangeNavigator;
     ejRangeNavigator = _commonCommon.inject(Element)(ejRangeNavigator) || ejRangeNavigator;
     ejRangeNavigator = _commonCommon.generateBindables('ejRangeNavigator', ['allowSnapping', 'border', 'dataSource', 'enableDeferredUpdate', 'enableScrollbar', 'enableRTL', 'isResponsive', 'labelSettings', 'locale', 'navigatorStyleSettings', 'padding', 'rangePadding', 'rangeSettings', 'selectedData', 'selectedRangeSettings', 'scrollRangeSettings', 'sizeSettings', 'theme', 'tooltipSettings', 'valueAxisSettings', 'valueType', 'xName', 'yName'], [], { 'enableRTL': 'enableRtl' })(ejRangeNavigator) || ejRangeNavigator;
-    ejRangeNavigator = _commonCommon.inlineView('<template><content></content></template>')(ejRangeNavigator) || ejRangeNavigator;
+    ejRangeNavigator = _commonCommon.inlineView('' + _commonCommon.constants.aureliaTemplateString)(ejRangeNavigator) || ejRangeNavigator;
     ejRangeNavigator = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'range-navigator')(ejRangeNavigator) || ejRangeNavigator;
     return ejRangeNavigator;
   })(_commonCommon.WidgetBase);

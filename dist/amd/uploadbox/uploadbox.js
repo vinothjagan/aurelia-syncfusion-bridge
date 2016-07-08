@@ -20,7 +20,7 @@ define(['exports', '../common/common', 'ej.uploadbox.min'], function (exports, _
     var _ejUploadbox = ejUploadbox;
     ejUploadbox = _commonCommon.inject(Element)(ejUploadbox) || ejUploadbox;
     ejUploadbox = _commonCommon.generateBindables('ejUploadbox', ['allowDragAndDrop', 'asyncUpload', 'autoUpload', 'buttonText', 'cssClass', 'customFileDetails', 'dialogAction', 'dialogPosition', 'dialogText', 'dropAreaText', 'dropAreaHeight', 'dropAreaWidth', 'enabled', 'enableRTL', 'extensionsAllow', 'extensionsDeny', 'fileSize', 'height', 'locale', 'multipleFilesSelection', 'pushFile', 'removeUrl', 'saveUrl', 'showBrowseButton', 'showFileDetails', 'uploadName', 'width'], [], { 'enableRTL': 'enableRtl' })(ejUploadbox) || ejUploadbox;
-    ejUploadbox = _commonCommon.inlineView('<template><content></content></template>')(ejUploadbox) || ejUploadbox;
+    ejUploadbox = _commonCommon.inlineView('' + _commonCommon.constants.aureliaTemplateString)(ejUploadbox) || ejUploadbox;
     ejUploadbox = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'uploadbox')(ejUploadbox) || ejUploadbox;
     return ejUploadbox;
   })(_commonCommon.WidgetBase);

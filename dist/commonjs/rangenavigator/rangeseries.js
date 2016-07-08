@@ -14,7 +14,7 @@ var RangeSeries = (function () {
   var _RangeSeries = RangeSeries;
   RangeSeries = _commonCommon.generateBindables('series', [])(RangeSeries) || RangeSeries;
   RangeSeries = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'range-series')(RangeSeries) || RangeSeries;
-  RangeSeries = _commonCommon.inlineView('<template><content></content></template>')(RangeSeries) || RangeSeries;
+  RangeSeries = _commonCommon.inlineView('' + _commonCommon.constants.aureliaTemplateString)(RangeSeries) || RangeSeries;
   return RangeSeries;
 })();
 
