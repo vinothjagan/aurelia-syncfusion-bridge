@@ -1,28 +1,55 @@
-define(['exports', '../common/common', 'common/ej.scroller.min'], function (exports, _commonCommon, _commonEjScrollerMin) {
+define(['exports', '../common/common', 'common/ej.scroller.min'], function (exports, _common) {
   'use strict';
 
-  exports.__esModule = true;
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.ejScroller = undefined;
 
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
 
-  function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+  function _possibleConstructorReturn(self, call) {
+    if (!self) {
+      throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    }
 
-  var ejScroller = (function (_WidgetBase) {
+    return call && (typeof call === "object" || typeof call === "function") ? call : self;
+  }
+
+  function _inherits(subClass, superClass) {
+    if (typeof superClass !== "function" && superClass !== null) {
+      throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+    }
+
+    subClass.prototype = Object.create(superClass && superClass.prototype, {
+      constructor: {
+        value: subClass,
+        enumerable: false,
+        writable: true,
+        configurable: true
+      }
+    });
+    if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+  }
+
+  var _dec, _dec2, _dec3, _class;
+
+  var ejScroller = exports.ejScroller = (_dec = (0, _common.customAttribute)(_common.constants.attributePrefix + 'scroller'), _dec2 = (0, _common.generateBindables)('ejScroller', ['autoHide', 'buttonSize', 'enabled', 'enablePersistence', 'enableRTL', 'enableTouchScroll', 'height', 'scrollerSize', 'scrollLeft', 'scrollOneStepBy', 'scrollTop', 'targetPane', 'width'], ['scrollLeft', 'scrollTop'], { 'enableRTL': 'enableRtl' }), _dec3 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = function (_WidgetBase) {
     _inherits(ejScroller, _WidgetBase);
 
     function ejScroller(element) {
-      _classCallCheck(this, _ejScroller);
+      _classCallCheck(this, ejScroller);
 
-      _WidgetBase.call(this);
-      this.element = element;
+      var _this = _possibleConstructorReturn(this, _WidgetBase.call(this));
+
+      _this.element = element;
+      return _this;
     }
 
-    var _ejScroller = ejScroller;
-    ejScroller = _commonCommon.inject(Element)(ejScroller) || ejScroller;
-    ejScroller = _commonCommon.generateBindables('ejScroller', ['autoHide', 'buttonSize', 'enabled', 'enablePersistence', 'enableRTL', 'enableTouchScroll', 'height', 'scrollerSize', 'scrollLeft', 'scrollOneStepBy', 'scrollTop', 'targetPane', 'width'], ['scrollLeft', 'scrollTop'], { 'enableRTL': 'enableRtl' })(ejScroller) || ejScroller;
-    ejScroller = _commonCommon.customAttribute(_commonCommon.constants.attributePrefix + 'scroller')(ejScroller) || ejScroller;
     return ejScroller;
-  })(_commonCommon.WidgetBase);
-
-  exports.ejScroller = ejScroller;
+  }(_common.WidgetBase)) || _class) || _class) || _class);
 });

@@ -1,5 +1,7 @@
-System.register(['aurelia-templating', 'aurelia-dependency-injection', './widget-base', './constants', './decorators', './template-processor', './util'], function (_export) {
-  'use strict';
+'use strict';
+
+System.register(['aurelia-templating', 'aurelia-dependency-injection', './widget-base', './constants', './decorators', './template-processor', './util'], function (_export, _context) {
+  "use strict";
 
   var customAttribute, bindable, customElement, children, TemplatingEngine, inlineView, inject, WidgetBase, constants, generateBindables, TemplateProcessor, Util;
   return {

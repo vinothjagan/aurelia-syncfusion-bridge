@@ -1,21 +1,16 @@
 'use strict';
 
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.ScheduleResource = undefined;
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+var _dec, _dec2, _dec3, _class;
 
-var _commonCommon = require('../common/common');
+var _common = require('../common/common');
 
-var ScheduleResource = (function () {
-  function ScheduleResource() {
-    _classCallCheck(this, _ScheduleResource);
-  }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-  var _ScheduleResource = ScheduleResource;
-  ScheduleResource = _commonCommon.generateBindables('resources', ['field', 'title', 'name', 'allowMultiple', 'resourceSettings'])(ScheduleResource) || ScheduleResource;
-  ScheduleResource = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'schedule-resource')(ScheduleResource) || ScheduleResource;
-  ScheduleResource = _commonCommon.inlineView('' + _commonCommon.constants.aureliaTemplateString)(ScheduleResource) || ScheduleResource;
-  return ScheduleResource;
-})();
-
-exports.ScheduleResource = ScheduleResource;
+var ScheduleResource = exports.ScheduleResource = (_dec = (0, _common.inlineView)('' + _common.constants.aureliaTemplateString), _dec2 = (0, _common.customElement)(_common.constants.elementPrefix + 'schedule-resource'), _dec3 = (0, _common.generateBindables)('resources', ['field', 'title', 'name', 'allowMultiple', 'resourceSettings']), _dec(_class = _dec2(_class = _dec3(_class = function ScheduleResource() {
+  _classCallCheck(this, ScheduleResource);
+}) || _class) || _class) || _class);

@@ -1,11 +1,39 @@
-System.register(['../common/common', 'ej.ribbon.min'], function (_export) {
-  'use strict';
+'use strict';
 
-  var customElement, inlineView, inject, WidgetBase, constants, generateBindables, ejRibbon;
+System.register(['../common/common', 'ej.ribbon.min'], function (_export, _context) {
+  "use strict";
 
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+  var customElement, inlineView, inject, WidgetBase, constants, generateBindables, _dec, _dec2, _dec3, _dec4, _class, ejRibbon;
 
-  function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
+
+  function _possibleConstructorReturn(self, call) {
+    if (!self) {
+      throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    }
+
+    return call && (typeof call === "object" || typeof call === "function") ? call : self;
+  }
+
+  function _inherits(subClass, superClass) {
+    if (typeof superClass !== "function" && superClass !== null) {
+      throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+    }
+
+    subClass.prototype = Object.create(superClass && superClass.prototype, {
+      constructor: {
+        value: subClass,
+        enumerable: false,
+        writable: true,
+        configurable: true
+      }
+    });
+    if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+  }
 
   return {
     setters: [function (_commonCommon) {
@@ -17,23 +45,20 @@ System.register(['../common/common', 'ej.ribbon.min'], function (_export) {
       generateBindables = _commonCommon.generateBindables;
     }, function (_ejRibbonMin) {}],
     execute: function () {
-      ejRibbon = (function (_WidgetBase) {
+      _export('ejRibbon', ejRibbon = (_dec = customElement(constants.elementPrefix + 'ribbon'), _dec2 = inlineView('' + constants.aureliaTemplateString), _dec3 = generateBindables('ejRibbon', ['allowResizing', 'buttonDefaults', 'showQAT', 'collapsePinSettings', 'expandPinSettings', 'applicationTab', 'contextualTabs', 'disabledItemIndex', 'enabledItemIndex', 'selectedItemIndex', 'tabs', 'locale', 'width']), _dec4 = inject(Element), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = function (_WidgetBase) {
         _inherits(ejRibbon, _WidgetBase);
 
         function ejRibbon(element) {
-          _classCallCheck(this, _ejRibbon);
+          _classCallCheck(this, ejRibbon);
 
-          _WidgetBase.call(this);
-          this.element = element;
+          var _this = _possibleConstructorReturn(this, _WidgetBase.call(this));
+
+          _this.element = element;
+          return _this;
         }
 
-        var _ejRibbon = ejRibbon;
-        ejRibbon = inject(Element)(ejRibbon) || ejRibbon;
-        ejRibbon = generateBindables('ejRibbon', ['allowResizing', 'buttonDefaults', 'showQAT', 'collapsePinSettings', 'expandPinSettings', 'applicationTab', 'contextualTabs', 'disabledItemIndex', 'enabledItemIndex', 'selectedItemIndex', 'tabs', 'locale', 'width'])(ejRibbon) || ejRibbon;
-        ejRibbon = inlineView('' + constants.aureliaTemplateString)(ejRibbon) || ejRibbon;
-        ejRibbon = customElement(constants.elementPrefix + 'ribbon')(ejRibbon) || ejRibbon;
         return ejRibbon;
-      })(WidgetBase);
+      }(WidgetBase)) || _class) || _class) || _class) || _class));
 
       _export('ejRibbon', ejRibbon);
     }

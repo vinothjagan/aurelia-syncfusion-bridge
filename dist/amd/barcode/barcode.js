@@ -1,29 +1,55 @@
-define(['exports', '../common/common', 'datavisualization/ej.barcode.min'], function (exports, _commonCommon, _datavisualizationEjBarcodeMin) {
+define(['exports', '../common/common', 'datavisualization/ej.barcode.min'], function (exports, _common) {
   'use strict';
 
-  exports.__esModule = true;
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.ejBarcode = undefined;
 
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
 
-  function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+  function _possibleConstructorReturn(self, call) {
+    if (!self) {
+      throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    }
 
-  var ejBarcode = (function (_WidgetBase) {
+    return call && (typeof call === "object" || typeof call === "function") ? call : self;
+  }
+
+  function _inherits(subClass, superClass) {
+    if (typeof superClass !== "function" && superClass !== null) {
+      throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+    }
+
+    subClass.prototype = Object.create(superClass && superClass.prototype, {
+      constructor: {
+        value: subClass,
+        enumerable: false,
+        writable: true,
+        configurable: true
+      }
+    });
+    if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+  }
+
+  var _dec, _dec2, _dec3, _dec4, _class;
+
+  var ejBarcode = exports.ejBarcode = (_dec = (0, _common.customElement)(_common.constants.elementPrefix + 'barcode'), _dec2 = (0, _common.inlineView)('' + _common.constants.aureliaTemplateString), _dec3 = (0, _common.generateBindables)('ejBarcode', ['barcodeToTextGapHeight', 'barHeight', 'darkBarColor', 'displayText', 'enabled', 'encodeStartStopSymbol', 'lightBarColor', 'narrowBarWidth', 'quietZone', 'symbologyType', 'text', 'textColor', 'wideBarWidth', 'xDimension']), _dec4 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = function (_WidgetBase) {
     _inherits(ejBarcode, _WidgetBase);
 
     function ejBarcode(element) {
-      _classCallCheck(this, _ejBarcode);
+      _classCallCheck(this, ejBarcode);
 
-      _WidgetBase.call(this);
-      this.element = element;
+      var _this = _possibleConstructorReturn(this, _WidgetBase.call(this));
+
+      _this.element = element;
+      return _this;
     }
 
-    var _ejBarcode = ejBarcode;
-    ejBarcode = _commonCommon.inject(Element)(ejBarcode) || ejBarcode;
-    ejBarcode = _commonCommon.generateBindables('ejBarcode', ['barcodeToTextGapHeight', 'barHeight', 'darkBarColor', 'displayText', 'enabled', 'encodeStartStopSymbol', 'lightBarColor', 'narrowBarWidth', 'quietZone', 'symbologyType', 'text', 'textColor', 'wideBarWidth', 'xDimension'])(ejBarcode) || ejBarcode;
-    ejBarcode = _commonCommon.inlineView('' + _commonCommon.constants.aureliaTemplateString)(ejBarcode) || ejBarcode;
-    ejBarcode = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'barcode')(ejBarcode) || ejBarcode;
     return ejBarcode;
-  })(_commonCommon.WidgetBase);
-
-  exports.ejBarcode = ejBarcode;
+  }(_common.WidgetBase)) || _class) || _class) || _class) || _class);
 });

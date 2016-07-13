@@ -1,9 +1,15 @@
-System.register(['aurelia-dependency-injection', '../common/util', 'aurelia-templating'], function (_export) {
-  'use strict';
+'use strict';
 
-  var inject, Util, TemplatingEngine, TemplateProcessor;
+System.register(['aurelia-dependency-injection', '../common/util', 'aurelia-templating'], function (_export, _context) {
+  "use strict";
 
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+  var inject, Util, TemplatingEngine, _dec, _class, TemplateProcessor;
+
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
 
   return {
     setters: [function (_aureliaDependencyInjection) {
@@ -14,9 +20,9 @@ System.register(['aurelia-dependency-injection', '../common/util', 'aurelia-temp
       TemplatingEngine = _aureliaTemplating.TemplatingEngine;
     }],
     execute: function () {
-      TemplateProcessor = (function () {
+      _export('TemplateProcessor', TemplateProcessor = (_dec = inject(TemplatingEngine, Util), _dec(_class = function () {
         function TemplateProcessor(context, templateEngine) {
-          _classCallCheck(this, _TemplateProcessor);
+          _classCallCheck(this, TemplateProcessor);
 
           this.context = context;
           this.templatingEngine = templateEngine;
@@ -96,10 +102,8 @@ System.register(['aurelia-dependency-injection', '../common/util', 'aurelia-temp
           }
         };
 
-        var _TemplateProcessor = TemplateProcessor;
-        TemplateProcessor = inject(TemplatingEngine, Util)(TemplateProcessor) || TemplateProcessor;
         return TemplateProcessor;
-      })();
+      }()) || _class));
 
       _export('TemplateProcessor', TemplateProcessor);
     }

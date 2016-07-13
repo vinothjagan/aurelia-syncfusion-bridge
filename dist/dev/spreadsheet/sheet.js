@@ -1,9 +1,15 @@
-System.register(['../common/common'], function (_export) {
-  'use strict';
+'use strict';
 
-  var inlineView, customElement, constants, generateBindables, Sheet;
+System.register(['../common/common'], function (_export, _context) {
+  "use strict";
 
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+  var inlineView, customElement, constants, generateBindables, _dec, _dec2, _dec3, _class, Sheet;
+
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
 
   return {
     setters: [function (_commonCommon) {
@@ -13,17 +19,9 @@ System.register(['../common/common'], function (_export) {
       generateBindables = _commonCommon.generateBindables;
     }],
     execute: function () {
-      Sheet = (function () {
-        function Sheet() {
-          _classCallCheck(this, _Sheet);
-        }
-
-        var _Sheet = Sheet;
-        Sheet = generateBindables('sheets', ['colCount', 'columnWidth', 'dataSource', 'fieldAsColumnHeader', 'headerStyles', 'primaryKey', 'query', 'rangeSettings', 'rowCount', 'sheetName', 'showGridlines', 'showHeader', 'showHeadings', 'startCell'])(Sheet) || Sheet;
-        Sheet = customElement(constants.elementPrefix + 'sheet')(Sheet) || Sheet;
-        Sheet = inlineView('' + constants.aureliaTemplateString)(Sheet) || Sheet;
-        return Sheet;
-      })();
+      _export('Sheet', Sheet = (_dec = inlineView('' + constants.aureliaTemplateString), _dec2 = customElement(constants.elementPrefix + 'sheet'), _dec3 = generateBindables('sheets', ['colCount', 'columnWidth', 'dataSource', 'fieldAsColumnHeader', 'headerStyles', 'primaryKey', 'query', 'rangeSettings', 'rowCount', 'sheetName', 'showGridlines', 'showHeader', 'showHeadings', 'startCell']), _dec(_class = _dec2(_class = _dec3(_class = function Sheet() {
+        _classCallCheck(this, Sheet);
+      }) || _class) || _class) || _class));
 
       _export('Sheet', Sheet);
     }

@@ -1,45 +1,81 @@
-define(['exports', '../common/common'], function (exports, _commonCommon) {
+define(['exports', '../common/common'], function (exports, _common) {
   'use strict';
 
-  exports.__esModule = true;
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.TreeGridColumn = undefined;
 
-  var _createDecoratedClass = (function () { function defineProperties(target, descriptors, initializers) { for (var i = 0; i < descriptors.length; i++) { var descriptor = descriptors[i]; var decorators = descriptor.decorators; var key = descriptor.key; delete descriptor.key; delete descriptor.decorators; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor || descriptor.initializer) descriptor.writable = true; if (decorators) { for (var f = 0; f < decorators.length; f++) { var decorator = decorators[f]; if (typeof decorator === 'function') { descriptor = decorator(target, key, descriptor) || descriptor; } else { throw new TypeError('The decorator for method ' + descriptor.key + ' is of the invalid type ' + typeof decorator); } } if (descriptor.initializer !== undefined) { initializers[key] = descriptor; continue; } } Object.defineProperty(target, key, descriptor); } } return function (Constructor, protoProps, staticProps, protoInitializers, staticInitializers) { if (protoProps) defineProperties(Constructor.prototype, protoProps, protoInitializers); if (staticProps) defineProperties(Constructor, staticProps, staticInitializers); return Constructor; }; })();
+  function _initDefineProp(target, property, descriptor, context) {
+    if (!descriptor) return;
+    Object.defineProperty(target, property, {
+      enumerable: descriptor.enumerable,
+      configurable: descriptor.configurable,
+      writable: descriptor.writable,
+      value: descriptor.initializer ? descriptor.initializer.call(context) : void 0
+    });
+  }
 
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
 
-  function _defineDecoratedPropertyDescriptor(target, key, descriptors) { var _descriptor = descriptors[key]; if (!_descriptor) return; var descriptor = {}; for (var _key in _descriptor) descriptor[_key] = _descriptor[_key]; descriptor.value = descriptor.initializer ? descriptor.initializer.call(target) : undefined; Object.defineProperty(target, key, descriptor); }
+  function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) {
+    var desc = {};
+    Object['ke' + 'ys'](descriptor).forEach(function (key) {
+      desc[key] = descriptor[key];
+    });
+    desc.enumerable = !!desc.enumerable;
+    desc.configurable = !!desc.configurable;
 
-  var TreeGridColumn = (function () {
-    var _instanceInitializers = {};
+    if ('value' in desc || desc.initializer) {
+      desc.writable = true;
+    }
 
+    desc = decorators.slice().reverse().reduce(function (desc, decorator) {
+      return decorator(target, property, desc) || desc;
+    }, desc);
+
+    if (context && desc.initializer !== void 0) {
+      desc.value = desc.initializer ? desc.initializer.call(context) : void 0;
+      desc.initializer = undefined;
+    }
+
+    if (desc.initializer === void 0) {
+      Object['define' + 'Property'](target, property, desc);
+      desc = null;
+    }
+
+    return desc;
+  }
+
+  function _initializerWarningHelper(descriptor, context) {
+    throw new Error('Decorating class property failed. Please ensure that transform-class-properties is enabled.');
+  }
+
+  var _dec, _dec2, _dec3, _dec4, _class, _desc, _value, _class2, _descriptor;
+
+  var TreeGridColumn = exports.TreeGridColumn = (_dec = (0, _common.inlineView)('' + _common.constants.aureliaTemplateString), _dec2 = (0, _common.customElement)(_common.constants.elementPrefix + 'tree-grid-column'), _dec3 = (0, _common.generateBindables)('columns', ['allowFiltering', 'allowSorting', 'editType', 'field', 'filterEditType', 'headerText', 'visible', 'headerTemplateID', 'isFrozen', 'allowFreezing']), _dec4 = (0, _common.children)(_common.constants.elementPrefix + 'template'), _dec(_class = _dec2(_class = _dec3(_class = (_class2 = function () {
     function TreeGridColumn() {
-      _classCallCheck(this, _TreeGridColumn);
+      _classCallCheck(this, TreeGridColumn);
 
-      _defineDecoratedPropertyDescriptor(this, 'template', _instanceInitializers);
+      _initDefineProp(this, 'template', _descriptor, this);
     }
 
     TreeGridColumn.prototype.setTemplates = function setTemplates() {
       if (this.template[0]) {
-        var util = new _commonCommon.Util();
+        var util = new _common.Util();
         this[util.getBindablePropertyName('template')] = this.template[0].template;
       }
     };
 
-    _createDecoratedClass(TreeGridColumn, [{
-      key: 'template',
-      decorators: [_commonCommon.children(_commonCommon.constants.elementPrefix + 'template')],
-      initializer: function initializer() {
-        return [];
-      },
-      enumerable: true
-    }], null, _instanceInitializers);
-
-    var _TreeGridColumn = TreeGridColumn;
-    TreeGridColumn = _commonCommon.generateBindables('columns', ['allowFiltering', 'allowSorting', 'editType', 'field', 'filterEditType', 'headerText', 'visible', 'headerTemplateID', 'isFrozen', 'allowFreezing'])(TreeGridColumn) || TreeGridColumn;
-    TreeGridColumn = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'tree-grid-column')(TreeGridColumn) || TreeGridColumn;
-    TreeGridColumn = _commonCommon.inlineView('' + _commonCommon.constants.aureliaTemplateString)(TreeGridColumn) || TreeGridColumn;
     return TreeGridColumn;
-  })();
-
-  exports.TreeGridColumn = TreeGridColumn;
+  }(), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, 'template', [_dec4], {
+    enumerable: true,
+    initializer: function initializer() {
+      return [];
+    }
+  })), _class2)) || _class) || _class) || _class);
 });

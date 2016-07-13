@@ -1,14 +1,20 @@
-System.register([], function (_export) {
-  'use strict';
+'use strict';
+
+System.register([], function (_export, _context) {
+  "use strict";
 
   var EjConfigBuilder;
 
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
 
   return {
     setters: [],
     execute: function () {
-      EjConfigBuilder = (function () {
+      _export('EjConfigBuilder', EjConfigBuilder = function () {
         function EjConfigBuilder() {
           _classCallCheck(this, EjConfigBuilder);
 
@@ -373,7 +379,7 @@ System.register([], function (_export) {
         };
 
         return EjConfigBuilder;
-      })();
+      }());
 
       _export('EjConfigBuilder', EjConfigBuilder);
     }

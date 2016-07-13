@@ -1,16 +1,22 @@
-System.register(['./constants'], function (_export) {
-  'use strict';
+'use strict';
+
+System.register(['./constants'], function (_export, _context) {
+  "use strict";
 
   var constants, Util;
 
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
 
   return {
     setters: [function (_constants) {
       constants = _constants.constants;
     }],
     execute: function () {
-      Util = (function () {
+      _export('Util', Util = function () {
         function Util() {
           _classCallCheck(this, Util);
         }
@@ -28,7 +34,7 @@ System.register(['./constants'], function (_export) {
 
         Util.prototype.getOptions = function getOptions(model, properties) {
           var bindableproperites = {};
-          var value = undefined;
+          var value = void 0;
           for (var _iterator = properties, _isArray = Array.isArray(_iterator), _i = 0, _iterator = _isArray ? _iterator : _iterator[Symbol.iterator]();;) {
             var _ref;
 
@@ -59,7 +65,7 @@ System.register(['./constants'], function (_export) {
         };
 
         Util.prototype.getControlPropertyName = function getControlPropertyName(options, propertyName) {
-          var property = undefined;
+          var property = void 0;
           for (var _iterator2 = options.controlProperties, _isArray2 = Array.isArray(_iterator2), _i2 = 0, _iterator2 = _isArray2 ? _iterator2 : _iterator2[Symbol.iterator]();;) {
             var _ref2;
 
@@ -98,7 +104,7 @@ System.register(['./constants'], function (_export) {
         };
 
         return Util;
-      })();
+      }());
 
       _export('Util', Util);
     }

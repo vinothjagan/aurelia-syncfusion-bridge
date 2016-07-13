@@ -1,17 +1,26 @@
-define(['exports', 'aurelia-dependency-injection', '../common/util', 'aurelia-templating'], function (exports, _aureliaDependencyInjection, _commonUtil, _aureliaTemplating) {
+define(['exports', 'aurelia-dependency-injection', '../common/util', 'aurelia-templating'], function (exports, _aureliaDependencyInjection, _util, _aureliaTemplating) {
   'use strict';
 
-  exports.__esModule = true;
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.TemplateProcessor = undefined;
 
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
 
-  var TemplateProcessor = (function () {
+  var _dec, _class;
+
+  var TemplateProcessor = exports.TemplateProcessor = (_dec = (0, _aureliaDependencyInjection.inject)(_aureliaTemplating.TemplatingEngine, _util.Util), _dec(_class = function () {
     function TemplateProcessor(context, templateEngine) {
-      _classCallCheck(this, _TemplateProcessor);
+      _classCallCheck(this, TemplateProcessor);
 
       this.context = context;
       this.templatingEngine = templateEngine;
-      this.util = new _commonUtil.Util();
+      this.util = new _util.Util();
     }
 
     TemplateProcessor.prototype.initTemplate = function initTemplate() {
@@ -87,10 +96,6 @@ define(['exports', 'aurelia-dependency-injection', '../common/util', 'aurelia-te
       }
     };
 
-    var _TemplateProcessor = TemplateProcessor;
-    TemplateProcessor = _aureliaDependencyInjection.inject(_aureliaTemplating.TemplatingEngine, _commonUtil.Util)(TemplateProcessor) || TemplateProcessor;
     return TemplateProcessor;
-  })();
-
-  exports.TemplateProcessor = TemplateProcessor;
+  }()) || _class);
 });

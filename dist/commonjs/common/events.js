@@ -1,6 +1,8 @@
 'use strict';
 
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 exports.getEventOption = getEventOption;
 exports.fireEvent = fireEvent;
 
@@ -11,14 +13,14 @@ var _aureliaDependencyInjection = require('aurelia-dependency-injection');
 var _constants = require('./constants');
 
 function getEventOption(element) {
-  var name = undefined;
-  var attr = undefined;
+  var name = void 0;
+  var attr = void 0;
   var attributes = element.attributes;
   var option = {};
   var container = _aureliaDependencyInjection.Container.instance || new _aureliaDependencyInjection.Container();
   var util = container.get(_util.Util);
 
-  var _loop = function (i, len) {
+  var _loop = function _loop(i, len) {
     attr = attributes[i];
     name = attr.name;
     if (!name.startsWith(_constants.constants.eventPrefix)) {
@@ -38,7 +40,6 @@ function getEventOption(element) {
   }
   return option;
 }
-
 function fireEvent(element, name) {
   var data = arguments.length <= 2 || arguments[2] === undefined ? {} : arguments[2];
 

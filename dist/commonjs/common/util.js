@@ -1,12 +1,15 @@
 'use strict';
 
-exports.__esModule = true;
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Util = undefined;
 
 var _constants = require('./constants');
 
-var Util = (function () {
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Util = exports.Util = function () {
   function Util() {
     _classCallCheck(this, Util);
   }
@@ -24,7 +27,7 @@ var Util = (function () {
 
   Util.prototype.getOptions = function getOptions(model, properties) {
     var bindableproperites = {};
-    var value = undefined;
+    var value = void 0;
     for (var _iterator = properties, _isArray = Array.isArray(_iterator), _i = 0, _iterator = _isArray ? _iterator : _iterator[Symbol.iterator]();;) {
       var _ref;
 
@@ -55,7 +58,7 @@ var Util = (function () {
   };
 
   Util.prototype.getControlPropertyName = function getControlPropertyName(options, propertyName) {
-    var property = undefined;
+    var property = void 0;
     for (var _iterator2 = options.controlProperties, _isArray2 = Array.isArray(_iterator2), _i2 = 0, _iterator2 = _isArray2 ? _iterator2 : _iterator2[Symbol.iterator]();;) {
       var _ref2;
 
@@ -94,6 +97,4 @@ var Util = (function () {
   };
 
   return Util;
-})();
-
-exports.Util = Util;
+}();

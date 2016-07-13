@@ -1,15 +1,82 @@
-System.register(['../common/common', 'datavisualization/ej.rangenavigator.min'], function (_export) {
-  'use strict';
+'use strict';
 
-  var inject, WidgetBase, constants, generateBindables, inlineView, customElement, children, ejRangeNavigator;
+System.register(['../common/common', 'datavisualization/ej.rangenavigator.min'], function (_export, _context) {
+  "use strict";
 
-  var _createDecoratedClass = (function () { function defineProperties(target, descriptors, initializers) { for (var i = 0; i < descriptors.length; i++) { var descriptor = descriptors[i]; var decorators = descriptor.decorators; var key = descriptor.key; delete descriptor.key; delete descriptor.decorators; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor || descriptor.initializer) descriptor.writable = true; if (decorators) { for (var f = 0; f < decorators.length; f++) { var decorator = decorators[f]; if (typeof decorator === 'function') { descriptor = decorator(target, key, descriptor) || descriptor; } else { throw new TypeError('The decorator for method ' + descriptor.key + ' is of the invalid type ' + typeof decorator); } } if (descriptor.initializer !== undefined) { initializers[key] = descriptor; continue; } } Object.defineProperty(target, key, descriptor); } } return function (Constructor, protoProps, staticProps, protoInitializers, staticInitializers) { if (protoProps) defineProperties(Constructor.prototype, protoProps, protoInitializers); if (staticProps) defineProperties(Constructor, staticProps, staticInitializers); return Constructor; }; })();
+  var inject, WidgetBase, constants, generateBindables, inlineView, customElement, children, _dec, _dec2, _dec3, _dec4, _dec5, _class, _desc, _value, _class2, _descriptor, ejRangeNavigator;
 
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+  function _initDefineProp(target, property, descriptor, context) {
+    if (!descriptor) return;
+    Object.defineProperty(target, property, {
+      enumerable: descriptor.enumerable,
+      configurable: descriptor.configurable,
+      writable: descriptor.writable,
+      value: descriptor.initializer ? descriptor.initializer.call(context) : void 0
+    });
+  }
 
-  function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
 
-  function _defineDecoratedPropertyDescriptor(target, key, descriptors) { var _descriptor = descriptors[key]; if (!_descriptor) return; var descriptor = {}; for (var _key in _descriptor) descriptor[_key] = _descriptor[_key]; descriptor.value = descriptor.initializer ? descriptor.initializer.call(target) : undefined; Object.defineProperty(target, key, descriptor); }
+  function _possibleConstructorReturn(self, call) {
+    if (!self) {
+      throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    }
+
+    return call && (typeof call === "object" || typeof call === "function") ? call : self;
+  }
+
+  function _inherits(subClass, superClass) {
+    if (typeof superClass !== "function" && superClass !== null) {
+      throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+    }
+
+    subClass.prototype = Object.create(superClass && superClass.prototype, {
+      constructor: {
+        value: subClass,
+        enumerable: false,
+        writable: true,
+        configurable: true
+      }
+    });
+    if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+  }
+
+  function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) {
+    var desc = {};
+    Object['ke' + 'ys'](descriptor).forEach(function (key) {
+      desc[key] = descriptor[key];
+    });
+    desc.enumerable = !!desc.enumerable;
+    desc.configurable = !!desc.configurable;
+
+    if ('value' in desc || desc.initializer) {
+      desc.writable = true;
+    }
+
+    desc = decorators.slice().reverse().reduce(function (desc, decorator) {
+      return decorator(target, property, desc) || desc;
+    }, desc);
+
+    if (context && desc.initializer !== void 0) {
+      desc.value = desc.initializer ? desc.initializer.call(context) : void 0;
+      desc.initializer = undefined;
+    }
+
+    if (desc.initializer === void 0) {
+      Object['define' + 'Property'](target, property, desc);
+      desc = null;
+    }
+
+    return desc;
+  }
+
+  function _initializerWarningHelper(descriptor, context) {
+    throw new Error('Decorating class property failed. Please ensure that transform-class-properties is enabled.');
+  }
 
   return {
     setters: [function (_commonCommon) {
@@ -22,39 +89,29 @@ System.register(['../common/common', 'datavisualization/ej.rangenavigator.min'],
       children = _commonCommon.children;
     }, function (_datavisualizationEjRangenavigatorMin) {}],
     execute: function () {
-      ejRangeNavigator = (function (_WidgetBase) {
-        var _instanceInitializers = {};
-
+      _export('ejRangeNavigator', ejRangeNavigator = (_dec = customElement(constants.elementPrefix + 'range-navigator'), _dec2 = inlineView('' + constants.aureliaTemplateString), _dec3 = generateBindables('ejRangeNavigator', ['allowSnapping', 'border', 'dataSource', 'enableDeferredUpdate', 'enableScrollbar', 'enableRTL', 'isResponsive', 'labelSettings', 'locale', 'navigatorStyleSettings', 'padding', 'rangePadding', 'rangeSettings', 'selectedData', 'selectedRangeSettings', 'scrollRangeSettings', 'sizeSettings', 'theme', 'tooltipSettings', 'valueAxisSettings', 'valueType', 'xName', 'yName'], [], { 'enableRTL': 'enableRtl' }), _dec4 = inject(Element), _dec5 = children(constants.elementPrefix + 'range-series'), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = (_class2 = function (_WidgetBase) {
         _inherits(ejRangeNavigator, _WidgetBase);
 
-        _createDecoratedClass(ejRangeNavigator, [{
-          key: 'series',
-          decorators: [children(constants.elementPrefix + 'range-series')],
-          initializer: function initializer() {
-            return [];
-          },
-          enumerable: true
-        }], null, _instanceInitializers);
-
         function ejRangeNavigator(element) {
-          _classCallCheck(this, _ejRangeNavigator);
+          _classCallCheck(this, ejRangeNavigator);
 
-          _WidgetBase.call(this);
+          var _this = _possibleConstructorReturn(this, _WidgetBase.call(this));
 
-          _defineDecoratedPropertyDescriptor(this, 'series', _instanceInitializers);
+          _initDefineProp(_this, 'series', _descriptor, _this);
 
-          this.element = element;
-          this.hasChildProperty = true;
-          this.childPropertyName = 'series';
+          _this.element = element;
+          _this.hasChildProperty = true;
+          _this.childPropertyName = 'series';
+          return _this;
         }
 
-        var _ejRangeNavigator = ejRangeNavigator;
-        ejRangeNavigator = inject(Element)(ejRangeNavigator) || ejRangeNavigator;
-        ejRangeNavigator = generateBindables('ejRangeNavigator', ['allowSnapping', 'border', 'dataSource', 'enableDeferredUpdate', 'enableScrollbar', 'enableRTL', 'isResponsive', 'labelSettings', 'locale', 'navigatorStyleSettings', 'padding', 'rangePadding', 'rangeSettings', 'selectedData', 'selectedRangeSettings', 'scrollRangeSettings', 'sizeSettings', 'theme', 'tooltipSettings', 'valueAxisSettings', 'valueType', 'xName', 'yName'], [], { 'enableRTL': 'enableRtl' })(ejRangeNavigator) || ejRangeNavigator;
-        ejRangeNavigator = inlineView('' + constants.aureliaTemplateString)(ejRangeNavigator) || ejRangeNavigator;
-        ejRangeNavigator = customElement(constants.elementPrefix + 'range-navigator')(ejRangeNavigator) || ejRangeNavigator;
         return ejRangeNavigator;
-      })(WidgetBase);
+      }(WidgetBase), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, 'series', [_dec5], {
+        enumerable: true,
+        initializer: function initializer() {
+          return [];
+        }
+      })), _class2)) || _class) || _class) || _class) || _class));
 
       _export('ejRangeNavigator', ejRangeNavigator);
     }

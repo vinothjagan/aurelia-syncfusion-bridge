@@ -1,28 +1,55 @@
-define(['exports', '../common/common', 'ej.menu.min'], function (exports, _commonCommon, _ejMenuMin) {
+define(['exports', '../common/common', 'ej.menu.min'], function (exports, _common) {
   'use strict';
 
-  exports.__esModule = true;
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.ejMenu = undefined;
 
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
 
-  function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+  function _possibleConstructorReturn(self, call) {
+    if (!self) {
+      throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    }
 
-  var ejMenu = (function (_WidgetBase) {
+    return call && (typeof call === "object" || typeof call === "function") ? call : self;
+  }
+
+  function _inherits(subClass, superClass) {
+    if (typeof superClass !== "function" && superClass !== null) {
+      throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+    }
+
+    subClass.prototype = Object.create(superClass && superClass.prototype, {
+      constructor: {
+        value: subClass,
+        enumerable: false,
+        writable: true,
+        configurable: true
+      }
+    });
+    if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+  }
+
+  var _dec, _dec2, _dec3, _class;
+
+  var ejMenu = exports.ejMenu = (_dec = (0, _common.customAttribute)(_common.constants.attributePrefix + 'menu'), _dec2 = (0, _common.generateBindables)('ejMenu', ['animationType', 'contextMenuTarget', 'cssClass', 'enableAnimation', 'enableCenterAlign', 'enabled', 'enableRTL', 'enableSeparator', 'excludeTarget', 'fields', 'height', 'htmlAttributes', 'menuType', 'openOnClick', 'orientation', 'showRootLevelArrows', 'showSubLevelArrows', 'subMenuDirection', 'titleText', 'width'], [], { 'enableRTL': 'enableRtl' }), _dec3 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = function (_WidgetBase) {
     _inherits(ejMenu, _WidgetBase);
 
     function ejMenu(element) {
-      _classCallCheck(this, _ejMenu);
+      _classCallCheck(this, ejMenu);
 
-      _WidgetBase.call(this);
-      this.element = element;
+      var _this = _possibleConstructorReturn(this, _WidgetBase.call(this));
+
+      _this.element = element;
+      return _this;
     }
 
-    var _ejMenu = ejMenu;
-    ejMenu = _commonCommon.inject(Element)(ejMenu) || ejMenu;
-    ejMenu = _commonCommon.generateBindables('ejMenu', ['animationType', 'contextMenuTarget', 'cssClass', 'enableAnimation', 'enableCenterAlign', 'enabled', 'enableRTL', 'enableSeparator', 'excludeTarget', 'fields', 'height', 'htmlAttributes', 'menuType', 'openOnClick', 'orientation', 'showRootLevelArrows', 'showSubLevelArrows', 'subMenuDirection', 'titleText', 'width'], [], { 'enableRTL': 'enableRtl' })(ejMenu) || ejMenu;
-    ejMenu = _commonCommon.customAttribute(_commonCommon.constants.attributePrefix + 'menu')(ejMenu) || ejMenu;
     return ejMenu;
-  })(_commonCommon.WidgetBase);
-
-  exports.ejMenu = ejMenu;
+  }(_common.WidgetBase)) || _class) || _class) || _class);
 });

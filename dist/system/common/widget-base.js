@@ -1,11 +1,44 @@
-System.register(['./events', '../common/util', '../common/decorators'], function (_export) {
-  'use strict';
+'use strict';
 
-  var getEventOption, Util, delayed, firstValue, WidgetBase;
+System.register(['./events', '../common/util', '../common/decorators'], function (_export, _context) {
+  "use strict";
 
-  var _createDecoratedClass = (function () { function defineProperties(target, descriptors, initializers) { for (var i = 0; i < descriptors.length; i++) { var descriptor = descriptors[i]; var decorators = descriptor.decorators; var key = descriptor.key; delete descriptor.key; delete descriptor.decorators; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor || descriptor.initializer) descriptor.writable = true; if (decorators) { for (var f = 0; f < decorators.length; f++) { var decorator = decorators[f]; if (typeof decorator === 'function') { descriptor = decorator(target, key, descriptor) || descriptor; } else { throw new TypeError('The decorator for method ' + descriptor.key + ' is of the invalid type ' + typeof decorator); } } if (descriptor.initializer !== undefined) { initializers[key] = descriptor; continue; } } Object.defineProperty(target, key, descriptor); } } return function (Constructor, protoProps, staticProps, protoInitializers, staticInitializers) { if (protoProps) defineProperties(Constructor.prototype, protoProps, protoInitializers); if (staticProps) defineProperties(Constructor, staticProps, staticInitializers); return Constructor; }; })();
+  var getEventOption, Util, delayed, _dec, _desc, _value, _class, firstValue, WidgetBase;
 
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
+
+  function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) {
+    var desc = {};
+    Object['ke' + 'ys'](descriptor).forEach(function (key) {
+      desc[key] = descriptor[key];
+    });
+    desc.enumerable = !!desc.enumerable;
+    desc.configurable = !!desc.configurable;
+
+    if ('value' in desc || desc.initializer) {
+      desc.writable = true;
+    }
+
+    desc = decorators.slice().reverse().reduce(function (desc, decorator) {
+      return decorator(target, property, desc) || desc;
+    }, desc);
+
+    if (context && desc.initializer !== void 0) {
+      desc.value = desc.initializer ? desc.initializer.call(context) : void 0;
+      desc.initializer = undefined;
+    }
+
+    if (desc.initializer === void 0) {
+      Object['define' + 'Property'](target, property, desc);
+      desc = null;
+    }
+
+    return desc;
+  }
 
   return {
     setters: [function (_events) {
@@ -18,7 +51,7 @@ System.register(['./events', '../common/util', '../common/decorators'], function
     execute: function () {
       firstValue = {};
 
-      WidgetBase = (function () {
+      _export('WidgetBase', WidgetBase = (_dec = delayed(), (_class = function () {
         function WidgetBase() {
           _classCallCheck(this, WidgetBase);
         }
@@ -73,15 +106,15 @@ System.register(['./events', '../common/util', '../common/decorators'], function
             }
             value = newVal;
             if (!isApp && model.util.hasValue(newVal)) {
-              var viewModelProp = model.util.getBindablePropertyName(prop);
-              model[viewModelProp] = newVal;
+              var _viewModelProp = model.util.getBindablePropertyName(prop);
+              model[_viewModelProp] = newVal;
             }
             return null;
           };
         };
 
         WidgetBase.prototype.getWidgetOptions = function getWidgetOptions(element) {
-          var propOptions = undefined;
+          var propOptions = void 0;
           if (this.ejOptions) {
             propOptions = this.ejOptions;
           } else {
@@ -107,9 +140,19 @@ System.register(['./events', '../common/util', '../common/decorators'], function
           }
         };
 
+        WidgetBase.prototype.attached = function attached() {
+          if (this.templateProcessor) {
+            this[this.childPropertyName].forEach(function (template) {
+              return template.setTemplates();
+            });
+          }
+          this.util = new Util();
+          this.createWidget({ element: this.element });
+        };
+
         WidgetBase.prototype.propertyChanged = function propertyChanged(property, newValue, oldValue) {
           if (this.widget) {
-            var modelValue = undefined;
+            var modelValue = void 0;
             var prop = this.util.getControlPropertyName(this, property);
             if (prop) {
               if (prop !== 'options') {
@@ -140,22 +183,8 @@ System.register(['./events', '../common/util', '../common/decorators'], function
           }
         };
 
-        _createDecoratedClass(WidgetBase, [{
-          key: 'attached',
-          decorators: [delayed()],
-          value: function attached() {
-            if (this.templateProcessor) {
-              this[this.childPropertyName].forEach(function (template) {
-                return template.setTemplates();
-              });
-            }
-            this.util = new Util();
-            this.createWidget({ element: this.element });
-          }
-        }]);
-
         return WidgetBase;
-      })();
+      }(), (_applyDecoratedDescriptor(_class.prototype, 'attached', [_dec], Object.getOwnPropertyDescriptor(_class.prototype, 'attached'), _class.prototype)), _class)));
 
       _export('WidgetBase', WidgetBase);
     }

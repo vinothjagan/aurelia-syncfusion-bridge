@@ -1,31 +1,33 @@
 'use strict';
 
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.ejSymbolPalette = undefined;
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+var _dec, _dec2, _dec3, _dec4, _class;
 
-function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var _commonCommon = require('../common/common');
+var _common = require('../common/common');
 
 require('datavisualization/ej.diagram.min');
 
-var ejSymbolPalette = (function (_WidgetBase) {
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var ejSymbolPalette = exports.ejSymbolPalette = (_dec = (0, _common.customElement)(_common.constants.elementPrefix + 'symbol-palette'), _dec2 = (0, _common.inlineView)('' + _common.constants.aureliaTemplateString), _dec3 = (0, _common.generateBindables)('ejSymbolPalette', ['allowDrag', 'cssClass', 'defaultSettings', 'diagramId', 'headerHeight', 'height', 'paletteItemHeight', 'paletteItemWidth', 'palettes', 'previewHeight', 'previewOffset', 'previewWidth', 'showPaletteItemText', 'width']), _dec4 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = function (_WidgetBase) {
   _inherits(ejSymbolPalette, _WidgetBase);
 
   function ejSymbolPalette(element) {
-    _classCallCheck(this, _ejSymbolPalette);
+    _classCallCheck(this, ejSymbolPalette);
 
-    _WidgetBase.call(this);
-    this.element = element;
+    var _this = _possibleConstructorReturn(this, _WidgetBase.call(this));
+
+    _this.element = element;
+    return _this;
   }
 
-  var _ejSymbolPalette = ejSymbolPalette;
-  ejSymbolPalette = _commonCommon.inject(Element)(ejSymbolPalette) || ejSymbolPalette;
-  ejSymbolPalette = _commonCommon.generateBindables('ejSymbolPalette', ['allowDrag', 'cssClass', 'defaultSettings', 'diagramId', 'headerHeight', 'height', 'paletteItemHeight', 'paletteItemWidth', 'palettes', 'previewHeight', 'previewOffset', 'previewWidth', 'showPaletteItemText', 'width'])(ejSymbolPalette) || ejSymbolPalette;
-  ejSymbolPalette = _commonCommon.inlineView('' + _commonCommon.constants.aureliaTemplateString)(ejSymbolPalette) || ejSymbolPalette;
-  ejSymbolPalette = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'symbol-palette')(ejSymbolPalette) || ejSymbolPalette;
   return ejSymbolPalette;
-})(_commonCommon.WidgetBase);
-
-exports.ejSymbolPalette = ejSymbolPalette;
+}(_common.WidgetBase)) || _class) || _class) || _class) || _class);

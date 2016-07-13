@@ -1,21 +1,16 @@
 'use strict';
 
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.RangeSeries = undefined;
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+var _dec, _dec2, _dec3, _class;
 
-var _commonCommon = require('../common/common');
+var _common = require('../common/common');
 
-var RangeSeries = (function () {
-  function RangeSeries() {
-    _classCallCheck(this, _RangeSeries);
-  }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-  var _RangeSeries = RangeSeries;
-  RangeSeries = _commonCommon.generateBindables('series', [])(RangeSeries) || RangeSeries;
-  RangeSeries = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'range-series')(RangeSeries) || RangeSeries;
-  RangeSeries = _commonCommon.inlineView('' + _commonCommon.constants.aureliaTemplateString)(RangeSeries) || RangeSeries;
-  return RangeSeries;
-})();
-
-exports.RangeSeries = RangeSeries;
+var RangeSeries = exports.RangeSeries = (_dec = (0, _common.inlineView)('' + _common.constants.aureliaTemplateString), _dec2 = (0, _common.customElement)(_common.constants.elementPrefix + 'range-series'), _dec3 = (0, _common.generateBindables)('series', []), _dec(_class = _dec2(_class = _dec3(_class = function RangeSeries() {
+  _classCallCheck(this, RangeSeries);
+}) || _class) || _class) || _class);

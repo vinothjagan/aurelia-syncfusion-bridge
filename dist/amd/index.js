@@ -1,9 +1,10 @@
 define(['exports', './config-builder'], function (exports, _configBuilder) {
   'use strict';
 
-  exports.__esModule = true;
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
   exports.configure = configure;
-
   function configure(aurelia, configCallback) {
     var builder = new _configBuilder.EjConfigBuilder();
 

@@ -1,29 +1,55 @@
-define(['exports', '../common/common', 'ej.pivotgauge.min'], function (exports, _commonCommon, _ejPivotgaugeMin) {
+define(['exports', '../common/common', 'ej.pivotgauge.min'], function (exports, _common) {
   'use strict';
 
-  exports.__esModule = true;
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.ejPivotGauge = undefined;
 
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
 
-  function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+  function _possibleConstructorReturn(self, call) {
+    if (!self) {
+      throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    }
 
-  var ejPivotGauge = (function (_WidgetBase) {
+    return call && (typeof call === "object" || typeof call === "function") ? call : self;
+  }
+
+  function _inherits(subClass, superClass) {
+    if (typeof superClass !== "function" && superClass !== null) {
+      throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+    }
+
+    subClass.prototype = Object.create(superClass && superClass.prototype, {
+      constructor: {
+        value: subClass,
+        enumerable: false,
+        writable: true,
+        configurable: true
+      }
+    });
+    if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+  }
+
+  var _dec, _dec2, _dec3, _dec4, _class;
+
+  var ejPivotGauge = exports.ejPivotGauge = (_dec = (0, _common.customElement)(_common.constants.elementPrefix + 'pivot-gauge'), _dec2 = (0, _common.inlineView)('' + _common.constants.aureliaTemplateString), _dec3 = (0, _common.generateBindables)('ejPivotGauge', ['backgroundColor', 'columnsCount', 'cssClass', 'customObject', 'dataSource', 'enableTooltip', 'isResponsive', 'labelFormatSettings', 'locale', 'rowsCount', 'scales', 'serviceMethodSettings', 'showHeaderLabel', 'url']), _dec4 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = function (_WidgetBase) {
     _inherits(ejPivotGauge, _WidgetBase);
 
     function ejPivotGauge(element) {
-      _classCallCheck(this, _ejPivotGauge);
+      _classCallCheck(this, ejPivotGauge);
 
-      _WidgetBase.call(this);
-      this.element = element;
+      var _this = _possibleConstructorReturn(this, _WidgetBase.call(this));
+
+      _this.element = element;
+      return _this;
     }
 
-    var _ejPivotGauge = ejPivotGauge;
-    ejPivotGauge = _commonCommon.inject(Element)(ejPivotGauge) || ejPivotGauge;
-    ejPivotGauge = _commonCommon.generateBindables('ejPivotGauge', ['backgroundColor', 'columnsCount', 'cssClass', 'customObject', 'dataSource', 'enableTooltip', 'isResponsive', 'labelFormatSettings', 'locale', 'rowsCount', 'scales', 'serviceMethodSettings', 'showHeaderLabel', 'url'])(ejPivotGauge) || ejPivotGauge;
-    ejPivotGauge = _commonCommon.inlineView('' + _commonCommon.constants.aureliaTemplateString)(ejPivotGauge) || ejPivotGauge;
-    ejPivotGauge = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'pivot-gauge')(ejPivotGauge) || ejPivotGauge;
     return ejPivotGauge;
-  })(_commonCommon.WidgetBase);
-
-  exports.ejPivotGauge = ejPivotGauge;
+  }(_common.WidgetBase)) || _class) || _class) || _class) || _class);
 });

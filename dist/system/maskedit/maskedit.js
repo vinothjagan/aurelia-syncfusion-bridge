@@ -1,11 +1,39 @@
-System.register(['../common/common', 'ej.maskedit.min'], function (_export) {
-  'use strict';
+'use strict';
 
-  var customAttribute, inject, WidgetBase, constants, generateBindables, ejMaskEdit;
+System.register(['../common/common', 'ej.maskedit.min'], function (_export, _context) {
+  "use strict";
 
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+  var customAttribute, inject, WidgetBase, constants, generateBindables, _dec, _dec2, _dec3, _class, ejMaskEdit;
 
-  function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
+
+  function _possibleConstructorReturn(self, call) {
+    if (!self) {
+      throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    }
+
+    return call && (typeof call === "object" || typeof call === "function") ? call : self;
+  }
+
+  function _inherits(subClass, superClass) {
+    if (typeof superClass !== "function" && superClass !== null) {
+      throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+    }
+
+    subClass.prototype = Object.create(superClass && superClass.prototype, {
+      constructor: {
+        value: subClass,
+        enumerable: false,
+        writable: true,
+        configurable: true
+      }
+    });
+    if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+  }
 
   return {
     setters: [function (_commonCommon) {
@@ -16,23 +44,21 @@ System.register(['../common/common', 'ej.maskedit.min'], function (_export) {
       generateBindables = _commonCommon.generateBindables;
     }, function (_ejMaskeditMin) {}],
     execute: function () {
-      ejMaskEdit = (function (_WidgetBase) {
+      _export('ejMaskEdit', ejMaskEdit = (_dec = customAttribute(constants.attributePrefix + 'mask-edit'), _dec2 = generateBindables('ejMaskEdit', ['cssClass', 'customCharacter', 'enabled', 'enablePersistence', 'height', 'hidePromptOnLeave', 'htmlAttributes', 'inputMode', 'maskFormat', 'name', 'readOnly', 'showError', 'showRoundedCorner', 'textAlign', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'width'], ['value']), _dec3 = inject(Element), _dec(_class = _dec2(_class = _dec3(_class = function (_WidgetBase) {
         _inherits(ejMaskEdit, _WidgetBase);
 
         function ejMaskEdit(element) {
-          _classCallCheck(this, _ejMaskEdit);
+          _classCallCheck(this, ejMaskEdit);
 
-          _WidgetBase.call(this);
-          this.isEditor = true;
-          this.element = element;
+          var _this = _possibleConstructorReturn(this, _WidgetBase.call(this));
+
+          _this.isEditor = true;
+          _this.element = element;
+          return _this;
         }
 
-        var _ejMaskEdit = ejMaskEdit;
-        ejMaskEdit = inject(Element)(ejMaskEdit) || ejMaskEdit;
-        ejMaskEdit = generateBindables('ejMaskEdit', ['cssClass', 'customCharacter', 'enabled', 'enablePersistence', 'height', 'hidePromptOnLeave', 'htmlAttributes', 'inputMode', 'maskFormat', 'name', 'readOnly', 'showError', 'showRoundedCorner', 'textAlign', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'width'], ['value'])(ejMaskEdit) || ejMaskEdit;
-        ejMaskEdit = customAttribute(constants.attributePrefix + 'mask-edit')(ejMaskEdit) || ejMaskEdit;
         return ejMaskEdit;
-      })(WidgetBase);
+      }(WidgetBase)) || _class) || _class) || _class));
 
       _export('ejMaskEdit', ejMaskEdit);
     }

@@ -1,21 +1,16 @@
 'use strict';
 
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Sheet = undefined;
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+var _dec, _dec2, _dec3, _class;
 
-var _commonCommon = require('../common/common');
+var _common = require('../common/common');
 
-var Sheet = (function () {
-  function Sheet() {
-    _classCallCheck(this, _Sheet);
-  }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-  var _Sheet = Sheet;
-  Sheet = _commonCommon.generateBindables('sheets', ['colCount', 'columnWidth', 'dataSource', 'fieldAsColumnHeader', 'headerStyles', 'primaryKey', 'query', 'rangeSettings', 'rowCount', 'sheetName', 'showGridlines', 'showHeader', 'showHeadings', 'startCell'])(Sheet) || Sheet;
-  Sheet = _commonCommon.customElement(_commonCommon.constants.elementPrefix + 'sheet')(Sheet) || Sheet;
-  Sheet = _commonCommon.inlineView('' + _commonCommon.constants.aureliaTemplateString)(Sheet) || Sheet;
-  return Sheet;
-})();
-
-exports.Sheet = Sheet;
+var Sheet = exports.Sheet = (_dec = (0, _common.inlineView)('' + _common.constants.aureliaTemplateString), _dec2 = (0, _common.customElement)(_common.constants.elementPrefix + 'sheet'), _dec3 = (0, _common.generateBindables)('sheets', ['colCount', 'columnWidth', 'dataSource', 'fieldAsColumnHeader', 'headerStyles', 'primaryKey', 'query', 'rangeSettings', 'rowCount', 'sheetName', 'showGridlines', 'showHeader', 'showHeadings', 'startCell']), _dec(_class = _dec2(_class = _dec3(_class = function Sheet() {
+  _classCallCheck(this, Sheet);
+}) || _class) || _class) || _class);

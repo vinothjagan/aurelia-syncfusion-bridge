@@ -1,10 +1,11 @@
 define(['exports', 'aurelia-templating', 'aurelia-dependency-injection', 'aurelia-metadata', 'aurelia-task-queue', './util'], function (exports, _aureliaTemplating, _aureliaDependencyInjection, _aureliaMetadata, _aureliaTaskQueue, _util) {
   'use strict';
 
-  exports.__esModule = true;
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
   exports.generateBindables = generateBindables;
   exports.delayed = delayed;
-
   function generateBindables(controlName, inputs, twoWayProperties, abbrevProperties) {
     return function (target, key, descriptor) {
       var behaviorResource = _aureliaMetadata.metadata.getOrCreateOwn(_aureliaMetadata.metadata.resource, _aureliaTemplating.HtmlBehaviorResource, target);

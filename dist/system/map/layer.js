@@ -1,9 +1,15 @@
-System.register(['../common/common'], function (_export) {
-  'use strict';
+'use strict';
 
-  var inlineView, customElement, constants, generateBindables, Layer;
+System.register(['../common/common'], function (_export, _context) {
+  "use strict";
 
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+  var inlineView, customElement, constants, generateBindables, _dec, _dec2, _dec3, _class, Layer;
+
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
 
   return {
     setters: [function (_commonCommon) {
@@ -13,17 +19,9 @@ System.register(['../common/common'], function (_export) {
       generateBindables = _commonCommon.generateBindables;
     }],
     execute: function () {
-      Layer = (function () {
-        function Layer() {
-          _classCallCheck(this, _Layer);
-        }
-
-        var _Layer = Layer;
-        Layer = generateBindables('layers', ['bingMapType', 'bubbleSettings', 'dataSource', 'shapeDataPath', 'shapePropertyPath', 'enableMouseHover', 'enableSelection', 'key', 'labelSettings', 'layerType', 'legendSettings', 'mapItemsTemplate', 'markers', 'markerTemplate', 'selectedMapShapes', 'selectionMode', 'shapeData', 'shapeSettings', 'showMapItems', 'showTooltip', 'tooltipTemplate', 'urlTemplate'])(Layer) || Layer;
-        Layer = customElement(constants.elementPrefix + 'layer')(Layer) || Layer;
-        Layer = inlineView('' + constants.aureliaTemplateString)(Layer) || Layer;
-        return Layer;
-      })();
+      _export('Layer', Layer = (_dec = inlineView('' + constants.aureliaTemplateString), _dec2 = customElement(constants.elementPrefix + 'layer'), _dec3 = generateBindables('layers', ['bingMapType', 'bubbleSettings', 'dataSource', 'shapeDataPath', 'shapePropertyPath', 'enableMouseHover', 'enableSelection', 'key', 'labelSettings', 'layerType', 'legendSettings', 'mapItemsTemplate', 'markers', 'markerTemplate', 'selectedMapShapes', 'selectionMode', 'shapeData', 'shapeSettings', 'showMapItems', 'showTooltip', 'tooltipTemplate', 'urlTemplate']), _dec(_class = _dec2(_class = _dec3(_class = function Layer() {
+        _classCallCheck(this, Layer);
+      }) || _class) || _class) || _class));
 
       _export('Layer', Layer);
     }
