@@ -15,11 +15,6 @@ var vinylPaths = require('vinyl-paths');
 
 var jsName = paths.packageName + '.js';
 
-// RegExp remove tags during insert.transform in build-index gulp task
-var startTag = '//\\s*build-index-remove start';
-var endTag = '//\\s*build-index-remove end';
-var removeRegExp = new RegExp(startTag + '[^]+?' + endTag, 'g');
-
 gulp.task('build-index', function(){
   var importsToAdd = [];
 
@@ -31,7 +26,7 @@ gulp.task('build-index', function(){
     }))
     .pipe(concat(jsName))
     .pipe(insert.transform(function(contents) {
-      return tools.createImportBlock(importsToAdd) + contents.replace(removeRegExp, '');
+      return tools.createImportBlock(importsToAdd) + contents;
     }))
     .pipe(gulp.dest(paths.output));
 });
@@ -39,8 +34,7 @@ gulp.task('build-index', function(){
 
 gulp.task('build-es6-temp', function () {
     return gulp.src(paths.output + jsName)
-      // .pipe(to5(assign({}, compilerOptions, {modules:'common'})))
-      .pipe(to5(assign({}, compilerOptions.babelDtsGenerator())))
+      .pipe(to5(assign({}, compilerOptions, {modules:'common'})))
       .pipe(gulp.dest(paths.output + 'temp'));
 });
 
@@ -51,43 +45,32 @@ gulp.task('build-es6', function () {
 
 gulp.task('build-commonjs', function () {
   return gulp.src(paths.source)
-    // .pipe(to5(assign({}, compilerOptions, {modules:'common', plugins: []})))
-    .pipe(to5(assign({}, compilerOptions.commonjs())))
+    .pipe(to5(assign({}, compilerOptions, {modules:'common', plugins: []})))
     .pipe(gulp.dest(paths.output + 'commonjs'));
 });
 
 gulp.task('build-amd', function () {
   return gulp.src(paths.source)
-    // .pipe(to5(assign({}, compilerOptions, {modules:'amd', plugins: []})))
-    .pipe(to5(assign({}, compilerOptions.amd())))
+    .pipe(to5(assign({}, compilerOptions, {modules:'amd', plugins: []})))
     .pipe(gulp.dest(paths.output + 'amd'));
 });
 
 gulp.task('build-system', function () {
   return gulp.src(paths.source)
-    // .pipe(to5(assign({}, compilerOptions, {modules:'system', plugins: []})))
-    .pipe(to5(assign({}, compilerOptions.system())))
+    .pipe(to5(assign({}, compilerOptions, {modules:'system', plugins: []})))
     .pipe(gulp.dest(paths.output + 'system'));
 });
 
 gulp.task('build-dev', function () {
   return gulp.src(paths.source)
     .pipe(sourcemaps.init({loadMaps: true}))
-    // .pipe(to5(assign({}, compilerOptions, {modules:'system', plugins: []})))
-    .pipe(to5(assign({}, compilerOptions.system())))
+    .pipe(to5(assign({}, compilerOptions, {modules:'system', plugins: []})))
     .pipe(sourcemaps.write(paths.output + 'dev'))
     .pipe(gulp.dest(paths.output + 'dev'));
 });
 
 gulp.task('build-dts', function(){
   return gulp.src(paths.output + paths.packageName + '.d.ts')
-  .pipe(insert.transform(function(contents, file) {
-  return 'declare module \'aurelia-binding\' {\r\n' +
-    'export class Lexer {}\r\n' +
-    'export class ParserImplementation {}\r\n' +
-    '}\r\n' + contents;
-}))
-      // .pipe(insert.prepend(insert.prepend()))
       .pipe(rename(paths.packageName + '.d.ts'))
       .pipe(gulp.dest(paths.output + 'es6'))
       .pipe(gulp.dest(paths.output + 'commonjs'))

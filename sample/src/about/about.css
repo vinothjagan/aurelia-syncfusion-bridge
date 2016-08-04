@@ -51,7 +51,9 @@ pre {
 
   background: white;
 }
-
+.logo-circle.syncfusion img{
+  top : 80px;
+}
 .logo-circle.bridge{
   border:none;
 
