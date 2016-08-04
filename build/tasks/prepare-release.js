@@ -26,10 +26,10 @@ gulp.task('changelog', function(callback) {
 
 gulp.task('prepare-release', function(callback){
   return runSequence(
-    'build',
+    'build-release',
     'lint',
     'bump-version',
-    'doc',
+    // 'doc', disabled due to it throwing errors
     'changelog',
     callback
   );

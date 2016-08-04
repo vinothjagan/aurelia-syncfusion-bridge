@@ -1,4 +1,5 @@
 ﻿import '../scripts/xljsondata.js';
+
 export class ImportExport {
   constructor() {
     let filteredData = ej.DataManager(window.importData).executeLocal(ej.Query().take(20).select('Order ID', 'Customer ID', 'Employee ID', 'Ship Name', 'Ship City', 'Ship Address'));//eslint-disable-line new-cap
@@ -31,9 +32,9 @@ export class ImportExport {
     }
   }
   openfailure(args) {
-    let xlObj = $("#Spreadsheet1").data("ejSpreadsheet");
-	let alertDlg = $("#" + xlObj._id + "_alertdlg");
-    xlObj._renderAlertDlgContent(alertDlg, "Alert", args.detail.statusText);
-    alertDlg.ejDialog("open");
+    let xlObj = $('#Spreadsheet1').data('ejSpreadsheet');
+    let alertDlg = $('#' + xlObj._id + '_alertdlg');
+    xlObj._renderAlertDlgContent(alertDlg, 'Alert', args.detail.statusText);
+    alertDlg.ejDialog('open');
   }
 }

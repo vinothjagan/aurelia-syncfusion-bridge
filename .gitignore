@@ -5,6 +5,4 @@ bower_components
 .DS_STORE
 build/reports
 devbuild
-controls.xml
-copy - catalog.bat
-catalog-app
+npm-debug.log
