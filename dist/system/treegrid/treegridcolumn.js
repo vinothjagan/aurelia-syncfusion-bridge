@@ -64,7 +64,7 @@ System.register(['../common/common'], function (_export, _context) {
       Util = _commonCommon.Util;
     }],
     execute: function () {
-      _export('TreeGridColumn', TreeGridColumn = (_dec = inlineView('' + constants.aureliaTemplateString), _dec2 = customElement(constants.elementPrefix + 'tree-grid-column'), _dec3 = generateBindables('columns', ['allowFiltering', 'allowSorting', 'editType', 'field', 'filterEditType', 'headerText', 'visible', 'headerTemplateID', 'isFrozen', 'allowFreezing']), _dec4 = children(constants.elementPrefix + 'template'), _dec(_class = _dec2(_class = _dec3(_class = (_class2 = function () {
+      _export('TreeGridColumn', TreeGridColumn = (_dec = inlineView('' + constants.aureliaTemplateString), _dec2 = customElement(constants.elementPrefix + 'tree-grid-column'), _dec3 = generateBindables('columns', ['allowFiltering', 'allowSorting', 'allowCellSelection', 'editType', 'field', 'filterEditType', 'headerText', 'visible', 'headerTemplateID', 'isFrozen', 'allowFreezing']), _dec4 = children(constants.elementPrefix + 'template'), _dec(_class = _dec2(_class = _dec3(_class = (_class2 = function () {
         function TreeGridColumn() {
           _classCallCheck(this, TreeGridColumn);
 

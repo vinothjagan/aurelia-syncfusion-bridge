@@ -45,7 +45,7 @@ System.register(['../common/common', 'ej.pivotgauge.min'], function (_export, _c
       generateBindables = _commonCommon.generateBindables;
     }, function (_ejPivotgaugeMin) {}],
     execute: function () {
-      _export('ejPivotGauge', ejPivotGauge = (_dec = customElement(constants.elementPrefix + 'pivot-gauge'), _dec2 = inlineView('' + constants.aureliaTemplateString), _dec3 = generateBindables('ejPivotGauge', ['backgroundColor', 'columnsCount', 'cssClass', 'customObject', 'dataSource', 'enableTooltip', 'isResponsive', 'labelFormatSettings', 'locale', 'rowsCount', 'scales', 'serviceMethodSettings', 'showHeaderLabel', 'url']), _dec4 = inject(Element), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = function (_WidgetBase) {
+      _export('ejPivotGauge', ejPivotGauge = (_dec = customElement(constants.elementPrefix + 'pivot-gauge'), _dec2 = inlineView('' + constants.aureliaTemplateString), _dec3 = generateBindables('ejPivotGauge', ['backgroundColor', 'columnsCount', 'cssClass', 'customObject', 'dataSource', 'enableTooltip', 'enableRTL', 'isResponsive', 'labelFormatSettings', 'locale', 'rowsCount', 'scales', 'serviceMethodSettings', 'showHeaderLabel', 'url'], [], { 'enableRTL': 'enableRtl' }), _dec4 = inject(Element), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = function (_WidgetBase) {
         _inherits(ejPivotGauge, _WidgetBase);
 
         function ejPivotGauge(element) {

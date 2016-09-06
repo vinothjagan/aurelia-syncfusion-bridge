@@ -44,7 +44,7 @@ System.register(['../common/common', 'ej.toolbar.min'], function (_export, _cont
       generateBindables = _commonCommon.generateBindables;
     }, function (_ejToolbarMin) {}],
     execute: function () {
-      _export('ejToolbar', ejToolbar = (_dec = customAttribute(constants.attributePrefix + 'toolbar'), _dec2 = generateBindables('ejToolbar', ['cssClass', 'dataSource', 'enabled', 'enableRTL', 'enableSeparator', 'fields', 'height', 'hide', 'isResponsive', 'orientation', 'query', 'showRoundedCorner', 'targetID', 'width'], [], { 'enableRTL': 'enableRtl', 'targetID': 'targetId' }), _dec3 = inject(Element), _dec(_class = _dec2(_class = _dec3(_class = function (_WidgetBase) {
+      _export('ejToolbar', ejToolbar = (_dec = customAttribute(constants.attributePrefix + 'toolbar'), _dec2 = generateBindables('ejToolbar', ['cssClass', 'dataSource', 'enabled', 'enableRTL', 'enableSeparator', 'fields', 'height', 'hide', 'isResponsive', 'orientation', 'query', 'showRoundedCorner', 'width'], [], { 'enableRTL': 'enableRtl' }), _dec3 = inject(Element), _dec(_class = _dec2(_class = _dec3(_class = function (_WidgetBase) {
         _inherits(ejToolbar, _WidgetBase);
 
         function ejToolbar(element) {

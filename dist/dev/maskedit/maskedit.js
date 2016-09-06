@@ -44,7 +44,7 @@ System.register(['../common/common', 'ej.maskedit.min'], function (_export, _con
       generateBindables = _commonCommon.generateBindables;
     }, function (_ejMaskeditMin) {}],
     execute: function () {
-      _export('ejMaskEdit', ejMaskEdit = (_dec = customAttribute(constants.attributePrefix + 'mask-edit'), _dec2 = generateBindables('ejMaskEdit', ['cssClass', 'customCharacter', 'enabled', 'enablePersistence', 'height', 'hidePromptOnLeave', 'htmlAttributes', 'inputMode', 'maskFormat', 'name', 'readOnly', 'showError', 'showRoundedCorner', 'textAlign', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'width'], ['value']), _dec3 = inject(Element), _dec(_class = _dec2(_class = _dec3(_class = function (_WidgetBase) {
+      _export('ejMaskEdit', ejMaskEdit = (_dec = customAttribute(constants.attributePrefix + 'mask-edit'), _dec2 = generateBindables('ejMaskEdit', ['cssClass', 'customCharacter', 'enabled', 'enablePersistence', 'height', 'hidePromptOnLeave', 'htmlAttributes', 'inputMode', 'maskFormat', 'name', 'readOnly', 'showError', 'showPromptChar', 'showRoundedCorner', 'textAlign', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'width'], ['value']), _dec3 = inject(Element), _dec(_class = _dec2(_class = _dec3(_class = function (_WidgetBase) {
         _inherits(ejMaskEdit, _WidgetBase);
 
         function ejMaskEdit(element) {

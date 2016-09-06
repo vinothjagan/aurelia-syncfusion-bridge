@@ -57,7 +57,7 @@ define(['exports', '../common/common'], function (exports, _common) {
 
   var _dec, _dec2, _dec3, _dec4, _class, _desc, _value, _class2, _descriptor;
 
-  var TreeGridColumn = exports.TreeGridColumn = (_dec = (0, _common.inlineView)('' + _common.constants.aureliaTemplateString), _dec2 = (0, _common.customElement)(_common.constants.elementPrefix + 'tree-grid-column'), _dec3 = (0, _common.generateBindables)('columns', ['allowFiltering', 'allowSorting', 'editType', 'field', 'filterEditType', 'headerText', 'visible', 'headerTemplateID', 'isFrozen', 'allowFreezing']), _dec4 = (0, _common.children)(_common.constants.elementPrefix + 'template'), _dec(_class = _dec2(_class = _dec3(_class = (_class2 = function () {
+  var TreeGridColumn = exports.TreeGridColumn = (_dec = (0, _common.inlineView)('' + _common.constants.aureliaTemplateString), _dec2 = (0, _common.customElement)(_common.constants.elementPrefix + 'tree-grid-column'), _dec3 = (0, _common.generateBindables)('columns', ['allowFiltering', 'allowSorting', 'allowCellSelection', 'editType', 'field', 'filterEditType', 'headerText', 'visible', 'headerTemplateID', 'isFrozen', 'allowFreezing']), _dec4 = (0, _common.children)(_common.constants.elementPrefix + 'template'), _dec(_class = _dec2(_class = _dec3(_class = (_class2 = function () {
     function TreeGridColumn() {
       _classCallCheck(this, TreeGridColumn);
 

@@ -38,7 +38,7 @@ define(['exports', '../common/common', 'ej.toolbar.min'], function (exports, _co
 
   var _dec, _dec2, _dec3, _class;
 
-  var ejToolbar = exports.ejToolbar = (_dec = (0, _common.customAttribute)(_common.constants.attributePrefix + 'toolbar'), _dec2 = (0, _common.generateBindables)('ejToolbar', ['cssClass', 'dataSource', 'enabled', 'enableRTL', 'enableSeparator', 'fields', 'height', 'hide', 'isResponsive', 'orientation', 'query', 'showRoundedCorner', 'targetID', 'width'], [], { 'enableRTL': 'enableRtl', 'targetID': 'targetId' }), _dec3 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = function (_WidgetBase) {
+  var ejToolbar = exports.ejToolbar = (_dec = (0, _common.customAttribute)(_common.constants.attributePrefix + 'toolbar'), _dec2 = (0, _common.generateBindables)('ejToolbar', ['cssClass', 'dataSource', 'enabled', 'enableRTL', 'enableSeparator', 'fields', 'height', 'hide', 'isResponsive', 'orientation', 'query', 'showRoundedCorner', 'width'], [], { 'enableRTL': 'enableRtl' }), _dec3 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = function (_WidgetBase) {
     _inherits(ejToolbar, _WidgetBase);
 
     function ejToolbar(element) {

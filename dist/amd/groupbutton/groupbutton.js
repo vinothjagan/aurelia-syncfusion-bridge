@@ -38,7 +38,7 @@ define(['exports', '../common/common', 'ej.groupbutton.min'], function (exports,
 
   var _dec, _dec2, _dec3, _class;
 
-  var ejGroupButton = exports.ejGroupButton = (_dec = (0, _common.customAttribute)(_common.constants.attributePrefix + 'group-button'), _dec2 = (0, _common.generateBindables)('ejGroupButton', ['cssClass', 'enableRTL', 'enabled', 'groupButtonMode', 'height', 'htmlAttributes', 'orientation', 'selectedItemIndex', 'showRoundedCorner', 'size', 'width'], [], { 'enableRTL': 'enableRtl' }), _dec3 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = function (_WidgetBase) {
+  var ejGroupButton = exports.ejGroupButton = (_dec = (0, _common.customAttribute)(_common.constants.attributePrefix + 'group-button'), _dec2 = (0, _common.generateBindables)('ejGroupButton', ['cssClass', 'dataSource', 'enableRTL', 'enabled', 'fields', 'groupButtonMode', 'height', 'htmlAttributes', 'orientation', 'query', 'selectedItemIndex', 'showRoundedCorner', 'size', 'width'], [], { 'enableRTL': 'enableRtl' }), _dec3 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = function (_WidgetBase) {
     _inherits(ejGroupButton, _WidgetBase);
 
     function ejGroupButton(element) {

@@ -45,7 +45,7 @@ System.register(['../common/common', 'datavisualization/ej.sparkline.min'], func
       generateBindables = _commonCommon.generateBindables;
     }, function (_datavisualizationEjSparklineMin) {}],
     execute: function () {
-      _export('ejSparkline', ejSparkline = (_dec = customElement(constants.elementPrefix + 'sparkline'), _dec2 = inlineView('' + constants.aureliaTemplateString), _dec3 = generateBindables('ejSparkline', ['background', 'fill', 'stroke', 'strokeWidth', 'opacity', 'bandOpacity', 'highPointColor', 'lowPointColor', 'startPointColor', 'endPointColor', 'negativePointColor', 'startRange', 'endRange', 'enableCanvasRendering', 'dataSource', 'xName', 'yName', 'padding', 'type', 'theme', 'tooltip', 'markerSettings', 'size', 'border', 'showAxis', 'axisLine']), _dec4 = inject(Element), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = function (_WidgetBase) {
+      _export('ejSparkline', ejSparkline = (_dec = customElement(constants.elementPrefix + 'sparkline'), _dec2 = inlineView('' + constants.aureliaTemplateString), _dec3 = generateBindables('ejSparkline', ['background', 'fill', 'stroke', 'border', 'width', 'opacity', 'highPointColor', 'lowPointColor', 'startPointColor', 'endPointColor', 'negativePointColor', 'rangeBandSettings', 'palette', 'isResponsive', 'enableCanvasRendering', 'dataSource', 'xName', 'yName', 'padding', 'type', 'theme', 'tooltip', 'markerSettings', 'size', 'axisLineSettings']), _dec4 = inject(Element), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = function (_WidgetBase) {
         _inherits(ejSparkline, _WidgetBase);
 
         function ejSparkline(element) {

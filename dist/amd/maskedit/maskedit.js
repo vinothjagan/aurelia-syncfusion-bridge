@@ -38,7 +38,7 @@ define(['exports', '../common/common', 'ej.maskedit.min'], function (exports, _c
 
   var _dec, _dec2, _dec3, _class;
 
-  var ejMaskEdit = exports.ejMaskEdit = (_dec = (0, _common.customAttribute)(_common.constants.attributePrefix + 'mask-edit'), _dec2 = (0, _common.generateBindables)('ejMaskEdit', ['cssClass', 'customCharacter', 'enabled', 'enablePersistence', 'height', 'hidePromptOnLeave', 'htmlAttributes', 'inputMode', 'maskFormat', 'name', 'readOnly', 'showError', 'showRoundedCorner', 'textAlign', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'width'], ['value']), _dec3 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = function (_WidgetBase) {
+  var ejMaskEdit = exports.ejMaskEdit = (_dec = (0, _common.customAttribute)(_common.constants.attributePrefix + 'mask-edit'), _dec2 = (0, _common.generateBindables)('ejMaskEdit', ['cssClass', 'customCharacter', 'enabled', 'enablePersistence', 'height', 'hidePromptOnLeave', 'htmlAttributes', 'inputMode', 'maskFormat', 'name', 'readOnly', 'showError', 'showPromptChar', 'showRoundedCorner', 'textAlign', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'width'], ['value']), _dec3 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = function (_WidgetBase) {
     _inherits(ejMaskEdit, _WidgetBase);
 
     function ejMaskEdit(element) {

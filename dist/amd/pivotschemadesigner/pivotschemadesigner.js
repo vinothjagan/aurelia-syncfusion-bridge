@@ -38,7 +38,7 @@ define(['exports', '../common/common', 'ej.pivotschemadesigner.min'], function (
 
   var _dec, _dec2, _dec3, _dec4, _class;
 
-  var ejPivotSchemaDesigner = exports.ejPivotSchemaDesigner = (_dec = (0, _common.customElement)(_common.constants.elementPrefix + 'pivot-schema-designer'), _dec2 = (0, _common.inlineView)('' + _common.constants.aureliaTemplateString), _dec3 = (0, _common.generateBindables)('ejPivotSchemaDesigner', ['cssClass', 'customObject', 'enableWrapper', 'filters', 'height', 'locale', 'pivotCalculations', 'pivotColumns', 'pivotControl', 'pivotRows', 'pivotTableFields', 'serviceMethod', 'url', 'width']), _dec4 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = function (_WidgetBase) {
+  var ejPivotSchemaDesigner = exports.ejPivotSchemaDesigner = (_dec = (0, _common.customElement)(_common.constants.elementPrefix + 'pivot-schema-designer'), _dec2 = (0, _common.inlineView)('' + _common.constants.aureliaTemplateString), _dec3 = (0, _common.generateBindables)('ejPivotSchemaDesigner', ['cssClass', 'customObject', 'enableWrapper', 'enableRTL', 'showKPI', 'showNamedSets', 'enableDragDrop', 'filters', 'height', 'locale', 'pivotCalculations', 'pivotColumns', 'pivotControl', 'pivotRows', 'pivotTableFields', 'serviceMethod', 'url', 'width'], [], { 'enableRTL': 'enableRtl' }), _dec4 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = function (_WidgetBase) {
     _inherits(ejPivotSchemaDesigner, _WidgetBase);
 
     function ejPivotSchemaDesigner(element) {

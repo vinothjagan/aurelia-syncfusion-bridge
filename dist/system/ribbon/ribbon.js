@@ -45,7 +45,7 @@ System.register(['../common/common', 'ej.ribbon.min'], function (_export, _conte
       generateBindables = _commonCommon.generateBindables;
     }, function (_ejRibbonMin) {}],
     execute: function () {
-      _export('ejRibbon', ejRibbon = (_dec = customElement(constants.elementPrefix + 'ribbon'), _dec2 = inlineView('' + constants.aureliaTemplateString), _dec3 = generateBindables('ejRibbon', ['allowResizing', 'buttonDefaults', 'showQAT', 'collapsePinSettings', 'expandPinSettings', 'applicationTab', 'contextualTabs', 'disabledItemIndex', 'enabledItemIndex', 'selectedItemIndex', 'tabs', 'locale', 'width']), _dec4 = inject(Element), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = function (_WidgetBase) {
+      _export('ejRibbon', ejRibbon = (_dec = customElement(constants.elementPrefix + 'ribbon'), _dec2 = inlineView('' + constants.aureliaTemplateString), _dec3 = generateBindables('ejRibbon', ['allowResizing', 'buttonDefaults', 'showQAT', 'collapsePinSettings', 'enableRTL', 'expandPinSettings', 'applicationTab', 'contextualTabs', 'disabledItemIndex', 'enabledItemIndex', 'selectedItemIndex', 'tabs', 'locale', 'width'], [], { 'enableRTL': 'enableRtl' }), _dec4 = inject(Element), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = function (_WidgetBase) {
         _inherits(ejRibbon, _WidgetBase);
 
         function ejRibbon(element) {

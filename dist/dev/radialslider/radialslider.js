@@ -45,7 +45,7 @@ System.register(['../common/common', 'ej.radialslider.min'], function (_export, 
       generateBindables = _commonCommon.generateBindables;
     }, function (_ejRadialsliderMin) {}],
     execute: function () {
-      _export('ejRadialSlider', ejRadialSlider = (_dec = customElement(constants.elementPrefix + 'radial-slider'), _dec2 = inlineView('' + constants.aureliaTemplateString), _dec3 = generateBindables('ejRadialSlider', ['autoOpen', 'cssClass', 'enableAnimation', 'enableRoundOff', 'endAngle', 'inline', 'innerCircleImageClass', 'innerCircleImageUrl', 'radius', 'strokeWidth']), _dec4 = inject(Element), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = function (_WidgetBase) {
+      _export('ejRadialSlider', ejRadialSlider = (_dec = customElement(constants.elementPrefix + 'radial-slider'), _dec2 = inlineView('' + constants.aureliaTemplateString), _dec3 = generateBindables('ejRadialSlider', ['autoOpen', 'cssClass', 'enableAnimation', 'enableRoundOff', 'endAngle', 'inline', 'innerCircleImageClass', 'innerCircleImageUrl', 'labelSpace', 'radius', 'showInnerCircle', 'startAngle', 'strokeWidth', 'value'], ['value']), _dec4 = inject(Element), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = function (_WidgetBase) {
         _inherits(ejRadialSlider, _WidgetBase);
 
         function ejRadialSlider(element) {
