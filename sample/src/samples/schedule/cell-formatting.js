@@ -156,8 +156,8 @@ export class QueryCellInfo {
           allowMultiple: false,
           resourceSettings: {
             dataSource: [
-                        { text: 'Floor1', id: 1, groupId: 10, color: '#cb6bb2' },
-                        { text: 'Floor2', id: 2, groupId: 20, color: '#56ca85' }],
+                        { text: 'Floor 1', id: 1, groupId: 10, color: '#cb6bb2' },
+                        { text: 'Floor 2', id: 2, groupId: 20, color: '#56ca85' }],
             text: 'text',
             id: 'id',
             groupId: 'groupId',

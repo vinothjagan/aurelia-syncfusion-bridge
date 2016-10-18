@@ -1,7 +1,7 @@
 export class Api {
     /* eslint-disable no-alert */
     /* eslint-disable radix */
-    orientation(args) {
+    orientation1(args) {
       if (args.detail.value === 'Horizontal') {
         $('#Schedule1').ejSchedule({ orientation: args.detail.value.toLowerCase() });
       }
@@ -129,7 +129,7 @@ export class Api {
             { id: '7', text: 'Saturday', value: 'Saturday' }
       ];
       this.fields = { id: 'id', text: 'text', value: 'value' };
-      this.orientation = ['vertical', 'horizontal'];
+      this.orientation = ['Vertical', 'Horizontal'];
       this.autofit = true;
       this.AppointmentList = {
         dataSource: [

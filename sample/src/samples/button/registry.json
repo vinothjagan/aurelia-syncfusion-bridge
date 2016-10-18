@@ -24,7 +24,7 @@
         "Radio-Buttons": {
             "files": [ "html", "js"]
         },
-        "API's": {
+        "API": {
             "title" : "API's",
             "files": [ "html", "js" ]
         },

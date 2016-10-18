@@ -2,17 +2,17 @@ import '../scripts/xljsondata.js';
 export class Chart {
   constructor() {
     this.scroll = { height: '100%', width: '100%', isResponsive: 'true' };
-    this.range1 = [{ dataSource: window.chartData, startCell: 'A1', showHeader: 'true'}];
-    this.range2 = [{ dataSource: window.chartData, startCell: 'A1', showHeader: 'true'}];
-    this.range3 = [{ dataSource: window.chartData, startCell: 'A1', showHeader: 'true'}];
-    this.range4 = [{ dataSource: window.chartData, startCell: 'A1', showHeader: 'true'}];
-    this.range5 = [{ dataSource: window.chartData, startCell: 'A1', showHeader: 'true'}];
-    this.range6 = [{ dataSource: window.chartData, startCell: 'A1', showHeader: 'true'}];
-    this.range7 = [{ dataSource: window.chartData, startCell: 'A1', showHeader: 'true'}];
-    this.range8 = [{ dataSource: window.chartData, startCell: 'A1', showHeader: 'true'}];
-    this.range9 = [{ dataSource: window.chartData, startCell: 'A1', showHeader: 'true'}];
-    this.range10 = [{ dataSource: window.chartData, startCell: 'A1', showHeader: 'true'}];
-    this.range11 = [{ dataSource: window.chartData, startCell: 'A1', showHeader: 'true'}];
+    this.range1 = [{ dataSource: window.chartData, startCell: 'A1'}];
+    this.range2 = [{ dataSource: window.chartData, startCell: 'A1'}];
+    this.range3 = [{ dataSource: window.chartData, startCell: 'A1'}];
+    this.range4 = [{ dataSource: window.chartData, startCell: 'A1'}];
+    this.range5 = [{ dataSource: window.chartData, startCell: 'A1'}];
+    this.range6 = [{ dataSource: window.chartData, startCell: 'A1'}];
+    this.range7 = [{ dataSource: window.chartData, startCell: 'A1'}];
+    this.range8 = [{ dataSource: window.chartData, startCell: 'A1'}];
+    this.range9 = [{ dataSource: window.chartData, startCell: 'A1'}];
+    this.range10 = [{ dataSource: window.chartData, startCell: 'A1'}];
+    this.range11 = [{ dataSource: window.chartData, startCell: 'A1'}];
     this.page = {pageCount: 21};
   }
   loadcomplete(args) {

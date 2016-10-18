@@ -39,13 +39,6 @@
                 "js"
             ]
         },
-        "print-and-export": {
-            "files": [
-                "html",
-                "js",
-                "css"
-            ]
-        },
         "cell-formatting": {
             "files": [
                 "html",

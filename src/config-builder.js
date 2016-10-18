@@ -16,6 +16,8 @@ export class EjConfigBuilder {
     .ejTreeMap()
     .ejRangeNavigator()
     .ejDiagram()
+    .ejHeatMap()
+    .ejHeatMapLegend()
     .ejSparkline()
     .ejSymbolPalette()
     .ejOverview()
@@ -71,6 +73,7 @@ export class EjConfigBuilder {
     .ejPivotChart()
     .ejPivotGauge()
     .ejPivotSchemaDesigner()
+    .ejPivotTreeMap()
     .ejWaitingPopup()
     .ejReportViewer()
     .ejSchedule()
@@ -114,6 +117,14 @@ export class EjConfigBuilder {
   }
   ejDiagram(): EjConfigBuilder {
     this.resources.push('./diagram/diagram');
+    return this;
+  }
+  ejHeatMap(): EjConfigBuilder {
+    this.resources.push('./heatmap/heatmap');
+    return this;
+  }
+  ejHeatMapLegend(): EjConfigBuilder {
+    this.resources.push('./heatmaplegend/heatmaplegend');
     return this;
   }
   ejSparkline(): EjConfigBuilder {
@@ -339,6 +350,10 @@ export class EjConfigBuilder {
   }
   ejPivotSchemaDesigner(): EjConfigBuilder {
     this.resources.push('./pivotschemadesigner/pivotschemadesigner');
+    return this;
+  }
+  ejPivotTreeMap(): EjConfigBuilder {
+    this.resources.push('./pivottreemap/pivottreemap');
     return this;
   }
   ejWaitingPopup(): EjConfigBuilder {

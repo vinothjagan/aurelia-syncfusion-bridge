@@ -22,7 +22,7 @@
       "default" : false,
       "files": ["html", "js"]
     },
-    "API's": {
+    "API": {
       "default" : false,
       "title" : "API's",
       "files": ["html", "js"]
