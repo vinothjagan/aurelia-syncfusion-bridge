@@ -21,6 +21,7 @@ export class EjConfigBuilder {
     .ejSparkline()
     .ejSymbolPalette()
     .ejOverview()
+    .ejPager()
     .ejBulletGraph()
     .ejCircularGauge()
     .ejLinearGauge()
@@ -137,6 +138,10 @@ export class EjConfigBuilder {
   }
   ejOverview(): EjConfigBuilder {
     this.resources.push('./overview/overview');
+    return this;
+  }
+  ejPager(): EjConfigBuilder {
+    this.resources.push('./pager/pager');
     return this;
   }
   ejBulletGraph(): EjConfigBuilder {

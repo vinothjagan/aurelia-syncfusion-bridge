@@ -16,7 +16,8 @@
         "NavigationDrawer": "navigationdrawer",
         "RadialMenu": "radialmenu",
         "FileExplorer": "fileexplorer",
-        "Toolbar": "toolbar"
+        "Toolbar": "toolbar",
+        "Pager": "pager"
     },
     "Layout": {
         "Splitter": "splitter",

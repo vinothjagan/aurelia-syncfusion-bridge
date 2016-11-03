@@ -65,6 +65,10 @@
         "Toolbar": {
             "status": "done",
             "moduleId": "toolbar"
+        },
+        "Pager": {
+            "status": "done",
+            "moduleId": "pager"
         }
     },
     "Layout": {
