@@ -165,10 +165,9 @@ showTooltipContent(event) {
   } else if (($(currentToolbarItem).hasClass('e-pdfviewer-fitwidth')) || ($(disabledItem).hasClass('e-pdfviewer-fitwidth'))) {
     TooltipPos = $('#magnificationDiv .e-pdfviewer-fitwidth')[0].getBoundingClientRect();
     toolTipText = 'Fit to Width';
-  }
-  else if (($(currentToolbarItem).hasClass('e-pdfviewer-download')) || ($(disabledItem).hasClass('e-pdfviewer-download'))) {
-      TooltipPos = $('#toolbarDiv .e-pdfviewer-download')[0].getBoundingClientRect();
-      toolTipText = 'Download PDF document';
+  } else if (($(currentToolbarItem).hasClass('e-pdfviewer-download')) || ($(disabledItem).hasClass('e-pdfviewer-download'))) {
+    TooltipPos = $('#toolbarDiv .e-pdfviewer-download')[0].getBoundingClientRect();
+    toolTipText = 'Download PDF document';
   }
 
   $('#toolTip_Content').html(toolTipText);

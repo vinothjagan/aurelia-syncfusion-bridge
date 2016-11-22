@@ -1,4 +1,8 @@
-import {inject, WidgetBase, constants, generateBindables, inlineView, customElement, children, TemplatingEngine, TemplateProcessor} from '../common/common';
+import {WidgetBase} from '../common/widget-base';
+import {constants} from '../common/constants';
+import {generateBindables} from '../common/decorators';
+import {inject, inlineView, customElement, children, TemplatingEngine} from '../common/common';
+import {TemplateProcessor} from '../common/template-processor';
 
 import 'ej.radialmenu.min';
 

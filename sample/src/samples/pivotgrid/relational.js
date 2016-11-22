@@ -52,16 +52,6 @@ export class BasicUse {
     this.olapSettings = {
       showKpi: false, showNamedSets: true
     };
-  }
-  renderFieldList(args) {
-    let PivotSchemaDesigner = $('.e-pivotschemadesigner').data('ejPivotSchemaDesigner');
-
-    if (PivotSchemaDesigner.model.pivotControl === null) {
-      PivotSchemaDesigner.model.pivotControl = args.detail;
-      PivotSchemaDesigner.model.layout = 'excel';
-      PivotSchemaDesigner.model.olap = {showKpi: false, showNamedSets: true};
-      PivotSchemaDesigner.model.enableWrapper = true;
-      PivotSchemaDesigner._load();
-    }
+    this.PivotSchemaDesigner = 'pivotschema';
   }
 }

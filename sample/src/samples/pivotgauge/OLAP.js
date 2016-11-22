@@ -37,6 +37,7 @@ export class BasicUse {
     };
     this.rowsCount = 2;
     this.columnsCount = 2;
+    this.backgroundColor = 'transparent';
     this.loadGaugeTheme = 'loadGaugeTheme';
     this.scales = [{
       showRanges: true,

@@ -1,4 +1,7 @@
-import {inlineView, customElement, children, constants, generateBindables, Util} from '../common/common';
+import {constants} from '../common/constants';
+import {generateBindables} from '../common/decorators';
+import {inlineView, customElement, children} from '../common/common';
+import {Util} from '../common/util';
 
 @inlineView(`${constants.aureliaTemplateString}`)
 @customElement(`${constants.elementPrefix}tree-grid-column`)

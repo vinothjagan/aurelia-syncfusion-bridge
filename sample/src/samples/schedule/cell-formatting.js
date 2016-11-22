@@ -18,7 +18,7 @@ export class QueryCellInfo {
     }
     onAppointmentWindowOpen(args) {
       if (!ej.isNullOrUndefined(args.detail.appointment) && !ej.isNullOrUndefined(args.detail.appointment.EventType)) {
-        this._appointmentAddWindow.find('#EventType').ejDropDownList('option', 'value', args.detail.appointment.EventType);
+        $('#EventType').ejDropDownList('option', 'value', args.detail.appointment.EventType);
       }
     }
 

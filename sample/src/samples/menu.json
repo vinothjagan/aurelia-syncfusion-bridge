@@ -57,7 +57,8 @@
         "Uploadbox": "uploadbox",
         "Rating": "rating",
         "Slider": "slider",
-        "RTE": "rte"
+        "RTE": "rte",
+		"Signature" : "signature"
     },
     "File Viewer": {
         "PDF Viewer": "pdfviewer"

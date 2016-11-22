@@ -207,6 +207,10 @@
         "RTE": {
             "status": "done",
             "moduleId": "rte"
+        },
+		 "Signautre": {
+            "status": "done",
+            "moduleId": "signature"
         }
     },
     "File Viewer": {

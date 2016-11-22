@@ -1,4 +1,7 @@
-import {inject, WidgetBase, constants, generateBindables, inlineView, customElement, children} from '../common/common';
+import {WidgetBase} from '../common/widget-base';
+import {constants} from '../common/constants';
+import {generateBindables} from '../common/decorators';
+import {inject, inlineView, customElement, children} from '../common/common';
 
 import 'ej.kanban.min';
 

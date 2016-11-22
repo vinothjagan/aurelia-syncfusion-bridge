@@ -79,6 +79,7 @@ export class EjConfigBuilder {
     .ejReportViewer()
     .ejSchedule()
     .ejUploadbox()
+    .ejSignature()
     .ejTooltip()
     .ejTemplate();
     return this;
@@ -376,6 +377,10 @@ export class EjConfigBuilder {
   }
   ejUploadbox(): EjConfigBuilder {
     this.resources.push('./uploadbox/uploadbox');
+    return this;
+  }
+  ejSignature(): EjConfigBuilder {
+    this.resources.push('./signature/signature');
     return this;
   }
   ejTooltip(): EjConfigBuilder {

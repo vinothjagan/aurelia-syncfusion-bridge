@@ -39,10 +39,6 @@
       "files": ["html", "js"],
       "gist": "32ee22569934697d1fe0c1c42749741a"
     },
-    "exporting":{
-      "files":["html","js"],
-      "gist": "d9051d4045f7e1e805bc685df4c6c911"
-    },
     "RTL":{
       "files": ["html", "js","css"],
       "gist": "6646d076fc4cdd395bfdf12798f2c292"

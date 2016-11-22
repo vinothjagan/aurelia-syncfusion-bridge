@@ -13,7 +13,7 @@ export class ViewCustomization {
           select: 'onChange', selectedItemIndex: 5
         });
         $('#Schedule1').ejSchedule({
-		  currentDate: new Date(startDate),
+          currentDate: new Date(startDate),
           renderDates: {
             start: new Date(startDate),
             end: new Date(endDate)

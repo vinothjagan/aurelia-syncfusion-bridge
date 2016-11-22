@@ -18,8 +18,8 @@
       allowEditing: true,
       allowAdding: true,
       allowDeleting: true,
-      editMode: 'cellEditing',
-	  allowIndent: true
+      allowIndent: true,
+      editMode: 'cellEditing'
     };
 
     this.ProjectData = [

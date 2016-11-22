@@ -12,7 +12,7 @@
        "files": [ "html", "js" ],
        "gist": "14a7c7f06502ceb0cc99ceb1791c3f3e"
     },
-    "API's": {
+    "API": {
       "default" : false,
          "title" : "API's",
          "files": [ "html", "js" ],

@@ -18,7 +18,7 @@
     "gist": "4cfb932db3dbe2063f14b4c07336b518"
   },
   
-   "API's" : { 
+   "API" : { 
      "default" : false,
 	 "title" : "API's",
     "files": [ "html", "js" ],
