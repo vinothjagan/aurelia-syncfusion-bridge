@@ -1,4 +1,4 @@
-define(['exports', '../common/common', 'datavisualization/ej.circulargauge.min'], function (exports, _common) {
+define(['exports', '../common/widget-base', '../common/constants', '../common/decorators', '../common/common', 'datavisualization/ej.circulargauge.min'], function (exports, _widgetBase, _constants, _decorators, _common) {
   'use strict';
 
   Object.defineProperty(exports, "__esModule", {
@@ -38,7 +38,7 @@ define(['exports', '../common/common', 'datavisualization/ej.circulargauge.min']
 
   var _dec, _dec2, _dec3, _dec4, _class;
 
-  var ejCircularGauge = exports.ejCircularGauge = (_dec = (0, _common.customElement)(_common.constants.elementPrefix + 'circular-gauge'), _dec2 = (0, _common.inlineView)('' + _common.constants.aureliaTemplateString), _dec3 = (0, _common.generateBindables)('ejCircularGauge', ['animationSpeed', 'backgroundColor', 'distanceFromCorner', 'enableAnimation', 'frame', 'gaugePosition', 'height', 'interiorGradient', 'isRadialGradient', 'isResponsive', 'maximum', 'minimum', 'outerCustomLabelPosition', 'radius', 'readOnly', 'scales', 'theme', 'tooltip', 'value', 'width'], ['value', 'minimum', 'maximum']), _dec4 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = function (_WidgetBase) {
+  var ejCircularGauge = exports.ejCircularGauge = (_dec = (0, _common.customElement)(_constants.constants.elementPrefix + 'circular-gauge'), _dec2 = (0, _common.inlineView)('' + _constants.constants.aureliaTemplateString), _dec3 = (0, _decorators.generateBindables)('ejCircularGauge', ['animationSpeed', 'backgroundColor', 'distanceFromCorner', 'enableAnimation', 'frame', 'gaugePosition', 'height', 'interiorGradient', 'isRadialGradient', 'isResponsive', 'maximum', 'minimum', 'outerCustomLabelPosition', 'radius', 'readOnly', 'scales', 'theme', 'tooltip', 'value', 'width'], ['value', 'minimum', 'maximum']), _dec4 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = function (_WidgetBase) {
     _inherits(ejCircularGauge, _WidgetBase);
 
     function ejCircularGauge(element) {
@@ -51,5 +51,5 @@ define(['exports', '../common/common', 'datavisualization/ej.circulargauge.min']
     }
 
     return ejCircularGauge;
-  }(_common.WidgetBase)) || _class) || _class) || _class) || _class);
+  }(_widgetBase.WidgetBase)) || _class) || _class) || _class) || _class);
 });

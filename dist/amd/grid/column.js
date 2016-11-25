@@ -1,4 +1,4 @@
-define(['exports', '../common/common'], function (exports, _common) {
+define(['exports', '../common/constants', '../common/decorators', '../common/common', '../common/util'], function (exports, _constants, _decorators, _common, _util) {
   'use strict';
 
   Object.defineProperty(exports, "__esModule", {
@@ -57,7 +57,7 @@ define(['exports', '../common/common'], function (exports, _common) {
 
   var _dec, _dec2, _dec3, _dec4, _class, _desc, _value, _class2, _descriptor;
 
-  var Column = exports.Column = (_dec = (0, _common.inlineView)('' + _common.constants.aureliaTemplateString), _dec2 = (0, _common.customElement)(_common.constants.elementPrefix + 'column'), _dec3 = (0, _common.generateBindables)('columns', ['clipMode', 'allowEditing', 'allowFiltering', 'allowGrouping', 'allowSorting', 'allowResizing', 'commands', 'cssClass', 'customAttributes', 'dataSource', 'defaultValue', 'disableHtmlEncode', 'displayAsCheckBox', 'editParams', 'editTemplate', 'editType', 'field', 'foreignKeyField', 'foreignKeyValue', 'format', 'headerTemplateID', 'headerText', 'headerTextAlign', 'isFrozen', 'isIdentity', 'isPrimaryKey', 'showInColumnChooser', 'template', 'textAlign', 'tooltip', 'type', 'validationRules', 'visible', 'width']), _dec4 = (0, _common.children)(_common.constants.elementPrefix + 'template'), _dec(_class = _dec2(_class = _dec3(_class = (_class2 = function () {
+  var Column = exports.Column = (_dec = (0, _common.inlineView)('' + _constants.constants.aureliaTemplateString), _dec2 = (0, _common.customElement)(_constants.constants.elementPrefix + 'column'), _dec3 = (0, _decorators.generateBindables)('columns', ['clipMode', 'allowEditing', 'allowFiltering', 'allowGrouping', 'allowSorting', 'allowResizing', 'commands', 'cssClass', 'customAttributes', 'dataSource', 'defaultValue', 'disableHtmlEncode', 'displayAsCheckBox', 'editParams', 'editTemplate', 'editType', 'enableGroupByFormat', 'field', 'foreignKeyField', 'foreignKeyValue', 'format', 'headerTemplateID', 'headerText', 'headerTextAlign', 'isFrozen', 'isIdentity', 'isPrimaryKey', 'priority', 'showInColumnChooser', 'template', 'textAlign', 'tooltip', 'type', 'validationRules', 'visible', 'width']), _dec4 = (0, _common.children)(_constants.constants.elementPrefix + 'template'), _dec(_class = _dec2(_class = _dec3(_class = (_class2 = function () {
     function Column() {
       _classCallCheck(this, Column);
 
@@ -66,7 +66,7 @@ define(['exports', '../common/common'], function (exports, _common) {
 
     Column.prototype.setTemplates = function setTemplates() {
       if (this.template[0]) {
-        var util = new _common.Util();
+        var util = new _util.Util();
         this[util.getBindablePropertyName('template')] = this.template[0].template;
       }
     };

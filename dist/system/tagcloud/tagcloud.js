@@ -1,9 +1,9 @@
 'use strict';
 
-System.register(['../common/common', 'ej.tagcloud.min'], function (_export, _context) {
+System.register(['../common/widget-base', '../common/constants', '../common/decorators', '../common/common', 'ej.tagcloud.min'], function (_export, _context) {
   "use strict";
 
-  var customElement, inlineView, inject, WidgetBase, constants, generateBindables, _dec, _dec2, _dec3, _dec4, _class, ejTagCloud;
+  var WidgetBase, constants, generateBindables, customElement, inlineView, inject, _dec, _dec2, _dec3, _dec4, _class, ejTagCloud;
 
   function _classCallCheck(instance, Constructor) {
     if (!(instance instanceof Constructor)) {
@@ -36,16 +36,19 @@ System.register(['../common/common', 'ej.tagcloud.min'], function (_export, _con
   }
 
   return {
-    setters: [function (_commonCommon) {
+    setters: [function (_commonWidgetBase) {
+      WidgetBase = _commonWidgetBase.WidgetBase;
+    }, function (_commonConstants) {
+      constants = _commonConstants.constants;
+    }, function (_commonDecorators) {
+      generateBindables = _commonDecorators.generateBindables;
+    }, function (_commonCommon) {
       customElement = _commonCommon.customElement;
       inlineView = _commonCommon.inlineView;
       inject = _commonCommon.inject;
-      WidgetBase = _commonCommon.WidgetBase;
-      constants = _commonCommon.constants;
-      generateBindables = _commonCommon.generateBindables;
     }, function (_ejTagcloudMin) {}],
     execute: function () {
-      _export('ejTagCloud', ejTagCloud = (_dec = customElement(constants.elementPrefix + 'tag-cloud'), _dec2 = inlineView('' + constants.aureliaTemplateString), _dec3 = generateBindables('ejTagCloud', ['cssClass', 'dataSource', 'enableRTL', 'fields', 'format', 'maxFontSize', 'minFontSize', 'query', 'showTitle', 'titleImage', 'titleText'], [], { 'enableRTL': 'enableRtl' }), _dec4 = inject(Element), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = function (_WidgetBase) {
+      _export('ejTagCloud', ejTagCloud = (_dec = customElement(constants.elementPrefix + 'tag-cloud'), _dec2 = inlineView('' + constants.aureliaTemplateString), _dec3 = generateBindables('ejTagCloud', ['cssClass', 'dataSource', 'enableRTL', 'fields', 'htmlAttributes', 'format', 'maxFontSize', 'minFontSize', 'query', 'showTitle', 'titleImage', 'titleText'], [], { 'enableRTL': 'enableRtl' }), _dec4 = inject(Element), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = function (_WidgetBase) {
         _inherits(ejTagCloud, _WidgetBase);
 
         function ejTagCloud(element) {

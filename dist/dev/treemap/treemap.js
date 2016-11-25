@@ -1,9 +1,9 @@
 'use strict';
 
-System.register(['../common/common', 'datavisualization/ej.treemap.min'], function (_export, _context) {
+System.register(['../common/widget-base', '../common/constants', '../common/decorators', '../common/common', 'datavisualization/ej.treemap.min'], function (_export, _context) {
   "use strict";
 
-  var inject, WidgetBase, constants, generateBindables, inlineView, customElement, children, _dec, _dec2, _dec3, _dec4, _dec5, _class, _desc, _value, _class2, _descriptor, ejTreeMap;
+  var WidgetBase, constants, generateBindables, inject, inlineView, customElement, children, _dec, _dec2, _dec3, _dec4, _dec5, _class, _desc, _value, _class2, _descriptor, ejTreeMap;
 
   function _initDefineProp(target, property, descriptor, context) {
     if (!descriptor) return;
@@ -79,11 +79,14 @@ System.register(['../common/common', 'datavisualization/ej.treemap.min'], functi
   }
 
   return {
-    setters: [function (_commonCommon) {
+    setters: [function (_commonWidgetBase) {
+      WidgetBase = _commonWidgetBase.WidgetBase;
+    }, function (_commonConstants) {
+      constants = _commonConstants.constants;
+    }, function (_commonDecorators) {
+      generateBindables = _commonDecorators.generateBindables;
+    }, function (_commonCommon) {
       inject = _commonCommon.inject;
-      WidgetBase = _commonCommon.WidgetBase;
-      constants = _commonCommon.constants;
-      generateBindables = _commonCommon.generateBindables;
       inlineView = _commonCommon.inlineView;
       customElement = _commonCommon.customElement;
       children = _commonCommon.children;

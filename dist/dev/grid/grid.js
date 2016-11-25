@@ -1,9 +1,9 @@
 'use strict';
 
-System.register(['../common/common', 'ej.grid.min'], function (_export, _context) {
+System.register(['../common/widget-base', '../common/constants', '../common/decorators', '../common/common', '../common/template-processor', 'ej.grid.min'], function (_export, _context) {
   "use strict";
 
-  var inject, WidgetBase, constants, generateBindables, inlineView, customElement, children, TemplatingEngine, TemplateProcessor, _dec, _dec2, _dec3, _dec4, _dec5, _class, _desc, _value, _class2, _descriptor, ejGrid;
+  var WidgetBase, constants, generateBindables, inject, inlineView, customElement, children, TemplatingEngine, TemplateProcessor, _dec, _dec2, _dec3, _dec4, _dec5, _class, _desc, _value, _class2, _descriptor, ejGrid;
 
   function _initDefineProp(target, property, descriptor, context) {
     if (!descriptor) return;
@@ -79,19 +79,23 @@ System.register(['../common/common', 'ej.grid.min'], function (_export, _context
   }
 
   return {
-    setters: [function (_commonCommon) {
+    setters: [function (_commonWidgetBase) {
+      WidgetBase = _commonWidgetBase.WidgetBase;
+    }, function (_commonConstants) {
+      constants = _commonConstants.constants;
+    }, function (_commonDecorators) {
+      generateBindables = _commonDecorators.generateBindables;
+    }, function (_commonCommon) {
       inject = _commonCommon.inject;
-      WidgetBase = _commonCommon.WidgetBase;
-      constants = _commonCommon.constants;
-      generateBindables = _commonCommon.generateBindables;
       inlineView = _commonCommon.inlineView;
       customElement = _commonCommon.customElement;
       children = _commonCommon.children;
       TemplatingEngine = _commonCommon.TemplatingEngine;
-      TemplateProcessor = _commonCommon.TemplateProcessor;
+    }, function (_commonTemplateProcessor) {
+      TemplateProcessor = _commonTemplateProcessor.TemplateProcessor;
     }, function (_ejGridMin) {}],
     execute: function () {
-      _export('ejGrid', ejGrid = (_dec = customElement(constants.elementPrefix + 'grid'), _dec2 = inlineView('' + constants.aureliaTemplateString), _dec3 = generateBindables('ejGrid', ['allowCellMerging', 'allowGrouping', 'allowKeyboardNavigation', 'allowFiltering', 'allowSorting', 'allowMultiSorting', 'allowPaging', 'allowReordering', 'allowResizeToFit', 'allowResizing', 'allowRowDragAndDrop', 'allowScrolling', 'allowSearching', 'allowSelection', 'allowTextWrap', 'allowMultipleExporting', 'commonWidth', 'gridLines', 'childGrid', 'columnLayout', 'columns', 'contextMenuSettings', 'cssClass', 'dataSource', 'detailsTemplate', 'editSettings', 'enableAltRow', 'enableAutoSaveOnSelectionChange', 'enableHeaderHover', 'enablePersistence', 'enableResponsiveRow', 'enableRowHover', 'enableRTL', 'enableTouch', 'filterSettings', 'groupSettings', 'isResponsive', 'keySettings', 'locale', 'minWidth', 'pageSettings', 'query', 'rowTemplate', 'rowDropSettings', 'searchSettings', 'selectedRecords', 'selectedRowIndex', 'selectionSettings', 'selectionType', 'scrollSettings', 'showColumnChooser', 'showStackedHeader', 'showSummary', 'sortSettings', 'stackedHeaderRows', 'summaryRows', 'textWrapSettings', 'toolbarSettings'], ['dataSource'], { 'enableRTL': 'enableRtl' }), _dec4 = inject(Element, TemplatingEngine), _dec5 = children(constants.elementPrefix + 'column'), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = (_class2 = function (_WidgetBase) {
+      _export('ejGrid', ejGrid = (_dec = customElement(constants.elementPrefix + 'grid'), _dec2 = inlineView('' + constants.aureliaTemplateString), _dec3 = generateBindables('ejGrid', ['allowCellMerging', 'allowGrouping', 'allowKeyboardNavigation', 'allowFiltering', 'allowSorting', 'allowMultiSorting', 'allowPaging', 'allowReordering', 'allowResizeToFit', 'allowResizing', 'allowRowDragAndDrop', 'allowScrolling', 'allowSearching', 'allowSelection', 'allowTextWrap', 'allowMultipleExporting', 'commonWidth', 'gridLines', 'childGrid', 'columnLayout', 'columns', 'contextMenuSettings', 'cssClass', 'dataSource', 'detailsTemplate', 'editSettings', 'enableAltRow', 'enableAutoSaveOnSelectionChange', 'enableHeaderHover', 'enablePersistence', 'enableResponsiveRow', 'enableRowHover', 'enableRTL', 'enableTouch', 'filterSettings', 'groupSettings', 'isResponsive', 'keySettings', 'locale', 'minWidth', 'pageSettings', 'query', 'resizeSettings', 'rowTemplate', 'rowDropSettings', 'searchSettings', 'selectedRecords', 'selectedRowIndex', 'selectedRowIndices', 'selectionSettings', 'selectionType', 'scrollSettings', 'showColumnChooser', 'showStackedHeader', 'showSummary', 'sortSettings', 'stackedHeaderRows', 'summaryRows', 'textWrapSettings', 'toolbarSettings'], ['dataSource', 'selectedRowIndices'], { 'enableRTL': 'enableRtl' }), _dec4 = inject(Element, TemplatingEngine), _dec5 = children(constants.elementPrefix + 'column'), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = (_class2 = function (_WidgetBase) {
         _inherits(ejGrid, _WidgetBase);
 
         function ejGrid(element, templateEngine) {

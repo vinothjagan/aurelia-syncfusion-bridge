@@ -1,9 +1,9 @@
 'use strict';
 
-System.register(['../common/common', 'common/ej.scroller.min'], function (_export, _context) {
+System.register(['../common/widget-base', '../common/constants', '../common/decorators', '../common/common', 'common/ej.scroller.min'], function (_export, _context) {
   "use strict";
 
-  var customAttribute, inject, WidgetBase, constants, generateBindables, _dec, _dec2, _dec3, _class, ejScroller;
+  var WidgetBase, constants, generateBindables, customAttribute, inject, _dec, _dec2, _dec3, _class, ejScroller;
 
   function _classCallCheck(instance, Constructor) {
     if (!(instance instanceof Constructor)) {
@@ -36,15 +36,18 @@ System.register(['../common/common', 'common/ej.scroller.min'], function (_expor
   }
 
   return {
-    setters: [function (_commonCommon) {
+    setters: [function (_commonWidgetBase) {
+      WidgetBase = _commonWidgetBase.WidgetBase;
+    }, function (_commonConstants) {
+      constants = _commonConstants.constants;
+    }, function (_commonDecorators) {
+      generateBindables = _commonDecorators.generateBindables;
+    }, function (_commonCommon) {
       customAttribute = _commonCommon.customAttribute;
       inject = _commonCommon.inject;
-      WidgetBase = _commonCommon.WidgetBase;
-      constants = _commonCommon.constants;
-      generateBindables = _commonCommon.generateBindables;
     }, function (_commonEjScrollerMin) {}],
     execute: function () {
-      _export('ejScroller', ejScroller = (_dec = customAttribute(constants.attributePrefix + 'scroller'), _dec2 = generateBindables('ejScroller', ['autoHide', 'buttonSize', 'enabled', 'enablePersistence', 'enableRTL', 'enableTouchScroll', 'height', 'scrollerSize', 'scrollLeft', 'scrollOneStepBy', 'scrollTop', 'targetPane', 'width'], ['scrollLeft', 'scrollTop'], { 'enableRTL': 'enableRtl' }), _dec3 = inject(Element), _dec(_class = _dec2(_class = _dec3(_class = function (_WidgetBase) {
+      _export('ejScroller', ejScroller = (_dec = customAttribute(constants.attributePrefix + 'scroller'), _dec2 = generateBindables('ejScroller', ['animationSpeed', 'autoHide', 'buttonSize', 'enabled', 'enablePersistence', 'enableRTL', 'enableTouchScroll', 'height', 'scrollerSize', 'scrollLeft', 'scrollOneStepBy', 'scrollTop', 'targetPane', 'width'], ['scrollLeft', 'scrollTop'], { 'enableRTL': 'enableRtl' }), _dec3 = inject(Element), _dec(_class = _dec2(_class = _dec3(_class = function (_WidgetBase) {
         _inherits(ejScroller, _WidgetBase);
 
         function ejScroller(element) {

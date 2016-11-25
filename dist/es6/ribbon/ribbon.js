@@ -1,10 +1,13 @@
-import {customElement, inlineView, inject, WidgetBase, constants, generateBindables} from '../common/common';
+import {WidgetBase} from '../common/widget-base';
+import {constants} from '../common/constants';
+import {generateBindables} from '../common/decorators';
+import {customElement, inlineView, inject} from '../common/common';
 
 import 'ej.ribbon.min';
 
 @customElement(`${constants.elementPrefix}ribbon`)
 @inlineView(`${constants.aureliaTemplateString}`)
-@generateBindables('ejRibbon', ['allowResizing', 'buttonDefaults', 'showQAT', 'collapsePinSettings', 'enableRTL', 'expandPinSettings', 'applicationTab', 'contextualTabs', 'disabledItemIndex', 'enabledItemIndex', 'selectedItemIndex', 'tabs', 'locale', 'width'], [], {'enableRTL': 'enableRtl'})
+@generateBindables('ejRibbon', ['allowResizing', 'isResponsive', 'buttonDefaults', 'showQAT', 'collapsePinSettings', 'enableOnDemand', 'collapsible', 'enableRTL', 'expandPinSettings', 'applicationTab', 'contextualTabs', 'disabledItemIndex', 'enabledItemIndex', 'selectedItemIndex', 'tabs', 'locale', 'width'], [], {'enableRTL': 'enableRtl'})
 @inject(Element)
 export class ejRibbon extends WidgetBase {
   constructor(element) {

@@ -1,4 +1,4 @@
-define(['exports', '../common/common', 'common/ej.scroller.min'], function (exports, _common) {
+define(['exports', '../common/widget-base', '../common/constants', '../common/decorators', '../common/common', 'common/ej.scroller.min'], function (exports, _widgetBase, _constants, _decorators, _common) {
   'use strict';
 
   Object.defineProperty(exports, "__esModule", {
@@ -38,7 +38,7 @@ define(['exports', '../common/common', 'common/ej.scroller.min'], function (expo
 
   var _dec, _dec2, _dec3, _class;
 
-  var ejScroller = exports.ejScroller = (_dec = (0, _common.customAttribute)(_common.constants.attributePrefix + 'scroller'), _dec2 = (0, _common.generateBindables)('ejScroller', ['autoHide', 'buttonSize', 'enabled', 'enablePersistence', 'enableRTL', 'enableTouchScroll', 'height', 'scrollerSize', 'scrollLeft', 'scrollOneStepBy', 'scrollTop', 'targetPane', 'width'], ['scrollLeft', 'scrollTop'], { 'enableRTL': 'enableRtl' }), _dec3 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = function (_WidgetBase) {
+  var ejScroller = exports.ejScroller = (_dec = (0, _common.customAttribute)(_constants.constants.attributePrefix + 'scroller'), _dec2 = (0, _decorators.generateBindables)('ejScroller', ['animationSpeed', 'autoHide', 'buttonSize', 'enabled', 'enablePersistence', 'enableRTL', 'enableTouchScroll', 'height', 'scrollerSize', 'scrollLeft', 'scrollOneStepBy', 'scrollTop', 'targetPane', 'width'], ['scrollLeft', 'scrollTop'], { 'enableRTL': 'enableRtl' }), _dec3 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = function (_WidgetBase) {
     _inherits(ejScroller, _WidgetBase);
 
     function ejScroller(element) {
@@ -51,5 +51,5 @@ define(['exports', '../common/common', 'common/ej.scroller.min'], function (expo
     }
 
     return ejScroller;
-  }(_common.WidgetBase)) || _class) || _class) || _class);
+  }(_widgetBase.WidgetBase)) || _class) || _class) || _class);
 });

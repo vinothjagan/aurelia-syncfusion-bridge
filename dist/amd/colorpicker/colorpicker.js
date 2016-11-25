@@ -1,4 +1,4 @@
-define(['exports', '../common/common', 'ej.colorpicker.min'], function (exports, _common) {
+define(['exports', '../common/widget-base', '../common/constants', '../common/decorators', '../common/common', 'ej.colorpicker.min'], function (exports, _widgetBase, _constants, _decorators, _common) {
   'use strict';
 
   Object.defineProperty(exports, "__esModule", {
@@ -38,7 +38,7 @@ define(['exports', '../common/common', 'ej.colorpicker.min'], function (exports,
 
   var _dec, _dec2, _dec3, _class;
 
-  var ejColorPicker = exports.ejColorPicker = (_dec = (0, _common.customAttribute)(_common.constants.attributePrefix + 'color-picker'), _dec2 = (0, _common.generateBindables)('ejColorPicker', ['buttonText', 'buttonMode', 'columns', 'cssClass', 'custom', 'displayInline', 'enabled', 'enableOpacity', 'htmlAttributes', 'modelType', 'opacityValue', 'palette', 'presetType', 'showApplyCancel', 'showClearButton', 'showPreview', 'showRecentColors', 'showSwitcher', 'showTooltip', 'toolIcon', 'tooltipText', 'value'], ['value', 'opacityValue']), _dec3 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = function (_WidgetBase) {
+  var ejColorPicker = exports.ejColorPicker = (_dec = (0, _common.customAttribute)(_constants.constants.attributePrefix + 'color-picker'), _dec2 = (0, _decorators.generateBindables)('ejColorPicker', ['buttonText', 'buttonMode', 'columns', 'cssClass', 'custom', 'displayInline', 'enabled', 'enableOpacity', 'htmlAttributes', 'locale', 'modelType', 'opacityValue', 'palette', 'presetType', 'showApplyCancel', 'showClearButton', 'showPreview', 'showRecentColors', 'showSwitcher', 'showTooltip', 'toolIcon', 'tooltipText', 'value'], ['value', 'opacityValue']), _dec3 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = function (_WidgetBase) {
     _inherits(ejColorPicker, _WidgetBase);
 
     function ejColorPicker(element) {
@@ -51,5 +51,5 @@ define(['exports', '../common/common', 'ej.colorpicker.min'], function (exports,
     }
 
     return ejColorPicker;
-  }(_common.WidgetBase)) || _class) || _class) || _class);
+  }(_widgetBase.WidgetBase)) || _class) || _class) || _class);
 });

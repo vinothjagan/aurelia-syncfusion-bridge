@@ -1,4 +1,4 @@
-define(['exports', '../common/common', 'ej.radiobutton.min'], function (exports, _common) {
+define(['exports', '../common/widget-base', '../common/constants', '../common/decorators', '../common/common', 'ej.radiobutton.min'], function (exports, _widgetBase, _constants, _decorators, _common) {
   'use strict';
 
   Object.defineProperty(exports, "__esModule", {
@@ -38,7 +38,7 @@ define(['exports', '../common/common', 'ej.radiobutton.min'], function (exports,
 
   var _dec, _dec2, _dec3, _class;
 
-  var ejRadioButton = exports.ejRadioButton = (_dec = (0, _common.customAttribute)(_common.constants.attributePrefix + 'radio-button'), _dec2 = (0, _common.generateBindables)('ejRadioButton', ['checked', 'cssClass', 'enabled', 'enablePersistence', 'enableRTL', 'htmlAttributes', 'id', 'idPrefix', 'name', 'size', 'text', 'validationMessage', 'validationRules', 'value'], [], { 'enableRTL': 'enableRtl' }), _dec3 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = function (_WidgetBase) {
+  var ejRadioButton = exports.ejRadioButton = (_dec = (0, _common.customAttribute)(_constants.constants.attributePrefix + 'radio-button'), _dec2 = (0, _decorators.generateBindables)('ejRadioButton', ['checked', 'cssClass', 'enabled', 'enablePersistence', 'enableRTL', 'htmlAttributes', 'id', 'idPrefix', 'name', 'size', 'text', 'validationMessage', 'validationRules', 'value'], [], { 'enableRTL': 'enableRtl' }), _dec3 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = function (_WidgetBase) {
     _inherits(ejRadioButton, _WidgetBase);
 
     function ejRadioButton(element) {
@@ -51,5 +51,5 @@ define(['exports', '../common/common', 'ej.radiobutton.min'], function (exports,
     }
 
     return ejRadioButton;
-  }(_common.WidgetBase)) || _class) || _class) || _class);
+  }(_widgetBase.WidgetBase)) || _class) || _class) || _class);
 });

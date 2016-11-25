@@ -1,4 +1,4 @@
-define(['exports', '../common/common', 'datavisualization/ej.sparkline.min'], function (exports, _common) {
+define(['exports', '../common/widget-base', '../common/constants', '../common/decorators', '../common/common', 'datavisualization/ej.sparkline.min'], function (exports, _widgetBase, _constants, _decorators, _common) {
   'use strict';
 
   Object.defineProperty(exports, "__esModule", {
@@ -38,7 +38,7 @@ define(['exports', '../common/common', 'datavisualization/ej.sparkline.min'], fu
 
   var _dec, _dec2, _dec3, _dec4, _class;
 
-  var ejSparkline = exports.ejSparkline = (_dec = (0, _common.customElement)(_common.constants.elementPrefix + 'sparkline'), _dec2 = (0, _common.inlineView)('' + _common.constants.aureliaTemplateString), _dec3 = (0, _common.generateBindables)('ejSparkline', ['background', 'fill', 'stroke', 'border', 'width', 'opacity', 'highPointColor', 'lowPointColor', 'startPointColor', 'endPointColor', 'negativePointColor', 'rangeBandSettings', 'palette', 'isResponsive', 'enableCanvasRendering', 'dataSource', 'xName', 'yName', 'padding', 'type', 'theme', 'tooltip', 'markerSettings', 'size', 'axisLineSettings']), _dec4 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = function (_WidgetBase) {
+  var ejSparkline = exports.ejSparkline = (_dec = (0, _common.customElement)(_constants.constants.elementPrefix + 'sparkline'), _dec2 = (0, _common.inlineView)('' + _constants.constants.aureliaTemplateString), _dec3 = (0, _decorators.generateBindables)('ejSparkline', ['background', 'fill', 'stroke', 'border', 'width', 'opacity', 'highPointColor', 'lowPointColor', 'startPointColor', 'endPointColor', 'negativePointColor', 'rangeBandSettings', 'palette', 'isResponsive', 'enableCanvasRendering', 'dataSource', 'xName', 'yName', 'padding', 'type', 'theme', 'tooltip', 'markerSettings', 'size', 'axisLineSettings']), _dec4 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = function (_WidgetBase) {
     _inherits(ejSparkline, _WidgetBase);
 
     function ejSparkline(element) {
@@ -51,5 +51,5 @@ define(['exports', '../common/common', 'datavisualization/ej.sparkline.min'], fu
     }
 
     return ejSparkline;
-  }(_common.WidgetBase)) || _class) || _class) || _class) || _class);
+  }(_widgetBase.WidgetBase)) || _class) || _class) || _class) || _class);
 });

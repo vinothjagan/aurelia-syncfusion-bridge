@@ -15,7 +15,7 @@ var EjConfigBuilder = exports.EjConfigBuilder = function () {
   }
 
   EjConfigBuilder.prototype.useAll = function useAll() {
-    this.ejGrid().ejChart().ejMap().ejTreeMap().ejRangeNavigator().ejDiagram().ejSparkline().ejSymbolPalette().ejOverview().ejBulletGraph().ejCircularGauge().ejLinearGauge().ejDigitalGauge().ejSplitter().ejDatePicker().ejGantt().ejTreeGrid().ejColorPicker().ejDialog().ejScroller().ejBarcode().ejPdfViewer().ejNumericTextbox().ejCurrencyTextbox().ejPercentageTextbox().ejTimePicker().ejToolbar().ejMenu().ejMaskEdit().ejTreeView().ejKanban().ejRibbon().ejSpreadsheet().ejRating().ejListBox().ejListView().ejNavigationDrawer().ejRotator().ejRTE().ejDropDownList().ejAutocomplete().ejRadialMenu().ejRadialSlider().ejTile().ejAccordion().ejTab().ejCheckBox().ejRadioButton().ejToggleButton().ejSplitButton().ejGroupButton().ejDateTimePicker().ejProgressBar().ejTagCloud().ejButton().ejSlider().ejFileExplorer().ejPivotGrid().ejPivotChart().ejPivotGauge().ejPivotSchemaDesigner().ejWaitingPopup().ejReportViewer().ejSchedule().ejUploadbox().ejTooltip().ejTemplate();
+    this.ejGrid().ejChart().ejMap().ejTreeMap().ejRangeNavigator().ejDiagram().ejHeatMap().ejHeatMapLegend().ejSparkline().ejSymbolPalette().ejOverview().ejPager().ejBulletGraph().ejCircularGauge().ejLinearGauge().ejDigitalGauge().ejSplitter().ejDatePicker().ejGantt().ejTreeGrid().ejColorPicker().ejDialog().ejScroller().ejBarcode().ejPdfViewer().ejNumericTextbox().ejCurrencyTextbox().ejPercentageTextbox().ejTimePicker().ejToolbar().ejMenu().ejMaskEdit().ejTreeView().ejKanban().ejRibbon().ejSpreadsheet().ejRating().ejListBox().ejListView().ejNavigationDrawer().ejRotator().ejRTE().ejDropDownList().ejAutocomplete().ejRadialMenu().ejRadialSlider().ejTile().ejAccordion().ejTab().ejCheckBox().ejRadioButton().ejToggleButton().ejSplitButton().ejGroupButton().ejDateTimePicker().ejProgressBar().ejTagCloud().ejButton().ejSlider().ejFileExplorer().ejPivotGrid().ejPivotChart().ejPivotGauge().ejPivotSchemaDesigner().ejPivotTreeMap().ejWaitingPopup().ejReportViewer().ejSchedule().ejUploadbox().ejSignature().ejTooltip().ejTemplate();
     return this;
   };
 
@@ -59,6 +59,16 @@ var EjConfigBuilder = exports.EjConfigBuilder = function () {
     return this;
   };
 
+  EjConfigBuilder.prototype.ejHeatMap = function ejHeatMap() {
+    this.resources.push('./heatmap/heatmap');
+    return this;
+  };
+
+  EjConfigBuilder.prototype.ejHeatMapLegend = function ejHeatMapLegend() {
+    this.resources.push('./heatmaplegend/heatmaplegend');
+    return this;
+  };
+
   EjConfigBuilder.prototype.ejSparkline = function ejSparkline() {
     this.resources.push('./sparkline/sparkline');
     return this;
@@ -71,6 +81,11 @@ var EjConfigBuilder = exports.EjConfigBuilder = function () {
 
   EjConfigBuilder.prototype.ejOverview = function ejOverview() {
     this.resources.push('./overview/overview');
+    return this;
+  };
+
+  EjConfigBuilder.prototype.ejPager = function ejPager() {
+    this.resources.push('./pager/pager');
     return this;
   };
 
@@ -339,6 +354,11 @@ var EjConfigBuilder = exports.EjConfigBuilder = function () {
     return this;
   };
 
+  EjConfigBuilder.prototype.ejPivotTreeMap = function ejPivotTreeMap() {
+    this.resources.push('./pivottreemap/pivottreemap');
+    return this;
+  };
+
   EjConfigBuilder.prototype.ejWaitingPopup = function ejWaitingPopup() {
     this.resources.push('./waitingpopup/waitingpopup');
     return this;
@@ -357,6 +377,11 @@ var EjConfigBuilder = exports.EjConfigBuilder = function () {
 
   EjConfigBuilder.prototype.ejUploadbox = function ejUploadbox() {
     this.resources.push('./uploadbox/uploadbox');
+    return this;
+  };
+
+  EjConfigBuilder.prototype.ejSignature = function ejSignature() {
+    this.resources.push('./signature/signature');
     return this;
   };
 

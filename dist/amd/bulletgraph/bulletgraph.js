@@ -1,4 +1,4 @@
-define(['exports', '../common/common', 'datavisualization/ej.bulletgraph.min'], function (exports, _common) {
+define(['exports', '../common/widget-base', '../common/constants', '../common/decorators', '../common/common', 'datavisualization/ej.bulletgraph.min'], function (exports, _widgetBase, _constants, _decorators, _common) {
   'use strict';
 
   Object.defineProperty(exports, "__esModule", {
@@ -81,7 +81,7 @@ define(['exports', '../common/common', 'datavisualization/ej.bulletgraph.min'], 
 
   var _dec, _dec2, _dec3, _dec4, _dec5, _class, _desc, _value, _class2, _descriptor;
 
-  var ejBulletGraph = exports.ejBulletGraph = (_dec = (0, _common.customElement)(_common.constants.elementPrefix + 'bullet-graph'), _dec2 = (0, _common.inlineView)('' + _common.constants.aureliaTemplateString), _dec3 = (0, _common.generateBindables)('ejBulletGraph', ['applyRangeStrokeToLabels', 'applyRangeStrokeToTicks', 'captionSettings', 'comparativeMeasureValue', 'enableAnimation', 'flowDirection', 'height', 'isResponsive', 'orientation', 'qualitativeRanges', 'qualitativeRangeSize', 'quantitativeScaleLength', 'quantitativeScaleSettings', 'theme', 'tooltipSettings', 'value', 'width']), _dec4 = (0, _common.inject)(Element), _dec5 = (0, _common.children)(_common.constants.elementPrefix + 'qualitative-range'), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = (_class2 = function (_WidgetBase) {
+  var ejBulletGraph = exports.ejBulletGraph = (_dec = (0, _common.customElement)(_constants.constants.elementPrefix + 'bullet-graph'), _dec2 = (0, _common.inlineView)('' + _constants.constants.aureliaTemplateString), _dec3 = (0, _decorators.generateBindables)('ejBulletGraph', ['applyRangeStrokeToLabels', 'applyRangeStrokeToTicks', 'captionSettings', 'comparativeMeasureValue', 'enableAnimation', 'flowDirection', 'height', 'isResponsive', 'orientation', 'qualitativeRanges', 'qualitativeRangeSize', 'quantitativeScaleLength', 'quantitativeScaleSettings', 'theme', 'tooltipSettings', 'value', 'width']), _dec4 = (0, _common.inject)(Element), _dec5 = (0, _common.children)(_constants.constants.elementPrefix + 'qualitative-range'), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = (_class2 = function (_WidgetBase) {
     _inherits(ejBulletGraph, _WidgetBase);
 
     function ejBulletGraph(element) {
@@ -98,7 +98,7 @@ define(['exports', '../common/common', 'datavisualization/ej.bulletgraph.min'], 
     }
 
     return ejBulletGraph;
-  }(_common.WidgetBase), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, 'qualitativeRanges', [_dec5], {
+  }(_widgetBase.WidgetBase), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, 'qualitativeRanges', [_dec5], {
     enumerable: true,
     initializer: function initializer() {
       return [];

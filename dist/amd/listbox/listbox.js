@@ -1,4 +1,4 @@
-define(['exports', '../common/common', 'ej.listbox.min'], function (exports, _common) {
+define(['exports', '../common/widget-base', '../common/constants', '../common/decorators', '../common/common', 'ej.listbox.min'], function (exports, _widgetBase, _constants, _decorators, _common) {
   'use strict';
 
   Object.defineProperty(exports, "__esModule", {
@@ -38,7 +38,7 @@ define(['exports', '../common/common', 'ej.listbox.min'], function (exports, _co
 
   var _dec, _dec2, _dec3, _class;
 
-  var ejListBox = exports.ejListBox = (_dec = (0, _common.customAttribute)(_common.constants.attributePrefix + 'list-box'), _dec2 = (0, _common.generateBindables)('ejListBox', ['allowDrag', 'allowDrop', 'allowMultiSelection', 'allowVirtualScrolling', 'caseSensitiveSearch', 'cascadeTo', 'checkedIndices', 'cssClass', 'dataSource', 'enabled', 'enableIncrementalSearch', 'enablePersistence', 'enableRTL', 'fields', 'height', 'itemsCount', 'totalItemsCount', 'itemRequestCount', 'loadDataOnInit', 'query', 'selectedIndex', 'selectedIndices', 'showCheckbox', 'showRoundedCorner', 'template', 'value', 'virtualScrollMode', 'width', 'targetID'], ['value'], { 'enableRTL': 'enableRtl', 'targetID': 'targetId' }), _dec3 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = function (_WidgetBase) {
+  var ejListBox = exports.ejListBox = (_dec = (0, _common.customAttribute)(_constants.constants.attributePrefix + 'list-box'), _dec2 = (0, _decorators.generateBindables)('ejListBox', ['allowDrag', 'allowDrop', 'allowMultiSelection', 'allowVirtualScrolling', 'caseSensitiveSearch', 'cascadeTo', 'checkedIndices', 'cssClass', 'dataSource', 'enabled', 'enableIncrementalSearch', 'enablePersistence', 'enableRTL', 'enableWordWrap', 'fields', 'height', 'itemsCount', 'totalItemsCount', 'itemRequestCount', 'loadDataOnInit', 'query', 'selectedIndex', 'selectedIndices', 'showCheckbox', 'showRoundedCorner', 'template', 'value', 'virtualScrollMode', 'width', 'targetID'], ['value', 'dataSource'], { 'enableRTL': 'enableRtl', 'targetID': 'targetId' }), _dec3 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = function (_WidgetBase) {
     _inherits(ejListBox, _WidgetBase);
 
     function ejListBox(element) {
@@ -51,5 +51,5 @@ define(['exports', '../common/common', 'ej.listbox.min'], function (exports, _co
     }
 
     return ejListBox;
-  }(_common.WidgetBase)) || _class) || _class) || _class);
+  }(_widgetBase.WidgetBase)) || _class) || _class) || _class);
 });

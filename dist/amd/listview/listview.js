@@ -1,4 +1,4 @@
-define(['exports', '../common/common', 'ej.listview.min'], function (exports, _common) {
+define(['exports', '../common/widget-base', '../common/constants', '../common/decorators', '../common/common', 'ej.listview.min'], function (exports, _widgetBase, _constants, _decorators, _common) {
   'use strict';
 
   Object.defineProperty(exports, "__esModule", {
@@ -38,7 +38,7 @@ define(['exports', '../common/common', 'ej.listview.min'], function (exports, _c
 
   var _dec, _dec2, _dec3, _dec4, _class;
 
-  var ejListView = exports.ejListView = (_dec = (0, _common.customElement)(_common.constants.elementPrefix + 'list-view'), _dec2 = (0, _common.inlineView)('' + _common.constants.aureliaTemplateString), _dec3 = (0, _common.generateBindables)('ejListView', ['cssClass', 'dataSource', 'enableAjax', 'enableCache', 'enableCheckMark', 'enableFiltering', 'enableGroupList', 'enablePersistence', 'fieldSettings', 'headerBackButtonText', 'headerTitle', 'height', 'persistSelection', 'preventSelection', 'query', 'renderTemplate', 'selectedItemIndex', 'showHeader', 'templateId', 'width'], ['dataSource', 'selectedItemIndex']), _dec4 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = function (_WidgetBase) {
+  var ejListView = exports.ejListView = (_dec = (0, _common.customElement)(_constants.constants.elementPrefix + 'list-view'), _dec2 = (0, _common.inlineView)('' + _constants.constants.aureliaTemplateString), _dec3 = (0, _decorators.generateBindables)('ejListView', ['cssClass', 'dataSource', 'enableAjax', 'enableCache', 'enableCheckMark', 'enableFiltering', 'enableGroupList', 'enablePersistence', 'fieldSettings', 'headerBackButtonText', 'headerTitle', 'height', 'persistSelection', 'preventSelection', 'query', 'renderTemplate', 'selectedItemIndex', 'showHeader', 'templateId', 'width'], ['dataSource', 'selectedItemIndex']), _dec4 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = function (_WidgetBase) {
     _inherits(ejListView, _WidgetBase);
 
     function ejListView(element) {
@@ -51,5 +51,5 @@ define(['exports', '../common/common', 'ej.listview.min'], function (exports, _c
     }
 
     return ejListView;
-  }(_common.WidgetBase)) || _class) || _class) || _class) || _class);
+  }(_widgetBase.WidgetBase)) || _class) || _class) || _class) || _class);
 });

@@ -16,9 +16,12 @@ export class EjConfigBuilder {
     .ejTreeMap()
     .ejRangeNavigator()
     .ejDiagram()
+    .ejHeatMap()
+    .ejHeatMapLegend()
     .ejSparkline()
     .ejSymbolPalette()
     .ejOverview()
+    .ejPager()
     .ejBulletGraph()
     .ejCircularGauge()
     .ejLinearGauge()
@@ -71,10 +74,12 @@ export class EjConfigBuilder {
     .ejPivotChart()
     .ejPivotGauge()
     .ejPivotSchemaDesigner()
+    .ejPivotTreeMap()
     .ejWaitingPopup()
     .ejReportViewer()
     .ejSchedule()
     .ejUploadbox()
+    .ejSignature()
     .ejTooltip()
     .ejTemplate();
     return this;
@@ -116,6 +121,14 @@ export class EjConfigBuilder {
     this.resources.push('./diagram/diagram');
     return this;
   }
+  ejHeatMap(): EjConfigBuilder {
+    this.resources.push('./heatmap/heatmap');
+    return this;
+  }
+  ejHeatMapLegend(): EjConfigBuilder {
+    this.resources.push('./heatmaplegend/heatmaplegend');
+    return this;
+  }
   ejSparkline(): EjConfigBuilder {
     this.resources.push('./sparkline/sparkline');
     return this;
@@ -126,6 +139,10 @@ export class EjConfigBuilder {
   }
   ejOverview(): EjConfigBuilder {
     this.resources.push('./overview/overview');
+    return this;
+  }
+  ejPager(): EjConfigBuilder {
+    this.resources.push('./pager/pager');
     return this;
   }
   ejBulletGraph(): EjConfigBuilder {
@@ -341,6 +358,10 @@ export class EjConfigBuilder {
     this.resources.push('./pivotschemadesigner/pivotschemadesigner');
     return this;
   }
+  ejPivotTreeMap(): EjConfigBuilder {
+    this.resources.push('./pivottreemap/pivottreemap');
+    return this;
+  }
   ejWaitingPopup(): EjConfigBuilder {
     this.resources.push('./waitingpopup/waitingpopup');
     return this;
@@ -356,6 +377,10 @@ export class EjConfigBuilder {
   }
   ejUploadbox(): EjConfigBuilder {
     this.resources.push('./uploadbox/uploadbox');
+    return this;
+  }
+  ejSignature(): EjConfigBuilder {
+    this.resources.push('./signature/signature');
     return this;
   }
   ejTooltip(): EjConfigBuilder {

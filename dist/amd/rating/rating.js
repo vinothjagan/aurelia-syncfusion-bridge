@@ -1,4 +1,4 @@
-define(['exports', '../common/common', 'ej.rating.min'], function (exports, _common) {
+define(['exports', '../common/widget-base', '../common/constants', '../common/decorators', '../common/common', 'ej.rating.min'], function (exports, _widgetBase, _constants, _decorators, _common) {
   'use strict';
 
   Object.defineProperty(exports, "__esModule", {
@@ -38,7 +38,7 @@ define(['exports', '../common/common', 'ej.rating.min'], function (exports, _com
 
   var _dec, _dec2, _dec3, _class;
 
-  var ejRating = exports.ejRating = (_dec = (0, _common.customAttribute)(_common.constants.attributePrefix + 'rating'), _dec2 = (0, _common.generateBindables)('ejRating', ['allowReset', 'cssClass', 'enabled', 'enablePersistence', 'height', 'incrementStep', 'maxValue', 'minValue', 'orientation', 'precision', 'readOnly', 'shapeHeight', 'shapeWidth', 'showTooltip', 'value', 'width'], ['value']), _dec3 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = function (_WidgetBase) {
+  var ejRating = exports.ejRating = (_dec = (0, _common.customAttribute)(_constants.constants.attributePrefix + 'rating'), _dec2 = (0, _decorators.generateBindables)('ejRating', ['allowReset', 'cssClass', 'enabled', 'enablePersistence', 'height', 'htmlAttributes', 'incrementStep', 'maxValue', 'minValue', 'orientation', 'precision', 'readOnly', 'shapeHeight', 'shapeWidth', 'showTooltip', 'value', 'width'], ['value']), _dec3 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = function (_WidgetBase) {
     _inherits(ejRating, _WidgetBase);
 
     function ejRating(element) {
@@ -51,5 +51,5 @@ define(['exports', '../common/common', 'ej.rating.min'], function (exports, _com
     }
 
     return ejRating;
-  }(_common.WidgetBase)) || _class) || _class) || _class);
+  }(_widgetBase.WidgetBase)) || _class) || _class) || _class);
 });

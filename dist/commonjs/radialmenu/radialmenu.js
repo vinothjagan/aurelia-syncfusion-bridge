@@ -7,7 +7,15 @@ exports.ejRadialMenu = undefined;
 
 var _dec, _dec2, _dec3, _dec4, _dec5, _class, _desc, _value, _class2, _descriptor;
 
+var _widgetBase = require('../common/widget-base');
+
+var _constants = require('../common/constants');
+
+var _decorators = require('../common/decorators');
+
 var _common = require('../common/common');
+
+var _templateProcessor = require('../common/template-processor');
 
 require('ej.radialmenu.min');
 
@@ -60,7 +68,7 @@ function _initializerWarningHelper(descriptor, context) {
   throw new Error('Decorating class property failed. Please ensure that transform-class-properties is enabled.');
 }
 
-var ejRadialMenu = exports.ejRadialMenu = (_dec = (0, _common.customElement)(_common.constants.elementPrefix + 'radial-menu'), _dec2 = (0, _common.inlineView)('' + _common.constants.aureliaTemplateString), _dec3 = (0, _common.generateBindables)('ejRadialMenu', ['autoOpen', 'backImageClass', 'cssClass', 'enableAnimation', 'imageClass', 'items', 'radius', 'targetElementId', 'position']), _dec4 = (0, _common.inject)(Element, _common.TemplatingEngine), _dec5 = (0, _common.children)(_common.constants.elementPrefix + 'item'), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = (_class2 = function (_WidgetBase) {
+var ejRadialMenu = exports.ejRadialMenu = (_dec = (0, _common.customElement)(_constants.constants.elementPrefix + 'radial-menu'), _dec2 = (0, _common.inlineView)('' + _constants.constants.aureliaTemplateString), _dec3 = (0, _decorators.generateBindables)('ejRadialMenu', ['autoOpen', 'backImageClass', 'cssClass', 'enableAnimation', 'imageClass', 'items', 'radius', 'targetElementId', 'position']), _dec4 = (0, _common.inject)(Element, _common.TemplatingEngine), _dec5 = (0, _common.children)(_constants.constants.elementPrefix + 'item'), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = (_class2 = function (_WidgetBase) {
   _inherits(ejRadialMenu, _WidgetBase);
 
   function ejRadialMenu(element, templateEngine) {
@@ -73,13 +81,13 @@ var ejRadialMenu = exports.ejRadialMenu = (_dec = (0, _common.customElement)(_co
     _this.element = element;
     _this.hasChildProperty = true;
     _this.childPropertyName = 'items';
-    _this.templateProcessor = new _common.TemplateProcessor(_this, templateEngine);
+    _this.templateProcessor = new _templateProcessor.TemplateProcessor(_this, templateEngine);
     _this.templateProcessor.initTemplate();
     return _this;
   }
 
   return ejRadialMenu;
-}(_common.WidgetBase), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, 'items', [_dec5], {
+}(_widgetBase.WidgetBase), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, 'items', [_dec5], {
   enumerable: true,
   initializer: function initializer() {
     return [];

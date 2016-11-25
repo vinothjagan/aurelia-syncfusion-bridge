@@ -7,7 +7,13 @@ exports.Item = undefined;
 
 var _dec, _dec2, _dec3, _dec4, _class, _desc, _value, _class2, _descriptor;
 
+var _constants = require('../common/constants');
+
+var _decorators = require('../common/decorators');
+
 var _common = require('../common/common');
+
+var _util = require('../common/util');
 
 function _initDefineProp(target, property, descriptor, context) {
   if (!descriptor) return;
@@ -54,7 +60,7 @@ function _initializerWarningHelper(descriptor, context) {
   throw new Error('Decorating class property failed. Please ensure that transform-class-properties is enabled.');
 }
 
-var Item = exports.Item = (_dec = (0, _common.inlineView)('' + _common.constants.aureliaTemplateString), _dec2 = (0, _common.customElement)(_common.constants.elementPrefix + 'item'), _dec3 = (0, _common.generateBindables)('items', ['imageUrl', 'text', 'enabled', 'click', 'badge', 'type', 'sliderSettings']), _dec4 = (0, _common.children)(_common.constants.elementPrefix + 'template'), _dec(_class = _dec2(_class = _dec3(_class = (_class2 = function () {
+var Item = exports.Item = (_dec = (0, _common.inlineView)('' + _constants.constants.aureliaTemplateString), _dec2 = (0, _common.customElement)(_constants.constants.elementPrefix + 'item'), _dec3 = (0, _decorators.generateBindables)('items', ['imageUrl', 'text', 'enabled', 'click', 'badge', 'type', 'sliderSettings', 'items']), _dec4 = (0, _common.children)(_constants.constants.elementPrefix + 'template'), _dec(_class = _dec2(_class = _dec3(_class = (_class2 = function () {
   function Item() {
     _classCallCheck(this, Item);
 
@@ -63,7 +69,7 @@ var Item = exports.Item = (_dec = (0, _common.inlineView)('' + _common.constants
 
   Item.prototype.setTemplates = function setTemplates() {
     if (this.template[0]) {
-      var util = new _common.Util();
+      var util = new _util.Util();
       this[util.getBindablePropertyName('template')] = this.template[0].template;
     }
   };

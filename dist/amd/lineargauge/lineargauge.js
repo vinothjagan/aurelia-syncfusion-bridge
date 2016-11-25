@@ -1,4 +1,4 @@
-define(['exports', '../common/common', 'datavisualization/ej.lineargauge.min'], function (exports, _common) {
+define(['exports', '../common/widget-base', '../common/constants', '../common/decorators', '../common/common', 'datavisualization/ej.lineargauge.min'], function (exports, _widgetBase, _constants, _decorators, _common) {
   'use strict';
 
   Object.defineProperty(exports, "__esModule", {
@@ -38,7 +38,7 @@ define(['exports', '../common/common', 'datavisualization/ej.lineargauge.min'], 
 
   var _dec, _dec2, _dec3, _dec4, _class;
 
-  var ejLinearGauge = exports.ejLinearGauge = (_dec = (0, _common.customElement)(_common.constants.elementPrefix + 'linear-gauge'), _dec2 = (0, _common.inlineView)('' + _common.constants.aureliaTemplateString), _dec3 = (0, _common.generateBindables)('ejLinearGauge', ['animationSpeed', 'backgroundColor', 'borderColor', 'enableAnimation', 'enableMarkerPointerAnimation', 'isResponsive', 'frame', 'height', 'labelColor', 'maximum', 'minimum', 'orientation', 'outerCustomLabelPosition', 'pointerGradient1', 'pointerGradient2', 'readOnly', 'scales', 'theme', 'tickColor', 'tooltip', 'value', 'width'], ['value', 'minimum', 'maximum']), _dec4 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = function (_WidgetBase) {
+  var ejLinearGauge = exports.ejLinearGauge = (_dec = (0, _common.customElement)(_constants.constants.elementPrefix + 'linear-gauge'), _dec2 = (0, _common.inlineView)('' + _constants.constants.aureliaTemplateString), _dec3 = (0, _decorators.generateBindables)('ejLinearGauge', ['animationSpeed', 'backgroundColor', 'borderColor', 'enableAnimation', 'enableMarkerPointerAnimation', 'isResponsive', 'frame', 'height', 'labelColor', 'maximum', 'minimum', 'orientation', 'outerCustomLabelPosition', 'pointerGradient1', 'pointerGradient2', 'readOnly', 'scales', 'theme', 'tickColor', 'tooltip', 'value', 'width'], ['value', 'minimum', 'maximum']), _dec4 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = function (_WidgetBase) {
     _inherits(ejLinearGauge, _WidgetBase);
 
     function ejLinearGauge(element) {
@@ -51,5 +51,5 @@ define(['exports', '../common/common', 'datavisualization/ej.lineargauge.min'], 
     }
 
     return ejLinearGauge;
-  }(_common.WidgetBase)) || _class) || _class) || _class) || _class);
+  }(_widgetBase.WidgetBase)) || _class) || _class) || _class) || _class);
 });

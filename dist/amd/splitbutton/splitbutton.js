@@ -1,4 +1,4 @@
-define(['exports', '../common/common', 'ej.splitbutton.min'], function (exports, _common) {
+define(['exports', '../common/widget-base', '../common/constants', '../common/decorators', '../common/common', 'ej.splitbutton.min'], function (exports, _widgetBase, _constants, _decorators, _common) {
   'use strict';
 
   Object.defineProperty(exports, "__esModule", {
@@ -38,7 +38,7 @@ define(['exports', '../common/common', 'ej.splitbutton.min'], function (exports,
 
   var _dec, _dec2, _dec3, _class;
 
-  var ejSplitButton = exports.ejSplitButton = (_dec = (0, _common.customAttribute)(_common.constants.attributePrefix + 'split-button'), _dec2 = (0, _common.generateBindables)('ejSplitButton', ['arrowPosition', 'buttonMode', 'contentType', 'cssClass', 'enabled', 'enableRTL', 'height', 'htmlAttributes', 'imagePosition', 'prefixIcon', 'showRoundedCorner', 'size', 'suffixIcon', 'targetID', 'text', 'width'], [], { 'enableRTL': 'enableRtl', 'targetID': 'targetId' }), _dec3 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = function (_WidgetBase) {
+  var ejSplitButton = exports.ejSplitButton = (_dec = (0, _common.customAttribute)(_constants.constants.attributePrefix + 'split-button'), _dec2 = (0, _decorators.generateBindables)('ejSplitButton', ['arrowPosition', 'buttonMode', 'contentType', 'cssClass', 'enabled', 'enableRTL', 'height', 'htmlAttributes', 'imagePosition', 'prefixIcon', 'showRoundedCorner', 'size', 'suffixIcon', 'targetID', 'text', 'width'], [], { 'enableRTL': 'enableRtl', 'targetID': 'targetId' }), _dec3 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = function (_WidgetBase) {
     _inherits(ejSplitButton, _WidgetBase);
 
     function ejSplitButton(element) {
@@ -51,5 +51,5 @@ define(['exports', '../common/common', 'ej.splitbutton.min'], function (exports,
     }
 
     return ejSplitButton;
-  }(_common.WidgetBase)) || _class) || _class) || _class);
+  }(_widgetBase.WidgetBase)) || _class) || _class) || _class);
 });

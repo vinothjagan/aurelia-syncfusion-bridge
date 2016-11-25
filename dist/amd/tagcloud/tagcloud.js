@@ -1,4 +1,4 @@
-define(['exports', '../common/common', 'ej.tagcloud.min'], function (exports, _common) {
+define(['exports', '../common/widget-base', '../common/constants', '../common/decorators', '../common/common', 'ej.tagcloud.min'], function (exports, _widgetBase, _constants, _decorators, _common) {
   'use strict';
 
   Object.defineProperty(exports, "__esModule", {
@@ -38,7 +38,7 @@ define(['exports', '../common/common', 'ej.tagcloud.min'], function (exports, _c
 
   var _dec, _dec2, _dec3, _dec4, _class;
 
-  var ejTagCloud = exports.ejTagCloud = (_dec = (0, _common.customElement)(_common.constants.elementPrefix + 'tag-cloud'), _dec2 = (0, _common.inlineView)('' + _common.constants.aureliaTemplateString), _dec3 = (0, _common.generateBindables)('ejTagCloud', ['cssClass', 'dataSource', 'enableRTL', 'fields', 'format', 'maxFontSize', 'minFontSize', 'query', 'showTitle', 'titleImage', 'titleText'], [], { 'enableRTL': 'enableRtl' }), _dec4 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = function (_WidgetBase) {
+  var ejTagCloud = exports.ejTagCloud = (_dec = (0, _common.customElement)(_constants.constants.elementPrefix + 'tag-cloud'), _dec2 = (0, _common.inlineView)('' + _constants.constants.aureliaTemplateString), _dec3 = (0, _decorators.generateBindables)('ejTagCloud', ['cssClass', 'dataSource', 'enableRTL', 'fields', 'htmlAttributes', 'format', 'maxFontSize', 'minFontSize', 'query', 'showTitle', 'titleImage', 'titleText'], [], { 'enableRTL': 'enableRtl' }), _dec4 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = function (_WidgetBase) {
     _inherits(ejTagCloud, _WidgetBase);
 
     function ejTagCloud(element) {
@@ -51,5 +51,5 @@ define(['exports', '../common/common', 'ej.tagcloud.min'], function (exports, _c
     }
 
     return ejTagCloud;
-  }(_common.WidgetBase)) || _class) || _class) || _class) || _class);
+  }(_widgetBase.WidgetBase)) || _class) || _class) || _class) || _class);
 });

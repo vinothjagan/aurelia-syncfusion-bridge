@@ -1,4 +1,4 @@
-define(['exports', '../common/common', 'ej.timepicker.min'], function (exports, _common) {
+define(['exports', '../common/widget-base', '../common/constants', '../common/decorators', '../common/common', 'ej.timepicker.min'], function (exports, _widgetBase, _constants, _decorators, _common) {
   'use strict';
 
   Object.defineProperty(exports, "__esModule", {
@@ -38,7 +38,7 @@ define(['exports', '../common/common', 'ej.timepicker.min'], function (exports, 
 
   var _dec, _dec2, _dec3, _class;
 
-  var ejTimePicker = exports.ejTimePicker = (_dec = (0, _common.customAttribute)(_common.constants.attributePrefix + 'time-picker'), _dec2 = (0, _common.generateBindables)('ejTimePicker', ['cssClass', 'disableTimeRanges', 'enableAnimation', 'enabled', 'enablePersistence', 'enableRTL', 'enableStrictMode', 'height', 'hourInterval', 'htmlAttributes', 'interval', 'locale', 'maxTime', 'minTime', 'minutesInterval', 'popupHeight', 'popupWidth', 'readOnly', 'secondsInterval', 'showPopupButton', 'showRoundedCorner', 'timeFormat', 'value', 'width'], ['value'], { 'enableRTL': 'enableRtl' }), _dec3 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = function (_WidgetBase) {
+  var ejTimePicker = exports.ejTimePicker = (_dec = (0, _common.customAttribute)(_constants.constants.attributePrefix + 'time-picker'), _dec2 = (0, _decorators.generateBindables)('ejTimePicker', ['cssClass', 'disableTimeRanges', 'enableAnimation', 'enabled', 'enablePersistence', 'enableRTL', 'enableStrictMode', 'height', 'hourInterval', 'htmlAttributes', 'interval', 'locale', 'maxTime', 'minTime', 'minutesInterval', 'popupHeight', 'popupWidth', 'readOnly', 'secondsInterval', 'showPopupButton', 'showRoundedCorner', 'timeFormat', 'value', 'width'], ['value'], { 'enableRTL': 'enableRtl' }), _dec3 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = function (_WidgetBase) {
     _inherits(ejTimePicker, _WidgetBase);
 
     function ejTimePicker(element) {
@@ -52,5 +52,5 @@ define(['exports', '../common/common', 'ej.timepicker.min'], function (exports, 
     }
 
     return ejTimePicker;
-  }(_common.WidgetBase)) || _class) || _class) || _class);
+  }(_widgetBase.WidgetBase)) || _class) || _class) || _class);
 });

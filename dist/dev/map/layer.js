@@ -1,9 +1,9 @@
 'use strict';
 
-System.register(['../common/common'], function (_export, _context) {
+System.register(['../common/constants', '../common/decorators', '../common/common'], function (_export, _context) {
   "use strict";
 
-  var inlineView, customElement, constants, generateBindables, _dec, _dec2, _dec3, _class, Layer;
+  var constants, generateBindables, inlineView, customElement, _dec, _dec2, _dec3, _class, Layer;
 
   function _classCallCheck(instance, Constructor) {
     if (!(instance instanceof Constructor)) {
@@ -12,11 +12,13 @@ System.register(['../common/common'], function (_export, _context) {
   }
 
   return {
-    setters: [function (_commonCommon) {
+    setters: [function (_commonConstants) {
+      constants = _commonConstants.constants;
+    }, function (_commonDecorators) {
+      generateBindables = _commonDecorators.generateBindables;
+    }, function (_commonCommon) {
       inlineView = _commonCommon.inlineView;
       customElement = _commonCommon.customElement;
-      constants = _commonCommon.constants;
-      generateBindables = _commonCommon.generateBindables;
     }],
     execute: function () {
       _export('Layer', Layer = (_dec = inlineView('' + constants.aureliaTemplateString), _dec2 = customElement(constants.elementPrefix + 'layer'), _dec3 = generateBindables('layers', ['bingMapType', 'bubbleSettings', 'dataSource', 'shapeDataPath', 'shapePropertyPath', 'enableMouseHover', 'enableSelection', 'key', 'labelSettings', 'layerType', 'legendSettings', 'mapItemsTemplate', 'markers', 'markerTemplate', 'selectedMapShapes', 'selectionMode', 'shapeData', 'shapeSettings', 'showMapItems', 'showTooltip', 'tooltipTemplate', 'urlTemplate']), _dec(_class = _dec2(_class = _dec3(_class = function Layer() {

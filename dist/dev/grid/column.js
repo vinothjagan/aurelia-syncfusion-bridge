@@ -1,9 +1,9 @@
 'use strict';
 
-System.register(['../common/common'], function (_export, _context) {
+System.register(['../common/constants', '../common/decorators', '../common/common', '../common/util'], function (_export, _context) {
   "use strict";
 
-  var inlineView, customElement, children, constants, generateBindables, Util, _dec, _dec2, _dec3, _dec4, _class, _desc, _value, _class2, _descriptor, Column;
+  var constants, generateBindables, inlineView, customElement, children, Util, _dec, _dec2, _dec3, _dec4, _class, _desc, _value, _class2, _descriptor, Column;
 
   function _initDefineProp(target, property, descriptor, context) {
     if (!descriptor) return;
@@ -55,16 +55,19 @@ System.register(['../common/common'], function (_export, _context) {
   }
 
   return {
-    setters: [function (_commonCommon) {
+    setters: [function (_commonConstants) {
+      constants = _commonConstants.constants;
+    }, function (_commonDecorators) {
+      generateBindables = _commonDecorators.generateBindables;
+    }, function (_commonCommon) {
       inlineView = _commonCommon.inlineView;
       customElement = _commonCommon.customElement;
       children = _commonCommon.children;
-      constants = _commonCommon.constants;
-      generateBindables = _commonCommon.generateBindables;
-      Util = _commonCommon.Util;
+    }, function (_commonUtil) {
+      Util = _commonUtil.Util;
     }],
     execute: function () {
-      _export('Column', Column = (_dec = inlineView('' + constants.aureliaTemplateString), _dec2 = customElement(constants.elementPrefix + 'column'), _dec3 = generateBindables('columns', ['clipMode', 'allowEditing', 'allowFiltering', 'allowGrouping', 'allowSorting', 'allowResizing', 'commands', 'cssClass', 'customAttributes', 'dataSource', 'defaultValue', 'disableHtmlEncode', 'displayAsCheckBox', 'editParams', 'editTemplate', 'editType', 'field', 'foreignKeyField', 'foreignKeyValue', 'format', 'headerTemplateID', 'headerText', 'headerTextAlign', 'isFrozen', 'isIdentity', 'isPrimaryKey', 'showInColumnChooser', 'template', 'textAlign', 'tooltip', 'type', 'validationRules', 'visible', 'width']), _dec4 = children(constants.elementPrefix + 'template'), _dec(_class = _dec2(_class = _dec3(_class = (_class2 = function () {
+      _export('Column', Column = (_dec = inlineView('' + constants.aureliaTemplateString), _dec2 = customElement(constants.elementPrefix + 'column'), _dec3 = generateBindables('columns', ['clipMode', 'allowEditing', 'allowFiltering', 'allowGrouping', 'allowSorting', 'allowResizing', 'commands', 'cssClass', 'customAttributes', 'dataSource', 'defaultValue', 'disableHtmlEncode', 'displayAsCheckBox', 'editParams', 'editTemplate', 'editType', 'enableGroupByFormat', 'field', 'foreignKeyField', 'foreignKeyValue', 'format', 'headerTemplateID', 'headerText', 'headerTextAlign', 'isFrozen', 'isIdentity', 'isPrimaryKey', 'priority', 'showInColumnChooser', 'template', 'textAlign', 'tooltip', 'type', 'validationRules', 'visible', 'width']), _dec4 = children(constants.elementPrefix + 'template'), _dec(_class = _dec2(_class = _dec3(_class = (_class2 = function () {
         function Column() {
           _classCallCheck(this, Column);
 

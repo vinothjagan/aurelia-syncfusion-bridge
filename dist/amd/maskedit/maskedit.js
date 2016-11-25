@@ -1,4 +1,4 @@
-define(['exports', '../common/common', 'ej.maskedit.min'], function (exports, _common) {
+define(['exports', '../common/widget-base', '../common/constants', '../common/decorators', '../common/common', 'ej.maskedit.min'], function (exports, _widgetBase, _constants, _decorators, _common) {
   'use strict';
 
   Object.defineProperty(exports, "__esModule", {
@@ -38,7 +38,7 @@ define(['exports', '../common/common', 'ej.maskedit.min'], function (exports, _c
 
   var _dec, _dec2, _dec3, _class;
 
-  var ejMaskEdit = exports.ejMaskEdit = (_dec = (0, _common.customAttribute)(_common.constants.attributePrefix + 'mask-edit'), _dec2 = (0, _common.generateBindables)('ejMaskEdit', ['cssClass', 'customCharacter', 'enabled', 'enablePersistence', 'height', 'hidePromptOnLeave', 'htmlAttributes', 'inputMode', 'maskFormat', 'name', 'readOnly', 'showError', 'showPromptChar', 'showRoundedCorner', 'textAlign', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'width'], ['value']), _dec3 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = function (_WidgetBase) {
+  var ejMaskEdit = exports.ejMaskEdit = (_dec = (0, _common.customAttribute)(_constants.constants.attributePrefix + 'mask-edit'), _dec2 = (0, _decorators.generateBindables)('ejMaskEdit', ['cssClass', 'customCharacter', 'enabled', 'enablePersistence', 'height', 'hidePromptOnLeave', 'htmlAttributes', 'inputMode', 'maskFormat', 'name', 'readOnly', 'showError', 'showPromptChar', 'showRoundedCorner', 'textAlign', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'width'], ['value']), _dec3 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = function (_WidgetBase) {
     _inherits(ejMaskEdit, _WidgetBase);
 
     function ejMaskEdit(element) {
@@ -52,5 +52,5 @@ define(['exports', '../common/common', 'ej.maskedit.min'], function (exports, _c
     }
 
     return ejMaskEdit;
-  }(_common.WidgetBase)) || _class) || _class) || _class);
+  }(_widgetBase.WidgetBase)) || _class) || _class) || _class);
 });

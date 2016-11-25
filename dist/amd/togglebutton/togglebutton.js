@@ -1,4 +1,4 @@
-define(['exports', '../common/common', 'ej.togglebutton.min'], function (exports, _common) {
+define(['exports', '../common/widget-base', '../common/constants', '../common/decorators', '../common/common', 'ej.togglebutton.min'], function (exports, _widgetBase, _constants, _decorators, _common) {
   'use strict';
 
   Object.defineProperty(exports, "__esModule", {
@@ -38,7 +38,7 @@ define(['exports', '../common/common', 'ej.togglebutton.min'], function (exports
 
   var _dec, _dec2, _dec3, _class;
 
-  var ejToggleButton = exports.ejToggleButton = (_dec = (0, _common.customAttribute)(_common.constants.attributePrefix + 'toggle-button'), _dec2 = (0, _common.generateBindables)('ejToggleButton', ['activePrefixIcon', 'activeSuffixIcon', 'activeText', 'contentType', 'cssClass', 'defaultPrefixIcon', 'defaultSuffixIcon', 'defaultText', 'enabled', 'enablePersistence', 'enableRTL', 'height', 'htmlAttributes', 'imagePosition', 'preventToggle', 'showRoundedCorner', 'size', 'toggleState', 'type', 'width'], [], { 'enableRTL': 'enableRtl' }), _dec3 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = function (_WidgetBase) {
+  var ejToggleButton = exports.ejToggleButton = (_dec = (0, _common.customAttribute)(_constants.constants.attributePrefix + 'toggle-button'), _dec2 = (0, _decorators.generateBindables)('ejToggleButton', ['activePrefixIcon', 'activeSuffixIcon', 'activeText', 'contentType', 'cssClass', 'defaultPrefixIcon', 'defaultSuffixIcon', 'defaultText', 'enabled', 'enablePersistence', 'enableRTL', 'height', 'htmlAttributes', 'imagePosition', 'preventToggle', 'showRoundedCorner', 'size', 'toggleState', 'type', 'width'], [], { 'enableRTL': 'enableRtl' }), _dec3 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = function (_WidgetBase) {
     _inherits(ejToggleButton, _WidgetBase);
 
     function ejToggleButton(element) {
@@ -51,5 +51,5 @@ define(['exports', '../common/common', 'ej.togglebutton.min'], function (exports
     }
 
     return ejToggleButton;
-  }(_common.WidgetBase)) || _class) || _class) || _class);
+  }(_widgetBase.WidgetBase)) || _class) || _class) || _class);
 });

@@ -1,4 +1,4 @@
-define(['exports', '../common/common', 'ej.editor.min'], function (exports, _common) {
+define(['exports', '../common/widget-base', '../common/constants', '../common/decorators', '../common/common', 'ej.editor.min'], function (exports, _widgetBase, _constants, _decorators, _common) {
   'use strict';
 
   Object.defineProperty(exports, "__esModule", {
@@ -38,7 +38,7 @@ define(['exports', '../common/common', 'ej.editor.min'], function (exports, _com
 
   var _dec, _dec2, _dec3, _class;
 
-  var ejPercentageTextbox = exports.ejPercentageTextbox = (_dec = (0, _common.customAttribute)(_common.constants.attributePrefix + 'percentage-textbox'), _dec2 = (0, _common.generateBindables)('ejPercentageTextbox', ['cssClass', 'decimalPlaces', 'enabled', 'enablePersistence', 'enableRTL', 'enableStrictMode', 'groupSize', 'groupSeparator', 'height', 'htmlAttributes', 'incrementStep', 'locale', 'maxValue', 'minValue', 'name', 'negativePattern', 'positivePattern', 'readOnly', 'showRoundedCorner', 'showSpinButton', 'validateOnType', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'width'], [], { 'enableRTL': 'enableRtl' }), _dec3 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = function (_WidgetBase) {
+  var ejPercentageTextbox = exports.ejPercentageTextbox = (_dec = (0, _common.customAttribute)(_constants.constants.attributePrefix + 'percentage-textbox'), _dec2 = (0, _decorators.generateBindables)('ejPercentageTextbox', ['cssClass', 'decimalPlaces', 'enabled', 'enablePersistence', 'enableRTL', 'enableStrictMode', 'groupSize', 'groupSeparator', 'height', 'htmlAttributes', 'incrementStep', 'locale', 'maxValue', 'minValue', 'name', 'negativePattern', 'positivePattern', 'readOnly', 'showRoundedCorner', 'showSpinButton', 'validateOnType', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'width'], [], { 'enableRTL': 'enableRtl' }), _dec3 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = function (_WidgetBase) {
     _inherits(ejPercentageTextbox, _WidgetBase);
 
     function ejPercentageTextbox(element) {
@@ -52,5 +52,5 @@ define(['exports', '../common/common', 'ej.editor.min'], function (exports, _com
     }
 
     return ejPercentageTextbox;
-  }(_common.WidgetBase)) || _class) || _class) || _class);
+  }(_widgetBase.WidgetBase)) || _class) || _class) || _class);
 });

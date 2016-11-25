@@ -1,4 +1,4 @@
-define(['exports', '../common/common', 'datavisualization/ej.diagram.min'], function (exports, _common) {
+define(['exports', '../common/widget-base', '../common/constants', '../common/decorators', '../common/common', 'datavisualization/ej.diagram.min'], function (exports, _widgetBase, _constants, _decorators, _common) {
   'use strict';
 
   Object.defineProperty(exports, "__esModule", {
@@ -38,7 +38,7 @@ define(['exports', '../common/common', 'datavisualization/ej.diagram.min'], func
 
   var _dec, _dec2, _dec3, _dec4, _class;
 
-  var ejSymbolPalette = exports.ejSymbolPalette = (_dec = (0, _common.customElement)(_common.constants.elementPrefix + 'symbol-palette'), _dec2 = (0, _common.inlineView)('' + _common.constants.aureliaTemplateString), _dec3 = (0, _common.generateBindables)('ejSymbolPalette', ['allowDrag', 'cssClass', 'defaultSettings', 'diagramId', 'headerHeight', 'height', 'paletteItemHeight', 'paletteItemWidth', 'palettes', 'previewHeight', 'previewOffset', 'previewWidth', 'showPaletteItemText', 'width']), _dec4 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = function (_WidgetBase) {
+  var ejSymbolPalette = exports.ejSymbolPalette = (_dec = (0, _common.customElement)(_constants.constants.elementPrefix + 'symbol-palette'), _dec2 = (0, _common.inlineView)('' + _constants.constants.aureliaTemplateString), _dec3 = (0, _decorators.generateBindables)('ejSymbolPalette', ['allowDrag', 'cssClass', 'defaultSettings', 'diagramId', 'headerHeight', 'height', 'paletteItemHeight', 'paletteItemWidth', 'palettes', 'previewHeight', 'previewOffset', 'previewWidth', 'showPaletteItemText', 'width']), _dec4 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = function (_WidgetBase) {
     _inherits(ejSymbolPalette, _WidgetBase);
 
     function ejSymbolPalette(element) {
@@ -51,5 +51,5 @@ define(['exports', '../common/common', 'datavisualization/ej.diagram.min'], func
     }
 
     return ejSymbolPalette;
-  }(_common.WidgetBase)) || _class) || _class) || _class) || _class);
+  }(_widgetBase.WidgetBase)) || _class) || _class) || _class) || _class);
 });
