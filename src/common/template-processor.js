@@ -44,7 +44,7 @@ export class TemplateProcessor {
       scope.itemData = [data];
     }
     let actElement = $(selector).html();
-    let tempElement = "<div class='" + templateObject[selector].key + " ej-aurelia-template'>" + actElement + '</div>';
+    let tempElement = "<div ej-prop='" + index + "' class='" + templateObject[selector].key + " ej-aurelia-template'>" + actElement + '</div>';
     return tempElement;
   }
 
@@ -55,9 +55,10 @@ export class TemplateProcessor {
       let tmplElement = templates.filter('.' + templateObject[template].key);
       if (tmplElement.length) {
         for (let i = 0; i < tmplElement.length; i++) {
+          let dataIndex = parseInt($(tmplElement[i]).attr("ej-prop"));
           let view = this.templatingEngine.enhance(tmplElement[i]);
-          view.bind(templateObject[template].itemData[i]);
-          templateObject[template].views[i] = view;
+          view.bind(templateObject[template].itemData[dataIndex]);
+          templateObject[template].views[dataIndex] = view;
         }
       } else {
         this.unbindViews(templateObject[template]);
