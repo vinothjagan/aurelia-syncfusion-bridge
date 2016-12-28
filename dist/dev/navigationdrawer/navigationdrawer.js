@@ -48,7 +48,7 @@ System.register(['../common/widget-base', '../common/constants', '../common/deco
       inject = _commonCommon.inject;
     }, function (_ejNavigationdrawerMin) {}],
     execute: function () {
-      _export('ejNavigationDrawer', ejNavigationDrawer = (_dec = customElement(constants.elementPrefix + 'navigation-drawer'), _dec2 = inlineView('' + constants.aureliaTemplateString), _dec3 = generateBindables('ejNavigationDrawer', ['contentId', 'cssClass', 'direction', 'enableListView', 'items', 'listViewSettings', 'position', 'targetId', 'type', 'width', 'isPaneOpen']), _dec4 = inject(Element), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = function (_WidgetBase) {
+      _export('ejNavigationDrawer', ejNavigationDrawer = (_dec = customElement(constants.elementPrefix + 'navigation-drawer'), _dec2 = inlineView('' + constants.aureliaTemplateString), _dec3 = generateBindables('ejNavigationDrawer', ['ajaxSettings', 'contentId', 'cssClass', 'direction', 'enableListView', 'items', 'listViewSettings', 'position', 'targetId', 'type', 'width', 'isPaneOpen']), _dec4 = inject(Element), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = function (_WidgetBase) {
         _inherits(ejNavigationDrawer, _WidgetBase);
 
         function ejNavigationDrawer(element) {

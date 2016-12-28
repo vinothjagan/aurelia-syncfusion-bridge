@@ -92,7 +92,7 @@ System.register(['../common/widget-base', '../common/constants', '../common/deco
       children = _commonCommon.children;
     }, function (_datavisualizationEjBulletgraphMin) {}],
     execute: function () {
-      _export('ejBulletGraph', ejBulletGraph = (_dec = customElement(constants.elementPrefix + 'bullet-graph'), _dec2 = inlineView('' + constants.aureliaTemplateString), _dec3 = generateBindables('ejBulletGraph', ['applyRangeStrokeToLabels', 'applyRangeStrokeToTicks', 'captionSettings', 'comparativeMeasureValue', 'enableAnimation', 'flowDirection', 'height', 'isResponsive', 'orientation', 'qualitativeRanges', 'qualitativeRangeSize', 'quantitativeScaleLength', 'quantitativeScaleSettings', 'theme', 'tooltipSettings', 'value', 'width']), _dec4 = inject(Element), _dec5 = children(constants.elementPrefix + 'qualitative-range'), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = (_class2 = function (_WidgetBase) {
+      _export('ejBulletGraph', ejBulletGraph = (_dec = customElement(constants.elementPrefix + 'bullet-graph'), _dec2 = inlineView('' + constants.aureliaTemplateString), _dec3 = generateBindables('ejBulletGraph', ['applyRangeStrokeToLabels', 'applyRangeStrokeToTicks', 'captionSettings', 'comparativeMeasureValue', 'enableAnimation', 'flowDirection', 'height', 'isResponsive', 'orientation', 'qualitativeRanges', 'qualitativeRangeSize', 'quantitativeScaleLength', 'quantitativeScaleSettings', 'fields', 'theme', 'tooltipSettings', 'value', 'width']), _dec4 = inject(Element), _dec5 = children(constants.elementPrefix + 'qualitative-range'), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = (_class2 = function (_WidgetBase) {
         _inherits(ejBulletGraph, _WidgetBase);
 
         function ejBulletGraph(element) {

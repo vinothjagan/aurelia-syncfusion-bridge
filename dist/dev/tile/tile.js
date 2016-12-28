@@ -48,7 +48,7 @@ System.register(['../common/widget-base', '../common/constants', '../common/deco
       inject = _commonCommon.inject;
     }, function (_ejTileMin) {}],
     execute: function () {
-      _export('ejTile', ejTile = (_dec = customElement(constants.elementPrefix + 'tile'), _dec2 = inlineView('' + constants.aureliaTemplateString), _dec3 = generateBindables('ejTile', ['badge', 'caption', 'cssClass', 'enablePersistence', 'height', 'imageClass', 'imagePosition', 'imageTemplateId', 'imageUrl', 'liveTile', 'tileSize', 'width', 'showRoundedCorner', 'allowSelection', 'backgroundColor']), _dec4 = inject(Element), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = function (_WidgetBase) {
+      _export('ejTile', ejTile = (_dec = customElement(constants.elementPrefix + 'tile'), _dec2 = inlineView('' + constants.aureliaTemplateString), _dec3 = generateBindables('ejTile', ['badge', 'caption', 'cssClass', 'enablePersistence', 'height', 'imageClass', 'imagePosition', 'imageTemplateId', 'imageUrl', 'locale', 'liveTile', 'tileSize', 'width', 'showRoundedCorner', 'allowSelection', 'backgroundColor']), _dec4 = inject(Element), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = function (_WidgetBase) {
         _inherits(ejTile, _WidgetBase);
 
         function ejTile(element) {

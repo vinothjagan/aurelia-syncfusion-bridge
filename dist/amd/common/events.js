@@ -35,7 +35,7 @@ define(['exports', './util', 'aurelia-dependency-injection', './constants'], fun
     return option;
   }
   function fireEvent(element, name) {
-    var data = arguments.length <= 2 || arguments[2] === undefined ? {} : arguments[2];
+    var data = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
 
     var event = new CustomEvent(name, {
       detail: data,

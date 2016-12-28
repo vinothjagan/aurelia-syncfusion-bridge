@@ -63,7 +63,7 @@ System.register(['aurelia-dependency-injection', '../common/util', 'aurelia-temp
             scope.itemData = [data];
           }
           var actElement = $(selector).html();
-          var tempElement = "<div class='" + templateObject[selector].key + " ej-aurelia-template'>" + actElement + '</div>';
+          var tempElement = "<div ej-prop='" + index + "' class='" + templateObject[selector].key + " ej-aurelia-template'>" + actElement + '</div>';
           return tempElement;
         };
 
@@ -74,9 +74,10 @@ System.register(['aurelia-dependency-injection', '../common/util', 'aurelia-temp
             var tmplElement = templates.filter('.' + templateObject[template].key);
             if (tmplElement.length) {
               for (var i = 0; i < tmplElement.length; i++) {
+                var dataIndex = parseInt($(tmplElement[i]).attr('ej-prop'));
                 var view = this.templatingEngine.enhance(tmplElement[i]);
-                view.bind(templateObject[template].itemData[i]);
-                templateObject[template].views[i] = view;
+                view.bind(templateObject[template].itemData[dataIndex]);
+                templateObject[template].views[dataIndex] = view;
               }
             } else {
               this.unbindViews(templateObject[template]);
