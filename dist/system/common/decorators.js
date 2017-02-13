@@ -1,15 +1,16 @@
 'use strict';
 
-System.register(['aurelia-templating', 'aurelia-dependency-injection', 'aurelia-metadata', 'aurelia-task-queue', './util'], function (_export, _context) {
+System.register(['aurelia-templating', 'aurelia-dependency-injection', 'aurelia-metadata', 'aurelia-task-queue', 'aurelia-binding', './util'], function (_export, _context) {
   "use strict";
 
-  var BindableProperty, HtmlBehaviorResource, Container, metadata, TaskQueue, Util;
+  var BindableProperty, HtmlBehaviorResource, Container, metadata, TaskQueue, bindingMode, Util;
   function generateBindables(controlName, inputs, twoWayProperties, abbrevProperties) {
     return function (target, key, descriptor) {
       var behaviorResource = metadata.getOrCreateOwn(metadata.resource, HtmlBehaviorResource, target);
       var container = Container.instance || new Container();
       var util = container.get(Util);
       inputs.push('options');
+      inputs.push('widget');
       var len = inputs.length;
       target.prototype.controlName = controlName;
       target.prototype.twoWays = twoWayProperties ? twoWayProperties : [];
@@ -24,6 +25,11 @@ System.register(['aurelia-templating', 'aurelia-dependency-injection', 'aurelia-
           var nameOrConfigOrTarget = {
             name: util.getBindablePropertyName(option)
           };
+
+          if (option === 'widget') {
+            nameOrConfigOrTarget.defaultBindingMode = bindingMode.twoWay;
+          }
+
           var prop = new BindableProperty(nameOrConfigOrTarget);
           prop.registerWith(target, behaviorResource, descriptor);
         }
@@ -70,6 +76,8 @@ System.register(['aurelia-templating', 'aurelia-dependency-injection', 'aurelia-
       metadata = _aureliaMetadata.metadata;
     }, function (_aureliaTaskQueue) {
       TaskQueue = _aureliaTaskQueue.TaskQueue;
+    }, function (_aureliaBinding) {
+      bindingMode = _aureliaBinding.bindingMode;
     }, function (_util) {
       Util = _util.Util;
     }],

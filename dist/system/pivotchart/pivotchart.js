@@ -1,6 +1,6 @@
 'use strict';
 
-System.register(['../common/widget-base', '../common/constants', '../common/decorators', '../common/common', 'ej.pivotchart.min'], function (_export, _context) {
+System.register(['../common/widget-base', '../common/constants', '../common/decorators', '../common/common', 'syncfusion-javascript/Scripts/ej/web/ej.pivotchart.min'], function (_export, _context) {
   "use strict";
 
   var WidgetBase, constants, generateBindables, customElement, inlineView, inject, _dec, _dec2, _dec3, _dec4, _class, ejPivotChart;
@@ -46,7 +46,7 @@ System.register(['../common/widget-base', '../common/constants', '../common/deco
       customElement = _commonCommon.customElement;
       inlineView = _commonCommon.inlineView;
       inject = _commonCommon.inject;
-    }, function (_ejPivotchartMin) {}],
+    }, function (_syncfusionJavascriptScriptsEjWebEjPivotchartMin) {}],
     execute: function () {
       _export('ejPivotChart', ejPivotChart = (_dec = customElement(constants.elementPrefix + 'pivot-chart'), _dec2 = inlineView('' + constants.aureliaTemplateString), _dec3 = generateBindables('ejPivotChart', ['analysisMode', 'cssClass', 'zooming', 'commonSeriesOptions', 'dataSource', 'customObject', 'enable3D', 'enableRTL', 'isResponsive', 'legend', 'locale', 'operationalMode', 'primaryXAxis', 'primaryYAxis', 'rotation', 'serviceMethodSettings', 'size', 'url'], [], { 'enableRTL': 'enableRtl' }), _dec4 = inject(Element), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = function (_WidgetBase) {
         _inherits(ejPivotChart, _WidgetBase);

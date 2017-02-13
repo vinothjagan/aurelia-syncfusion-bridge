@@ -1,6 +1,6 @@
 'use strict';
 
-System.register(['../common/widget-base', '../common/constants', '../common/decorators', '../common/common', 'ej.datetimepicker.min'], function (_export, _context) {
+System.register(['../common/widget-base', '../common/constants', '../common/decorators', '../common/common', 'syncfusion-javascript/Scripts/ej/web/ej.datetimepicker.min'], function (_export, _context) {
   "use strict";
 
   var WidgetBase, constants, generateBindables, customAttribute, inject, _dec, _dec2, _dec3, _class, ejDateTimePicker;
@@ -45,7 +45,7 @@ System.register(['../common/widget-base', '../common/constants', '../common/deco
     }, function (_commonCommon) {
       customAttribute = _commonCommon.customAttribute;
       inject = _commonCommon.inject;
-    }, function (_ejDatetimepickerMin) {}],
+    }, function (_syncfusionJavascriptScriptsEjWebEjDatetimepickerMin) {}],
     execute: function () {
       _export('ejDateTimePicker', ejDateTimePicker = (_dec = customAttribute(constants.attributePrefix + 'date-time-picker'), _dec2 = generateBindables('ejDateTimePicker', ['buttonText', 'cssClass', 'dateTimeFormat', 'dayHeaderFormat', 'depthLevel', 'enableAnimation', 'enabled', 'enablePersistence', 'enableRTL', 'enableStrictMode', 'headerFormat', 'height', 'htmlAttributes', 'interval', 'locale', 'maxDateTime', 'minDateTime', 'popupPosition', 'readOnly', 'showOtherMonths', 'showPopupButton', 'showRoundedCorner', 'startDay', 'startLevel', 'stepMonths', 'timeDisplayFormat', 'timeDrillDown', 'timePopupWidth', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'width'], ['value'], { 'enableRTL': 'enableRtl' }), _dec3 = inject(Element), _dec(_class = _dec2(_class = _dec3(_class = function (_WidgetBase) {
         _inherits(ejDateTimePicker, _WidgetBase);

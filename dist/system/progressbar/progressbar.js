@@ -1,6 +1,6 @@
 'use strict';
 
-System.register(['../common/widget-base', '../common/constants', '../common/decorators', '../common/common', 'ej.progressbar.min'], function (_export, _context) {
+System.register(['../common/widget-base', '../common/constants', '../common/decorators', '../common/common', 'syncfusion-javascript/Scripts/ej/web/ej.progressbar.min'], function (_export, _context) {
   "use strict";
 
   var WidgetBase, constants, generateBindables, customAttribute, inject, _dec, _dec2, _dec3, _class, ejProgressBar;
@@ -45,7 +45,7 @@ System.register(['../common/widget-base', '../common/constants', '../common/deco
     }, function (_commonCommon) {
       customAttribute = _commonCommon.customAttribute;
       inject = _commonCommon.inject;
-    }, function (_ejProgressbarMin) {}],
+    }, function (_syncfusionJavascriptScriptsEjWebEjProgressbarMin) {}],
     execute: function () {
       _export('ejProgressBar', ejProgressBar = (_dec = customAttribute(constants.attributePrefix + 'progress-bar'), _dec2 = generateBindables('ejProgressBar', ['cssClass', 'enabled', 'enablePersistence', 'enableRTL', 'height', 'htmlAttributes', 'maxValue', 'minValue', 'percentage', 'showRoundedCorner', 'text', 'value', 'width'], [], { 'enableRTL': 'enableRtl' }), _dec3 = inject(Element), _dec(_class = _dec2(_class = _dec3(_class = function (_WidgetBase) {
         _inherits(ejProgressBar, _WidgetBase);

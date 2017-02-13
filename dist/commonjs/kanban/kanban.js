@@ -15,7 +15,7 @@ var _decorators = require('../common/decorators');
 
 var _common = require('../common/common');
 
-require('ej.kanban.min');
+require('syncfusion-javascript/Scripts/ej/web/ej.kanban.min');
 
 function _initDefineProp(target, property, descriptor, context) {
   if (!descriptor) return;

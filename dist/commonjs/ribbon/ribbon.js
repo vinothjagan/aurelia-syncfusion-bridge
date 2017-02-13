@@ -15,7 +15,7 @@ var _decorators = require('../common/decorators');
 
 var _common = require('../common/common');
 
-require('ej.ribbon.min');
+require('syncfusion-javascript/Scripts/ej/web/ej.ribbon.min');
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 

@@ -1,4 +1,4 @@
-define(['exports', 'aurelia-templating', 'aurelia-dependency-injection', 'aurelia-metadata', 'aurelia-task-queue', './util'], function (exports, _aureliaTemplating, _aureliaDependencyInjection, _aureliaMetadata, _aureliaTaskQueue, _util) {
+define(['exports', 'aurelia-templating', 'aurelia-dependency-injection', 'aurelia-metadata', 'aurelia-task-queue', 'aurelia-binding', './util'], function (exports, _aureliaTemplating, _aureliaDependencyInjection, _aureliaMetadata, _aureliaTaskQueue, _aureliaBinding, _util) {
   'use strict';
 
   Object.defineProperty(exports, "__esModule", {
@@ -12,6 +12,7 @@ define(['exports', 'aurelia-templating', 'aurelia-dependency-injection', 'aureli
       var container = _aureliaDependencyInjection.Container.instance || new _aureliaDependencyInjection.Container();
       var util = container.get(_util.Util);
       inputs.push('options');
+      inputs.push('widget');
       var len = inputs.length;
       target.prototype.controlName = controlName;
       target.prototype.twoWays = twoWayProperties ? twoWayProperties : [];
@@ -26,6 +27,11 @@ define(['exports', 'aurelia-templating', 'aurelia-dependency-injection', 'aureli
           var nameOrConfigOrTarget = {
             name: util.getBindablePropertyName(option)
           };
+
+          if (option === 'widget') {
+            nameOrConfigOrTarget.defaultBindingMode = _aureliaBinding.bindingMode.twoWay;
+          }
+
           var prop = new _aureliaTemplating.BindableProperty(nameOrConfigOrTarget);
           prop.registerWith(target, behaviorResource, descriptor);
         }

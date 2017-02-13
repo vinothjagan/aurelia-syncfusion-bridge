@@ -12,47 +12,76 @@ export class EjConfigBuilder {
   useAll() : EjConfigBuilder {
     this.ejGrid()
     .ejChart()
+    .ejSunburstChart()
     .ejMap()
+    .ejTreeMap()
     .ejRangeNavigator()
     .ejDiagram()
     .ejHeatMap()
     .ejHeatMapLegend()
+    .ejSparkline()
+    .ejSymbolPalette()
     .ejOverview()
     .ejPager()
     .ejBulletGraph()
     .ejCircularGauge()
     .ejLinearGauge()
     .ejDigitalGauge()
+    .ejSplitter()
     .ejDatePicker()
     .ejGantt()
+    .ejTreeGrid()
     .ejColorPicker()
     .ejDialog()
+    .ejScroller()
     .ejBarcode()
     .ejPdfViewer()
+    .ejNumericTextbox()
+    .ejCurrencyTextbox()
+    .ejPercentageTextbox()
+    .ejTimePicker()
+    .ejToolbar()
     .ejMenu()
     .ejMaskEdit()
+    .ejTreeView()
     .ejKanban()
+    .ejRibbon()
+    .ejSpreadsheet()
     .ejRating()
     .ejListBox()
     .ejListView()
     .ejNavigationDrawer()
+    .ejRotator()
+    .ejRTE()
     .ejDropDownList()
     .ejAutocomplete()
     .ejRadialMenu()
     .ejRadialSlider()
+    .ejTile()
     .ejAccordion()
+    .ejTab()
     .ejCheckBox()
     .ejRadioButton()
+    .ejToggleButton()
+    .ejSplitButton()
     .ejGroupButton()
     .ejDateTimePicker()
     .ejProgressBar()
+    .ejTagCloud()
     .ejButton()
+    .ejSlider()
     .ejFileExplorer()
     .ejPivotGrid()
     .ejPivotChart()
     .ejPivotGauge()
     .ejPivotSchemaDesigner()
     .ejPivotTreeMap()
+    .ejWaitingPopup()
+    .ejReportViewer()
+    .ejSchedule()
+    .ejUploadbox()
+    .ejSignature()
+    .ejTooltip()
     .ejTemplate();
     return this;
   }
@@ -74,9 +103,19 @@ export class EjConfigBuilder {
     this.resources.push('./chart/series');
     return this;
   }
+  ejSunburstChart(): EjConfigBuilder {
+    this.resources.push('./sunburstchart/sunburstchart');
+    this.resources.push('./sunburstchart/sunburstlevels');
+    return this;
+  }
   ejMap(): EjConfigBuilder {
     this.resources.push('./map/map');
     this.resources.push('./map/layer');
+    return this;
+  }
+  ejTreeMap(): EjConfigBuilder {
+    this.resources.push('./treemap/treemap');
+    this.resources.push('./treemap/level');
     return this;
   }
   ejRangeNavigator(): EjConfigBuilder {
@@ -94,6 +133,14 @@ export class EjConfigBuilder {
   }
   ejHeatMapLegend(): EjConfigBuilder {
     this.resources.push('./heatmaplegend/heatmaplegend');
+    return this;
+  }
+  ejSparkline(): EjConfigBuilder {
+    this.resources.push('./sparkline/sparkline');
+    return this;
+  }
+  ejSymbolPalette(): EjConfigBuilder {
+    this.resources.push('./symbolpalette/symbolpalette');
     return this;
   }
   ejOverview(): EjConfigBuilder {
@@ -121,12 +168,21 @@ export class EjConfigBuilder {
     this.resources.push('./digitalgauge/digitalgauge');
     return this;
   }
+  ejSplitter(): EjConfigBuilder {
+    this.resources.push('./splitter/splitter');
+    return this;
+  }
   ejDatePicker(): EjConfigBuilder {
     this.resources.push('./datepicker/datepicker');
     return this;
   }
   ejGantt(): EjConfigBuilder {
     this.resources.push('./gantt/gantt');
+    return this;
+  }
+  ejTreeGrid(): EjConfigBuilder {
+    this.resources.push('./treegrid/treegrid');
+    this.resources.push('./treegrid/treegridcolumn');
     return this;
   }
   ejColorPicker(): EjConfigBuilder {
@@ -137,12 +193,36 @@ export class EjConfigBuilder {
     this.resources.push('./dialog/dialog');
     return this;
   }
+  ejScroller(): EjConfigBuilder {
+    this.resources.push('./scroller/scroller');
+    return this;
+  }
   ejBarcode(): EjConfigBuilder {
     this.resources.push('./barcode/barcode');
     return this;
   }
   ejPdfViewer(): EjConfigBuilder {
     this.resources.push('./pdfviewer/pdfviewer');
+    return this;
+  }
+  ejNumericTextbox(): EjConfigBuilder {
+    this.resources.push('./numerictextbox/numerictextbox');
+    return this;
+  }
+  ejCurrencyTextbox(): EjConfigBuilder {
+    this.resources.push('./currencytextbox/currencytextbox');
+    return this;
+  }
+  ejPercentageTextbox(): EjConfigBuilder {
+    this.resources.push('./percentagetextbox/percentagetextbox');
+    return this;
+  }
+  ejTimePicker(): EjConfigBuilder {
+    this.resources.push('./timepicker/timepicker');
+    return this;
+  }
+  ejToolbar(): EjConfigBuilder {
+    this.resources.push('./toolbar/toolbar');
     return this;
   }
   ejMenu(): EjConfigBuilder {
@@ -153,9 +233,22 @@ export class EjConfigBuilder {
     this.resources.push('./maskedit/maskedit');
     return this;
   }
+  ejTreeView(): EjConfigBuilder {
+    this.resources.push('./treeview/treeview');
+    return this;
+  }
   ejKanban(): EjConfigBuilder {
     this.resources.push('./kanban/kanban');
     this.resources.push('./kanban/kanbancolumn');
+    return this;
+  }
+  ejRibbon(): EjConfigBuilder {
+    this.resources.push('./ribbon/ribbon');
+    return this;
+  }
+  ejSpreadsheet(): EjConfigBuilder {
+    this.resources.push('./spreadsheet/spreadsheet');
+    this.resources.push('./spreadsheet/sheet');
     return this;
   }
   ejRating(): EjConfigBuilder {
@@ -172,6 +265,14 @@ export class EjConfigBuilder {
   }
   ejNavigationDrawer(): EjConfigBuilder {
     this.resources.push('./navigationdrawer/navigationdrawer');
+    return this;
+  }
+  ejRotator(): EjConfigBuilder {
+    this.resources.push('./rotator/rotator');
+    return this;
+  }
+  ejRTE(): EjConfigBuilder {
+    this.resources.push('./rte/rte');
     return this;
   }
   ejDropDownList(): EjConfigBuilder {
@@ -191,8 +292,16 @@ export class EjConfigBuilder {
     this.resources.push('./radialslider/radialslider');
     return this;
   }
+  ejTile(): EjConfigBuilder {
+    this.resources.push('./tile/tile');
+    return this;
+  }
   ejAccordion(): EjConfigBuilder {
     this.resources.push('./accordion/accordion');
+    return this;
+  }
+  ejTab(): EjConfigBuilder {
+    this.resources.push('./tab/tab');
     return this;
   }
   ejCheckBox(): EjConfigBuilder {
@@ -201,6 +310,14 @@ export class EjConfigBuilder {
   }
   ejRadioButton(): EjConfigBuilder {
     this.resources.push('./radiobutton/radiobutton');
+    return this;
+  }
+  ejToggleButton(): EjConfigBuilder {
+    this.resources.push('./togglebutton/togglebutton');
+    return this;
+  }
+  ejSplitButton(): EjConfigBuilder {
+    this.resources.push('./splitbutton/splitbutton');
     return this;
   }
   ejGroupButton(): EjConfigBuilder {
@@ -215,8 +332,16 @@ export class EjConfigBuilder {
     this.resources.push('./progressbar/progressbar');
     return this;
   }
+  ejTagCloud(): EjConfigBuilder {
+    this.resources.push('./tagcloud/tagcloud');
+    return this;
+  }
   ejButton(): EjConfigBuilder {
     this.resources.push('./button/button');
+    return this;
+  }
+  ejSlider(): EjConfigBuilder {
+    this.resources.push('./slider/slider');
     return this;
   }
   ejFileExplorer(): EjConfigBuilder {
@@ -241,6 +366,31 @@ export class EjConfigBuilder {
   }
   ejPivotTreeMap(): EjConfigBuilder {
     this.resources.push('./pivottreemap/pivottreemap');
+    return this;
+  }
+  ejWaitingPopup(): EjConfigBuilder {
+    this.resources.push('./waitingpopup/waitingpopup');
+    return this;
+  }
+  ejReportViewer(): EjConfigBuilder {
+    this.resources.push('./reportviewer/reportviewer');
+    return this;
+  }
+  ejSchedule(): EjConfigBuilder {
+    this.resources.push('./schedule/schedule');
+    this.resources.push('./schedule/scheduleresource');
+    return this;
+  }
+  ejUploadbox(): EjConfigBuilder {
+    this.resources.push('./uploadbox/uploadbox');
+    return this;
+  }
+  ejSignature(): EjConfigBuilder {
+    this.resources.push('./signature/signature');
+    return this;
+  }
+  ejTooltip(): EjConfigBuilder {
+    this.resources.push('./tooltip/tooltip');
     return this;
   }
   ejTemplate(): EjConfigBuilder {

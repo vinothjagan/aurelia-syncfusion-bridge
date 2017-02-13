@@ -1,4 +1,4 @@
-define(['exports', '../common/widget-base', '../common/constants', '../common/decorators', '../common/common', '../common/template-processor', 'ej.radialmenu.min'], function (exports, _widgetBase, _constants, _decorators, _common, _templateProcessor) {
+define(['exports', '../common/widget-base', '../common/constants', '../common/decorators', '../common/common', '../common/template-processor', 'syncfusion-javascript/Scripts/ej/web/ej.radialmenu.min'], function (exports, _widgetBase, _constants, _decorators, _common, _templateProcessor) {
   'use strict';
 
   Object.defineProperty(exports, "__esModule", {

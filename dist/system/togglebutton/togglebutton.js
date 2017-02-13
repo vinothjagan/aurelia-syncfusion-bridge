@@ -1,6 +1,6 @@
 'use strict';
 
-System.register(['../common/widget-base', '../common/constants', '../common/decorators', '../common/common', 'ej.togglebutton.min'], function (_export, _context) {
+System.register(['../common/widget-base', '../common/constants', '../common/decorators', '../common/common', 'syncfusion-javascript/Scripts/ej/web/ej.togglebutton.min'], function (_export, _context) {
   "use strict";
 
   var WidgetBase, constants, generateBindables, customAttribute, inject, _dec, _dec2, _dec3, _class, ejToggleButton;
@@ -45,7 +45,7 @@ System.register(['../common/widget-base', '../common/constants', '../common/deco
     }, function (_commonCommon) {
       customAttribute = _commonCommon.customAttribute;
       inject = _commonCommon.inject;
-    }, function (_ejTogglebuttonMin) {}],
+    }, function (_syncfusionJavascriptScriptsEjWebEjTogglebuttonMin) {}],
     execute: function () {
       _export('ejToggleButton', ejToggleButton = (_dec = customAttribute(constants.attributePrefix + 'toggle-button'), _dec2 = generateBindables('ejToggleButton', ['activePrefixIcon', 'activeSuffixIcon', 'activeText', 'contentType', 'cssClass', 'defaultPrefixIcon', 'defaultSuffixIcon', 'defaultText', 'enabled', 'enablePersistence', 'enableRTL', 'height', 'htmlAttributes', 'imagePosition', 'preventToggle', 'showRoundedCorner', 'size', 'toggleState', 'type', 'width'], [], { 'enableRTL': 'enableRtl' }), _dec3 = inject(Element), _dec(_class = _dec2(_class = _dec3(_class = function (_WidgetBase) {
         _inherits(ejToggleButton, _WidgetBase);

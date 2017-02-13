@@ -1,6 +1,6 @@
 'use strict';
 
-System.register(['../common/widget-base', '../common/constants', '../common/decorators', '../common/common', 'datavisualization/ej.chart.min'], function (_export, _context) {
+System.register(['../common/widget-base', '../common/constants', '../common/decorators', '../common/common', 'syncfusion-javascript/Scripts/ej/datavisualization/ej.chart.min'], function (_export, _context) {
   "use strict";
 
   var WidgetBase, constants, generateBindables, inject, inlineView, customElement, children, _dec, _dec2, _dec3, _dec4, _dec5, _class, _desc, _value, _class2, _descriptor, ejChart;
@@ -90,9 +90,9 @@ System.register(['../common/widget-base', '../common/constants', '../common/deco
       inlineView = _commonCommon.inlineView;
       customElement = _commonCommon.customElement;
       children = _commonCommon.children;
-    }, function (_datavisualizationEjChartMin) {}],
+    }, function (_syncfusionJavascriptScriptsEjDatavisualizationEjChartMin) {}],
     execute: function () {
-      _export('ejChart', ejChart = (_dec = customElement(constants.elementPrefix + 'chart'), _dec2 = inlineView('' + constants.aureliaTemplateString), _dec3 = generateBindables('ejChart', ['annotations', 'backGroundImageUrl', 'border', 'exportSettings', 'chartArea', 'columnDefinitions', 'commonSeriesOptions', 'crosshair', 'depth', 'enable3D', 'enableCanvasRendering', 'enableRotation', 'indicators', 'isResponsive', 'legend', 'locale', 'palette', 'Margin', 'perspectiveAngle', 'primaryXAxis', 'axes', 'primaryYAxis', 'rotation', 'rowDefinitions', 'series', 'sideBySideSeriesPlacement', 'size', 'theme', 'tilt', 'title', 'wallSize', 'zooming']), _dec4 = inject(Element), _dec5 = children(constants.elementPrefix + 'series'), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = (_class2 = function (_WidgetBase) {
+      _export('ejChart', ejChart = (_dec = customElement(constants.elementPrefix + 'chart'), _dec2 = inlineView('' + constants.aureliaTemplateString), _dec3 = generateBindables('ejChart', ['annotations', 'backGroundImageUrl', 'border', 'exportSettings', 'chartArea', 'columnDefinitions', 'commonSeriesOptions', 'crosshair', 'depth', 'enable3D', 'enableCanvasRendering', 'initSeriesRender', 'enableRotation', 'indicators', 'isResponsive', 'legend', 'locale', 'palette', 'Margin', 'perspectiveAngle', 'primaryXAxis', 'axes', 'primaryYAxis', 'rotation', 'rowDefinitions', 'series', 'sideBySideSeriesPlacement', 'size', 'theme', 'tilt', 'title', 'wallSize', 'zooming']), _dec4 = inject(Element), _dec5 = children(constants.elementPrefix + 'series'), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = (_class2 = function (_WidgetBase) {
         _inherits(ejChart, _WidgetBase);
 
         function ejChart(element) {

@@ -12,6 +12,7 @@ export class EjConfigBuilder {
   useAll() : EjConfigBuilder {
     this.ejGrid()
     .ejChart()
+    .ejSunburstChart()
     .ejMap()
     .ejTreeMap()
     .ejRangeNavigator()
@@ -100,6 +101,11 @@ export class EjConfigBuilder {
   ejChart(): EjConfigBuilder {
     this.resources.push('./chart/chart');
     this.resources.push('./chart/series');
+    return this;
+  }
+  ejSunburstChart(): EjConfigBuilder {
+    this.resources.push('./sunburstchart/sunburstchart');
+    this.resources.push('./sunburstchart/sunburstlevels');
     return this;
   }
   ejMap(): EjConfigBuilder {

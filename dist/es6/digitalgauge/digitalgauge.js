@@ -3,7 +3,7 @@ import {constants} from '../common/constants';
 import {generateBindables} from '../common/decorators';
 import {customElement, inlineView, inject} from '../common/common';
 
-import 'datavisualization/ej.digitalgauge.min';
+import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.digitalgauge.min';
 
 @customElement(`${constants.elementPrefix}digital-gauge`)
 @inlineView(`${constants.aureliaTemplateString}`)

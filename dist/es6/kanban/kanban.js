@@ -3,7 +3,7 @@ import {constants} from '../common/constants';
 import {generateBindables} from '../common/decorators';
 import {inject, inlineView, customElement, children} from '../common/common';
 
-import 'ej.kanban.min';
+import 'syncfusion-javascript/Scripts/ej/web/ej.kanban.min';
 
 @customElement(`${constants.elementPrefix}kanban`)
 @inlineView(`${constants.aureliaTemplateString}`)

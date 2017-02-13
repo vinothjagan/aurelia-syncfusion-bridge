@@ -15,7 +15,7 @@ var _decorators = require('../common/decorators');
 
 var _common = require('../common/common');
 
-require('ej.spreadsheet.min');
+require('syncfusion-javascript/Scripts/ej/web/ej.spreadsheet.min');
 
 function _initDefineProp(target, property, descriptor, context) {
   if (!descriptor) return;

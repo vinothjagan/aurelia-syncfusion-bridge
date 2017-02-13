@@ -1,6 +1,6 @@
 'use strict';
 
-System.register(['../common/widget-base', '../common/constants', '../common/decorators', '../common/common', 'common/ej.scroller.min'], function (_export, _context) {
+System.register(['../common/widget-base', '../common/constants', '../common/decorators', '../common/common', 'syncfusion-javascript/Scripts/ej/common/ej.scroller.min'], function (_export, _context) {
   "use strict";
 
   var WidgetBase, constants, generateBindables, customAttribute, inject, _dec, _dec2, _dec3, _class, ejScroller;
@@ -45,7 +45,7 @@ System.register(['../common/widget-base', '../common/constants', '../common/deco
     }, function (_commonCommon) {
       customAttribute = _commonCommon.customAttribute;
       inject = _commonCommon.inject;
-    }, function (_commonEjScrollerMin) {}],
+    }, function (_syncfusionJavascriptScriptsEjCommonEjScrollerMin) {}],
     execute: function () {
       _export('ejScroller', ejScroller = (_dec = customAttribute(constants.attributePrefix + 'scroller'), _dec2 = generateBindables('ejScroller', ['animationSpeed', 'autoHide', 'buttonSize', 'enabled', 'enablePersistence', 'enableRTL', 'enableTouchScroll', 'height', 'scrollerSize', 'scrollLeft', 'scrollOneStepBy', 'scrollTop', 'targetPane', 'width'], ['scrollLeft', 'scrollTop'], { 'enableRTL': 'enableRtl' }), _dec3 = inject(Element), _dec(_class = _dec2(_class = _dec3(_class = function (_WidgetBase) {
         _inherits(ejScroller, _WidgetBase);

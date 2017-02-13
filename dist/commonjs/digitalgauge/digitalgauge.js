@@ -15,7 +15,7 @@ var _decorators = require('../common/decorators');
 
 var _common = require('../common/common');
 
-require('datavisualization/ej.digitalgauge.min');
+require('syncfusion-javascript/Scripts/ej/datavisualization/ej.digitalgauge.min');
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 

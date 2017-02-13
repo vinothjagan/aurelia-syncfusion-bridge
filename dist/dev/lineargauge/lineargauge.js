@@ -1,6 +1,6 @@
 'use strict';
 
-System.register(['../common/widget-base', '../common/constants', '../common/decorators', '../common/common', 'datavisualization/ej.lineargauge.min'], function (_export, _context) {
+System.register(['../common/widget-base', '../common/constants', '../common/decorators', '../common/common', 'syncfusion-javascript/Scripts/ej/datavisualization/ej.lineargauge.min'], function (_export, _context) {
   "use strict";
 
   var WidgetBase, constants, generateBindables, customElement, inlineView, inject, _dec, _dec2, _dec3, _dec4, _class, ejLinearGauge;
@@ -46,7 +46,7 @@ System.register(['../common/widget-base', '../common/constants', '../common/deco
       customElement = _commonCommon.customElement;
       inlineView = _commonCommon.inlineView;
       inject = _commonCommon.inject;
-    }, function (_datavisualizationEjLineargaugeMin) {}],
+    }, function (_syncfusionJavascriptScriptsEjDatavisualizationEjLineargaugeMin) {}],
     execute: function () {
       _export('ejLinearGauge', ejLinearGauge = (_dec = customElement(constants.elementPrefix + 'linear-gauge'), _dec2 = inlineView('' + constants.aureliaTemplateString), _dec3 = generateBindables('ejLinearGauge', ['animationSpeed', 'backgroundColor', 'borderColor', 'enableAnimation', 'enableMarkerPointerAnimation', 'isResponsive', 'frame', 'height', 'labelColor', 'maximum', 'minimum', 'orientation', 'outerCustomLabelPosition', 'pointerGradient1', 'pointerGradient2', 'readOnly', 'scales', 'theme', 'tickColor', 'tooltip', 'value', 'width'], ['value', 'minimum', 'maximum']), _dec4 = inject(Element), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = function (_WidgetBase) {
         _inherits(ejLinearGauge, _WidgetBase);

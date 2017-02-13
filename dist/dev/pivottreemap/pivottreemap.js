@@ -1,6 +1,6 @@
 'use strict';
 
-System.register(['../common/widget-base', '../common/constants', '../common/decorators', '../common/common', 'ej.pivottreemap.min'], function (_export, _context) {
+System.register(['../common/widget-base', '../common/constants', '../common/decorators', '../common/common', 'syncfusion-javascript/Scripts/ej/web/ej.pivottreemap.min'], function (_export, _context) {
   "use strict";
 
   var WidgetBase, constants, generateBindables, customElement, inlineView, inject, _dec, _dec2, _dec3, _dec4, _class, ejPivotTreeMap;
@@ -46,7 +46,7 @@ System.register(['../common/widget-base', '../common/constants', '../common/deco
       customElement = _commonCommon.customElement;
       inlineView = _commonCommon.inlineView;
       inject = _commonCommon.inject;
-    }, function (_ejPivottreemapMin) {}],
+    }, function (_syncfusionJavascriptScriptsEjWebEjPivottreemapMin) {}],
     execute: function () {
       _export('ejPivotTreeMap', ejPivotTreeMap = (_dec = customElement(constants.elementPrefix + 'pivot-tree-map'), _dec2 = inlineView('' + constants.aureliaTemplateString), _dec3 = generateBindables('ejPivotTreeMap', ['cssClass', 'dataSource', 'customObject', 'isResponsive', 'locale', 'operationalMode', 'serviceMethodSettings', 'url']), _dec4 = inject(Element), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = function (_WidgetBase) {
         _inherits(ejPivotTreeMap, _WidgetBase);

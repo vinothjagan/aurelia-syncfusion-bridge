@@ -1,6 +1,6 @@
 'use strict';
 
-System.register(['../common/widget-base', '../common/constants', '../common/decorators', '../common/common', 'datavisualization/ej.heatmap.min'], function (_export, _context) {
+System.register(['../common/widget-base', '../common/constants', '../common/decorators', '../common/common', 'syncfusion-javascript/Scripts/ej/datavisualization/ej.heatmap.min'], function (_export, _context) {
   "use strict";
 
   var WidgetBase, constants, generateBindables, customElement, inlineView, inject, _dec, _dec2, _dec3, _dec4, _class, ejHeatMapLegend;
@@ -46,7 +46,7 @@ System.register(['../common/widget-base', '../common/constants', '../common/deco
       customElement = _commonCommon.customElement;
       inlineView = _commonCommon.inlineView;
       inject = _commonCommon.inject;
-    }, function (_datavisualizationEjHeatmapMin) {}],
+    }, function (_syncfusionJavascriptScriptsEjDatavisualizationEjHeatmapMin) {}],
     execute: function () {
       _export('ejHeatMapLegend', ejHeatMapLegend = (_dec = customElement(constants.elementPrefix + 'heat-map-legend'), _dec2 = inlineView('' + constants.aureliaTemplateString), _dec3 = generateBindables('ejHeatMapLegend', ['width', 'height', 'isResponsive', 'showLabel', 'colorMappingCollection', 'orientation', 'legendMode']), _dec4 = inject(Element), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = function (_WidgetBase) {
         _inherits(ejHeatMapLegend, _WidgetBase);

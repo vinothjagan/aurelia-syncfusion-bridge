@@ -15,7 +15,7 @@ var _decorators = require('../common/decorators');
 
 var _common = require('../common/common');
 
-require('ej.schedule.min');
+require('syncfusion-javascript/Scripts/ej/web/ej.schedule.min');
 
 function _initDefineProp(target, property, descriptor, context) {
   if (!descriptor) return;

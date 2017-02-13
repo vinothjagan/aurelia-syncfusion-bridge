@@ -3,7 +3,7 @@ import {constants} from '../common/constants';
 import {generateBindables} from '../common/decorators';
 import {customElement, inlineView, inject} from '../common/common';
 
-import 'ej.fileexplorer.min';
+import 'syncfusion-javascript/Scripts/ej/web/ej.fileexplorer.min';
 
 @customElement(`${constants.elementPrefix}file-explorer`)
 @inlineView(`${constants.aureliaTemplateString}`)

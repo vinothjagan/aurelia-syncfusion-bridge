@@ -1,4 +1,4 @@
-define(['exports', '../common/widget-base', '../common/constants', '../common/decorators', '../common/common', 'datavisualization/ej.heatmap.min'], function (exports, _widgetBase, _constants, _decorators, _common) {
+define(['exports', '../common/widget-base', '../common/constants', '../common/decorators', '../common/common', 'syncfusion-javascript/Scripts/ej/datavisualization/ej.heatmap.min'], function (exports, _widgetBase, _constants, _decorators, _common) {
   'use strict';
 
   Object.defineProperty(exports, "__esModule", {
@@ -38,7 +38,7 @@ define(['exports', '../common/widget-base', '../common/constants', '../common/de
 
   var _dec, _dec2, _dec3, _dec4, _class;
 
-  var ejHeatMap = exports.ejHeatMap = (_dec = (0, _common.customElement)(_constants.constants.elementPrefix + 'heat-map'), _dec2 = (0, _common.inlineView)('' + _constants.constants.aureliaTemplateString), _dec3 = (0, _decorators.generateBindables)('ejHeatMap', ['width', 'height', 'id', 'itemsSource', 'heatMapCell', 'isResponsive', 'enableVirtualization', 'defaultColumnStyle', 'legendCollection', 'itemsMapping', 'colorMappingCollection']), _dec4 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = function (_WidgetBase) {
+  var ejHeatMap = exports.ejHeatMap = (_dec = (0, _common.customElement)(_constants.constants.elementPrefix + 'heat-map'), _dec2 = (0, _common.inlineView)('' + _constants.constants.aureliaTemplateString), _dec3 = (0, _decorators.generateBindables)('ejHeatMap', ['width', 'height', 'id', 'showTooltip', 'tooltipSettings', 'itemsSource', 'heatMapCell', 'isResponsive', 'enableVirtualization', 'defaultColumnStyle', 'legendCollection', 'itemsMapping', 'colorMappingCollection']), _dec4 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = function (_WidgetBase) {
     _inherits(ejHeatMap, _WidgetBase);
 
     function ejHeatMap(element) {

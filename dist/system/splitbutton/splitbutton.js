@@ -1,6 +1,6 @@
 'use strict';
 
-System.register(['../common/widget-base', '../common/constants', '../common/decorators', '../common/common', 'ej.splitbutton.min'], function (_export, _context) {
+System.register(['../common/widget-base', '../common/constants', '../common/decorators', '../common/common', 'syncfusion-javascript/Scripts/ej/web/ej.splitbutton.min'], function (_export, _context) {
   "use strict";
 
   var WidgetBase, constants, generateBindables, customAttribute, inject, _dec, _dec2, _dec3, _class, ejSplitButton;
@@ -45,7 +45,7 @@ System.register(['../common/widget-base', '../common/constants', '../common/deco
     }, function (_commonCommon) {
       customAttribute = _commonCommon.customAttribute;
       inject = _commonCommon.inject;
-    }, function (_ejSplitbuttonMin) {}],
+    }, function (_syncfusionJavascriptScriptsEjWebEjSplitbuttonMin) {}],
     execute: function () {
       _export('ejSplitButton', ejSplitButton = (_dec = customAttribute(constants.attributePrefix + 'split-button'), _dec2 = generateBindables('ejSplitButton', ['arrowPosition', 'buttonMode', 'contentType', 'cssClass', 'enabled', 'enableRTL', 'height', 'htmlAttributes', 'imagePosition', 'prefixIcon', 'showRoundedCorner', 'size', 'suffixIcon', 'targetID', 'text', 'width'], [], { 'enableRTL': 'enableRtl', 'targetID': 'targetId' }), _dec3 = inject(Element), _dec(_class = _dec2(_class = _dec3(_class = function (_WidgetBase) {
         _inherits(ejSplitButton, _WidgetBase);

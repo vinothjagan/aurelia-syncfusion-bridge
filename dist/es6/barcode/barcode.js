@@ -3,7 +3,7 @@ import {constants} from '../common/constants';
 import {generateBindables} from '../common/decorators';
 import {customElement, inlineView, inject} from '../common/common';
 
-import 'datavisualization/ej.barcode.min';
+import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.barcode.min';
 
 @customElement(`${constants.elementPrefix}barcode`)
 @inlineView(`${constants.aureliaTemplateString}`)

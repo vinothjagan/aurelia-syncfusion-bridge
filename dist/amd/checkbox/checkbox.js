@@ -1,4 +1,4 @@
-define(['exports', '../common/widget-base', '../common/constants', '../common/decorators', '../common/common', 'ej.checkbox.min'], function (exports, _widgetBase, _constants, _decorators, _common) {
+define(['exports', '../common/widget-base', '../common/constants', '../common/decorators', '../common/common', 'syncfusion-javascript/Scripts/ej/web/ej.checkbox.min'], function (exports, _widgetBase, _constants, _decorators, _common) {
   'use strict';
 
   Object.defineProperty(exports, "__esModule", {
@@ -38,7 +38,7 @@ define(['exports', '../common/widget-base', '../common/constants', '../common/de
 
   var _dec, _dec2, _dec3, _class;
 
-  var ejCheckBox = exports.ejCheckBox = (_dec = (0, _common.customAttribute)(_constants.constants.attributePrefix + 'check-box'), _dec2 = (0, _decorators.generateBindables)('ejCheckBox', ['checked', 'checkState', 'cssClass', 'enabled', 'enablePersistence', 'enableRTL', 'enableTriState', 'htmlAttributes', 'id', 'idPrefix', 'name', 'showRoundedCorner', 'size', 'text', 'validationMessage', 'validationRules', 'value'], ['checked'], { 'enableRTL': 'enableRtl' }), _dec3 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = function (_WidgetBase) {
+  var ejCheckBox = exports.ejCheckBox = (_dec = (0, _common.customAttribute)(_constants.constants.attributePrefix + 'check-box'), _dec2 = (0, _decorators.generateBindables)('ejCheckBox', ['checked', 'checkState', 'cssClass', 'enabled', 'enablePersistence', 'enableRTL', 'enableTriState', 'htmlAttributes', 'id', 'idPrefix', 'name', 'showRoundedCorner', 'size', 'text', 'validationMessage', 'validationRules', 'value'], ['checked', 'checkState'], { 'enableRTL': 'enableRtl' }), _dec3 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = function (_WidgetBase) {
     _inherits(ejCheckBox, _WidgetBase);
 
     function ejCheckBox(element) {

@@ -14,6 +14,8 @@ var _aureliaMetadata = require('aurelia-metadata');
 
 var _aureliaTaskQueue = require('aurelia-task-queue');
 
+var _aureliaBinding = require('aurelia-binding');
+
 var _util = require('./util');
 
 function generateBindables(controlName, inputs, twoWayProperties, abbrevProperties) {
@@ -22,6 +24,7 @@ function generateBindables(controlName, inputs, twoWayProperties, abbrevProperti
     var container = _aureliaDependencyInjection.Container.instance || new _aureliaDependencyInjection.Container();
     var util = container.get(_util.Util);
     inputs.push('options');
+    inputs.push('widget');
     var len = inputs.length;
     target.prototype.controlName = controlName;
     target.prototype.twoWays = twoWayProperties ? twoWayProperties : [];
@@ -36,6 +39,11 @@ function generateBindables(controlName, inputs, twoWayProperties, abbrevProperti
         var nameOrConfigOrTarget = {
           name: util.getBindablePropertyName(option)
         };
+
+        if (option === 'widget') {
+          nameOrConfigOrTarget.defaultBindingMode = _aureliaBinding.bindingMode.twoWay;
+        }
+
         var prop = new _aureliaTemplating.BindableProperty(nameOrConfigOrTarget);
         prop.registerWith(target, behaviorResource, descriptor);
       }

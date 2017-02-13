@@ -3,7 +3,7 @@ import {constants} from '../common/constants';
 import {generateBindables} from '../common/decorators';
 import {customElement, inlineView, inject} from '../common/common';
 
-import 'ej.pivotchart.min';
+import 'syncfusion-javascript/Scripts/ej/web/ej.pivotchart.min';
 
 @customElement(`${constants.elementPrefix}pivot-chart`)
 @inlineView(`${constants.aureliaTemplateString}`)

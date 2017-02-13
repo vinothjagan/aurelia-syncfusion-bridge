@@ -56,7 +56,7 @@ define(['exports', './events', '../common/util', '../common/decorators'], functi
       if (!this.ejOptions && !this.isEditor) {
         this.createTwoWays();
       }
-      this.widget = jQuery($(option.element))[this.controlName](this.allOption).data(this.controlName);
+      this.eWidget = this.widget = jQuery($(option.element))[this.controlName](this.allOption).data(this.controlName);
       if (this.templateProcessor) {
         this.templateProcessor.initWidgetDependancies();
       }
@@ -148,7 +148,9 @@ define(['exports', './events', '../common/util', '../common/decorators'], functi
         var modelValue = void 0;
         var prop = this.util.getControlPropertyName(this, property);
         if (prop) {
-          if (prop !== 'options') {
+          if (prop === 'widget') {
+            return;
+          } else if (prop !== 'options') {
             modelValue = this.widget.model[prop];
             var isTwoway = typeof modelValue === 'function';
             if (isTwoway) {

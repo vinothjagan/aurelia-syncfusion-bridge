@@ -17,7 +17,7 @@ var _common = require('../common/common');
 
 var _templateProcessor = require('../common/template-processor');
 
-require('ej.radialmenu.min');
+require('syncfusion-javascript/Scripts/ej/web/ej.radialmenu.min');
 
 function _initDefineProp(target, property, descriptor, context) {
   if (!descriptor) return;
