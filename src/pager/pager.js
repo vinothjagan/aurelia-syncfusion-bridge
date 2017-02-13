@@ -3,7 +3,7 @@ import {constants} from '../common/constants';
 import {generateBindables} from '../common/decorators';
 import {customElement, inlineView, inject} from '../common/common';
 
-import 'ej.pager.min';
+import 'syncfusion-javascript/Scripts/ej/web/ej.pager.min';
 
 @customElement(`${constants.elementPrefix}pager`)
 @inlineView(`${constants.aureliaTemplateString}`)

@@ -12,9 +12,6 @@ System.config({
   paths: {
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*",
-    "common/ej.*": "vendors/scripts/common/ej.*.js",
-    "datavisualization/ej.*": "vendors/scripts/datavisualization/ej.*.js",
-    "ej.*": "vendors/scripts/web/ej.*.js",
     "syncfusion-javascript/*": "src/root/vendors/*"
   },
 

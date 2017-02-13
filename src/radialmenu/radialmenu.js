@@ -4,7 +4,7 @@ import {generateBindables} from '../common/decorators';
 import {inject, inlineView, customElement, children, TemplatingEngine} from '../common/common';
 import {TemplateProcessor} from '../common/template-processor';
 
-import 'ej.radialmenu.min';
+import 'syncfusion-javascript/Scripts/ej/web/ej.radialmenu.min';
 
 @customElement(`${constants.elementPrefix}radial-menu`)
 @inlineView(`${constants.aureliaTemplateString}`)

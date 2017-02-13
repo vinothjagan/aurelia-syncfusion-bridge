@@ -3,7 +3,7 @@ import {constants} from '../common/constants';
 import {generateBindables} from '../common/decorators';
 import {customElement, inlineView, inject} from '../common/common';
 
-import 'ej.accordion.min';
+import 'syncfusion-javascript/Scripts/ej/web/ej.accordion.min';
 
 @customElement(`${constants.elementPrefix}accordion`)
 @inlineView(`${constants.aureliaTemplateString}`)

@@ -13,7 +13,7 @@ export class WidgetBase {
     if (!this.ejOptions && !this.isEditor) {
       this.createTwoWays();
     }
-    this.widget = jQuery($(option.element))[this.controlName](this.allOption).data(this.controlName);
+    this.eWidget = this.widget = jQuery($(option.element))[this.controlName](this.allOption).data(this.controlName);
     if (this.templateProcessor) {
       this.templateProcessor.initWidgetDependancies();
     }
@@ -112,7 +112,9 @@ export class WidgetBase {
       let modelValue;
       let prop = this.util.getControlPropertyName(this, property);
       if (prop) {
-        if (prop !== 'options') {
+        if (prop === 'widget') {
+          return;
+        } else if (prop !== 'options') {
           modelValue = this.widget.model[prop];
           let isTwoway = typeof modelValue === 'function';
           if (isTwoway) {
