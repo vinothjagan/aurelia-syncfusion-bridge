@@ -1,7 +1,7 @@
 export class Health {
     constructor() {
       this.dataManger = ej.DataManager({// eslint-disable-line new-cap
-        url: 'http://mvc.syncfusion.com/Services/api/Health/FoodInfo'
+        url: 'http://js.syncfusion.com/demos/ejServices/api/HealthTracker/Load'
       });
       this.showPopup = true;
       this.sumColl = {};
