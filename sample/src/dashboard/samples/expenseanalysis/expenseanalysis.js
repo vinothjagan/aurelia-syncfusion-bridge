@@ -41,7 +41,7 @@ export class Expense {
     }
     updatechart(month) {
       let dataManger = ej.DataManager({// eslint-disable-line new-cap
-        url: 'http://js.syncfusion.com/demos/ejServices/api/expense/get?month=' + month,
+        url: 'http://js.syncfusion.com/ejServices/api/expense/get?month=' + month,
         offline: true,
         requiresFormat: false
       });
