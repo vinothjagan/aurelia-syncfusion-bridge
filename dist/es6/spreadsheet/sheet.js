@@ -4,7 +4,7 @@ import {inlineView, customElement} from '../common/common';
 
 @inlineView(`${constants.aureliaTemplateString}`)
 @customElement(`${constants.elementPrefix}sheet`)
-@generateBindables('sheets', ['border', 'cFormatRule', 'colCount', 'columnWidth', 'dataSource', 'fieldAsColumnHeader', 'headerStyles', 'hideColumns', 'hideRows', 'mergeCells', 'primaryKey', 'query', 'rangeSettings', 'rowCount', 'rows', 'showGridlines', 'showHeader', 'showHeadings', 'startCell'])
+@generateBindables('sheets', ['border', 'cellTypes', 'cFormatRule', 'colCount', 'columnWidth', 'dataSource', 'fieldAsColumnHeader', 'frozenRows', 'frozenColumns', 'headerStyles', 'hideColumns', 'hideRows', 'mergeCells', 'primaryKey', 'query', 'rangeSettings', 'rowCount', 'rows', 'showGridlines', 'showHeader', 'showHeadings', 'startCell'])
 
 export class Sheet {
 }
