@@ -76,7 +76,7 @@ System.register(['aurelia-dependency-injection', '../common/util', 'aurelia-temp
               for (var i = 0; i < tmplElement.length; i++) {
                 var dataIndex = parseInt($(tmplElement[i]).attr('ej-prop'));
                 var view = this.templatingEngine.enhance(tmplElement[i]);
-                view.bind(templateObject[template].itemData[dataIndex]);
+                view.bind(templateObject[template].itemData[dataIndex], this.context.parentCtx);
                 templateObject[template].views[dataIndex] = view;
               }
             } else {

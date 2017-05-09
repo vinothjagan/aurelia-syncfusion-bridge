@@ -26,6 +26,10 @@ export class WidgetBase {
     }
   }
 
+  bind(ctx, overrideCtx) {
+    this.parentCtx = overrideCtx;
+  }
+
   createTwoWays() {
     let model = this.allOption;
     let twoWays = this.twoWays;

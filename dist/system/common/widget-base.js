@@ -76,6 +76,10 @@ System.register(['./events', '../common/util', '../common/decorators'], function
           }
         };
 
+        WidgetBase.prototype.bind = function bind(ctx, overrideCtx) {
+          this.parentCtx = overrideCtx;
+        };
+
         WidgetBase.prototype.createTwoWays = function createTwoWays() {
           var model = this.allOption;
           var twoWays = this.twoWays;

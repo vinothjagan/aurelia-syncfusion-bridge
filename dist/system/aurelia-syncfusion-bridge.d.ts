@@ -39,6 +39,7 @@ declare module 'aurelia-syncfusion-bridge' {
   import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.circulargauge.min';
   import 'syncfusion-javascript/Scripts/ej/web/ej.colorpicker.min';
   import 'syncfusion-javascript/Scripts/ej/web/ej.editor.min';
+  import 'syncfusion-javascript/Scripts/ej/web/ej.daterangepicker.min';
   import 'syncfusion-javascript/Scripts/ej/web/ej.datepicker.min';
   import 'syncfusion-javascript/Scripts/ej/web/ej.datetimepicker.min';
   import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.diagram.min';
@@ -74,16 +75,16 @@ declare module 'aurelia-syncfusion-bridge' {
   import 'syncfusion-javascript/Scripts/ej/web/ej.radialslider.min';
   import 'syncfusion-javascript/Scripts/ej/web/ej.radiobutton.min';
   import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.rangenavigator.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.rating.min';
   import 'syncfusion-javascript/Scripts/ej/web/ej.reportviewer.min';
+  import 'syncfusion-javascript/Scripts/ej/web/ej.rating.min';
   import 'syncfusion-javascript/Scripts/ej/web/ej.ribbon.min';
   import 'syncfusion-javascript/Scripts/ej/web/ej.rotator.min';
   import 'syncfusion-javascript/Scripts/ej/web/ej.rte.min';
   import 'syncfusion-javascript/Scripts/ej/web/ej.schedule.min';
   import 'syncfusion-javascript/Scripts/ej/common/ej.scroller.min';
   import 'syncfusion-javascript/Scripts/ej/web/ej.signature.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.slider.min';
   import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.sparkline.min';
+  import 'syncfusion-javascript/Scripts/ej/web/ej.slider.min';
   import 'syncfusion-javascript/Scripts/ej/web/ej.splitbutton.min';
   import 'syncfusion-javascript/Scripts/ej/web/ej.splitter.min';
   import 'syncfusion-javascript/Scripts/ej/web/ej.spreadsheet.min';
@@ -175,6 +176,7 @@ declare module 'aurelia-syncfusion-bridge' {
     ejSplitButton(): EjConfigBuilder;
     ejGroupButton(): EjConfigBuilder;
     ejDateTimePicker(): EjConfigBuilder;
+    ejDateRangePicker(): EjConfigBuilder;
     ejProgressBar(): EjConfigBuilder;
     ejTagCloud(): EjConfigBuilder;
     ejButton(): EjConfigBuilder;
@@ -283,6 +285,7 @@ declare module 'aurelia-syncfusion-bridge' {
     * @param option Object which contains  Element in which  widget will be created
     */
     createWidget(option?: any): any;
+    bind(ctx?: any, overrideCtx?: any): any;
     createTwoWays(): any;
     addTwoways(prop?: any): any;
     
@@ -304,6 +307,9 @@ declare module 'aurelia-syncfusion-bridge' {
     detached(): any;
   }
   export class ejCurrencyTextbox extends WidgetBase {
+    constructor(element?: any);
+  }
+  export class ejDateRangePicker extends WidgetBase {
     constructor(element?: any);
   }
   export class ejDatePicker extends WidgetBase {
@@ -433,10 +439,10 @@ declare module 'aurelia-syncfusion-bridge' {
   export class RangeSeries {
   
   }
-  export class ejRating extends WidgetBase {
+  export class ejReportViewer extends WidgetBase {
     constructor(element?: any);
   }
-  export class ejReportViewer extends WidgetBase {
+  export class ejRating extends WidgetBase {
     constructor(element?: any);
   }
   export class ejRibbon extends WidgetBase {
@@ -461,10 +467,10 @@ declare module 'aurelia-syncfusion-bridge' {
   export class ejSignature extends WidgetBase {
     constructor(element?: any);
   }
-  export class ejSlider extends WidgetBase {
+  export class ejSparkline extends WidgetBase {
     constructor(element?: any);
   }
-  export class ejSparkline extends WidgetBase {
+  export class ejSlider extends WidgetBase {
     constructor(element?: any);
   }
   export class ejSplitButton extends WidgetBase {
@@ -516,7 +522,7 @@ declare module 'aurelia-syncfusion-bridge' {
     constructor(element?: any, templateEngine?: any);
   }
   export class TreeGridColumn {
-    template: any;
+    angularTemplate: any;
     setTemplates(): any;
   }
   export class Level {

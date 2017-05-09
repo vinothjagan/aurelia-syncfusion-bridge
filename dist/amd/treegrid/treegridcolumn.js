@@ -57,22 +57,22 @@ define(['exports', '../common/constants', '../common/decorators', '../common/com
 
   var _dec, _dec2, _dec3, _dec4, _class, _desc, _value, _class2, _descriptor;
 
-  var TreeGridColumn = exports.TreeGridColumn = (_dec = (0, _common.inlineView)('' + _constants.constants.aureliaTemplateString), _dec2 = (0, _common.customElement)(_constants.constants.elementPrefix + 'tree-grid-column'), _dec3 = (0, _decorators.generateBindables)('columns', ['allowFiltering', 'allowSorting', 'allowCellSelection', 'editType', 'field', 'filterEditType', 'headerText', 'showCheckbox', 'visible', 'width', 'headerTemplateID', 'format', 'isTemplateColumn', 'headerTextAlign', 'isFrozen', 'textAlign', 'templateID', 'allowEditing', 'allowFreezing']), _dec4 = (0, _common.children)(_constants.constants.elementPrefix + 'template'), _dec(_class = _dec2(_class = _dec3(_class = (_class2 = function () {
+  var TreeGridColumn = exports.TreeGridColumn = (_dec = (0, _common.inlineView)('' + _constants.constants.aureliaTemplateString), _dec2 = (0, _common.customElement)(_constants.constants.elementPrefix + 'tree-grid-column'), _dec3 = (0, _decorators.generateBindables)('columns', ['allowFiltering', 'allowSorting', 'allowCellSelection', 'editType', 'field', 'template', 'templateID', 'angularTemplate', 'filterEditType', 'headerText', 'displayAsCheckbox', 'showCheckbox', 'visible', 'width', 'headerTemplateID', 'format', 'isTemplateColumn', 'headerTextAlign', 'isFrozen', 'textAlign', 'allowEditing', 'showInColumnChooser', 'clipMode', 'tooltip', 'headerTooltip', 'validationRules', 'allowFreezing']), _dec4 = (0, _common.children)(_constants.constants.elementPrefix + 'template'), _dec(_class = _dec2(_class = _dec3(_class = (_class2 = function () {
     function TreeGridColumn() {
       _classCallCheck(this, TreeGridColumn);
 
-      _initDefineProp(this, 'template', _descriptor, this);
+      _initDefineProp(this, 'angularTemplate', _descriptor, this);
     }
 
     TreeGridColumn.prototype.setTemplates = function setTemplates() {
-      if (this.template[0]) {
+      if (this.angularTemplate[0]) {
         var util = new _util.Util();
-        this[util.getBindablePropertyName('template')] = this.template[0].template;
+        this[util.getBindablePropertyName('angularTemplate')] = this.angularTemplate[0].template;
       }
     };
 
     return TreeGridColumn;
-  }(), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, 'template', [_dec4], {
+  }(), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, 'angularTemplate', [_dec4], {
     enumerable: true,
     initializer: function initializer() {
       return [];

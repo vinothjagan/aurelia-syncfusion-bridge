@@ -70,6 +70,10 @@ var WidgetBase = exports.WidgetBase = (_dec = (0, _decorators.delayed)(), (_clas
     }
   };
 
+  WidgetBase.prototype.bind = function bind(ctx, overrideCtx) {
+    this.parentCtx = overrideCtx;
+  };
+
   WidgetBase.prototype.createTwoWays = function createTwoWays() {
     var model = this.allOption;
     var twoWays = this.twoWays;

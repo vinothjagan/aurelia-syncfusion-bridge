@@ -5,14 +5,14 @@ import {Util} from '../common/util';
 
 @inlineView(`${constants.aureliaTemplateString}`)
 @customElement(`${constants.elementPrefix}tree-grid-column`)
-@generateBindables('columns', ['allowFiltering', 'allowSorting', 'allowCellSelection', 'editType', 'field', 'filterEditType', 'headerText', 'showCheckbox', 'visible', 'width', 'headerTemplateID', 'format', 'isTemplateColumn', 'headerTextAlign', 'isFrozen', 'textAlign', 'templateID', 'allowEditing', 'allowFreezing'])
+@generateBindables('columns', ['allowFiltering', 'allowSorting', 'allowCellSelection', 'editType', 'field', 'template', 'templateID', 'angularTemplate', 'filterEditType', 'headerText', 'displayAsCheckbox', 'showCheckbox', 'visible', 'width', 'headerTemplateID', 'format', 'isTemplateColumn', 'headerTextAlign', 'isFrozen', 'textAlign', 'allowEditing', 'showInColumnChooser', 'clipMode', 'tooltip', 'headerTooltip', 'validationRules', 'allowFreezing'])
 
 export class TreeGridColumn {
-  @children(`${constants.elementPrefix}template`) template = [];
+  @children(`${constants.elementPrefix}template`) angularTemplate = [];
   setTemplates() {
-    if (this.template[0]) {
+    if (this.angularTemplate[0]) {
       let util = new Util();
-      this[util.getBindablePropertyName('template')] = this.template[0].template;
+      this[util.getBindablePropertyName('angularTemplate')] = this.angularTemplate[0].template;
     }
   }
 }
