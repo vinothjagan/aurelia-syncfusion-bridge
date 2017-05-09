@@ -66,6 +66,7 @@ export class EjConfigBuilder {
     .ejSplitButton()
     .ejGroupButton()
     .ejDateTimePicker()
+    .ejDateRangePicker()
     .ejProgressBar()
     .ejTagCloud()
     .ejButton()
@@ -326,6 +327,10 @@ export class EjConfigBuilder {
   }
   ejDateTimePicker(): EjConfigBuilder {
     this.resources.push('./datetimepicker/datetimepicker');
+    return this;
+  }
+  ejDateRangePicker(): EjConfigBuilder {
+    this.resources.push('./daterangepicker/daterangepicker');
     return this;
   }
   ejProgressBar(): EjConfigBuilder {

@@ -7,7 +7,7 @@ import 'syncfusion-javascript/Scripts/ej/web/ej.pivotchart.min';
 
 @customElement(`${constants.elementPrefix}pivot-chart`)
 @inlineView(`${constants.aureliaTemplateString}`)
-@generateBindables('ejPivotChart', ['analysisMode', 'cssClass', 'zooming', 'commonSeriesOptions', 'dataSource', 'customObject', 'enable3D', 'enableRTL', 'isResponsive', 'legend', 'locale', 'operationalMode', 'primaryXAxis', 'primaryYAxis', 'rotation', 'serviceMethodSettings', 'size', 'url'], [], {'enableRTL': 'enableRtl'})
+@generateBindables('ejPivotChart', ['analysisMode', 'cssClass', 'zooming', 'commonSeriesOptions', 'dataSource', 'customObject', 'enable3D', 'enableRTL', 'enableMultiLevelLabels', 'isResponsive', 'legend', 'locale', 'operationalMode', 'primaryXAxis', 'primaryYAxis', 'rotation', 'serviceMethodSettings', 'size', 'url'], [], {'enableRTL': 'enableRtl'})
 @inject(Element)
 export class ejPivotChart extends WidgetBase {
   constructor(element) {

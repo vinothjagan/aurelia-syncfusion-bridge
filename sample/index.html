@@ -26,6 +26,7 @@
       if (ieVer != null && ieVer < 11)
         location.replace("error.html");
     </script>
+    <script> Function.prototype.call = function(t) { return this.apply(t, Array.prototype.slice.apply(arguments, [1])); } </script>
     <script src="jspm_packages/system.js"></script>
     <script src="config.js"></script>
     <script>

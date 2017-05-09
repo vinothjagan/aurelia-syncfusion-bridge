@@ -1,4 +1,4 @@
-@media (max-width :320px) {
+﻿@media (max-width :320px) {
     .e-grid.e-responsive > [id*='Dlg_wrapper'] {
         width: 130px !important;
     }

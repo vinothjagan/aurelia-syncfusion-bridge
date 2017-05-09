@@ -5,7 +5,7 @@
             <li repeat.for="details of sampleDetails" class="listsampleimage">
                 <div class="lisampleimage">
                     <a href="#/dashboard/samples/${details.URL}" target="_blank">
-                        <img class="imgstyle img1" src="${details.imageURL}" />
+                        <img class="imgstyle img1" src.bind="details.imageURL" />
                     </a>
                 </div>
                 <div class="litext">
@@ -19,7 +19,7 @@
                         <div><span class="view">VIEW SAMPLE</span></div>
                     </a>
                 </div>
-                <span class="qrcode"><img class="qrimage" src="${details.qrURL}" /></span>
+                <span class="qrcode"><img class="qrimage" src.bind="details.qrURL" /></span>
             </li>
         </ul>
     </div>
