@@ -30,8 +30,8 @@ declare module 'aurelia-syncfusion-bridge' {
     bindingMode
   } from 'aurelia-binding';
   import 'syncfusion-javascript/Scripts/ej/web/ej.accordion.min';
-  import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.barcode.min';
   import 'syncfusion-javascript/Scripts/ej/web/ej.autocomplete.min';
+  import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.barcode.min';
   import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.bulletgraph.min';
   import 'syncfusion-javascript/Scripts/ej/web/ej.button.min';
   import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.chart.min';
@@ -81,8 +81,8 @@ declare module 'aurelia-syncfusion-bridge' {
   import 'syncfusion-javascript/Scripts/ej/web/ej.rotator.min';
   import 'syncfusion-javascript/Scripts/ej/web/ej.rte.min';
   import 'syncfusion-javascript/Scripts/ej/web/ej.schedule.min';
-  import 'syncfusion-javascript/Scripts/ej/common/ej.scroller.min';
   import 'syncfusion-javascript/Scripts/ej/web/ej.signature.min';
+  import 'syncfusion-javascript/Scripts/ej/common/ej.scroller.min';
   import 'syncfusion-javascript/Scripts/ej/web/ej.slider.min';
   import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.sparkline.min';
   import 'syncfusion-javascript/Scripts/ej/web/ej.splitbutton.min';
@@ -199,10 +199,10 @@ declare module 'aurelia-syncfusion-bridge' {
   export class ejAccordion extends WidgetBase {
     constructor(element?: any);
   }
-  export class ejBarcode extends WidgetBase {
+  export class ejAutocomplete extends WidgetBase {
     constructor(element?: any);
   }
-  export class ejAutocomplete extends WidgetBase {
+  export class ejBarcode extends WidgetBase {
     constructor(element?: any);
   }
   export class ejBulletGraph extends WidgetBase {
@@ -461,10 +461,10 @@ declare module 'aurelia-syncfusion-bridge' {
   export class ScheduleResource {
   
   }
-  export class ejScroller extends WidgetBase {
+  export class ejSignature extends WidgetBase {
     constructor(element?: any);
   }
-  export class ejSignature extends WidgetBase {
+  export class ejScroller extends WidgetBase {
     constructor(element?: any);
   }
   export class ejSlider extends WidgetBase {
