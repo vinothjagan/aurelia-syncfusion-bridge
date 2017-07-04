@@ -48,7 +48,7 @@ System.register(['../common/widget-base', '../common/constants', '../common/deco
       inject = _commonCommon.inject;
     }, function (_syncfusionJavascriptScriptsEjWebEjPdfviewerMin) {}],
     execute: function () {
-      _export('ejPdfViewer', ejPdfViewer = (_dec = customElement(constants.elementPrefix + 'pdf-viewer'), _dec2 = inlineView('' + constants.aureliaTemplateString), _dec3 = generateBindables('ejPdfViewer', ['locale', 'toolbarSettings', 'serverActionSettings', 'serviceUrl', 'documentPath', 'pageCount', 'currentPageNumber', 'zoomPercentage', 'pdfService', 'hyperlinkOpenState', 'enableHyperlink', 'enableTextSelection', 'isResponsive', 'isDocumentEdited', 'allowClientBuffering', 'fileName']), _dec4 = inject(Element), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = function (_WidgetBase) {
+      _export('ejPdfViewer', ejPdfViewer = (_dec = customElement(constants.elementPrefix + 'pdf-viewer'), _dec2 = inlineView('' + constants.aureliaTemplateString), _dec3 = generateBindables('ejPdfViewer', ['locale', 'toolbarSettings', 'serverActionSettings', 'serviceUrl', 'documentPath', 'enableTextMarkupAnnotations', 'enableHighlightAnnotation', 'enableUnderlineAnnotation', 'enableStrikethroughAnnotation', 'strikethroughSettings', 'underlineSettings', 'highlightSettings', 'annotationType', 'pageCount', 'currentPageNumber', 'zoomPercentage', 'pdfService', 'hyperlinkOpenState', 'enableHyperlink', 'enableTextSelection', 'isResponsive', 'isDocumentEdited', 'allowClientBuffering', 'fileName']), _dec4 = inject(Element), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = function (_WidgetBase) {
         _inherits(ejPdfViewer, _WidgetBase);
 
         function ejPdfViewer(element) {

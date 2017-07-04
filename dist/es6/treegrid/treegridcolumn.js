@@ -5,7 +5,7 @@ import {Util} from '../common/util';
 
 @inlineView(`${constants.aureliaTemplateString}`)
 @customElement(`${constants.elementPrefix}tree-grid-column`)
-@generateBindables('columns', ['allowFiltering', 'allowSorting', 'allowCellSelection', 'editType', 'field', 'template', 'templateID', 'angularTemplate', 'filterEditType', 'headerText', 'displayAsCheckbox', 'showCheckbox', 'visible', 'width', 'headerTemplateID', 'format', 'isTemplateColumn', 'headerTextAlign', 'isFrozen', 'textAlign', 'allowEditing', 'showInColumnChooser', 'clipMode', 'tooltip', 'headerTooltip', 'validationRules', 'allowFreezing'])
+@generateBindables('columns', ['allowFiltering', 'allowFilteringBlankContent', 'allowSorting', 'allowCellSelection', 'editParams', 'editType', 'dropdownData', 'field', 'template', 'templateID', 'angularTemplate', 'filterEditType', 'headerText', 'displayAsCheckbox', 'showCheckbox', 'visible', 'width', 'headerTemplateID', 'format', 'isTemplateColumn', 'headerTextAlign', 'isFrozen', 'textAlign', 'allowEditing', 'showInColumnChooser', 'clipMode', 'tooltip', 'headerTooltip', 'validationRules', 'allowFreezing'])
 
 export class TreeGridColumn {
   @children(`${constants.elementPrefix}template`) angularTemplate = [];

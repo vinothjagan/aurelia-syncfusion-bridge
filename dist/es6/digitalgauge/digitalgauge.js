@@ -7,7 +7,7 @@ import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.digitalgauge.min';
 
 @customElement(`${constants.elementPrefix}digital-gauge`)
 @inlineView(`${constants.aureliaTemplateString}`)
-@generateBindables('ejDigitalGauge', ['frame', 'height', 'isResponsive', 'items', 'matrixSegmentData', 'segmentData', 'themes', 'value', 'width'], ['value'])
+@generateBindables('ejDigitalGauge', ['frame', 'height', 'isResponsive', 'enableResize', 'items', 'matrixSegmentData', 'segmentData', 'themes', 'value', 'width'], ['value'])
 @inject(Element)
 export class ejDigitalGauge extends WidgetBase {
   constructor(element) {

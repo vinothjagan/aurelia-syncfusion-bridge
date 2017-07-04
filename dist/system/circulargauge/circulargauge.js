@@ -48,7 +48,7 @@ System.register(['../common/widget-base', '../common/constants', '../common/deco
       inject = _commonCommon.inject;
     }, function (_syncfusionJavascriptScriptsEjDatavisualizationEjCirculargaugeMin) {}],
     execute: function () {
-      _export('ejCircularGauge', ejCircularGauge = (_dec = customElement(constants.elementPrefix + 'circular-gauge'), _dec2 = inlineView('' + constants.aureliaTemplateString), _dec3 = generateBindables('ejCircularGauge', ['animationSpeed', 'backgroundColor', 'distanceFromCorner', 'enableAnimation', 'frame', 'gaugePosition', 'height', 'interiorGradient', 'isRadialGradient', 'isResponsive', 'maximum', 'minimum', 'outerCustomLabelPosition', 'radius', 'readOnly', 'scales', 'theme', 'legend', 'tooltip', 'value', 'width'], ['value', 'minimum', 'maximum']), _dec4 = inject(Element), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = function (_WidgetBase) {
+      _export('ejCircularGauge', ejCircularGauge = (_dec = customElement(constants.elementPrefix + 'circular-gauge'), _dec2 = inlineView('' + constants.aureliaTemplateString), _dec3 = generateBindables('ejCircularGauge', ['animationSpeed', 'backgroundColor', 'distanceFromCorner', 'rangeZOrder', 'enableAnimation', 'enableGroupSeparator', 'enableResize', 'frame', 'gaugePosition', 'height', 'interiorGradient', 'isRadialGradient', 'isResponsive', 'locale', 'maximum', 'minimum', 'outerCustomLabelPosition', 'radius', 'readOnly', 'scales', 'theme', 'legend', 'tooltip', 'value', 'width'], ['value', 'minimum', 'maximum']), _dec4 = inject(Element), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = function (_WidgetBase) {
         _inherits(ejCircularGauge, _WidgetBase);
 
         function ejCircularGauge(element) {

@@ -30,8 +30,8 @@ declare module 'aurelia-syncfusion-bridge' {
     bindingMode
   } from 'aurelia-binding';
   import 'syncfusion-javascript/Scripts/ej/web/ej.accordion.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.autocomplete.min';
   import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.barcode.min';
+  import 'syncfusion-javascript/Scripts/ej/web/ej.autocomplete.min';
   import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.bulletgraph.min';
   import 'syncfusion-javascript/Scripts/ej/web/ej.button.min';
   import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.chart.min';
@@ -39,8 +39,8 @@ declare module 'aurelia-syncfusion-bridge' {
   import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.circulargauge.min';
   import 'syncfusion-javascript/Scripts/ej/web/ej.colorpicker.min';
   import 'syncfusion-javascript/Scripts/ej/web/ej.editor.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.daterangepicker.min';
   import 'syncfusion-javascript/Scripts/ej/web/ej.datepicker.min';
+  import 'syncfusion-javascript/Scripts/ej/web/ej.daterangepicker.min';
   import 'syncfusion-javascript/Scripts/ej/web/ej.datetimepicker.min';
   import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.diagram.min';
   import 'syncfusion-javascript/Scripts/ej/web/ej.dialog.min';
@@ -75,16 +75,16 @@ declare module 'aurelia-syncfusion-bridge' {
   import 'syncfusion-javascript/Scripts/ej/web/ej.radialslider.min';
   import 'syncfusion-javascript/Scripts/ej/web/ej.radiobutton.min';
   import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.rangenavigator.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.reportviewer.min';
   import 'syncfusion-javascript/Scripts/ej/web/ej.rating.min';
+  import 'syncfusion-javascript/Scripts/ej/web/ej.reportviewer.min';
   import 'syncfusion-javascript/Scripts/ej/web/ej.ribbon.min';
   import 'syncfusion-javascript/Scripts/ej/web/ej.rotator.min';
   import 'syncfusion-javascript/Scripts/ej/web/ej.rte.min';
   import 'syncfusion-javascript/Scripts/ej/web/ej.schedule.min';
   import 'syncfusion-javascript/Scripts/ej/common/ej.scroller.min';
   import 'syncfusion-javascript/Scripts/ej/web/ej.signature.min';
-  import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.sparkline.min';
   import 'syncfusion-javascript/Scripts/ej/web/ej.slider.min';
+  import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.sparkline.min';
   import 'syncfusion-javascript/Scripts/ej/web/ej.splitbutton.min';
   import 'syncfusion-javascript/Scripts/ej/web/ej.splitter.min';
   import 'syncfusion-javascript/Scripts/ej/web/ej.spreadsheet.min';
@@ -199,10 +199,10 @@ declare module 'aurelia-syncfusion-bridge' {
   export class ejAccordion extends WidgetBase {
     constructor(element?: any);
   }
-  export class ejAutocomplete extends WidgetBase {
+  export class ejBarcode extends WidgetBase {
     constructor(element?: any);
   }
-  export class ejBarcode extends WidgetBase {
+  export class ejAutocomplete extends WidgetBase {
     constructor(element?: any);
   }
   export class ejBulletGraph extends WidgetBase {
@@ -309,10 +309,10 @@ declare module 'aurelia-syncfusion-bridge' {
   export class ejCurrencyTextbox extends WidgetBase {
     constructor(element?: any);
   }
-  export class ejDateRangePicker extends WidgetBase {
+  export class ejDatePicker extends WidgetBase {
     constructor(element?: any);
   }
-  export class ejDatePicker extends WidgetBase {
+  export class ejDateRangePicker extends WidgetBase {
     constructor(element?: any);
   }
   export class ejDateTimePicker extends WidgetBase {
@@ -439,10 +439,10 @@ declare module 'aurelia-syncfusion-bridge' {
   export class RangeSeries {
   
   }
-  export class ejReportViewer extends WidgetBase {
+  export class ejRating extends WidgetBase {
     constructor(element?: any);
   }
-  export class ejRating extends WidgetBase {
+  export class ejReportViewer extends WidgetBase {
     constructor(element?: any);
   }
   export class ejRibbon extends WidgetBase {
@@ -467,10 +467,10 @@ declare module 'aurelia-syncfusion-bridge' {
   export class ejSignature extends WidgetBase {
     constructor(element?: any);
   }
-  export class ejSparkline extends WidgetBase {
+  export class ejSlider extends WidgetBase {
     constructor(element?: any);
   }
-  export class ejSlider extends WidgetBase {
+  export class ejSparkline extends WidgetBase {
     constructor(element?: any);
   }
   export class ejSplitButton extends WidgetBase {

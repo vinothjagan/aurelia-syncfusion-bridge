@@ -5,7 +5,7 @@ import {Util} from '../common/util';
 
 @inlineView(`${constants.aureliaTemplateString}`)
 @customElement(`${constants.elementPrefix}item`)
-@generateBindables('items', ['imageUrl', 'text', 'enabled', 'click', 'badge', 'type', 'sliderSettings', 'items'])
+@generateBindables('items', ['imageUrl', 'prependTo', 'text', 'enabled', 'click', 'badge', 'type', 'sliderSettings', 'items'])
 
 export class Item {
   @children(`${constants.elementPrefix}template`) template = [];
