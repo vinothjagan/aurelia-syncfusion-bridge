@@ -15,7 +15,7 @@ export class Util {
     let bindableproperites = {};
     let value;
     for (let prop of properties) {
-      if (model.abbrevProperties && prop in model.abbrevProperties) {
+      if (model.abbrevProperties && prop in model.abbrevProperties && model.abbrevProperties.hasOwnProperty(prop)) {
         value = model[this.getBindablePropertyName(model.abbrevProperties[prop])];
       }else {
         value = model[this.getBindablePropertyName(prop)];

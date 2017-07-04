@@ -45,7 +45,7 @@ define(['exports', './constants'], function (exports, _constants) {
 
         var prop = _ref;
 
-        if (model.abbrevProperties && prop in model.abbrevProperties) {
+        if (model.abbrevProperties && prop in model.abbrevProperties && model.abbrevProperties.hasOwnProperty(prop)) {
           value = model[this.getBindablePropertyName(model.abbrevProperties[prop])];
         } else {
           value = model[this.getBindablePropertyName(prop)];

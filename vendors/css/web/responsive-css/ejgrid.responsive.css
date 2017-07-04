@@ -1,4 +1,4 @@
-﻿@media (max-width :320px) {
+@media (max-width :320px) {
     .e-grid.e-responsive > [id*='Dlg_wrapper'] {
         width: 130px !important;
     }
@@ -235,6 +235,7 @@
     width: 100%;
     border-bottom: 1px solid #c4c4c4;
     text-align: center;
+    position: relative;
 }
 
 .e-resFIlterRigthIcon {
