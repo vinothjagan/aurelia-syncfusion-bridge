@@ -21,7 +21,7 @@ System.register(['../common/constants', '../common/decorators', '../common/commo
       customElement = _commonCommon.customElement;
     }],
     execute: function () {
-      _export('Level', Level = (_dec = inlineView('' + constants.aureliaTemplateString), _dec2 = customElement(constants.elementPrefix + 'level'), _dec3 = generateBindables('levels', ['groupBackground', 'groupBorderColor', 'groupBorderThickness', 'groupGap', 'groupPadding', 'groupPath', 'headerHeight', 'headerTemplate', 'headerVisibilityMode', 'labelPosition', 'labelTemplate', 'labelVisibilityMode', 'showHeader', 'showLabels']), _dec(_class = _dec2(_class = _dec3(_class = function Level() {
+      _export('Level', Level = (_dec = inlineView('' + constants.aureliaTemplateString), _dec2 = customElement(constants.elementPrefix + 'level'), _dec3 = generateBindables('levels', ['groupBackground', 'groupBorderColor', 'groupBorderThickness', 'groupGap', 'groupPadding', 'groupPath', 'headerHeight', 'headerTemplate', 'headerVisibilityMode', 'labelPosition', 'textOverflow', 'labelTemplate', 'labelVisibilityMode', 'showHeader', 'showLabels']), _dec(_class = _dec2(_class = _dec3(_class = function Level() {
         _classCallCheck(this, Level);
       }) || _class) || _class) || _class));
 

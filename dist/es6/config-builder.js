@@ -83,6 +83,7 @@ export class EjConfigBuilder {
     .ejUploadbox()
     .ejSignature()
     .ejTooltip()
+    .ejSpellCheck()
     .ejTemplate();
     return this;
   }
@@ -396,6 +397,10 @@ export class EjConfigBuilder {
   }
   ejTooltip(): EjConfigBuilder {
     this.resources.push('./tooltip/tooltip');
+    return this;
+  }
+  ejSpellCheck(): EjConfigBuilder {
+    this.resources.push('./spellcheck/spellcheck');
     return this;
   }
   ejTemplate(): EjConfigBuilder {

@@ -48,7 +48,7 @@ System.register(['../common/widget-base', '../common/constants', '../common/deco
       inject = _commonCommon.inject;
     }, function (_syncfusionJavascriptScriptsEjWebEjRadialsliderMin) {}],
     execute: function () {
-      _export('ejRadialSlider', ejRadialSlider = (_dec = customElement(constants.elementPrefix + 'radial-slider'), _dec2 = inlineView('' + constants.aureliaTemplateString), _dec3 = generateBindables('ejRadialSlider', ['autoOpen', 'cssClass', 'enableAnimation', 'enableRoundOff', 'endAngle', 'inline', 'innerCircleImageClass', 'innerCircleImageUrl', 'labelSpace', 'radius', 'showInnerCircle', 'startAngle', 'strokeWidth', 'ticks', 'value'], ['value', 'ticks']), _dec4 = inject(Element), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = function (_WidgetBase) {
+      _export('ejRadialSlider', ejRadialSlider = (_dec = customElement(constants.elementPrefix + 'radial-slider'), _dec2 = inlineView('' + constants.aureliaTemplateString), _dec3 = generateBindables('ejRadialSlider', ['autoOpen', 'cssClass', 'enableAnimation', 'enableRoundOff', 'endAngle', 'inline', 'innerCircleImageClass', 'innerCircleImageUrl', 'labelSpace', 'locale', 'radius', 'showInnerCircle', 'startAngle', 'strokeWidth', 'ticks', 'value'], ['value', 'ticks']), _dec4 = inject(Element), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = function (_WidgetBase) {
         _inherits(ejRadialSlider, _WidgetBase);
 
         function ejRadialSlider(element) {

@@ -28,6 +28,9 @@ export class WidgetBase {
 
   bind(ctx, overrideCtx) {
     this.parentCtx = overrideCtx;
+    if (this.widget && this.isEditor) {
+      this.widget.option('value', this.eValue);
+    }
   }
 
   createTwoWays() {

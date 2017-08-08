@@ -77,10 +77,11 @@ declare module 'aurelia-syncfusion-bridge' {
   import 'syncfusion-javascript/Scripts/ej/web/ej.rotator.min';
   import 'syncfusion-javascript/Scripts/ej/web/ej.rte.min';
   import 'syncfusion-javascript/Scripts/ej/web/ej.schedule.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.signature.min';
   import 'syncfusion-javascript/Scripts/ej/common/ej.scroller.min';
+  import 'syncfusion-javascript/Scripts/ej/web/ej.signature.min';
   import 'syncfusion-javascript/Scripts/ej/web/ej.slider.min';
   import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.sparkline.min';
+  import 'syncfusion-javascript/Scripts/ej/web/ej.spellcheck.min';
   import 'syncfusion-javascript/Scripts/ej/web/ej.splitbutton.min';
   import 'syncfusion-javascript/Scripts/ej/web/ej.splitter.min';
   import 'syncfusion-javascript/Scripts/ej/web/ej.spreadsheet.min';
@@ -189,6 +190,7 @@ declare module 'aurelia-syncfusion-bridge' {
     ejUploadbox(): EjConfigBuilder;
     ejSignature(): EjConfigBuilder;
     ejTooltip(): EjConfigBuilder;
+    ejSpellCheck(): EjConfigBuilder;
     ejTemplate(): EjConfigBuilder;
   }
   export function configure(aurelia: any, configCallback?: ((builder: EjConfigBuilder) => void)): any;
@@ -457,16 +459,19 @@ declare module 'aurelia-syncfusion-bridge' {
   export class ScheduleResource {
   
   }
-  export class ejSignature extends WidgetBase {
+  export class ejScroller extends WidgetBase {
     constructor(element?: any);
   }
-  export class ejScroller extends WidgetBase {
+  export class ejSignature extends WidgetBase {
     constructor(element?: any);
   }
   export class ejSlider extends WidgetBase {
     constructor(element?: any);
   }
   export class ejSparkline extends WidgetBase {
+    constructor(element?: any);
+  }
+  export class ejSpellCheck extends WidgetBase {
     constructor(element?: any);
   }
   export class ejSplitButton extends WidgetBase {

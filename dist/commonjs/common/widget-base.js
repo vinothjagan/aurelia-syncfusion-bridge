@@ -72,6 +72,9 @@ var WidgetBase = exports.WidgetBase = (_dec = (0, _decorators.delayed)(), (_clas
 
   WidgetBase.prototype.bind = function bind(ctx, overrideCtx) {
     this.parentCtx = overrideCtx;
+    if (this.widget && this.isEditor) {
+      this.widget.option('value', this.eValue);
+    }
   };
 
   WidgetBase.prototype.createTwoWays = function createTwoWays() {
