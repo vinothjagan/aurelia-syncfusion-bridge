@@ -16,6 +16,10 @@ A set of [Aurelia](http://aurelia.io) wrappers for [Syncfusion Essential Studio 
 
 Open up an [issue](https://github.com/aurelia-ui-toolkits/aurelia-syncfusion-bridge/issues)
 
+## Documentation
+
+For complete aurelia-syncfusion-bridge documentation, please visit [http://help.syncfusion.com/aurelia/](http://help.syncfusion.com/aurelia/)
+
 ## Running tests
 1. `npm install`
 2. `jspm install`
