@@ -8,8 +8,8 @@ export class EventsProgressBar {
     this.value = 10;
     this.showComplete = true;
   }
-  detached(){
-	timer = window.clearInterval(timer);  
+  detached() {
+    timer = window.clearInterval(timer);
   }
   create(event) {
     this.logger.log('Progressbar has been created.');

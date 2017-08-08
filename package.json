@@ -1,6 +1,6 @@
 {
   "name": "aurelia-syncfusion-bridge",
-  "version": "0.10.0",
+  "version": "0.2.2",
   "registry": "github",
   "description": "A set of Syncfusion wrappers for Aurelia allowing developers to easily use Syncfusion components in their Aurelia application",
   "keywords": [
@@ -45,11 +45,12 @@
       "aurelia-task-queue": "npm:aurelia-task-queue@^1.0.0",
       "aurelia-templating": "npm:aurelia-templating@^1.1.0",
       "jquery-validation": "npm:jquery-validation@^1.15.0",
+      "jquery-validation-unobtrusive": "npm:jquery-validation-unobtrusive@3.2.6",
       "jsrender": "npm:jsrender@^0.9.75"
     },
     "devDependencies": {
       "aurelia-loader": "npm:aurelia-loader@1.0.0",
-      "aurelia-pal": "npm:aurelia-pal@1.0.0",
+      "aurelia-pal": "npm:aurelia-pal@1.3.0",
       "aurelia-pal-browser": "npm:aurelia-pal-browser@1.0.0",
       "aurelia-path": "npm:aurelia-path@1.0.0",
       "aurelia-polyfills": "npm:aurelia-polyfills@1.1.0",

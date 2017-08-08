@@ -108,7 +108,7 @@ export class CustomResourceDays {
             AllDay: false,
             Recurrence: true,
             RecurrenceRule: 'FREQ=DAILY;INTERVAL=2;COUNT=10',
-            categoryId: 1, roomId: '2', ownerId: '3'
+            categoryId: 1, roomId: 2, ownerId: 3
           }, {
             Id: 101,
             Subject: 'Hello Sea Gold',
@@ -119,7 +119,7 @@ export class CustomResourceDays {
             Description: '',
             AllDay: false,
             Recurrence: false,
-            categoryId: 1, roomId: '2', ownerId: '3'
+            categoryId: 1, roomId: 2, ownerId: 3
           }, {
             Id: 105,
             Subject: 'Daily Planet',
@@ -131,7 +131,7 @@ export class CustomResourceDays {
             AllDay: false,
             Recurrence: true,
             RecurrenceRule: 'FREQ=DAILY;INTERVAL=2;COUNT=10',
-            categoryId: 1, roomId: '1', ownerId: '1'
+            categoryId: 1, roomId: 1, ownerId: 1
           }, {
             Id: 106,
             Subject: 'Alaska: The Last Frontier',
@@ -143,7 +143,7 @@ export class CustomResourceDays {
             AllDay: false,
             Recurrence: true,
             RecurrenceRule: 'FREQ=DAILY;INTERVAL=1;COUNT=10',
-            categoryId: 1, roomId: '1', ownerId: '5'
+            categoryId: 1, roomId: 1, ownerId: 5
           }, {
             Id: 109,
             Subject: 'Sports Day',
@@ -154,7 +154,7 @@ export class CustomResourceDays {
             Description: '',
             AllDay: false,
             Recurrence: false,
-            categoryId: 1, roomId: '2', ownerId: '3'
+            categoryId: 1, roomId: 2, ownerId: 3
           }],
         id: 'Id',
         subject: 'Subject',

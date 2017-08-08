@@ -11,12 +11,12 @@ export class Health {
       this.circularGauge = [{ gaugeClass: 'col-sm-6  gauge1', gaugeId: 'GaugeRDI', intake: 'todaylabel rdilabel', pending: 'pending todaylabel rdipenlabel', intakeText: 'Calories Intake - 450/2200', pendingText: '1750 calories pending', index: 0, model: 'RDI', intakeRef: 'rdilabel', pendingRef: 'rdipenlabel' }, { gaugeClass: 'col-sm-6 gauge2', gaugeId: 'GaugeBurnt', intake: 'todaylabel', pending: 'todaylabel pending', intakeText: 'Calories burnt - 650/1000', pendingText: '350 calories pending', index: 1, model: 'Burnt', intakeRef: 'label', pendingRef: 'penlabel' }];
       this.type = { frameType: 'halfcircle' };
       this.scale = [[{
-        startAngle: 182, sweepAngle: 176, showRanges: true, showLabels: false, radius: 140, minimum: 0, maximum: 2200, majorIntervalValue: 200, pointerCap: { radius: 15, backgroundColor: '#3AB54B', borderColor: '#3AB54B', borderWidth: 15 },
-        pointers: [{ border: { color: '#3AB54B' }, needleStyle: 'rectangle', width: 1, value: 450, length: 90 }],
+        startAngle: 182, sweepAngle: 176, showRanges: true, showLabels: false, radius: 120, minimum: 0, maximum: 2200, majorIntervalValue: 200, pointerCap: { radius: 15, backgroundColor: '#3AB54B', borderColor: '#3AB54B', borderWidth: 15 },
+        pointers: [{ border: { color: '#3AB54B' }, needleStyle: 'rectangle', width: 1, value: 450, length: 70 }],
         ticks: [{ color: '#FFFFFF', height: 16, width: 3 }, { color: '#FFFFFF', height: 7, width: 1 }], ranges: [{ size: 10, startValue: 0, endValue: 449, backgroundColor: '#3AB54B', border: { color: '#3AB54B' } }, { size: 10, startValue: 449, endValue: 2200, backgroundColor: '#B0D2C8', border: { color: '#B0D2C8' } }]
       }], [{
-        startAngle: 182, sweepAngle: 176, showRanges: true, showLabels: false, radius: 140, minimum: 0, maximum: 1000, majorIntervalValue: 200, pointerCap: { radius: 15, backgroundColor: '#b24848', borderColor: '#b24848', borderWidth: 15 },
-        pointers: [{ border: { color: '#b24848' }, needleStyle: 'rectangle', width: 1, value: 650, length: 90 }],
+        startAngle: 182, sweepAngle: 176, showRanges: true, showLabels: false, radius: 120, minimum: 0, maximum: 1000, majorIntervalValue: 200, pointerCap: { radius: 15, backgroundColor: '#b24848', borderColor: '#b24848', borderWidth: 15 },
+        pointers: [{ border: { color: '#b24848' }, needleStyle: 'rectangle', width: 1, value: 650, length: 70 }],
         ticks: [{ color: '#FFFFFF', height: 16, width: 3 }, { color: '#FFFFFF', height: 7, width: 1 }], ranges: [{ size: 10, startValue: 0, endValue: 649, backgroundColor: '#b24848', border: { color: '#c98c8b' } }, { size: 10, startValue: 649, endValue: 1000, backgroundColor: '#C9A5A6', border: { color: '#C9A5A6' } }]
       }]];
       this.smallChart = [{ chartContainer: 'col-sm-6 chart1', imageId: 'StepChartDiv', chartId: 'ChartStep', labelText: 'Step - 90/100', pendingText: '10 steps pending', index: 0 }, { chartContainer: 'col-sm-6 chart2', imageId: 'FloorChartDiv', chartId: 'ChartFloor', labelText: 'Floor - 4/10', pendingText: '6 floors pending', index: 1 }];

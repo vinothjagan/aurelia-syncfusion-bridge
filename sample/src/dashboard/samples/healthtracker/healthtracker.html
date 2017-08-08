@@ -51,7 +51,7 @@
         <div class="col-md-6 ptiles">
           <div repeat.for="gauge of circularGauge" class="${gauge.gaugeClass}">
             <div id="${gauge.gaugeId}">
-              <ej-circular-gauge id="${gauge.gaugeId}" view-model.ref="gauge.model" e-frame.bind="type" e-width=230 e-height=155 e-distance-from-corner=-5
+              <ej-circular-gauge id="${gauge.gaugeId}" view-model.ref="gauge.model" e-frame.bind="type" e-width=170 e-height=155 e-distance-from-corner=-5
                 e-gauge-position="bottomcenter" e-is-responsive=false e-scales.bind="scale[gauge.index]">
               </ej-circular-gauge>
             </div>
@@ -131,7 +131,7 @@
         </div>
       </div>
     </div>
-    <div id="healthAddTemplate">
+    <script type="text/x-jsrender" id="healthAddTemplate">
       <table cellspacing="14px">
         <tr>
           <td>Food time:</td>
@@ -179,7 +179,7 @@
           <td id="validation">* All fields are mandatory</td>
         </tr>
       </table>
-    </div>
+    </script>
     <div id="BurntTooltip" class="historytooltip">
       <div id="stepTool"></div>
       <div>

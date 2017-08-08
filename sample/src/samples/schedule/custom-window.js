@@ -1,287 +1,293 @@
 export class CustomAppointmentWindow {
     /* eslint-disable dot-notation */
     /* eslint-disable eqeqeq */
-    onClick(event) {
-      let args = event.detail;
-      this._allDay = $(args.target.currentTarget).hasClass('e-alldaycells');
-    }
-    onAppointmentWindowOpen(event) {
-      let args = event.detail;
-      args.cancel = true;
-      $('#StartTime').ejDateTimePicker({ value: args.startTime });
-      $('#EndTime').ejDateTimePicker({ value: args.endTime });
-      if (!ej.isNullOrUndefined(args.target)) {
-        if ($(args.target.currentTarget).hasClass('e-alldaycells') || this._allDay) {
-          $('#allday').prop('checked', true);
-          this.alldayCheck();
-        } else args.model.currentView === 'month' ? $('#allday').prop('checked', true) : $('#allday').prop('checked', false);
-        $('#StartTime,#EndTime').ejDateTimePicker({ enabled: ($(args.target.currentTarget).hasClass('e-alldaycells') || $(args.target.currentTarget).hasClass('e-monthcells') || args.model.currentView === 'month') ? false : true });
-      }
-      if (!ej.isNullOrUndefined(args.appointment)) {
-        $('#customId').val(args.appointment.Id);
-        $('#subject').val(args.appointment.Subject);
-        $('#customdescription').val(args.appointment.Description);
-        $('#StartTime').ejDateTimePicker({ value: new Date(args.appointment.StartTime) });
-        $('#EndTime').ejDateTimePicker({ value: new Date(args.appointment.EndTime) });
-        $('#allday').prop('checked', args.appointment.AllDay);
-        $('#recurrence').prop('checked', args.appointment.Recurrence);
-        if (args.appointment.Recurrence) {
-          $('#rType').val(args.appointment.RecurrenceRule.split(';')[0].split('=')[1].toLowerCase());
-          $('tr.recurrence').css('display', 'table-row');
-        }
-      }
-      $('#customWindow').ejDialog('open');
-      if (this._allDay) this.alldayCheck();
+
+    onCreate(event) {
+      let proxy = $('#Schedule1').ejSchedule('instance');
+      proxy._customAppointmentWindow = $('#customWindow');
+      proxy._customAppointmentWindow.ejDialog({ width: (proxy._mediaQuery) ? '100%' : 600, target: '#' + proxy._id, enableModal: true });
+      proxy._customAppointmentWindow.parents().find('.e-scheduledialog').find('.e-titlebar').addClass('e-dialogheader');
+      proxy._customAppointmentWindow.find('#StartTime,#EndTime').ejDateTimePicker({ width: '150px' });
+      proxy._customAppointmentWindow.find('.e-appButton,.e-recurButton').ejButton({ width: '85px' });
+      proxy._customAppointmentWindow.find('.AllDay,.Recurrence').ejCheckBox({ change: 'onCheckboxChange' });
+      proxy._customAppointmentWindow.find('#customRecurrenceEditor').ejRecurrenceEditor({ frequencies: ['daily', 'weekly', 'monthly', 'yearly'], selectedRecurrenceType: 1 });
     }
 
-    save() {
-      if ($.trim($('#subject').val()) == '') {
-        $('#subject').addClass('error');
-        return false;
-      }
-      let obj = {}; let temp = {}; let rType;
-      let formelement = $('#customWindow').find('#custom').get(0);
-      for (let index = 0; index < formelement.length; index++) {
-        let columnName = formelement[index].name; let $element = $(formelement[index]);
-        if (columnName != undefined) {
-          if (columnName == '') columnName = formelement[index].id.replace(this._id, '');
-          if (columnName != '' && obj[columnName] == null) { //eslint-disable-line no-eq-null
-            let value = formelement[index].value;
-            if (columnName == 'Id' && value != '') value = parseInt(value); //eslint-disable-line radix
-            if ($element.hasClass('e-datetimepicker')) value = new Date(value);
-            if (formelement[index].type == 'checkbox') value = formelement[index].checked;
-            if (columnName == 'freq') {
-              if (formelement[index].type == 'select-one') {
-                rType = document.getElementById('rType');
-                temp[columnName] = rType.options[rType.selectedIndex].value;
-              }
-            }
-            obj[columnName] = value;
+    onClick(event) {
+      let proxy = $('#Schedule1').ejSchedule('instance');
+      let args = event.detail;
+      proxy._customAllDay = $(args.target.currentTarget).closest('.e-alldaycells').hasClass('e-alldaycells');
+    }
+
+    onAppointmentWindowOpen(event) {
+      let proxy = $('#Schedule1').ejSchedule('instance');
+      let args = event.detail;
+      args.cancel = true;
+      proxy._customRecRule = null;
+      if (!ej.isNullOrUndefined(args.appointment)) {
+        proxy._customAppointmentWindow.find('#Id').val(args.appointment.Id);
+        proxy._customAppointmentWindow.find('#Subject').val(args.appointment.Subject);
+        proxy._customAppointmentWindow.find('#Description').val(args.appointment.Description);
+        proxy._customAppointmentWindow.find('#StartTime').ejDateTimePicker({ value: new Date(args.appointment.StartTime) });
+        proxy._customAppointmentWindow.find('#EndTime').ejDateTimePicker({ value: new Date(args.appointment.EndTime) });
+        proxy._customAppointmentWindow.find('#AllDay').ejCheckBox({ checked: args.appointment.AllDay });
+        proxy._customAppointmentWindow.find('#Recurrence').ejCheckBox({ checked: args.appointment.Recurrence });
+        if (args.appointment.Recurrence) {
+          if (proxy._currentAction == ej.Schedule.Actions.EditSeries) {
+            proxy._customRecRule = args.appointment.RecurrenceRule.split(';EXDATE')[0];
+          } else if (proxy._currentAction == ej.Schedule.Actions.EditOccurrence) {
+            proxy._customAppointmentWindow.find('#Recurrence').ejCheckBox('disable');
+            proxy._customRecRule = args.appointment.RecurrenceRule;
+          }
+        }
+      } else {
+        proxy._customAppointmentWindow.find('#StartTime').ejDateTimePicker({ value: args.startTime });
+        proxy._customAppointmentWindow.find('#EndTime').ejDateTimePicker({ value: args.endTime });
+        if (!ej.isNullOrUndefined(args.target)) {
+          if ($(args.target.currentTarget).closest('.e-alldaycells').hasClass('e-alldaycells') || proxy.currentView() == 'month' || proxy._customAllDay) {
+            proxy._customAppointmentWindow.find('#AllDay').ejCheckBox({ checked: true });
+            proxy._customAppointmentWindow.find('#StartTime,#EndTime').ejDateTimePicker({ enabled: false });
           }
         }
       }
-      if (obj.Recurrence) {
-        if (temp.freq.toUpperCase() == 'DAILY') {
-          obj['RecurrenceRule'] = 'FREQ=DAILY;INTERVAL=1;COUNT=5';
-        }else if (temp.freq.toUpperCase() == 'WEEKLY') {
-          obj['RecurrenceRule'] = 'FREQ=WEEKLY;BYDAY=MO,WE,TH;INTERVAL=1;COUNT=10';
-        }else if (temp.freq.toUpperCase() == 'MONTHLY') {
-          obj['RecurrenceRule'] = 'FREQ=MONTHLY;BYMONTHDAY=' + obj.StartTime.getDate() + ';INTERVAL=1;COUNT=5';
-        }else if (temp.freq.toUpperCase() == 'YEARLY') {
-          obj['RecurrenceRule'] = 'FREQ=YEARLY;BYMONTHDAY=' + obj.StartTime.getDate() + ';BYMONTH=' + (obj.StartTime.getMonth() + 1) + ';INTERVAL=1;COUNT=3';
-        }
-      }else obj['RecurrenceRule'] = null;
-      $('#customWindow').ejDialog('close');
-      let object = $('#Schedule1').data('ejSchedule');
-      object.saveAppointment(obj);
-      this.clearFields();
+      proxy._customAppointmentWindow.find('#appointmentWindow').css({ display: 'block' });
+      proxy._customAppointmentWindow.find('#recurrenceWindow').css({ display: 'none' });
+      proxy._customAppointmentWindow.ejDialog('open');
+      let subject = proxy._customAppointmentWindow.find('#Subject');
+      subject.focusin(function() { $(subject).removeClass('validationError'); }).focusout(function() { if ($(subject).val() == '') $(subject).addClass('validationError'); });
     }
 
-    cancel() {
-      this.clearFields();
-      $('#customWindow').ejDialog('close');
+    onButtonClick(event) {
+      let proxy = $('#Schedule1').ejSchedule('instance');
+      let args = event.detail;
+      if ($(args.target).hasClass('e-appButton')) {
+        if ($(args.target).hasClass('e-appOk')) {
+          if (proxy._customAppointmentWindow.find('#Subject').val().trim() == '') return false;
+          let appObj = {};
+          let formelement = proxy._customAppointmentWindow.find('#customAppointmentWindow').get(0);
+          for (let index = 0; index < formelement.length; index++) {
+            let columnName = formelement[index].name;
+            let $element = $(formelement[index]);
+            if (!ej.isNullOrUndefined(columnName) && columnName != '' && ej.isNullOrUndefined(appObj[columnName])) {
+              let value = formelement[index].value;
+              if (columnName == 'Id' && value != '') {
+                value = parseInt(string, value);
+              }
+              if ($element.hasClass('e-datetimepicker')) {
+                value = new Date(value);
+              }
+              if ($element.hasClass('e-checkbox')) {
+                value = formelement[index].checked;
+              }
+              if (columnName.indexOf('_hidden') == -1) {
+                appObj[columnName] = value;
+              }
+            }
+          }
+          if (appObj.Recurrence) {
+            appObj[proxy._appointmentSettings['recurrenceRule']] = proxy._customRecRule;
+            let recurEdit = proxy._appointmentAddWindow.find('.e-recurrenceeditor').data('ejRecurrenceEditor');
+            recurEdit._recRule = proxy._customRecRule;
+          }
+          proxy.saveAppointment(appObj);
+        }
+        proxy._customAppointmentWindow.ejDialog('close');
+      } else {
+        proxy._customAppointmentWindow.find('#appointmentWindow,#recurrenceWindow').toggle();
+        if ($(args.target).hasClass('e-recurOk')) {
+          let recurObj = proxy._customAppointmentWindow.find('#customRecurrenceEditor').ejRecurrenceEditor('instance');
+          recurObj.closeRecurPublic();
+          proxy._customRecRule = recurObj._recRule;
+        } else {
+          proxy._customAppointmentWindow.find('#Recurrence').ejCheckBox({ checked: false });
+        }
+      }
+    }
+
+    onCheckboxChange(event) {
+      let proxy = $('#Schedule1').ejSchedule('instance');
+      let args = event.detail;
+      if (args.model.id == 'AllDay') {
+        if (args.isChecked) {
+          let strDate = new Date(proxy._customAppointmentWindow.find('#StartTime').ejDateTimePicker('model.value').setHours(0, 0, 0));
+          let endDate = new Date(proxy._customAppointmentWindow.find('#EndTime').ejDateTimePicker('model.value').setHours(23, 59, 59));
+          proxy._customAppointmentWindow.find('#StartTime').ejDateTimePicker({ value: new Date(strDate), enabled: false });
+          proxy._customAppointmentWindow.find('#EndTime').ejDateTimePicker({ value: new Date(endDate), enabled: false });
+        } else {
+          proxy._customAppointmentWindow.find('#StartTime').ejDateTimePicker({ enabled: true });
+          proxy._customAppointmentWindow.find('#EndTime').ejDateTimePicker({ enabled: true });
+        }
+      } else {
+        if (args.isChecked) proxy._customAppointmentWindow.find('#appointmentWindow,#recurrenceWindow').toggle();
+      }
     }
 
     clearFields() {
-      $('#customId').val('');
-      $('#subject').val('');
-      $('#customdescription').val('');
-      $('#allday').prop('checked', false);
-      $('#recurrence').prop('checked', false);
-      $('tr.recurrence').css('display', 'none');
-      $('#StartTime,#EndTime').ejDateTimePicker({ enabled: true });
+      let proxy = $('#Schedule1').ejSchedule('instance');
+      proxy._customAppointmentWindow.find('#Id').val('');
+      proxy._customAppointmentWindow.find('#Subject').val('');
+      proxy._customAppointmentWindow.find('#Description').val('');
+      proxy._customAppointmentWindow.find('#AllDay,#Recurrence').ejCheckBox({ checked: false });
+      proxy._customAppointmentWindow.find('#AllDay,#Recurrence').ejCheckBox('enable');
+      proxy._customAppointmentWindow.find('#StartTime,#EndTime').ejDateTimePicker({ enabled: true });
     }
-    recurCheck() {
-      if ($('#recurrence').get(0).checked == true) $('tr.recurrence').css('display', 'table-row');
-      else $('tr.recurrence').css('display', 'none');
-    }
-    alldayEnable() {
-      if ($('#allday').prop('checked')) {
-        let a = $('#StartTime').data('ejDateTimePicker').model.value;
-        a.setHours(0, 0, 0);
-        let b = $('#EndTime').data('ejDateTimePicker').model.value;
-        b.setHours(23, 59, 0);
-        $('#StartTime').ejDateTimePicker({ value: new Date(a), enabled: false });
-        $('#EndTime').ejDateTimePicker({ value: new Date(b), enabled: false });
-      } else {
-        $('#StartTime').ejDateTimePicker({ enabled: true });
-        $('#EndTime').ejDateTimePicker({ enabled: true });
-      }
-    }
-    temp() {
-      $('#subject').removeClass('error');
-    }
+
     constructor() {
       this.recurrenceCheck = false;
       this.alldayCheck = false;
+      this.Frequencies = ['daily', 'weekly', 'monthly', 'yearly'];
       this.AppointmentList = {
-        dataSource: [
-          {
-            Id: 400,
-            Subject: 'Brazil - Croatia',
-            StartTime: '2017/6/2 09:00:00',
-            EndTime: '2017/6/2 10:30:00',
-            StartTimeZone: 'UTC +05:30',
-            EndTimeZone: 'UTC +05:30',
-            Description: '',
-            AllDay: false,
-            Recurrence: false
-          },
-          {
-            Id: 401,
-            Subject: 'Mexico - Cameroon',
-            StartTime: '2017/6/3 13:00:00',
-            EndTime: '2017/6/3 14:30:00',
-            StartTimeZone: 'UTC +05:30',
-            EndTimeZone: 'UTC +05:30',
-            Description: '',
-            AllDay: false,
-            Recurrence: false
-          },
-          {
-            Id: 402,
-            Subject: 'Brazil - Mexico',
-            StartTime: '2017/6/7 06:00:00',
-            EndTime: '2017/6/7 07:30:00',
-            StartTimeZone: 'UTC +05:30',
-            EndTimeZone: 'UTC +05:30',
-            Description: '',
-            AllDay: false,
-            Recurrence: false
-          },
-          {
-            Id: 403,
-            Subject: 'Cameroon - Croatia',
-            StartTime: '2017/6/5 04:00:00',
-            EndTime: '2017/6/5 05:30:00',
-            StartTimeZone: 'UTC +05:30',
-            EndTimeZone: 'UTC +05:30',
-            Description: '',
-            AllDay: false,
-            Recurrence: false
-          },
-          {
-            Id: 404,
-            Subject: 'Cameroon - Brazil',
-            StartTime: '2017/6/13 17:00:00',
-            EndTime: '2017/6/13 18:30:00',
-            StartTimeZone: 'UTC +05:30',
-            EndTimeZone: 'UTC +05:30',
-            Description: '',
-            AllDay: false,
-            Recurrence: false
-          },
-          {
-            Id: 405,
-            Subject: 'Croatia - Mexico',
-            StartTime: '2017/6/12 17:00:00',
-            EndTime: '2017/6/12 18:30:00',
-            StartTimeZone: 'UTC +05:30',
-            EndTimeZone: 'UTC +05:30',
-            Description: '',
-            AllDay: false,
-            Recurrence: false
-          },
-          {
-            Id: 406,
-            Subject: 'Spain - Netherlands',
-            StartTime: '2017/6/3 16:00:00',
-            EndTime: '2017/6/6 17:30:00',
-            StartTimeZone: 'UTC +05:30',
-            EndTimeZone: 'UTC +05:30',
-            Description: '',
-            AllDay: false,
-            Recurrence: false
-          },
-          {
-            Id: 407,
-            Subject: 'Chile - Australia',
-            StartTime: '2017/6/3 18:00:00',
-            EndTime: '2017/6/3 19:30:00',
-            StartTimeZone: 'UTC +05:30',
-            EndTimeZone: 'UTC +05:30',
-            Description: '',
-            AllDay: false,
-            Recurrence: false
-          },
-          {
-            Id: 408,
-            Subject: 'Spain - Chile',
-            StartTime: '2017/6/4 05:00:00',
-            EndTime: '2017/6/4 06:30:00',
-            StartTimeZone: 'UTC +05:30',
-            EndTimeZone: 'UTC +05:30',
-            Description: '',
-            AllDay: false,
-            Recurrence: false
-          },
-          {
-            Id: 409,
-            Subject: 'Australia - Netherlands',
-            StartTime: '2017/6/8 08:30:00',
-            EndTime: '2017/6/8 09:30:00',
-            StartTimeZone: 'UTC +05:30',
-            EndTimeZone: 'UTC +05:30',
-            Description: '',
-            AllDay: false,
-            Recurrence: false
-          },
-          {
-            Id: 410,
-            Subject: 'Australia - Chile',
-            StartTime: '2017/6/13 13:00:00',
-            EndTime: '2017/6/13 14:30:00',
-            StartTimeZone: 'UTC +05:30',
-            EndTimeZone: 'UTC +05:30',
-            Description: '',
-            AllDay: false,
-            Recurrence: false
-          },
-
-          {
-            Id: 411,
-            Subject: 'Netherlands - Chile',
-            StartTime: '2017/6/12 13:00:00',
-            EndTime: '2017/6/12 14:30:00',
-            StartTimeZone: 'UTC +05:30',
-            EndTimeZone: 'UTC +05:30',
-            Description: '',
-            AllDay: false,
-            Recurrence: false
-          },
-          {
-            Id: 412,
-            Subject: 'America - Brazil',
-            StartTime: '2017/6/9 05:00:00',
-            EndTime: '2017/6/9 06:30:00',
-            StartTimeZone: 'UTC +05:30',
-            EndTimeZone: 'UTC +05:30',
-            Description: '',
-            AllDay: false,
-            Recurrence: false
-          },
-          {
-            Id: 413,
-            Subject: 'Russia - London',
-            StartTime: '2017/6/6 07:00:00',
-            EndTime: '2017/6/6 09:30:00',
-            StartTimeZone: 'UTC +05:30',
-            EndTimeZone: 'UTC +05:30',
-            Description: '',
-            AllDay: false,
-            Recurrence: false
-          },
-          {
-            Id: 414,
-            Subject: 'France - Rome',
-            StartTime: '2017/6/10 07:00:00',
-            EndTime: '2017/6/10 08:30:00',
-            StartTimeZone: 'UTC +05:30',
-            EndTimeZone: 'UTC +05:30',
-            Description: '',
-            AllDay: false,
-            Recurrence: false
-          }],
+        dataSource: [{
+          Id: 400,
+          Subject: 'Brazil - Croatia',
+          StartTime: '2017/6/2 09:00:00',
+          EndTime: '2017/6/2 10:30:00',
+          StartTimeZone: 'UTC +05:30',
+          EndTimeZone: 'UTC +05:30',
+          Description: '',
+          AllDay: false,
+          Recurrence: false
+        }, {
+          Id: 401,
+          Subject: 'Mexico - Cameroon',
+          StartTime: '2017/6/3 13:00:00',
+          EndTime: '2017/6/3 14:30:00',
+          StartTimeZone: 'UTC +05:30',
+          EndTimeZone: 'UTC +05:30',
+          Description: '',
+          AllDay: false,
+          Recurrence: false
+        }, {
+          Id: 402,
+          Subject: 'Brazil - Mexico',
+          StartTime: '2017/6/7 06:00:00',
+          EndTime: '2017/6/7 07:30:00',
+          StartTimeZone: 'UTC +05:30',
+          EndTimeZone: 'UTC +05:30',
+          Description: '',
+          AllDay: false,
+          Recurrence: false
+        }, {
+          Id: 403,
+          Subject: 'Cameroon - Croatia',
+          StartTime: '2017/6/5 04:00:00',
+          EndTime: '2017/6/5 05:30:00',
+          StartTimeZone: 'UTC +05:30',
+          EndTimeZone: 'UTC +05:30',
+          Description: '',
+          AllDay: false,
+          Recurrence: false
+        }, {
+          Id: 404,
+          Subject: 'Cameroon - Brazil',
+          StartTime: '2017/6/13 17:00:00',
+          EndTime: '2017/6/13 18:30:00',
+          StartTimeZone: 'UTC +05:30',
+          EndTimeZone: 'UTC +05:30',
+          Description: '',
+          AllDay: false,
+          Recurrence: false
+        }, {
+          Id: 405,
+          Subject: 'Croatia - Mexico',
+          StartTime: '2017/6/12 17:00:00',
+          EndTime: '2017/6/12 18:30:00',
+          StartTimeZone: 'UTC +05:30',
+          EndTimeZone: 'UTC +05:30',
+          Description: '',
+          AllDay: false,
+          Recurrence: false
+        }, {
+          Id: 406,
+          Subject: 'Spain - Netherlands',
+          StartTime: '2017/6/3 16:00:00',
+          EndTime: '2017/6/6 17:30:00',
+          StartTimeZone: 'UTC +05:30',
+          EndTimeZone: 'UTC +05:30',
+          Description: '',
+          AllDay: false,
+          Recurrence: false
+        }, {
+          Id: 407,
+          Subject: 'Chile - Australia',
+          StartTime: '2017/6/3 18:00:00',
+          EndTime: '2017/6/3 19:30:00',
+          StartTimeZone: 'UTC +05:30',
+          EndTimeZone: 'UTC +05:30',
+          Description: '',
+          AllDay: false,
+          Recurrence: false
+        }, {
+          Id: 408,
+          Subject: 'Spain - Chile',
+          StartTime: '2017/6/4 05:00:00',
+          EndTime: '2017/6/4 06:30:00',
+          StartTimeZone: 'UTC +05:30',
+          EndTimeZone: 'UTC +05:30',
+          Description: '',
+          AllDay: false,
+          Recurrence: false
+        }, {
+          Id: 409,
+          Subject: 'Australia - Netherlands',
+          StartTime: '2017/6/8 08:30:00',
+          EndTime: '2017/6/8 09:30:00',
+          StartTimeZone: 'UTC +05:30',
+          EndTimeZone: 'UTC +05:30',
+          Description: '',
+          AllDay: false,
+          Recurrence: false
+        }, {
+          Id: 410,
+          Subject: 'Australia - Chile',
+          StartTime: '2017/6/13 13:00:00',
+          EndTime: '2017/6/13 14:30:00',
+          StartTimeZone: 'UTC +05:30',
+          EndTimeZone: 'UTC +05:30',
+          Description: '',
+          AllDay: false,
+          Recurrence: false
+        }, {
+          Id: 411,
+          Subject: 'Netherlands - Chile',
+          StartTime: '2017/6/12 13:00:00',
+          EndTime: '2017/6/12 14:30:00',
+          StartTimeZone: 'UTC +05:30',
+          EndTimeZone: 'UTC +05:30',
+          Description: '',
+          AllDay: false,
+          Recurrence: false
+        }, {
+          Id: 412,
+          Subject: 'America - Brazil',
+          StartTime: '2017/6/9 05:00:00',
+          EndTime: '2017/6/9 06:30:00',
+          StartTimeZone: 'UTC +05:30',
+          EndTimeZone: 'UTC +05:30',
+          Description: '',
+          AllDay: false,
+          Recurrence: false
+        }, {
+          Id: 413,
+          Subject: 'Russia - London',
+          StartTime: '2017/6/6 07:00:00',
+          EndTime: '2017/6/6 09:30:00',
+          StartTimeZone: 'UTC +05:30',
+          EndTimeZone: 'UTC +05:30',
+          Description: '',
+          AllDay: false,
+          Recurrence: false
+        }, {
+          Id: 414,
+          Subject: 'France - Rome',
+          StartTime: '2017/6/10 07:00:00',
+          EndTime: '2017/6/10 08:30:00',
+          StartTimeZone: 'UTC +05:30',
+          EndTimeZone: 'UTC +05:30',
+          Description: '',
+          AllDay: false,
+          Recurrence: false
+        }],
         id: 'Id',
         subject: 'Subject',
         startTime: 'StartTime',
@@ -294,5 +300,5 @@ export class CustomAppointmentWindow {
         recurrenceRule: 'RecurrenceRule'
       };
     }
-    attached() {}
+    attached() { }
 }

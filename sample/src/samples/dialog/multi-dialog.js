@@ -1,8 +1,8 @@
 export class BasicUse {
   constructor() {
-    this.dialog1Position = { X: 70, Y: 50 };
-    this.dialog2Position = { X: 530, Y: 50 };
-    this.dialog3Position = { X: 300, Y: 260 };
+    this.dialog1Position = { X: -225, Y: -80 };
+    this.dialog2Position = { X: 235, Y: -80 };
+    this.dialog3Position = { X: 0, Y: 140 };
   }
 onOpen(args) {
   $('#btnOpen').hide();

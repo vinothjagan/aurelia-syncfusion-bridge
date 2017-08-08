@@ -14,7 +14,8 @@ System.config({
     "*": "src/*",
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*",
-    "syncfusion-javascript/*": "src/root/vendors/*"
+    "syncfusion-javascript/*": "src/root/vendors/*",
+    "syncfusion-ej-global/*": "src/root/vendors/Scripts/ej/*"
   },
 
   meta: {
@@ -33,7 +34,7 @@ System.config({
     "aurelia-loader": "npm:aurelia-loader@1.0.0",
     "aurelia-logging": "npm:aurelia-logging@1.0.0",
     "aurelia-metadata": "npm:aurelia-metadata@1.0.0",
-    "aurelia-pal": "npm:aurelia-pal@1.0.0",
+    "aurelia-pal": "npm:aurelia-pal@1.3.0",
     "aurelia-polyfills": "npm:aurelia-polyfills@1.1.0",
     "aurelia-task-queue": "npm:aurelia-task-queue@1.0.0",
     "aurelia-templating": "npm:aurelia-templating@1.1.0",
@@ -44,7 +45,6 @@ System.config({
     "clean-css": "npm:clean-css@3.4.8",
     "core-js": "npm:core-js@1.2.7",
     "css": "github:systemjs/plugin-css@0.1.20",
-    "font-awesome": "npm:font-awesome@4.6.3",
     "google/code-prettify": "github:google/code-prettify@master",
     "jquery": "npm:jquery@2.2.4",
     "jquery-easing": "npm:jquery.easing@1.4.1",
@@ -107,7 +107,7 @@ System.config({
     "npm:aurelia-binding@1.0.4": {
       "aurelia-logging": "npm:aurelia-logging@1.0.0",
       "aurelia-metadata": "npm:aurelia-metadata@1.0.0",
-      "aurelia-pal": "npm:aurelia-pal@1.0.0",
+      "aurelia-pal": "npm:aurelia-pal@1.3.0",
       "aurelia-task-queue": "npm:aurelia-task-queue@1.0.0"
     },
     "npm:aurelia-bootstrapper@1.0.0": {
@@ -117,7 +117,7 @@ System.config({
       "aurelia-history-browser": "npm:aurelia-history-browser@1.0.0",
       "aurelia-loader-default": "npm:aurelia-loader-default@1.0.0",
       "aurelia-logging-console": "npm:aurelia-logging-console@1.0.0",
-      "aurelia-pal": "npm:aurelia-pal@1.0.0",
+      "aurelia-pal": "npm:aurelia-pal@1.3.0",
       "aurelia-pal-browser": "npm:aurelia-pal-browser@1.0.0",
       "aurelia-polyfills": "npm:aurelia-polyfills@1.1.0",
       "aurelia-router": "npm:aurelia-router@1.0.3",
@@ -128,7 +128,7 @@ System.config({
     },
     "npm:aurelia-dependency-injection@1.0.0": {
       "aurelia-metadata": "npm:aurelia-metadata@1.0.0",
-      "aurelia-pal": "npm:aurelia-pal@1.0.0"
+      "aurelia-pal": "npm:aurelia-pal@1.3.0"
     },
     "npm:aurelia-event-aggregator@1.0.0": {
       "aurelia-logging": "npm:aurelia-logging@1.0.0"
@@ -139,23 +139,23 @@ System.config({
       "aurelia-loader": "npm:aurelia-loader@1.0.0",
       "aurelia-logging": "npm:aurelia-logging@1.0.0",
       "aurelia-metadata": "npm:aurelia-metadata@1.0.0",
-      "aurelia-pal": "npm:aurelia-pal@1.0.0",
+      "aurelia-pal": "npm:aurelia-pal@1.3.0",
       "aurelia-path": "npm:aurelia-path@1.0.0",
       "aurelia-task-queue": "npm:aurelia-task-queue@1.0.0",
       "aurelia-templating": "npm:aurelia-templating@1.1.0"
     },
     "npm:aurelia-history-browser@1.0.0": {
       "aurelia-history": "npm:aurelia-history@1.0.0",
-      "aurelia-pal": "npm:aurelia-pal@1.0.0"
+      "aurelia-pal": "npm:aurelia-pal@1.3.0"
     },
     "npm:aurelia-http-client@1.0.0": {
-      "aurelia-pal": "npm:aurelia-pal@1.0.0",
+      "aurelia-pal": "npm:aurelia-pal@1.3.0",
       "aurelia-path": "npm:aurelia-path@1.0.0"
     },
     "npm:aurelia-loader-default@1.0.0": {
       "aurelia-loader": "npm:aurelia-loader@1.0.0",
       "aurelia-metadata": "npm:aurelia-metadata@1.0.0",
-      "aurelia-pal": "npm:aurelia-pal@1.0.0"
+      "aurelia-pal": "npm:aurelia-pal@1.3.0"
     },
     "npm:aurelia-loader@1.0.0": {
       "aurelia-metadata": "npm:aurelia-metadata@1.0.0",
@@ -165,13 +165,13 @@ System.config({
       "aurelia-logging": "npm:aurelia-logging@1.0.0"
     },
     "npm:aurelia-metadata@1.0.0": {
-      "aurelia-pal": "npm:aurelia-pal@1.0.0"
+      "aurelia-pal": "npm:aurelia-pal@1.3.0"
     },
     "npm:aurelia-pal-browser@1.0.0": {
-      "aurelia-pal": "npm:aurelia-pal@1.0.0"
+      "aurelia-pal": "npm:aurelia-pal@1.3.0"
     },
     "npm:aurelia-polyfills@1.1.0": {
-      "aurelia-pal": "npm:aurelia-pal@1.0.0"
+      "aurelia-pal": "npm:aurelia-pal@1.3.0"
     },
     "npm:aurelia-route-recognizer@1.0.0": {
       "aurelia-path": "npm:aurelia-path@1.0.0"
@@ -185,7 +185,7 @@ System.config({
       "aurelia-route-recognizer": "npm:aurelia-route-recognizer@1.0.0"
     },
     "npm:aurelia-task-queue@1.0.0": {
-      "aurelia-pal": "npm:aurelia-pal@1.0.0"
+      "aurelia-pal": "npm:aurelia-pal@1.3.0"
     },
     "npm:aurelia-templating-binding@1.0.0": {
       "aurelia-binding": "npm:aurelia-binding@1.0.4",
@@ -198,7 +198,7 @@ System.config({
       "aurelia-loader": "npm:aurelia-loader@1.0.0",
       "aurelia-logging": "npm:aurelia-logging@1.0.0",
       "aurelia-metadata": "npm:aurelia-metadata@1.0.0",
-      "aurelia-pal": "npm:aurelia-pal@1.0.0",
+      "aurelia-pal": "npm:aurelia-pal@1.3.0",
       "aurelia-path": "npm:aurelia-path@1.0.0",
       "aurelia-task-queue": "npm:aurelia-task-queue@1.0.0",
       "aurelia-templating": "npm:aurelia-templating@1.1.0"
@@ -207,7 +207,7 @@ System.config({
       "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.0.0",
       "aurelia-logging": "npm:aurelia-logging@1.0.0",
       "aurelia-metadata": "npm:aurelia-metadata@1.0.0",
-      "aurelia-pal": "npm:aurelia-pal@1.0.0",
+      "aurelia-pal": "npm:aurelia-pal@1.3.0",
       "aurelia-path": "npm:aurelia-path@1.0.0",
       "aurelia-router": "npm:aurelia-router@1.0.3",
       "aurelia-templating": "npm:aurelia-templating@1.1.0"
@@ -218,7 +218,7 @@ System.config({
       "aurelia-loader": "npm:aurelia-loader@1.0.0",
       "aurelia-logging": "npm:aurelia-logging@1.0.0",
       "aurelia-metadata": "npm:aurelia-metadata@1.0.0",
-      "aurelia-pal": "npm:aurelia-pal@1.0.0",
+      "aurelia-pal": "npm:aurelia-pal@1.3.0",
       "aurelia-path": "npm:aurelia-path@1.0.0",
       "aurelia-task-queue": "npm:aurelia-task-queue@1.0.0"
     },
@@ -260,9 +260,6 @@ System.config({
     },
     "npm:core-util-is@1.0.2": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0"
-    },
-    "npm:font-awesome@4.6.3": {
-      "css": "github:systemjs/plugin-css@0.1.20"
     },
     "npm:inherits@2.0.1": {
       "util": "github:jspm/nodelibs-util@0.1.0"
