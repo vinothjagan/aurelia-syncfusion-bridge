@@ -3,15 +3,23 @@
 System.register(['aurelia-templating', 'aurelia-dependency-injection', 'aurelia-metadata', 'aurelia-task-queue', 'aurelia-binding', './util'], function (_export, _context) {
   "use strict";
 
-  var BindableProperty, HtmlBehaviorResource, Container, metadata, TaskQueue, bindingMode, Util;
-  function generateBindables(controlName, inputs, twoWayProperties, abbrevProperties) {
+  var BindableProperty, HtmlBehaviorResource, Container, metadata, TaskQueue, bindingMode, BindingEngine, Util;
+  function generateBindables(controlName, inputs, twoWayProperties, abbrevProperties, observerCollection) {
     return function (target, key, descriptor) {
       var behaviorResource = metadata.getOrCreateOwn(metadata.resource, HtmlBehaviorResource, target);
       var container = Container.instance || new Container();
       var util = container.get(Util);
+      var bindingInstance = container.get(BindingEngine);
       inputs.push('options');
       inputs.push('widget');
       var len = inputs.length;
+      if (observerCollection) {
+        target.prototype.arrayObserver = [];
+        observerCollection.forEach(function (element) {
+          target.prototype.arrayObserver.push(util.getBindablePropertyName(element));
+        });
+        target.prototype.bindingInstance = bindingInstance;
+      }
       target.prototype.controlName = controlName;
       target.prototype.twoWays = twoWayProperties ? twoWayProperties : [];
       target.prototype.abbrevProperties = abbrevProperties ? abbrevProperties : [];
@@ -78,6 +86,7 @@ System.register(['aurelia-templating', 'aurelia-dependency-injection', 'aurelia-
       TaskQueue = _aureliaTaskQueue.TaskQueue;
     }, function (_aureliaBinding) {
       bindingMode = _aureliaBinding.bindingMode;
+      BindingEngine = _aureliaBinding.BindingEngine;
     }, function (_util) {
       Util = _util.Util;
     }],

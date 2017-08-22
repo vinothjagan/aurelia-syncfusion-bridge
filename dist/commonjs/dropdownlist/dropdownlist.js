@@ -31,6 +31,7 @@ var ejDropDownList = exports.ejDropDownList = (_dec = (0, _common.customAttribut
 
     var _this = _possibleConstructorReturn(this, _WidgetBase.call(this));
 
+    _this.isEditor = true;
     _this.element = element;
     return _this;
   }

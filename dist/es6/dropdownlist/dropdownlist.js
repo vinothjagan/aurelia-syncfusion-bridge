@@ -11,6 +11,7 @@ import 'syncfusion-javascript/Scripts/ej/web/ej.dropdownlist.min';
 export class ejDropDownList extends WidgetBase {
   constructor(element) {
     super();
+    this.isEditor = true;
     this.element = element;
   }
 }

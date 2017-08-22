@@ -18,14 +18,22 @@ var _aureliaBinding = require('aurelia-binding');
 
 var _util = require('./util');
 
-function generateBindables(controlName, inputs, twoWayProperties, abbrevProperties) {
+function generateBindables(controlName, inputs, twoWayProperties, abbrevProperties, observerCollection) {
   return function (target, key, descriptor) {
     var behaviorResource = _aureliaMetadata.metadata.getOrCreateOwn(_aureliaMetadata.metadata.resource, _aureliaTemplating.HtmlBehaviorResource, target);
     var container = _aureliaDependencyInjection.Container.instance || new _aureliaDependencyInjection.Container();
     var util = container.get(_util.Util);
+    var bindingInstance = container.get(_aureliaBinding.BindingEngine);
     inputs.push('options');
     inputs.push('widget');
     var len = inputs.length;
+    if (observerCollection) {
+      target.prototype.arrayObserver = [];
+      observerCollection.forEach(function (element) {
+        target.prototype.arrayObserver.push(util.getBindablePropertyName(element));
+      });
+      target.prototype.bindingInstance = bindingInstance;
+    }
     target.prototype.controlName = controlName;
     target.prototype.twoWays = twoWayProperties ? twoWayProperties : [];
     target.prototype.abbrevProperties = abbrevProperties ? abbrevProperties : [];

@@ -27,7 +27,8 @@ declare module 'aurelia-syncfusion-bridge' {
     TaskQueue
   } from 'aurelia-task-queue';
   import {
-    bindingMode
+    bindingMode,
+    BindingEngine
   } from 'aurelia-binding';
   import 'syncfusion-javascript/Scripts/ej/web/ej.accordion.min';
   import 'syncfusion-javascript/Scripts/ej/web/ej.autocomplete.min';
@@ -243,7 +244,7 @@ declare module 'aurelia-syncfusion-bridge' {
     TemplatingEngine
   };
   export const constants: any;
-  export function generateBindables(controlName?: any, inputs?: any, twoWayProperties?: any, abbrevProperties?: any): any;
+  export function generateBindables(controlName?: any, inputs?: any, twoWayProperties?: any, abbrevProperties?: any, observerCollection?: any): any;
   export function delayed(): any;
   
   /**
@@ -298,6 +299,8 @@ declare module 'aurelia-syncfusion-bridge' {
     getWidgetOptions(element?: any): any;
     getChildProperties(options?: any): any;
     attached(): any;
+    unsubscribe(): any;
+    unbind(): any;
     
     /**
      * To change widget model value
@@ -306,6 +309,7 @@ declare module 'aurelia-syncfusion-bridge' {
      * @param oldvalue Pld value of the property
      */
     propertyChanged(property?: any, newValue?: any, oldValue?: any): any;
+    update(e?: any): any;
     detached(): any;
   }
   export class ejCurrencyTextbox extends WidgetBase {

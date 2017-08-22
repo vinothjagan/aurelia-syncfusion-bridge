@@ -55,6 +55,7 @@ System.register(['../common/widget-base', '../common/constants', '../common/deco
 
           var _this = _possibleConstructorReturn(this, _WidgetBase.call(this));
 
+          _this.isEditor = true;
           _this.element = element;
           return _this;
         }

@@ -157,10 +157,33 @@ System.register(['./events', '../common/util', '../common/decorators'], function
           this.createWidget({ element: this.element });
         };
 
+        WidgetBase.prototype.unsubscribe = function unsubscribe() {
+          if (this.subscription) {
+            this.subscription.dispose();
+            this.subscription = null;
+          }
+        };
+
+        WidgetBase.prototype.unbind = function unbind() {
+          this.unsubscribe();
+        };
+
         WidgetBase.prototype.propertyChanged = function propertyChanged(property, newValue, oldValue) {
+          var _this2 = this;
+
           if (this.widget) {
             var modelValue = void 0;
             var prop = this.util.getControlPropertyName(this, property);
+            this.unsubscribe();
+            if (this.arrayObserver) {
+              this.arrayObserver.forEach(function (arrayProp) {
+                if (_this2[arrayProp] instanceof Array) {
+                  _this2.subscription = _this2.bindingInstance.collectionObserver(_this2[arrayProp]).subscribe(function (e) {
+                    _this2.update(e);
+                  });
+                }
+              });
+            }
             if (prop) {
               if (prop === 'widget') {
                 return;
@@ -181,6 +204,27 @@ System.register(['./events', '../common/util', '../common/decorators'], function
               }
             }
           }
+        };
+
+        WidgetBase.prototype.update = function update(e) {
+          var _this3 = this;
+
+          var modelValue = void 0;
+          var newVal = void 0;
+          this.arrayObserver.forEach(function (arrayProp) {
+            if (_this3[arrayProp] instanceof Array) {
+              var prop = _this3.util.getControlPropertyName(_this3, arrayProp);
+              modelValue = _this3.widget.model[prop];
+              if (typeof modelValue === 'function') {
+                modelValue = modelValue();
+                newVal = modelValue;
+                newVal = _this3.addTwoways(prop);
+                _this3.widget.option(prop, newVal);
+              } else {
+                _this3.widget.option(prop, modelValue);
+              }
+            }
+          });
         };
 
         WidgetBase.prototype.detached = function detached() {

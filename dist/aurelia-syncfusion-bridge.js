@@ -2,7 +2,7 @@ import {customAttribute,bindable,customElement,children,TemplatingEngine,inlineV
 import {inject,Container} from 'aurelia-dependency-injection';
 import {metadata} from 'aurelia-metadata';
 import {TaskQueue} from 'aurelia-task-queue';
-import {bindingMode} from 'aurelia-binding';
+import {bindingMode,BindingEngine} from 'aurelia-binding';
 
 /**
 * Plugin configuration builder
@@ -585,14 +585,22 @@ export const constants = {
   aureliaTemplateString: '<template><slot></slot></template>'
 };
 
-export function generateBindables(controlName, inputs, twoWayProperties, abbrevProperties) {
+export function generateBindables(controlName, inputs, twoWayProperties, abbrevProperties, observerCollection) {
   return function(target, key, descriptor) {
     let behaviorResource = metadata.getOrCreateOwn(metadata.resource, HtmlBehaviorResource, target);
     let container = (Container.instance || new Container());
     let util = container.get(Util);
+    let bindingInstance = container.get(BindingEngine);
     inputs.push('options');
     inputs.push('widget');
     let len = inputs.length;
+    if (observerCollection) {
+      target.prototype.arrayObserver = [];
+      observerCollection.forEach((element) => {
+        target.prototype.arrayObserver.push(util.getBindablePropertyName(element));
+      });
+      target.prototype.bindingInstance = bindingInstance;
+    }
     target.prototype.controlName = controlName;
     target.prototype.twoWays = twoWayProperties ? twoWayProperties : [];
     target.prototype.abbrevProperties = abbrevProperties ? abbrevProperties : [];
@@ -939,6 +947,18 @@ export class WidgetBase {
     this.util = new Util();
     this.createWidget({ element: this.element });
   }
+
+  unsubscribe() {
+    if (this.subscription) {
+      this.subscription.dispose();
+      this.subscription = null;
+    }
+  }
+
+  unbind() {
+    this.unsubscribe();
+  }
+
 /**
  * To change widget model value
  * @param property The viewModel property name
@@ -949,6 +969,16 @@ export class WidgetBase {
     if (this.widget) {
       let modelValue;
       let prop = this.util.getControlPropertyName(this, property);
+      this.unsubscribe();
+      if (this.arrayObserver) {
+        this.arrayObserver.forEach((arrayProp) => {
+          if (this[arrayProp] instanceof Array) {
+            this.subscription = this.bindingInstance.collectionObserver(this[arrayProp]).subscribe((e) => {
+              this.update(e);
+            });
+          }
+        });
+      }
       if (prop) {
         if (prop === 'widget') {
           return;
@@ -970,6 +1000,26 @@ export class WidgetBase {
       }
     }
   }
+
+  update(e) {
+    let modelValue;
+    let newVal;
+    this.arrayObserver.forEach((arrayProp) => {
+      if (this[arrayProp] instanceof Array) {
+        let prop = this.util.getControlPropertyName(this, arrayProp);
+        modelValue = this.widget.model[prop];
+        if (typeof modelValue === 'function') {
+          modelValue = modelValue();
+          newVal = modelValue;
+          newVal = this.addTwoways(prop);
+          this.widget.option(prop, newVal);
+        } else {
+          this.widget.option(prop, modelValue);
+        }
+      }
+    });
+  }
+
   detached() {
     if (this.templateProcessor) {
       this.templateProcessor.clearTempalte();
@@ -1087,6 +1137,7 @@ import 'syncfusion-javascript/Scripts/ej/web/ej.dropdownlist.min';
 export class ejDropDownList extends WidgetBase {
   constructor(element) {
     super();
+    this.isEditor = true;
     this.element = element;
   }
 }
@@ -1139,7 +1190,7 @@ import 'syncfusion-javascript/Scripts/ej/web/ej.grid.min';
 
 @customElement(`${constants.elementPrefix}grid`)
 @inlineView(`${constants.aureliaTemplateString}`)
-@generateBindables('ejGrid', ['allowCellMerging', 'allowGrouping', 'allowKeyboardNavigation', 'allowFiltering', 'allowSorting', 'allowMultiSorting', 'allowPaging', 'allowReordering', 'allowResizeToFit', 'allowResizing', 'allowRowDragAndDrop', 'allowScrolling', 'allowSearching', 'allowSelection', 'allowTextWrap', 'allowMultipleExporting', 'commonWidth', 'gridLines', 'childGrid', 'columnLayout', 'columns', 'contextMenuSettings', 'cssClass', 'dataSource', 'detailsTemplate', 'editSettings', 'enableAltRow', 'enableAutoSaveOnSelectionChange', 'enableHeaderHover', 'enablePersistence', 'enableResponsiveRow', 'enableRowHover', 'enableRTL', 'enableTouch', 'enableToolbarItems', 'exportToExcelAction', 'exportToPdfAction', 'exportToWordAction', 'filterSettings', 'groupSettings', 'isResponsive', 'keySettings', 'locale', 'minWidth', 'pageSettings', 'query', 'resizeSettings', 'rowTemplate', 'rowDropSettings', 'searchSettings', 'selectedRecords', 'selectedRowIndex', 'selectedRowIndices', 'selectionSettings', 'selectionType', 'scrollSettings', 'showColumnChooser', 'showStackedHeader', 'showSummary', 'sortSettings', 'stackedHeaderRows', 'summaryRows', 'textWrapSettings', 'toolbarSettings'], ['dataSource', 'selectedRowIndices'], {'enableRTL': 'enableRtl'})
+@generateBindables('ejGrid', ['allowCellMerging', 'allowGrouping', 'allowKeyboardNavigation', 'allowFiltering', 'allowSorting', 'allowMultiSorting', 'allowPaging', 'allowReordering', 'allowResizeToFit', 'allowResizing', 'allowRowDragAndDrop', 'allowScrolling', 'allowSearching', 'allowSelection', 'allowTextWrap', 'allowMultipleExporting', 'commonWidth', 'gridLines', 'childGrid', 'columnLayout', 'columns', 'contextMenuSettings', 'cssClass', 'dataSource', 'detailsTemplate', 'editSettings', 'enableAltRow', 'enableAutoSaveOnSelectionChange', 'enableHeaderHover', 'enablePersistence', 'enableResponsiveRow', 'enableRowHover', 'enableRTL', 'enableTouch', 'enableToolbarItems', 'exportToExcelAction', 'exportToPdfAction', 'exportToWordAction', 'filterSettings', 'groupSettings', 'isResponsive', 'keySettings', 'locale', 'minWidth', 'pageSettings', 'query', 'resizeSettings', 'rowTemplate', 'rowDropSettings', 'searchSettings', 'selectedRecords', 'selectedRowIndex', 'selectedRowIndices', 'selectionSettings', 'selectionType', 'scrollSettings', 'showColumnChooser', 'showStackedHeader', 'showSummary', 'sortSettings', 'stackedHeaderRows', 'summaryRows', 'textWrapSettings', 'toolbarSettings'], ['dataSource', 'selectedRowIndices'], {'enableRTL': 'enableRtl'}, ['dataSource'])
 @inject(Element, TemplatingEngine)
 export class ejGrid extends WidgetBase {
   @children(`${constants.elementPrefix}column`) columns = [];
@@ -1916,7 +1967,7 @@ import 'syncfusion-javascript/Scripts/ej/web/ej.treegrid.min';
 
 @customElement(`${constants.elementPrefix}tree-grid`)
 @inlineView(`${constants.aureliaTemplateString}`)
-@generateBindables('ejTreeGrid', ['allowColumnResize', 'allowColumnReordering', 'allowDragAndDrop', 'allowFiltering', 'allowKeyboardNavigation', 'allowMultiSorting', 'allowSelection', 'allowSorting', 'allowPaging', 'allowTextWrap', 'altRowTemplateID', 'expandStateMapping', 'childMapping', 'columns', 'columnDialogFields', 'contextMenuSettings', 'cssClass', 'dataSource', 'headerTextOverflow', 'dragTooltip', 'editSettings', 'enableAltRow', 'enableCollapseAll', 'enableResize', 'enableVirtualization', 'columnResizeSettings', 'commonWidth', 'filterSettings', 'locale', 'parseRowTemplate', 'idMapping', 'isResponsive', 'parentIdMapping', 'pageSettings', 'cellTooltipTemplate', 'query', 'rowHeight', 'rowTemplateID', 'selectedRowIndex', 'selectedCellIndexes', 'selectionSettings', 'showColumnOptions', 'showColumnChooser', 'showDetailsRow', 'showDetailsRowInfoColumn', 'detailsTemplate', 'detailsRowHeight', 'showSummaryRow', 'showTotalSummary', 'summaryRows', 'showGridCellTooltip', 'showGridExpandCellTooltip', 'sizeSettings', 'sortSettings', 'toolbarSettings', 'treeColumnIndex'], ['dataSource', 'selectedRowIndex', 'selectedCellIndexes', 'pageSettings.currentPage'], {'altRowTemplateID': 'altRowTemplateId', 'rowTemplateID': 'rowTemplateId'})
+@generateBindables('ejTreeGrid', ['allowColumnResize', 'allowColumnReordering', 'allowDragAndDrop', 'allowFiltering', 'allowKeyboardNavigation', 'allowMultiSorting', 'allowSelection', 'allowSorting', 'allowPaging', 'allowTextWrap', 'altRowTemplateID', 'expandStateMapping', 'childMapping', 'columns', 'columnDialogFields', 'contextMenuSettings', 'cssClass', 'dataSource', 'headerTextOverflow', 'dragTooltip', 'editSettings', 'enableAltRow', 'enableCollapseAll', 'enableResize', 'enableVirtualization', 'columnResizeSettings', 'commonWidth', 'filterSettings', 'locale', 'parseRowTemplate', 'idMapping', 'isResponsive', 'parentIdMapping', 'pageSettings', 'cellTooltipTemplate', 'query', 'rowHeight', 'rowTemplateID', 'selectedRowIndex', 'selectedCellIndexes', 'selectionSettings', 'showColumnOptions', 'showColumnChooser', 'showDetailsRow', 'showDetailsRowInfoColumn', 'detailsTemplate', 'detailsRowHeight', 'showSummaryRow', 'showTotalSummary', 'summaryRows', 'showGridCellTooltip', 'showGridExpandCellTooltip', 'sizeSettings', 'sortSettings', 'toolbarSettings', 'treeColumnIndex'], ['dataSource', 'selectedRowIndex', 'selectedCellIndexes', 'pageSettings.currentPage'], {'altRowTemplateID': 'altRowTemplateId', 'rowTemplateID': 'rowTemplateId'}, ['dataSource'])
 @inject(Element, TemplatingEngine)
 export class ejTreeGrid extends WidgetBase {
   @children(`${constants.elementPrefix}tree-grid-column`) columns = [];

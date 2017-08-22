@@ -795,14 +795,22 @@ var constants = exports.constants = {
   aureliaTemplateString: '<template><slot></slot></template>'
 };
 
-function generateBindables(controlName, inputs, twoWayProperties, abbrevProperties) {
+function generateBindables(controlName, inputs, twoWayProperties, abbrevProperties, observerCollection) {
   return function (target, key, descriptor) {
     var behaviorResource = _aureliaMetadata.metadata.getOrCreateOwn(_aureliaMetadata.metadata.resource, _aureliaTemplating.HtmlBehaviorResource, target);
     var container = _aureliaDependencyInjection.Container.instance || new _aureliaDependencyInjection.Container();
     var util = container.get(Util);
+    var bindingInstance = container.get(_aureliaBinding.BindingEngine);
     inputs.push('options');
     inputs.push('widget');
     var len = inputs.length;
+    if (observerCollection) {
+      target.prototype.arrayObserver = [];
+      observerCollection.forEach(function (element) {
+        target.prototype.arrayObserver.push(util.getBindablePropertyName(element));
+      });
+      target.prototype.bindingInstance = bindingInstance;
+    }
     target.prototype.controlName = controlName;
     target.prototype.twoWays = twoWayProperties ? twoWayProperties : [];
     target.prototype.abbrevProperties = abbrevProperties ? abbrevProperties : [];
@@ -1191,10 +1199,33 @@ var WidgetBase = exports.WidgetBase = (_dec46 = delayed(), (_class21 = function 
     this.createWidget({ element: this.element });
   };
 
+  WidgetBase.prototype.unsubscribe = function unsubscribe() {
+    if (this.subscription) {
+      this.subscription.dispose();
+      this.subscription = null;
+    }
+  };
+
+  WidgetBase.prototype.unbind = function unbind() {
+    this.unsubscribe();
+  };
+
   WidgetBase.prototype.propertyChanged = function propertyChanged(property, newValue, oldValue) {
+    var _this12 = this;
+
     if (this.widget) {
       var modelValue = void 0;
       var prop = this.util.getControlPropertyName(this, property);
+      this.unsubscribe();
+      if (this.arrayObserver) {
+        this.arrayObserver.forEach(function (arrayProp) {
+          if (_this12[arrayProp] instanceof Array) {
+            _this12.subscription = _this12.bindingInstance.collectionObserver(_this12[arrayProp]).subscribe(function (e) {
+              _this12.update(e);
+            });
+          }
+        });
+      }
       if (prop) {
         if (prop === 'widget') {
           return;
@@ -1217,6 +1248,27 @@ var WidgetBase = exports.WidgetBase = (_dec46 = delayed(), (_class21 = function 
     }
   };
 
+  WidgetBase.prototype.update = function update(e) {
+    var _this13 = this;
+
+    var modelValue = void 0;
+    var newVal = void 0;
+    this.arrayObserver.forEach(function (arrayProp) {
+      if (_this13[arrayProp] instanceof Array) {
+        var prop = _this13.util.getControlPropertyName(_this13, arrayProp);
+        modelValue = _this13.widget.model[prop];
+        if (typeof modelValue === 'function') {
+          modelValue = modelValue();
+          newVal = modelValue;
+          newVal = _this13.addTwoways(prop);
+          _this13.widget.option(prop, newVal);
+        } else {
+          _this13.widget.option(prop, modelValue);
+        }
+      }
+    });
+  };
+
   WidgetBase.prototype.detached = function detached() {
     if (this.templateProcessor) {
       this.templateProcessor.clearTempalte();
@@ -1234,11 +1286,11 @@ var ejCurrencyTextbox = exports.ejCurrencyTextbox = (_dec47 = (0, _aureliaTempla
   function ejCurrencyTextbox(element) {
     _classCallCheck(this, ejCurrencyTextbox);
 
-    var _this12 = _possibleConstructorReturn(this, _WidgetBase10.call(this));
+    var _this14 = _possibleConstructorReturn(this, _WidgetBase10.call(this));
 
-    _this12.isEditor = true;
-    _this12.element = element;
-    return _this12;
+    _this14.isEditor = true;
+    _this14.element = element;
+    return _this14;
   }
 
   return ejCurrencyTextbox;
@@ -1249,11 +1301,11 @@ var ejDatePicker = exports.ejDatePicker = (_dec50 = (0, _aureliaTemplating.custo
   function ejDatePicker(element) {
     _classCallCheck(this, ejDatePicker);
 
-    var _this13 = _possibleConstructorReturn(this, _WidgetBase11.call(this));
+    var _this15 = _possibleConstructorReturn(this, _WidgetBase11.call(this));
 
-    _this13.isEditor = true;
-    _this13.element = element;
-    return _this13;
+    _this15.isEditor = true;
+    _this15.element = element;
+    return _this15;
   }
 
   return ejDatePicker;
@@ -1264,11 +1316,11 @@ var ejDateRangePicker = exports.ejDateRangePicker = (_dec53 = (0, _aureliaTempla
   function ejDateRangePicker(element) {
     _classCallCheck(this, ejDateRangePicker);
 
-    var _this14 = _possibleConstructorReturn(this, _WidgetBase12.call(this));
+    var _this16 = _possibleConstructorReturn(this, _WidgetBase12.call(this));
 
-    _this14.isEditor = true;
-    _this14.element = element;
-    return _this14;
+    _this16.isEditor = true;
+    _this16.element = element;
+    return _this16;
   }
 
   return ejDateRangePicker;
@@ -1279,11 +1331,11 @@ var ejDateTimePicker = exports.ejDateTimePicker = (_dec56 = (0, _aureliaTemplati
   function ejDateTimePicker(element) {
     _classCallCheck(this, ejDateTimePicker);
 
-    var _this15 = _possibleConstructorReturn(this, _WidgetBase13.call(this));
+    var _this17 = _possibleConstructorReturn(this, _WidgetBase13.call(this));
 
-    _this15.isEditor = true;
-    _this15.element = element;
-    return _this15;
+    _this17.isEditor = true;
+    _this17.element = element;
+    return _this17;
   }
 
   return ejDateTimePicker;
@@ -1294,10 +1346,10 @@ var ejDiagram = exports.ejDiagram = (_dec59 = (0, _aureliaTemplating.customEleme
   function ejDiagram(element) {
     _classCallCheck(this, ejDiagram);
 
-    var _this16 = _possibleConstructorReturn(this, _WidgetBase14.call(this));
+    var _this18 = _possibleConstructorReturn(this, _WidgetBase14.call(this));
 
-    _this16.element = element;
-    return _this16;
+    _this18.element = element;
+    return _this18;
   }
 
   return ejDiagram;
@@ -1308,10 +1360,10 @@ var ejDialog = exports.ejDialog = (_dec63 = (0, _aureliaTemplating.customElement
   function ejDialog(element) {
     _classCallCheck(this, ejDialog);
 
-    var _this17 = _possibleConstructorReturn(this, _WidgetBase15.call(this));
+    var _this19 = _possibleConstructorReturn(this, _WidgetBase15.call(this));
 
-    _this17.element = element;
-    return _this17;
+    _this19.element = element;
+    return _this19;
   }
 
   return ejDialog;
@@ -1322,10 +1374,10 @@ var ejDigitalGauge = exports.ejDigitalGauge = (_dec67 = (0, _aureliaTemplating.c
   function ejDigitalGauge(element) {
     _classCallCheck(this, ejDigitalGauge);
 
-    var _this18 = _possibleConstructorReturn(this, _WidgetBase16.call(this));
+    var _this20 = _possibleConstructorReturn(this, _WidgetBase16.call(this));
 
-    _this18.element = element;
-    return _this18;
+    _this20.element = element;
+    return _this20;
   }
 
   return ejDigitalGauge;
@@ -1336,10 +1388,11 @@ var ejDropDownList = exports.ejDropDownList = (_dec71 = (0, _aureliaTemplating.c
   function ejDropDownList(element) {
     _classCallCheck(this, ejDropDownList);
 
-    var _this19 = _possibleConstructorReturn(this, _WidgetBase17.call(this));
+    var _this21 = _possibleConstructorReturn(this, _WidgetBase17.call(this));
 
-    _this19.element = element;
-    return _this19;
+    _this21.isEditor = true;
+    _this21.element = element;
+    return _this21;
   }
 
   return ejDropDownList;
@@ -1350,10 +1403,10 @@ var ejFileExplorer = exports.ejFileExplorer = (_dec74 = (0, _aureliaTemplating.c
   function ejFileExplorer(element) {
     _classCallCheck(this, ejFileExplorer);
 
-    var _this20 = _possibleConstructorReturn(this, _WidgetBase18.call(this));
+    var _this22 = _possibleConstructorReturn(this, _WidgetBase18.call(this));
 
-    _this20.element = element;
-    return _this20;
+    _this22.element = element;
+    return _this22;
   }
 
   return ejFileExplorer;
@@ -1364,10 +1417,10 @@ var ejGantt = exports.ejGantt = (_dec78 = (0, _aureliaTemplating.customElement)(
   function ejGantt(element) {
     _classCallCheck(this, ejGantt);
 
-    var _this21 = _possibleConstructorReturn(this, _WidgetBase19.call(this));
+    var _this23 = _possibleConstructorReturn(this, _WidgetBase19.call(this));
 
-    _this21.element = element;
-    return _this21;
+    _this23.element = element;
+    return _this23;
   }
 
   return ejGantt;
@@ -1393,22 +1446,22 @@ var Column = exports.Column = (_dec82 = (0, _aureliaTemplating.inlineView)('' + 
     return [];
   }
 })), _class33)) || _class32) || _class32) || _class32);
-var ejGrid = exports.ejGrid = (_dec86 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'grid'), _dec87 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec88 = generateBindables('ejGrid', ['allowCellMerging', 'allowGrouping', 'allowKeyboardNavigation', 'allowFiltering', 'allowSorting', 'allowMultiSorting', 'allowPaging', 'allowReordering', 'allowResizeToFit', 'allowResizing', 'allowRowDragAndDrop', 'allowScrolling', 'allowSearching', 'allowSelection', 'allowTextWrap', 'allowMultipleExporting', 'commonWidth', 'gridLines', 'childGrid', 'columnLayout', 'columns', 'contextMenuSettings', 'cssClass', 'dataSource', 'detailsTemplate', 'editSettings', 'enableAltRow', 'enableAutoSaveOnSelectionChange', 'enableHeaderHover', 'enablePersistence', 'enableResponsiveRow', 'enableRowHover', 'enableRTL', 'enableTouch', 'enableToolbarItems', 'exportToExcelAction', 'exportToPdfAction', 'exportToWordAction', 'filterSettings', 'groupSettings', 'isResponsive', 'keySettings', 'locale', 'minWidth', 'pageSettings', 'query', 'resizeSettings', 'rowTemplate', 'rowDropSettings', 'searchSettings', 'selectedRecords', 'selectedRowIndex', 'selectedRowIndices', 'selectionSettings', 'selectionType', 'scrollSettings', 'showColumnChooser', 'showStackedHeader', 'showSummary', 'sortSettings', 'stackedHeaderRows', 'summaryRows', 'textWrapSettings', 'toolbarSettings'], ['dataSource', 'selectedRowIndices'], { 'enableRTL': 'enableRtl' }), _dec89 = (0, _aureliaDependencyInjection.inject)(Element, _aureliaTemplating.TemplatingEngine), _dec90 = (0, _aureliaTemplating.children)(constants.elementPrefix + 'column'), _dec86(_class35 = _dec87(_class35 = _dec88(_class35 = _dec89(_class35 = (_class36 = function (_WidgetBase20) {
+var ejGrid = exports.ejGrid = (_dec86 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'grid'), _dec87 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec88 = generateBindables('ejGrid', ['allowCellMerging', 'allowGrouping', 'allowKeyboardNavigation', 'allowFiltering', 'allowSorting', 'allowMultiSorting', 'allowPaging', 'allowReordering', 'allowResizeToFit', 'allowResizing', 'allowRowDragAndDrop', 'allowScrolling', 'allowSearching', 'allowSelection', 'allowTextWrap', 'allowMultipleExporting', 'commonWidth', 'gridLines', 'childGrid', 'columnLayout', 'columns', 'contextMenuSettings', 'cssClass', 'dataSource', 'detailsTemplate', 'editSettings', 'enableAltRow', 'enableAutoSaveOnSelectionChange', 'enableHeaderHover', 'enablePersistence', 'enableResponsiveRow', 'enableRowHover', 'enableRTL', 'enableTouch', 'enableToolbarItems', 'exportToExcelAction', 'exportToPdfAction', 'exportToWordAction', 'filterSettings', 'groupSettings', 'isResponsive', 'keySettings', 'locale', 'minWidth', 'pageSettings', 'query', 'resizeSettings', 'rowTemplate', 'rowDropSettings', 'searchSettings', 'selectedRecords', 'selectedRowIndex', 'selectedRowIndices', 'selectionSettings', 'selectionType', 'scrollSettings', 'showColumnChooser', 'showStackedHeader', 'showSummary', 'sortSettings', 'stackedHeaderRows', 'summaryRows', 'textWrapSettings', 'toolbarSettings'], ['dataSource', 'selectedRowIndices'], { 'enableRTL': 'enableRtl' }, ['dataSource']), _dec89 = (0, _aureliaDependencyInjection.inject)(Element, _aureliaTemplating.TemplatingEngine), _dec90 = (0, _aureliaTemplating.children)(constants.elementPrefix + 'column'), _dec86(_class35 = _dec87(_class35 = _dec88(_class35 = _dec89(_class35 = (_class36 = function (_WidgetBase20) {
   _inherits(ejGrid, _WidgetBase20);
 
   function ejGrid(element, templateEngine) {
     _classCallCheck(this, ejGrid);
 
-    var _this22 = _possibleConstructorReturn(this, _WidgetBase20.call(this));
+    var _this24 = _possibleConstructorReturn(this, _WidgetBase20.call(this));
 
-    _initDefineProp(_this22, 'columns', _descriptor5, _this22);
+    _initDefineProp(_this24, 'columns', _descriptor5, _this24);
 
-    _this22.element = element;
-    _this22.hasChildProperty = true;
-    _this22.childPropertyName = 'columns';
-    _this22.templateProcessor = new TemplateProcessor(_this22, templateEngine);
-    _this22.templateProcessor.initTemplate();
-    return _this22;
+    _this24.element = element;
+    _this24.hasChildProperty = true;
+    _this24.childPropertyName = 'columns';
+    _this24.templateProcessor = new TemplateProcessor(_this24, templateEngine);
+    _this24.templateProcessor.initTemplate();
+    return _this24;
   }
 
   return ejGrid;
@@ -1424,10 +1477,10 @@ var ejGroupButton = exports.ejGroupButton = (_dec91 = (0, _aureliaTemplating.cus
   function ejGroupButton(element) {
     _classCallCheck(this, ejGroupButton);
 
-    var _this23 = _possibleConstructorReturn(this, _WidgetBase21.call(this));
+    var _this25 = _possibleConstructorReturn(this, _WidgetBase21.call(this));
 
-    _this23.element = element;
-    return _this23;
+    _this25.element = element;
+    return _this25;
   }
 
   return ejGroupButton;
@@ -1438,10 +1491,10 @@ var ejHeatMap = exports.ejHeatMap = (_dec94 = (0, _aureliaTemplating.customEleme
   function ejHeatMap(element) {
     _classCallCheck(this, ejHeatMap);
 
-    var _this24 = _possibleConstructorReturn(this, _WidgetBase22.call(this));
+    var _this26 = _possibleConstructorReturn(this, _WidgetBase22.call(this));
 
-    _this24.element = element;
-    return _this24;
+    _this26.element = element;
+    return _this26;
   }
 
   return ejHeatMap;
@@ -1452,10 +1505,10 @@ var ejHeatMapLegend = exports.ejHeatMapLegend = (_dec98 = (0, _aureliaTemplating
   function ejHeatMapLegend(element) {
     _classCallCheck(this, ejHeatMapLegend);
 
-    var _this25 = _possibleConstructorReturn(this, _WidgetBase23.call(this));
+    var _this27 = _possibleConstructorReturn(this, _WidgetBase23.call(this));
 
-    _this25.element = element;
-    return _this25;
+    _this27.element = element;
+    return _this27;
   }
 
   return ejHeatMapLegend;
@@ -1466,14 +1519,14 @@ var ejKanban = exports.ejKanban = (_dec102 = (0, _aureliaTemplating.customElemen
   function ejKanban(element) {
     _classCallCheck(this, ejKanban);
 
-    var _this26 = _possibleConstructorReturn(this, _WidgetBase24.call(this));
+    var _this28 = _possibleConstructorReturn(this, _WidgetBase24.call(this));
 
-    _initDefineProp(_this26, 'columns', _descriptor6, _this26);
+    _initDefineProp(_this28, 'columns', _descriptor6, _this28);
 
-    _this26.element = element;
-    _this26.hasChildProperty = true;
-    _this26.childPropertyName = 'columns';
-    return _this26;
+    _this28.element = element;
+    _this28.hasChildProperty = true;
+    _this28.childPropertyName = 'columns';
+    return _this28;
   }
 
   return ejKanban;
@@ -1492,10 +1545,10 @@ var ejLinearGauge = exports.ejLinearGauge = (_dec110 = (0, _aureliaTemplating.cu
   function ejLinearGauge(element) {
     _classCallCheck(this, ejLinearGauge);
 
-    var _this27 = _possibleConstructorReturn(this, _WidgetBase25.call(this));
+    var _this29 = _possibleConstructorReturn(this, _WidgetBase25.call(this));
 
-    _this27.element = element;
-    return _this27;
+    _this29.element = element;
+    return _this29;
   }
 
   return ejLinearGauge;
@@ -1506,10 +1559,10 @@ var ejListBox = exports.ejListBox = (_dec114 = (0, _aureliaTemplating.customAttr
   function ejListBox(element) {
     _classCallCheck(this, ejListBox);
 
-    var _this28 = _possibleConstructorReturn(this, _WidgetBase26.call(this));
+    var _this30 = _possibleConstructorReturn(this, _WidgetBase26.call(this));
 
-    _this28.element = element;
-    return _this28;
+    _this30.element = element;
+    return _this30;
   }
 
   return ejListBox;
@@ -1520,10 +1573,10 @@ var ejListView = exports.ejListView = (_dec117 = (0, _aureliaTemplating.customEl
   function ejListView(element) {
     _classCallCheck(this, ejListView);
 
-    var _this29 = _possibleConstructorReturn(this, _WidgetBase27.call(this));
+    var _this31 = _possibleConstructorReturn(this, _WidgetBase27.call(this));
 
-    _this29.element = element;
-    return _this29;
+    _this31.element = element;
+    return _this31;
   }
 
   return ejListView;
@@ -1537,14 +1590,14 @@ var ejMap = exports.ejMap = (_dec124 = (0, _aureliaTemplating.customElement)(con
   function ejMap(element) {
     _classCallCheck(this, ejMap);
 
-    var _this30 = _possibleConstructorReturn(this, _WidgetBase28.call(this));
+    var _this32 = _possibleConstructorReturn(this, _WidgetBase28.call(this));
 
-    _initDefineProp(_this30, 'layers', _descriptor7, _this30);
+    _initDefineProp(_this32, 'layers', _descriptor7, _this32);
 
-    _this30.element = element;
-    _this30.hasChildProperty = true;
-    _this30.childPropertyName = 'layers';
-    return _this30;
+    _this32.element = element;
+    _this32.hasChildProperty = true;
+    _this32.childPropertyName = 'layers';
+    return _this32;
   }
 
   return ejMap;
@@ -1560,11 +1613,11 @@ var ejMaskEdit = exports.ejMaskEdit = (_dec129 = (0, _aureliaTemplating.customAt
   function ejMaskEdit(element) {
     _classCallCheck(this, ejMaskEdit);
 
-    var _this31 = _possibleConstructorReturn(this, _WidgetBase29.call(this));
+    var _this33 = _possibleConstructorReturn(this, _WidgetBase29.call(this));
 
-    _this31.isEditor = true;
-    _this31.element = element;
-    return _this31;
+    _this33.isEditor = true;
+    _this33.element = element;
+    return _this33;
   }
 
   return ejMaskEdit;
@@ -1575,10 +1628,10 @@ var ejMenu = exports.ejMenu = (_dec132 = (0, _aureliaTemplating.customAttribute)
   function ejMenu(element) {
     _classCallCheck(this, ejMenu);
 
-    var _this32 = _possibleConstructorReturn(this, _WidgetBase30.call(this));
+    var _this34 = _possibleConstructorReturn(this, _WidgetBase30.call(this));
 
-    _this32.element = element;
-    return _this32;
+    _this34.element = element;
+    return _this34;
   }
 
   return ejMenu;
@@ -1589,10 +1642,10 @@ var ejNavigationDrawer = exports.ejNavigationDrawer = (_dec135 = (0, _aureliaTem
   function ejNavigationDrawer(element) {
     _classCallCheck(this, ejNavigationDrawer);
 
-    var _this33 = _possibleConstructorReturn(this, _WidgetBase31.call(this));
+    var _this35 = _possibleConstructorReturn(this, _WidgetBase31.call(this));
 
-    _this33.element = element;
-    return _this33;
+    _this35.element = element;
+    return _this35;
   }
 
   return ejNavigationDrawer;
@@ -1603,11 +1656,11 @@ var ejNumericTextbox = exports.ejNumericTextbox = (_dec139 = (0, _aureliaTemplat
   function ejNumericTextbox(element) {
     _classCallCheck(this, ejNumericTextbox);
 
-    var _this34 = _possibleConstructorReturn(this, _WidgetBase32.call(this));
+    var _this36 = _possibleConstructorReturn(this, _WidgetBase32.call(this));
 
-    _this34.isEditor = true;
-    _this34.element = element;
-    return _this34;
+    _this36.isEditor = true;
+    _this36.element = element;
+    return _this36;
   }
 
   return ejNumericTextbox;
@@ -1618,10 +1671,10 @@ var ejOverview = exports.ejOverview = (_dec142 = (0, _aureliaTemplating.customEl
   function ejOverview(element) {
     _classCallCheck(this, ejOverview);
 
-    var _this35 = _possibleConstructorReturn(this, _WidgetBase33.call(this));
+    var _this37 = _possibleConstructorReturn(this, _WidgetBase33.call(this));
 
-    _this35.element = element;
-    return _this35;
+    _this37.element = element;
+    return _this37;
   }
 
   return ejOverview;
@@ -1632,10 +1685,10 @@ var ejPager = exports.ejPager = (_dec146 = (0, _aureliaTemplating.customElement)
   function ejPager(element) {
     _classCallCheck(this, ejPager);
 
-    var _this36 = _possibleConstructorReturn(this, _WidgetBase34.call(this));
+    var _this38 = _possibleConstructorReturn(this, _WidgetBase34.call(this));
 
-    _this36.element = element;
-    return _this36;
+    _this38.element = element;
+    return _this38;
   }
 
   return ejPager;
@@ -1646,10 +1699,10 @@ var ejPdfViewer = exports.ejPdfViewer = (_dec150 = (0, _aureliaTemplating.custom
   function ejPdfViewer(element) {
     _classCallCheck(this, ejPdfViewer);
 
-    var _this37 = _possibleConstructorReturn(this, _WidgetBase35.call(this));
+    var _this39 = _possibleConstructorReturn(this, _WidgetBase35.call(this));
 
-    _this37.element = element;
-    return _this37;
+    _this39.element = element;
+    return _this39;
   }
 
   return ejPdfViewer;
@@ -1660,11 +1713,11 @@ var ejPercentageTextbox = exports.ejPercentageTextbox = (_dec154 = (0, _aureliaT
   function ejPercentageTextbox(element) {
     _classCallCheck(this, ejPercentageTextbox);
 
-    var _this38 = _possibleConstructorReturn(this, _WidgetBase36.call(this));
+    var _this40 = _possibleConstructorReturn(this, _WidgetBase36.call(this));
 
-    _this38.isEditor = true;
-    _this38.element = element;
-    return _this38;
+    _this40.isEditor = true;
+    _this40.element = element;
+    return _this40;
   }
 
   return ejPercentageTextbox;
@@ -1675,10 +1728,10 @@ var ejPivotChart = exports.ejPivotChart = (_dec157 = (0, _aureliaTemplating.cust
   function ejPivotChart(element) {
     _classCallCheck(this, ejPivotChart);
 
-    var _this39 = _possibleConstructorReturn(this, _WidgetBase37.call(this));
+    var _this41 = _possibleConstructorReturn(this, _WidgetBase37.call(this));
 
-    _this39.element = element;
-    return _this39;
+    _this41.element = element;
+    return _this41;
   }
 
   return ejPivotChart;
@@ -1689,10 +1742,10 @@ var ejPivotGauge = exports.ejPivotGauge = (_dec161 = (0, _aureliaTemplating.cust
   function ejPivotGauge(element) {
     _classCallCheck(this, ejPivotGauge);
 
-    var _this40 = _possibleConstructorReturn(this, _WidgetBase38.call(this));
+    var _this42 = _possibleConstructorReturn(this, _WidgetBase38.call(this));
 
-    _this40.element = element;
-    return _this40;
+    _this42.element = element;
+    return _this42;
   }
 
   return ejPivotGauge;
@@ -1703,10 +1756,10 @@ var ejPivotGrid = exports.ejPivotGrid = (_dec165 = (0, _aureliaTemplating.custom
   function ejPivotGrid(element) {
     _classCallCheck(this, ejPivotGrid);
 
-    var _this41 = _possibleConstructorReturn(this, _WidgetBase39.call(this));
+    var _this43 = _possibleConstructorReturn(this, _WidgetBase39.call(this));
 
-    _this41.element = element;
-    return _this41;
+    _this43.element = element;
+    return _this43;
   }
 
   return ejPivotGrid;
@@ -1717,10 +1770,10 @@ var ejPivotSchemaDesigner = exports.ejPivotSchemaDesigner = (_dec169 = (0, _aure
   function ejPivotSchemaDesigner(element) {
     _classCallCheck(this, ejPivotSchemaDesigner);
 
-    var _this42 = _possibleConstructorReturn(this, _WidgetBase40.call(this));
+    var _this44 = _possibleConstructorReturn(this, _WidgetBase40.call(this));
 
-    _this42.element = element;
-    return _this42;
+    _this44.element = element;
+    return _this44;
   }
 
   return ejPivotSchemaDesigner;
@@ -1731,10 +1784,10 @@ var ejPivotTreeMap = exports.ejPivotTreeMap = (_dec173 = (0, _aureliaTemplating.
   function ejPivotTreeMap(element) {
     _classCallCheck(this, ejPivotTreeMap);
 
-    var _this43 = _possibleConstructorReturn(this, _WidgetBase41.call(this));
+    var _this45 = _possibleConstructorReturn(this, _WidgetBase41.call(this));
 
-    _this43.element = element;
-    return _this43;
+    _this45.element = element;
+    return _this45;
   }
 
   return ejPivotTreeMap;
@@ -1745,10 +1798,10 @@ var ejProgressBar = exports.ejProgressBar = (_dec177 = (0, _aureliaTemplating.cu
   function ejProgressBar(element) {
     _classCallCheck(this, ejProgressBar);
 
-    var _this44 = _possibleConstructorReturn(this, _WidgetBase42.call(this));
+    var _this46 = _possibleConstructorReturn(this, _WidgetBase42.call(this));
 
-    _this44.element = element;
-    return _this44;
+    _this46.element = element;
+    return _this46;
   }
 
   return ejProgressBar;
@@ -1780,16 +1833,16 @@ var ejRadialMenu = exports.ejRadialMenu = (_dec184 = (0, _aureliaTemplating.cust
   function ejRadialMenu(element, templateEngine) {
     _classCallCheck(this, ejRadialMenu);
 
-    var _this45 = _possibleConstructorReturn(this, _WidgetBase43.call(this));
+    var _this47 = _possibleConstructorReturn(this, _WidgetBase43.call(this));
 
-    _initDefineProp(_this45, 'items', _descriptor9, _this45);
+    _initDefineProp(_this47, 'items', _descriptor9, _this47);
 
-    _this45.element = element;
-    _this45.hasChildProperty = true;
-    _this45.childPropertyName = 'items';
-    _this45.templateProcessor = new TemplateProcessor(_this45, templateEngine);
-    _this45.templateProcessor.initTemplate();
-    return _this45;
+    _this47.element = element;
+    _this47.hasChildProperty = true;
+    _this47.childPropertyName = 'items';
+    _this47.templateProcessor = new TemplateProcessor(_this47, templateEngine);
+    _this47.templateProcessor.initTemplate();
+    return _this47;
   }
 
   return ejRadialMenu;
@@ -1805,10 +1858,10 @@ var ejRadialSlider = exports.ejRadialSlider = (_dec189 = (0, _aureliaTemplating.
   function ejRadialSlider(element) {
     _classCallCheck(this, ejRadialSlider);
 
-    var _this46 = _possibleConstructorReturn(this, _WidgetBase44.call(this));
+    var _this48 = _possibleConstructorReturn(this, _WidgetBase44.call(this));
 
-    _this46.element = element;
-    return _this46;
+    _this48.element = element;
+    return _this48;
   }
 
   return ejRadialSlider;
@@ -1819,10 +1872,10 @@ var ejRadioButton = exports.ejRadioButton = (_dec193 = (0, _aureliaTemplating.cu
   function ejRadioButton(element) {
     _classCallCheck(this, ejRadioButton);
 
-    var _this47 = _possibleConstructorReturn(this, _WidgetBase45.call(this));
+    var _this49 = _possibleConstructorReturn(this, _WidgetBase45.call(this));
 
-    _this47.element = element;
-    return _this47;
+    _this49.element = element;
+    return _this49;
   }
 
   return ejRadioButton;
@@ -1833,14 +1886,14 @@ var ejRangeNavigator = exports.ejRangeNavigator = (_dec196 = (0, _aureliaTemplat
   function ejRangeNavigator(element) {
     _classCallCheck(this, ejRangeNavigator);
 
-    var _this48 = _possibleConstructorReturn(this, _WidgetBase46.call(this));
+    var _this50 = _possibleConstructorReturn(this, _WidgetBase46.call(this));
 
-    _initDefineProp(_this48, 'series', _descriptor10, _this48);
+    _initDefineProp(_this50, 'series', _descriptor10, _this50);
 
-    _this48.element = element;
-    _this48.hasChildProperty = true;
-    _this48.childPropertyName = 'series';
-    return _this48;
+    _this50.element = element;
+    _this50.hasChildProperty = true;
+    _this50.childPropertyName = 'series';
+    return _this50;
   }
 
   return ejRangeNavigator;
@@ -1859,10 +1912,10 @@ var ejRating = exports.ejRating = (_dec204 = (0, _aureliaTemplating.customAttrib
   function ejRating(element) {
     _classCallCheck(this, ejRating);
 
-    var _this49 = _possibleConstructorReturn(this, _WidgetBase47.call(this));
+    var _this51 = _possibleConstructorReturn(this, _WidgetBase47.call(this));
 
-    _this49.element = element;
-    return _this49;
+    _this51.element = element;
+    return _this51;
   }
 
   return ejRating;
@@ -1873,10 +1926,10 @@ var ejReportViewer = exports.ejReportViewer = (_dec207 = (0, _aureliaTemplating.
   function ejReportViewer(element) {
     _classCallCheck(this, ejReportViewer);
 
-    var _this50 = _possibleConstructorReturn(this, _WidgetBase48.call(this));
+    var _this52 = _possibleConstructorReturn(this, _WidgetBase48.call(this));
 
-    _this50.element = element;
-    return _this50;
+    _this52.element = element;
+    return _this52;
   }
 
   return ejReportViewer;
@@ -1887,10 +1940,10 @@ var ejRibbon = exports.ejRibbon = (_dec211 = (0, _aureliaTemplating.customElemen
   function ejRibbon(element) {
     _classCallCheck(this, ejRibbon);
 
-    var _this51 = _possibleConstructorReturn(this, _WidgetBase49.call(this));
+    var _this53 = _possibleConstructorReturn(this, _WidgetBase49.call(this));
 
-    _this51.element = element;
-    return _this51;
+    _this53.element = element;
+    return _this53;
   }
 
   return ejRibbon;
@@ -1901,10 +1954,10 @@ var ejRotator = exports.ejRotator = (_dec215 = (0, _aureliaTemplating.customAttr
   function ejRotator(element) {
     _classCallCheck(this, ejRotator);
 
-    var _this52 = _possibleConstructorReturn(this, _WidgetBase50.call(this));
+    var _this54 = _possibleConstructorReturn(this, _WidgetBase50.call(this));
 
-    _this52.element = element;
-    return _this52;
+    _this54.element = element;
+    return _this54;
   }
 
   return ejRotator;
@@ -1915,10 +1968,10 @@ var ejRte = exports.ejRte = (_dec218 = (0, _aureliaTemplating.customAttribute)(c
   function ejRte(element) {
     _classCallCheck(this, ejRte);
 
-    var _this53 = _possibleConstructorReturn(this, _WidgetBase51.call(this));
+    var _this55 = _possibleConstructorReturn(this, _WidgetBase51.call(this));
 
-    _this53.element = element;
-    return _this53;
+    _this55.element = element;
+    return _this55;
   }
 
   return ejRte;
@@ -1929,14 +1982,14 @@ var ejSchedule = exports.ejSchedule = (_dec221 = (0, _aureliaTemplating.customEl
   function ejSchedule(element) {
     _classCallCheck(this, ejSchedule);
 
-    var _this54 = _possibleConstructorReturn(this, _WidgetBase52.call(this));
+    var _this56 = _possibleConstructorReturn(this, _WidgetBase52.call(this));
 
-    _initDefineProp(_this54, 'resources', _descriptor11, _this54);
+    _initDefineProp(_this56, 'resources', _descriptor11, _this56);
 
-    _this54.element = element;
-    _this54.hasChildProperty = true;
-    _this54.childPropertyName = 'resources';
-    return _this54;
+    _this56.element = element;
+    _this56.hasChildProperty = true;
+    _this56.childPropertyName = 'resources';
+    return _this56;
   }
 
   return ejSchedule;
@@ -1955,10 +2008,10 @@ var ejScroller = exports.ejScroller = (_dec229 = (0, _aureliaTemplating.customAt
   function ejScroller(element) {
     _classCallCheck(this, ejScroller);
 
-    var _this55 = _possibleConstructorReturn(this, _WidgetBase53.call(this));
+    var _this57 = _possibleConstructorReturn(this, _WidgetBase53.call(this));
 
-    _this55.element = element;
-    return _this55;
+    _this57.element = element;
+    return _this57;
   }
 
   return ejScroller;
@@ -1969,10 +2022,10 @@ var ejSignature = exports.ejSignature = (_dec232 = (0, _aureliaTemplating.custom
   function ejSignature(element) {
     _classCallCheck(this, ejSignature);
 
-    var _this56 = _possibleConstructorReturn(this, _WidgetBase54.call(this));
+    var _this58 = _possibleConstructorReturn(this, _WidgetBase54.call(this));
 
-    _this56.element = element;
-    return _this56;
+    _this58.element = element;
+    return _this58;
   }
 
   return ejSignature;
@@ -1983,10 +2036,10 @@ var ejSlider = exports.ejSlider = (_dec236 = (0, _aureliaTemplating.customAttrib
   function ejSlider(element) {
     _classCallCheck(this, ejSlider);
 
-    var _this57 = _possibleConstructorReturn(this, _WidgetBase55.call(this));
+    var _this59 = _possibleConstructorReturn(this, _WidgetBase55.call(this));
 
-    _this57.element = element;
-    return _this57;
+    _this59.element = element;
+    return _this59;
   }
 
   return ejSlider;
@@ -1997,10 +2050,10 @@ var ejSparkline = exports.ejSparkline = (_dec239 = (0, _aureliaTemplating.custom
   function ejSparkline(element) {
     _classCallCheck(this, ejSparkline);
 
-    var _this58 = _possibleConstructorReturn(this, _WidgetBase56.call(this));
+    var _this60 = _possibleConstructorReturn(this, _WidgetBase56.call(this));
 
-    _this58.element = element;
-    return _this58;
+    _this60.element = element;
+    return _this60;
   }
 
   return ejSparkline;
@@ -2011,10 +2064,10 @@ var ejSpellCheck = exports.ejSpellCheck = (_dec243 = (0, _aureliaTemplating.cust
   function ejSpellCheck(element) {
     _classCallCheck(this, ejSpellCheck);
 
-    var _this59 = _possibleConstructorReturn(this, _WidgetBase57.call(this));
+    var _this61 = _possibleConstructorReturn(this, _WidgetBase57.call(this));
 
-    _this59.element = element;
-    return _this59;
+    _this61.element = element;
+    return _this61;
   }
 
   return ejSpellCheck;
@@ -2025,10 +2078,10 @@ var ejSplitButton = exports.ejSplitButton = (_dec247 = (0, _aureliaTemplating.cu
   function ejSplitButton(element) {
     _classCallCheck(this, ejSplitButton);
 
-    var _this60 = _possibleConstructorReturn(this, _WidgetBase58.call(this));
+    var _this62 = _possibleConstructorReturn(this, _WidgetBase58.call(this));
 
-    _this60.element = element;
-    return _this60;
+    _this62.element = element;
+    return _this62;
   }
 
   return ejSplitButton;
@@ -2039,10 +2092,10 @@ var ejSplitter = exports.ejSplitter = (_dec250 = (0, _aureliaTemplating.customEl
   function ejSplitter(element) {
     _classCallCheck(this, ejSplitter);
 
-    var _this61 = _possibleConstructorReturn(this, _WidgetBase59.call(this));
+    var _this63 = _possibleConstructorReturn(this, _WidgetBase59.call(this));
 
-    _this61.element = element;
-    return _this61;
+    _this63.element = element;
+    return _this63;
   }
 
   return ejSplitter;
@@ -2056,14 +2109,14 @@ var ejSpreadsheet = exports.ejSpreadsheet = (_dec257 = (0, _aureliaTemplating.cu
   function ejSpreadsheet(element) {
     _classCallCheck(this, ejSpreadsheet);
 
-    var _this62 = _possibleConstructorReturn(this, _WidgetBase60.call(this));
+    var _this64 = _possibleConstructorReturn(this, _WidgetBase60.call(this));
 
-    _initDefineProp(_this62, 'sheets', _descriptor12, _this62);
+    _initDefineProp(_this64, 'sheets', _descriptor12, _this64);
 
-    _this62.element = element;
-    _this62.hasChildProperty = true;
-    _this62.childPropertyName = 'sheets';
-    return _this62;
+    _this64.element = element;
+    _this64.hasChildProperty = true;
+    _this64.childPropertyName = 'sheets';
+    return _this64;
   }
 
   return ejSpreadsheet;
@@ -2079,14 +2132,14 @@ var ejSunburstChart = exports.ejSunburstChart = (_dec262 = (0, _aureliaTemplatin
   function ejSunburstChart(element) {
     _classCallCheck(this, ejSunburstChart);
 
-    var _this63 = _possibleConstructorReturn(this, _WidgetBase61.call(this));
+    var _this65 = _possibleConstructorReturn(this, _WidgetBase61.call(this));
 
-    _initDefineProp(_this63, 'levels', _descriptor13, _this63);
+    _initDefineProp(_this65, 'levels', _descriptor13, _this65);
 
-    _this63.element = element;
-    _this63.hasChildProperty = true;
-    _this63.childPropertyName = 'levels';
-    return _this63;
+    _this65.element = element;
+    _this65.hasChildProperty = true;
+    _this65.childPropertyName = 'levels';
+    return _this65;
   }
 
   return ejSunburstChart;
@@ -2105,10 +2158,10 @@ var ejSymbolPalette = exports.ejSymbolPalette = (_dec270 = (0, _aureliaTemplatin
   function ejSymbolPalette(element) {
     _classCallCheck(this, ejSymbolPalette);
 
-    var _this64 = _possibleConstructorReturn(this, _WidgetBase62.call(this));
+    var _this66 = _possibleConstructorReturn(this, _WidgetBase62.call(this));
 
-    _this64.element = element;
-    return _this64;
+    _this66.element = element;
+    return _this66;
   }
 
   return ejSymbolPalette;
@@ -2119,10 +2172,10 @@ var ejTab = exports.ejTab = (_dec274 = (0, _aureliaTemplating.customElement)(con
   function ejTab(element) {
     _classCallCheck(this, ejTab);
 
-    var _this65 = _possibleConstructorReturn(this, _WidgetBase63.call(this));
+    var _this67 = _possibleConstructorReturn(this, _WidgetBase63.call(this));
 
-    _this65.element = element;
-    return _this65;
+    _this67.element = element;
+    return _this67;
   }
 
   return ejTab;
@@ -2133,10 +2186,10 @@ var ejTagCloud = exports.ejTagCloud = (_dec278 = (0, _aureliaTemplating.customEl
   function ejTagCloud(element) {
     _classCallCheck(this, ejTagCloud);
 
-    var _this66 = _possibleConstructorReturn(this, _WidgetBase64.call(this));
+    var _this68 = _possibleConstructorReturn(this, _WidgetBase64.call(this));
 
-    _this66.element = element;
-    return _this66;
+    _this68.element = element;
+    return _this68;
   }
 
   return ejTagCloud;
@@ -2147,10 +2200,10 @@ var ejTile = exports.ejTile = (_dec282 = (0, _aureliaTemplating.customElement)(c
   function ejTile(element) {
     _classCallCheck(this, ejTile);
 
-    var _this67 = _possibleConstructorReturn(this, _WidgetBase65.call(this));
+    var _this69 = _possibleConstructorReturn(this, _WidgetBase65.call(this));
 
-    _this67.element = element;
-    return _this67;
+    _this69.element = element;
+    return _this69;
   }
 
   return ejTile;
@@ -2161,11 +2214,11 @@ var ejTimePicker = exports.ejTimePicker = (_dec286 = (0, _aureliaTemplating.cust
   function ejTimePicker(element) {
     _classCallCheck(this, ejTimePicker);
 
-    var _this68 = _possibleConstructorReturn(this, _WidgetBase66.call(this));
+    var _this70 = _possibleConstructorReturn(this, _WidgetBase66.call(this));
 
-    _this68.isEditor = true;
-    _this68.element = element;
-    return _this68;
+    _this70.isEditor = true;
+    _this70.element = element;
+    return _this70;
   }
 
   return ejTimePicker;
@@ -2176,10 +2229,10 @@ var ejToggleButton = exports.ejToggleButton = (_dec289 = (0, _aureliaTemplating.
   function ejToggleButton(element) {
     _classCallCheck(this, ejToggleButton);
 
-    var _this69 = _possibleConstructorReturn(this, _WidgetBase67.call(this));
+    var _this71 = _possibleConstructorReturn(this, _WidgetBase67.call(this));
 
-    _this69.element = element;
-    return _this69;
+    _this71.element = element;
+    return _this71;
   }
 
   return ejToggleButton;
@@ -2190,10 +2243,10 @@ var ejToolbar = exports.ejToolbar = (_dec292 = (0, _aureliaTemplating.customAttr
   function ejToolbar(element) {
     _classCallCheck(this, ejToolbar);
 
-    var _this70 = _possibleConstructorReturn(this, _WidgetBase68.call(this));
+    var _this72 = _possibleConstructorReturn(this, _WidgetBase68.call(this));
 
-    _this70.element = element;
-    return _this70;
+    _this72.element = element;
+    return _this72;
   }
 
   return ejToolbar;
@@ -2204,30 +2257,30 @@ var ejTooltip = exports.ejTooltip = (_dec295 = (0, _aureliaTemplating.customAttr
   function ejTooltip(element) {
     _classCallCheck(this, ejTooltip);
 
-    var _this71 = _possibleConstructorReturn(this, _WidgetBase69.call(this));
+    var _this73 = _possibleConstructorReturn(this, _WidgetBase69.call(this));
 
-    _this71.element = element;
-    return _this71;
+    _this73.element = element;
+    return _this73;
   }
 
   return ejTooltip;
 }(WidgetBase)) || _class109) || _class109) || _class109);
-var ejTreeGrid = exports.ejTreeGrid = (_dec298 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'tree-grid'), _dec299 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec300 = generateBindables('ejTreeGrid', ['allowColumnResize', 'allowColumnReordering', 'allowDragAndDrop', 'allowFiltering', 'allowKeyboardNavigation', 'allowMultiSorting', 'allowSelection', 'allowSorting', 'allowPaging', 'allowTextWrap', 'altRowTemplateID', 'expandStateMapping', 'childMapping', 'columns', 'columnDialogFields', 'contextMenuSettings', 'cssClass', 'dataSource', 'headerTextOverflow', 'dragTooltip', 'editSettings', 'enableAltRow', 'enableCollapseAll', 'enableResize', 'enableVirtualization', 'columnResizeSettings', 'commonWidth', 'filterSettings', 'locale', 'parseRowTemplate', 'idMapping', 'isResponsive', 'parentIdMapping', 'pageSettings', 'cellTooltipTemplate', 'query', 'rowHeight', 'rowTemplateID', 'selectedRowIndex', 'selectedCellIndexes', 'selectionSettings', 'showColumnOptions', 'showColumnChooser', 'showDetailsRow', 'showDetailsRowInfoColumn', 'detailsTemplate', 'detailsRowHeight', 'showSummaryRow', 'showTotalSummary', 'summaryRows', 'showGridCellTooltip', 'showGridExpandCellTooltip', 'sizeSettings', 'sortSettings', 'toolbarSettings', 'treeColumnIndex'], ['dataSource', 'selectedRowIndex', 'selectedCellIndexes', 'pageSettings.currentPage'], { 'altRowTemplateID': 'altRowTemplateId', 'rowTemplateID': 'rowTemplateId' }), _dec301 = (0, _aureliaDependencyInjection.inject)(Element, _aureliaTemplating.TemplatingEngine), _dec302 = (0, _aureliaTemplating.children)(constants.elementPrefix + 'tree-grid-column'), _dec298(_class110 = _dec299(_class110 = _dec300(_class110 = _dec301(_class110 = (_class111 = function (_WidgetBase70) {
+var ejTreeGrid = exports.ejTreeGrid = (_dec298 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'tree-grid'), _dec299 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec300 = generateBindables('ejTreeGrid', ['allowColumnResize', 'allowColumnReordering', 'allowDragAndDrop', 'allowFiltering', 'allowKeyboardNavigation', 'allowMultiSorting', 'allowSelection', 'allowSorting', 'allowPaging', 'allowTextWrap', 'altRowTemplateID', 'expandStateMapping', 'childMapping', 'columns', 'columnDialogFields', 'contextMenuSettings', 'cssClass', 'dataSource', 'headerTextOverflow', 'dragTooltip', 'editSettings', 'enableAltRow', 'enableCollapseAll', 'enableResize', 'enableVirtualization', 'columnResizeSettings', 'commonWidth', 'filterSettings', 'locale', 'parseRowTemplate', 'idMapping', 'isResponsive', 'parentIdMapping', 'pageSettings', 'cellTooltipTemplate', 'query', 'rowHeight', 'rowTemplateID', 'selectedRowIndex', 'selectedCellIndexes', 'selectionSettings', 'showColumnOptions', 'showColumnChooser', 'showDetailsRow', 'showDetailsRowInfoColumn', 'detailsTemplate', 'detailsRowHeight', 'showSummaryRow', 'showTotalSummary', 'summaryRows', 'showGridCellTooltip', 'showGridExpandCellTooltip', 'sizeSettings', 'sortSettings', 'toolbarSettings', 'treeColumnIndex'], ['dataSource', 'selectedRowIndex', 'selectedCellIndexes', 'pageSettings.currentPage'], { 'altRowTemplateID': 'altRowTemplateId', 'rowTemplateID': 'rowTemplateId' }, ['dataSource']), _dec301 = (0, _aureliaDependencyInjection.inject)(Element, _aureliaTemplating.TemplatingEngine), _dec302 = (0, _aureliaTemplating.children)(constants.elementPrefix + 'tree-grid-column'), _dec298(_class110 = _dec299(_class110 = _dec300(_class110 = _dec301(_class110 = (_class111 = function (_WidgetBase70) {
   _inherits(ejTreeGrid, _WidgetBase70);
 
   function ejTreeGrid(element, templateEngine) {
     _classCallCheck(this, ejTreeGrid);
 
-    var _this72 = _possibleConstructorReturn(this, _WidgetBase70.call(this));
+    var _this74 = _possibleConstructorReturn(this, _WidgetBase70.call(this));
 
-    _initDefineProp(_this72, 'columns', _descriptor14, _this72);
+    _initDefineProp(_this74, 'columns', _descriptor14, _this74);
 
-    _this72.element = element;
-    _this72.hasChildProperty = true;
-    _this72.childPropertyName = 'columns';
-    _this72.templateProcessor = new TemplateProcessor(_this72, templateEngine);
-    _this72.templateProcessor.initTemplate();
-    return _this72;
+    _this74.element = element;
+    _this74.hasChildProperty = true;
+    _this74.childPropertyName = 'columns';
+    _this74.templateProcessor = new TemplateProcessor(_this74, templateEngine);
+    _this74.templateProcessor.initTemplate();
+    return _this74;
   }
 
   return ejTreeGrid;
@@ -2267,14 +2320,14 @@ var ejTreeMap = exports.ejTreeMap = (_dec310 = (0, _aureliaTemplating.customElem
   function ejTreeMap(element) {
     _classCallCheck(this, ejTreeMap);
 
-    var _this73 = _possibleConstructorReturn(this, _WidgetBase71.call(this));
+    var _this75 = _possibleConstructorReturn(this, _WidgetBase71.call(this));
 
-    _initDefineProp(_this73, 'levels', _descriptor16, _this73);
+    _initDefineProp(_this75, 'levels', _descriptor16, _this75);
 
-    _this73.element = element;
-    _this73.hasChildProperty = true;
-    _this73.childPropertyName = 'levels';
-    return _this73;
+    _this75.element = element;
+    _this75.hasChildProperty = true;
+    _this75.childPropertyName = 'levels';
+    return _this75;
   }
 
   return ejTreeMap;
@@ -2290,10 +2343,10 @@ var ejTreeView = exports.ejTreeView = (_dec315 = (0, _aureliaTemplating.customAt
   function ejTreeView(element) {
     _classCallCheck(this, ejTreeView);
 
-    var _this74 = _possibleConstructorReturn(this, _WidgetBase72.call(this));
+    var _this76 = _possibleConstructorReturn(this, _WidgetBase72.call(this));
 
-    _this74.element = element;
-    return _this74;
+    _this76.element = element;
+    return _this76;
   }
 
   return ejTreeView;
@@ -2304,10 +2357,10 @@ var ejUploadbox = exports.ejUploadbox = (_dec318 = (0, _aureliaTemplating.custom
   function ejUploadbox(element) {
     _classCallCheck(this, ejUploadbox);
 
-    var _this75 = _possibleConstructorReturn(this, _WidgetBase73.call(this));
+    var _this77 = _possibleConstructorReturn(this, _WidgetBase73.call(this));
 
-    _this75.element = element;
-    return _this75;
+    _this77.element = element;
+    return _this77;
   }
 
   return ejUploadbox;
@@ -2318,10 +2371,10 @@ var ejWaitingPopup = exports.ejWaitingPopup = (_dec322 = (0, _aureliaTemplating.
   function ejWaitingPopup(element) {
     _classCallCheck(this, ejWaitingPopup);
 
-    var _this76 = _possibleConstructorReturn(this, _WidgetBase74.call(this));
+    var _this78 = _possibleConstructorReturn(this, _WidgetBase74.call(this));
 
-    _this76.element = element;
-    return _this76;
+    _this78.element = element;
+    return _this78;
   }
 
   return ejWaitingPopup;

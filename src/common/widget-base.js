@@ -108,6 +108,18 @@ export class WidgetBase {
     this.util = new Util();
     this.createWidget({ element: this.element });
   }
+
+  unsubscribe() {
+    if (this.subscription) {
+      this.subscription.dispose();
+      this.subscription = null;
+    }
+  }
+
+  unbind() {
+    this.unsubscribe();
+  }
+
 /**
  * To change widget model value
  * @param property The viewModel property name
@@ -118,6 +130,16 @@ export class WidgetBase {
     if (this.widget) {
       let modelValue;
       let prop = this.util.getControlPropertyName(this, property);
+      this.unsubscribe();
+      if (this.arrayObserver) {
+        this.arrayObserver.forEach((arrayProp) => {
+          if (this[arrayProp] instanceof Array) {
+            this.subscription = this.bindingInstance.collectionObserver(this[arrayProp]).subscribe((e) => {
+              this.update(e);
+            });
+          }
+        });
+      }
       if (prop) {
         if (prop === 'widget') {
           return;
@@ -139,6 +161,26 @@ export class WidgetBase {
       }
     }
   }
+
+  update(e) {
+    let modelValue;
+    let newVal;
+    this.arrayObserver.forEach((arrayProp) => {
+      if (this[arrayProp] instanceof Array) {
+        let prop = this.util.getControlPropertyName(this, arrayProp);
+        modelValue = this.widget.model[prop];
+        if (typeof modelValue === 'function') {
+          modelValue = modelValue();
+          newVal = modelValue;
+          newVal = this.addTwoways(prop);
+          this.widget.option(prop, newVal);
+        } else {
+          this.widget.option(prop, modelValue);
+        }
+      }
+    });
+  }
+
   detached() {
     if (this.templateProcessor) {
       this.templateProcessor.clearTempalte();

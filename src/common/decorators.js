@@ -2,17 +2,25 @@ import {BindableProperty, HtmlBehaviorResource} from 'aurelia-templating';
 import {Container} from 'aurelia-dependency-injection';
 import {metadata} from 'aurelia-metadata';
 import {TaskQueue} from 'aurelia-task-queue';
-import { bindingMode } from 'aurelia-binding';
+import { bindingMode, BindingEngine } from 'aurelia-binding';
 import { Util } from './util';
 
-export function generateBindables(controlName, inputs, twoWayProperties, abbrevProperties) {
+export function generateBindables(controlName, inputs, twoWayProperties, abbrevProperties, observerCollection) {
   return function(target, key, descriptor) {
     let behaviorResource = metadata.getOrCreateOwn(metadata.resource, HtmlBehaviorResource, target);
     let container = (Container.instance || new Container());
     let util = container.get(Util);
+    let bindingInstance = container.get(BindingEngine);
     inputs.push('options');
     inputs.push('widget');
     let len = inputs.length;
+    if (observerCollection) {
+      target.prototype.arrayObserver = [];
+      observerCollection.forEach((element) => {
+        target.prototype.arrayObserver.push(util.getBindablePropertyName(element));
+      });
+      target.prototype.bindingInstance = bindingInstance;
+    }
     target.prototype.controlName = controlName;
     target.prototype.twoWays = twoWayProperties ? twoWayProperties : [];
     target.prototype.abbrevProperties = abbrevProperties ? abbrevProperties : [];
