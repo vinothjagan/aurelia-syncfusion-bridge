@@ -868,7 +868,7 @@ export class WidgetBase {
   bind(ctx, overrideCtx) {
     this.parentCtx = overrideCtx;
     if (this.widget && this.isEditor) {
-      this.widget.option('value', this.eValue);
+      this.widget.option('value', (this.eValue === undefined ? null : this.eValue));
     }
   }
 
@@ -1709,13 +1709,12 @@ export class ScheduleResource {
 }
 
 
-import 'syncfusion-javascript/Scripts/ej/web/ej.signature.min';
+import 'syncfusion-javascript/Scripts/ej/common/ej.scroller.min';
 
-@customElement(`${constants.elementPrefix}signature`)
-@inlineView(`${constants.aureliaTemplateString}`)
-@generateBindables('ejSignature', ['backgroundColor', 'backgroundImage', 'enabled', 'height', 'isResponsive', 'saveImageFormat', 'saveWithBackground', 'showRoundedCorner', 'strokeColor', 'strokeWidth', 'width'])
+@customAttribute(`${constants.attributePrefix}scroller`)
+@generateBindables('ejScroller', ['animationSpeed', 'autoHide', 'buttonSize', 'enabled', 'enablePersistence', 'enableRTL', 'enableTouchScroll', 'height', 'scrollerSize', 'scrollLeft', 'scrollOneStepBy', 'scrollTop', 'targetPane', 'width'], ['scrollLeft', 'scrollTop'], {'enableRTL': 'enableRtl'})
 @inject(Element)
-export class ejSignature extends WidgetBase {
+export class ejScroller extends WidgetBase {
   constructor(element) {
     super();
     this.element = element;
@@ -1723,12 +1722,13 @@ export class ejSignature extends WidgetBase {
 }
 
 
-import 'syncfusion-javascript/Scripts/ej/common/ej.scroller.min';
+import 'syncfusion-javascript/Scripts/ej/web/ej.signature.min';
 
-@customAttribute(`${constants.attributePrefix}scroller`)
-@generateBindables('ejScroller', ['animationSpeed', 'autoHide', 'buttonSize', 'enabled', 'enablePersistence', 'enableRTL', 'enableTouchScroll', 'height', 'scrollerSize', 'scrollLeft', 'scrollOneStepBy', 'scrollTop', 'targetPane', 'width'], ['scrollLeft', 'scrollTop'], {'enableRTL': 'enableRtl'})
+@customElement(`${constants.elementPrefix}signature`)
+@inlineView(`${constants.aureliaTemplateString}`)
+@generateBindables('ejSignature', ['backgroundColor', 'backgroundImage', 'enabled', 'height', 'isResponsive', 'saveImageFormat', 'saveWithBackground', 'showRoundedCorner', 'strokeColor', 'strokeWidth', 'width'])
 @inject(Element)
-export class ejScroller extends WidgetBase {
+export class ejSignature extends WidgetBase {
   constructor(element) {
     super();
     this.element = element;

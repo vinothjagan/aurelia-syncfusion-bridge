@@ -79,7 +79,7 @@ System.register(['./events', '../common/util', '../common/decorators'], function
         WidgetBase.prototype.bind = function bind(ctx, overrideCtx) {
           this.parentCtx = overrideCtx;
           if (this.widget && this.isEditor) {
-            this.widget.option('value', this.eValue);
+            this.widget.option('value', this.eValue === undefined ? null : this.eValue);
           }
         };
 
