@@ -182,14 +182,14 @@
 .gradient-saffron-dark {
     background-position: -5px -119px;
 }
-#theme-dialog.e-dialog>.e-header {
+.au-theme-dialog.e-dialog>.e-header {
     font-weight: bold !important;
 }
-#theme-dialog.e-dialog.e-dialog-wrap {
+.au-theme-dialog.e-dialog.e-dialog-wrap {
     width: 695px !important;
 }  
 @media only screen and (min-width:150px) and (max-width:630px) {
-    #theme-dialog.e-dialog.e-dialog-wrap {
+    .au-theme-dialog.e-dialog.e-dialog-wrap {
         width: 300px !important;
   }
 }

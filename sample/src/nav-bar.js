@@ -8,6 +8,18 @@ export class NavBar {
   constructor(ea) {
     this.event = ea;
     this.themeID = window.themeSettings;
+    this.dialogAction = ['close', 'pin'];
+    this.animation = {
+      show: {
+        effect: 'fade',
+        duration: 700
+      },
+      hide: {
+        effect: 'fade',
+        duration: 700
+      }
+    };
+    this.attributes = { class: 'au-theme-dialog' };
   }
 
   attached() {
@@ -25,31 +37,12 @@ export class NavBar {
         }
       });
     }, 100);
-
-    jQuery(this.theme).ejDialog({
-      htmlAttributes: { id: 'theme-dialog'},
-      showOnInit: false,
-      actionButtons: ['close', 'pin'],
-      enableAnimation: true,
-      isResponsive: true,
-      animation: {
-        show: {
-          effect: 'fade',
-          duration: 700
-        },
-        hide: {
-          effect: 'fade',
-          duration: 700
-        }
-      },
-      title: 'Themes'
-    });
-    this.dialogInstance = jQuery(this.theme).data('ejDialog');
   }
 
   showDialog() {
-    this.dialogInstance.open();
+    this.dialogInstance.widget.open();
   }
+
 
   higlightMenuItem(args) {
     args.detail.element.classList.add('e-active');
