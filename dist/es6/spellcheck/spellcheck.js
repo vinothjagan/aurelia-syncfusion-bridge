@@ -7,7 +7,7 @@ import 'syncfusion-javascript/Scripts/ej/web/ej.spellcheck.min';
 
 @customElement(`${constants.elementPrefix}spell-check`)
 @inlineView(`${constants.aureliaTemplateString}`)
-@generateBindables('ejSpellCheck', ['dictionarySettings', 'misspellWordCss', 'locale', 'maxSuggestionCount', 'ignoreWords', 'contextMenuSettings', 'ignoreSettings', 'isResponsive', 'enableValidateOnType', 'controlsToValidate'])
+@generateBindables('ejSpellCheck', ['dictionarySettings', 'misspellWordCss', 'locale', 'maxSuggestionCount', 'ignoreWords', 'contextMenuSettings', 'ignoreSettings', 'isResponsive', 'enableValidateOnType', 'controlsToValidate', 'enableAsync'])
 @inject(Element)
 export class ejSpellCheck extends WidgetBase {
   constructor(element) {

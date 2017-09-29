@@ -47,7 +47,7 @@ System.register(['../common/widget-base', '../common/constants', '../common/deco
       inject = _commonCommon.inject;
     }, function (_syncfusionJavascriptScriptsEjWebEjMaskeditMin) {}],
     execute: function () {
-      _export('ejMaskEdit', ejMaskEdit = (_dec = customAttribute(constants.attributePrefix + 'mask-edit'), _dec2 = generateBindables('ejMaskEdit', ['cssClass', 'customCharacter', 'enabled', 'enablePersistence', 'height', 'hidePromptOnLeave', 'htmlAttributes', 'inputMode', 'maskFormat', 'name', 'readOnly', 'showError', 'showPromptChar', 'showRoundedCorner', 'textAlign', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'width'], ['value']), _dec3 = inject(Element), _dec(_class = _dec2(_class = _dec3(_class = function (_WidgetBase) {
+      _export('ejMaskEdit', ejMaskEdit = (_dec = customAttribute(constants.attributePrefix + 'mask-edit'), _dec2 = generateBindables('ejMaskEdit', ['cssClass', 'customCharacter', 'enabled', 'enablePersistence', 'height', 'hidePromptOnLeave', 'htmlAttributes', 'inputMode', 'locale', 'maskFormat', 'name', 'readOnly', 'showError', 'showPromptChar', 'showRoundedCorner', 'textAlign', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'width'], ['value']), _dec3 = inject(Element), _dec(_class = _dec2(_class = _dec3(_class = function (_WidgetBase) {
         _inherits(ejMaskEdit, _WidgetBase);
 
         function ejMaskEdit(element) {

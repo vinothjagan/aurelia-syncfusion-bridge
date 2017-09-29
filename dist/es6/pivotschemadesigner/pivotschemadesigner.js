@@ -7,7 +7,7 @@ import 'syncfusion-javascript/Scripts/ej/web/ej.pivotschemadesigner.min';
 
 @customElement(`${constants.elementPrefix}pivot-schema-designer`)
 @inlineView(`${constants.aureliaTemplateString}`)
-@generateBindables('ejPivotSchemaDesigner', ['cssClass', 'customObject', 'enableWrapper', 'enableRTL', 'olap', 'enableDragDrop', 'height', 'locale', 'pivotControl', 'serviceMethod', 'url', 'width', 'layout'], [], {'enableRTL': 'enableRtl'})
+@generateBindables('ejPivotSchemaDesigner', ['cssClass', 'customObject', 'enableWrapper', 'enableRTL', 'olap', 'enableDragDrop', 'height', 'locale', 'pivotControl', 'serviceMethods', 'url', 'width', 'layout'], [], {'enableRTL': 'enableRtl'})
 @inject(Element)
 export class ejPivotSchemaDesigner extends WidgetBase {
   constructor(element) {
