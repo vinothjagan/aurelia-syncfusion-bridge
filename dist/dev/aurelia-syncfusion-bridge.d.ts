@@ -4,6 +4,9 @@ export class ParserImplementation {}
 }
 declare module 'aurelia-syncfusion-bridge' {
   import {
+    PLATFORM
+  } from 'aurelia-pal';
+  import {
     customAttribute,
     bindable,
     customElement,
@@ -30,80 +33,6 @@ declare module 'aurelia-syncfusion-bridge' {
     bindingMode,
     BindingEngine
   } from 'aurelia-binding';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.accordion.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.autocomplete.min';
-  import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.barcode.min';
-  import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.bulletgraph.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.button.min';
-  import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.chart.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.checkbox.min';
-  import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.circulargauge.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.colorpicker.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.editor.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.datepicker.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.daterangepicker.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.datetimepicker.min';
-  import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.diagram.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.dialog.min';
-  import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.digitalgauge.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.dropdownlist.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.fileexplorer.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.gantt.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.grid.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.groupbutton.min';
-  import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.heatmap.min';
-  import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.heatmap.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.kanban.min';
-  import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.lineargauge.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.listbox.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.listview.min';
-  import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.map.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.maskedit.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.menu.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.navigationdrawer.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.editor.min';
-  import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.diagram.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.pager.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.pdfviewer.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.editor.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.pivotchart.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.pivotgauge.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.pivotgrid.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.pivotschemadesigner.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.pivottreemap.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.progressbar.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.radialmenu.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.radialslider.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.radiobutton.min';
-  import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.rangenavigator.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.rating.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.reportviewer.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.ribbon.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.rotator.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.rte.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.schedule.min';
-  import 'syncfusion-javascript/Scripts/ej/common/ej.scroller.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.signature.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.slider.min';
-  import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.sparkline.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.spellcheck.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.splitbutton.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.splitter.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.spreadsheet.min';
-  import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.sunburstchart.min';
-  import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.diagram.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.tab.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.tagcloud.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.tile.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.timepicker.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.togglebutton.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.toolbar.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.tooltip.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.treegrid.min';
-  import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.treemap.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.treeview.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.uploadbox.min';
-  import 'syncfusion-javascript/Scripts/ej/web/ej.waitingpopup.min';
   
   /**
   * Plugin configuration builder

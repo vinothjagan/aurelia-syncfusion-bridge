@@ -28,7 +28,7 @@ export class WidgetBase {
 
   bind(ctx, overrideCtx) {
     this.parentCtx = overrideCtx;
-    if (this.widget && this.isEditor) {
+    if (this.widget && this.widget.element && this.isEditor) {
       this.widget.option('value', (this.eValue === undefined ? null : this.eValue));
     }
   }
@@ -165,20 +165,22 @@ export class WidgetBase {
   update(e) {
     let modelValue;
     let newVal;
-    this.arrayObserver.forEach((arrayProp) => {
-      if (this[arrayProp] instanceof Array) {
-        let prop = this.util.getControlPropertyName(this, arrayProp);
-        modelValue = this.widget.model[prop];
-        if (typeof modelValue === 'function') {
-          modelValue = modelValue();
-          newVal = modelValue;
-          newVal = this.addTwoways(prop);
-          this.widget.option(prop, newVal);
-        } else {
-          this.widget.option(prop, modelValue);
+    if (e.length) {
+      this.arrayObserver.forEach((arrayProp) => {
+        if (this[arrayProp] instanceof Array) {
+          let prop = this.util.getControlPropertyName(this, arrayProp);
+          modelValue = this.widget.model[prop];
+          if (typeof modelValue === 'function') {
+            modelValue = modelValue();
+            newVal = modelValue;
+            newVal = this.addTwoways(prop);
+            this.widget.option(prop, newVal);
+          } else {
+            this.widget.option(prop, modelValue);
+          }
         }
-      }
-    });
+      });
+    }
   }
 
   detached() {
@@ -190,4 +192,3 @@ export class WidgetBase {
     }
   }
 }
-

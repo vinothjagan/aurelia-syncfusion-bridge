@@ -72,7 +72,7 @@ var WidgetBase = exports.WidgetBase = (_dec = (0, _decorators.delayed)(), (_clas
 
   WidgetBase.prototype.bind = function bind(ctx, overrideCtx) {
     this.parentCtx = overrideCtx;
-    if (this.widget && this.isEditor) {
+    if (this.widget && this.widget.element && this.isEditor) {
       this.widget.option('value', this.eValue === undefined ? null : this.eValue);
     }
   };
@@ -205,20 +205,22 @@ var WidgetBase = exports.WidgetBase = (_dec = (0, _decorators.delayed)(), (_clas
 
     var modelValue = void 0;
     var newVal = void 0;
-    this.arrayObserver.forEach(function (arrayProp) {
-      if (_this3[arrayProp] instanceof Array) {
-        var prop = _this3.util.getControlPropertyName(_this3, arrayProp);
-        modelValue = _this3.widget.model[prop];
-        if (typeof modelValue === 'function') {
-          modelValue = modelValue();
-          newVal = modelValue;
-          newVal = _this3.addTwoways(prop);
-          _this3.widget.option(prop, newVal);
-        } else {
-          _this3.widget.option(prop, modelValue);
+    if (e.length) {
+      this.arrayObserver.forEach(function (arrayProp) {
+        if (_this3[arrayProp] instanceof Array) {
+          var prop = _this3.util.getControlPropertyName(_this3, arrayProp);
+          modelValue = _this3.widget.model[prop];
+          if (typeof modelValue === 'function') {
+            modelValue = modelValue();
+            newVal = modelValue;
+            newVal = _this3.addTwoways(prop);
+            _this3.widget.option(prop, newVal);
+          } else {
+            _this3.widget.option(prop, modelValue);
+          }
         }
-      }
-    });
+      });
+    }
   };
 
   WidgetBase.prototype.detached = function detached() {

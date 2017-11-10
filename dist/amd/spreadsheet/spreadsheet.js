@@ -1,4 +1,4 @@
-define(['exports', '../common/widget-base', '../common/constants', '../common/decorators', '../common/common', 'syncfusion-javascript/Scripts/ej/web/ej.spreadsheet.min'], function (exports, _widgetBase, _constants, _decorators, _common) {
+define(['exports', '../common/widget-base', '../common/constants', '../common/decorators', '../common/common'], function (exports, _widgetBase, _constants, _decorators, _common) {
   'use strict';
 
   Object.defineProperty(exports, "__esModule", {

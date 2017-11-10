@@ -1,6 +1,6 @@
 'use strict';
 
-System.register(['../common/widget-base', '../common/constants', '../common/decorators', '../common/common', 'syncfusion-javascript/Scripts/ej/datavisualization/ej.rangenavigator.min'], function (_export, _context) {
+System.register(['../common/widget-base', '../common/constants', '../common/decorators', '../common/common'], function (_export, _context) {
   "use strict";
 
   var WidgetBase, constants, generateBindables, inject, inlineView, customElement, children, _dec, _dec2, _dec3, _dec4, _dec5, _class, _desc, _value, _class2, _descriptor, ejRangeNavigator;
@@ -90,7 +90,7 @@ System.register(['../common/widget-base', '../common/constants', '../common/deco
       inlineView = _commonCommon.inlineView;
       customElement = _commonCommon.customElement;
       children = _commonCommon.children;
-    }, function (_syncfusionJavascriptScriptsEjDatavisualizationEjRangenavigatorMin) {}],
+    }],
     execute: function () {
       _export('ejRangeNavigator', ejRangeNavigator = (_dec = customElement(constants.elementPrefix + 'range-navigator'), _dec2 = inlineView('' + constants.aureliaTemplateString), _dec3 = generateBindables('ejRangeNavigator', ['allowSnapping', 'border', 'dataSource', 'series', 'seriesSettings', 'enableDeferredUpdate', 'enableScrollbar', 'enableAutoResizing', 'enableRTL', 'isResponsive', 'labelSettings', 'locale', 'navigatorStyleSettings', 'padding', 'rangePadding', 'rangeSettings', 'selectedData', 'selectedRangeSettings', 'scrollRangeSettings', 'sizeSettings', 'theme', 'tooltipSettings', 'valueAxisSettings', 'valueType', 'xName', 'yName'], [], { 'enableRTL': 'enableRtl' }), _dec4 = inject(Element), _dec5 = children(constants.elementPrefix + 'range-series'), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = (_class2 = function (_WidgetBase) {
         _inherits(ejRangeNavigator, _WidgetBase);

@@ -11,6 +11,8 @@ exports.delayed = delayed;
 exports.getEventOption = getEventOption;
 exports.fireEvent = fireEvent;
 
+var _aureliaPal = require('aurelia-pal');
+
 var _aureliaTemplating = require('aurelia-templating');
 
 var _aureliaDependencyInjection = require('aurelia-dependency-injection');
@@ -20,144 +22,6 @@ var _aureliaMetadata = require('aurelia-metadata');
 var _aureliaTaskQueue = require('aurelia-task-queue');
 
 var _aureliaBinding = require('aurelia-binding');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.accordion.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.autocomplete.min');
-
-require('syncfusion-javascript/Scripts/ej/datavisualization/ej.barcode.min');
-
-require('syncfusion-javascript/Scripts/ej/datavisualization/ej.bulletgraph.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.button.min');
-
-require('syncfusion-javascript/Scripts/ej/datavisualization/ej.chart.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.checkbox.min');
-
-require('syncfusion-javascript/Scripts/ej/datavisualization/ej.circulargauge.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.colorpicker.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.editor.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.datepicker.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.daterangepicker.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.datetimepicker.min');
-
-require('syncfusion-javascript/Scripts/ej/datavisualization/ej.diagram.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.dialog.min');
-
-require('syncfusion-javascript/Scripts/ej/datavisualization/ej.digitalgauge.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.dropdownlist.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.fileexplorer.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.gantt.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.grid.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.groupbutton.min');
-
-require('syncfusion-javascript/Scripts/ej/datavisualization/ej.heatmap.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.kanban.min');
-
-require('syncfusion-javascript/Scripts/ej/datavisualization/ej.lineargauge.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.listbox.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.listview.min');
-
-require('syncfusion-javascript/Scripts/ej/datavisualization/ej.map.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.maskedit.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.menu.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.navigationdrawer.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.pager.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.pdfviewer.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.pivotchart.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.pivotgauge.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.pivotgrid.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.pivotschemadesigner.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.pivottreemap.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.progressbar.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.radialmenu.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.radialslider.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.radiobutton.min');
-
-require('syncfusion-javascript/Scripts/ej/datavisualization/ej.rangenavigator.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.rating.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.reportviewer.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.ribbon.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.rotator.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.rte.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.schedule.min');
-
-require('syncfusion-javascript/Scripts/ej/common/ej.scroller.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.signature.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.slider.min');
-
-require('syncfusion-javascript/Scripts/ej/datavisualization/ej.sparkline.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.spellcheck.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.splitbutton.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.splitter.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.spreadsheet.min');
-
-require('syncfusion-javascript/Scripts/ej/datavisualization/ej.sunburstchart.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.tab.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.tagcloud.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.tile.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.timepicker.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.togglebutton.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.toolbar.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.tooltip.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.treegrid.min');
-
-require('syncfusion-javascript/Scripts/ej/datavisualization/ej.treemap.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.treeview.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.uploadbox.min');
-
-require('syncfusion-javascript/Scripts/ej/web/ej.waitingpopup.min');
 
 function _initDefineProp(target, property, descriptor, context) {
   if (!descriptor) return;
@@ -227,389 +91,389 @@ var EjConfigBuilder = exports.EjConfigBuilder = function () {
   };
 
   EjConfigBuilder.prototype.ejGrid = function ejGrid() {
-    this.resources.push('./grid/grid');
-    this.resources.push('./grid/column');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./grid/grid'));
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./grid/column'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejChart = function ejChart() {
-    this.resources.push('./chart/chart');
-    this.resources.push('./chart/series');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./chart/chart'));
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./chart/series'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejSunburstChart = function ejSunburstChart() {
-    this.resources.push('./sunburstchart/sunburstchart');
-    this.resources.push('./sunburstchart/sunburstlevels');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./sunburstchart/sunburstchart'));
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./sunburstchart/sunburstlevels'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejMap = function ejMap() {
-    this.resources.push('./map/map');
-    this.resources.push('./map/layer');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./map/map'));
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./map/layer'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejTreeMap = function ejTreeMap() {
-    this.resources.push('./treemap/treemap');
-    this.resources.push('./treemap/level');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./treemap/treemap'));
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./treemap/level'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejRangeNavigator = function ejRangeNavigator() {
-    this.resources.push('./rangenavigator/rangenavigator');
-    this.resources.push('./rangenavigator/rangeseries');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./rangenavigator/rangenavigator'));
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./rangenavigator/rangeseries'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejDiagram = function ejDiagram() {
-    this.resources.push('./diagram/diagram');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./diagram/diagram'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejHeatMap = function ejHeatMap() {
-    this.resources.push('./heatmap/heatmap');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./heatmap/heatmap'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejHeatMapLegend = function ejHeatMapLegend() {
-    this.resources.push('./heatmaplegend/heatmaplegend');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./heatmaplegend/heatmaplegend'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejSparkline = function ejSparkline() {
-    this.resources.push('./sparkline/sparkline');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./sparkline/sparkline'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejSymbolPalette = function ejSymbolPalette() {
-    this.resources.push('./symbolpalette/symbolpalette');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./symbolpalette/symbolpalette'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejOverview = function ejOverview() {
-    this.resources.push('./overview/overview');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./overview/overview'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejPager = function ejPager() {
-    this.resources.push('./pager/pager');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./pager/pager'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejBulletGraph = function ejBulletGraph() {
-    this.resources.push('./bulletgraph/bulletgraph');
-    this.resources.push('./bulletgraph/qualitativerange');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./bulletgraph/bulletgraph'));
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./bulletgraph/qualitativerange'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejCircularGauge = function ejCircularGauge() {
-    this.resources.push('./circulargauge/circulargauge');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./circulargauge/circulargauge'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejLinearGauge = function ejLinearGauge() {
-    this.resources.push('./lineargauge/lineargauge');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./lineargauge/lineargauge'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejDigitalGauge = function ejDigitalGauge() {
-    this.resources.push('./digitalgauge/digitalgauge');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./digitalgauge/digitalgauge'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejSplitter = function ejSplitter() {
-    this.resources.push('./splitter/splitter');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./splitter/splitter'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejDatePicker = function ejDatePicker() {
-    this.resources.push('./datepicker/datepicker');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./datepicker/datepicker'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejGantt = function ejGantt() {
-    this.resources.push('./gantt/gantt');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./gantt/gantt'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejTreeGrid = function ejTreeGrid() {
-    this.resources.push('./treegrid/treegrid');
-    this.resources.push('./treegrid/treegridcolumn');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./treegrid/treegrid'));
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./treegrid/treegridcolumn'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejColorPicker = function ejColorPicker() {
-    this.resources.push('./colorpicker/colorpicker');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./colorpicker/colorpicker'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejDialog = function ejDialog() {
-    this.resources.push('./dialog/dialog');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./dialog/dialog'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejScroller = function ejScroller() {
-    this.resources.push('./scroller/scroller');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./scroller/scroller'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejBarcode = function ejBarcode() {
-    this.resources.push('./barcode/barcode');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./barcode/barcode'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejPdfViewer = function ejPdfViewer() {
-    this.resources.push('./pdfviewer/pdfviewer');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./pdfviewer/pdfviewer'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejNumericTextbox = function ejNumericTextbox() {
-    this.resources.push('./numerictextbox/numerictextbox');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./numerictextbox/numerictextbox'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejCurrencyTextbox = function ejCurrencyTextbox() {
-    this.resources.push('./currencytextbox/currencytextbox');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./currencytextbox/currencytextbox'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejPercentageTextbox = function ejPercentageTextbox() {
-    this.resources.push('./percentagetextbox/percentagetextbox');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./percentagetextbox/percentagetextbox'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejTimePicker = function ejTimePicker() {
-    this.resources.push('./timepicker/timepicker');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./timepicker/timepicker'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejToolbar = function ejToolbar() {
-    this.resources.push('./toolbar/toolbar');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./toolbar/toolbar'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejMenu = function ejMenu() {
-    this.resources.push('./menu/menu');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./menu/menu'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejMaskEdit = function ejMaskEdit() {
-    this.resources.push('./maskedit/maskedit');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./maskedit/maskedit'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejTreeView = function ejTreeView() {
-    this.resources.push('./treeview/treeview');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./treeview/treeview'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejKanban = function ejKanban() {
-    this.resources.push('./kanban/kanban');
-    this.resources.push('./kanban/kanbancolumn');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./kanban/kanban'));
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./kanban/kanbancolumn'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejRibbon = function ejRibbon() {
-    this.resources.push('./ribbon/ribbon');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./ribbon/ribbon'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejSpreadsheet = function ejSpreadsheet() {
-    this.resources.push('./spreadsheet/spreadsheet');
-    this.resources.push('./spreadsheet/sheet');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./spreadsheet/spreadsheet'));
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./spreadsheet/sheet'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejRating = function ejRating() {
-    this.resources.push('./rating/rating');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./rating/rating'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejListBox = function ejListBox() {
-    this.resources.push('./listbox/listbox');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./listbox/listbox'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejListView = function ejListView() {
-    this.resources.push('./listview/listview');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./listview/listview'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejNavigationDrawer = function ejNavigationDrawer() {
-    this.resources.push('./navigationdrawer/navigationdrawer');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./navigationdrawer/navigationdrawer'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejRotator = function ejRotator() {
-    this.resources.push('./rotator/rotator');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./rotator/rotator'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejRTE = function ejRTE() {
-    this.resources.push('./rte/rte');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./rte/rte'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejDropDownList = function ejDropDownList() {
-    this.resources.push('./dropdownlist/dropdownlist');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./dropdownlist/dropdownlist'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejAutocomplete = function ejAutocomplete() {
-    this.resources.push('./autocomplete/autocomplete');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./autocomplete/autocomplete'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejRadialMenu = function ejRadialMenu() {
-    this.resources.push('./radialmenu/radialmenu');
-    this.resources.push('./radialmenu/item');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./radialmenu/radialmenu'));
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./radialmenu/item'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejRadialSlider = function ejRadialSlider() {
-    this.resources.push('./radialslider/radialslider');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./radialslider/radialslider'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejTile = function ejTile() {
-    this.resources.push('./tile/tile');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./tile/tile'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejAccordion = function ejAccordion() {
-    this.resources.push('./accordion/accordion');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./accordion/accordion'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejTab = function ejTab() {
-    this.resources.push('./tab/tab');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./tab/tab'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejCheckBox = function ejCheckBox() {
-    this.resources.push('./checkbox/checkbox');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./checkbox/checkbox'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejRadioButton = function ejRadioButton() {
-    this.resources.push('./radiobutton/radiobutton');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./radiobutton/radiobutton'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejToggleButton = function ejToggleButton() {
-    this.resources.push('./togglebutton/togglebutton');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./togglebutton/togglebutton'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejSplitButton = function ejSplitButton() {
-    this.resources.push('./splitbutton/splitbutton');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./splitbutton/splitbutton'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejGroupButton = function ejGroupButton() {
-    this.resources.push('./groupbutton/groupbutton');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./groupbutton/groupbutton'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejDateTimePicker = function ejDateTimePicker() {
-    this.resources.push('./datetimepicker/datetimepicker');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./datetimepicker/datetimepicker'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejDateRangePicker = function ejDateRangePicker() {
-    this.resources.push('./daterangepicker/daterangepicker');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./daterangepicker/daterangepicker'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejProgressBar = function ejProgressBar() {
-    this.resources.push('./progressbar/progressbar');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./progressbar/progressbar'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejTagCloud = function ejTagCloud() {
-    this.resources.push('./tagcloud/tagcloud');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./tagcloud/tagcloud'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejButton = function ejButton() {
-    this.resources.push('./button/button');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./button/button'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejSlider = function ejSlider() {
-    this.resources.push('./slider/slider');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./slider/slider'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejFileExplorer = function ejFileExplorer() {
-    this.resources.push('./fileexplorer/fileexplorer');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./fileexplorer/fileexplorer'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejPivotGrid = function ejPivotGrid() {
-    this.resources.push('./pivotgrid/pivotgrid');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./pivotgrid/pivotgrid'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejPivotChart = function ejPivotChart() {
-    this.resources.push('./pivotchart/pivotchart');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./pivotchart/pivotchart'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejPivotGauge = function ejPivotGauge() {
-    this.resources.push('./pivotgauge/pivotgauge');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./pivotgauge/pivotgauge'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejPivotSchemaDesigner = function ejPivotSchemaDesigner() {
-    this.resources.push('./pivotschemadesigner/pivotschemadesigner');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./pivotschemadesigner/pivotschemadesigner'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejPivotTreeMap = function ejPivotTreeMap() {
-    this.resources.push('./pivottreemap/pivottreemap');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./pivottreemap/pivottreemap'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejWaitingPopup = function ejWaitingPopup() {
-    this.resources.push('./waitingpopup/waitingpopup');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./waitingpopup/waitingpopup'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejReportViewer = function ejReportViewer() {
-    this.resources.push('./reportviewer/reportviewer');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./reportviewer/reportviewer'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejSchedule = function ejSchedule() {
-    this.resources.push('./schedule/schedule');
-    this.resources.push('./schedule/scheduleresource');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./schedule/schedule'));
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./schedule/scheduleresource'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejUploadbox = function ejUploadbox() {
-    this.resources.push('./uploadbox/uploadbox');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./uploadbox/uploadbox'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejSignature = function ejSignature() {
-    this.resources.push('./signature/signature');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./signature/signature'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejTooltip = function ejTooltip() {
-    this.resources.push('./tooltip/tooltip');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./tooltip/tooltip'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejSpellCheck = function ejSpellCheck() {
-    this.resources.push('./spellcheck/spellcheck');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./spellcheck/spellcheck'));
     return this;
   };
 
   EjConfigBuilder.prototype.ejTemplate = function ejTemplate() {
-    this.resources.push('./common/template');
+    this.resources.push(_aureliaPal.PLATFORM.moduleName('./common/template'));
     return this;
   };
 
@@ -712,7 +576,7 @@ var ejButton = exports.ejButton = (_dec20 = (0, _aureliaTemplating.customAttribu
 
   return ejButton;
 }(WidgetBase)) || _class9) || _class9) || _class9);
-var ejChart = exports.ejChart = (_dec23 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'chart'), _dec24 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec25 = generateBindables('ejChart', ['annotations', 'background', 'backGroundImageUrl', 'border', 'exportSettings', 'chartArea', 'columnDefinitions', 'commonSeriesOptions', 'selectedDataPointIndexes', 'crosshair', 'depth', 'enable3D', 'enableCanvasRendering', 'initSeriesRender', 'enableRotation', 'indicators', 'isResponsive', 'legend', 'locale', 'palette', 'Margin', 'perspectiveAngle', 'primaryXAxis', 'axes', 'primaryYAxis', 'rotation', 'rowDefinitions', 'series', 'sideBySideSeriesPlacement', 'size', 'theme', 'tilt', 'title', 'wallSize', 'zooming']), _dec26 = (0, _aureliaDependencyInjection.inject)(Element), _dec27 = (0, _aureliaTemplating.children)(constants.elementPrefix + 'series'), _dec23(_class10 = _dec24(_class10 = _dec25(_class10 = _dec26(_class10 = (_class11 = function (_WidgetBase6) {
+var ejChart = exports.ejChart = (_dec23 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'chart'), _dec24 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec25 = generateBindables('ejChart', ['annotations', 'background', 'backGroundImageUrl', 'border', 'exportSettings', 'chartArea', 'columnDefinitions', 'commonSeriesOptions', 'selectedDataPointIndexes', 'crosshair', 'depth', 'enable3D', 'enableCanvasRendering', 'initSeriesRender', 'enableRotation', 'indicators', 'isResponsive', 'legend', 'locale', 'palette', 'margin', 'perspectiveAngle', 'primaryXAxis', 'axes', 'primaryYAxis', 'rotation', 'rowDefinitions', 'series', 'sideBySideSeriesPlacement', 'size', 'theme', 'tilt', 'title', 'wallSize', 'zooming']), _dec26 = (0, _aureliaDependencyInjection.inject)(Element), _dec27 = (0, _aureliaTemplating.children)(constants.elementPrefix + 'series'), _dec23(_class10 = _dec24(_class10 = _dec25(_class10 = _dec26(_class10 = (_class11 = function (_WidgetBase6) {
   _inherits(ejChart, _WidgetBase6);
 
   function ejChart(element) {
@@ -1120,7 +984,7 @@ var WidgetBase = exports.WidgetBase = (_dec46 = delayed(), (_class21 = function 
 
   WidgetBase.prototype.bind = function bind(ctx, overrideCtx) {
     this.parentCtx = overrideCtx;
-    if (this.widget && this.isEditor) {
+    if (this.widget && this.widget.element && this.isEditor) {
       this.widget.option('value', this.eValue === undefined ? null : this.eValue);
     }
   };
@@ -1253,20 +1117,22 @@ var WidgetBase = exports.WidgetBase = (_dec46 = delayed(), (_class21 = function 
 
     var modelValue = void 0;
     var newVal = void 0;
-    this.arrayObserver.forEach(function (arrayProp) {
-      if (_this13[arrayProp] instanceof Array) {
-        var prop = _this13.util.getControlPropertyName(_this13, arrayProp);
-        modelValue = _this13.widget.model[prop];
-        if (typeof modelValue === 'function') {
-          modelValue = modelValue();
-          newVal = modelValue;
-          newVal = _this13.addTwoways(prop);
-          _this13.widget.option(prop, newVal);
-        } else {
-          _this13.widget.option(prop, modelValue);
+    if (e.length) {
+      this.arrayObserver.forEach(function (arrayProp) {
+        if (_this13[arrayProp] instanceof Array) {
+          var prop = _this13.util.getControlPropertyName(_this13, arrayProp);
+          modelValue = _this13.widget.model[prop];
+          if (typeof modelValue === 'function') {
+            modelValue = modelValue();
+            newVal = modelValue;
+            newVal = _this13.addTwoways(prop);
+            _this13.widget.option(prop, newVal);
+          } else {
+            _this13.widget.option(prop, modelValue);
+          }
         }
-      }
-    });
+      });
+    }
   };
 
   WidgetBase.prototype.detached = function detached() {
@@ -1340,7 +1206,7 @@ var ejDateTimePicker = exports.ejDateTimePicker = (_dec56 = (0, _aureliaTemplati
 
   return ejDateTimePicker;
 }(WidgetBase)) || _class25) || _class25) || _class25);
-var ejDiagram = exports.ejDiagram = (_dec59 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'diagram'), _dec60 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec61 = generateBindables('ejDiagram', ['backgroundColor', 'backgroundImage', 'bridgeDirection', 'commandManager', 'connectors', 'connectorTemplate', 'constraints', 'contextMenu', 'dataSourceSettings', 'defaultSettings', 'drawType', 'enableAutoScroll', 'enableContextMenu', 'height', 'historyManager', 'labelRenderingMode', 'layout', 'locale', 'nodes', 'nodeTemplate', 'pageSettings', 'scrollSettings', 'selectedItems', 'showTooltip', 'rulerSettings', 'snapSettings', 'tool', 'tooltip', 'width', 'zoomFactor']), _dec62 = (0, _aureliaDependencyInjection.inject)(Element), _dec59(_class26 = _dec60(_class26 = _dec61(_class26 = _dec62(_class26 = function (_WidgetBase14) {
+var ejDiagram = exports.ejDiagram = (_dec59 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'diagram'), _dec60 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec61 = generateBindables('ejDiagram', ['backgroundColor', 'backgroundImage', 'bridgeDirection', 'commandManager', 'connectors', 'connectorTemplate', 'constraints', 'contextMenu', 'dataSourceSettings', 'defaultSettings', 'drawType', 'enableAutoScroll', 'enableContextMenu', 'height', 'historyManager', 'labelRenderingMode', 'layout', 'locale', 'nodes', 'nodeTemplate', 'pageSettings', 'scrollSettings', 'selectedItems', 'showTooltip', 'serializationSettings', 'rulerSettings', 'snapSettings', 'tool', 'tooltip', 'width', 'zoomFactor']), _dec62 = (0, _aureliaDependencyInjection.inject)(Element), _dec59(_class26 = _dec60(_class26 = _dec61(_class26 = _dec62(_class26 = function (_WidgetBase14) {
   _inherits(ejDiagram, _WidgetBase14);
 
   function ejDiagram(element) {
@@ -1411,7 +1277,7 @@ var ejFileExplorer = exports.ejFileExplorer = (_dec74 = (0, _aureliaTemplating.c
 
   return ejFileExplorer;
 }(WidgetBase)) || _class30) || _class30) || _class30) || _class30);
-var ejGantt = exports.ejGantt = (_dec78 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'gantt'), _dec79 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec80 = generateBindables('ejGantt', ['addDialogFields', 'allowColumnResize', 'allowGanttChartEditing', 'allowKeyboardNavigation', 'allowMultiSorting', 'allowMultipleExporting', 'allowSelection', 'allowSorting', 'allowDragAndDrop', 'enablePredecessorValidation', 'baselineColor', 'workMapping', 'expandStateMapping', 'baselineEndDateMapping', 'baselineStartDateMapping', 'childMapping', 'columnDialogFields', 'connectorLineBackground', 'connectorlineWidth', 'cssClass', 'cellTooltipTemplate', 'dragTooltip', 'dataSource', 'dateFormat', 'dayWorkingTime', 'durationMapping', 'durationUnit', 'editDialogFields', 'isResponsive', 'splitterSettings', 'editSettings', 'enableAltRow', 'enableWBS', 'enableWBSPredecessor', 'enableCollapseAll', 'leftTaskLabelMapping', 'rightTaskLabelMapping', 'leftTaskLabelTemplate', 'rightTaskLabelTemplate', 'enableContextMenu', 'enableProgressBarResizing', 'enableResize', 'enableTaskbarDragTooltip', 'enableTaskbarTooltip', 'enableVirtualization', 'endDateMapping', 'highlightWeekends', 'holidays', 'includeWeekend', 'locale', 'milestoneMapping', 'showColumnOptions', 'parentTaskbarTemplate', 'taskType', 'workUnit', 'taskSchedulingMode', 'selectionType', 'parentProgressbarBackground', 'resourceUnitMapping', 'notesMapping', 'taskSchedulingModeMapping', 'durationUnitMapping', 'parentTaskbarBackground', 'parentTaskIdMapping', 'predecessorMapping', 'progressbarBackground', 'progressbarHeight', 'progressbarTooltipTemplate', 'progressbarTooltipTemplateId', 'progressMapping', 'query', 'renderBaseline', 'resourceIdMapping', 'resourceInfoMapping', 'resourceNameMapping', 'resources', 'roundOffDayworkingTime', 'rowHeight', 'scheduleEndDate', 'scheduleHeaderSettings', 'scheduleStartDate', 'selectedRowIndex', 'showColumnChooser', 'showGridCellTooltip', 'showGridExpandCellTooltip', 'showProgressStatus', 'showResourceNames', 'showTaskNames', 'sizeSettings', 'selectedCellIndexes', 'sortSettings', 'splitterPosition', 'startDateMapping', 'stripLines', 'taskbarBackground', 'taskbarEditingTooltipTemplate', 'taskbarEditingTooltipTemplateId', 'taskbarHeight', 'taskbarTooltipTemplate', 'taskbarTemplate', 'milestoneTemplate', 'readOnly', 'taskbarTooltipTemplateId', 'taskIdMapping', 'taskNameMapping', 'toolbarSettings', 'treeColumnIndex', 'selectionMode', 'validateManualTasksOnLinking', 'weekendBackground', 'workingTimeScale', 'workWeek'], ['dataSource', 'selectedRowIndex', 'selectedCellIndexes']), _dec81 = (0, _aureliaDependencyInjection.inject)(Element), _dec78(_class31 = _dec79(_class31 = _dec80(_class31 = _dec81(_class31 = function (_WidgetBase19) {
+var ejGantt = exports.ejGantt = (_dec78 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'gantt'), _dec79 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec80 = generateBindables('ejGantt', ['addDialogFields', 'allowColumnResize', 'allowGanttChartEditing', 'allowKeyboardNavigation', 'allowMultiSorting', 'allowMultipleExporting', 'allowSelection', 'allowSorting', 'allowDragAndDrop', 'enablePredecessorValidation', 'enableSerialNumber', 'baselineColor', 'workMapping', 'expandStateMapping', 'baselineEndDateMapping', 'baselineStartDateMapping', 'childMapping', 'columnDialogFields', 'connectorLineBackground', 'connectorlineWidth', 'cssClass', 'cellTooltipTemplate', 'dragTooltip', 'dataSource', 'dateFormat', 'dayWorkingTime', 'durationMapping', 'durationUnit', 'editDialogFields', 'filterSettings', 'isResponsive', 'splitterSettings', 'editSettings', 'enableAltRow', 'enableWBS', 'enableWBSPredecessor', 'enableCollapseAll', 'leftTaskLabelMapping', 'rightTaskLabelMapping', 'leftTaskLabelTemplate', 'rightTaskLabelTemplate', 'enableContextMenu', 'enableProgressBarResizing', 'enableResize', 'enableTaskbarDragTooltip', 'enableTaskbarTooltip', 'enableVirtualization', 'endDateMapping', 'highlightWeekends', 'holidays', 'includeWeekend', 'locale', 'milestoneMapping', 'showColumnOptions', 'parentTaskbarTemplate', 'taskType', 'workUnit', 'taskSchedulingMode', 'selectionType', 'parentProgressbarBackground', 'resourceUnitMapping', 'notesMapping', 'taskSchedulingModeMapping', 'durationUnitMapping', 'parentTaskbarBackground', 'parentTaskIdMapping', 'predecessorMapping', 'progressbarBackground', 'progressbarHeight', 'progressbarTooltipTemplate', 'progressbarTooltipTemplateId', 'progressMapping', 'query', 'renderBaseline', 'resourceIdMapping', 'resourceInfoMapping', 'resourceNameMapping', 'resources', 'roundOffDayworkingTime', 'rowHeight', 'scheduleEndDate', 'scheduleHeaderSettings', 'scheduleStartDate', 'selectedRowIndex', 'showColumnChooser', 'showGridCellTooltip', 'showGridExpandCellTooltip', 'showProgressStatus', 'showResourceNames', 'showTaskNames', 'sizeSettings', 'selectedCellIndexes', 'sortSettings', 'splitterPosition', 'startDateMapping', 'stripLines', 'taskbarBackground', 'taskbarEditingTooltipTemplate', 'taskbarEditingTooltipTemplateId', 'taskbarHeight', 'taskbarTooltipTemplate', 'taskbarTemplate', 'milestoneTemplate', 'readOnly', 'taskbarTooltipTemplateId', 'taskIdMapping', 'taskNameMapping', 'toolbarSettings', 'treeColumnIndex', 'selectionMode', 'validateManualTasksOnLinking', 'weekendBackground', 'workingTimeScale', 'workWeek', 'viewType', 'groupCollection', 'resourceCollectionMapping', 'taskCollectionMapping', 'groupIdMapping', 'groupNameMapping'], ['dataSource', 'selectedRowIndex', 'selectedCellIndexes']), _dec81 = (0, _aureliaDependencyInjection.inject)(Element), _dec78(_class31 = _dec79(_class31 = _dec80(_class31 = _dec81(_class31 = function (_WidgetBase19) {
   _inherits(ejGantt, _WidgetBase19);
 
   function ejGantt(element) {
@@ -1446,7 +1312,7 @@ var Column = exports.Column = (_dec82 = (0, _aureliaTemplating.inlineView)('' + 
     return [];
   }
 })), _class33)) || _class32) || _class32) || _class32);
-var ejGrid = exports.ejGrid = (_dec86 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'grid'), _dec87 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec88 = generateBindables('ejGrid', ['allowCellMerging', 'allowGrouping', 'allowKeyboardNavigation', 'allowFiltering', 'allowSorting', 'allowMultiSorting', 'allowPaging', 'allowReordering', 'allowResizeToFit', 'allowResizing', 'allowRowDragAndDrop', 'allowScrolling', 'allowSearching', 'allowSelection', 'allowTextWrap', 'allowMultipleExporting', 'commonWidth', 'gridLines', 'childGrid', 'columnLayout', 'columns', 'contextMenuSettings', 'cssClass', 'dataSource', 'detailsTemplate', 'editSettings', 'enableAltRow', 'enableAutoSaveOnSelectionChange', 'enableHeaderHover', 'enablePersistence', 'enableResponsiveRow', 'enableRowHover', 'enableRTL', 'enableTouch', 'enableToolbarItems', 'exportToExcelAction', 'exportToPdfAction', 'exportToWordAction', 'filterSettings', 'groupSettings', 'isResponsive', 'keySettings', 'locale', 'minWidth', 'pageSettings', 'query', 'resizeSettings', 'rowTemplate', 'rowDropSettings', 'searchSettings', 'selectedRecords', 'selectedRowIndex', 'selectedRowIndices', 'selectionSettings', 'selectionType', 'scrollSettings', 'showColumnChooser', 'showStackedHeader', 'showSummary', 'sortSettings', 'stackedHeaderRows', 'summaryRows', 'textWrapSettings', 'toolbarSettings'], ['dataSource', 'selectedRowIndices'], { 'enableRTL': 'enableRtl' }), _dec89 = (0, _aureliaDependencyInjection.inject)(Element, _aureliaTemplating.TemplatingEngine), _dec90 = (0, _aureliaTemplating.children)(constants.elementPrefix + 'column'), _dec86(_class35 = _dec87(_class35 = _dec88(_class35 = _dec89(_class35 = (_class36 = function (_WidgetBase20) {
+var ejGrid = exports.ejGrid = (_dec86 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'grid'), _dec87 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec88 = generateBindables('ejGrid', ['allowCellMerging', 'allowGrouping', 'allowKeyboardNavigation', 'allowFiltering', 'allowSorting', 'allowMultiSorting', 'allowPaging', 'allowReordering', 'allowResizeToFit', 'allowResizing', 'allowRowDragAndDrop', 'allowScrolling', 'allowSearching', 'allowSelection', 'allowTextWrap', 'allowMultipleExporting', 'commonWidth', 'gridLines', 'childGrid', 'columnLayout', 'columns', 'contextMenuSettings', 'cssClass', 'dataSource', 'detailsTemplate', 'editSettings', 'enableAltRow', 'enableAutoSaveOnSelectionChange', 'enableHeaderHover', 'enablePersistence', 'enableResponsiveRow', 'enableRowHover', 'enableRTL', 'enableTouch', 'enableToolbarItems', 'exportToExcelAction', 'exportToPdfAction', 'exportToWordAction', 'filterSettings', 'groupSettings', 'isResponsive', 'keySettings', 'locale', 'minWidth', 'pageSettings', 'query', 'resizeSettings', 'rowTemplate', 'rowDropSettings', 'searchSettings', 'selectedRecords', 'selectedRowIndex', 'selectedRowIndices', 'selectionSettings', 'selectionType', 'scrollSettings', 'showColumnChooser', 'showStackedHeader', 'showSummary', 'sortSettings', 'stackedHeaderRows', 'summaryRows', 'textWrapSettings', 'toolbarSettings'], ['dataSource', 'selectedRowIndices'], { 'enableRTL': 'enableRtl' }, ['dataSource']), _dec89 = (0, _aureliaDependencyInjection.inject)(Element, _aureliaTemplating.TemplatingEngine), _dec90 = (0, _aureliaTemplating.children)(constants.elementPrefix + 'column'), _dec86(_class35 = _dec87(_class35 = _dec88(_class35 = _dec89(_class35 = (_class36 = function (_WidgetBase20) {
   _inherits(ejGrid, _WidgetBase20);
 
   function ejGrid(element, templateEngine) {
@@ -2030,7 +1896,7 @@ var ejSignature = exports.ejSignature = (_dec232 = (0, _aureliaTemplating.custom
 
   return ejSignature;
 }(WidgetBase)) || _class88) || _class88) || _class88) || _class88);
-var ejSlider = exports.ejSlider = (_dec236 = (0, _aureliaTemplating.customAttribute)(constants.attributePrefix + 'slider'), _dec237 = generateBindables('ejSlider', ['allowMouseWheel', 'animationSpeed', 'cssClass', 'enableAnimation', 'enabled', 'enablePersistence', 'enableRTL', 'height', 'htmlAttributes', 'incrementStep', 'largeStep', 'maxValue', 'minValue', 'orientation', 'readOnly', 'showRoundedCorner', 'showScale', 'showSmallTicks', 'showTooltip', 'sliderType', 'smallStep', 'value', 'values', 'width'], ['value'], { 'enableRTL': 'enableRtl' }), _dec238 = (0, _aureliaDependencyInjection.inject)(Element), _dec236(_class89 = _dec237(_class89 = _dec238(_class89 = function (_WidgetBase55) {
+var ejSlider = exports.ejSlider = (_dec236 = (0, _aureliaTemplating.customAttribute)(constants.attributePrefix + 'slider'), _dec237 = generateBindables('ejSlider', ['allowMouseWheel', 'animationSpeed', 'cssClass', 'enableAnimation', 'enabled', 'enablePersistence', 'enableRTL', 'height', 'htmlAttributes', 'incrementStep', 'largeStep', 'maxValue', 'minValue', 'orientation', 'readOnly', 'showButtons', 'showRoundedCorner', 'showScale', 'showSmallTicks', 'showTooltip', 'sliderType', 'smallStep', 'value', 'values', 'width'], ['value'], { 'enableRTL': 'enableRtl' }), _dec238 = (0, _aureliaDependencyInjection.inject)(Element), _dec236(_class89 = _dec237(_class89 = _dec238(_class89 = function (_WidgetBase55) {
   _inherits(ejSlider, _WidgetBase55);
 
   function ejSlider(element) {
@@ -2058,7 +1924,7 @@ var ejSparkline = exports.ejSparkline = (_dec239 = (0, _aureliaTemplating.custom
 
   return ejSparkline;
 }(WidgetBase)) || _class90) || _class90) || _class90) || _class90);
-var ejSpellCheck = exports.ejSpellCheck = (_dec243 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'spell-check'), _dec244 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec245 = generateBindables('ejSpellCheck', ['dictionarySettings', 'misspellWordCss', 'locale', 'maxSuggestionCount', 'ignoreWords', 'contextMenuSettings', 'ignoreSettings', 'isResponsive', 'enableValidateOnType', 'controlsToValidate', 'enableAsync']), _dec246 = (0, _aureliaDependencyInjection.inject)(Element), _dec243(_class91 = _dec244(_class91 = _dec245(_class91 = _dec246(_class91 = function (_WidgetBase57) {
+var ejSpellCheck = exports.ejSpellCheck = (_dec243 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'spell-check'), _dec244 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec245 = generateBindables('ejSpellCheck', ['dictionarySettings', 'misspellWordCss', 'locale', 'maxSuggestionCount', 'ignoreWords', 'contextMenuSettings', 'ignoreSettings', 'isResponsive', 'enableValidateOnType', 'controlsToValidate', 'enableAsync', 'ajaxDataType']), _dec246 = (0, _aureliaDependencyInjection.inject)(Element), _dec243(_class91 = _dec244(_class91 = _dec245(_class91 = _dec246(_class91 = function (_WidgetBase57) {
   _inherits(ejSpellCheck, _WidgetBase57);
 
   function ejSpellCheck(element) {
@@ -2265,7 +2131,7 @@ var ejTooltip = exports.ejTooltip = (_dec295 = (0, _aureliaTemplating.customAttr
 
   return ejTooltip;
 }(WidgetBase)) || _class109) || _class109) || _class109);
-var ejTreeGrid = exports.ejTreeGrid = (_dec298 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'tree-grid'), _dec299 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec300 = generateBindables('ejTreeGrid', ['allowColumnResize', 'allowColumnReordering', 'allowDragAndDrop', 'allowFiltering', 'allowKeyboardNavigation', 'allowMultiSorting', 'allowSelection', 'allowSorting', 'allowPaging', 'allowTextWrap', 'altRowTemplateID', 'expandStateMapping', 'childMapping', 'columns', 'columnDialogFields', 'contextMenuSettings', 'cssClass', 'dataSource', 'headerTextOverflow', 'dragTooltip', 'editSettings', 'enableAltRow', 'enableCollapseAll', 'enableResize', 'enableVirtualization', 'enableLoadOnDemand', 'columnResizeSettings', 'commonWidth', 'filterSettings', 'locale', 'parseRowTemplate', 'idMapping', 'isResponsive', 'parentIdMapping', 'pageSettings', 'cellTooltipTemplate', 'query', 'rowHeight', 'rowTemplateID', 'selectedRowIndex', 'selectedCellIndexes', 'selectionSettings', 'showColumnOptions', 'showColumnChooser', 'showDetailsRow', 'showDetailsRowInfoColumn', 'detailsTemplate', 'detailsRowHeight', 'showSummaryRow', 'showTotalSummary', 'summaryRows', 'showGridCellTooltip', 'showGridExpandCellTooltip', 'sizeSettings', 'sortSettings', 'toolbarSettings', 'treeColumnIndex'], ['dataSource', 'selectedRowIndex', 'selectedCellIndexes', 'pageSettings.currentPage'], { 'altRowTemplateID': 'altRowTemplateId', 'rowTemplateID': 'rowTemplateId' }), _dec301 = (0, _aureliaDependencyInjection.inject)(Element, _aureliaTemplating.TemplatingEngine), _dec302 = (0, _aureliaTemplating.children)(constants.elementPrefix + 'tree-grid-column'), _dec298(_class110 = _dec299(_class110 = _dec300(_class110 = _dec301(_class110 = (_class111 = function (_WidgetBase70) {
+var ejTreeGrid = exports.ejTreeGrid = (_dec298 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'tree-grid'), _dec299 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec300 = generateBindables('ejTreeGrid', ['allowColumnResize', 'allowColumnReordering', 'allowDragAndDrop', 'allowFiltering', 'allowKeyboardNavigation', 'allowMultiSorting', 'allowSelection', 'allowSorting', 'allowPaging', 'allowTextWrap', 'altRowTemplateID', 'expandStateMapping', 'childMapping', 'columns', 'columnDialogFields', 'contextMenuSettings', 'cssClass', 'dataSource', 'headerTextOverflow', 'dragTooltip', 'editSettings', 'enableAltRow', 'enableCollapseAll', 'enableResize', 'enableVirtualization', 'enableLoadOnDemand', 'columnResizeSettings', 'commonWidth', 'filterSettings', 'locale', 'parseRowTemplate', 'idMapping', 'isResponsive', 'parentIdMapping', 'pageSettings', 'cellTooltipTemplate', 'query', 'rowHeight', 'rowTemplateID', 'selectedRowIndex', 'selectedCellIndexes', 'selectionSettings', 'showColumnOptions', 'showColumnChooser', 'showDetailsRow', 'showDetailsRowInfoColumn', 'detailsTemplate', 'detailsRowHeight', 'showStackedHeader', 'stackedHeaderRows', 'showSummaryRow', 'showTotalSummary', 'summaryRows', 'showGridCellTooltip', 'showGridExpandCellTooltip', 'sizeSettings', 'sortSettings', 'toolbarSettings', 'treeColumnIndex'], ['dataSource', 'selectedRowIndex', 'selectedCellIndexes', 'pageSettings.currentPage'], { 'altRowTemplateID': 'altRowTemplateId', 'rowTemplateID': 'rowTemplateId' }, ['dataSource']), _dec301 = (0, _aureliaDependencyInjection.inject)(Element, _aureliaTemplating.TemplatingEngine), _dec302 = (0, _aureliaTemplating.children)(constants.elementPrefix + 'tree-grid-column'), _dec298(_class110 = _dec299(_class110 = _dec300(_class110 = _dec301(_class110 = (_class111 = function (_WidgetBase70) {
   _inherits(ejTreeGrid, _WidgetBase70);
 
   function ejTreeGrid(element, templateEngine) {

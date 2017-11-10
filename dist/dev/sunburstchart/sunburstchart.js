@@ -1,6 +1,6 @@
 'use strict';
 
-System.register(['../common/widget-base', '../common/constants', '../common/decorators', '../common/common', 'syncfusion-javascript/Scripts/ej/datavisualization/ej.sunburstchart.min'], function (_export, _context) {
+System.register(['../common/widget-base', '../common/constants', '../common/decorators', '../common/common'], function (_export, _context) {
   "use strict";
 
   var WidgetBase, constants, generateBindables, inject, inlineView, customElement, children, _dec, _dec2, _dec3, _dec4, _dec5, _class, _desc, _value, _class2, _descriptor, ejSunburstChart;
@@ -90,7 +90,7 @@ System.register(['../common/widget-base', '../common/constants', '../common/deco
       inlineView = _commonCommon.inlineView;
       customElement = _commonCommon.customElement;
       children = _commonCommon.children;
-    }, function (_syncfusionJavascriptScriptsEjDatavisualizationEjSunburstchartMin) {}],
+    }],
     execute: function () {
       _export('ejSunburstChart', ejSunburstChart = (_dec = customElement(constants.elementPrefix + 'sunburst-chart'), _dec2 = inlineView('' + constants.aureliaTemplateString), _dec3 = generateBindables('ejSunburstChart', ['background', 'valueMemberPath', 'border', 'segmentBorder', 'dataSource', 'palette', 'parentNode', 'xName', 'yName', 'isResponsive', 'size', 'visible', 'tooltip', 'points', 'startAngle', 'endAngle', 'radius', 'innerRadius', 'dataLabelSettings', 'title', 'highlightSettings', 'selectionSettings', 'levels', 'legend', 'theme', 'margin', 'enableAnimation', 'opacity', 'zoomSettings', 'animationType']), _dec4 = inject(Element), _dec5 = children(constants.elementPrefix + 'sunburst-levels'), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = (_class2 = function (_WidgetBase) {
         _inherits(ejSunburstChart, _WidgetBase);

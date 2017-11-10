@@ -1,6 +1,6 @@
 'use strict';
 
-System.register(['../common/widget-base', '../common/constants', '../common/decorators', '../common/common', '../common/template-processor', 'syncfusion-javascript/Scripts/ej/web/ej.radialmenu.min'], function (_export, _context) {
+System.register(['../common/widget-base', '../common/constants', '../common/decorators', '../common/common', '../common/template-processor'], function (_export, _context) {
   "use strict";
 
   var WidgetBase, constants, generateBindables, inject, inlineView, customElement, children, TemplatingEngine, TemplateProcessor, _dec, _dec2, _dec3, _dec4, _dec5, _class, _desc, _value, _class2, _descriptor, ejRadialMenu;
@@ -93,7 +93,7 @@ System.register(['../common/widget-base', '../common/constants', '../common/deco
       TemplatingEngine = _commonCommon.TemplatingEngine;
     }, function (_commonTemplateProcessor) {
       TemplateProcessor = _commonTemplateProcessor.TemplateProcessor;
-    }, function (_syncfusionJavascriptScriptsEjWebEjRadialmenuMin) {}],
+    }],
     execute: function () {
       _export('ejRadialMenu', ejRadialMenu = (_dec = customElement(constants.elementPrefix + 'radial-menu'), _dec2 = inlineView('' + constants.aureliaTemplateString), _dec3 = generateBindables('ejRadialMenu', ['autoOpen', 'backImageClass', 'cssClass', 'enableAnimation', 'imageClass', 'items', 'radius', 'targetElementId', 'position']), _dec4 = inject(Element, TemplatingEngine), _dec5 = children(constants.elementPrefix + 'item'), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = (_class2 = function (_WidgetBase) {
         _inherits(ejRadialMenu, _WidgetBase);

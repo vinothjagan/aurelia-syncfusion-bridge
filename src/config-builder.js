@@ -1,6 +1,9 @@
 /**
 * Plugin configuration builder
 */
+
+import { PLATFORM } from 'aurelia-pal';
+
 export class EjConfigBuilder {
 
   resources: string[] = [];
@@ -96,315 +99,315 @@ export class EjConfigBuilder {
     return this;
   }
   ejGrid(): EjConfigBuilder {
-    this.resources.push('./grid/grid');
-    this.resources.push('./grid/column');
+    this.resources.push(PLATFORM.moduleName('./grid/grid'));
+    this.resources.push(PLATFORM.moduleName('./grid/column'));
     return this;
   }
   ejChart(): EjConfigBuilder {
-    this.resources.push('./chart/chart');
-    this.resources.push('./chart/series');
+    this.resources.push(PLATFORM.moduleName('./chart/chart'));
+    this.resources.push(PLATFORM.moduleName('./chart/series'));
     return this;
   }
   ejSunburstChart(): EjConfigBuilder {
-    this.resources.push('./sunburstchart/sunburstchart');
-    this.resources.push('./sunburstchart/sunburstlevels');
+    this.resources.push(PLATFORM.moduleName('./sunburstchart/sunburstchart'));
+    this.resources.push(PLATFORM.moduleName('./sunburstchart/sunburstlevels'));
     return this;
   }
   ejMap(): EjConfigBuilder {
-    this.resources.push('./map/map');
-    this.resources.push('./map/layer');
+    this.resources.push(PLATFORM.moduleName('./map/map'));
+    this.resources.push(PLATFORM.moduleName('./map/layer'));
     return this;
   }
   ejTreeMap(): EjConfigBuilder {
-    this.resources.push('./treemap/treemap');
-    this.resources.push('./treemap/level');
+    this.resources.push(PLATFORM.moduleName('./treemap/treemap'));
+    this.resources.push(PLATFORM.moduleName('./treemap/level'));
     return this;
   }
   ejRangeNavigator(): EjConfigBuilder {
-    this.resources.push('./rangenavigator/rangenavigator');
-    this.resources.push('./rangenavigator/rangeseries');
+    this.resources.push(PLATFORM.moduleName('./rangenavigator/rangenavigator'));
+    this.resources.push(PLATFORM.moduleName('./rangenavigator/rangeseries'));
     return this;
   }
   ejDiagram(): EjConfigBuilder {
-    this.resources.push('./diagram/diagram');
+    this.resources.push(PLATFORM.moduleName('./diagram/diagram'));
     return this;
   }
   ejHeatMap(): EjConfigBuilder {
-    this.resources.push('./heatmap/heatmap');
+    this.resources.push(PLATFORM.moduleName('./heatmap/heatmap'));
     return this;
   }
   ejHeatMapLegend(): EjConfigBuilder {
-    this.resources.push('./heatmaplegend/heatmaplegend');
+    this.resources.push(PLATFORM.moduleName('./heatmaplegend/heatmaplegend'));
     return this;
   }
   ejSparkline(): EjConfigBuilder {
-    this.resources.push('./sparkline/sparkline');
+    this.resources.push(PLATFORM.moduleName('./sparkline/sparkline'));
     return this;
   }
   ejSymbolPalette(): EjConfigBuilder {
-    this.resources.push('./symbolpalette/symbolpalette');
+    this.resources.push(PLATFORM.moduleName('./symbolpalette/symbolpalette'));
     return this;
   }
   ejOverview(): EjConfigBuilder {
-    this.resources.push('./overview/overview');
+    this.resources.push(PLATFORM.moduleName('./overview/overview'));
     return this;
   }
   ejPager(): EjConfigBuilder {
-    this.resources.push('./pager/pager');
+    this.resources.push(PLATFORM.moduleName('./pager/pager'));
     return this;
   }
   ejBulletGraph(): EjConfigBuilder {
-    this.resources.push('./bulletgraph/bulletgraph');
-    this.resources.push('./bulletgraph/qualitativerange');
+    this.resources.push(PLATFORM.moduleName('./bulletgraph/bulletgraph'));
+    this.resources.push(PLATFORM.moduleName('./bulletgraph/qualitativerange'));
     return this;
   }
   ejCircularGauge(): EjConfigBuilder {
-    this.resources.push('./circulargauge/circulargauge');
+    this.resources.push(PLATFORM.moduleName('./circulargauge/circulargauge'));
     return this;
   }
   ejLinearGauge(): EjConfigBuilder {
-    this.resources.push('./lineargauge/lineargauge');
+    this.resources.push(PLATFORM.moduleName('./lineargauge/lineargauge'));
     return this;
   }
   ejDigitalGauge(): EjConfigBuilder {
-    this.resources.push('./digitalgauge/digitalgauge');
+    this.resources.push(PLATFORM.moduleName('./digitalgauge/digitalgauge'));
     return this;
   }
   ejSplitter(): EjConfigBuilder {
-    this.resources.push('./splitter/splitter');
+    this.resources.push(PLATFORM.moduleName('./splitter/splitter'));
     return this;
   }
   ejDatePicker(): EjConfigBuilder {
-    this.resources.push('./datepicker/datepicker');
+    this.resources.push(PLATFORM.moduleName('./datepicker/datepicker'));
     return this;
   }
   ejGantt(): EjConfigBuilder {
-    this.resources.push('./gantt/gantt');
+    this.resources.push(PLATFORM.moduleName('./gantt/gantt'));
     return this;
   }
   ejTreeGrid(): EjConfigBuilder {
-    this.resources.push('./treegrid/treegrid');
-    this.resources.push('./treegrid/treegridcolumn');
+    this.resources.push(PLATFORM.moduleName('./treegrid/treegrid'));
+    this.resources.push(PLATFORM.moduleName('./treegrid/treegridcolumn'));
     return this;
   }
   ejColorPicker(): EjConfigBuilder {
-    this.resources.push('./colorpicker/colorpicker');
+    this.resources.push(PLATFORM.moduleName('./colorpicker/colorpicker'));
     return this;
   }
   ejDialog(): EjConfigBuilder {
-    this.resources.push('./dialog/dialog');
+    this.resources.push(PLATFORM.moduleName('./dialog/dialog'));
     return this;
   }
   ejScroller(): EjConfigBuilder {
-    this.resources.push('./scroller/scroller');
+    this.resources.push(PLATFORM.moduleName('./scroller/scroller'));
     return this;
   }
   ejBarcode(): EjConfigBuilder {
-    this.resources.push('./barcode/barcode');
+    this.resources.push(PLATFORM.moduleName('./barcode/barcode'));
     return this;
   }
   ejPdfViewer(): EjConfigBuilder {
-    this.resources.push('./pdfviewer/pdfviewer');
+    this.resources.push(PLATFORM.moduleName('./pdfviewer/pdfviewer'));
     return this;
   }
   ejNumericTextbox(): EjConfigBuilder {
-    this.resources.push('./numerictextbox/numerictextbox');
+    this.resources.push(PLATFORM.moduleName('./numerictextbox/numerictextbox'));
     return this;
   }
   ejCurrencyTextbox(): EjConfigBuilder {
-    this.resources.push('./currencytextbox/currencytextbox');
+    this.resources.push(PLATFORM.moduleName('./currencytextbox/currencytextbox'));
     return this;
   }
   ejPercentageTextbox(): EjConfigBuilder {
-    this.resources.push('./percentagetextbox/percentagetextbox');
+    this.resources.push(PLATFORM.moduleName('./percentagetextbox/percentagetextbox'));
     return this;
   }
   ejTimePicker(): EjConfigBuilder {
-    this.resources.push('./timepicker/timepicker');
+    this.resources.push(PLATFORM.moduleName('./timepicker/timepicker'));
     return this;
   }
   ejToolbar(): EjConfigBuilder {
-    this.resources.push('./toolbar/toolbar');
+    this.resources.push(PLATFORM.moduleName('./toolbar/toolbar'));
     return this;
   }
   ejMenu(): EjConfigBuilder {
-    this.resources.push('./menu/menu');
+    this.resources.push(PLATFORM.moduleName('./menu/menu'));
     return this;
   }
   ejMaskEdit(): EjConfigBuilder {
-    this.resources.push('./maskedit/maskedit');
+    this.resources.push(PLATFORM.moduleName('./maskedit/maskedit'));
     return this;
   }
   ejTreeView(): EjConfigBuilder {
-    this.resources.push('./treeview/treeview');
+    this.resources.push(PLATFORM.moduleName('./treeview/treeview'));
     return this;
   }
   ejKanban(): EjConfigBuilder {
-    this.resources.push('./kanban/kanban');
-    this.resources.push('./kanban/kanbancolumn');
+    this.resources.push(PLATFORM.moduleName('./kanban/kanban'));
+    this.resources.push(PLATFORM.moduleName('./kanban/kanbancolumn'));
     return this;
   }
   ejRibbon(): EjConfigBuilder {
-    this.resources.push('./ribbon/ribbon');
+    this.resources.push(PLATFORM.moduleName('./ribbon/ribbon'));
     return this;
   }
   ejSpreadsheet(): EjConfigBuilder {
-    this.resources.push('./spreadsheet/spreadsheet');
-    this.resources.push('./spreadsheet/sheet');
+    this.resources.push(PLATFORM.moduleName('./spreadsheet/spreadsheet'));
+    this.resources.push(PLATFORM.moduleName('./spreadsheet/sheet'));
     return this;
   }
   ejRating(): EjConfigBuilder {
-    this.resources.push('./rating/rating');
+    this.resources.push(PLATFORM.moduleName('./rating/rating'));
     return this;
   }
   ejListBox(): EjConfigBuilder {
-    this.resources.push('./listbox/listbox');
+    this.resources.push(PLATFORM.moduleName('./listbox/listbox'));
     return this;
   }
   ejListView(): EjConfigBuilder {
-    this.resources.push('./listview/listview');
+    this.resources.push(PLATFORM.moduleName('./listview/listview'));
     return this;
   }
   ejNavigationDrawer(): EjConfigBuilder {
-    this.resources.push('./navigationdrawer/navigationdrawer');
+    this.resources.push(PLATFORM.moduleName('./navigationdrawer/navigationdrawer'));
     return this;
   }
   ejRotator(): EjConfigBuilder {
-    this.resources.push('./rotator/rotator');
+    this.resources.push(PLATFORM.moduleName('./rotator/rotator'));
     return this;
   }
   ejRTE(): EjConfigBuilder {
-    this.resources.push('./rte/rte');
+    this.resources.push(PLATFORM.moduleName('./rte/rte'));
     return this;
   }
   ejDropDownList(): EjConfigBuilder {
-    this.resources.push('./dropdownlist/dropdownlist');
+    this.resources.push(PLATFORM.moduleName('./dropdownlist/dropdownlist'));
     return this;
   }
   ejAutocomplete(): EjConfigBuilder {
-    this.resources.push('./autocomplete/autocomplete');
+    this.resources.push(PLATFORM.moduleName('./autocomplete/autocomplete'));
     return this;
   }
   ejRadialMenu(): EjConfigBuilder {
-    this.resources.push('./radialmenu/radialmenu');
-    this.resources.push('./radialmenu/item');
+    this.resources.push(PLATFORM.moduleName('./radialmenu/radialmenu'));
+    this.resources.push(PLATFORM.moduleName('./radialmenu/item'));
     return this;
   }
   ejRadialSlider(): EjConfigBuilder {
-    this.resources.push('./radialslider/radialslider');
+    this.resources.push(PLATFORM.moduleName('./radialslider/radialslider'));
     return this;
   }
   ejTile(): EjConfigBuilder {
-    this.resources.push('./tile/tile');
+    this.resources.push(PLATFORM.moduleName('./tile/tile'));
     return this;
   }
   ejAccordion(): EjConfigBuilder {
-    this.resources.push('./accordion/accordion');
+    this.resources.push(PLATFORM.moduleName('./accordion/accordion'));
     return this;
   }
   ejTab(): EjConfigBuilder {
-    this.resources.push('./tab/tab');
+    this.resources.push(PLATFORM.moduleName('./tab/tab'));
     return this;
   }
   ejCheckBox(): EjConfigBuilder {
-    this.resources.push('./checkbox/checkbox');
+    this.resources.push(PLATFORM.moduleName('./checkbox/checkbox'));
     return this;
   }
   ejRadioButton(): EjConfigBuilder {
-    this.resources.push('./radiobutton/radiobutton');
+    this.resources.push(PLATFORM.moduleName('./radiobutton/radiobutton'));
     return this;
   }
   ejToggleButton(): EjConfigBuilder {
-    this.resources.push('./togglebutton/togglebutton');
+    this.resources.push(PLATFORM.moduleName('./togglebutton/togglebutton'));
     return this;
   }
   ejSplitButton(): EjConfigBuilder {
-    this.resources.push('./splitbutton/splitbutton');
+    this.resources.push(PLATFORM.moduleName('./splitbutton/splitbutton'));
     return this;
   }
   ejGroupButton(): EjConfigBuilder {
-    this.resources.push('./groupbutton/groupbutton');
+    this.resources.push(PLATFORM.moduleName('./groupbutton/groupbutton'));
     return this;
   }
   ejDateTimePicker(): EjConfigBuilder {
-    this.resources.push('./datetimepicker/datetimepicker');
+    this.resources.push(PLATFORM.moduleName('./datetimepicker/datetimepicker'));
     return this;
   }
   ejDateRangePicker(): EjConfigBuilder {
-    this.resources.push('./daterangepicker/daterangepicker');
+    this.resources.push(PLATFORM.moduleName('./daterangepicker/daterangepicker'));
     return this;
   }
   ejProgressBar(): EjConfigBuilder {
-    this.resources.push('./progressbar/progressbar');
+    this.resources.push(PLATFORM.moduleName('./progressbar/progressbar'));
     return this;
   }
   ejTagCloud(): EjConfigBuilder {
-    this.resources.push('./tagcloud/tagcloud');
+    this.resources.push(PLATFORM.moduleName('./tagcloud/tagcloud'));
     return this;
   }
   ejButton(): EjConfigBuilder {
-    this.resources.push('./button/button');
+    this.resources.push(PLATFORM.moduleName('./button/button'));
     return this;
   }
   ejSlider(): EjConfigBuilder {
-    this.resources.push('./slider/slider');
+    this.resources.push(PLATFORM.moduleName('./slider/slider'));
     return this;
   }
   ejFileExplorer(): EjConfigBuilder {
-    this.resources.push('./fileexplorer/fileexplorer');
+    this.resources.push(PLATFORM.moduleName('./fileexplorer/fileexplorer'));
     return this;
   }
   ejPivotGrid(): EjConfigBuilder {
-    this.resources.push('./pivotgrid/pivotgrid');
+    this.resources.push(PLATFORM.moduleName('./pivotgrid/pivotgrid'));
     return this;
   }
   ejPivotChart(): EjConfigBuilder {
-    this.resources.push('./pivotchart/pivotchart');
+    this.resources.push(PLATFORM.moduleName('./pivotchart/pivotchart'));
     return this;
   }
   ejPivotGauge(): EjConfigBuilder {
-    this.resources.push('./pivotgauge/pivotgauge');
+    this.resources.push(PLATFORM.moduleName('./pivotgauge/pivotgauge'));
     return this;
   }
   ejPivotSchemaDesigner(): EjConfigBuilder {
-    this.resources.push('./pivotschemadesigner/pivotschemadesigner');
+    this.resources.push(PLATFORM.moduleName('./pivotschemadesigner/pivotschemadesigner'));
     return this;
   }
   ejPivotTreeMap(): EjConfigBuilder {
-    this.resources.push('./pivottreemap/pivottreemap');
+    this.resources.push(PLATFORM.moduleName('./pivottreemap/pivottreemap'));
     return this;
   }
   ejWaitingPopup(): EjConfigBuilder {
-    this.resources.push('./waitingpopup/waitingpopup');
+    this.resources.push(PLATFORM.moduleName('./waitingpopup/waitingpopup'));
     return this;
   }
   ejReportViewer(): EjConfigBuilder {
-    this.resources.push('./reportviewer/reportviewer');
+    this.resources.push(PLATFORM.moduleName('./reportviewer/reportviewer'));
     return this;
   }
   ejSchedule(): EjConfigBuilder {
-    this.resources.push('./schedule/schedule');
-    this.resources.push('./schedule/scheduleresource');
+    this.resources.push(PLATFORM.moduleName('./schedule/schedule'));
+    this.resources.push(PLATFORM.moduleName('./schedule/scheduleresource'));
     return this;
   }
   ejUploadbox(): EjConfigBuilder {
-    this.resources.push('./uploadbox/uploadbox');
+    this.resources.push(PLATFORM.moduleName('./uploadbox/uploadbox'));
     return this;
   }
   ejSignature(): EjConfigBuilder {
-    this.resources.push('./signature/signature');
+    this.resources.push(PLATFORM.moduleName('./signature/signature'));
     return this;
   }
   ejTooltip(): EjConfigBuilder {
-    this.resources.push('./tooltip/tooltip');
+    this.resources.push(PLATFORM.moduleName('./tooltip/tooltip'));
     return this;
   }
   ejSpellCheck(): EjConfigBuilder {
-    this.resources.push('./spellcheck/spellcheck');
+    this.resources.push(PLATFORM.moduleName('./spellcheck/spellcheck'));
     return this;
   }
   ejTemplate(): EjConfigBuilder {
-    this.resources.push('./common/template');
+    this.resources.push(PLATFORM.moduleName('./common/template'));
     return this;
   }
 }

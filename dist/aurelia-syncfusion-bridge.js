@@ -1,3 +1,4 @@
+import {PLATFORM} from 'aurelia-pal';
 import {customAttribute,bindable,customElement,children,TemplatingEngine,inlineView,BindableProperty,HtmlBehaviorResource,noView,processContent,TargetInstruction} from 'aurelia-templating';
 import {inject,Container} from 'aurelia-dependency-injection';
 import {metadata} from 'aurelia-metadata';
@@ -7,6 +8,7 @@ import {bindingMode,BindingEngine} from 'aurelia-binding';
 /**
 * Plugin configuration builder
 */
+
 export class EjConfigBuilder {
 
   resources: string[] = [];
@@ -102,315 +104,315 @@ export class EjConfigBuilder {
     return this;
   }
   ejGrid(): EjConfigBuilder {
-    this.resources.push('./grid/grid');
-    this.resources.push('./grid/column');
+    this.resources.push(PLATFORM.moduleName('./grid/grid'));
+    this.resources.push(PLATFORM.moduleName('./grid/column'));
     return this;
   }
   ejChart(): EjConfigBuilder {
-    this.resources.push('./chart/chart');
-    this.resources.push('./chart/series');
+    this.resources.push(PLATFORM.moduleName('./chart/chart'));
+    this.resources.push(PLATFORM.moduleName('./chart/series'));
     return this;
   }
   ejSunburstChart(): EjConfigBuilder {
-    this.resources.push('./sunburstchart/sunburstchart');
-    this.resources.push('./sunburstchart/sunburstlevels');
+    this.resources.push(PLATFORM.moduleName('./sunburstchart/sunburstchart'));
+    this.resources.push(PLATFORM.moduleName('./sunburstchart/sunburstlevels'));
     return this;
   }
   ejMap(): EjConfigBuilder {
-    this.resources.push('./map/map');
-    this.resources.push('./map/layer');
+    this.resources.push(PLATFORM.moduleName('./map/map'));
+    this.resources.push(PLATFORM.moduleName('./map/layer'));
     return this;
   }
   ejTreeMap(): EjConfigBuilder {
-    this.resources.push('./treemap/treemap');
-    this.resources.push('./treemap/level');
+    this.resources.push(PLATFORM.moduleName('./treemap/treemap'));
+    this.resources.push(PLATFORM.moduleName('./treemap/level'));
     return this;
   }
   ejRangeNavigator(): EjConfigBuilder {
-    this.resources.push('./rangenavigator/rangenavigator');
-    this.resources.push('./rangenavigator/rangeseries');
+    this.resources.push(PLATFORM.moduleName('./rangenavigator/rangenavigator'));
+    this.resources.push(PLATFORM.moduleName('./rangenavigator/rangeseries'));
     return this;
   }
   ejDiagram(): EjConfigBuilder {
-    this.resources.push('./diagram/diagram');
+    this.resources.push(PLATFORM.moduleName('./diagram/diagram'));
     return this;
   }
   ejHeatMap(): EjConfigBuilder {
-    this.resources.push('./heatmap/heatmap');
+    this.resources.push(PLATFORM.moduleName('./heatmap/heatmap'));
     return this;
   }
   ejHeatMapLegend(): EjConfigBuilder {
-    this.resources.push('./heatmaplegend/heatmaplegend');
+    this.resources.push(PLATFORM.moduleName('./heatmaplegend/heatmaplegend'));
     return this;
   }
   ejSparkline(): EjConfigBuilder {
-    this.resources.push('./sparkline/sparkline');
+    this.resources.push(PLATFORM.moduleName('./sparkline/sparkline'));
     return this;
   }
   ejSymbolPalette(): EjConfigBuilder {
-    this.resources.push('./symbolpalette/symbolpalette');
+    this.resources.push(PLATFORM.moduleName('./symbolpalette/symbolpalette'));
     return this;
   }
   ejOverview(): EjConfigBuilder {
-    this.resources.push('./overview/overview');
+    this.resources.push(PLATFORM.moduleName('./overview/overview'));
     return this;
   }
   ejPager(): EjConfigBuilder {
-    this.resources.push('./pager/pager');
+    this.resources.push(PLATFORM.moduleName('./pager/pager'));
     return this;
   }
   ejBulletGraph(): EjConfigBuilder {
-    this.resources.push('./bulletgraph/bulletgraph');
-    this.resources.push('./bulletgraph/qualitativerange');
+    this.resources.push(PLATFORM.moduleName('./bulletgraph/bulletgraph'));
+    this.resources.push(PLATFORM.moduleName('./bulletgraph/qualitativerange'));
     return this;
   }
   ejCircularGauge(): EjConfigBuilder {
-    this.resources.push('./circulargauge/circulargauge');
+    this.resources.push(PLATFORM.moduleName('./circulargauge/circulargauge'));
     return this;
   }
   ejLinearGauge(): EjConfigBuilder {
-    this.resources.push('./lineargauge/lineargauge');
+    this.resources.push(PLATFORM.moduleName('./lineargauge/lineargauge'));
     return this;
   }
   ejDigitalGauge(): EjConfigBuilder {
-    this.resources.push('./digitalgauge/digitalgauge');
+    this.resources.push(PLATFORM.moduleName('./digitalgauge/digitalgauge'));
     return this;
   }
   ejSplitter(): EjConfigBuilder {
-    this.resources.push('./splitter/splitter');
+    this.resources.push(PLATFORM.moduleName('./splitter/splitter'));
     return this;
   }
   ejDatePicker(): EjConfigBuilder {
-    this.resources.push('./datepicker/datepicker');
+    this.resources.push(PLATFORM.moduleName('./datepicker/datepicker'));
     return this;
   }
   ejGantt(): EjConfigBuilder {
-    this.resources.push('./gantt/gantt');
+    this.resources.push(PLATFORM.moduleName('./gantt/gantt'));
     return this;
   }
   ejTreeGrid(): EjConfigBuilder {
-    this.resources.push('./treegrid/treegrid');
-    this.resources.push('./treegrid/treegridcolumn');
+    this.resources.push(PLATFORM.moduleName('./treegrid/treegrid'));
+    this.resources.push(PLATFORM.moduleName('./treegrid/treegridcolumn'));
     return this;
   }
   ejColorPicker(): EjConfigBuilder {
-    this.resources.push('./colorpicker/colorpicker');
+    this.resources.push(PLATFORM.moduleName('./colorpicker/colorpicker'));
     return this;
   }
   ejDialog(): EjConfigBuilder {
-    this.resources.push('./dialog/dialog');
+    this.resources.push(PLATFORM.moduleName('./dialog/dialog'));
     return this;
   }
   ejScroller(): EjConfigBuilder {
-    this.resources.push('./scroller/scroller');
+    this.resources.push(PLATFORM.moduleName('./scroller/scroller'));
     return this;
   }
   ejBarcode(): EjConfigBuilder {
-    this.resources.push('./barcode/barcode');
+    this.resources.push(PLATFORM.moduleName('./barcode/barcode'));
     return this;
   }
   ejPdfViewer(): EjConfigBuilder {
-    this.resources.push('./pdfviewer/pdfviewer');
+    this.resources.push(PLATFORM.moduleName('./pdfviewer/pdfviewer'));
     return this;
   }
   ejNumericTextbox(): EjConfigBuilder {
-    this.resources.push('./numerictextbox/numerictextbox');
+    this.resources.push(PLATFORM.moduleName('./numerictextbox/numerictextbox'));
     return this;
   }
   ejCurrencyTextbox(): EjConfigBuilder {
-    this.resources.push('./currencytextbox/currencytextbox');
+    this.resources.push(PLATFORM.moduleName('./currencytextbox/currencytextbox'));
     return this;
   }
   ejPercentageTextbox(): EjConfigBuilder {
-    this.resources.push('./percentagetextbox/percentagetextbox');
+    this.resources.push(PLATFORM.moduleName('./percentagetextbox/percentagetextbox'));
     return this;
   }
   ejTimePicker(): EjConfigBuilder {
-    this.resources.push('./timepicker/timepicker');
+    this.resources.push(PLATFORM.moduleName('./timepicker/timepicker'));
     return this;
   }
   ejToolbar(): EjConfigBuilder {
-    this.resources.push('./toolbar/toolbar');
+    this.resources.push(PLATFORM.moduleName('./toolbar/toolbar'));
     return this;
   }
   ejMenu(): EjConfigBuilder {
-    this.resources.push('./menu/menu');
+    this.resources.push(PLATFORM.moduleName('./menu/menu'));
     return this;
   }
   ejMaskEdit(): EjConfigBuilder {
-    this.resources.push('./maskedit/maskedit');
+    this.resources.push(PLATFORM.moduleName('./maskedit/maskedit'));
     return this;
   }
   ejTreeView(): EjConfigBuilder {
-    this.resources.push('./treeview/treeview');
+    this.resources.push(PLATFORM.moduleName('./treeview/treeview'));
     return this;
   }
   ejKanban(): EjConfigBuilder {
-    this.resources.push('./kanban/kanban');
-    this.resources.push('./kanban/kanbancolumn');
+    this.resources.push(PLATFORM.moduleName('./kanban/kanban'));
+    this.resources.push(PLATFORM.moduleName('./kanban/kanbancolumn'));
     return this;
   }
   ejRibbon(): EjConfigBuilder {
-    this.resources.push('./ribbon/ribbon');
+    this.resources.push(PLATFORM.moduleName('./ribbon/ribbon'));
     return this;
   }
   ejSpreadsheet(): EjConfigBuilder {
-    this.resources.push('./spreadsheet/spreadsheet');
-    this.resources.push('./spreadsheet/sheet');
+    this.resources.push(PLATFORM.moduleName('./spreadsheet/spreadsheet'));
+    this.resources.push(PLATFORM.moduleName('./spreadsheet/sheet'));
     return this;
   }
   ejRating(): EjConfigBuilder {
-    this.resources.push('./rating/rating');
+    this.resources.push(PLATFORM.moduleName('./rating/rating'));
     return this;
   }
   ejListBox(): EjConfigBuilder {
-    this.resources.push('./listbox/listbox');
+    this.resources.push(PLATFORM.moduleName('./listbox/listbox'));
     return this;
   }
   ejListView(): EjConfigBuilder {
-    this.resources.push('./listview/listview');
+    this.resources.push(PLATFORM.moduleName('./listview/listview'));
     return this;
   }
   ejNavigationDrawer(): EjConfigBuilder {
-    this.resources.push('./navigationdrawer/navigationdrawer');
+    this.resources.push(PLATFORM.moduleName('./navigationdrawer/navigationdrawer'));
     return this;
   }
   ejRotator(): EjConfigBuilder {
-    this.resources.push('./rotator/rotator');
+    this.resources.push(PLATFORM.moduleName('./rotator/rotator'));
     return this;
   }
   ejRTE(): EjConfigBuilder {
-    this.resources.push('./rte/rte');
+    this.resources.push(PLATFORM.moduleName('./rte/rte'));
     return this;
   }
   ejDropDownList(): EjConfigBuilder {
-    this.resources.push('./dropdownlist/dropdownlist');
+    this.resources.push(PLATFORM.moduleName('./dropdownlist/dropdownlist'));
     return this;
   }
   ejAutocomplete(): EjConfigBuilder {
-    this.resources.push('./autocomplete/autocomplete');
+    this.resources.push(PLATFORM.moduleName('./autocomplete/autocomplete'));
     return this;
   }
   ejRadialMenu(): EjConfigBuilder {
-    this.resources.push('./radialmenu/radialmenu');
-    this.resources.push('./radialmenu/item');
+    this.resources.push(PLATFORM.moduleName('./radialmenu/radialmenu'));
+    this.resources.push(PLATFORM.moduleName('./radialmenu/item'));
     return this;
   }
   ejRadialSlider(): EjConfigBuilder {
-    this.resources.push('./radialslider/radialslider');
+    this.resources.push(PLATFORM.moduleName('./radialslider/radialslider'));
     return this;
   }
   ejTile(): EjConfigBuilder {
-    this.resources.push('./tile/tile');
+    this.resources.push(PLATFORM.moduleName('./tile/tile'));
     return this;
   }
   ejAccordion(): EjConfigBuilder {
-    this.resources.push('./accordion/accordion');
+    this.resources.push(PLATFORM.moduleName('./accordion/accordion'));
     return this;
   }
   ejTab(): EjConfigBuilder {
-    this.resources.push('./tab/tab');
+    this.resources.push(PLATFORM.moduleName('./tab/tab'));
     return this;
   }
   ejCheckBox(): EjConfigBuilder {
-    this.resources.push('./checkbox/checkbox');
+    this.resources.push(PLATFORM.moduleName('./checkbox/checkbox'));
     return this;
   }
   ejRadioButton(): EjConfigBuilder {
-    this.resources.push('./radiobutton/radiobutton');
+    this.resources.push(PLATFORM.moduleName('./radiobutton/radiobutton'));
     return this;
   }
   ejToggleButton(): EjConfigBuilder {
-    this.resources.push('./togglebutton/togglebutton');
+    this.resources.push(PLATFORM.moduleName('./togglebutton/togglebutton'));
     return this;
   }
   ejSplitButton(): EjConfigBuilder {
-    this.resources.push('./splitbutton/splitbutton');
+    this.resources.push(PLATFORM.moduleName('./splitbutton/splitbutton'));
     return this;
   }
   ejGroupButton(): EjConfigBuilder {
-    this.resources.push('./groupbutton/groupbutton');
+    this.resources.push(PLATFORM.moduleName('./groupbutton/groupbutton'));
     return this;
   }
   ejDateTimePicker(): EjConfigBuilder {
-    this.resources.push('./datetimepicker/datetimepicker');
+    this.resources.push(PLATFORM.moduleName('./datetimepicker/datetimepicker'));
     return this;
   }
   ejDateRangePicker(): EjConfigBuilder {
-    this.resources.push('./daterangepicker/daterangepicker');
+    this.resources.push(PLATFORM.moduleName('./daterangepicker/daterangepicker'));
     return this;
   }
   ejProgressBar(): EjConfigBuilder {
-    this.resources.push('./progressbar/progressbar');
+    this.resources.push(PLATFORM.moduleName('./progressbar/progressbar'));
     return this;
   }
   ejTagCloud(): EjConfigBuilder {
-    this.resources.push('./tagcloud/tagcloud');
+    this.resources.push(PLATFORM.moduleName('./tagcloud/tagcloud'));
     return this;
   }
   ejButton(): EjConfigBuilder {
-    this.resources.push('./button/button');
+    this.resources.push(PLATFORM.moduleName('./button/button'));
     return this;
   }
   ejSlider(): EjConfigBuilder {
-    this.resources.push('./slider/slider');
+    this.resources.push(PLATFORM.moduleName('./slider/slider'));
     return this;
   }
   ejFileExplorer(): EjConfigBuilder {
-    this.resources.push('./fileexplorer/fileexplorer');
+    this.resources.push(PLATFORM.moduleName('./fileexplorer/fileexplorer'));
     return this;
   }
   ejPivotGrid(): EjConfigBuilder {
-    this.resources.push('./pivotgrid/pivotgrid');
+    this.resources.push(PLATFORM.moduleName('./pivotgrid/pivotgrid'));
     return this;
   }
   ejPivotChart(): EjConfigBuilder {
-    this.resources.push('./pivotchart/pivotchart');
+    this.resources.push(PLATFORM.moduleName('./pivotchart/pivotchart'));
     return this;
   }
   ejPivotGauge(): EjConfigBuilder {
-    this.resources.push('./pivotgauge/pivotgauge');
+    this.resources.push(PLATFORM.moduleName('./pivotgauge/pivotgauge'));
     return this;
   }
   ejPivotSchemaDesigner(): EjConfigBuilder {
-    this.resources.push('./pivotschemadesigner/pivotschemadesigner');
+    this.resources.push(PLATFORM.moduleName('./pivotschemadesigner/pivotschemadesigner'));
     return this;
   }
   ejPivotTreeMap(): EjConfigBuilder {
-    this.resources.push('./pivottreemap/pivottreemap');
+    this.resources.push(PLATFORM.moduleName('./pivottreemap/pivottreemap'));
     return this;
   }
   ejWaitingPopup(): EjConfigBuilder {
-    this.resources.push('./waitingpopup/waitingpopup');
+    this.resources.push(PLATFORM.moduleName('./waitingpopup/waitingpopup'));
     return this;
   }
   ejReportViewer(): EjConfigBuilder {
-    this.resources.push('./reportviewer/reportviewer');
+    this.resources.push(PLATFORM.moduleName('./reportviewer/reportviewer'));
     return this;
   }
   ejSchedule(): EjConfigBuilder {
-    this.resources.push('./schedule/schedule');
-    this.resources.push('./schedule/scheduleresource');
+    this.resources.push(PLATFORM.moduleName('./schedule/schedule'));
+    this.resources.push(PLATFORM.moduleName('./schedule/scheduleresource'));
     return this;
   }
   ejUploadbox(): EjConfigBuilder {
-    this.resources.push('./uploadbox/uploadbox');
+    this.resources.push(PLATFORM.moduleName('./uploadbox/uploadbox'));
     return this;
   }
   ejSignature(): EjConfigBuilder {
-    this.resources.push('./signature/signature');
+    this.resources.push(PLATFORM.moduleName('./signature/signature'));
     return this;
   }
   ejTooltip(): EjConfigBuilder {
-    this.resources.push('./tooltip/tooltip');
+    this.resources.push(PLATFORM.moduleName('./tooltip/tooltip'));
     return this;
   }
   ejSpellCheck(): EjConfigBuilder {
-    this.resources.push('./spellcheck/spellcheck');
+    this.resources.push(PLATFORM.moduleName('./spellcheck/spellcheck'));
     return this;
   }
   ejTemplate(): EjConfigBuilder {
-    this.resources.push('./common/template');
+    this.resources.push(PLATFORM.moduleName('./common/template'));
     return this;
   }
 }
@@ -431,8 +433,6 @@ export function configure(aurelia, configCallback?: (builder: EjConfigBuilder) =
   }
 }
 
-import 'syncfusion-javascript/Scripts/ej/web/ej.accordion.min';
-
 @customElement(`${constants.elementPrefix}accordion`)
 @inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejAccordion', ['ajaxSettings', 'allowKeyboardNavigation', 'collapseSpeed', 'collapsible', 'cssClass', 'customIcon', 'disabledItems', 'enableAnimation', 'enabled', 'enabledItems', 'enableMultipleOpen', 'enablePersistence', 'enableRTL', 'events', 'expandSpeed', 'headerSize', 'height', 'heightAdjustMode', 'htmlAttributes', 'selectedItemIndex', 'selectedItems', 'showCloseButton', 'showRoundedCorner', 'width'], [], {'enableRTL': 'enableRtl'})
@@ -445,8 +445,6 @@ export class ejAccordion extends WidgetBase {
 }
 
 
-import 'syncfusion-javascript/Scripts/ej/web/ej.autocomplete.min';
-
 @customAttribute(`${constants.attributePrefix}autocomplete`)
 @generateBindables('ejAutocomplete', ['addNewText', 'allowAddNew', 'allowSorting', 'animateType', 'autoFocus', 'caseSensitiveSearch', 'cssClass', 'dataSource', 'delaySuggestionTimeout', 'delimiterChar', 'emptyResultText', 'enableAutoFill', 'enabled', 'enableDistinct', 'enablePersistence', 'enableRTL', 'fields', 'filterType', 'height', 'highlightSearch', 'itemsCount', 'locale', 'minCharacter', 'multiColumnSettings', 'multiSelectMode', 'popupHeight', 'popupWidth', 'query', 'readOnly', 'selectValueByKey', 'showEmptyResultText', 'showLoadingIcon', 'showPopupButton', 'showRoundedCorner', 'showResetIcon', 'sortOrder', 'template', 'validationMessage', 'validationRules', 'value', 'visible', 'watermarkText', 'width'], ['value', 'selectValueByKey'], {'enableRTL': 'enableRtl'})
 @inject(Element)
@@ -457,8 +455,6 @@ export class ejAutocomplete extends WidgetBase {
   }
 }
 
-
-import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.barcode.min';
 
 @customElement(`${constants.elementPrefix}barcode`)
 @inlineView(`${constants.aureliaTemplateString}`)
@@ -471,8 +467,6 @@ export class ejBarcode extends WidgetBase {
   }
 }
 
-
-import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.bulletgraph.min';
 
 @customElement(`${constants.elementPrefix}bullet-graph`)
 @inlineView(`${constants.aureliaTemplateString}`)
@@ -497,8 +491,6 @@ export class QualitativeRange {
 }
 
 
-import 'syncfusion-javascript/Scripts/ej/web/ej.button.min';
-
 @customAttribute(`${constants.attributePrefix}button`)
 @generateBindables('ejButton', ['contentType', 'cssClass', 'enabled', 'enableRTL', 'height', 'htmlAttributes', 'imagePosition', 'prefixIcon', 'repeatButton', 'showRoundedCorner', 'size', 'suffixIcon', 'text', 'timeInterval', 'type', 'width'], [], {'enableRTL': 'enableRtl'})
 @inject(Element)
@@ -510,11 +502,9 @@ export class ejButton extends WidgetBase {
 }
 
 
-import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.chart.min';
-
 @customElement(`${constants.elementPrefix}chart`)
 @inlineView(`${constants.aureliaTemplateString}`)
-@generateBindables('ejChart', ['annotations', 'background', 'backGroundImageUrl', 'border', 'exportSettings', 'chartArea', 'columnDefinitions', 'commonSeriesOptions', 'selectedDataPointIndexes', 'crosshair', 'depth', 'enable3D', 'enableCanvasRendering', 'initSeriesRender', 'enableRotation', 'indicators', 'isResponsive', 'legend', 'locale', 'palette', 'Margin', 'perspectiveAngle', 'primaryXAxis', 'axes', 'primaryYAxis', 'rotation', 'rowDefinitions', 'series', 'sideBySideSeriesPlacement', 'size', 'theme', 'tilt', 'title', 'wallSize', 'zooming'])
+@generateBindables('ejChart', ['annotations', 'background', 'backGroundImageUrl', 'border', 'exportSettings', 'chartArea', 'columnDefinitions', 'commonSeriesOptions', 'selectedDataPointIndexes', 'crosshair', 'depth', 'enable3D', 'enableCanvasRendering', 'initSeriesRender', 'enableRotation', 'indicators', 'isResponsive', 'legend', 'locale', 'palette', 'margin', 'perspectiveAngle', 'primaryXAxis', 'axes', 'primaryYAxis', 'rotation', 'rowDefinitions', 'series', 'sideBySideSeriesPlacement', 'size', 'theme', 'tilt', 'title', 'wallSize', 'zooming'])
 @inject(Element)
 export class ejChart extends WidgetBase {
   @children(`${constants.elementPrefix}series`) series = [];
@@ -535,8 +525,6 @@ export class Series {
 }
 
 
-import 'syncfusion-javascript/Scripts/ej/web/ej.checkbox.min';
-
 @customAttribute(`${constants.attributePrefix}check-box`)
 @generateBindables('ejCheckBox', ['checked', 'checkState', 'cssClass', 'enabled', 'enablePersistence', 'enableRTL', 'enableTriState', 'htmlAttributes', 'id', 'idPrefix', 'name', 'showRoundedCorner', 'size', 'text', 'validationMessage', 'validationRules', 'value'], ['checked', 'checkState'], {'enableRTL': 'enableRtl'})
 @inject(Element)
@@ -547,8 +535,6 @@ export class ejCheckBox extends WidgetBase {
   }
 }
 
-
-import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.circulargauge.min';
 
 @customElement(`${constants.elementPrefix}circular-gauge`)
 @inlineView(`${constants.aureliaTemplateString}`)
@@ -561,8 +547,6 @@ export class ejCircularGauge extends WidgetBase {
   }
 }
 
-
-import 'syncfusion-javascript/Scripts/ej/web/ej.colorpicker.min';
 
 @customAttribute(`${constants.attributePrefix}color-picker`)
 @generateBindables('ejColorPicker', ['buttonText', 'buttonMode', 'columns', 'cssClass', 'custom', 'displayInline', 'enabled', 'enableOpacity', 'htmlAttributes', 'locale', 'modelType', 'opacityValue', 'palette', 'presetType', 'showApplyCancel', 'showClearButton', 'showPreview', 'showRecentColors', 'showSwitcher', 'showTooltip', 'toolIcon', 'tooltipText', 'value'], ['value', 'opacityValue'])
@@ -867,7 +851,7 @@ export class WidgetBase {
 
   bind(ctx, overrideCtx) {
     this.parentCtx = overrideCtx;
-    if (this.widget && this.isEditor) {
+    if (this.widget && this.widget.element && this.isEditor) {
       this.widget.option('value', (this.eValue === undefined ? null : this.eValue));
     }
   }
@@ -1004,20 +988,22 @@ export class WidgetBase {
   update(e) {
     let modelValue;
     let newVal;
-    this.arrayObserver.forEach((arrayProp) => {
-      if (this[arrayProp] instanceof Array) {
-        let prop = this.util.getControlPropertyName(this, arrayProp);
-        modelValue = this.widget.model[prop];
-        if (typeof modelValue === 'function') {
-          modelValue = modelValue();
-          newVal = modelValue;
-          newVal = this.addTwoways(prop);
-          this.widget.option(prop, newVal);
-        } else {
-          this.widget.option(prop, modelValue);
+    if (e.length) {
+      this.arrayObserver.forEach((arrayProp) => {
+        if (this[arrayProp] instanceof Array) {
+          let prop = this.util.getControlPropertyName(this, arrayProp);
+          modelValue = this.widget.model[prop];
+          if (typeof modelValue === 'function') {
+            modelValue = modelValue();
+            newVal = modelValue;
+            newVal = this.addTwoways(prop);
+            this.widget.option(prop, newVal);
+          } else {
+            this.widget.option(prop, modelValue);
+          }
         }
-      }
-    });
+      });
+    }
   }
 
   detached() {
@@ -1029,9 +1015,6 @@ export class WidgetBase {
     }
   }
 }
-
-
-import 'syncfusion-javascript/Scripts/ej/web/ej.editor.min';
 
 @customAttribute(`${constants.attributePrefix}currency-textbox`)
 @generateBindables('ejCurrencyTextbox', ['currencySymbol', 'cssClass', 'decimalPlaces', 'enabled', 'enablePersistence', 'enableRTL', 'enableStrictMode', 'groupSize', 'groupSeparator', 'height', 'htmlAttributes', 'incrementStep', 'locale', 'maxValue', 'minValue', 'name', 'negativePattern', 'positivePattern', 'readOnly', 'showRoundedCorner', 'showSpinButton', 'validateOnType', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'width'], ['value'], {'enableRTL': 'enableRtl'})
@@ -1045,8 +1028,6 @@ export class ejCurrencyTextbox extends WidgetBase {
 }
 
 
-import 'syncfusion-javascript/Scripts/ej/web/ej.datepicker.min';
-
 @customAttribute(`${constants.attributePrefix}date-picker`)
 @generateBindables('ejDatePicker', ['allowEdit', 'allowDrillDown', 'blackoutDates', 'buttonText', 'cssClass', 'dateFormat', 'dayHeaderFormat', 'depthLevel', 'displayInline', 'enableAnimation', 'enabled', 'enablePersistence', 'enableRTL', 'enableStrictMode', 'fields', 'headerFormat', 'height', 'highlightSection', 'highlightWeekend', 'htmlAttributes', 'locale', 'maxDate', 'minDate', 'readOnly', 'showDisabledRange', 'showFooter', 'showOtherMonths', 'showPopupButton', 'showRoundedCorner', 'showTooltip', 'specialDates', 'startDay', 'startLevel', 'stepMonths', 'tooltipFormat', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'weekNumber', 'width'], ['value'], {'enableRTL': 'enableRtl'})
 @inject(Element)
@@ -1058,8 +1039,6 @@ export class ejDatePicker extends WidgetBase {
   }
 }
 
-
-import 'syncfusion-javascript/Scripts/ej/web/ej.daterangepicker.min';
 
 @customAttribute(`${constants.attributePrefix}date-range-picker`)
 @generateBindables('ejDateRangePicker', ['allowEdit', 'buttonText', 'cssClass', 'dateFormat', 'enableTimePicker', 'enabled', 'enablePersistence', 'endDate', 'height', 'locale', 'ranges', 'separator', 'startDate', 'showPopupButton', 'showRoundedCorner', 'timeFormat', 'value', 'watermarkText', 'width'], ['value'])
@@ -1073,8 +1052,6 @@ export class ejDateRangePicker extends WidgetBase {
 }
 
 
-import 'syncfusion-javascript/Scripts/ej/web/ej.datetimepicker.min';
-
 @customAttribute(`${constants.attributePrefix}date-time-picker`)
 @generateBindables('ejDateTimePicker', ['allowEdit', 'buttonText', 'cssClass', 'dateTimeFormat', 'dayHeaderFormat', 'depthLevel', 'enableAnimation', 'enabled', 'enablePersistence', 'enableRTL', 'enableStrictMode', 'headerFormat', 'height', 'htmlAttributes', 'interval', 'locale', 'maxDateTime', 'minDateTime', 'popupPosition', 'readOnly', 'showOtherMonths', 'showPopupButton', 'showRoundedCorner', 'startDay', 'startLevel', 'stepMonths', 'timeDisplayFormat', 'timeDrillDown', 'timePopupWidth', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'width'], ['value'], {'enableRTL': 'enableRtl'})
 @inject(Element)
@@ -1087,11 +1064,9 @@ export class ejDateTimePicker extends WidgetBase {
 }
 
 
-import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.diagram.min';
-
 @customElement(`${constants.elementPrefix}diagram`)
 @inlineView(`${constants.aureliaTemplateString}`)
-@generateBindables('ejDiagram', ['backgroundColor', 'backgroundImage', 'bridgeDirection', 'commandManager', 'connectors', 'connectorTemplate', 'constraints', 'contextMenu', 'dataSourceSettings', 'defaultSettings', 'drawType', 'enableAutoScroll', 'enableContextMenu', 'height', 'historyManager', 'labelRenderingMode', 'layout', 'locale', 'nodes', 'nodeTemplate', 'pageSettings', 'scrollSettings', 'selectedItems', 'showTooltip', 'rulerSettings', 'snapSettings', 'tool', 'tooltip', 'width', 'zoomFactor'])
+@generateBindables('ejDiagram', ['backgroundColor', 'backgroundImage', 'bridgeDirection', 'commandManager', 'connectors', 'connectorTemplate', 'constraints', 'contextMenu', 'dataSourceSettings', 'defaultSettings', 'drawType', 'enableAutoScroll', 'enableContextMenu', 'height', 'historyManager', 'labelRenderingMode', 'layout', 'locale', 'nodes', 'nodeTemplate', 'pageSettings', 'scrollSettings', 'selectedItems', 'showTooltip', 'serializationSettings', 'rulerSettings', 'snapSettings', 'tool', 'tooltip', 'width', 'zoomFactor'])
 @inject(Element)
 export class ejDiagram extends WidgetBase {
   constructor(element) {
@@ -1100,8 +1075,6 @@ export class ejDiagram extends WidgetBase {
   }
 }
 
-
-import 'syncfusion-javascript/Scripts/ej/web/ej.dialog.min';
 
 @customElement(`${constants.elementPrefix}dialog`)
 @inlineView(`${constants.aureliaTemplateString}`)
@@ -1115,8 +1088,6 @@ export class ejDialog extends WidgetBase {
 }
 
 
-import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.digitalgauge.min';
-
 @customElement(`${constants.elementPrefix}digital-gauge`)
 @inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejDigitalGauge', ['frame', 'height', 'isResponsive', 'enableResize', 'items', 'matrixSegmentData', 'segmentData', 'themes', 'value', 'width'], ['value'])
@@ -1128,8 +1099,6 @@ export class ejDigitalGauge extends WidgetBase {
   }
 }
 
-
-import 'syncfusion-javascript/Scripts/ej/web/ej.dropdownlist.min';
 
 @customAttribute(`${constants.attributePrefix}drop-down-list`)
 @generateBindables('ejDropDownList', ['allowVirtualScrolling', 'cascadeTo', 'caseSensitiveSearch', 'cssClass', 'dataSource', 'delimiterChar', 'enableAnimation', 'enabled', 'enableIncrementalSearch', 'enableFilterSearch', 'enableServerFiltering', 'enablePersistence', 'enablePopupResize', 'enableRTL', 'enableSorting', 'fields', 'filterType', 'headerTemplate', 'height', 'htmlAttributes', 'itemsCount', 'locale', 'maxPopupHeight', 'minPopupHeight', 'maxPopupWidth', 'minPopupWidth', 'multiSelectMode', 'popupHeight', 'popupWidth', 'query', 'readOnly', 'selectedIndex', 'selectedIndices', 'showCheckbox', 'showPopupOnLoad', 'showRoundedCorner', 'sortOrder', 'targetID', 'template', 'text', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'width', 'virtualScrollMode'], ['value'], {'enableRTL': 'enableRtl', 'targetID': 'targetId'})
@@ -1143,8 +1112,6 @@ export class ejDropDownList extends WidgetBase {
 }
 
 
-import 'syncfusion-javascript/Scripts/ej/web/ej.fileexplorer.min';
-
 @customElement(`${constants.elementPrefix}file-explorer`)
 @inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejFileExplorer', ['ajaxAction', 'ajaxDataType', 'ajaxSettings', 'allowDragAndDrop', 'allowKeyboardNavigation', 'allowMultiSelection', 'contextMenuSettings', 'cssClass', 'enablePersistence', 'enableResize', 'enableRTL', 'enableThumbnailCompress', 'fileTypes', 'filterSettings', 'gridSettings', 'height', 'isResponsive', 'layout', 'locale', 'maxHeight', 'maxWidth', 'minHeight', 'minWidth', 'path', 'rootFolderName', 'selectedFolder', 'selectedItems', 'showCheckbox', 'showContextMenu', 'showFooter', 'showRoundedCorner', 'showThumbnail', 'showToolbar', 'showNavigationPane', 'tools', 'toolsList', 'uploadSettings', 'width'], [], {'enableRTL': 'enableRtl'})
@@ -1157,11 +1124,9 @@ export class ejFileExplorer extends WidgetBase {
 }
 
 
-import 'syncfusion-javascript/Scripts/ej/web/ej.gantt.min';
-
 @customElement(`${constants.elementPrefix}gantt`)
 @inlineView(`${constants.aureliaTemplateString}`)
-@generateBindables('ejGantt', ['addDialogFields', 'allowColumnResize', 'allowGanttChartEditing', 'allowKeyboardNavigation', 'allowMultiSorting', 'allowMultipleExporting', 'allowSelection', 'allowSorting', 'allowDragAndDrop', 'enablePredecessorValidation', 'baselineColor', 'workMapping', 'expandStateMapping', 'baselineEndDateMapping', 'baselineStartDateMapping', 'childMapping', 'columnDialogFields', 'connectorLineBackground', 'connectorlineWidth', 'cssClass', 'cellTooltipTemplate', 'dragTooltip', 'dataSource', 'dateFormat', 'dayWorkingTime', 'durationMapping', 'durationUnit', 'editDialogFields', 'isResponsive', 'splitterSettings', 'editSettings', 'enableAltRow', 'enableWBS', 'enableWBSPredecessor', 'enableCollapseAll', 'leftTaskLabelMapping', 'rightTaskLabelMapping', 'leftTaskLabelTemplate', 'rightTaskLabelTemplate', 'enableContextMenu', 'enableProgressBarResizing', 'enableResize', 'enableTaskbarDragTooltip', 'enableTaskbarTooltip', 'enableVirtualization', 'endDateMapping', 'highlightWeekends', 'holidays', 'includeWeekend', 'locale', 'milestoneMapping', 'showColumnOptions', 'parentTaskbarTemplate', 'taskType', 'workUnit', 'taskSchedulingMode', 'selectionType', 'parentProgressbarBackground', 'resourceUnitMapping', 'notesMapping', 'taskSchedulingModeMapping', 'durationUnitMapping', 'parentTaskbarBackground', 'parentTaskIdMapping', 'predecessorMapping', 'progressbarBackground', 'progressbarHeight', 'progressbarTooltipTemplate', 'progressbarTooltipTemplateId', 'progressMapping', 'query', 'renderBaseline', 'resourceIdMapping', 'resourceInfoMapping', 'resourceNameMapping', 'resources', 'roundOffDayworkingTime', 'rowHeight', 'scheduleEndDate', 'scheduleHeaderSettings', 'scheduleStartDate', 'selectedRowIndex', 'showColumnChooser', 'showGridCellTooltip', 'showGridExpandCellTooltip', 'showProgressStatus', 'showResourceNames', 'showTaskNames', 'sizeSettings', 'selectedCellIndexes', 'sortSettings', 'splitterPosition', 'startDateMapping', 'stripLines', 'taskbarBackground', 'taskbarEditingTooltipTemplate', 'taskbarEditingTooltipTemplateId', 'taskbarHeight', 'taskbarTooltipTemplate', 'taskbarTemplate', 'milestoneTemplate', 'readOnly', 'taskbarTooltipTemplateId', 'taskIdMapping', 'taskNameMapping', 'toolbarSettings', 'treeColumnIndex', 'selectionMode', 'validateManualTasksOnLinking', 'weekendBackground', 'workingTimeScale', 'workWeek'], ['dataSource', 'selectedRowIndex', 'selectedCellIndexes'])
+@generateBindables('ejGantt', ['addDialogFields', 'allowColumnResize', 'allowGanttChartEditing', 'allowKeyboardNavigation', 'allowMultiSorting', 'allowMultipleExporting', 'allowSelection', 'allowSorting', 'allowDragAndDrop', 'enablePredecessorValidation', 'enableSerialNumber', 'baselineColor', 'workMapping', 'expandStateMapping', 'baselineEndDateMapping', 'baselineStartDateMapping', 'childMapping', 'columnDialogFields', 'connectorLineBackground', 'connectorlineWidth', 'cssClass', 'cellTooltipTemplate', 'dragTooltip', 'dataSource', 'dateFormat', 'dayWorkingTime', 'durationMapping', 'durationUnit', 'editDialogFields', 'filterSettings', 'isResponsive', 'splitterSettings', 'editSettings', 'enableAltRow', 'enableWBS', 'enableWBSPredecessor', 'enableCollapseAll', 'leftTaskLabelMapping', 'rightTaskLabelMapping', 'leftTaskLabelTemplate', 'rightTaskLabelTemplate', 'enableContextMenu', 'enableProgressBarResizing', 'enableResize', 'enableTaskbarDragTooltip', 'enableTaskbarTooltip', 'enableVirtualization', 'endDateMapping', 'highlightWeekends', 'holidays', 'includeWeekend', 'locale', 'milestoneMapping', 'showColumnOptions', 'parentTaskbarTemplate', 'taskType', 'workUnit', 'taskSchedulingMode', 'selectionType', 'parentProgressbarBackground', 'resourceUnitMapping', 'notesMapping', 'taskSchedulingModeMapping', 'durationUnitMapping', 'parentTaskbarBackground', 'parentTaskIdMapping', 'predecessorMapping', 'progressbarBackground', 'progressbarHeight', 'progressbarTooltipTemplate', 'progressbarTooltipTemplateId', 'progressMapping', 'query', 'renderBaseline', 'resourceIdMapping', 'resourceInfoMapping', 'resourceNameMapping', 'resources', 'roundOffDayworkingTime', 'rowHeight', 'scheduleEndDate', 'scheduleHeaderSettings', 'scheduleStartDate', 'selectedRowIndex', 'showColumnChooser', 'showGridCellTooltip', 'showGridExpandCellTooltip', 'showProgressStatus', 'showResourceNames', 'showTaskNames', 'sizeSettings', 'selectedCellIndexes', 'sortSettings', 'splitterPosition', 'startDateMapping', 'stripLines', 'taskbarBackground', 'taskbarEditingTooltipTemplate', 'taskbarEditingTooltipTemplateId', 'taskbarHeight', 'taskbarTooltipTemplate', 'taskbarTemplate', 'milestoneTemplate', 'readOnly', 'taskbarTooltipTemplateId', 'taskIdMapping', 'taskNameMapping', 'toolbarSettings', 'treeColumnIndex', 'selectionMode', 'validateManualTasksOnLinking', 'weekendBackground', 'workingTimeScale', 'workWeek', 'viewType', 'groupCollection', 'resourceCollectionMapping', 'taskCollectionMapping', 'groupIdMapping', 'groupNameMapping'], ['dataSource', 'selectedRowIndex', 'selectedCellIndexes'])
 @inject(Element)
 export class ejGantt extends WidgetBase {
   constructor(element) {
@@ -1186,11 +1151,9 @@ export class Column {
 }
 
 
-import 'syncfusion-javascript/Scripts/ej/web/ej.grid.min';
-
 @customElement(`${constants.elementPrefix}grid`)
 @inlineView(`${constants.aureliaTemplateString}`)
-@generateBindables('ejGrid', ['allowCellMerging', 'allowGrouping', 'allowKeyboardNavigation', 'allowFiltering', 'allowSorting', 'allowMultiSorting', 'allowPaging', 'allowReordering', 'allowResizeToFit', 'allowResizing', 'allowRowDragAndDrop', 'allowScrolling', 'allowSearching', 'allowSelection', 'allowTextWrap', 'allowMultipleExporting', 'commonWidth', 'gridLines', 'childGrid', 'columnLayout', 'columns', 'contextMenuSettings', 'cssClass', 'dataSource', 'detailsTemplate', 'editSettings', 'enableAltRow', 'enableAutoSaveOnSelectionChange', 'enableHeaderHover', 'enablePersistence', 'enableResponsiveRow', 'enableRowHover', 'enableRTL', 'enableTouch', 'enableToolbarItems', 'exportToExcelAction', 'exportToPdfAction', 'exportToWordAction', 'filterSettings', 'groupSettings', 'isResponsive', 'keySettings', 'locale', 'minWidth', 'pageSettings', 'query', 'resizeSettings', 'rowTemplate', 'rowDropSettings', 'searchSettings', 'selectedRecords', 'selectedRowIndex', 'selectedRowIndices', 'selectionSettings', 'selectionType', 'scrollSettings', 'showColumnChooser', 'showStackedHeader', 'showSummary', 'sortSettings', 'stackedHeaderRows', 'summaryRows', 'textWrapSettings', 'toolbarSettings'], ['dataSource', 'selectedRowIndices'], {'enableRTL': 'enableRtl'})
+@generateBindables('ejGrid', ['allowCellMerging', 'allowGrouping', 'allowKeyboardNavigation', 'allowFiltering', 'allowSorting', 'allowMultiSorting', 'allowPaging', 'allowReordering', 'allowResizeToFit', 'allowResizing', 'allowRowDragAndDrop', 'allowScrolling', 'allowSearching', 'allowSelection', 'allowTextWrap', 'allowMultipleExporting', 'commonWidth', 'gridLines', 'childGrid', 'columnLayout', 'columns', 'contextMenuSettings', 'cssClass', 'dataSource', 'detailsTemplate', 'editSettings', 'enableAltRow', 'enableAutoSaveOnSelectionChange', 'enableHeaderHover', 'enablePersistence', 'enableResponsiveRow', 'enableRowHover', 'enableRTL', 'enableTouch', 'enableToolbarItems', 'exportToExcelAction', 'exportToPdfAction', 'exportToWordAction', 'filterSettings', 'groupSettings', 'isResponsive', 'keySettings', 'locale', 'minWidth', 'pageSettings', 'query', 'resizeSettings', 'rowTemplate', 'rowDropSettings', 'searchSettings', 'selectedRecords', 'selectedRowIndex', 'selectedRowIndices', 'selectionSettings', 'selectionType', 'scrollSettings', 'showColumnChooser', 'showStackedHeader', 'showSummary', 'sortSettings', 'stackedHeaderRows', 'summaryRows', 'textWrapSettings', 'toolbarSettings'], ['dataSource', 'selectedRowIndices'], {'enableRTL': 'enableRtl'}, ['dataSource'])
 @inject(Element, TemplatingEngine)
 export class ejGrid extends WidgetBase {
   @children(`${constants.elementPrefix}column`) columns = [];
@@ -1205,8 +1168,6 @@ export class ejGrid extends WidgetBase {
 }
 
 
-import 'syncfusion-javascript/Scripts/ej/web/ej.groupbutton.min';
-
 @customAttribute(`${constants.attributePrefix}group-button`)
 @generateBindables('ejGroupButton', ['cssClass', 'dataSource', 'enableRTL', 'enabled', 'fields', 'groupButtonMode', 'height', 'htmlAttributes', 'orientation', 'query', 'selectedItemIndex', 'showRoundedCorner', 'size', 'width'], [], {'enableRTL': 'enableRtl'})
 @inject(Element)
@@ -1217,8 +1178,6 @@ export class ejGroupButton extends WidgetBase {
   }
 }
 
-
-import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.heatmap.min';
 
 @customElement(`${constants.elementPrefix}heat-map`)
 @inlineView(`${constants.aureliaTemplateString}`)
@@ -1232,8 +1191,6 @@ export class ejHeatMap extends WidgetBase {
 }
 
 
-import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.heatmap.min';
-
 @customElement(`${constants.elementPrefix}heat-map-legend`)
 @inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejHeatMapLegend', ['width', 'height', 'isResponsive', 'showLabel', 'colorMappingCollection', 'orientation', 'legendMode'])
@@ -1245,8 +1202,6 @@ export class ejHeatMapLegend extends WidgetBase {
   }
 }
 
-
-import 'syncfusion-javascript/Scripts/ej/web/ej.kanban.min';
 
 @customElement(`${constants.elementPrefix}kanban`)
 @inlineView(`${constants.aureliaTemplateString}`)
@@ -1271,8 +1226,6 @@ export class KanbanColumn {
 }
 
 
-import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.lineargauge.min';
-
 @customElement(`${constants.elementPrefix}linear-gauge`)
 @inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejLinearGauge', ['animationSpeed', 'backgroundColor', 'borderColor', 'enableAnimation', 'enableMarkerPointerAnimation', 'isResponsive', 'enableGroupSeparator', 'enableResize', 'frame', 'height', 'labelColor', 'locale', 'maximum', 'minimum', 'orientation', 'outerCustomLabelPosition', 'pointerGradient1', 'pointerGradient2', 'readOnly', 'scales', 'theme', 'tickColor', 'tooltip', 'value', 'width'], ['value', 'minimum', 'maximum'])
@@ -1285,8 +1238,6 @@ export class ejLinearGauge extends WidgetBase {
 }
 
 
-import 'syncfusion-javascript/Scripts/ej/web/ej.listbox.min';
-
 @customAttribute(`${constants.attributePrefix}list-box`)
 @generateBindables('ejListBox', ['allowDrag', 'allowDrop', 'allowMultiSelection', 'allowVirtualScrolling', 'caseSensitiveSearch', 'cascadeTo', 'checkedIndices', 'cssClass', 'dataSource', 'enabled', 'enableIncrementalSearch', 'enablePersistence', 'enableRTL', 'enableWordWrap', 'fields', 'height', 'itemHeight', 'itemsCount', 'totalItemsCount', 'itemRequestCount', 'loadDataOnInit', 'query', 'selectedIndex', 'selectedIndices', 'showCheckbox', 'showRoundedCorner', 'sortOrder', 'template', 'value', 'virtualScrollMode', 'width', 'targetID'], ['value', 'dataSource'], {'enableRTL': 'enableRtl', 'targetID': 'targetId'})
 @inject(Element)
@@ -1297,8 +1248,6 @@ export class ejListBox extends WidgetBase {
   }
 }
 
-
-import 'syncfusion-javascript/Scripts/ej/web/ej.listview.min';
 
 @customElement(`${constants.elementPrefix}list-view`)
 @inlineView(`${constants.aureliaTemplateString}`)
@@ -1320,8 +1269,6 @@ export class Layer {
 }
 
 
-import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.map.min';
-
 @customElement(`${constants.elementPrefix}map`)
 @inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejMap', ['background', 'baseMapIndex', 'centerPosition', 'draggingOnSelection', 'enableAnimation', 'enableLayerChangeAnimation', 'enablePan', 'enableResize', 'isResponsive', 'zoomSettings', 'navigationControl', 'locale', 'layers'], ['baseMapIndex', 'enablePan', 'enableResize', 'enableAnimation', 'zoomSettings.level', 'zoomSettings.minValue', 'zoomSettings.maxValue', 'zoomSettings.factor', 'zoomSettings.enableZoom', 'zoomSettings.enableZoomOnSelection', 'navigationControl.enableNavigation', 'navigationControl.orientation', 'navigationControl.absolutePosition', 'navigationControl.dockPosition'])
@@ -1337,8 +1284,6 @@ export class ejMap extends WidgetBase {
 }
 
 
-import 'syncfusion-javascript/Scripts/ej/web/ej.maskedit.min';
-
 @customAttribute(`${constants.attributePrefix}mask-edit`)
 @generateBindables('ejMaskEdit', ['cssClass', 'customCharacter', 'enabled', 'enablePersistence', 'height', 'hidePromptOnLeave', 'htmlAttributes', 'inputMode', 'locale', 'maskFormat', 'name', 'readOnly', 'showError', 'showPromptChar', 'showRoundedCorner', 'textAlign', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'width'], ['value'])
 @inject(Element)
@@ -1351,8 +1296,6 @@ export class ejMaskEdit extends WidgetBase {
 }
 
 
-import 'syncfusion-javascript/Scripts/ej/web/ej.menu.min';
-
 @customAttribute(`${constants.attributePrefix}menu`)
 @generateBindables('ejMenu', ['animationType', 'contextMenuTarget', 'container', 'cssClass', 'enableAnimation', 'enableCenterAlign', 'enabled', 'enableRTL', 'enableSeparator', 'excludeTarget', 'fields', 'height', 'htmlAttributes', 'isResponsive', 'menuType', 'openOnClick', 'orientation', 'showRootLevelArrows', 'showSubLevelArrows', 'subMenuDirection', 'titleText', 'width', 'overflowHeight', 'overflowWidth'], [], {'enableRTL': 'enableRtl'})
 @inject(Element)
@@ -1363,8 +1306,6 @@ export class ejMenu extends WidgetBase {
   }
 }
 
-
-import 'syncfusion-javascript/Scripts/ej/web/ej.navigationdrawer.min';
 
 @customElement(`${constants.elementPrefix}navigation-drawer`)
 @inlineView(`${constants.aureliaTemplateString}`)
@@ -1378,8 +1319,6 @@ export class ejNavigationDrawer extends WidgetBase {
 }
 
 
-import 'syncfusion-javascript/Scripts/ej/web/ej.editor.min';
-
 @customAttribute(`${constants.attributePrefix}numeric-textbox`)
 @generateBindables('ejNumericTextbox', ['currencySymbol', 'cssClass', 'decimalPlaces', 'enabled', 'enablePersistence', 'enableRTL', 'enableStrictMode', 'groupSize', 'groupSeparator', 'height', 'htmlAttributes', 'incrementStep', 'locale', 'maxValue', 'minValue', 'name', 'negativePattern', 'positivePattern', 'readOnly', 'showRoundedCorner', 'showSpinButton', 'validateOnType', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'width'], ['value'], {'enableRTL': 'enableRtl'})
 @inject(Element)
@@ -1391,8 +1330,6 @@ export class ejNumericTextbox extends WidgetBase {
   }
 }
 
-
-import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.diagram.min';
 
 @customElement(`${constants.elementPrefix}overview`)
 @inlineView(`${constants.aureliaTemplateString}`)
@@ -1406,8 +1343,6 @@ export class ejOverview extends WidgetBase {
 }
 
 
-import 'syncfusion-javascript/Scripts/ej/web/ej.pager.min';
-
 @customElement(`${constants.elementPrefix}pager`)
 @inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejPager', ['customText', 'currentPage', 'enableExternalMessage', 'enableQueryString', 'enableRTL', 'externalMessage', 'locale', 'pageCount', 'pageSize', 'pageSizeList', 'totalPages', 'totalRecordsCount', 'showPageInfo'], [], {'enableRTL': 'enableRtl'})
@@ -1419,8 +1354,6 @@ export class ejPager extends WidgetBase {
   }
 }
 
-
-import 'syncfusion-javascript/Scripts/ej/web/ej.pdfviewer.min';
 
 @customElement(`${constants.elementPrefix}pdf-viewer`)
 @inlineView(`${constants.aureliaTemplateString}`)
@@ -1434,8 +1367,6 @@ export class ejPdfViewer extends WidgetBase {
 }
 
 
-import 'syncfusion-javascript/Scripts/ej/web/ej.editor.min';
-
 @customAttribute(`${constants.attributePrefix}percentage-textbox`)
 @generateBindables('ejPercentageTextbox', ['currencySymbol', 'cssClass', 'decimalPlaces', 'enabled', 'enablePersistence', 'enableRTL', 'enableStrictMode', 'groupSize', 'groupSeparator', 'height', 'htmlAttributes', 'incrementStep', 'locale', 'maxValue', 'minValue', 'name', 'negativePattern', 'positivePattern', 'readOnly', 'showRoundedCorner', 'showSpinButton', 'validateOnType', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'width'], ['value'], {'enableRTL': 'enableRtl'})
 @inject(Element)
@@ -1447,8 +1378,6 @@ export class ejPercentageTextbox extends WidgetBase {
   }
 }
 
-
-import 'syncfusion-javascript/Scripts/ej/web/ej.pivotchart.min';
 
 @customElement(`${constants.elementPrefix}pivot-chart`)
 @inlineView(`${constants.aureliaTemplateString}`)
@@ -1462,8 +1391,6 @@ export class ejPivotChart extends WidgetBase {
 }
 
 
-import 'syncfusion-javascript/Scripts/ej/web/ej.pivotgauge.min';
-
 @customElement(`${constants.elementPrefix}pivot-gauge`)
 @inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejPivotGauge', ['columnsCount', 'cssClass', 'customObject', 'dataSource', 'enableAnimation', 'enableTooltip', 'enableRTL', 'isResponsive', 'labelFormatSettings', 'locale', 'rowsCount', 'scales', 'serviceMethodSettings', 'showHeaderLabel', 'url', 'analysisMode', 'operationalMode'], [], {'enableRTL': 'enableRtl'})
@@ -1475,8 +1402,6 @@ export class ejPivotGauge extends WidgetBase {
   }
 }
 
-
-import 'syncfusion-javascript/Scripts/ej/web/ej.pivotgrid.min';
 
 @customElement(`${constants.elementPrefix}pivot-grid`)
 @inlineView(`${constants.aureliaTemplateString}`)
@@ -1490,8 +1415,6 @@ export class ejPivotGrid extends WidgetBase {
 }
 
 
-import 'syncfusion-javascript/Scripts/ej/web/ej.pivotschemadesigner.min';
-
 @customElement(`${constants.elementPrefix}pivot-schema-designer`)
 @inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejPivotSchemaDesigner', ['cssClass', 'customObject', 'enableWrapper', 'enableRTL', 'olap', 'enableDragDrop', 'height', 'locale', 'pivotControl', 'serviceMethods', 'url', 'width', 'layout'], [], {'enableRTL': 'enableRtl'})
@@ -1504,8 +1427,6 @@ export class ejPivotSchemaDesigner extends WidgetBase {
 }
 
 
-import 'syncfusion-javascript/Scripts/ej/web/ej.pivottreemap.min';
-
 @customElement(`${constants.elementPrefix}pivot-tree-map`)
 @inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejPivotTreeMap', ['cssClass', 'dataSource', 'customObject', 'isResponsive', 'locale', 'operationalMode', 'serviceMethodSettings', 'url'])
@@ -1517,8 +1438,6 @@ export class ejPivotTreeMap extends WidgetBase {
   }
 }
 
-
-import 'syncfusion-javascript/Scripts/ej/web/ej.progressbar.min';
 
 @customAttribute(`${constants.attributePrefix}progress-bar`)
 @generateBindables('ejProgressBar', ['cssClass', 'enabled', 'enablePersistence', 'enableRTL', 'height', 'htmlAttributes', 'maxValue', 'minValue', 'percentage', 'showRoundedCorner', 'text', 'value', 'width'], [], {'enableRTL': 'enableRtl'})
@@ -1546,8 +1465,6 @@ export class Item {
 }
 
 
-import 'syncfusion-javascript/Scripts/ej/web/ej.radialmenu.min';
-
 @customElement(`${constants.elementPrefix}radial-menu`)
 @inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejRadialMenu', ['autoOpen', 'backImageClass', 'cssClass', 'enableAnimation', 'imageClass', 'items', 'radius', 'targetElementId', 'position'])
@@ -1565,8 +1482,6 @@ export class ejRadialMenu extends WidgetBase {
 }
 
 
-import 'syncfusion-javascript/Scripts/ej/web/ej.radialslider.min';
-
 @customElement(`${constants.elementPrefix}radial-slider`)
 @inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejRadialSlider', ['autoOpen', 'cssClass', 'enableAnimation', 'enableRoundOff', 'endAngle', 'inline', 'innerCircleImageClass', 'innerCircleImageUrl', 'labelSpace', 'locale', 'radius', 'showInnerCircle', 'startAngle', 'strokeWidth', 'ticks', 'value'], ['value', 'ticks'])
@@ -1579,8 +1494,6 @@ export class ejRadialSlider extends WidgetBase {
 }
 
 
-import 'syncfusion-javascript/Scripts/ej/web/ej.radiobutton.min';
-
 @customAttribute(`${constants.attributePrefix}radio-button`)
 @generateBindables('ejRadioButton', ['checked', 'cssClass', 'enabled', 'enablePersistence', 'enableRTL', 'htmlAttributes', 'id', 'idPrefix', 'name', 'size', 'text', 'validationMessage', 'validationRules', 'value'], [], {'enableRTL': 'enableRtl'})
 @inject(Element)
@@ -1591,8 +1504,6 @@ export class ejRadioButton extends WidgetBase {
   }
 }
 
-
-import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.rangenavigator.min';
 
 @customElement(`${constants.elementPrefix}range-navigator`)
 @inlineView(`${constants.aureliaTemplateString}`)
@@ -1617,8 +1528,6 @@ export class RangeSeries {
 }
 
 
-import 'syncfusion-javascript/Scripts/ej/web/ej.rating.min';
-
 @customAttribute(`${constants.attributePrefix}rating`)
 @generateBindables('ejRating', ['allowReset', 'cssClass', 'enabled', 'enablePersistence', 'height', 'htmlAttributes', 'incrementStep', 'maxValue', 'minValue', 'orientation', 'precision', 'readOnly', 'shapeHeight', 'shapeWidth', 'showTooltip', 'value', 'width'], ['value'])
 @inject(Element)
@@ -1629,8 +1538,6 @@ export class ejRating extends WidgetBase {
   }
 }
 
-
-import 'syncfusion-javascript/Scripts/ej/web/ej.reportviewer.min';
 
 @customElement(`${constants.elementPrefix}report-viewer`)
 @inlineView(`${constants.aureliaTemplateString}`)
@@ -1644,8 +1551,6 @@ export class ejReportViewer extends WidgetBase {
 }
 
 
-import 'syncfusion-javascript/Scripts/ej/web/ej.ribbon.min';
-
 @customElement(`${constants.elementPrefix}ribbon`)
 @inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejRibbon', ['allowResizing', 'isResponsive', 'buttonDefaults', 'showQAT', 'cssClass', 'collapsePinSettings', 'enableOnDemand', 'collapsible', 'enableRTL', 'expandPinSettings', 'applicationTab', 'contextualTabs', 'disabledItemIndex', 'enabledItemIndex', 'selectedItemIndex', 'tabs', 'locale', 'width'], [], {'enableRTL': 'enableRtl'})
@@ -1658,8 +1563,6 @@ export class ejRibbon extends WidgetBase {
 }
 
 
-import 'syncfusion-javascript/Scripts/ej/web/ej.rotator.min';
-
 @customAttribute(`${constants.attributePrefix}rotator`)
 @generateBindables('ejRotator', ['allowKeyboardNavigation', 'animationSpeed', 'animationType', 'circularMode', 'cssClass', 'dataSource', 'delay', 'displayItemsCount', 'enableAutoPlay', 'enabled', 'enableRTL', 'fields', 'frameSpace', 'isResponsive', 'navigateSteps', 'orientation', 'pagerPosition', 'query', 'showCaption', 'showNavigateButton', 'showPager', 'showPlayButton', 'showThumbnail', 'slideHeight', 'slideWidth', 'startIndex', 'stopOnHover', 'template', 'templateId', 'thumbnailSourceID'], [], {'enableRTL': 'enableRtl', 'thumbnailSourceID': 'thumbnailSourceId'})
 @inject(Element)
@@ -1671,8 +1574,6 @@ export class ejRotator extends WidgetBase {
 }
 
 
-import 'syncfusion-javascript/Scripts/ej/web/ej.rte.min';
-
 @customAttribute(`${constants.attributePrefix}rte`)
 @generateBindables('ejRTE', ['allowEditing', 'allowKeyboardNavigation', 'autoFocus', 'autoHeight', 'pasteCleanupSettings', 'colorCode', 'colorPaletteColumns', 'colorPaletteRows', 'cssClass', 'enabled', 'enableHtmlEncode', 'enablePersistence', 'enableResize', 'enableRTL', 'enableXHTML', 'enableTabKeyNavigation', 'exportToPdfSettings', 'exportToWordSettings', 'externalCSS', 'fileBrowser', 'fontName', 'fontSize', 'format', 'height', 'htmlAttributes', 'iframeAttributes', 'imageBrowser', 'importSettings', 'isResponsive', 'locale', 'maxHeight', 'maxLength', 'maxWidth', 'minHeight', 'minWidth', 'name', 'showClearAll', 'showClearFormat', 'showCustomTable', 'showContextMenu', 'showDimensions', 'showFontOption', 'showFooter', 'showHtmlSource', 'showHtmlTagInfo', 'showToolbar', 'showCharCount', 'showRoundedCorner', 'showWordCount', 'tableColumns', 'tableRows', 'tools', 'toolsList', 'toolbarOverflowMode', 'tooltipSettings', 'undoStackLimit', 'value', 'validationRules', 'validationMessage', 'width', 'zoomStep'], ['value'], {'enableRTL': 'enableRtl'})
 @inject(Element)
@@ -1683,8 +1584,6 @@ export class ejRte extends WidgetBase {
   }
 }
 
-
-import 'syncfusion-javascript/Scripts/ej/web/ej.schedule.min';
 
 @customElement(`${constants.elementPrefix}schedule`)
 @inlineView(`${constants.aureliaTemplateString}`)
@@ -1709,8 +1608,6 @@ export class ScheduleResource {
 }
 
 
-import 'syncfusion-javascript/Scripts/ej/common/ej.scroller.min';
-
 @customAttribute(`${constants.attributePrefix}scroller`)
 @generateBindables('ejScroller', ['animationSpeed', 'autoHide', 'buttonSize', 'enabled', 'enablePersistence', 'enableRTL', 'enableTouchScroll', 'height', 'scrollerSize', 'scrollLeft', 'scrollOneStepBy', 'scrollTop', 'targetPane', 'width'], ['scrollLeft', 'scrollTop'], {'enableRTL': 'enableRtl'})
 @inject(Element)
@@ -1721,8 +1618,6 @@ export class ejScroller extends WidgetBase {
   }
 }
 
-
-import 'syncfusion-javascript/Scripts/ej/web/ej.signature.min';
 
 @customElement(`${constants.elementPrefix}signature`)
 @inlineView(`${constants.aureliaTemplateString}`)
@@ -1736,10 +1631,8 @@ export class ejSignature extends WidgetBase {
 }
 
 
-import 'syncfusion-javascript/Scripts/ej/web/ej.slider.min';
-
 @customAttribute(`${constants.attributePrefix}slider`)
-@generateBindables('ejSlider', ['allowMouseWheel', 'animationSpeed', 'cssClass', 'enableAnimation', 'enabled', 'enablePersistence', 'enableRTL', 'height', 'htmlAttributes', 'incrementStep', 'largeStep', 'maxValue', 'minValue', 'orientation', 'readOnly', 'showRoundedCorner', 'showScale', 'showSmallTicks', 'showTooltip', 'sliderType', 'smallStep', 'value', 'values', 'width'], ['value'], {'enableRTL': 'enableRtl'})
+@generateBindables('ejSlider', ['allowMouseWheel', 'animationSpeed', 'cssClass', 'enableAnimation', 'enabled', 'enablePersistence', 'enableRTL', 'height', 'htmlAttributes', 'incrementStep', 'largeStep', 'maxValue', 'minValue', 'orientation', 'readOnly', 'showButtons', 'showRoundedCorner', 'showScale', 'showSmallTicks', 'showTooltip', 'sliderType', 'smallStep', 'value', 'values', 'width'], ['value'], {'enableRTL': 'enableRtl'})
 @inject(Element)
 export class ejSlider extends WidgetBase {
   constructor(element) {
@@ -1748,8 +1641,6 @@ export class ejSlider extends WidgetBase {
   }
 }
 
-
-import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.sparkline.min';
 
 @customElement(`${constants.elementPrefix}sparkline`)
 @inlineView(`${constants.aureliaTemplateString}`)
@@ -1763,11 +1654,9 @@ export class ejSparkline extends WidgetBase {
 }
 
 
-import 'syncfusion-javascript/Scripts/ej/web/ej.spellcheck.min';
-
 @customElement(`${constants.elementPrefix}spell-check`)
 @inlineView(`${constants.aureliaTemplateString}`)
-@generateBindables('ejSpellCheck', ['dictionarySettings', 'misspellWordCss', 'locale', 'maxSuggestionCount', 'ignoreWords', 'contextMenuSettings', 'ignoreSettings', 'isResponsive', 'enableValidateOnType', 'controlsToValidate', 'enableAsync'])
+@generateBindables('ejSpellCheck', ['dictionarySettings', 'misspellWordCss', 'locale', 'maxSuggestionCount', 'ignoreWords', 'contextMenuSettings', 'ignoreSettings', 'isResponsive', 'enableValidateOnType', 'controlsToValidate', 'enableAsync', 'ajaxDataType'])
 @inject(Element)
 export class ejSpellCheck extends WidgetBase {
   constructor(element) {
@@ -1776,8 +1665,6 @@ export class ejSpellCheck extends WidgetBase {
   }
 }
 
-
-import 'syncfusion-javascript/Scripts/ej/web/ej.splitbutton.min';
 
 @customAttribute(`${constants.attributePrefix}split-button`)
 @generateBindables('ejSplitButton', ['arrowPosition', 'buttonMode', 'contentType', 'cssClass', 'enabled', 'enableRTL', 'height', 'htmlAttributes', 'imagePosition', 'prefixIcon', 'showRoundedCorner', 'size', 'suffixIcon', 'targetID', 'target', 'text', 'width'], [], {'enableRTL': 'enableRtl', 'targetID': 'targetId'})
@@ -1789,8 +1676,6 @@ export class ejSplitButton extends WidgetBase {
   }
 }
 
-
-import 'syncfusion-javascript/Scripts/ej/web/ej.splitter.min';
 
 @customElement(`${constants.elementPrefix}splitter`)
 @inlineView(`${constants.aureliaTemplateString}`)
@@ -1812,8 +1697,6 @@ export class Sheet {
 }
 
 
-import 'syncfusion-javascript/Scripts/ej/web/ej.spreadsheet.min';
-
 @customElement(`${constants.elementPrefix}spreadsheet`)
 @inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejSpreadsheet', ['activeSheetIndex', 'allowAutoCellType', 'allowAutoFill', 'allowAutoSum', 'allowCellFormatting', 'allowCellType', 'allowCharts', 'allowClear', 'allowClipboard', 'allowComments', 'allowConditionalFormats', 'allowDataValidation', 'allowDelete', 'allowDragAndDrop', 'allowEditing', 'allowFiltering', 'allowFormatAsTable', 'allowFormatPainter', 'allowFormulaBar', 'allowFreezing', 'allowHyperlink', 'allowImport', 'allowInsert', 'allowKeyboardNavigation', 'allowLockCell', 'allowMerging', 'allowOverflow', 'allowResizing', 'allowSearching', 'allowSelection', 'allowSorting', 'allowUndoRedo', 'allowWrap', 'apWidth', 'autoFillSettings', 'chartSettings', 'columnCount', 'columnWidth', 'cssClass', 'customFormulas', 'enableContextMenu', 'enablePivotTable', 'enableTouch', 'exportSettings', 'formatSettings', 'importSettings', 'isReadOnly', 'locale', 'nameManager', 'pictureSettings', 'printSettings', 'ribbonSettings', 'rowCount', 'rowHeight', 'scrollSettings', 'selectionSettings', 'sheetCount', 'sheets', 'showPager', 'showRibbon', 'undoRedoStep', 'userName'])
@@ -1828,8 +1711,6 @@ export class ejSpreadsheet extends WidgetBase {
   }
 }
 
-
-import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.sunburstchart.min';
 
 @customElement(`${constants.elementPrefix}sunburst-chart`)
 @inlineView(`${constants.aureliaTemplateString}`)
@@ -1854,8 +1735,6 @@ export class SunburstLevels {
 }
 
 
-import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.diagram.min';
-
 @customElement(`${constants.elementPrefix}symbol-palette`)
 @inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejSymbolPalette', ['allowDrag', 'cssClass', 'defaultSettings', 'diagramId', 'headerHeight', 'height', 'paletteItemHeight', 'paletteItemWidth', 'palettes', 'previewHeight', 'previewOffset', 'previewWidth', 'showPaletteItemText', 'width'])
@@ -1867,8 +1746,6 @@ export class ejSymbolPalette extends WidgetBase {
   }
 }
 
-
-import 'syncfusion-javascript/Scripts/ej/web/ej.tab.min';
 
 @customElement(`${constants.elementPrefix}tab`)
 @inlineView(`${constants.aureliaTemplateString}`)
@@ -1882,8 +1759,6 @@ export class ejTab extends WidgetBase {
 }
 
 
-import 'syncfusion-javascript/Scripts/ej/web/ej.tagcloud.min';
-
 @customElement(`${constants.elementPrefix}tag-cloud`)
 @inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejTagCloud', ['cssClass', 'dataSource', 'enableRTL', 'fields', 'htmlAttributes', 'format', 'maxFontSize', 'minFontSize', 'query', 'showTitle', 'titleImage', 'titleText'], [], {'enableRTL': 'enableRtl'})
@@ -1895,8 +1770,6 @@ export class ejTagCloud extends WidgetBase {
   }
 }
 
-
-import 'syncfusion-javascript/Scripts/ej/web/ej.tile.min';
 
 @customElement(`${constants.elementPrefix}tile`)
 @inlineView(`${constants.aureliaTemplateString}`)
@@ -1910,8 +1783,6 @@ export class ejTile extends WidgetBase {
 }
 
 
-import 'syncfusion-javascript/Scripts/ej/web/ej.timepicker.min';
-
 @customAttribute(`${constants.attributePrefix}time-picker`)
 @generateBindables('ejTimePicker', ['cssClass', 'disableTimeRanges', 'enableAnimation', 'enabled', 'enablePersistence', 'enableRTL', 'enableStrictMode', 'height', 'hourInterval', 'htmlAttributes', 'interval', 'locale', 'maxTime', 'minTime', 'minutesInterval', 'popupHeight', 'popupWidth', 'readOnly', 'secondsInterval', 'showPopupButton', 'showRoundedCorner', 'timeFormat', 'value', 'width'], ['value'], {'enableRTL': 'enableRtl'})
 @inject(Element)
@@ -1924,8 +1795,6 @@ export class ejTimePicker extends WidgetBase {
 }
 
 
-import 'syncfusion-javascript/Scripts/ej/web/ej.togglebutton.min';
-
 @customAttribute(`${constants.attributePrefix}toggle-button`)
 @generateBindables('ejToggleButton', ['activePrefixIcon', 'activeSuffixIcon', 'activeText', 'contentType', 'cssClass', 'defaultPrefixIcon', 'defaultSuffixIcon', 'defaultText', 'enabled', 'enablePersistence', 'enableRTL', 'height', 'htmlAttributes', 'imagePosition', 'preventToggle', 'showRoundedCorner', 'size', 'toggleState', 'type', 'width'], [], {'enableRTL': 'enableRtl'})
 @inject(Element)
@@ -1936,8 +1805,6 @@ export class ejToggleButton extends WidgetBase {
   }
 }
 
-
-import 'syncfusion-javascript/Scripts/ej/web/ej.toolbar.min';
 
 @customAttribute(`${constants.attributePrefix}toolbar`)
 @generateBindables('ejToolbar', ['cssClass', 'dataSource', 'disabledItemIndices', 'enabled', 'enabledItemIndices', 'enableRTL', 'enableSeparator', 'fields', 'height', 'htmlAttributes', 'hide', 'isResponsive', 'Items', 'orientation', 'query', 'responsiveType', 'showRoundedCorner', 'width'], [], {'enableRTL': 'enableRtl'})
@@ -1950,8 +1817,6 @@ export class ejToolbar extends WidgetBase {
 }
 
 
-import 'syncfusion-javascript/Scripts/ej/web/ej.tooltip.min';
-
 @customAttribute(`${constants.attributePrefix}tooltip`)
 @generateBindables('ejTooltip', ['allowKeyboardNavigation', 'animation', 'associate', 'autoCloseTimeout', 'closeMode', 'collision', 'containment', 'content', 'cssClass', 'enabled', 'enableRTL', 'height', 'isBalloon', 'position', 'showRoundedCorner', 'showShadow', 'target', 'tip', 'title', 'trigger', 'width'], [], {'enableRTL': 'enableRtl'})
 @inject(Element)
@@ -1963,11 +1828,9 @@ export class ejTooltip extends WidgetBase {
 }
 
 
-import 'syncfusion-javascript/Scripts/ej/web/ej.treegrid.min';
-
 @customElement(`${constants.elementPrefix}tree-grid`)
 @inlineView(`${constants.aureliaTemplateString}`)
-@generateBindables('ejTreeGrid', ['allowColumnResize', 'allowColumnReordering', 'allowDragAndDrop', 'allowFiltering', 'allowKeyboardNavigation', 'allowMultiSorting', 'allowSelection', 'allowSorting', 'allowPaging', 'allowTextWrap', 'altRowTemplateID', 'expandStateMapping', 'childMapping', 'columns', 'columnDialogFields', 'contextMenuSettings', 'cssClass', 'dataSource', 'headerTextOverflow', 'dragTooltip', 'editSettings', 'enableAltRow', 'enableCollapseAll', 'enableResize', 'enableVirtualization', 'enableLoadOnDemand', 'columnResizeSettings', 'commonWidth', 'filterSettings', 'locale', 'parseRowTemplate', 'idMapping', 'isResponsive', 'parentIdMapping', 'pageSettings', 'cellTooltipTemplate', 'query', 'rowHeight', 'rowTemplateID', 'selectedRowIndex', 'selectedCellIndexes', 'selectionSettings', 'showColumnOptions', 'showColumnChooser', 'showDetailsRow', 'showDetailsRowInfoColumn', 'detailsTemplate', 'detailsRowHeight', 'showSummaryRow', 'showTotalSummary', 'summaryRows', 'showGridCellTooltip', 'showGridExpandCellTooltip', 'sizeSettings', 'sortSettings', 'toolbarSettings', 'treeColumnIndex'], ['dataSource', 'selectedRowIndex', 'selectedCellIndexes', 'pageSettings.currentPage'], {'altRowTemplateID': 'altRowTemplateId', 'rowTemplateID': 'rowTemplateId'})
+@generateBindables('ejTreeGrid', ['allowColumnResize', 'allowColumnReordering', 'allowDragAndDrop', 'allowFiltering', 'allowKeyboardNavigation', 'allowMultiSorting', 'allowSelection', 'allowSorting', 'allowPaging', 'allowTextWrap', 'altRowTemplateID', 'expandStateMapping', 'childMapping', 'columns', 'columnDialogFields', 'contextMenuSettings', 'cssClass', 'dataSource', 'headerTextOverflow', 'dragTooltip', 'editSettings', 'enableAltRow', 'enableCollapseAll', 'enableResize', 'enableVirtualization', 'enableLoadOnDemand', 'columnResizeSettings', 'commonWidth', 'filterSettings', 'locale', 'parseRowTemplate', 'idMapping', 'isResponsive', 'parentIdMapping', 'pageSettings', 'cellTooltipTemplate', 'query', 'rowHeight', 'rowTemplateID', 'selectedRowIndex', 'selectedCellIndexes', 'selectionSettings', 'showColumnOptions', 'showColumnChooser', 'showDetailsRow', 'showDetailsRowInfoColumn', 'detailsTemplate', 'detailsRowHeight', 'showStackedHeader', 'stackedHeaderRows', 'showSummaryRow', 'showTotalSummary', 'summaryRows', 'showGridCellTooltip', 'showGridExpandCellTooltip', 'sizeSettings', 'sortSettings', 'toolbarSettings', 'treeColumnIndex'], ['dataSource', 'selectedRowIndex', 'selectedCellIndexes', 'pageSettings.currentPage'], {'altRowTemplateID': 'altRowTemplateId', 'rowTemplateID': 'rowTemplateId'}, ['dataSource'])
 @inject(Element, TemplatingEngine)
 export class ejTreeGrid extends WidgetBase {
   @children(`${constants.elementPrefix}tree-grid-column`) columns = [];
@@ -2005,8 +1868,6 @@ export class Level {
 }
 
 
-import 'syncfusion-javascript/Scripts/ej/datavisualization/ej.treemap.min';
-
 @customElement(`${constants.elementPrefix}tree-map`)
 @inlineView(`${constants.aureliaTemplateString}`)
 @generateBindables('ejTreeMap', ['borderBrush', 'borderThickness', 'uniColorMapping', 'desaturationColorMapping', 'paletteColorMapping', 'colorValuePath', 'dataSource', 'dockPosition', 'drillDownHeaderColor', 'drillDownSelectionColor', 'isHierarchicalDatasource', 'header', 'enableDrillDown', 'isResponsive', 'enableResize', 'draggingOnSelection', 'draggingGroupOnSelection', 'groupColorMapping', 'legendSettings', 'highlightBorderBrush', 'highlightBorderThickness', 'highlightGroupBorderBrush', 'highlightGroupBorderThickness', 'highlightGroupOnSelection', 'highlightOnSelection', 'itemsLayoutMode', 'enableGroupSeparator', 'locale', 'leafItemSettings', 'rangeColorMapping', 'selectionMode', 'groupSelectionMode', 'showLegend', 'enableGradient', 'showTooltip', 'tooltipTemplate', 'treeMapItems', 'levels', 'weightValuePath'], ['dataSource', 'weightValuePath'])
@@ -2022,8 +1883,6 @@ export class ejTreeMap extends WidgetBase {
 }
 
 
-import 'syncfusion-javascript/Scripts/ej/web/ej.treeview.min';
-
 @customAttribute(`${constants.attributePrefix}tree-view`)
 @generateBindables('ejTreeView', ['allowDragAndDrop', 'allowDragAndDropAcrossControl', 'allowDropSibling', 'allowDropChild', 'allowEditing', 'allowKeyboardNavigation', 'allowMultiSelection', 'autoCheck', 'autoCheckParentNode', 'checkedNodes', 'cssClass', 'enableAnimation', 'enabled', 'enableMultipleExpand', 'enablePersistence', 'enableRTL', 'expandedNodes', 'expandOn', 'fields', 'fullRowSelect', 'height', 'htmlAttributes', 'loadOnDemand', 'selectedNode', 'selectedNodes', 'showCheckbox', 'sortSettings', 'template', 'width'], [], {'enableRTL': 'enableRtl'})
 @inject(Element)
@@ -2034,8 +1893,6 @@ export class ejTreeView extends WidgetBase {
   }
 }
 
-
-import 'syncfusion-javascript/Scripts/ej/web/ej.uploadbox.min';
 
 @customElement(`${constants.elementPrefix}uploadbox`)
 @inlineView(`${constants.aureliaTemplateString}`)
@@ -2048,8 +1905,6 @@ export class ejUploadbox extends WidgetBase {
   }
 }
 
-
-import 'syncfusion-javascript/Scripts/ej/web/ej.waitingpopup.min';
 
 @customAttribute(`${constants.attributePrefix}waiting-popup`)
 @generateBindables('ejWaitingPopup', ['cssClass', 'htmlAttributes', 'showImage', 'showOnInit', 'target', 'appendTo', 'template', 'text'])
