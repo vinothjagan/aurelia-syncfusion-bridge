@@ -30,6 +30,7 @@ export class Registry {
         }
 
         map.push({
+          status : sample.status,
           title: sample.title,
           nav: sample.nav,
           moduleId: sample.moduleId,

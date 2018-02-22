@@ -8,6 +8,7 @@
                 <ul id="list" ej-list-box="e-width:100%;e-height:100%;e-enable-word-wrap:false;">
                     <li repeat.for="row of router.navigation" click.delegate="router.navigate(row.href)" class="${ row.isActive ? 'e-select' : ''}">
                         <span> ${row.title}</span>
+                        <span if.bind="row.config.status" style="z-index: 1;" class="samplestatus ${row.config.status}"  ></span>
                     </li>
                 </ul>
             </div>

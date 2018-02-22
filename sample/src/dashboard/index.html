@@ -3,6 +3,7 @@
     <div class="body dashboard">
         <ul class="featuredsamples">
             <li repeat.for="details of sampleDetails" class="listsampleimage">
+                    <span if.bind="details.status"  class="samplestatus showcase_${details.status}"  ></span>
                 <div class="lisampleimage">
                     <a href="#/dashboard/samples/${details.URL}" target="_blank">
                         <img show.bind="lightTheme" class="imgstyle" src.bind="details.imageURL" />

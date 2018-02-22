@@ -15,7 +15,7 @@ export class RemoteDataBinding {
       this.enableContextMenu = false;
       this.dataSourceSettings = {
         dataSource: ej.DataManager({// eslint-disable-line new-cap
-          url: 'http://mvc.syncfusion.com/Services/Northwnd.svc/'
+          url: '//mvc.syncfusion.com/Services/Northwnd.svc/'
         }),
         query: ej.Query(// eslint-disable-line new-cap
         ).from('Employees').select('EmployeeID,ReportsTo,FirstName'),

@@ -57,6 +57,7 @@ export class EjConfigBuilder {
     .ejRotator()
     .ejRTE()
     .ejDropDownList()
+    .ejComboBox()
     .ejAutocomplete()
     .ejRadialMenu()
     .ejRadialSlider()
@@ -282,6 +283,10 @@ export class EjConfigBuilder {
   }
   ejDropDownList(): EjConfigBuilder {
     this.resources.push(PLATFORM.moduleName('./dropdownlist/dropdownlist'));
+    return this;
+  }
+  ejComboBox(): EjConfigBuilder {
+    this.resources.push(PLATFORM.moduleName('./combobox/combobox'));
     return this;
   }
   ejAutocomplete(): EjConfigBuilder {

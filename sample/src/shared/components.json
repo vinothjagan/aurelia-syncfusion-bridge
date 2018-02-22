@@ -196,6 +196,10 @@
             "status": "done",
             "moduleId": "dropdownlist"
         },
+		"ComboBox": {
+            "status": "done",
+            "moduleId": "combobox"
+        },
         "Uploadbox": {
             "status": "done",
             "moduleId": "uploadbox"

@@ -1,6 +1,6 @@
 {
   "title": "PivotGrid",
-  "documentation":"http://help.syncfusion.com/js/api/ejpivotgrid",
+  "documentation":"//help.syncfusion.com/js/api/ejpivotgrid",
   "samples": {
     "relational": {
       "default" : true,

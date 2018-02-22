@@ -1,6 +1,6 @@
 export class Localization {
     constructor() {
-      this.dateValue = '5/18/2016';
+      this.dateValue = '5/18/2018';
       this.target = 'localelist';
       this.localeValue = 'en-US';
       this.watermark = 'Select Date';

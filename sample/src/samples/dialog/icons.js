@@ -1,4 +1,4 @@
-export class AjaxContent {
+export class Icons {
   constructor() {
     this.actionButtons = ['close', 'collapsible', 'maximize', 'minimize', 'pin'];
   }

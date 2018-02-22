@@ -1,6 +1,6 @@
 {
   "title": "ListBox",
-  "documentation":"http://help.syncfusion.com/js/api/ejlistbox",
+  "documentation":"//help.syncfusion.com/js/api/ejlistbox",
   "samples": {
     "basic-use": {
       "default" : true,

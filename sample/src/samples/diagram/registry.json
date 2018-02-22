@@ -1,6 +1,6 @@
 {
     "title": "Diagram",
-    "documentation": "http://help.syncfusion.com/js/api/ejdiagram",
+    "documentation": "//help.syncfusion.com/js/api/ejdiagram",
     "samples": {
         "default-functionalities": {
             "default": true,

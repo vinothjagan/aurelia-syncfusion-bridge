@@ -1,4 +1,4 @@
-export class BasicUse {
+export class ModalDialog {
 onOpen(args) {
   $('#btnOpen').hide();
   $('#lognForm').ejDialog('open');

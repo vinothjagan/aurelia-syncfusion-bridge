@@ -1,6 +1,6 @@
 {
   "title": "Spreadsheet",
-  "documentation":"http://help.syncfusion.com/js/api/ejspreadsheet",
+  "documentation":"//help.syncfusion.com/js/api/ejspreadsheet",
   "samples": {
     "default-functionalities": {
       "default" : true,

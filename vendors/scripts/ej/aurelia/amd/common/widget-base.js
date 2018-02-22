@@ -186,7 +186,19 @@ define(['exports', './events', '../common/util', '../common/decorators'], functi
             if (isTwoway) {
               modelValue = modelValue();
             }
-            if (modelValue !== newValue) {
+            var boolval = false;
+            if (!ej.isNullOrUndefined(modelValue) && modelValue instanceof Array && newValue instanceof Array) {
+              for (var j = 0; j < modelValue.length; j++) {
+                if (modelValue[j] === newValue[j]) {
+                  boolval = true;
+                } else {
+                  boolval = false;
+                }
+              }
+            } else {
+              boolval = false;
+            }
+            if (modelValue !== newValue && !boolval) {
               if (isTwoway) {
                 newValue = this.addTwoways(prop);
               }

@@ -1,7 +1,7 @@
 export class BasicUse {
   constructor() {
     this.pivotData = {
-      data: 'http://bi.syncfusion.com/olap/msmdpump.dll', //data
+      data: '//bi.syncfusion.com/olap/msmdpump.dll', //data
       catalog: 'Adventure Works DW 2008 SE',
       cube: 'Adventure Works',
       rows: [

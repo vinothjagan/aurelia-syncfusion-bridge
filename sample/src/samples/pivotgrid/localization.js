@@ -1,7 +1,7 @@
 export class BasicUse {
     constructor() {
       this.pivotData = {
-        data: 'http://bi.syncfusion.com/olap/msmdpump.dll;Locale Identifier= 1033;', //data
+        data: '//bi.syncfusion.com/olap/msmdpump.dll;Locale Identifier= 1033;', //data
         catalog: 'Adventure Works DW 2008 SE',
         cube: 'Adventure Works',
         rows: [
@@ -50,7 +50,7 @@ export class BasicUse {
         LCID = '1033';
       }
       pivotGrid.locale(args.detail.text);
-      pivotGrid.model.dataSource.data = 'http://bi.syncfusion.com/olap/msmdpump.dll;Locale Identifier= ' + LCID + ';';
+      pivotGrid.model.dataSource.data = '//bi.syncfusion.com/olap/msmdpump.dll;Locale Identifier= ' + LCID + ';';
       pivotGrid.refreshPivotGrid();
     }
 }

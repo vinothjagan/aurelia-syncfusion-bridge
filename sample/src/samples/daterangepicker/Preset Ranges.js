@@ -1,6 +1,6 @@
 export class Ranges {
     constructor() {
-      this.daterangeValue = '5/18/2016 - 6/1/2016';
+      this.daterangeValue = '5/18/2018 - 6/1/2018';
       this.ranges =  [
             { label: 'Today', range: [new Date(), new Date()] },
             { label: 'Last 1 Week', range: [new Date(new Date().setDate(new Date().getDate() - 7)), new Date()] },

@@ -1,6 +1,6 @@
 {
   "title": "LinearGauge",
-  "documentation":"http://help.syncfusion.com/js/api/ejlineargauge",
+  "documentation":"//help.syncfusion.com/js/api/ejlineargauge",
   "samples": {
     "basic-use": {
 	  "default" : true,

@@ -95,6 +95,7 @@ declare module 'aurelia-syncfusion-bridge' {
     ejRotator(): EjConfigBuilder;
     ejRTE(): EjConfigBuilder;
     ejDropDownList(): EjConfigBuilder;
+    ejComboBox(): EjConfigBuilder;
     ejAutocomplete(): EjConfigBuilder;
     ejRadialMenu(): EjConfigBuilder;
     ejRadialSlider(): EjConfigBuilder;
@@ -134,15 +135,24 @@ declare module 'aurelia-syncfusion-bridge' {
   export class ejAutocomplete extends WidgetBase {
     constructor(element?: any);
   }
-  export class ejBarcode extends WidgetBase {
-    constructor(element?: any);
-  }
   export class ejBulletGraph extends WidgetBase {
     qualitativeRanges: any;
     constructor(element?: any);
   }
   export class QualitativeRange {
   
+  }
+  export class ejButton extends WidgetBase {
+    constructor(element?: any);
+  }
+  export class ejBarcode extends WidgetBase {
+    constructor(element?: any);
+  }
+  export class ejCircularGauge extends WidgetBase {
+    constructor(element?: any);
+  }
+  export class ejCheckBox extends WidgetBase {
+    constructor(element?: any);
   }
   export class ejChart extends WidgetBase {
     series: any;
@@ -151,13 +161,7 @@ declare module 'aurelia-syncfusion-bridge' {
   export class Series {
   
   }
-  export class ejButton extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejCheckBox extends WidgetBase {
-    constructor(element?: any);
-  }
-  export class ejCircularGauge extends WidgetBase {
+  export class ejComboBox extends WidgetBase {
     constructor(element?: any);
   }
   export class ejColorPicker extends WidgetBase {
@@ -213,18 +217,18 @@ declare module 'aurelia-syncfusion-bridge' {
   export class WidgetBase {
     
     /**
-    * To Create an widget
-    * @param option Object which contains  Element in which  widget will be created
-    */
+      * To Create an widget
+      * @param option Object which contains  Element in which  widget will be created
+      */
     createWidget(option?: any): any;
     bind(ctx?: any, overrideCtx?: any): any;
     createTwoWays(): any;
     addTwoways(prop?: any): any;
     
     /**
-    * To get property and event options from the element
-    * @param element Element from which options are acquired
-    */
+      * To get property and event options from the element
+      * @param element Element from which options are acquired
+      */
     getWidgetOptions(element?: any): any;
     getChildProperties(options?: any): any;
     attached(): any;
@@ -232,28 +236,28 @@ declare module 'aurelia-syncfusion-bridge' {
     unbind(): any;
     
     /**
-     * To change widget model value
-     * @param property The viewModel property name
-     * @param newValue New value of the property
-     * @param oldvalue Pld value of the property
-     */
+       * To change widget model value
+       * @param property The viewModel property name
+       * @param newValue New value of the property
+       * @param oldvalue Pld value of the property
+       */
     propertyChanged(property?: any, newValue?: any, oldValue?: any): any;
     update(e?: any): any;
     detached(): any;
   }
-  export class ejCurrencyTextbox extends WidgetBase {
-    constructor(element?: any);
-  }
   export class ejDatePicker extends WidgetBase {
     constructor(element?: any);
   }
-  export class ejDateRangePicker extends WidgetBase {
+  export class ejCurrencyTextbox extends WidgetBase {
     constructor(element?: any);
   }
   export class ejDateTimePicker extends WidgetBase {
     constructor(element?: any);
   }
   export class ejDiagram extends WidgetBase {
+    constructor(element?: any);
+  }
+  export class ejDateRangePicker extends WidgetBase {
     constructor(element?: any);
   }
   export class ejDialog extends WidgetBase {
@@ -326,10 +330,10 @@ declare module 'aurelia-syncfusion-bridge' {
   export class ejOverview extends WidgetBase {
     constructor(element?: any);
   }
-  export class ejPager extends WidgetBase {
+  export class ejPdfViewer extends WidgetBase {
     constructor(element?: any);
   }
-  export class ejPdfViewer extends WidgetBase {
+  export class ejPager extends WidgetBase {
     constructor(element?: any);
   }
   export class ejPercentageTextbox extends WidgetBase {
@@ -374,10 +378,10 @@ declare module 'aurelia-syncfusion-bridge' {
   export class RangeSeries {
   
   }
-  export class ejRating extends WidgetBase {
+  export class ejReportViewer extends WidgetBase {
     constructor(element?: any);
   }
-  export class ejReportViewer extends WidgetBase {
+  export class ejRating extends WidgetBase {
     constructor(element?: any);
   }
   export class ejRibbon extends WidgetBase {

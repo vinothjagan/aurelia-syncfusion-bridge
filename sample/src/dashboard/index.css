@@ -66,9 +66,9 @@
     min-height: 348px;
     background-repeat: no-repeat;
 }
-.view{
+.dashboardSamplebutton .view{
     font-family: 'Segoe UI';
-    font-size: 14px;
+    font-size: 12px;
     font-weight: normal;
     color: #fff;
 }
@@ -99,13 +99,13 @@
     content: "\e780";
     font-size: 18px !important;
     margin: -2px 0px 0 -4px !important;
-    
+
 }
 .codebutton{
     position: absolute !important;
 }
 @media only screen and (max-width:818px)  {
-.dashboard {  
+.dashboard {
     margin: 0px auto;
     width:311px;
 }

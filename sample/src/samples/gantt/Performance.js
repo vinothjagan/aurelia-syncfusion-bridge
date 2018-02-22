@@ -8,8 +8,8 @@ export class Performance {
       let parent = {};
       parent.TaskId = ++x;
       parent.TaskName = 'Task ' + x;
-      parent.StartDate = '01/03/2013';
-      parent.EndDate = '01/08/2013';
+      parent.StartDate = '01/03/2017';
+      parent.EndDate = '01/08/2017';
       parent.Duration = 5;
       parent.Status = Math.round(Math.random() * 100);
       let d = [];
@@ -17,8 +17,8 @@ export class Performance {
         let child = {};
         child.TaskId = ++x;
         child.TaskName = 'Task ' + x;
-        child.StartDate = '01/12/2013';
-        child.EndDate = '01/18/2013';
+        child.StartDate = '01/12/2017';
+        child.EndDate = '01/18/2017';
         child.Duration = 5;
         child.Status = Math.round(Math.random() * 100);
         let y = [];
@@ -26,8 +26,8 @@ export class Performance {
           let c = {};
           c.TaskId = ++x;
           c.TaskName = 'Task ' + x;
-          c.StartDate = '01/12/2013';
-          c.EndDate = '01/18/2013';
+          c.StartDate = '01/12/2017';
+          c.EndDate = '01/18/2017';
           c.Duration = 5;
           c.Status = Math.round(Math.random() * 100);
           y.push(c);

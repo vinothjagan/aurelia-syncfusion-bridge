@@ -1,6 +1,6 @@
 {
   "title": "Barcode",
-  "documentation":"http://help.syncfusion.com/js/api/ejbarcode",
+  "documentation":"//help.syncfusion.com/js/api/ejbarcode",
   "samples": {
     "qrbarcode": {
       "default" : true,

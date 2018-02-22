@@ -1,6 +1,6 @@
 ﻿{
     "title": "Gantt",
-    "documentation": "http://help.syncfusion.com/js/api/ejGantt",
+    "documentation": "//help.syncfusion.com/js/api/ejGantt",
     "samples": {
         "Default-Funtionalities": {
             "default": true,

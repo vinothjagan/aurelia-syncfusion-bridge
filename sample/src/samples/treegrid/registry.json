@@ -1,6 +1,6 @@
 ﻿{
     "title": "TreeGrid",
-    "documentation": "http://help.syncfusion.com/js/api/ejTreeGrid",
+    "documentation": "//help.syncfusion.com/js/api/ejTreeGrid",
     "samples": {
         "Default-Sample": {
             "default": true,

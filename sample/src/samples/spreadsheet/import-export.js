@@ -4,10 +4,10 @@ export class ImportExport {
     let filteredData = ej.DataManager(window.importData).executeLocal(ej.Query().take(20).select('Order ID', 'Customer ID', 'Employee ID', 'Ship Name', 'Ship City', 'Ship Address'));//eslint-disable-line new-cap
     this.scroll = { height: '100%', width: '100%', isResponsive: 'true' };
     this.range = [{ dataSource: filteredData, startCell: 'A3' }];
-    this.import = {importMapper: 'http://js.syncfusion.com/demos/ejservices/api/Spreadsheet/Import'};
-    this.export = {excelUrl: 'http://js.syncfusion.com/demos/ejservices/api/Spreadsheet/ExcelExport',
-        csvUrl: 'http://js.syncfusion.com/demos/ejservices/api/Spreadsheet/CsvExport',
-        pdfUrl: 'http://js.syncfusion.com/demos/ejservices/api/Spreadsheet/PdfExport'};
+    this.import = {importMapper: '//js.syncfusion.com/demos/ejservices/api/Spreadsheet/Import'};
+    this.export = {excelUrl: '//js.syncfusion.com/demos/ejservices/api/Spreadsheet/ExcelExport',
+        csvUrl: '//js.syncfusion.com/demos/ejservices/api/Spreadsheet/CsvExport',
+        pdfUrl: '//js.syncfusion.com/demos/ejservices/api/Spreadsheet/PdfExport'};
   }
   loadcomplete(args) {
     let xlObj = $('#Spreadsheet1').ejSpreadsheet('instance');
@@ -23,8 +23,8 @@ export class ImportExport {
       xlFormat.createTable(formatObj, 'A3:F13');
       xlFormat.removeTable(1);
       xlObj.XLCFormat.setCFRule({ 'action': 'lessthan', 'inputs': ['5'], 'color': 'yellowft', 'range': 'C4:C13' });
-      xlObj.setHyperlink('D8', { webAddr: 'http://www.google.com', text: xlObj.XLEdit.getPropertyValue(7, 3) }, 0);
-      xlObj.setHyperlink('D10', { webAddr: 'http://www.yahoo.com', text: xlObj.XLEdit.getPropertyValue(9, 3) }, 0);
+      xlObj.setHyperlink('D8', { webAddr: '//www.google.com', text: xlObj.XLEdit.getPropertyValue(7, 3) }, 0);
+      xlObj.setHyperlink('D10', { webAddr: '//www.yahoo.com', text: xlObj.XLEdit.getPropertyValue(9, 3) }, 0);
       xlObj.XLComment.setComment('D4', 'Free shipping for this order.', false);
       xlFormat.format({ 'type': 'currency' }, 'E4:F13');
       xlObj.performSelection('A4');

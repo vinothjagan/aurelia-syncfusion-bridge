@@ -1,6 +1,6 @@
 {
   "title": "Chart",
-  "documentation":"http://help.syncfusion.com/js/api/ejchart",
+  "documentation":"//help.syncfusion.com/js/api/ejchart",
   "samples": {
     "line": {
       "default" : true,

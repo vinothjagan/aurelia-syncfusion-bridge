@@ -38,7 +38,7 @@ define(['exports', '../common/widget-base', '../common/constants', '../common/de
 
   var _dec, _dec2, _dec3, _dec4, _class;
 
-  var ejPivotTreeMap = exports.ejPivotTreeMap = (_dec = (0, _common.customElement)(_constants.constants.elementPrefix + 'pivot-tree-map'), _dec2 = (0, _common.inlineView)('' + _constants.constants.aureliaTemplateString), _dec3 = (0, _decorators.generateBindables)('ejPivotTreeMap', ['cssClass', 'dataSource', 'customObject', 'isResponsive', 'locale', 'operationalMode', 'serviceMethodSettings', 'url']), _dec4 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = function (_WidgetBase) {
+  var ejPivotTreeMap = exports.ejPivotTreeMap = (_dec = (0, _common.customElement)(_constants.constants.elementPrefix + 'pivot-tree-map'), _dec2 = (0, _common.inlineView)('' + _constants.constants.aureliaTemplateString), _dec3 = (0, _decorators.generateBindables)('ejPivotTreeMap', ['cssClass', 'dataSource', 'customObject', 'isResponsive', 'locale', 'operationalMode', 'serviceMethodSettings', 'url', 'enableXHRCredentials']), _dec4 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = function (_WidgetBase) {
     _inherits(ejPivotTreeMap, _WidgetBase);
 
     function ejPivotTreeMap(element) {

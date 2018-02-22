@@ -1,6 +1,6 @@
 {
   "title": "ListView",
-  "documentation":"http://help.syncfusion.com/js/api/ejlistview",
+  "documentation":"//help.syncfusion.com/js/api/ejlistview",
   "samples": {
     "basic-use": {
       "default" : true,

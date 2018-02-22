@@ -1,6 +1,6 @@
 {
   "title": "Autocomplete",
-  "documentation":"http://help.syncfusion.com/js/api/ejautocomplete",
+  "documentation":"//help.syncfusion.com/js/api/ejautocomplete",
   "samples": {
     "basic-use": {
       "default" : true,

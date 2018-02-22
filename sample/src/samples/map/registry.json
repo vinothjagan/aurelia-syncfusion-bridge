@@ -1,6 +1,6 @@
 {
     "title": "Map",
-    "documentation": "http://help.syncfusion.com/js/api/ejmap",
+    "documentation": "//help.syncfusion.com/js/api/ejmap",
     "samples": {
         "dataMarkers": {
             "default": true,

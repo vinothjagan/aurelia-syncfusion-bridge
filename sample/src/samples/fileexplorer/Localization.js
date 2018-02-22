@@ -1,7 +1,7 @@
 ﻿export class Localization {
     constructor() {
-      this.path = 'http://js.syncfusion.com/demos/ejServices/Content/FileBrowser/';
-      this.ajaxAction = 'http://js.syncfusion.com/demos/ejServices/api/FileExplorer/FileOperations';
+      this.path = '//js.syncfusion.com/demos/ejServices/Content/FileBrowser/';
+      this.ajaxAction = '//js.syncfusion.com/demos/ejServices/api/FileExplorer/FileOperations';
       this.width = '100%';
       this.height = '100%';
       this.target = 'localelist';

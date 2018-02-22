@@ -1,6 +1,6 @@
 {
     "title": "Kanban Board",
-    "documentation": "http://help.syncfusion.com/js/api/ejkanban",
+    "documentation": "//help.syncfusion.com/js/api/ejkanban",
     "samples": {
         "default": {
             "default": true,

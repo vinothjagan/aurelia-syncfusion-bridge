@@ -1,6 +1,6 @@
 {
   "title": "DigitalGauge",
-  "documentation":"http://help.syncfusion.com/js/api/ejdigitalgauge",
+  "documentation":"//help.syncfusion.com/js/api/ejdigitalgauge",
   "samples": {
     "basic-use": {
       "default" : true,

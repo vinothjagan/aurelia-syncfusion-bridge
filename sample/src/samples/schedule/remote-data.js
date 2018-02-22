@@ -1,7 +1,7 @@
 export class RemoteData {
     constructor() {
       let dataManager = ej.DataManager({ //eslint-disable-line new-cap
-        url: 'http://js.syncfusion.com/demos/ejServices/api/Schedule/LoadData',
+        url: '//js.syncfusion.com/demos/ejServices/api/Schedule/LoadData',
         crossDomain: true
       });
       this.AppointmentList = {

@@ -21,11 +21,16 @@ export class Menu {
       this.childVisible = true;
       this.currentCategory = id;
       this.subCategory = Object.keys(this.dataSource[id]);
+      this.subCategorystatus = Object.values(this.dataSource[id]);
       this.subCategoryLength = this.subCategory.length - 1;
       this.previousCategoryButtonId = id;
+      setTimeout(function(){
+        $(".samplestatus").prev('li').addClass("samplestatusli");
+      },(0));   
+      
     } else if (this.currentCategory && this.dataSource[this.currentCategory][id]) {
       this.changeToggleState(this.previousControlButtonId, id);
-      let moduleId = this.dataSource[this.currentCategory][id];
+      let moduleId = this.dataSource[this.currentCategory][id]["moduleId"];
       if (moduleId) {
         this.router.baseUrl = '/samples/';
         this.router.navigateToRoute(moduleId);

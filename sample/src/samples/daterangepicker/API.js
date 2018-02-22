@@ -1,6 +1,6 @@
 export class API {
     constructor() {
-      this.datetimeValue = '5/18/2016 - 5/21/2016';
+      this.datetimeValue = '5/18/2018 - 5/21/2018';
       this.btnStatus = true;
       this.dtStatus = true;
     }

@@ -1,7 +1,7 @@
-﻿<template>
+<template>
     <require from="./Common.css"></require>
     <div class="row">
-        <div class="frame">
+        <div id="sliderframe">
             <div id="slider" ej-slider="e-value.bind:slidervalue;e-width.bind:width" e-on-create.trigger="logger.log('Slider has been created')"
                  e-on-change.trigger="logger.log('Slider value changed.')" e-on-slide.trigger="logger.log('slider value changed')" e-on-start.trigger="logger.log('slider started ')"
                  e-on-stop.trigger="logger.log('slider stopped')"></div>

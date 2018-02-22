@@ -48,7 +48,7 @@ System.register(['../common/widget-base', '../common/constants', '../common/deco
       inject = _commonCommon.inject;
     }],
     execute: function () {
-      _export('ejPivotTreeMap', ejPivotTreeMap = (_dec = customElement(constants.elementPrefix + 'pivot-tree-map'), _dec2 = inlineView('' + constants.aureliaTemplateString), _dec3 = generateBindables('ejPivotTreeMap', ['cssClass', 'dataSource', 'customObject', 'isResponsive', 'locale', 'operationalMode', 'serviceMethodSettings', 'url']), _dec4 = inject(Element), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = function (_WidgetBase) {
+      _export('ejPivotTreeMap', ejPivotTreeMap = (_dec = customElement(constants.elementPrefix + 'pivot-tree-map'), _dec2 = inlineView('' + constants.aureliaTemplateString), _dec3 = generateBindables('ejPivotTreeMap', ['cssClass', 'dataSource', 'customObject', 'isResponsive', 'locale', 'operationalMode', 'serviceMethodSettings', 'url', 'enableXHRCredentials']), _dec4 = inject(Element), _dec(_class = _dec2(_class = _dec3(_class = _dec4(_class = function (_WidgetBase) {
         _inherits(ejPivotTreeMap, _WidgetBase);
 
         function ejPivotTreeMap(element) {

@@ -1,6 +1,6 @@
 export class App {
   configureRouter(config, router) {
-    config.title = 'Syncfusion Aurelia Catalog Application';
+    config.title = 'Essential JS 1 for Aurelia';
 
     config.map([
       { name: 'home',             route: '',                  redirect: 'about/about' },

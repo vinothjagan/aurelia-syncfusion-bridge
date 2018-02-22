@@ -310,3 +310,74 @@ loader {
   40% {
     -webkit-transform: scale(1);
     transform: scale(1); } }
+
+.samplestatus {
+    height: 13px;
+    position: absolute;
+    width: 66px;
+    background-position: 9px 0px;
+}
+
+    .samplestatus.new {
+        background-image: url("../images/status_icon/new-light.png");
+        background-repeat: no-repeat;
+    }
+
+    .samplestatus.update {
+        background-image: url("../images/status_icon/updated-light.png");
+        background-repeat: no-repeat;
+    }
+
+    .samplestatus.preview {
+        background-image: url("../images/status_icon/preview-light.png");
+        background-repeat: no-repeat;
+    }
+
+ul.e-horizontal > span.samplestatus.new {
+    margin-left: -36px !important;
+}
+
+ul.e-horizontal > .samplestatus.preview {
+    margin-left: -56px !important;
+}
+
+ul.e-horizontal > .samplestatus.update {
+    margin-left: -56px !important;
+}
+
+.samplestatusli {
+    margin-right: 3px !important;
+}
+
+.theme-dark .samplestatus.new {
+    background-image: url("../images/status_icon/new-dark.png");
+    background-repeat: no-repeat;
+}
+
+.theme-dark .samplestatus.update {
+    background-image: url("../images/status_icon/updated-dark.png");
+    background-repeat: no-repeat;
+}
+
+.theme-dark .samplestatus.preview {
+    background-image: url("../images/status_icon/preview-dark.png");
+    background-repeat: no-repeat;
+}
+
+.samplestatus.showcase_update {
+    background-image: url("../images/status_icon/showcase-update.png");
+    background-repeat: no-repeat;
+    height: 29px;
+    margin-top: -20px;
+    margin-left: -8px;
+    width: 90px;
+}
+
+.samplestatus.showcase_new {
+    background-image: url("../images/status_icon/showcase-new.png");
+    background-repeat: no-repeat;
+    height: 29px;
+    margin-top: -20px;
+    margin-left: -8px;
+}
+    

@@ -1,7 +1,7 @@
 export class DragAndDropUploadbox {
   constructor() {
-    this.save = 'http://js.syncfusion.com/demos/ejServices/api/uploadbox/Save';
-    this.remove = 'http://js.syncfusion.com/demos/ejServices/api/uploadbox/Remove';
+    this.save = '//js.syncfusion.com/demos/ejServices/api/uploadbox/Save';
+    this.remove = '//js.syncfusion.com/demos/ejServices/api/uploadbox/Remove';
     this.dragAndDrop = true;
     this.multipleFiles = true;
   }

@@ -1,6 +1,6 @@
 {
   "title": "BulletGraph",
-  "documentation":"http://help.syncfusion.com/js/api/ejbulletgraph",
+  "documentation":"//help.syncfusion.com/js/api/ejbulletgraph",
   "samples": {
     "basic-use": {
       "default" : true,

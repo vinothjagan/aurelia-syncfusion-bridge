@@ -1,8 +1,8 @@
 export class Default {
     constructor() {
       this.dictionarySettings = {
-        dictionaryUrl: 'http://js.syncfusion.com/demos/ejservices/api/SpellCheck/CheckWords',
-        customDictionaryUrl: 'http://js.syncfusion.com/demos/ejservices/api/SpellCheck/AddToDictionary'
+        dictionaryUrl: '//js.syncfusion.com/demos/ejservices/api/SpellCheck/CheckWords',
+        customDictionaryUrl: '//js.syncfusion.com/demos/ejservices/api/SpellCheck/AddToDictionary'
       };
       this.ContextMenu = {enable: false};
     }

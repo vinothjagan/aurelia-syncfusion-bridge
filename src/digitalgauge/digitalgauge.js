@@ -5,7 +5,7 @@ import {customElement, inlineView, inject} from '../common/common';
 
 @customElement(`${constants.elementPrefix}digital-gauge`)
 @inlineView(`${constants.aureliaTemplateString}`)
-@generateBindables('ejDigitalGauge', ['frame', 'height', 'isResponsive', 'enableResize', 'items', 'matrixSegmentData', 'segmentData', 'themes', 'value', 'width'], ['value'])
+@generateBindables('ejDigitalGauge', ['exportSettings', 'frame', 'height', 'isResponsive', 'enableResize', 'items', 'matrixSegmentData', 'segmentData', 'themes', 'value', 'width'], ['value'])
 @inject(Element)
 export class ejDigitalGauge extends WidgetBase {
   constructor(element) {

@@ -1,6 +1,6 @@
 {
     "title": "Schedule",
-    "documentation": "http://help.syncfusion.com/js/api/ejschedule",
+    "documentation": "//help.syncfusion.com/js/api/ejschedule",
     "samples": {
         "default-functionalities": {
             "default": true,

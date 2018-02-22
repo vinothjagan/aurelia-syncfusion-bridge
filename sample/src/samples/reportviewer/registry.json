@@ -1,6 +1,6 @@
 {
   "title": "ReportViewer",
-  "documentation":"http://help.syncfusion.com/js/api/ejreportviewer",
+  "documentation":"//help.syncfusion.com/js/api/ejreportviewer",
   "samples": {
     "Territory-Sales": {
       "default" : true,

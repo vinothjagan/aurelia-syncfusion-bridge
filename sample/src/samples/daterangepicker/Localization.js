@@ -1,6 +1,6 @@
 export class Localization {
     constructor() {
-      this.daterangeValue = '3/14/2017 - 4/17/2017';
+      this.daterangeValue = '3/14/2018 - 4/17/2018';
       this.target = 'localelist';
       this.watermarkText = 'Select Culture';
     }

@@ -47,7 +47,7 @@ System.register(['../common/widget-base', '../common/constants', '../common/deco
       inject = _commonCommon.inject;
     }],
     execute: function () {
-      _export('ejDateRangePicker', ejDateRangePicker = (_dec = customAttribute(constants.attributePrefix + 'date-range-picker'), _dec2 = generateBindables('ejDateRangePicker', ['allowEdit', 'buttonText', 'cssClass', 'dateFormat', 'enableTimePicker', 'enabled', 'enablePersistence', 'endDate', 'height', 'locale', 'ranges', 'separator', 'startDate', 'showPopupButton', 'showRoundedCorner', 'timeFormat', 'value', 'watermarkText', 'width'], ['value']), _dec3 = inject(Element), _dec(_class = _dec2(_class = _dec3(_class = function (_WidgetBase) {
+      _export('ejDateRangePicker', ejDateRangePicker = (_dec = customAttribute(constants.attributePrefix + 'date-range-picker'), _dec2 = generateBindables('ejDateRangePicker', ['allowEdit', 'buttonText', 'cssClass', 'dateFormat', 'enableTimePicker', 'enabled', 'enablePersistence', 'endDate', 'height', 'locale', 'maxDate', 'minDate', 'ranges', 'separator', 'startDate', 'showPopupButton', 'showRoundedCorner', 'timeFormat', 'value', 'watermarkText', 'width'], ['value']), _dec3 = inject(Element), _dec(_class = _dec2(_class = _dec3(_class = function (_WidgetBase) {
         _inherits(ejDateRangePicker, _WidgetBase);
 
         function ejDateRangePicker(element) {

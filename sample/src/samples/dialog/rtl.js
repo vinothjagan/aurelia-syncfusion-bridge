@@ -1,4 +1,4 @@
-export class BasicUse {
+export class Rtl {
   constructor() {
     this.tooltip = { close: 'بند کریں' };
   }

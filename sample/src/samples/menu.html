@@ -18,6 +18,7 @@
                <input type="checkbox" id.bind="sub" ej-toggle-button="e-show-rounded-corner: true;" e-on-click.delegate="toolbarNavigation($event)"/>
                <label for.bind="sub">${sub}</label>
              </li>
+             <span if.bind="subCategorystatus[$index].status" style="z-index: 1;"  class="samplestatus ${subCategorystatus[$index]['status']}"  ></span>
            </ul>
       </div>
    </div>

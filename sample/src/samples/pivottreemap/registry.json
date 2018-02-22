@@ -1,6 +1,6 @@
 {
   "title": "PivotTreeMap",
-  "documentation":"http://help.syncfusion.com/js/api/ejpivottreemap",
+  "documentation":"//help.syncfusion.com/js/api/ejpivottreemap",
   "samples": {
     "OLAP": {
       "default" : true,

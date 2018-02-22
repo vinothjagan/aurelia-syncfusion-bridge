@@ -1,6 +1,6 @@
 {
 	"title": "TileView",
-	"documentation": "http://help.syncfusion.com/js/api/ejtile",
+	"documentation": "//help.syncfusion.com/js/api/ejtile",
 	"samples": {
 		"basic-use": {
 			"default": true,

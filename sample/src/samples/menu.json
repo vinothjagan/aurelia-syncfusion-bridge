@@ -1,81 +1,206 @@
 {
     "Grids": {
-        "Grid": "grid",
-        "TreeGrid": "treegrid",
-        "Spreadsheet": "spreadsheet"
+        "Grid": {
+            "moduleId": "grid"
+        },
+        "TreeGrid": {
+            "moduleId": "treegrid"
+        },
+        "Spreadsheet": {
+            "moduleId": "spreadsheet"
+        }
     },
     "Navigation": {
-        "Button": "button",
-        "Menu": "menu",
-        "Ribbon": "ribbon",
-        "Tab": "tab",
-        "ListBox": "listbox",
-        "Rotator": "rotator",
-        "TreeView": "treeview",
-        "Accordion": "accordion",
-        "NavigationDrawer": "navigationdrawer",
-        "RadialMenu": "radialmenu",
-        "FileExplorer": "fileexplorer",
-        "Toolbar": "toolbar",
-        "Pager": "pager"
+        "Button": {
+            "moduleId": "button"
+        },
+        "Menu": {
+            "moduleId": "menu"
+        },
+        "Ribbon": {
+            "moduleId": "ribbon"
+        },
+        "Tab": {
+            "moduleId": "tab"
+        },
+        "ListBox": {
+            "moduleId": "listbox"
+        },
+        "Rotator": {
+            "moduleId": "rotator"
+        },
+        "TreeView": {
+            "moduleId": "treeview"
+        },
+        "Accordion": {
+            "moduleId": "accordion"
+        },
+        "NavigationDrawer": {
+            "moduleId": "navigationdrawer"
+        },
+        "RadialMenu": {
+            "moduleId": "radialmenu"
+        },
+        "FileExplorer": {
+            "moduleId": "fileexplorer"
+        },
+        "Toolbar": {
+            "moduleId": "toolbar"
+        },
+        "Pager": {
+            "moduleId": "pager"
+        }
     },
     "Layout": {
-        "Splitter": "splitter",
-        "ListView": "listview",
-        "Dialog": "dialog",
-        "ScrollBar": "scrollbar",
-        "Tile": "tile",
-        "Tooltip": "tooltip"
+        "Splitter": {
+            "moduleId": "splitter"
+        },
+        "ListView": {
+            "moduleId": "listview"
+        },
+        "Dialog": {
+            "moduleId": "dialog"
+        },
+        "ScrollBar": {
+            "moduleId": "scrollbar"
+        },
+        "Tile": {
+            "moduleId": "tile"
+        },
+        "Tooltip": {
+            "moduleId": "tooltip"
+        }
     },
     "Data Visualization": {
-        "Schedule": "schedule",
-        "Kanban Board": "kanban",
-        "Barcode": "barcode",
-        "Diagram": "diagram",
-		"HeatMap": "heatmap",
-        "Map": "map",
-        "TreeMap": "treemap",
-        "Gantt": "gantt",
-        "Chart": "chart",
-		"Sparkline": "sparkline",
-		"SunburstChart": "sunburstchart",
-        "Circular Gauge": "circulargauge",
-        "Linear Gauge": "lineargauge",
-        "Digital Gauge": "digitalgauge",
-        "Bullet Graph": "bulletgraph",
-        "Range Navigator": "rangenavigator",
-        "TagCloud": "tagcloud"
+        "Schedule": {
+            "moduleId": "schedule"
+        },
+        "Kanban Board": {
+            "moduleId": "kanban"
+        },
+        "Barcode": {
+            "moduleId": "barcode"
+        },
+        "Diagram": {
+            "moduleId": "diagram"
+        },
+        "HeatMap": {
+            "moduleId": "heatmap"
+        },
+        "Map": {
+            "moduleId": "map"
+        },
+        "TreeMap": {
+            "moduleId": "treemap"
+        },
+        "Gantt": {
+            "moduleId": "gantt"
+        },
+        "Chart": {
+            "moduleId": "chart"
+        },
+        "Sparkline": {
+            "moduleId": "sparkline"
+        },
+        "SunburstChart": {
+            "moduleId": "sunburstchart"
+        },
+        "Circular Gauge": {
+            "moduleId": "circulargauge"
+        },
+        "Linear Gauge": {
+            "moduleId": "lineargauge"
+        },
+        "Digital Gauge": {
+            "moduleId": "digitalgauge"
+        },
+        "Bullet Graph": {
+            "moduleId": "bulletgraph"
+        },
+        "Range Navigator": {
+            "moduleId": "rangenavigator"
+        },
+        "TagCloud": {
+            "moduleId": "tagcloud"
+        }
     },
     "Editors": {
-        "DatePicker": "datepicker",
-        "TimePicker": "timepicker",
-        "DateTimePicker": "datetimepicker",
-        "TextBoxes": "editors",
-        "ColorPicker": "colorpicker",
-        "Autocomplete": "autocomplete",
-        "RadialSlider": "radialslider",
-        "DropDownList": "dropdownlist",
-        "Uploadbox": "uploadbox",
-        "Rating": "rating",
-        "Slider": "slider",
-        "RTE": "rte",
-        "Signature": "signature",
-        "SpellCheck": "spellcheck"
+        "DatePicker": {
+            "moduleId": "datepicker"
+        },
+        "TimePicker": {
+            "moduleId": "timepicker"
+        },
+        "DateTimePicker": {
+            "moduleId": "datetimepicker"
+        },
+        "TextBoxes": {
+            "moduleId": "editors"
+        },
+        "ColorPicker": {
+            "moduleId": "colorpicker"
+        },
+        "Autocomplete": {
+            "moduleId": "autocomplete"
+        },
+        "RadialSlider": {
+            "moduleId": "radialslider"
+        },
+        "DropDownList": {
+            "moduleId": "dropdownlist"
+        },
+		"ComboBox": {
+            "moduleId": "combobox"
+        },
+        "Uploadbox": {
+            "moduleId": "uploadbox"
+        },
+        "Rating": {
+            "moduleId": "rating"
+        },
+        "Slider": {
+            "moduleId": "slider"
+        },
+        "RTE": {
+            "moduleId": "rte"
+        },
+        "Signature": {
+            "moduleId": "signature"
+        },
+        "SpellCheck": {
+            "moduleId": "spellcheck"
+        }
     },
     "File Viewer": {
-        "PDF Viewer": "pdfviewer"
+        "PDF Viewer": {
+            "moduleId": "pdfviewer"
+        }
     },
-    "Business Intelligence" :{
-        "PivotGrid" : "pivotgrid",
-        "PivotChart" : "pivotchart",
-        "PivotGauge" : "pivotgauge",
-        "PivotTreeMap" : "pivottreemap"
+    "Business Intelligence": {
+        "PivotGrid": {
+            "moduleId": "pivotgrid"
+        },
+        "PivotChart": {
+            "moduleId": "pivotchart"
+        },
+        "PivotGauge": {
+            "moduleId": "pivotgauge"
+        },
+        "PivotTreeMap": {
+            "moduleId": "pivottreemap"
+        }
     },
     "Notification": {
-        "ProgressBar": "progressbar",
-        "WaitingPopup": "waitingpopup"
+        "ProgressBar": {
+            "moduleId": "progressbar"
+        },
+        "WaitingPopup": {
+            "moduleId": "waitingpopup"
+        }
     },
     "Reporting": {
-        "ReportViewer": "reportviewer"
+        "ReportViewer": {
+            "moduleId": "reportviewer"
+        }
     }
 }

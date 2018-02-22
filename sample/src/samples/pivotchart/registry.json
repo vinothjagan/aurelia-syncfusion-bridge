@@ -1,6 +1,6 @@
 {
   "title": "PivotChart",
-  "documentation":"http://help.syncfusion.com/js/api/ejpivotchart",
+  "documentation":"//help.syncfusion.com/js/api/ejpivotchart",
   "samples": {
     "relational": {
       "default" : true,

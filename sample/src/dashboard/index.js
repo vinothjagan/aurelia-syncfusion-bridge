@@ -21,7 +21,8 @@ export class Dashboard {
         let _qrURL = this.data[this.objKey[i]].qrURL;
         let _themeURL = this.data[this.objKey[i]].darkTheme;
         let _desc = this.data[this.objKey[i]].description;
-        this.sampleDetails.push({ name: _name, URL: _URL, imageURL: _imgURL, themeURL: _themeURL, qrURL: _qrURL, description: _desc });
+        let _status =  this.data[this.objKey[i]].status;
+        this.sampleDetails.push({ status: _status, name: _name, URL: _URL, imageURL: _imgURL, themeURL: _themeURL, qrURL: _qrURL, description: _desc });
       }
     }
 

@@ -82,7 +82,7 @@ export class QueryCellInfo {
         args.element.css('border-color', '#0b8140');
       }
       if ((!args.appointment.AllDay) && (((args.appointment.EndTime - args.appointment.StartTime) / 3600000) < 24)) {
-        if (args.model.currentView() === 'day') {
+        if (args.model.currentView === 'day') {
           let eventName = (args.appointment.EventType === '' || ej.isNullOrUndefined(args.appointment.EventType)) ? 'Public Event' : args.appointment.EventType;
           let diffMs = Math.abs(args.appointment.EndTime - args.appointment.StartTime);
           let diffMins = Math.round(diffMs / 60000);
@@ -108,7 +108,7 @@ export class QueryCellInfo {
           } else {
             args.element.prepend("<img type='image/svg+xml' style='opacity:0.3;margin-top:" + marginTopVal + ';margin-right:10px;float:right;height:' + imgHeight + 'px;width:' + imgHeight + "px;' id='E' src='images/Schedule/" + imgName + ".png'/>");
           }
-        } else if (args.model.currentView() === 'week' || args.model.currentView() === 'workweek') {
+        } else if (args.model.currentView === 'week' || args.model.currentView === 'workweek') {
           args.element.find('.e-apptime ').html(args.appointment.Description);
           let imgName = (!ej.isNullOrUndefined(args.appointment.EventType)) ? args.appointment.EventType : 'Public Event';
           if (args.appointment.Subject !== 'Holiday') {

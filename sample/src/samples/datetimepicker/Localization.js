@@ -1,6 +1,6 @@
 export class Localization {
     constructor() {
-      this.datetimeValue = '5/18/2016 2:00 AM';
+      this.datetimeValue = '5/18/2018 2:00 AM';
       this.target = 'localelist';
       this.localeValue = 'en-US';
       this.btnText =  { today: 'Today', timeNow: 'Time Now', done: 'Done', timeTitle: 'Time' };

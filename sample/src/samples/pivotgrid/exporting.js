@@ -58,6 +58,6 @@ export class BasicUse {
   }
   btnExportClick(args) {
     let gridObj = $('.e-pivotgrid').data('ejPivotGrid');
-    gridObj.exportPivotGrid('http://js.syncfusion.com/demos/ejservices/api/JSPivotGridExport/ExcelExport');
+    gridObj.exportPivotGrid('//js.syncfusion.com/demos/ejservices/api/JSPivotGridExport/ExcelExport');
   }
 }

@@ -38,7 +38,7 @@ define(['exports', '../common/widget-base', '../common/constants', '../common/de
 
   var _dec, _dec2, _dec3, _class;
 
-  var ejDateRangePicker = exports.ejDateRangePicker = (_dec = (0, _common.customAttribute)(_constants.constants.attributePrefix + 'date-range-picker'), _dec2 = (0, _decorators.generateBindables)('ejDateRangePicker', ['allowEdit', 'buttonText', 'cssClass', 'dateFormat', 'enableTimePicker', 'enabled', 'enablePersistence', 'endDate', 'height', 'locale', 'ranges', 'separator', 'startDate', 'showPopupButton', 'showRoundedCorner', 'timeFormat', 'value', 'watermarkText', 'width'], ['value']), _dec3 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = function (_WidgetBase) {
+  var ejDateRangePicker = exports.ejDateRangePicker = (_dec = (0, _common.customAttribute)(_constants.constants.attributePrefix + 'date-range-picker'), _dec2 = (0, _decorators.generateBindables)('ejDateRangePicker', ['allowEdit', 'buttonText', 'cssClass', 'dateFormat', 'enableTimePicker', 'enabled', 'enablePersistence', 'endDate', 'height', 'locale', 'maxDate', 'minDate', 'ranges', 'separator', 'startDate', 'showPopupButton', 'showRoundedCorner', 'timeFormat', 'value', 'watermarkText', 'width'], ['value']), _dec3 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = function (_WidgetBase) {
     _inherits(ejDateRangePicker, _WidgetBase);
 
     function ejDateRangePicker(element) {
