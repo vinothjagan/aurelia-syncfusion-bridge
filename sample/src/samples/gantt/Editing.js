@@ -22,7 +22,7 @@
       editMode: 'cellEditing'
     };
 
-    this.ProjectData = [
+    this.ProjectData = ej.DataManager([ // eslint-disable-line new-cap
       {
         taskID: 1,
         taskName: 'Project Schedule',
@@ -132,6 +132,6 @@
                   { taskID: 39, taskName: 'Final Delivery', startDate: '03/10/2017', endDate: '03/10/2017', duration: 0, predecessor: '38FS'}
         ]
       }
-    ];
+    ]);
   }
 }

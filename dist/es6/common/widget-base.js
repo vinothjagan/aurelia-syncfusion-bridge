@@ -149,19 +149,7 @@ export class WidgetBase {
           if (isTwoway) {
             modelValue = modelValue();
           }
-          let boolval = false;
-          if (!ej.isNullOrUndefined(modelValue) && modelValue instanceof Array && newValue instanceof Array) {
-            for (let j = 0; j < modelValue.length; j++) {
-              if (modelValue[j] === newValue[j]) {
-                boolval = true;
-              } else {
-                boolval = false;
-              }
-            }
-          } else {
-            boolval = false;
-          }
-          if (modelValue !== newValue && !boolval) {
+          if (modelValue !== newValue) {
             if (isTwoway) {
               newValue = this.addTwoways(prop);
             }
