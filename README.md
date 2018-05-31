@@ -1,6 +1,6 @@
 # aurelia-syncfusion-bridge
 
-A set of [Aurelia](http://aurelia.io) wrappers for [Syncfusion Essential Studio for JavaScript](https://www.syncfusion.com/products/javascript)
+A set of [Aurelia](http://aurelia.io) wrappers for [Syncfusion Essential Studio for JavaScript](https://www.syncfusion.com/products/jquery/javascript)
 
 [![npm version](https://badge.fury.io/js/aurelia-syncfusion-bridge.svg)](https://www.npmjs.com/package/aurelia-syncfusion-bridge)
 [![Join the chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/syncfusion/aurelia-syncfusion-bridge?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
