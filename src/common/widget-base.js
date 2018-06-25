@@ -1,13 +1,13 @@
-import { getEventOption } from './events';
-import { Util } from '../common/util';
-import { delayed } from '../common/decorators';
+import {getEventOption} from './events';
+import {Util} from '../common/util';
+import {delayed} from '../common/decorators';
 
 let firstValue = {};
 export class WidgetBase {
-  /**
-  * To Create an widget
-  * @param option Object which contains  Element in which  widget will be created
-  */
+/**
+* To Create an widget
+* @param option Object which contains  Element in which  widget will be created
+*/
   createWidget(option) {
     this.allOption = this.getWidgetOptions(option.element);
     if (!this.ejOptions && !this.isEditor) {
@@ -46,7 +46,7 @@ export class WidgetBase {
   addTwoways(prop) {
     let model = this;
     let value = firstValue;
-    return function (newVal, isApp) {
+    return function(newVal, isApp) {
       if (value === firstValue) {
         let viewModelProp = model.util.getBindablePropertyName(prop);
         value = model[viewModelProp];
@@ -62,17 +62,17 @@ export class WidgetBase {
         return null;
       }
       value = newVal;
-      if (!isApp && model.util.hasValue(newVal)) {
+      if (!isApp && model.util.hasValue(newVal) ) {
         let viewModelProp = model.util.getBindablePropertyName(prop);
         model[viewModelProp] = newVal;
       }
       return null;
     };
   }
-  /**
-  * To get property and event options from the element
-  * @param element Element from which options are acquired
-  */
+/**
+* To get property and event options from the element
+* @param element Element from which options are acquired
+*/
   getWidgetOptions(element) {
     let propOptions;
     if (this.ejOptions) {
@@ -120,12 +120,12 @@ export class WidgetBase {
     this.unsubscribe();
   }
 
-  /**
-   * To change widget model value
-   * @param property The viewModel property name
-   * @param newValue New value of the property
-   * @param oldvalue Pld value of the property
-   */
+/**
+ * To change widget model value
+ * @param property The viewModel property name
+ * @param newValue New value of the property
+ * @param oldvalue Pld value of the property
+ */
   propertyChanged(property, newValue, oldValue) {
     if (this.widget) {
       let modelValue;
