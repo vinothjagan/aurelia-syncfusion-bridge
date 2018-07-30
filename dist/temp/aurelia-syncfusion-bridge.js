@@ -1,9 +1,9 @@
 'use strict';
 
 exports.__esModule = true;
-exports.WidgetBase = exports.Util = exports.Template = exports.TemplateProcessor = exports.constants = exports.TemplatingEngine = exports.children = exports.customElement = exports.inlineView = exports.inject = exports.bindable = exports.customAttribute = exports.ejWaitingPopup = exports.ejUploadbox = exports.ejTreeView = exports.ejTreeMap = exports.Level = exports.TreeGridColumn = exports.ejTreeGrid = exports.ejTooltip = exports.ejToolbar = exports.ejToggleButton = exports.ejTimePicker = exports.ejTile = exports.ejTagCloud = exports.ejSymbolPalette = exports.ejTab = exports.SunburstLevels = exports.ejSunburstChart = exports.ejSpreadsheet = exports.Sheet = exports.ejSplitButton = exports.ejSplitter = exports.ejSpellCheck = exports.ejSparkline = exports.ejSlider = exports.ejSignature = exports.ejScroller = exports.ScheduleResource = exports.ejSchedule = exports.ejRte = exports.ejRotator = exports.ejReportViewer = exports.ejRibbon = exports.ejRating = exports.RangeSeries = exports.ejRangeNavigator = exports.ejRadioButton = exports.ejRadialSlider = exports.ejRadialMenu = exports.Item = exports.ejProgressBar = exports.ejPivotSchemaDesigner = exports.ejPivotGrid = exports.ejPivotTreeMap = exports.ejPivotChart = exports.ejPivotGauge = exports.ejPercentageTextbox = exports.ejPdfViewer = exports.ejPager = exports.ejNumericTextbox = exports.ejOverview = exports.ejNavigationDrawer = exports.ejMenu = exports.ejMaskEdit = exports.ejMap = exports.Layer = exports.ejListView = exports.ejListBox = exports.KanbanColumn = exports.ejKanban = exports.ejLinearGauge = exports.ejHeatMapLegend = exports.ejHeatMap = exports.ejGroupButton = exports.ejGrid = exports.Column = exports.ejGantt = exports.ejFileExplorer = exports.ejDropDownList = exports.ejDateTimePicker = exports.ejDialog = exports.ejDigitalGauge = exports.ejDiagram = exports.ejDateRangePicker = exports.ejCurrencyTextbox = exports.ejDatePicker = exports.ejComboBox = exports.ejCheckBox = exports.ejCircularGauge = exports.ejColorPicker = exports.QualitativeRange = exports.ejBulletGraph = exports.Series = exports.ejChart = exports.ejButton = exports.ejBarcode = exports.ejAutocomplete = exports.ejAccordion = exports.EjConfigBuilder = undefined;
+exports.WidgetBase = exports.Util = exports.Template = exports.TemplateProcessor = exports.constants = exports.TemplatingEngine = exports.children = exports.customElement = exports.inlineView = exports.inject = exports.bindable = exports.customAttribute = exports.ejTreeView = exports.ejUploadbox = exports.ejWaitingPopup = exports.ejTreeMap = exports.Level = exports.TreeGridColumn = exports.ejTreeGrid = exports.ejTooltip = exports.ejToolbar = exports.ejToggleButton = exports.ejTimePicker = exports.ejTile = exports.ejTagCloud = exports.ejTab = exports.ejSymbolPalette = exports.SunburstLevels = exports.ejSunburstChart = exports.ejSpreadsheet = exports.Sheet = exports.ejSplitter = exports.ejSplitButton = exports.ejSpellCheck = exports.ejSlider = exports.ejSparkline = exports.ejScroller = exports.ejSignature = exports.ScheduleResource = exports.ejSchedule = exports.ejRte = exports.ejRotator = exports.ejRibbon = exports.ejReportViewer = exports.ejRating = exports.RangeSeries = exports.ejRangeNavigator = exports.ejRadioButton = exports.ejRadialSlider = exports.ejRadialMenu = exports.Item = exports.ejProgressBar = exports.ejPivotTreeMap = exports.ejPivotSchemaDesigner = exports.ejPivotGrid = exports.ejPivotGauge = exports.ejPivotChart = exports.ejPercentageTextbox = exports.ejPdfViewer = exports.ejPager = exports.ejOverview = exports.ejNumericTextbox = exports.ejNavigationDrawer = exports.ejMenu = exports.ejMaskEdit = exports.ejMap = exports.Layer = exports.ejListView = exports.ejListBox = exports.ejLinearGauge = exports.KanbanColumn = exports.ejKanban = exports.ejHeatMapLegend = exports.ejHeatMap = exports.ejGroupButton = exports.ejGrid = exports.Column = exports.ejGantt = exports.ejDropDownList = exports.ejFileExplorer = exports.ejDigitalGauge = exports.ejDialog = exports.ejDateTimePicker = exports.ejDiagram = exports.ejDateRangePicker = exports.ejDatePicker = exports.ejCurrencyTextbox = exports.ejComboBox = exports.ejCircularGauge = exports.ejCheckBox = exports.ejColorPicker = exports.Series = exports.ejChart = exports.ejButton = exports.QualitativeRange = exports.ejBulletGraph = exports.ejBarcode = exports.ejAutocomplete = exports.ejAccordion = exports.EjConfigBuilder = undefined;
 
-var _dec, _dec2, _dec3, _dec4, _class2, _dec5, _dec6, _dec7, _class3, _dec8, _dec9, _dec10, _dec11, _class4, _dec12, _dec13, _dec14, _class5, _dec15, _dec16, _dec17, _dec18, _dec19, _class6, _desc, _value, _class7, _descriptor, _dec20, _dec21, _dec22, _class9, _dec23, _dec24, _dec25, _dec26, _dec27, _class10, _desc2, _value2, _class11, _descriptor2, _dec28, _dec29, _dec30, _class13, _dec31, _dec32, _dec33, _class14, _dec34, _dec35, _dec36, _dec37, _class15, _dec38, _dec39, _dec40, _class16, _dec41, _dec42, _dec43, _class17, _dec44, _dec45, _dec46, _class18, _dec47, _dec48, _dec49, _class19, _dec50, _dec51, _dec52, _class20, _dec53, _dec54, _dec55, _dec56, _class21, _dec57, _dec58, _dec59, _dec60, _class22, _dec61, _dec62, _dec63, _dec64, _class23, _dec65, _dec66, _dec67, _class24, _dec68, _dec69, _dec70, _class25, _dec71, _dec72, _dec73, _dec74, _class26, _dec75, _dec76, _dec77, _dec78, _class27, _dec79, _dec80, _dec81, _dec82, _class28, _desc3, _value3, _class29, _descriptor3, _dec83, _dec84, _dec85, _dec86, _dec87, _class31, _desc4, _value4, _class32, _descriptor4, _dec88, _dec89, _dec90, _class34, _dec91, _dec92, _dec93, _dec94, _class35, _dec95, _dec96, _dec97, _dec98, _class36, _dec99, _dec100, _dec101, _dec102, _class37, _dec103, _dec104, _dec105, _dec106, _dec107, _class38, _desc5, _value5, _class39, _descriptor5, _dec108, _dec109, _dec110, _class41, _dec111, _dec112, _dec113, _class42, _dec114, _dec115, _dec116, _dec117, _class43, _dec118, _dec119, _dec120, _class44, _dec121, _dec122, _dec123, _dec124, _dec125, _class45, _desc6, _value6, _class46, _descriptor6, _dec126, _dec127, _dec128, _class48, _dec129, _dec130, _dec131, _class49, _dec132, _dec133, _dec134, _dec135, _class50, _dec136, _dec137, _dec138, _dec139, _class51, _dec140, _dec141, _dec142, _class52, _dec143, _dec144, _dec145, _dec146, _class53, _dec147, _dec148, _dec149, _dec150, _class54, _dec151, _dec152, _dec153, _class55, _dec154, _dec155, _dec156, _dec157, _class56, _dec158, _dec159, _dec160, _dec161, _class57, _dec162, _dec163, _dec164, _dec165, _class58, _dec166, _dec167, _dec168, _dec169, _class59, _dec170, _dec171, _dec172, _dec173, _class60, _dec174, _dec175, _dec176, _class61, _dec177, _dec178, _dec179, _dec180, _class62, _desc7, _value7, _class63, _descriptor7, _dec181, _dec182, _dec183, _dec184, _dec185, _class65, _desc8, _value8, _class66, _descriptor8, _dec186, _dec187, _dec188, _dec189, _class68, _dec190, _dec191, _dec192, _class69, _dec193, _dec194, _dec195, _dec196, _dec197, _class70, _desc9, _value9, _class71, _descriptor9, _dec198, _dec199, _dec200, _class73, _dec201, _dec202, _dec203, _class74, _dec204, _dec205, _dec206, _dec207, _class75, _dec208, _dec209, _dec210, _dec211, _class76, _dec212, _dec213, _dec214, _class77, _dec215, _dec216, _dec217, _class78, _dec218, _dec219, _dec220, _dec221, _dec222, _class79, _desc10, _value10, _class80, _descriptor10, _dec223, _dec224, _dec225, _class82, _dec226, _dec227, _dec228, _class83, _dec229, _dec230, _dec231, _dec232, _class84, _dec233, _dec234, _dec235, _class85, _dec236, _dec237, _dec238, _dec239, _class86, _dec240, _dec241, _dec242, _dec243, _class87, _dec244, _dec245, _dec246, _dec247, _class88, _dec248, _dec249, _dec250, _class89, _dec251, _dec252, _dec253, _class90, _dec254, _dec255, _dec256, _dec257, _dec258, _class91, _desc11, _value11, _class92, _descriptor11, _dec259, _dec260, _dec261, _dec262, _dec263, _class94, _desc12, _value12, _class95, _descriptor12, _dec264, _dec265, _dec266, _class97, _dec267, _dec268, _dec269, _dec270, _class98, _dec271, _dec272, _dec273, _dec274, _class99, _dec275, _dec276, _dec277, _dec278, _class100, _dec279, _dec280, _dec281, _dec282, _class101, _dec283, _dec284, _dec285, _class102, _dec286, _dec287, _dec288, _class103, _dec289, _dec290, _dec291, _class104, _dec292, _dec293, _dec294, _class105, _dec295, _dec296, _dec297, _dec298, _dec299, _class106, _desc13, _value13, _class107, _descriptor13, _dec300, _dec301, _dec302, _dec303, _class109, _desc14, _value14, _class110, _descriptor14, _dec304, _dec305, _dec306, _class112, _dec307, _dec308, _dec309, _dec310, _dec311, _class113, _desc15, _value15, _class114, _descriptor15, _dec312, _dec313, _dec314, _class116, _dec315, _dec316, _dec317, _dec318, _class117, _dec319, _dec320, _dec321, _class118, _dec322, _class119, _dec323, _dec324, _dec325, _dec326, _class120, _desc16, _value16, _class121, _descriptor16, _dec327, _desc17, _value17, _class123;
+var _dec, _dec2, _dec3, _dec4, _class2, _dec5, _dec6, _dec7, _class3, _dec8, _dec9, _dec10, _dec11, _class4, _dec12, _dec13, _dec14, _dec15, _dec16, _class5, _desc, _value, _class6, _descriptor, _dec17, _dec18, _dec19, _class8, _dec20, _dec21, _dec22, _class9, _dec23, _dec24, _dec25, _dec26, _dec27, _class10, _desc2, _value2, _class11, _descriptor2, _dec28, _dec29, _dec30, _class13, _dec31, _dec32, _dec33, _class14, _dec34, _dec35, _dec36, _class15, _dec37, _dec38, _dec39, _dec40, _class16, _dec41, _dec42, _dec43, _class17, _dec44, _dec45, _dec46, _class18, _dec47, _dec48, _dec49, _class19, _dec50, _dec51, _dec52, _class20, _dec53, _dec54, _dec55, _dec56, _class21, _dec57, _dec58, _dec59, _class22, _dec60, _dec61, _dec62, _dec63, _class23, _dec64, _dec65, _dec66, _dec67, _class24, _dec68, _dec69, _dec70, _dec71, _class25, _dec72, _dec73, _dec74, _class26, _dec75, _dec76, _dec77, _dec78, _class27, _dec79, _dec80, _dec81, _dec82, _class28, _desc3, _value3, _class29, _descriptor3, _dec83, _dec84, _dec85, _dec86, _dec87, _class31, _desc4, _value4, _class32, _descriptor4, _dec88, _dec89, _dec90, _class34, _dec91, _dec92, _dec93, _dec94, _class35, _dec95, _dec96, _dec97, _dec98, _class36, _dec99, _dec100, _dec101, _dec102, _dec103, _class37, _desc5, _value5, _class38, _descriptor5, _dec104, _dec105, _dec106, _class40, _dec107, _dec108, _dec109, _dec110, _class41, _dec111, _dec112, _dec113, _class42, _dec114, _dec115, _dec116, _dec117, _class43, _dec118, _dec119, _dec120, _class44, _dec121, _dec122, _dec123, _dec124, _dec125, _class45, _desc6, _value6, _class46, _descriptor6, _dec126, _dec127, _dec128, _class48, _dec129, _dec130, _dec131, _class49, _dec132, _dec133, _dec134, _dec135, _class50, _dec136, _dec137, _dec138, _class51, _dec139, _dec140, _dec141, _dec142, _class52, _dec143, _dec144, _dec145, _dec146, _class53, _dec147, _dec148, _dec149, _dec150, _class54, _dec151, _dec152, _dec153, _class55, _dec154, _dec155, _dec156, _dec157, _class56, _dec158, _dec159, _dec160, _dec161, _class57, _dec162, _dec163, _dec164, _dec165, _class58, _dec166, _dec167, _dec168, _dec169, _class59, _dec170, _dec171, _dec172, _dec173, _class60, _dec174, _dec175, _dec176, _class61, _dec177, _dec178, _dec179, _dec180, _class62, _desc7, _value7, _class63, _descriptor7, _dec181, _dec182, _dec183, _dec184, _dec185, _class65, _desc8, _value8, _class66, _descriptor8, _dec186, _dec187, _dec188, _dec189, _class68, _dec190, _dec191, _dec192, _class69, _dec193, _dec194, _dec195, _dec196, _dec197, _class70, _desc9, _value9, _class71, _descriptor9, _dec198, _dec199, _dec200, _class73, _dec201, _dec202, _dec203, _class74, _dec204, _dec205, _dec206, _dec207, _class75, _dec208, _dec209, _dec210, _dec211, _class76, _dec212, _dec213, _dec214, _class77, _dec215, _dec216, _dec217, _class78, _dec218, _dec219, _dec220, _dec221, _dec222, _class79, _desc10, _value10, _class80, _descriptor10, _dec223, _dec224, _dec225, _class82, _dec226, _dec227, _dec228, _dec229, _class83, _dec230, _dec231, _dec232, _class84, _dec233, _dec234, _dec235, _dec236, _class85, _dec237, _dec238, _dec239, _class86, _dec240, _dec241, _dec242, _dec243, _class87, _dec244, _dec245, _dec246, _class88, _dec247, _dec248, _dec249, _dec250, _class89, _dec251, _dec252, _dec253, _class90, _dec254, _dec255, _dec256, _dec257, _dec258, _class91, _desc11, _value11, _class92, _descriptor11, _dec259, _dec260, _dec261, _dec262, _dec263, _class94, _desc12, _value12, _class95, _descriptor12, _dec264, _dec265, _dec266, _class97, _dec267, _dec268, _dec269, _dec270, _class98, _dec271, _dec272, _dec273, _dec274, _class99, _dec275, _dec276, _dec277, _dec278, _class100, _dec279, _dec280, _dec281, _dec282, _class101, _dec283, _dec284, _dec285, _class102, _dec286, _dec287, _dec288, _class103, _dec289, _dec290, _dec291, _class104, _dec292, _dec293, _dec294, _class105, _dec295, _dec296, _dec297, _dec298, _dec299, _class106, _desc13, _value13, _class107, _descriptor13, _dec300, _dec301, _dec302, _dec303, _class109, _desc14, _value14, _class110, _descriptor14, _dec304, _dec305, _dec306, _class112, _dec307, _dec308, _dec309, _dec310, _dec311, _class113, _desc15, _value15, _class114, _descriptor15, _dec312, _dec313, _dec314, _class116, _dec315, _dec316, _dec317, _dec318, _class117, _dec319, _dec320, _dec321, _class118, _dec322, _class119, _dec323, _dec324, _dec325, _dec326, _class120, _desc16, _value16, _class121, _descriptor16, _dec327, _desc17, _value17, _class123;
 
 exports.configure = configure;
 exports.generateBindables = generateBindables;
@@ -541,71 +541,71 @@ var ejBarcode = exports.ejBarcode = (_dec8 = (0, _aureliaTemplating.customElemen
 
   return ejBarcode;
 }(WidgetBase)) || _class4) || _class4) || _class4) || _class4);
-var ejButton = exports.ejButton = (_dec12 = (0, _aureliaTemplating.customAttribute)(constants.attributePrefix + 'button'), _dec13 = generateBindables('ejButton', ['contentType', 'cssClass', 'enabled', 'enableRTL', 'height', 'htmlAttributes', 'imagePosition', 'prefixIcon', 'repeatButton', 'showRoundedCorner', 'size', 'suffixIcon', 'text', 'timeInterval', 'type', 'width'], [], { 'enableRTL': 'enableRtl' }), _dec14 = (0, _aureliaDependencyInjection.inject)(Element), _dec12(_class5 = _dec13(_class5 = _dec14(_class5 = function (_WidgetBase4) {
-  _inherits(ejButton, _WidgetBase4);
-
-  function ejButton(element) {
-    _classCallCheck(this, ejButton);
-
-    var _this4 = _possibleConstructorReturn(this, _WidgetBase4.call(this));
-
-    _this4.element = element;
-    return _this4;
-  }
-
-  return ejButton;
-}(WidgetBase)) || _class5) || _class5) || _class5);
-var ejChart = exports.ejChart = (_dec15 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'chart'), _dec16 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec17 = generateBindables('ejChart', ['annotations', 'background', 'backGroundImageUrl', 'border', 'exportSettings', 'chartArea', 'columnDefinitions', 'commonSeriesOptions', 'selectedDataPointIndexes', 'crosshair', 'depth', 'enable3D', 'enableCanvasRendering', 'initSeriesRender', 'enableRotation', 'indicators', 'isResponsive', 'legend', 'locale', 'palette', 'margin', 'perspectiveAngle', 'primaryXAxis', 'axes', 'primaryYAxis', 'rotation', 'rowDefinitions', 'series', 'sideBySideSeriesPlacement', 'size', 'theme', 'tilt', 'title', 'wallSize', 'zooming']), _dec18 = (0, _aureliaDependencyInjection.inject)(Element), _dec19 = (0, _aureliaTemplating.children)(constants.elementPrefix + 'series'), _dec15(_class6 = _dec16(_class6 = _dec17(_class6 = _dec18(_class6 = (_class7 = function (_WidgetBase5) {
-  _inherits(ejChart, _WidgetBase5);
-
-  function ejChart(element) {
-    _classCallCheck(this, ejChart);
-
-    var _this5 = _possibleConstructorReturn(this, _WidgetBase5.call(this));
-
-    _initDefineProp(_this5, 'series', _descriptor, _this5);
-
-    _this5.element = element;
-    _this5.hasChildProperty = true;
-    _this5.childPropertyName = 'series';
-    return _this5;
-  }
-
-  return ejChart;
-}(WidgetBase), (_descriptor = _applyDecoratedDescriptor(_class7.prototype, 'series', [_dec19], {
-  enumerable: true,
-  initializer: function initializer() {
-    return [];
-  }
-})), _class7)) || _class6) || _class6) || _class6) || _class6);
-var Series = exports.Series = (_dec20 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec21 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'series'), _dec22 = generateBindables('series', ['bearFillColor', 'border', 'animationDuration', 'bullFillColor', 'columnFacet', 'columnWidth', 'columnSpacing', 'stackingGroup', 'dashArray', 'dataSource', 'cardinalSplineTension', 'doughnutCoefficient', 'doughnutSize', 'drawType', 'enableAnimation', 'enableSmartLabels', 'endAngle', 'explode', 'explodeAll', 'explodeIndex', 'explodeOffset', 'fill', 'font', 'funnelHeight', 'funnelWidth', 'gapRatio', 'isClosed', 'isStacking', 'isTransposed', 'showMedian', 'labelPosition', 'splitMode', 'boxPlotMode', 'bubbleOptions', 'splineType', 'lineCap', 'lineJoin', 'marker', 'name', 'opacity', 'outlierSettings', 'palette', 'pieCoefficient', 'pieOfPieCoefficient', 'splitValue', 'gapWidth', 'emptyPointSettings', 'positiveFill', 'connectorLine', 'dragSettings', 'errorBar', 'points', 'pyramidMode', 'query', 'startAngle', 'cornerRadius', 'tooltip', 'type', 'visibility', 'visibleOnLegend', 'xAxisName', 'xName', 'yAxisName', 'yName', 'high', 'low', 'open', 'close', 'pointColorMappingName', 'zOrder', 'size', 'trendlines', 'highlightSettings', 'selectionSettings']), _dec20(_class9 = _dec21(_class9 = _dec22(_class9 = function Series() {
-  _classCallCheck(this, Series);
-}) || _class9) || _class9) || _class9);
-var ejBulletGraph = exports.ejBulletGraph = (_dec23 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'bullet-graph'), _dec24 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec25 = generateBindables('ejBulletGraph', ['applyRangeStrokeToLabels', 'applyRangeStrokeToTicks', 'captionSettings', 'comparativeMeasureValue', 'enableAnimation', 'enableResizing', 'flowDirection', 'height', 'isResponsive', 'enableGroupSeparator', 'locale', 'orientation', 'qualitativeRanges', 'qualitativeRangeSize', 'quantitativeScaleLength', 'quantitativeScaleSettings', 'theme', 'tooltipSettings', 'value', 'width']), _dec26 = (0, _aureliaDependencyInjection.inject)(Element), _dec27 = (0, _aureliaTemplating.children)(constants.elementPrefix + 'qualitative-range'), _dec23(_class10 = _dec24(_class10 = _dec25(_class10 = _dec26(_class10 = (_class11 = function (_WidgetBase6) {
-  _inherits(ejBulletGraph, _WidgetBase6);
+var ejBulletGraph = exports.ejBulletGraph = (_dec12 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'bullet-graph'), _dec13 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec14 = generateBindables('ejBulletGraph', ['applyRangeStrokeToLabels', 'applyRangeStrokeToTicks', 'captionSettings', 'comparativeMeasureValue', 'enableAnimation', 'enableResizing', 'flowDirection', 'height', 'isResponsive', 'enableGroupSeparator', 'locale', 'orientation', 'qualitativeRanges', 'qualitativeRangeSize', 'quantitativeScaleLength', 'quantitativeScaleSettings', 'theme', 'tooltipSettings', 'value', 'width']), _dec15 = (0, _aureliaDependencyInjection.inject)(Element), _dec16 = (0, _aureliaTemplating.children)(constants.elementPrefix + 'qualitative-range'), _dec12(_class5 = _dec13(_class5 = _dec14(_class5 = _dec15(_class5 = (_class6 = function (_WidgetBase4) {
+  _inherits(ejBulletGraph, _WidgetBase4);
 
   function ejBulletGraph(element) {
     _classCallCheck(this, ejBulletGraph);
 
-    var _this6 = _possibleConstructorReturn(this, _WidgetBase6.call(this));
+    var _this4 = _possibleConstructorReturn(this, _WidgetBase4.call(this));
 
-    _initDefineProp(_this6, 'qualitativeRanges', _descriptor2, _this6);
+    _initDefineProp(_this4, 'qualitativeRanges', _descriptor, _this4);
 
-    _this6.element = element;
-    _this6.hasChildProperty = true;
-    _this6.childPropertyName = 'qualitativeRanges';
-    return _this6;
+    _this4.element = element;
+    _this4.hasChildProperty = true;
+    _this4.childPropertyName = 'qualitativeRanges';
+    return _this4;
   }
 
   return ejBulletGraph;
-}(WidgetBase), (_descriptor2 = _applyDecoratedDescriptor(_class11.prototype, 'qualitativeRanges', [_dec27], {
+}(WidgetBase), (_descriptor = _applyDecoratedDescriptor(_class6.prototype, 'qualitativeRanges', [_dec16], {
+  enumerable: true,
+  initializer: function initializer() {
+    return [];
+  }
+})), _class6)) || _class5) || _class5) || _class5) || _class5);
+var QualitativeRange = exports.QualitativeRange = (_dec17 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec18 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'qualitative-range'), _dec19 = generateBindables('qualitativeRanges', ['rangeEnd', 'rangeOpacity', 'rangeStroke']), _dec17(_class8 = _dec18(_class8 = _dec19(_class8 = function QualitativeRange() {
+  _classCallCheck(this, QualitativeRange);
+}) || _class8) || _class8) || _class8);
+var ejButton = exports.ejButton = (_dec20 = (0, _aureliaTemplating.customAttribute)(constants.attributePrefix + 'button'), _dec21 = generateBindables('ejButton', ['contentType', 'cssClass', 'enabled', 'enableRTL', 'height', 'htmlAttributes', 'imagePosition', 'prefixIcon', 'repeatButton', 'showRoundedCorner', 'size', 'suffixIcon', 'text', 'timeInterval', 'type', 'width'], [], { 'enableRTL': 'enableRtl' }), _dec22 = (0, _aureliaDependencyInjection.inject)(Element), _dec20(_class9 = _dec21(_class9 = _dec22(_class9 = function (_WidgetBase5) {
+  _inherits(ejButton, _WidgetBase5);
+
+  function ejButton(element) {
+    _classCallCheck(this, ejButton);
+
+    var _this5 = _possibleConstructorReturn(this, _WidgetBase5.call(this));
+
+    _this5.element = element;
+    return _this5;
+  }
+
+  return ejButton;
+}(WidgetBase)) || _class9) || _class9) || _class9);
+var ejChart = exports.ejChart = (_dec23 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'chart'), _dec24 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec25 = generateBindables('ejChart', ['annotations', 'background', 'backGroundImageUrl', 'border', 'exportSettings', 'chartArea', 'columnDefinitions', 'commonSeriesOptions', 'selectedDataPointIndexes', 'crosshair', 'depth', 'enable3D', 'enableCanvasRendering', 'initSeriesRender', 'enableRotation', 'indicators', 'isResponsive', 'legend', 'locale', 'palette', 'margin', 'perspectiveAngle', 'primaryXAxis', 'axes', 'primaryYAxis', 'rotation', 'rowDefinitions', 'series', 'sideBySideSeriesPlacement', 'size', 'theme', 'tilt', 'title', 'wallSize', 'zooming']), _dec26 = (0, _aureliaDependencyInjection.inject)(Element), _dec27 = (0, _aureliaTemplating.children)(constants.elementPrefix + 'series'), _dec23(_class10 = _dec24(_class10 = _dec25(_class10 = _dec26(_class10 = (_class11 = function (_WidgetBase6) {
+  _inherits(ejChart, _WidgetBase6);
+
+  function ejChart(element) {
+    _classCallCheck(this, ejChart);
+
+    var _this6 = _possibleConstructorReturn(this, _WidgetBase6.call(this));
+
+    _initDefineProp(_this6, 'series', _descriptor2, _this6);
+
+    _this6.element = element;
+    _this6.hasChildProperty = true;
+    _this6.childPropertyName = 'series';
+    return _this6;
+  }
+
+  return ejChart;
+}(WidgetBase), (_descriptor2 = _applyDecoratedDescriptor(_class11.prototype, 'series', [_dec27], {
   enumerable: true,
   initializer: function initializer() {
     return [];
   }
 })), _class11)) || _class10) || _class10) || _class10) || _class10);
-var QualitativeRange = exports.QualitativeRange = (_dec28 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec29 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'qualitative-range'), _dec30 = generateBindables('qualitativeRanges', ['rangeEnd', 'rangeOpacity', 'rangeStroke']), _dec28(_class13 = _dec29(_class13 = _dec30(_class13 = function QualitativeRange() {
-  _classCallCheck(this, QualitativeRange);
+var Series = exports.Series = (_dec28 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec29 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'series'), _dec30 = generateBindables('series', ['bearFillColor', 'border', 'animationDuration', 'bullFillColor', 'columnFacet', 'columnWidth', 'columnSpacing', 'stackingGroup', 'dashArray', 'dataSource', 'cardinalSplineTension', 'doughnutCoefficient', 'doughnutSize', 'drawType', 'enableAnimation', 'enableSmartLabels', 'endAngle', 'explode', 'explodeAll', 'explodeIndex', 'explodeOffset', 'fill', 'font', 'funnelHeight', 'funnelWidth', 'gapRatio', 'isClosed', 'isStacking', 'isTransposed', 'showMedian', 'labelPosition', 'splitMode', 'boxPlotMode', 'bubbleOptions', 'splineType', 'lineCap', 'lineJoin', 'marker', 'name', 'opacity', 'outlierSettings', 'palette', 'pieCoefficient', 'pieOfPieCoefficient', 'splitValue', 'gapWidth', 'emptyPointSettings', 'positiveFill', 'connectorLine', 'dragSettings', 'errorBar', 'points', 'pyramidMode', 'query', 'startAngle', 'cornerRadius', 'tooltip', 'type', 'visibility', 'visibleOnLegend', 'xAxisName', 'xName', 'yAxisName', 'yName', 'high', 'low', 'open', 'close', 'pointColorMappingName', 'zOrder', 'size', 'trendlines', 'highlightSettings', 'selectionSettings']), _dec28(_class13 = _dec29(_class13 = _dec30(_class13 = function Series() {
+  _classCallCheck(this, Series);
 }) || _class13) || _class13) || _class13);
 var ejColorPicker = exports.ejColorPicker = (_dec31 = (0, _aureliaTemplating.customAttribute)(constants.attributePrefix + 'color-picker'), _dec32 = generateBindables('ejColorPicker', ['buttonText', 'buttonMode', 'columns', 'cssClass', 'custom', 'displayInline', 'enabled', 'enableOpacity', 'htmlAttributes', 'locale', 'modelType', 'opacityValue', 'palette', 'presetType', 'showApplyCancel', 'showClearButton', 'showPreview', 'showRecentColors', 'showSwitcher', 'showTooltip', 'toolIcon', 'tooltipText', 'value'], ['value', 'opacityValue']), _dec33 = (0, _aureliaDependencyInjection.inject)(Element), _dec31(_class14 = _dec32(_class14 = _dec33(_class14 = function (_WidgetBase7) {
   _inherits(ejColorPicker, _WidgetBase7);
@@ -621,11 +621,11 @@ var ejColorPicker = exports.ejColorPicker = (_dec31 = (0, _aureliaTemplating.cus
 
   return ejColorPicker;
 }(WidgetBase)) || _class14) || _class14) || _class14);
-var ejCircularGauge = exports.ejCircularGauge = (_dec34 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'circular-gauge'), _dec35 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec36 = generateBindables('ejCircularGauge', ['animationSpeed', 'backgroundColor', 'distanceFromCorner', 'rangeZOrder', 'enableAnimation', 'enableGroupSeparator', 'enableResize', 'exportSettings', 'frame', 'gaugePosition', 'height', 'interiorGradient', 'isRadialGradient', 'isResponsive', 'locale', 'maximum', 'minimum', 'outerCustomLabelPosition', 'radius', 'readOnly', 'scales', 'theme', 'legend', 'tooltip', 'value', 'width'], ['value', 'minimum', 'maximum']), _dec37 = (0, _aureliaDependencyInjection.inject)(Element), _dec34(_class15 = _dec35(_class15 = _dec36(_class15 = _dec37(_class15 = function (_WidgetBase8) {
-  _inherits(ejCircularGauge, _WidgetBase8);
+var ejCheckBox = exports.ejCheckBox = (_dec34 = (0, _aureliaTemplating.customAttribute)(constants.attributePrefix + 'check-box'), _dec35 = generateBindables('ejCheckBox', ['checked', 'checkState', 'cssClass', 'enabled', 'enablePersistence', 'enableRTL', 'enableTriState', 'htmlAttributes', 'id', 'idPrefix', 'name', 'showRoundedCorner', 'size', 'text', 'validationMessage', 'validationRules', 'value'], ['checked', 'checkState'], { 'enableRTL': 'enableRtl' }), _dec36 = (0, _aureliaDependencyInjection.inject)(Element), _dec34(_class15 = _dec35(_class15 = _dec36(_class15 = function (_WidgetBase8) {
+  _inherits(ejCheckBox, _WidgetBase8);
 
-  function ejCircularGauge(element) {
-    _classCallCheck(this, ejCircularGauge);
+  function ejCheckBox(element) {
+    _classCallCheck(this, ejCheckBox);
 
     var _this8 = _possibleConstructorReturn(this, _WidgetBase8.call(this));
 
@@ -633,13 +633,13 @@ var ejCircularGauge = exports.ejCircularGauge = (_dec34 = (0, _aureliaTemplating
     return _this8;
   }
 
-  return ejCircularGauge;
-}(WidgetBase)) || _class15) || _class15) || _class15) || _class15);
-var ejCheckBox = exports.ejCheckBox = (_dec38 = (0, _aureliaTemplating.customAttribute)(constants.attributePrefix + 'check-box'), _dec39 = generateBindables('ejCheckBox', ['checked', 'checkState', 'cssClass', 'enabled', 'enablePersistence', 'enableRTL', 'enableTriState', 'htmlAttributes', 'id', 'idPrefix', 'name', 'showRoundedCorner', 'size', 'text', 'validationMessage', 'validationRules', 'value'], ['checked', 'checkState'], { 'enableRTL': 'enableRtl' }), _dec40 = (0, _aureliaDependencyInjection.inject)(Element), _dec38(_class16 = _dec39(_class16 = _dec40(_class16 = function (_WidgetBase9) {
-  _inherits(ejCheckBox, _WidgetBase9);
+  return ejCheckBox;
+}(WidgetBase)) || _class15) || _class15) || _class15);
+var ejCircularGauge = exports.ejCircularGauge = (_dec37 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'circular-gauge'), _dec38 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec39 = generateBindables('ejCircularGauge', ['animationSpeed', 'backgroundColor', 'distanceFromCorner', 'rangeZOrder', 'enableAnimation', 'enableGroupSeparator', 'enableResize', 'exportSettings', 'frame', 'gaugePosition', 'height', 'interiorGradient', 'isRadialGradient', 'isResponsive', 'locale', 'maximum', 'minimum', 'outerCustomLabelPosition', 'radius', 'readOnly', 'scales', 'theme', 'legend', 'tooltip', 'value', 'width'], ['value', 'minimum', 'maximum']), _dec40 = (0, _aureliaDependencyInjection.inject)(Element), _dec37(_class16 = _dec38(_class16 = _dec39(_class16 = _dec40(_class16 = function (_WidgetBase9) {
+  _inherits(ejCircularGauge, _WidgetBase9);
 
-  function ejCheckBox(element) {
-    _classCallCheck(this, ejCheckBox);
+  function ejCircularGauge(element) {
+    _classCallCheck(this, ejCircularGauge);
 
     var _this9 = _possibleConstructorReturn(this, _WidgetBase9.call(this));
 
@@ -647,8 +647,8 @@ var ejCheckBox = exports.ejCheckBox = (_dec38 = (0, _aureliaTemplating.customAtt
     return _this9;
   }
 
-  return ejCheckBox;
-}(WidgetBase)) || _class16) || _class16) || _class16);
+  return ejCircularGauge;
+}(WidgetBase)) || _class16) || _class16) || _class16) || _class16);
 var ejComboBox = exports.ejComboBox = (_dec41 = (0, _aureliaTemplating.customAttribute)(constants.attributePrefix + 'combo-box'), _dec42 = generateBindables('ejComboBox', ['actionFailureTemplate', 'allowCustom', 'allowFiltering', 'autofill', 'cssClass', 'dataSource', 'enableRtl', 'enabled', 'fields', 'footerTemplate', 'groupTemplate', 'headerTemplate', 'htmlAttributes', 'index', 'itemTemplate', 'locale', 'noRecordsTemplate', 'placeholder', 'popupHeight', 'popupWidth', 'query', 'readonly', 'showClearButton', 'sortOrder', 'text', 'value', 'width'], ['value']), _dec43 = (0, _aureliaDependencyInjection.inject)(Element), _dec41(_class17 = _dec42(_class17 = _dec43(_class17 = function (_WidgetBase10) {
   _inherits(ejComboBox, _WidgetBase10);
 
@@ -664,11 +664,11 @@ var ejComboBox = exports.ejComboBox = (_dec41 = (0, _aureliaTemplating.customAtt
 
   return ejComboBox;
 }(WidgetBase)) || _class17) || _class17) || _class17);
-var ejDatePicker = exports.ejDatePicker = (_dec44 = (0, _aureliaTemplating.customAttribute)(constants.attributePrefix + 'date-picker'), _dec45 = generateBindables('ejDatePicker', ['allowEdit', 'allowDrillDown', 'blackoutDates', 'buttonText', 'cssClass', 'dateFormat', 'dayHeaderFormat', 'depthLevel', 'displayInline', 'enableAnimation', 'enabled', 'enablePersistence', 'enableRTL', 'enableStrictMode', 'fields', 'headerFormat', 'height', 'highlightSection', 'highlightWeekend', 'htmlAttributes', 'locale', 'maxDate', 'minDate', 'readOnly', 'showDisabledRange', 'showFooter', 'showOtherMonths', 'showPopupButton', 'showRoundedCorner', 'showTooltip', 'specialDates', 'startDay', 'startLevel', 'stepMonths', 'tooltipFormat', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'weekNumber', 'width'], ['value'], { 'enableRTL': 'enableRtl' }), _dec46 = (0, _aureliaDependencyInjection.inject)(Element), _dec44(_class18 = _dec45(_class18 = _dec46(_class18 = function (_WidgetBase11) {
-  _inherits(ejDatePicker, _WidgetBase11);
+var ejCurrencyTextbox = exports.ejCurrencyTextbox = (_dec44 = (0, _aureliaTemplating.customAttribute)(constants.attributePrefix + 'currency-textbox'), _dec45 = generateBindables('ejCurrencyTextbox', ['currencySymbol', 'cssClass', 'decimalPlaces', 'enabled', 'enablePersistence', 'enableRTL', 'enableStrictMode', 'groupSize', 'groupSeparator', 'height', 'htmlAttributes', 'incrementStep', 'locale', 'maxValue', 'minValue', 'name', 'negativePattern', 'positivePattern', 'readOnly', 'showRoundedCorner', 'showSpinButton', 'validateOnType', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'width'], ['value'], { 'enableRTL': 'enableRtl' }), _dec46 = (0, _aureliaDependencyInjection.inject)(Element), _dec44(_class18 = _dec45(_class18 = _dec46(_class18 = function (_WidgetBase11) {
+  _inherits(ejCurrencyTextbox, _WidgetBase11);
 
-  function ejDatePicker(element) {
-    _classCallCheck(this, ejDatePicker);
+  function ejCurrencyTextbox(element) {
+    _classCallCheck(this, ejCurrencyTextbox);
 
     var _this11 = _possibleConstructorReturn(this, _WidgetBase11.call(this));
 
@@ -677,13 +677,13 @@ var ejDatePicker = exports.ejDatePicker = (_dec44 = (0, _aureliaTemplating.custo
     return _this11;
   }
 
-  return ejDatePicker;
+  return ejCurrencyTextbox;
 }(WidgetBase)) || _class18) || _class18) || _class18);
-var ejCurrencyTextbox = exports.ejCurrencyTextbox = (_dec47 = (0, _aureliaTemplating.customAttribute)(constants.attributePrefix + 'currency-textbox'), _dec48 = generateBindables('ejCurrencyTextbox', ['currencySymbol', 'cssClass', 'decimalPlaces', 'enabled', 'enablePersistence', 'enableRTL', 'enableStrictMode', 'groupSize', 'groupSeparator', 'height', 'htmlAttributes', 'incrementStep', 'locale', 'maxValue', 'minValue', 'name', 'negativePattern', 'positivePattern', 'readOnly', 'showRoundedCorner', 'showSpinButton', 'validateOnType', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'width'], ['value'], { 'enableRTL': 'enableRtl' }), _dec49 = (0, _aureliaDependencyInjection.inject)(Element), _dec47(_class19 = _dec48(_class19 = _dec49(_class19 = function (_WidgetBase12) {
-  _inherits(ejCurrencyTextbox, _WidgetBase12);
+var ejDatePicker = exports.ejDatePicker = (_dec47 = (0, _aureliaTemplating.customAttribute)(constants.attributePrefix + 'date-picker'), _dec48 = generateBindables('ejDatePicker', ['allowEdit', 'allowDrillDown', 'blackoutDates', 'buttonText', 'cssClass', 'dateFormat', 'dayHeaderFormat', 'depthLevel', 'displayInline', 'enableAnimation', 'enabled', 'enablePersistence', 'enableRTL', 'enableStrictMode', 'fields', 'headerFormat', 'height', 'highlightSection', 'highlightWeekend', 'htmlAttributes', 'locale', 'maxDate', 'minDate', 'readOnly', 'showDisabledRange', 'showFooter', 'showOtherMonths', 'showPopupButton', 'showRoundedCorner', 'showTooltip', 'specialDates', 'startDay', 'startLevel', 'stepMonths', 'tooltipFormat', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'weekNumber', 'width'], ['value'], { 'enableRTL': 'enableRtl' }), _dec49 = (0, _aureliaDependencyInjection.inject)(Element), _dec47(_class19 = _dec48(_class19 = _dec49(_class19 = function (_WidgetBase12) {
+  _inherits(ejDatePicker, _WidgetBase12);
 
-  function ejCurrencyTextbox(element) {
-    _classCallCheck(this, ejCurrencyTextbox);
+  function ejDatePicker(element) {
+    _classCallCheck(this, ejDatePicker);
 
     var _this12 = _possibleConstructorReturn(this, _WidgetBase12.call(this));
 
@@ -692,7 +692,7 @@ var ejCurrencyTextbox = exports.ejCurrencyTextbox = (_dec47 = (0, _aureliaTempla
     return _this12;
   }
 
-  return ejCurrencyTextbox;
+  return ejDatePicker;
 }(WidgetBase)) || _class19) || _class19) || _class19);
 var ejDateRangePicker = exports.ejDateRangePicker = (_dec50 = (0, _aureliaTemplating.customAttribute)(constants.attributePrefix + 'date-range-picker'), _dec51 = generateBindables('ejDateRangePicker', ['allowEdit', 'buttonText', 'cssClass', 'dateFormat', 'enableTimePicker', 'enabled', 'enablePersistence', 'endDate', 'height', 'locale', 'maxDate', 'minDate', 'ranges', 'separator', 'startDate', 'showPopupButton', 'showRoundedCorner', 'timeFormat', 'value', 'watermarkText', 'width'], ['value']), _dec52 = (0, _aureliaDependencyInjection.inject)(Element), _dec50(_class20 = _dec51(_class20 = _dec52(_class20 = function (_WidgetBase13) {
   _inherits(ejDateRangePicker, _WidgetBase13);
@@ -723,21 +723,22 @@ var ejDiagram = exports.ejDiagram = (_dec53 = (0, _aureliaTemplating.customEleme
 
   return ejDiagram;
 }(WidgetBase)) || _class21) || _class21) || _class21) || _class21);
-var ejDigitalGauge = exports.ejDigitalGauge = (_dec57 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'digital-gauge'), _dec58 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec59 = generateBindables('ejDigitalGauge', ['exportSettings', 'frame', 'height', 'isResponsive', 'enableResize', 'items', 'matrixSegmentData', 'segmentData', 'themes', 'value', 'width'], ['value']), _dec60 = (0, _aureliaDependencyInjection.inject)(Element), _dec57(_class22 = _dec58(_class22 = _dec59(_class22 = _dec60(_class22 = function (_WidgetBase15) {
-  _inherits(ejDigitalGauge, _WidgetBase15);
+var ejDateTimePicker = exports.ejDateTimePicker = (_dec57 = (0, _aureliaTemplating.customAttribute)(constants.attributePrefix + 'date-time-picker'), _dec58 = generateBindables('ejDateTimePicker', ['allowEdit', 'buttonText', 'cssClass', 'dateTimeFormat', 'dayHeaderFormat', 'depthLevel', 'enableAnimation', 'enabled', 'enablePersistence', 'enableRTL', 'enableStrictMode', 'headerFormat', 'height', 'htmlAttributes', 'interval', 'locale', 'maxDateTime', 'minDateTime', 'popupPosition', 'readOnly', 'showOtherMonths', 'showPopupButton', 'showRoundedCorner', 'startDay', 'startLevel', 'stepMonths', 'timeDisplayFormat', 'timeDrillDown', 'timePopupWidth', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'width'], ['value'], { 'enableRTL': 'enableRtl' }), _dec59 = (0, _aureliaDependencyInjection.inject)(Element), _dec57(_class22 = _dec58(_class22 = _dec59(_class22 = function (_WidgetBase15) {
+  _inherits(ejDateTimePicker, _WidgetBase15);
 
-  function ejDigitalGauge(element) {
-    _classCallCheck(this, ejDigitalGauge);
+  function ejDateTimePicker(element) {
+    _classCallCheck(this, ejDateTimePicker);
 
     var _this15 = _possibleConstructorReturn(this, _WidgetBase15.call(this));
 
+    _this15.isEditor = true;
     _this15.element = element;
     return _this15;
   }
 
-  return ejDigitalGauge;
-}(WidgetBase)) || _class22) || _class22) || _class22) || _class22);
-var ejDialog = exports.ejDialog = (_dec61 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'dialog'), _dec62 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec63 = generateBindables('ejDialog', ['actionButtons', 'ajaxSettings', 'allowDraggable', 'allowKeyboardNavigation', 'animation', 'backgroundScroll', 'closeOnEscape', 'containment', 'contentType', 'contentUrl', 'cssClass', 'enableAnimation', 'enabled', 'enableModal', 'enablePersistence', 'enableResize', 'enableRTL', 'faviconCSS', 'height', 'htmlAttributes', 'isResponsive', 'locale', 'maxHeight', 'maxWidth', 'minHeight', 'minWidth', 'position', 'showHeader', 'showOnInit', 'showRoundedCorner', 'target', 'title', 'tooltip', 'width', 'zIndex', 'showFooter', 'footerTemplateId'], [], { 'enableRTL': 'enableRtl' }), _dec64 = (0, _aureliaDependencyInjection.inject)(Element), _dec61(_class23 = _dec62(_class23 = _dec63(_class23 = _dec64(_class23 = function (_WidgetBase16) {
+  return ejDateTimePicker;
+}(WidgetBase)) || _class22) || _class22) || _class22);
+var ejDialog = exports.ejDialog = (_dec60 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'dialog'), _dec61 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec62 = generateBindables('ejDialog', ['actionButtons', 'ajaxSettings', 'allowDraggable', 'allowKeyboardNavigation', 'animation', 'backgroundScroll', 'closeOnEscape', 'containment', 'contentType', 'contentUrl', 'cssClass', 'enableAnimation', 'enabled', 'enableModal', 'enablePersistence', 'enableResize', 'enableRTL', 'faviconCSS', 'height', 'htmlAttributes', 'isResponsive', 'locale', 'maxHeight', 'maxWidth', 'minHeight', 'minWidth', 'position', 'showHeader', 'showOnInit', 'showRoundedCorner', 'target', 'title', 'tooltip', 'width', 'zIndex', 'showFooter', 'footerTemplateId'], [], { 'enableRTL': 'enableRtl' }), _dec63 = (0, _aureliaDependencyInjection.inject)(Element), _dec60(_class23 = _dec61(_class23 = _dec62(_class23 = _dec63(_class23 = function (_WidgetBase16) {
   _inherits(ejDialog, _WidgetBase16);
 
   function ejDialog(element) {
@@ -751,50 +752,49 @@ var ejDialog = exports.ejDialog = (_dec61 = (0, _aureliaTemplating.customElement
 
   return ejDialog;
 }(WidgetBase)) || _class23) || _class23) || _class23) || _class23);
-var ejDateTimePicker = exports.ejDateTimePicker = (_dec65 = (0, _aureliaTemplating.customAttribute)(constants.attributePrefix + 'date-time-picker'), _dec66 = generateBindables('ejDateTimePicker', ['allowEdit', 'buttonText', 'cssClass', 'dateTimeFormat', 'dayHeaderFormat', 'depthLevel', 'enableAnimation', 'enabled', 'enablePersistence', 'enableRTL', 'enableStrictMode', 'headerFormat', 'height', 'htmlAttributes', 'interval', 'locale', 'maxDateTime', 'minDateTime', 'popupPosition', 'readOnly', 'showOtherMonths', 'showPopupButton', 'showRoundedCorner', 'startDay', 'startLevel', 'stepMonths', 'timeDisplayFormat', 'timeDrillDown', 'timePopupWidth', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'width'], ['value'], { 'enableRTL': 'enableRtl' }), _dec67 = (0, _aureliaDependencyInjection.inject)(Element), _dec65(_class24 = _dec66(_class24 = _dec67(_class24 = function (_WidgetBase17) {
-  _inherits(ejDateTimePicker, _WidgetBase17);
+var ejDigitalGauge = exports.ejDigitalGauge = (_dec64 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'digital-gauge'), _dec65 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec66 = generateBindables('ejDigitalGauge', ['exportSettings', 'frame', 'height', 'isResponsive', 'enableResize', 'items', 'matrixSegmentData', 'segmentData', 'themes', 'value', 'width'], ['value']), _dec67 = (0, _aureliaDependencyInjection.inject)(Element), _dec64(_class24 = _dec65(_class24 = _dec66(_class24 = _dec67(_class24 = function (_WidgetBase17) {
+  _inherits(ejDigitalGauge, _WidgetBase17);
 
-  function ejDateTimePicker(element) {
-    _classCallCheck(this, ejDateTimePicker);
+  function ejDigitalGauge(element) {
+    _classCallCheck(this, ejDigitalGauge);
 
     var _this17 = _possibleConstructorReturn(this, _WidgetBase17.call(this));
 
-    _this17.isEditor = true;
     _this17.element = element;
     return _this17;
   }
 
-  return ejDateTimePicker;
-}(WidgetBase)) || _class24) || _class24) || _class24);
-var ejDropDownList = exports.ejDropDownList = (_dec68 = (0, _aureliaTemplating.customAttribute)(constants.attributePrefix + 'drop-down-list'), _dec69 = generateBindables('ejDropDownList', ['allowVirtualScrolling', 'cascadeTo', 'caseSensitiveSearch', 'cssClass', 'dataSource', 'delimiterChar', 'enableAnimation', 'enabled', 'enableIncrementalSearch', 'enableFilterSearch', 'enableServerFiltering', 'enablePersistence', 'enablePopupResize', 'enableRTL', 'enableSorting', 'loadOnDemand', 'fields', 'filterType', 'headerTemplate', 'height', 'htmlAttributes', 'itemsCount', 'locale', 'maxPopupHeight', 'minPopupHeight', 'maxPopupWidth', 'minPopupWidth', 'multiSelectMode', 'popupHeight', 'popupWidth', 'query', 'readOnly', 'selectedIndex', 'selectedIndices', 'showCheckbox', 'showPopupOnLoad', 'showRoundedCorner', 'sortOrder', 'targetID', 'template', 'text', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'width', 'virtualScrollMode'], ['value'], { 'enableRTL': 'enableRtl', 'targetID': 'targetId' }), _dec70 = (0, _aureliaDependencyInjection.inject)(Element), _dec68(_class25 = _dec69(_class25 = _dec70(_class25 = function (_WidgetBase18) {
-  _inherits(ejDropDownList, _WidgetBase18);
-
-  function ejDropDownList(element) {
-    _classCallCheck(this, ejDropDownList);
-
-    var _this18 = _possibleConstructorReturn(this, _WidgetBase18.call(this));
-
-    _this18.isEditor = true;
-    _this18.element = element;
-    return _this18;
-  }
-
-  return ejDropDownList;
-}(WidgetBase)) || _class25) || _class25) || _class25);
-var ejFileExplorer = exports.ejFileExplorer = (_dec71 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'file-explorer'), _dec72 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec73 = generateBindables('ejFileExplorer', ['ajaxAction', 'ajaxDataType', 'ajaxSettings', 'allowDragAndDrop', 'allowKeyboardNavigation', 'allowMultiSelection', 'contextMenuSettings', 'cssClass', 'enablePersistence', 'enableResize', 'enableRTL', 'enableThumbnailCompress', 'fileTypes', 'filterSettings', 'gridSettings', 'height', 'isResponsive', 'layout', 'locale', 'maxHeight', 'maxWidth', 'minHeight', 'minWidth', 'path', 'rootFolderName', 'selectedFolder', 'selectedItems', 'showCheckbox', 'showContextMenu', 'showFooter', 'showRoundedCorner', 'showThumbnail', 'showToolbar', 'showNavigationPane', 'tools', 'toolsList', 'uploadSettings', 'virtualItemCount', 'width'], [], { 'enableRTL': 'enableRtl' }), _dec74 = (0, _aureliaDependencyInjection.inject)(Element), _dec71(_class26 = _dec72(_class26 = _dec73(_class26 = _dec74(_class26 = function (_WidgetBase19) {
-  _inherits(ejFileExplorer, _WidgetBase19);
+  return ejDigitalGauge;
+}(WidgetBase)) || _class24) || _class24) || _class24) || _class24);
+var ejFileExplorer = exports.ejFileExplorer = (_dec68 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'file-explorer'), _dec69 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec70 = generateBindables('ejFileExplorer', ['ajaxAction', 'ajaxDataType', 'ajaxSettings', 'allowDragAndDrop', 'allowKeyboardNavigation', 'allowMultiSelection', 'contextMenuSettings', 'cssClass', 'enablePersistence', 'enableResize', 'enableRTL', 'enableThumbnailCompress', 'fileTypes', 'filterSettings', 'gridSettings', 'height', 'isResponsive', 'layout', 'locale', 'maxHeight', 'maxWidth', 'minHeight', 'minWidth', 'path', 'rootFolderName', 'selectedFolder', 'selectedItems', 'showCheckbox', 'showContextMenu', 'showFooter', 'showRoundedCorner', 'showThumbnail', 'showToolbar', 'showNavigationPane', 'tools', 'toolsList', 'uploadSettings', 'virtualItemCount', 'width'], [], { 'enableRTL': 'enableRtl' }), _dec71 = (0, _aureliaDependencyInjection.inject)(Element), _dec68(_class25 = _dec69(_class25 = _dec70(_class25 = _dec71(_class25 = function (_WidgetBase18) {
+  _inherits(ejFileExplorer, _WidgetBase18);
 
   function ejFileExplorer(element) {
     _classCallCheck(this, ejFileExplorer);
 
+    var _this18 = _possibleConstructorReturn(this, _WidgetBase18.call(this));
+
+    _this18.element = element;
+    return _this18;
+  }
+
+  return ejFileExplorer;
+}(WidgetBase)) || _class25) || _class25) || _class25) || _class25);
+var ejDropDownList = exports.ejDropDownList = (_dec72 = (0, _aureliaTemplating.customAttribute)(constants.attributePrefix + 'drop-down-list'), _dec73 = generateBindables('ejDropDownList', ['allowVirtualScrolling', 'cascadeTo', 'caseSensitiveSearch', 'cssClass', 'dataSource', 'delimiterChar', 'enableAnimation', 'enabled', 'enableIncrementalSearch', 'enableFilterSearch', 'enableServerFiltering', 'enablePersistence', 'enablePopupResize', 'enableRTL', 'enableSorting', 'loadOnDemand', 'fields', 'filterType', 'headerTemplate', 'height', 'htmlAttributes', 'itemsCount', 'locale', 'maxPopupHeight', 'minPopupHeight', 'maxPopupWidth', 'minPopupWidth', 'multiSelectMode', 'popupHeight', 'popupWidth', 'query', 'readOnly', 'selectedIndex', 'selectedIndices', 'showCheckbox', 'showPopupOnLoad', 'showRoundedCorner', 'sortOrder', 'targetID', 'template', 'text', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'width', 'virtualScrollMode'], ['value'], { 'enableRTL': 'enableRtl', 'targetID': 'targetId' }), _dec74 = (0, _aureliaDependencyInjection.inject)(Element), _dec72(_class26 = _dec73(_class26 = _dec74(_class26 = function (_WidgetBase19) {
+  _inherits(ejDropDownList, _WidgetBase19);
+
+  function ejDropDownList(element) {
+    _classCallCheck(this, ejDropDownList);
+
     var _this19 = _possibleConstructorReturn(this, _WidgetBase19.call(this));
 
+    _this19.isEditor = true;
     _this19.element = element;
     return _this19;
   }
 
-  return ejFileExplorer;
-}(WidgetBase)) || _class26) || _class26) || _class26) || _class26);
+  return ejDropDownList;
+}(WidgetBase)) || _class26) || _class26) || _class26);
 var ejGantt = exports.ejGantt = (_dec75 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'gantt'), _dec76 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec77 = generateBindables('ejGantt', ['addDialogFields', 'allowColumnResize', 'allowDragAndDrop', 'allowGanttChartEditing', 'allowKeyboardNavigation', 'allowMultiSorting', 'allowMultipleExporting', 'allowSelection', 'allowSorting', 'baselineColor', 'baselineEndDateMapping', 'baselineStartDateMapping', 'cellTooltipTemplate', 'childMapping', 'columnDialogFields', 'connectorLineBackground', 'connectorlineWidth', 'cssClass', 'dataSource', 'dateFormat', 'dayWorkingTime', 'dragTooltip', 'durationMapping', 'durationUnit', 'durationUnitMapping', 'editDialogFields', 'editSettings', 'enableAltRow', 'enableCollapseAll', 'enableContextMenu', 'enablePredecessorValidation', 'enableProgressBarResizing', 'enableResize', 'enableSerialNumber', 'enableTaskbarDragTooltip', 'enableTaskbarTooltip', 'enableVirtualization', 'enableWBS', 'enableWBSPredecessor', 'endDateMapping', 'expandStateMapping', 'filterSettings', 'groupCollection', 'groupIdMapping', 'groupNameMapping', 'highlightWeekends', 'holidays', 'includeWeekend', 'isResponsive', 'leftTaskLabelMapping', 'leftTaskLabelTemplate', 'locale', 'milestoneMapping', 'milestoneTemplate', 'notesMapping', 'parentProgressbarBackground', 'parentTaskIdMapping', 'parentTaskbarBackground', 'parentTaskbarTemplate', 'predecessorMapping', 'predecessorTooltipTemplate', 'progressMapping', 'progressbarBackground', 'progressbarHeight', 'progressbarTooltipTemplate', 'progressbarTooltipTemplateId', 'query', 'readOnly', 'renderBaseline', 'resourceCollectionMapping', 'resourceIdMapping', 'resourceInfoMapping', 'resourceNameMapping', 'resourceUnitMapping', 'resources', 'rightTaskLabelMapping', 'rightTaskLabelTemplate', 'roundOffDayworkingTime', 'rowHeight', 'scheduleEndDate', 'scheduleHeaderSettings', 'scheduleStartDate', 'selectedCellIndexes', 'selectedRowIndex', 'selectionType', 'selectionMode', 'showColumnChooser', 'showColumnOptions', 'showGridCellTooltip', 'showGridExpandCellTooltip', 'showProgressStatus', 'showResourceNames', 'showTaskNames', 'sizeSettings', 'sortSettings', 'splitterPosition', 'splitterSettings', 'startDateMapping', 'stripLines', 'taskCollectionMapping', 'taskIdMapping', 'taskNameMapping', 'taskSchedulingMode', 'taskSchedulingModeMapping', 'taskType', 'taskbarBackground', 'taskbarEditingTooltipTemplate', 'taskbarEditingTooltipTemplateId', 'taskbarHeight', 'taskbarTemplate', 'taskbarTooltipTemplate', 'taskbarTooltipTemplateId', 'toolbarSettings', 'treeColumnIndex', 'validateManualTasksOnLinking', 'viewType', 'weekendBackground', 'workMapping', 'workUnit', 'workWeek', 'workingTimeScale'], ['dataSource', 'selectedRowIndex', 'selectedCellIndexes'], {}, ['dataSource']), _dec78 = (0, _aureliaDependencyInjection.inject)(Element), _dec75(_class27 = _dec76(_class27 = _dec77(_class27 = _dec78(_class27 = function (_WidgetBase20) {
   _inherits(ejGantt, _WidgetBase20);
 
@@ -897,46 +897,46 @@ var ejHeatMapLegend = exports.ejHeatMapLegend = (_dec95 = (0, _aureliaTemplating
 
   return ejHeatMapLegend;
 }(WidgetBase)) || _class36) || _class36) || _class36) || _class36);
-var ejLinearGauge = exports.ejLinearGauge = (_dec99 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'linear-gauge'), _dec100 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec101 = generateBindables('ejLinearGauge', ['animationSpeed', 'backgroundColor', 'borderColor', 'enableAnimation', 'enableMarkerPointerAnimation', 'exportSettings', 'isResponsive', 'enableGroupSeparator', 'enableResize', 'frame', 'height', 'labelColor', 'locale', 'maximum', 'minimum', 'orientation', 'outerCustomLabelPosition', 'pointerGradient1', 'pointerGradient2', 'readOnly', 'scales', 'theme', 'tickColor', 'tooltip', 'value', 'width'], ['value', 'minimum', 'maximum']), _dec102 = (0, _aureliaDependencyInjection.inject)(Element), _dec99(_class37 = _dec100(_class37 = _dec101(_class37 = _dec102(_class37 = function (_WidgetBase25) {
-  _inherits(ejLinearGauge, _WidgetBase25);
-
-  function ejLinearGauge(element) {
-    _classCallCheck(this, ejLinearGauge);
-
-    var _this25 = _possibleConstructorReturn(this, _WidgetBase25.call(this));
-
-    _this25.element = element;
-    return _this25;
-  }
-
-  return ejLinearGauge;
-}(WidgetBase)) || _class37) || _class37) || _class37) || _class37);
-var ejKanban = exports.ejKanban = (_dec103 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'kanban'), _dec104 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec105 = generateBindables('ejKanban', ['allowDragAndDrop', 'allowExternalDragAndDrop', 'allowTitle', 'swimlaneSettings', 'allowToggleColumn', 'allowSearching', 'allowFiltering', 'allowSelection', 'allowHover', 'allowKeyboardNavigation', 'allowScrolling', 'allowPrinting', 'contextMenuSettings', 'columns', 'cardSettings', 'customToolbarItems', 'cssClass', 'dataSource', 'enableTouch', 'enableRTL', 'enableTotalCount', 'editSettings', 'fields', 'keyField', 'isResponsive', 'minWidth', 'filterSettings', 'query', 'keySettings', 'scrollSettings', 'searchSettings', 'selectionType', 'stackedHeaderRows', 'tooltipSettings', 'workflows', 'locale', 'showColumnWhenEmpty'], ['dataSource'], { 'enableRTL': 'enableRtl' }, ['dataSource']), _dec106 = (0, _aureliaDependencyInjection.inject)(Element), _dec107 = (0, _aureliaTemplating.children)(constants.elementPrefix + 'kanban-column'), _dec103(_class38 = _dec104(_class38 = _dec105(_class38 = _dec106(_class38 = (_class39 = function (_WidgetBase26) {
-  _inherits(ejKanban, _WidgetBase26);
+var ejKanban = exports.ejKanban = (_dec99 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'kanban'), _dec100 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec101 = generateBindables('ejKanban', ['allowDragAndDrop', 'allowExternalDragAndDrop', 'allowTitle', 'swimlaneSettings', 'allowToggleColumn', 'allowSearching', 'allowFiltering', 'allowSelection', 'allowHover', 'allowKeyboardNavigation', 'allowScrolling', 'allowPrinting', 'contextMenuSettings', 'columns', 'cardSettings', 'customToolbarItems', 'cssClass', 'dataSource', 'enableTouch', 'enableRTL', 'enableTotalCount', 'editSettings', 'fields', 'keyField', 'isResponsive', 'minWidth', 'filterSettings', 'query', 'keySettings', 'scrollSettings', 'searchSettings', 'selectionType', 'stackedHeaderRows', 'tooltipSettings', 'workflows', 'locale', 'showColumnWhenEmpty'], ['dataSource'], { 'enableRTL': 'enableRtl' }, ['dataSource']), _dec102 = (0, _aureliaDependencyInjection.inject)(Element), _dec103 = (0, _aureliaTemplating.children)(constants.elementPrefix + 'kanban-column'), _dec99(_class37 = _dec100(_class37 = _dec101(_class37 = _dec102(_class37 = (_class38 = function (_WidgetBase25) {
+  _inherits(ejKanban, _WidgetBase25);
 
   function ejKanban(element) {
     _classCallCheck(this, ejKanban);
 
-    var _this26 = _possibleConstructorReturn(this, _WidgetBase26.call(this));
+    var _this25 = _possibleConstructorReturn(this, _WidgetBase25.call(this));
 
-    _initDefineProp(_this26, 'columns', _descriptor5, _this26);
+    _initDefineProp(_this25, 'columns', _descriptor5, _this25);
 
-    _this26.element = element;
-    _this26.hasChildProperty = true;
-    _this26.childPropertyName = 'columns';
-    return _this26;
+    _this25.element = element;
+    _this25.hasChildProperty = true;
+    _this25.childPropertyName = 'columns';
+    return _this25;
   }
 
   return ejKanban;
-}(WidgetBase), (_descriptor5 = _applyDecoratedDescriptor(_class39.prototype, 'columns', [_dec107], {
+}(WidgetBase), (_descriptor5 = _applyDecoratedDescriptor(_class38.prototype, 'columns', [_dec103], {
   enumerable: true,
   initializer: function initializer() {
     return [];
   }
-})), _class39)) || _class38) || _class38) || _class38) || _class38);
-var KanbanColumn = exports.KanbanColumn = (_dec108 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec109 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'kanban-column'), _dec110 = generateBindables('columns', ['headerText', 'totalCount', 'key', 'allowDrop', 'allowDrag', 'isCollapsed', 'constraints', 'headerTemplate', 'width', 'visible', 'showAddButton']), _dec108(_class41 = _dec109(_class41 = _dec110(_class41 = function KanbanColumn() {
+})), _class38)) || _class37) || _class37) || _class37) || _class37);
+var KanbanColumn = exports.KanbanColumn = (_dec104 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec105 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'kanban-column'), _dec106 = generateBindables('columns', ['headerText', 'totalCount', 'key', 'allowDrop', 'allowDrag', 'isCollapsed', 'constraints', 'headerTemplate', 'width', 'visible', 'showAddButton']), _dec104(_class40 = _dec105(_class40 = _dec106(_class40 = function KanbanColumn() {
   _classCallCheck(this, KanbanColumn);
-}) || _class41) || _class41) || _class41);
+}) || _class40) || _class40) || _class40);
+var ejLinearGauge = exports.ejLinearGauge = (_dec107 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'linear-gauge'), _dec108 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec109 = generateBindables('ejLinearGauge', ['animationSpeed', 'backgroundColor', 'borderColor', 'enableAnimation', 'enableMarkerPointerAnimation', 'exportSettings', 'isResponsive', 'enableGroupSeparator', 'enableResize', 'frame', 'height', 'labelColor', 'locale', 'maximum', 'minimum', 'orientation', 'outerCustomLabelPosition', 'pointerGradient1', 'pointerGradient2', 'readOnly', 'scales', 'theme', 'tickColor', 'tooltip', 'value', 'width'], ['value', 'minimum', 'maximum']), _dec110 = (0, _aureliaDependencyInjection.inject)(Element), _dec107(_class41 = _dec108(_class41 = _dec109(_class41 = _dec110(_class41 = function (_WidgetBase26) {
+  _inherits(ejLinearGauge, _WidgetBase26);
+
+  function ejLinearGauge(element) {
+    _classCallCheck(this, ejLinearGauge);
+
+    var _this26 = _possibleConstructorReturn(this, _WidgetBase26.call(this));
+
+    _this26.element = element;
+    return _this26;
+  }
+
+  return ejLinearGauge;
+}(WidgetBase)) || _class41) || _class41) || _class41) || _class41);
 var ejListBox = exports.ejListBox = (_dec111 = (0, _aureliaTemplating.customAttribute)(constants.attributePrefix + 'list-box'), _dec112 = generateBindables('ejListBox', ['allowDrag', 'allowDrop', 'allowMultiSelection', 'allowVirtualScrolling', 'caseSensitiveSearch', 'cascadeTo', 'checkedIndices', 'cssClass', 'dataSource', 'enabled', 'enableIncrementalSearch', 'enablePersistence', 'enableRTL', 'enableWordWrap', 'fields', 'height', 'itemHeight', 'itemsCount', 'totalItemsCount', 'itemRequestCount', 'loadDataOnInit', 'query', 'selectedIndex', 'selectedIndices', 'showCheckbox', 'showRoundedCorner', 'sortOrder', 'template', 'value', 'virtualScrollMode', 'width', 'targetID'], ['value', 'dataSource'], { 'enableRTL': 'enableRtl', 'targetID': 'targetId' }), _dec113 = (0, _aureliaDependencyInjection.inject)(Element), _dec111(_class42 = _dec112(_class42 = _dec113(_class42 = function (_WidgetBase27) {
   _inherits(ejListBox, _WidgetBase27);
 
@@ -1034,35 +1034,35 @@ var ejNavigationDrawer = exports.ejNavigationDrawer = (_dec132 = (0, _aureliaTem
 
   return ejNavigationDrawer;
 }(WidgetBase)) || _class50) || _class50) || _class50) || _class50);
-var ejOverview = exports.ejOverview = (_dec136 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'overview'), _dec137 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec138 = generateBindables('ejOverview', ['sourceID', 'height', 'width'], [], { 'sourceID': 'sourceId' }), _dec139 = (0, _aureliaDependencyInjection.inject)(Element), _dec136(_class51 = _dec137(_class51 = _dec138(_class51 = _dec139(_class51 = function (_WidgetBase33) {
-  _inherits(ejOverview, _WidgetBase33);
-
-  function ejOverview(element) {
-    _classCallCheck(this, ejOverview);
-
-    var _this33 = _possibleConstructorReturn(this, _WidgetBase33.call(this));
-
-    _this33.element = element;
-    return _this33;
-  }
-
-  return ejOverview;
-}(WidgetBase)) || _class51) || _class51) || _class51) || _class51);
-var ejNumericTextbox = exports.ejNumericTextbox = (_dec140 = (0, _aureliaTemplating.customAttribute)(constants.attributePrefix + 'numeric-textbox'), _dec141 = generateBindables('ejNumericTextbox', ['currencySymbol', 'cssClass', 'decimalPlaces', 'enabled', 'enablePersistence', 'enableRTL', 'enableStrictMode', 'groupSize', 'groupSeparator', 'height', 'htmlAttributes', 'incrementStep', 'locale', 'maxValue', 'minValue', 'name', 'negativePattern', 'positivePattern', 'readOnly', 'showRoundedCorner', 'showSpinButton', 'validateOnType', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'width'], ['value'], { 'enableRTL': 'enableRtl' }), _dec142 = (0, _aureliaDependencyInjection.inject)(Element), _dec140(_class52 = _dec141(_class52 = _dec142(_class52 = function (_WidgetBase34) {
-  _inherits(ejNumericTextbox, _WidgetBase34);
+var ejNumericTextbox = exports.ejNumericTextbox = (_dec136 = (0, _aureliaTemplating.customAttribute)(constants.attributePrefix + 'numeric-textbox'), _dec137 = generateBindables('ejNumericTextbox', ['currencySymbol', 'cssClass', 'decimalPlaces', 'enabled', 'enablePersistence', 'enableRTL', 'enableStrictMode', 'groupSize', 'groupSeparator', 'height', 'htmlAttributes', 'incrementStep', 'locale', 'maxValue', 'minValue', 'name', 'negativePattern', 'positivePattern', 'readOnly', 'showRoundedCorner', 'showSpinButton', 'validateOnType', 'validationMessage', 'validationRules', 'value', 'watermarkText', 'width'], ['value'], { 'enableRTL': 'enableRtl' }), _dec138 = (0, _aureliaDependencyInjection.inject)(Element), _dec136(_class51 = _dec137(_class51 = _dec138(_class51 = function (_WidgetBase33) {
+  _inherits(ejNumericTextbox, _WidgetBase33);
 
   function ejNumericTextbox(element) {
     _classCallCheck(this, ejNumericTextbox);
 
+    var _this33 = _possibleConstructorReturn(this, _WidgetBase33.call(this));
+
+    _this33.isEditor = true;
+    _this33.element = element;
+    return _this33;
+  }
+
+  return ejNumericTextbox;
+}(WidgetBase)) || _class51) || _class51) || _class51);
+var ejOverview = exports.ejOverview = (_dec139 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'overview'), _dec140 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec141 = generateBindables('ejOverview', ['sourceID', 'height', 'width'], [], { 'sourceID': 'sourceId' }), _dec142 = (0, _aureliaDependencyInjection.inject)(Element), _dec139(_class52 = _dec140(_class52 = _dec141(_class52 = _dec142(_class52 = function (_WidgetBase34) {
+  _inherits(ejOverview, _WidgetBase34);
+
+  function ejOverview(element) {
+    _classCallCheck(this, ejOverview);
+
     var _this34 = _possibleConstructorReturn(this, _WidgetBase34.call(this));
 
-    _this34.isEditor = true;
     _this34.element = element;
     return _this34;
   }
 
-  return ejNumericTextbox;
-}(WidgetBase)) || _class52) || _class52) || _class52);
+  return ejOverview;
+}(WidgetBase)) || _class52) || _class52) || _class52) || _class52);
 var ejPager = exports.ejPager = (_dec143 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'pager'), _dec144 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec145 = generateBindables('ejPager', ['customText', 'currentPage', 'cssClass', 'enabled', 'enableExternalMessage', 'enableQueryString', 'enableRTL', 'externalMessage', 'isResponsive', 'locale', 'pageCount', 'pageSize', 'pageSizeList', 'pageSizeMessage', 'template', 'totalPages', 'totalRecordsCount', 'showPageInfo'], [], { 'enableRTL': 'enableRtl' }), _dec146 = (0, _aureliaDependencyInjection.inject)(Element), _dec143(_class53 = _dec144(_class53 = _dec145(_class53 = _dec146(_class53 = function (_WidgetBase35) {
   _inherits(ejPager, _WidgetBase35);
 
@@ -1106,11 +1106,11 @@ var ejPercentageTextbox = exports.ejPercentageTextbox = (_dec151 = (0, _aureliaT
 
   return ejPercentageTextbox;
 }(WidgetBase)) || _class55) || _class55) || _class55);
-var ejPivotGauge = exports.ejPivotGauge = (_dec154 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'pivot-gauge'), _dec155 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec156 = generateBindables('ejPivotGauge', ['columnsCount', 'cssClass', 'customObject', 'dataSource', 'enableAnimation', 'enableTooltip', 'enableRTL', 'frame', 'isResponsive', 'labelFormatSettings', 'locale', 'rowsCount', 'scales', 'serviceMethodSettings', 'showHeaderLabel', 'url', 'analysisMode', 'operationalMode', 'enableXHRCredentials'], [], { 'enableRTL': 'enableRtl' }), _dec157 = (0, _aureliaDependencyInjection.inject)(Element), _dec154(_class56 = _dec155(_class56 = _dec156(_class56 = _dec157(_class56 = function (_WidgetBase38) {
-  _inherits(ejPivotGauge, _WidgetBase38);
+var ejPivotChart = exports.ejPivotChart = (_dec154 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'pivot-chart'), _dec155 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec156 = generateBindables('ejPivotChart', ['analysisMode', 'cssClass', 'zooming', 'commonSeriesOptions', 'dataSource', 'customObject', 'enable3D', 'enableRTL', 'enableMultiLevelLabels', 'isResponsive', 'legend', 'locale', 'operationalMode', 'axes', 'primaryXAxis', 'primaryYAxis', 'rotation', 'enableContextMenu', 'serviceMethodSettings', 'size', 'title', 'url', 'enableXHRCredentials'], [], { 'enableRTL': 'enableRtl' }), _dec157 = (0, _aureliaDependencyInjection.inject)(Element), _dec154(_class56 = _dec155(_class56 = _dec156(_class56 = _dec157(_class56 = function (_WidgetBase38) {
+  _inherits(ejPivotChart, _WidgetBase38);
 
-  function ejPivotGauge(element) {
-    _classCallCheck(this, ejPivotGauge);
+  function ejPivotChart(element) {
+    _classCallCheck(this, ejPivotChart);
 
     var _this38 = _possibleConstructorReturn(this, _WidgetBase38.call(this));
 
@@ -1118,13 +1118,13 @@ var ejPivotGauge = exports.ejPivotGauge = (_dec154 = (0, _aureliaTemplating.cust
     return _this38;
   }
 
-  return ejPivotGauge;
+  return ejPivotChart;
 }(WidgetBase)) || _class56) || _class56) || _class56) || _class56);
-var ejPivotChart = exports.ejPivotChart = (_dec158 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'pivot-chart'), _dec159 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec160 = generateBindables('ejPivotChart', ['analysisMode', 'cssClass', 'zooming', 'commonSeriesOptions', 'dataSource', 'customObject', 'enable3D', 'enableRTL', 'enableMultiLevelLabels', 'isResponsive', 'legend', 'locale', 'operationalMode', 'axes', 'primaryXAxis', 'primaryYAxis', 'rotation', 'enableContextMenu', 'serviceMethodSettings', 'size', 'title', 'url', 'enableXHRCredentials'], [], { 'enableRTL': 'enableRtl' }), _dec161 = (0, _aureliaDependencyInjection.inject)(Element), _dec158(_class57 = _dec159(_class57 = _dec160(_class57 = _dec161(_class57 = function (_WidgetBase39) {
-  _inherits(ejPivotChart, _WidgetBase39);
+var ejPivotGauge = exports.ejPivotGauge = (_dec158 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'pivot-gauge'), _dec159 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec160 = generateBindables('ejPivotGauge', ['columnsCount', 'cssClass', 'customObject', 'dataSource', 'enableAnimation', 'enableTooltip', 'enableRTL', 'frame', 'isResponsive', 'labelFormatSettings', 'locale', 'rowsCount', 'scales', 'serviceMethodSettings', 'showHeaderLabel', 'url', 'analysisMode', 'operationalMode', 'enableXHRCredentials'], [], { 'enableRTL': 'enableRtl' }), _dec161 = (0, _aureliaDependencyInjection.inject)(Element), _dec158(_class57 = _dec159(_class57 = _dec160(_class57 = _dec161(_class57 = function (_WidgetBase39) {
+  _inherits(ejPivotGauge, _WidgetBase39);
 
-  function ejPivotChart(element) {
-    _classCallCheck(this, ejPivotChart);
+  function ejPivotGauge(element) {
+    _classCallCheck(this, ejPivotGauge);
 
     var _this39 = _possibleConstructorReturn(this, _WidgetBase39.call(this));
 
@@ -1132,13 +1132,13 @@ var ejPivotChart = exports.ejPivotChart = (_dec158 = (0, _aureliaTemplating.cust
     return _this39;
   }
 
-  return ejPivotChart;
+  return ejPivotGauge;
 }(WidgetBase)) || _class57) || _class57) || _class57) || _class57);
-var ejPivotTreeMap = exports.ejPivotTreeMap = (_dec162 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'pivot-tree-map'), _dec163 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec164 = generateBindables('ejPivotTreeMap', ['cssClass', 'dataSource', 'customObject', 'isResponsive', 'locale', 'operationalMode', 'serviceMethodSettings', 'url', 'enableXHRCredentials']), _dec165 = (0, _aureliaDependencyInjection.inject)(Element), _dec162(_class58 = _dec163(_class58 = _dec164(_class58 = _dec165(_class58 = function (_WidgetBase40) {
-  _inherits(ejPivotTreeMap, _WidgetBase40);
+var ejPivotGrid = exports.ejPivotGrid = (_dec162 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'pivot-grid'), _dec163 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec164 = generateBindables('ejPivotGrid', ['analysisMode', 'cssClass', 'pivotTableFieldListID', 'dataSource', 'valueSortSettings', 'frozenHeaderSettings', 'headerSettings', 'showUniqueNameOnPivotButton', 'customObject', 'collapsedMembers', 'enableCellContext', 'enableCellSelection', 'enableDrillThrough', 'enableCellClick', 'enableCellDoubleClick', 'enableCellEditing', 'enableCollapseByDefault', 'enableColumnGrandTotal', 'enableConditionalFormatting', 'enableAdvancedFilter', 'enableDeferUpdate', 'enableGroupingBar', 'maxNodeLimitInMemberEditor', 'enableMemberEditorPaging', 'memberEditorPageSize', 'enableGrandTotal', 'enableJSONRendering', 'enablePivotFieldList', 'enableRowGrandTotal', 'enableRTL', 'enableToolTip', 'enableToolTipAnimation', 'enableColumnResizing', 'resizeColumnsToFit', 'enableContextMenu', 'enableVirtualScrolling', 'enablePaging', 'hyperlinkSettings', 'isResponsive', 'jsonRecords', 'layout', 'locale', 'operationalMode', 'serviceMethodSettings', 'url', 'enableCompleteDataExport', 'enableXHRCredentials'], [], { 'pivotTableFieldListID': 'pivotTableFieldListId', 'enableRTL': 'enableRtl' }), _dec165 = (0, _aureliaDependencyInjection.inject)(Element), _dec162(_class58 = _dec163(_class58 = _dec164(_class58 = _dec165(_class58 = function (_WidgetBase40) {
+  _inherits(ejPivotGrid, _WidgetBase40);
 
-  function ejPivotTreeMap(element) {
-    _classCallCheck(this, ejPivotTreeMap);
+  function ejPivotGrid(element) {
+    _classCallCheck(this, ejPivotGrid);
 
     var _this40 = _possibleConstructorReturn(this, _WidgetBase40.call(this));
 
@@ -1146,13 +1146,13 @@ var ejPivotTreeMap = exports.ejPivotTreeMap = (_dec162 = (0, _aureliaTemplating.
     return _this40;
   }
 
-  return ejPivotTreeMap;
+  return ejPivotGrid;
 }(WidgetBase)) || _class58) || _class58) || _class58) || _class58);
-var ejPivotGrid = exports.ejPivotGrid = (_dec166 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'pivot-grid'), _dec167 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec168 = generateBindables('ejPivotGrid', ['analysisMode', 'cssClass', 'pivotTableFieldListID', 'dataSource', 'valueSortSettings', 'frozenHeaderSettings', 'headerSettings', 'showUniqueNameOnPivotButton', 'customObject', 'collapsedMembers', 'enableCellContext', 'enableCellSelection', 'enableDrillThrough', 'enableCellClick', 'enableCellDoubleClick', 'enableCellEditing', 'enableCollapseByDefault', 'enableColumnGrandTotal', 'enableConditionalFormatting', 'enableAdvancedFilter', 'enableDeferUpdate', 'enableGroupingBar', 'maxNodeLimitInMemberEditor', 'enableMemberEditorPaging', 'memberEditorPageSize', 'enableGrandTotal', 'enableJSONRendering', 'enablePivotFieldList', 'enableRowGrandTotal', 'enableRTL', 'enableToolTip', 'enableToolTipAnimation', 'enableColumnResizing', 'resizeColumnsToFit', 'enableContextMenu', 'enableVirtualScrolling', 'enablePaging', 'hyperlinkSettings', 'isResponsive', 'jsonRecords', 'layout', 'locale', 'operationalMode', 'serviceMethodSettings', 'url', 'enableCompleteDataExport', 'enableXHRCredentials'], [], { 'pivotTableFieldListID': 'pivotTableFieldListId', 'enableRTL': 'enableRtl' }), _dec169 = (0, _aureliaDependencyInjection.inject)(Element), _dec166(_class59 = _dec167(_class59 = _dec168(_class59 = _dec169(_class59 = function (_WidgetBase41) {
-  _inherits(ejPivotGrid, _WidgetBase41);
+var ejPivotSchemaDesigner = exports.ejPivotSchemaDesigner = (_dec166 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'pivot-schema-designer'), _dec167 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec168 = generateBindables('ejPivotSchemaDesigner', ['cssClass', 'customObject', 'enableWrapper', 'enableRTL', 'olap', 'enableDragDrop', 'height', 'locale', 'pivotControl', 'serviceMethods', 'url', 'width', 'layout'], [], { 'enableRTL': 'enableRtl' }), _dec169 = (0, _aureliaDependencyInjection.inject)(Element), _dec166(_class59 = _dec167(_class59 = _dec168(_class59 = _dec169(_class59 = function (_WidgetBase41) {
+  _inherits(ejPivotSchemaDesigner, _WidgetBase41);
 
-  function ejPivotGrid(element) {
-    _classCallCheck(this, ejPivotGrid);
+  function ejPivotSchemaDesigner(element) {
+    _classCallCheck(this, ejPivotSchemaDesigner);
 
     var _this41 = _possibleConstructorReturn(this, _WidgetBase41.call(this));
 
@@ -1160,13 +1160,13 @@ var ejPivotGrid = exports.ejPivotGrid = (_dec166 = (0, _aureliaTemplating.custom
     return _this41;
   }
 
-  return ejPivotGrid;
+  return ejPivotSchemaDesigner;
 }(WidgetBase)) || _class59) || _class59) || _class59) || _class59);
-var ejPivotSchemaDesigner = exports.ejPivotSchemaDesigner = (_dec170 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'pivot-schema-designer'), _dec171 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec172 = generateBindables('ejPivotSchemaDesigner', ['cssClass', 'customObject', 'enableWrapper', 'enableRTL', 'olap', 'enableDragDrop', 'height', 'locale', 'pivotControl', 'serviceMethods', 'url', 'width', 'layout'], [], { 'enableRTL': 'enableRtl' }), _dec173 = (0, _aureliaDependencyInjection.inject)(Element), _dec170(_class60 = _dec171(_class60 = _dec172(_class60 = _dec173(_class60 = function (_WidgetBase42) {
-  _inherits(ejPivotSchemaDesigner, _WidgetBase42);
+var ejPivotTreeMap = exports.ejPivotTreeMap = (_dec170 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'pivot-tree-map'), _dec171 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec172 = generateBindables('ejPivotTreeMap', ['cssClass', 'dataSource', 'customObject', 'isResponsive', 'locale', 'operationalMode', 'serviceMethodSettings', 'url', 'enableXHRCredentials']), _dec173 = (0, _aureliaDependencyInjection.inject)(Element), _dec170(_class60 = _dec171(_class60 = _dec172(_class60 = _dec173(_class60 = function (_WidgetBase42) {
+  _inherits(ejPivotTreeMap, _WidgetBase42);
 
-  function ejPivotSchemaDesigner(element) {
-    _classCallCheck(this, ejPivotSchemaDesigner);
+  function ejPivotTreeMap(element) {
+    _classCallCheck(this, ejPivotTreeMap);
 
     var _this42 = _possibleConstructorReturn(this, _WidgetBase42.call(this));
 
@@ -1174,7 +1174,7 @@ var ejPivotSchemaDesigner = exports.ejPivotSchemaDesigner = (_dec170 = (0, _aure
     return _this42;
   }
 
-  return ejPivotSchemaDesigner;
+  return ejPivotTreeMap;
 }(WidgetBase)) || _class60) || _class60) || _class60) || _class60);
 var ejProgressBar = exports.ejProgressBar = (_dec174 = (0, _aureliaTemplating.customAttribute)(constants.attributePrefix + 'progress-bar'), _dec175 = generateBindables('ejProgressBar', ['cssClass', 'enabled', 'enablePersistence', 'enableRTL', 'height', 'htmlAttributes', 'maxValue', 'minValue', 'percentage', 'showRoundedCorner', 'text', 'value', 'width'], [], { 'enableRTL': 'enableRtl' }), _dec176 = (0, _aureliaDependencyInjection.inject)(Element), _dec174(_class61 = _dec175(_class61 = _dec176(_class61 = function (_WidgetBase43) {
   _inherits(ejProgressBar, _WidgetBase43);
@@ -1304,11 +1304,11 @@ var ejRating = exports.ejRating = (_dec201 = (0, _aureliaTemplating.customAttrib
 
   return ejRating;
 }(WidgetBase)) || _class74) || _class74) || _class74);
-var ejRibbon = exports.ejRibbon = (_dec204 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'ribbon'), _dec205 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec206 = generateBindables('ejRibbon', ['allowResizing', 'isResponsive', 'buttonDefaults', 'showQAT', 'cssClass', 'collapsePinSettings', 'enableOnDemand', 'collapsible', 'enableRTL', 'expandPinSettings', 'applicationTab', 'contextualTabs', 'disabledItemIndex', 'enabledItemIndex', 'selectedItemIndex', 'tabs', 'locale', 'width'], [], { 'enableRTL': 'enableRtl' }), _dec207 = (0, _aureliaDependencyInjection.inject)(Element), _dec204(_class75 = _dec205(_class75 = _dec206(_class75 = _dec207(_class75 = function (_WidgetBase49) {
-  _inherits(ejRibbon, _WidgetBase49);
+var ejReportViewer = exports.ejReportViewer = (_dec204 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'report-viewer'), _dec205 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec206 = generateBindables('ejReportViewer', ['dataSources', 'enablePageCache', 'exportSettings', 'isResponsive', 'locale', 'pageSettings', 'parameters', 'printMode', 'printOptions', 'processingMode', 'renderMode', 'reportPath', 'reportServerUrl', 'reportServiceUrl', 'toolbarSettings', 'zoomFactor', 'serviceAuthorizationToken']), _dec207 = (0, _aureliaDependencyInjection.inject)(Element), _dec204(_class75 = _dec205(_class75 = _dec206(_class75 = _dec207(_class75 = function (_WidgetBase49) {
+  _inherits(ejReportViewer, _WidgetBase49);
 
-  function ejRibbon(element) {
-    _classCallCheck(this, ejRibbon);
+  function ejReportViewer(element) {
+    _classCallCheck(this, ejReportViewer);
 
     var _this49 = _possibleConstructorReturn(this, _WidgetBase49.call(this));
 
@@ -1316,13 +1316,13 @@ var ejRibbon = exports.ejRibbon = (_dec204 = (0, _aureliaTemplating.customElemen
     return _this49;
   }
 
-  return ejRibbon;
+  return ejReportViewer;
 }(WidgetBase)) || _class75) || _class75) || _class75) || _class75);
-var ejReportViewer = exports.ejReportViewer = (_dec208 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'report-viewer'), _dec209 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec210 = generateBindables('ejReportViewer', ['dataSources', 'enablePageCache', 'exportSettings', 'isResponsive', 'locale', 'pageSettings', 'parameters', 'printMode', 'printOptions', 'processingMode', 'renderMode', 'reportPath', 'reportServerUrl', 'reportServiceUrl', 'toolbarSettings', 'zoomFactor', 'serviceAuthorizationToken']), _dec211 = (0, _aureliaDependencyInjection.inject)(Element), _dec208(_class76 = _dec209(_class76 = _dec210(_class76 = _dec211(_class76 = function (_WidgetBase50) {
-  _inherits(ejReportViewer, _WidgetBase50);
+var ejRibbon = exports.ejRibbon = (_dec208 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'ribbon'), _dec209 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec210 = generateBindables('ejRibbon', ['allowResizing', 'isResponsive', 'buttonDefaults', 'showQAT', 'cssClass', 'collapsePinSettings', 'enableOnDemand', 'collapsible', 'enableRTL', 'expandPinSettings', 'applicationTab', 'contextualTabs', 'disabledItemIndex', 'enabledItemIndex', 'selectedItemIndex', 'tabs', 'locale', 'width'], [], { 'enableRTL': 'enableRtl' }), _dec211 = (0, _aureliaDependencyInjection.inject)(Element), _dec208(_class76 = _dec209(_class76 = _dec210(_class76 = _dec211(_class76 = function (_WidgetBase50) {
+  _inherits(ejRibbon, _WidgetBase50);
 
-  function ejReportViewer(element) {
-    _classCallCheck(this, ejReportViewer);
+  function ejRibbon(element) {
+    _classCallCheck(this, ejRibbon);
 
     var _this50 = _possibleConstructorReturn(this, _WidgetBase50.call(this));
 
@@ -1330,7 +1330,7 @@ var ejReportViewer = exports.ejReportViewer = (_dec208 = (0, _aureliaTemplating.
     return _this50;
   }
 
-  return ejReportViewer;
+  return ejRibbon;
 }(WidgetBase)) || _class76) || _class76) || _class76) || _class76);
 var ejRotator = exports.ejRotator = (_dec212 = (0, _aureliaTemplating.customAttribute)(constants.attributePrefix + 'rotator'), _dec213 = generateBindables('ejRotator', ['allowKeyboardNavigation', 'animationSpeed', 'animationType', 'circularMode', 'cssClass', 'dataSource', 'delay', 'displayItemsCount', 'enableAutoPlay', 'enabled', 'enableRTL', 'fields', 'frameSpace', 'isResponsive', 'navigateSteps', 'orientation', 'pagerPosition', 'query', 'showCaption', 'showNavigateButton', 'showPager', 'showPlayButton', 'showThumbnail', 'slideHeight', 'slideWidth', 'startIndex', 'stopOnHover', 'template', 'templateId', 'thumbnailSourceID'], [], { 'enableRTL': 'enableRtl', 'thumbnailSourceID': 'thumbnailSourceId' }), _dec214 = (0, _aureliaDependencyInjection.inject)(Element), _dec212(_class77 = _dec213(_class77 = _dec214(_class77 = function (_WidgetBase51) {
   _inherits(ejRotator, _WidgetBase51);
@@ -1386,11 +1386,11 @@ var ejSchedule = exports.ejSchedule = (_dec218 = (0, _aureliaTemplating.customEl
 var ScheduleResource = exports.ScheduleResource = (_dec223 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec224 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'schedule-resource'), _dec225 = generateBindables('resources', ['field', 'title', 'name', 'allowMultiple', 'resourceSettings']), _dec223(_class82 = _dec224(_class82 = _dec225(_class82 = function ScheduleResource() {
   _classCallCheck(this, ScheduleResource);
 }) || _class82) || _class82) || _class82);
-var ejScroller = exports.ejScroller = (_dec226 = (0, _aureliaTemplating.customAttribute)(constants.attributePrefix + 'scroller'), _dec227 = generateBindables('ejScroller', ['animationSpeed', 'autoHide', 'buttonSize', 'enabled', 'enablePersistence', 'enableRTL', 'enableTouchScroll', 'height', 'scrollerSize', 'scrollLeft', 'scrollOneStepBy', 'scrollTop', 'targetPane', 'width'], ['scrollLeft', 'scrollTop'], { 'enableRTL': 'enableRtl' }), _dec228 = (0, _aureliaDependencyInjection.inject)(Element), _dec226(_class83 = _dec227(_class83 = _dec228(_class83 = function (_WidgetBase54) {
-  _inherits(ejScroller, _WidgetBase54);
+var ejSignature = exports.ejSignature = (_dec226 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'signature'), _dec227 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec228 = generateBindables('ejSignature', ['backgroundColor', 'backgroundImage', 'enabled', 'height', 'isResponsive', 'saveImageFormat', 'saveWithBackground', 'showRoundedCorner', 'strokeColor', 'strokeWidth', 'width']), _dec229 = (0, _aureliaDependencyInjection.inject)(Element), _dec226(_class83 = _dec227(_class83 = _dec228(_class83 = _dec229(_class83 = function (_WidgetBase54) {
+  _inherits(ejSignature, _WidgetBase54);
 
-  function ejScroller(element) {
-    _classCallCheck(this, ejScroller);
+  function ejSignature(element) {
+    _classCallCheck(this, ejSignature);
 
     var _this54 = _possibleConstructorReturn(this, _WidgetBase54.call(this));
 
@@ -1398,13 +1398,13 @@ var ejScroller = exports.ejScroller = (_dec226 = (0, _aureliaTemplating.customAt
     return _this54;
   }
 
-  return ejScroller;
-}(WidgetBase)) || _class83) || _class83) || _class83);
-var ejSignature = exports.ejSignature = (_dec229 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'signature'), _dec230 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec231 = generateBindables('ejSignature', ['backgroundColor', 'backgroundImage', 'enabled', 'height', 'isResponsive', 'saveImageFormat', 'saveWithBackground', 'showRoundedCorner', 'strokeColor', 'strokeWidth', 'width']), _dec232 = (0, _aureliaDependencyInjection.inject)(Element), _dec229(_class84 = _dec230(_class84 = _dec231(_class84 = _dec232(_class84 = function (_WidgetBase55) {
-  _inherits(ejSignature, _WidgetBase55);
+  return ejSignature;
+}(WidgetBase)) || _class83) || _class83) || _class83) || _class83);
+var ejScroller = exports.ejScroller = (_dec230 = (0, _aureliaTemplating.customAttribute)(constants.attributePrefix + 'scroller'), _dec231 = generateBindables('ejScroller', ['animationSpeed', 'autoHide', 'buttonSize', 'enabled', 'enablePersistence', 'enableRTL', 'enableTouchScroll', 'height', 'scrollerSize', 'scrollLeft', 'scrollOneStepBy', 'scrollTop', 'targetPane', 'width'], ['scrollLeft', 'scrollTop'], { 'enableRTL': 'enableRtl' }), _dec232 = (0, _aureliaDependencyInjection.inject)(Element), _dec230(_class84 = _dec231(_class84 = _dec232(_class84 = function (_WidgetBase55) {
+  _inherits(ejScroller, _WidgetBase55);
 
-  function ejSignature(element) {
-    _classCallCheck(this, ejSignature);
+  function ejScroller(element) {
+    _classCallCheck(this, ejScroller);
 
     var _this55 = _possibleConstructorReturn(this, _WidgetBase55.call(this));
 
@@ -1412,13 +1412,13 @@ var ejSignature = exports.ejSignature = (_dec229 = (0, _aureliaTemplating.custom
     return _this55;
   }
 
-  return ejSignature;
-}(WidgetBase)) || _class84) || _class84) || _class84) || _class84);
-var ejSlider = exports.ejSlider = (_dec233 = (0, _aureliaTemplating.customAttribute)(constants.attributePrefix + 'slider'), _dec234 = generateBindables('ejSlider', ['allowMouseWheel', 'animationSpeed', 'cssClass', 'enableAnimation', 'enabled', 'enablePersistence', 'enableRTL', 'height', 'htmlAttributes', 'incrementStep', 'largeStep', 'maxValue', 'minValue', 'orientation', 'readOnly', 'showButtons', 'showRoundedCorner', 'showScale', 'showSmallTicks', 'showTooltip', 'sliderType', 'smallStep', 'value', 'values', 'width'], ['value'], { 'enableRTL': 'enableRtl' }), _dec235 = (0, _aureliaDependencyInjection.inject)(Element), _dec233(_class85 = _dec234(_class85 = _dec235(_class85 = function (_WidgetBase56) {
-  _inherits(ejSlider, _WidgetBase56);
+  return ejScroller;
+}(WidgetBase)) || _class84) || _class84) || _class84);
+var ejSparkline = exports.ejSparkline = (_dec233 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'sparkline'), _dec234 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec235 = generateBindables('ejSparkline', ['background', 'fill', 'stroke', 'border', 'width', 'opacity', 'highPointColor', 'lowPointColor', 'startPointColor', 'endPointColor', 'negativePointColor', 'rangeBandSettings', 'locale', 'palette', 'isResponsive', 'enableCanvasRendering', 'enableGroupSeparator', 'dataSource', 'xName', 'yName', 'padding', 'type', 'theme', 'tooltip', 'markerSettings', 'size', 'axisLineSettings']), _dec236 = (0, _aureliaDependencyInjection.inject)(Element), _dec233(_class85 = _dec234(_class85 = _dec235(_class85 = _dec236(_class85 = function (_WidgetBase56) {
+  _inherits(ejSparkline, _WidgetBase56);
 
-  function ejSlider(element) {
-    _classCallCheck(this, ejSlider);
+  function ejSparkline(element) {
+    _classCallCheck(this, ejSparkline);
 
     var _this56 = _possibleConstructorReturn(this, _WidgetBase56.call(this));
 
@@ -1426,13 +1426,13 @@ var ejSlider = exports.ejSlider = (_dec233 = (0, _aureliaTemplating.customAttrib
     return _this56;
   }
 
-  return ejSlider;
-}(WidgetBase)) || _class85) || _class85) || _class85);
-var ejSparkline = exports.ejSparkline = (_dec236 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'sparkline'), _dec237 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec238 = generateBindables('ejSparkline', ['background', 'fill', 'stroke', 'border', 'width', 'opacity', 'highPointColor', 'lowPointColor', 'startPointColor', 'endPointColor', 'negativePointColor', 'rangeBandSettings', 'locale', 'palette', 'isResponsive', 'enableCanvasRendering', 'enableGroupSeparator', 'dataSource', 'xName', 'yName', 'padding', 'type', 'theme', 'tooltip', 'markerSettings', 'size', 'axisLineSettings']), _dec239 = (0, _aureliaDependencyInjection.inject)(Element), _dec236(_class86 = _dec237(_class86 = _dec238(_class86 = _dec239(_class86 = function (_WidgetBase57) {
-  _inherits(ejSparkline, _WidgetBase57);
+  return ejSparkline;
+}(WidgetBase)) || _class85) || _class85) || _class85) || _class85);
+var ejSlider = exports.ejSlider = (_dec237 = (0, _aureliaTemplating.customAttribute)(constants.attributePrefix + 'slider'), _dec238 = generateBindables('ejSlider', ['allowMouseWheel', 'animationSpeed', 'cssClass', 'enableAnimation', 'enabled', 'enablePersistence', 'enableRTL', 'height', 'htmlAttributes', 'incrementStep', 'largeStep', 'maxValue', 'minValue', 'orientation', 'readOnly', 'showButtons', 'showRoundedCorner', 'showScale', 'showSmallTicks', 'showTooltip', 'sliderType', 'smallStep', 'value', 'values', 'width'], ['value'], { 'enableRTL': 'enableRtl' }), _dec239 = (0, _aureliaDependencyInjection.inject)(Element), _dec237(_class86 = _dec238(_class86 = _dec239(_class86 = function (_WidgetBase57) {
+  _inherits(ejSlider, _WidgetBase57);
 
-  function ejSparkline(element) {
-    _classCallCheck(this, ejSparkline);
+  function ejSlider(element) {
+    _classCallCheck(this, ejSlider);
 
     var _this57 = _possibleConstructorReturn(this, _WidgetBase57.call(this));
 
@@ -1440,8 +1440,8 @@ var ejSparkline = exports.ejSparkline = (_dec236 = (0, _aureliaTemplating.custom
     return _this57;
   }
 
-  return ejSparkline;
-}(WidgetBase)) || _class86) || _class86) || _class86) || _class86);
+  return ejSlider;
+}(WidgetBase)) || _class86) || _class86) || _class86);
 var ejSpellCheck = exports.ejSpellCheck = (_dec240 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'spell-check'), _dec241 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec242 = generateBindables('ejSpellCheck', ['dictionarySettings', 'misspellWordCss', 'locale', 'maxSuggestionCount', 'ignoreWords', 'contextMenuSettings', 'ignoreSettings', 'isResponsive', 'enableValidateOnType', 'controlsToValidate', 'enableAsync', 'ajaxDataType']), _dec243 = (0, _aureliaDependencyInjection.inject)(Element), _dec240(_class87 = _dec241(_class87 = _dec242(_class87 = _dec243(_class87 = function (_WidgetBase58) {
   _inherits(ejSpellCheck, _WidgetBase58);
 
@@ -1456,11 +1456,11 @@ var ejSpellCheck = exports.ejSpellCheck = (_dec240 = (0, _aureliaTemplating.cust
 
   return ejSpellCheck;
 }(WidgetBase)) || _class87) || _class87) || _class87) || _class87);
-var ejSplitter = exports.ejSplitter = (_dec244 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'splitter'), _dec245 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec246 = generateBindables('ejSplitter', ['allowKeyboardNavigation', 'animationSpeed', 'cssClass', 'enableAnimation', 'enableRTL', 'expanderTemplate', 'height', 'htmlAttributes', 'isResponsive', 'orientation', 'properties', 'width'], [], { 'enableRTL': 'enableRtl' }), _dec247 = (0, _aureliaDependencyInjection.inject)(Element), _dec244(_class88 = _dec245(_class88 = _dec246(_class88 = _dec247(_class88 = function (_WidgetBase59) {
-  _inherits(ejSplitter, _WidgetBase59);
+var ejSplitButton = exports.ejSplitButton = (_dec244 = (0, _aureliaTemplating.customAttribute)(constants.attributePrefix + 'split-button'), _dec245 = generateBindables('ejSplitButton', ['arrowPosition', 'buttonMode', 'contentType', 'cssClass', 'enabled', 'enableRTL', 'height', 'htmlAttributes', 'imagePosition', 'prefixIcon', 'showRoundedCorner', 'size', 'suffixIcon', 'targetID', 'target', 'text', 'width'], [], { 'enableRTL': 'enableRtl', 'targetID': 'targetId' }), _dec246 = (0, _aureliaDependencyInjection.inject)(Element), _dec244(_class88 = _dec245(_class88 = _dec246(_class88 = function (_WidgetBase59) {
+  _inherits(ejSplitButton, _WidgetBase59);
 
-  function ejSplitter(element) {
-    _classCallCheck(this, ejSplitter);
+  function ejSplitButton(element) {
+    _classCallCheck(this, ejSplitButton);
 
     var _this59 = _possibleConstructorReturn(this, _WidgetBase59.call(this));
 
@@ -1468,13 +1468,13 @@ var ejSplitter = exports.ejSplitter = (_dec244 = (0, _aureliaTemplating.customEl
     return _this59;
   }
 
-  return ejSplitter;
-}(WidgetBase)) || _class88) || _class88) || _class88) || _class88);
-var ejSplitButton = exports.ejSplitButton = (_dec248 = (0, _aureliaTemplating.customAttribute)(constants.attributePrefix + 'split-button'), _dec249 = generateBindables('ejSplitButton', ['arrowPosition', 'buttonMode', 'contentType', 'cssClass', 'enabled', 'enableRTL', 'height', 'htmlAttributes', 'imagePosition', 'prefixIcon', 'showRoundedCorner', 'size', 'suffixIcon', 'targetID', 'target', 'text', 'width'], [], { 'enableRTL': 'enableRtl', 'targetID': 'targetId' }), _dec250 = (0, _aureliaDependencyInjection.inject)(Element), _dec248(_class89 = _dec249(_class89 = _dec250(_class89 = function (_WidgetBase60) {
-  _inherits(ejSplitButton, _WidgetBase60);
+  return ejSplitButton;
+}(WidgetBase)) || _class88) || _class88) || _class88);
+var ejSplitter = exports.ejSplitter = (_dec247 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'splitter'), _dec248 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec249 = generateBindables('ejSplitter', ['allowKeyboardNavigation', 'animationSpeed', 'cssClass', 'enableAnimation', 'enableRTL', 'expanderTemplate', 'height', 'htmlAttributes', 'isResponsive', 'orientation', 'properties', 'width'], [], { 'enableRTL': 'enableRtl' }), _dec250 = (0, _aureliaDependencyInjection.inject)(Element), _dec247(_class89 = _dec248(_class89 = _dec249(_class89 = _dec250(_class89 = function (_WidgetBase60) {
+  _inherits(ejSplitter, _WidgetBase60);
 
-  function ejSplitButton(element) {
-    _classCallCheck(this, ejSplitButton);
+  function ejSplitter(element) {
+    _classCallCheck(this, ejSplitter);
 
     var _this60 = _possibleConstructorReturn(this, _WidgetBase60.call(this));
 
@@ -1482,8 +1482,8 @@ var ejSplitButton = exports.ejSplitButton = (_dec248 = (0, _aureliaTemplating.cu
     return _this60;
   }
 
-  return ejSplitButton;
-}(WidgetBase)) || _class89) || _class89) || _class89);
+  return ejSplitter;
+}(WidgetBase)) || _class89) || _class89) || _class89) || _class89);
 var Sheet = exports.Sheet = (_dec251 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec252 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'sheet'), _dec253 = generateBindables('sheets', ['border', 'cellTypes', 'cFormatRule', 'colCount', 'columnWidth', 'dataSource', 'fieldAsColumnHeader', 'frozenRows', 'frozenColumns', 'headerStyles', 'hideColumns', 'hideRows', 'mergeCells', 'primaryKey', 'query', 'rangeSettings', 'rowCount', 'rows', 'showGridlines', 'showHeader', 'showHeadings', 'sheetName', 'startCell']), _dec251(_class90 = _dec252(_class90 = _dec253(_class90 = function Sheet() {
   _classCallCheck(this, Sheet);
 }) || _class90) || _class90) || _class90);
@@ -1536,11 +1536,11 @@ var ejSunburstChart = exports.ejSunburstChart = (_dec259 = (0, _aureliaTemplatin
 var SunburstLevels = exports.SunburstLevels = (_dec264 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec265 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'sunburst-levels'), _dec266 = generateBindables('levels', ['groupMemberPath']), _dec264(_class97 = _dec265(_class97 = _dec266(_class97 = function SunburstLevels() {
   _classCallCheck(this, SunburstLevels);
 }) || _class97) || _class97) || _class97);
-var ejTab = exports.ejTab = (_dec267 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'tab'), _dec268 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec269 = generateBindables('ejTab', ['ajaxSettings', 'allowKeyboardNavigation', 'collapsible', 'cssClass', 'disabledItemIndex', 'enableAnimation', 'enabled', 'enabledItemIndex', 'enablePersistence', 'enableRTL', 'enableTabScroll', 'events', 'headerPosition', 'headerSize', 'height', 'heightAdjustMode', 'hiddenItemIndex', 'htmlAttributes', 'idPrefix', 'selectedItemIndex', 'showCloseButton', 'showReloadIcon', 'showRoundedCorner', 'width'], ['selectedItemIndex'], { 'enableRTL': 'enableRtl' }), _dec270 = (0, _aureliaDependencyInjection.inject)(Element), _dec267(_class98 = _dec268(_class98 = _dec269(_class98 = _dec270(_class98 = function (_WidgetBase63) {
-  _inherits(ejTab, _WidgetBase63);
+var ejSymbolPalette = exports.ejSymbolPalette = (_dec267 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'symbol-palette'), _dec268 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec269 = generateBindables('ejSymbolPalette', ['allowDrag', 'cssClass', 'defaultSettings', 'diagramId', 'headerHeight', 'height', 'paletteItemHeight', 'paletteItemWidth', 'palettes', 'previewHeight', 'previewOffset', 'previewWidth', 'showPaletteItemText', 'width']), _dec270 = (0, _aureliaDependencyInjection.inject)(Element), _dec267(_class98 = _dec268(_class98 = _dec269(_class98 = _dec270(_class98 = function (_WidgetBase63) {
+  _inherits(ejSymbolPalette, _WidgetBase63);
 
-  function ejTab(element) {
-    _classCallCheck(this, ejTab);
+  function ejSymbolPalette(element) {
+    _classCallCheck(this, ejSymbolPalette);
 
     var _this63 = _possibleConstructorReturn(this, _WidgetBase63.call(this));
 
@@ -1548,13 +1548,13 @@ var ejTab = exports.ejTab = (_dec267 = (0, _aureliaTemplating.customElement)(con
     return _this63;
   }
 
-  return ejTab;
+  return ejSymbolPalette;
 }(WidgetBase)) || _class98) || _class98) || _class98) || _class98);
-var ejSymbolPalette = exports.ejSymbolPalette = (_dec271 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'symbol-palette'), _dec272 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec273 = generateBindables('ejSymbolPalette', ['allowDrag', 'cssClass', 'defaultSettings', 'diagramId', 'headerHeight', 'height', 'paletteItemHeight', 'paletteItemWidth', 'palettes', 'previewHeight', 'previewOffset', 'previewWidth', 'showPaletteItemText', 'width']), _dec274 = (0, _aureliaDependencyInjection.inject)(Element), _dec271(_class99 = _dec272(_class99 = _dec273(_class99 = _dec274(_class99 = function (_WidgetBase64) {
-  _inherits(ejSymbolPalette, _WidgetBase64);
+var ejTab = exports.ejTab = (_dec271 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'tab'), _dec272 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec273 = generateBindables('ejTab', ['ajaxSettings', 'allowKeyboardNavigation', 'collapsible', 'cssClass', 'disabledItemIndex', 'enableAnimation', 'enabled', 'enabledItemIndex', 'enablePersistence', 'enableRTL', 'enableTabScroll', 'events', 'headerPosition', 'headerSize', 'height', 'heightAdjustMode', 'hiddenItemIndex', 'htmlAttributes', 'idPrefix', 'selectedItemIndex', 'showCloseButton', 'showReloadIcon', 'showRoundedCorner', 'width'], ['selectedItemIndex'], { 'enableRTL': 'enableRtl' }), _dec274 = (0, _aureliaDependencyInjection.inject)(Element), _dec271(_class99 = _dec272(_class99 = _dec273(_class99 = _dec274(_class99 = function (_WidgetBase64) {
+  _inherits(ejTab, _WidgetBase64);
 
-  function ejSymbolPalette(element) {
-    _classCallCheck(this, ejSymbolPalette);
+  function ejTab(element) {
+    _classCallCheck(this, ejTab);
 
     var _this64 = _possibleConstructorReturn(this, _WidgetBase64.call(this));
 
@@ -1562,7 +1562,7 @@ var ejSymbolPalette = exports.ejSymbolPalette = (_dec271 = (0, _aureliaTemplatin
     return _this64;
   }
 
-  return ejSymbolPalette;
+  return ejTab;
 }(WidgetBase)) || _class99) || _class99) || _class99) || _class99);
 var ejTagCloud = exports.ejTagCloud = (_dec275 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'tag-cloud'), _dec276 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec277 = generateBindables('ejTagCloud', ['cssClass', 'dataSource', 'enableRTL', 'fields', 'htmlAttributes', 'format', 'maxFontSize', 'minFontSize', 'query', 'showTitle', 'titleImage', 'titleText'], [], { 'enableRTL': 'enableRtl' }), _dec278 = (0, _aureliaDependencyInjection.inject)(Element), _dec275(_class100 = _dec276(_class100 = _dec277(_class100 = _dec278(_class100 = function (_WidgetBase65) {
   _inherits(ejTagCloud, _WidgetBase65);
@@ -1721,11 +1721,11 @@ var ejTreeMap = exports.ejTreeMap = (_dec307 = (0, _aureliaTemplating.customElem
     return [];
   }
 })), _class114)) || _class113) || _class113) || _class113) || _class113);
-var ejTreeView = exports.ejTreeView = (_dec312 = (0, _aureliaTemplating.customAttribute)(constants.attributePrefix + 'tree-view'), _dec313 = generateBindables('ejTreeView', ['allowDragAndDrop', 'allowDragAndDropAcrossControl', 'allowDropSibling', 'allowDropChild', 'allowEditing', 'allowKeyboardNavigation', 'allowMultiSelection', 'autoCheck', 'autoCheckParentNode', 'checkedNodes', 'cssClass', 'enableAnimation', 'enabled', 'enableMultipleExpand', 'enablePersistence', 'enableRTL', 'expandedNodes', 'expandOn', 'fields', 'fullRowSelect', 'height', 'htmlAttributes', 'loadOnDemand', 'selectedNode', 'selectedNodes', 'showCheckbox', 'sortSettings', 'template', 'width'], [], { 'enableRTL': 'enableRtl' }), _dec314 = (0, _aureliaDependencyInjection.inject)(Element), _dec312(_class116 = _dec313(_class116 = _dec314(_class116 = function (_WidgetBase73) {
-  _inherits(ejTreeView, _WidgetBase73);
+var ejWaitingPopup = exports.ejWaitingPopup = (_dec312 = (0, _aureliaTemplating.customAttribute)(constants.attributePrefix + 'waiting-popup'), _dec313 = generateBindables('ejWaitingPopup', ['cssClass', 'htmlAttributes', 'showImage', 'showOnInit', 'target', 'appendTo', 'template', 'text']), _dec314 = (0, _aureliaDependencyInjection.inject)(Element), _dec312(_class116 = _dec313(_class116 = _dec314(_class116 = function (_WidgetBase73) {
+  _inherits(ejWaitingPopup, _WidgetBase73);
 
-  function ejTreeView(element) {
-    _classCallCheck(this, ejTreeView);
+  function ejWaitingPopup(element) {
+    _classCallCheck(this, ejWaitingPopup);
 
     var _this73 = _possibleConstructorReturn(this, _WidgetBase73.call(this));
 
@@ -1733,7 +1733,7 @@ var ejTreeView = exports.ejTreeView = (_dec312 = (0, _aureliaTemplating.customAt
     return _this73;
   }
 
-  return ejTreeView;
+  return ejWaitingPopup;
 }(WidgetBase)) || _class116) || _class116) || _class116);
 var ejUploadbox = exports.ejUploadbox = (_dec315 = (0, _aureliaTemplating.customElement)(constants.elementPrefix + 'uploadbox'), _dec316 = (0, _aureliaTemplating.inlineView)('' + constants.aureliaTemplateString), _dec317 = generateBindables('ejUploadbox', ['allowDragAndDrop', 'asyncUpload', 'autoUpload', 'buttonText', 'cssClass', 'customFileDetails', 'dialogAction', 'dialogPosition', 'dialogText', 'dropAreaText', 'dropAreaHeight', 'dropAreaWidth', 'enabled', 'enableRTL', 'extensionsAllow', 'extensionsDeny', 'fileSize', 'height', 'htmlAttributes', 'locale', 'multipleFilesSelection', 'pushFile', 'removeUrl', 'saveUrl', 'showBrowseButton', 'showFileDetails', 'showRoundedCorner', 'uploadName', 'width'], [], { 'enableRTL': 'enableRtl' }), _dec318 = (0, _aureliaDependencyInjection.inject)(Element), _dec315(_class117 = _dec316(_class117 = _dec317(_class117 = _dec318(_class117 = function (_WidgetBase74) {
   _inherits(ejUploadbox, _WidgetBase74);
@@ -1749,11 +1749,11 @@ var ejUploadbox = exports.ejUploadbox = (_dec315 = (0, _aureliaTemplating.custom
 
   return ejUploadbox;
 }(WidgetBase)) || _class117) || _class117) || _class117) || _class117);
-var ejWaitingPopup = exports.ejWaitingPopup = (_dec319 = (0, _aureliaTemplating.customAttribute)(constants.attributePrefix + 'waiting-popup'), _dec320 = generateBindables('ejWaitingPopup', ['cssClass', 'htmlAttributes', 'showImage', 'showOnInit', 'target', 'appendTo', 'template', 'text']), _dec321 = (0, _aureliaDependencyInjection.inject)(Element), _dec319(_class118 = _dec320(_class118 = _dec321(_class118 = function (_WidgetBase75) {
-  _inherits(ejWaitingPopup, _WidgetBase75);
+var ejTreeView = exports.ejTreeView = (_dec319 = (0, _aureliaTemplating.customAttribute)(constants.attributePrefix + 'tree-view'), _dec320 = generateBindables('ejTreeView', ['allowDragAndDrop', 'allowDragAndDropAcrossControl', 'allowDropSibling', 'allowDropChild', 'allowEditing', 'allowKeyboardNavigation', 'allowMultiSelection', 'autoCheck', 'autoCheckParentNode', 'checkedNodes', 'cssClass', 'enableAnimation', 'enabled', 'enableMultipleExpand', 'enablePersistence', 'enableRTL', 'expandedNodes', 'expandOn', 'fields', 'fullRowSelect', 'height', 'htmlAttributes', 'loadOnDemand', 'selectedNode', 'selectedNodes', 'showCheckbox', 'sortSettings', 'template', 'width'], [], { 'enableRTL': 'enableRtl' }), _dec321 = (0, _aureliaDependencyInjection.inject)(Element), _dec319(_class118 = _dec320(_class118 = _dec321(_class118 = function (_WidgetBase75) {
+  _inherits(ejTreeView, _WidgetBase75);
 
-  function ejWaitingPopup(element) {
-    _classCallCheck(this, ejWaitingPopup);
+  function ejTreeView(element) {
+    _classCallCheck(this, ejTreeView);
 
     var _this75 = _possibleConstructorReturn(this, _WidgetBase75.call(this));
 
@@ -1761,7 +1761,7 @@ var ejWaitingPopup = exports.ejWaitingPopup = (_dec319 = (0, _aureliaTemplating.
     return _this75;
   }
 
-  return ejWaitingPopup;
+  return ejTreeView;
 }(WidgetBase)) || _class118) || _class118) || _class118);
 exports.customAttribute = _aureliaTemplating.customAttribute;
 exports.bindable = _aureliaTemplating.bindable;
