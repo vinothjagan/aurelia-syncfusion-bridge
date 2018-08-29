@@ -1,13 +1,12 @@
 var yargs = require('yargs');
 
-var argv = yargs.argv,
-    validBumpTypes = "major|minor|patch|prerelease".split("|"),
-    bump = (argv.bump || 'patch').toLowerCase();
+//validBumpTypes = "major|minor|patch|prerelease".split("|"),
+bump = yargs.argv.version
 
-if(validBumpTypes.indexOf(bump) === -1) {
-  throw new Error('Unrecognized bump "' + bump + '".');
-}
+// if(validBumpTypes.indexOf(bump) === -1) {
+//   throw new Error('Unrecognized bump "' + bump + '".');
+// }
 
 module.exports = {
-  bump: bump
+    bump: bump
 };
