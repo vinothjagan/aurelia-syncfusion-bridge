@@ -12560,9 +12560,6 @@ input.e-fe-dialog-text:not(.e-textbox),
 .e-radiobtn-wrap .e-text {
   font-size: 13px;
 }
-.e-radiobtn-wrap.e-material-animate .e-radsmaller span.e-rad-icon.e-icon.e-circle_01 {
-  font-size: 10px;
-}
 .e-radiobtn-wrap span.e-rad-icon.e-icon.e-rad-select:before {
   content: "\e686";
   font-size: 0px;
@@ -12628,6 +12625,37 @@ input.e-fe-dialog-text:not(.e-textbox),
 }
 .e-radiobtn-wrap.e-disable.e-focus > span {
   
+}
+.e-radiobtn-wrap .e-spanicon.e-radsmaller .e-icon.e-rad-icon,
+.e-radiobtn-wrap .e-radmedium .e-rad-icon {
+  text-indent: 0px;
+}
+.e-radiobtn-wrap.e-ie8 .e-spanicon.e-radsmaller .e-icon.e-rad-icon {
+  /* IE8 */
+  text-indent: 2px;
+  line-height: 12px;
+  padding: 0.5px;
+  font-size: 8px;
+  
+}
+.e-radiobtn-wrap.e-ie8 .e-spanicon.e-radsmaller .e-icon.e-rad-icon {
+  /* IE 8 */
+  font-size: 10px;
+  text-indent: 2.5px;
+  line-height: 15px;
+}
+.e-radiobtn-wrap.e-ie8 .e-radmedium .e-rad-icon {
+  /* IE 8 */
+  font-size: 9px;
+  text-indent: 3px;
+  line-height: 15px;
+  
+}
+.e-radiobtn-wrap.e-ie8 .e-radmedium .e-rad-icon {
+  /* IE 8 */
+  font-size: 12px;
+  text-indent: 2px;
+  line-height: 16px;
 }
 
 /*-----------------------Map------------------*/
@@ -16607,6 +16635,11 @@ table.pivotGridValueTable.rowFrozenTable tr td:last-child {
 .e-pivotclient td {
   padding: 0;
   border: 0 none;
+}
+.e-pivotclient .e-dialogremoveBtn:before {
+  font-family: "ej-webfont";
+  content: "\e711";
+  display: inline-block;
 }
 .e-pivotclient .e-hoverCell {
   background-color: #e0e0e0 !important;
@@ -21357,11 +21390,11 @@ table.pivotGridValueTable.rowFrozenTable tr td:last-child {
   color: rgba(0, 0, 0, 0.54);
 }
 .e-columnmenuselection .e-icon,
-.e-contextmenu-mouseover .e-icon {
+.e-tgcontextmenu-mouseover .e-icon {
   
 }
 .e-columnmenuselection .e-icon,
-.e-contextmenu-mouseover .e-icon {
+.e-tgcontextmenu-mouseover .e-icon {
   color: rgba(0, 0, 0, 0.54);
 }
 .e-treegrid .e-tooltxt.e-hover > span {
@@ -21411,31 +21444,31 @@ table.pivotGridValueTable.rowFrozenTable tr td:last-child {
 .e-treegrid .e-summaryrow .e-summaryrowcell {
   border-bottom-color: #e0e0e0;
 }
-.e-contextmenu,
-.e-innerContextmenu {
+.e-tgcontextmenu,
+.e-tginnerContextmenu {
   
   background: white;
   font-family: 'Roboto', Segoe UI, Helvetica Neue, Ubuntu, Arial;
 }
-.e-contextmenu,
-.e-innerContextmenu {
+.e-tgcontextmenu,
+.e-tginnerContextmenu {
   border-color: transparent !important;
   color: rgba(0, 0, 0, 0.87);
 }
-.e-headerContextmenu {
+.e-tgheaderContextmenu {
   
   background: white;
   font-family: 'Roboto', Segoe UI, Helvetica Neue, Ubuntu, Arial;
   border: 1px solid;
 }
-.e-headerContextmenu {
+.e-tgheaderContextmenu {
   border-color: transparent !important;
   color: rgba(0, 0, 0, 0.87);
 }
-.e-contextmenu-mouseover {
+.e-tgcontextmenu-mouseover {
   
 }
-.e-contextmenu-mouseover {
+.e-tgcontextmenu-mouseover {
   background: rgba(0, 0, 0, 0.12);
 }
 .e-tooltipgantt {
@@ -21514,10 +21547,10 @@ table.pivotGridValueTable.rowFrozenTable tr td:last-child {
 .e-treegrid-columnchooser {
   box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.24);
 }
-.e-contextmenu {
+.e-tgcontextmenu {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
 }
-.e-innerContextmenu {
+.e-tginnerContextmenu {
   box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.24);
 }
 .e-treegrid .e-frozenheaderdiv {

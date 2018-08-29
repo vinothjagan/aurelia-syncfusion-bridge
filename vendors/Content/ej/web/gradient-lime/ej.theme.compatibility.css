@@ -14396,9 +14396,6 @@ input[type="text"].e-input {
 .e-widget.e-radiobtn-wrap.e-material-animate .e-radmedium span.e-rad-icon.e-icon.e-circle_01 {
   
 }
-.e-widget.e-radiobtn-wrap.e-material-animate .e-radsmaller span.e-rad-icon.e-icon.e-circle_01 {
-  
-}
 .e-widget.e-radiobtn-wrap span.e-rad-icon.e-icon.e-rad-select:before {
   
 }
@@ -14432,6 +14429,25 @@ input[type="text"].e-input {
 }
 .e-widget.e-radiobtn-wrap.e-disable.e-focus > span {
   box-shadow: none;
+}
+.e-widget.e-radiobtn-wrap .e-spanicon.e-radsmaller .e-icon.e-rad-icon,
+.e-widget.e-radiobtn-wrap .e-radmedium .e-rad-icon {
+  text-indent: 0px;
+}
+.e-widget.e-radiobtn-wrap.e-ie8 .e-spanicon.e-radsmaller .e-icon.e-rad-icon {
+  /* IE8 */
+  text-indent: 2px;
+  line-height: 12px;
+  padding: 0.5px;
+  font-size: 8px;
+  
+}
+.e-widget.e-radiobtn-wrap.e-ie8 .e-radmedium .e-rad-icon {
+  /* IE 8 */
+  font-size: 9px;
+  text-indent: 3px;
+  line-height: 15px;
+  
 }
 
 /* need verify with UX team*/
@@ -18330,6 +18346,11 @@ table.pivotGridValueTable.rowFrozenTable tr td:last-child {
 .e-js.e-pivotclient td {
   padding: 0;
   border: 0 none;
+}
+.e-js.e-pivotclient .e-dialogremoveBtn:before {
+  font-family: "ej-webfont";
+  content: "\e711";
+  display: inline-block;
 }
 .e-js.e-pivotclient .e-hoverCell {
   background-color: #e7f1c9 !important;
@@ -23206,11 +23227,11 @@ table.pivotGridValueTable.rowFrozenTable tr td:last-child {
   color: #686969;
 }
 .e-js .e-columnmenuselection .e-icon,
-.e-js .e-contextmenu-mouseover .e-icon {
+.e-js .e-tgcontextmenu-mouseover .e-icon {
   
 }
 .e-js .e-columnmenuselection .e-icon,
-.e-js .e-contextmenu-mouseover .e-icon {
+.e-js .e-tgcontextmenu-mouseover .e-icon {
   color: #282827;
 }
 .e-js.e-treegrid .e-tooltxt.e-hover > span {
@@ -23276,34 +23297,34 @@ table.pivotGridValueTable.rowFrozenTable tr td:last-child {
 .e-js.e-treegrid .e-summaryrow .e-summaryrowcell {
   border-bottom-color: #c8c8c8;
 }
-.e-js.e-contextmenu,
-.e-js.e-innerContextmenu {
+.e-js.e-tgcontextmenu,
+.e-js.e-tginnerContextmenu {
   
   background: white;
   font-family: Segoe UI, Helvetica Neue, Ubuntu, Arial;
 }
-.e-js.e-contextmenu,
-.e-js.e-innerContextmenu {
+.e-js.e-tgcontextmenu,
+.e-js.e-tginnerContextmenu {
   border-color: #c8c8c8 !important;
   color: #333333;
 }
-.e-js.e-headerContextmenu {
+.e-js.e-tgheaderContextmenu {
   
   background: white;
   font-family: Segoe UI, Helvetica Neue, Ubuntu, Arial;
   border: 1px solid;
 }
-.e-js.e-headerContextmenu {
+.e-js.e-tgheaderContextmenu {
   border-color: #c8c8c8 !important;
   color: #333333;
 }
-.e-js .e-contextmenu-mouseover {
+.e-js .e-tgcontextmenu-mouseover {
   
 }
-.e-js .e-contextmenu-mouseover {
+.e-js .e-tgcontextmenu-mouseover {
   color: #282827;
 }
-.e-js .e-contextmenu-mouseover {
+.e-js .e-tgcontextmenu-mouseover {
   background: #e7f1c9;
   /* Old browsers */
   background: -moz-linear-gradient(top, #e7f1c9, #d3e59b);

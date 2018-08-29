@@ -131,15 +131,15 @@ declare module 'aurelia-syncfusion-bridge' {
   export class ejAutocomplete extends WidgetBase {
     constructor(element?: any);
   }
-  export class ejBarcode extends WidgetBase {
-    constructor(element?: any);
-  }
   export class ejBulletGraph extends WidgetBase {
     qualitativeRanges: any;
     constructor(element?: any);
   }
   export class QualitativeRange {
   
+  }
+  export class ejBarcode extends WidgetBase {
+    constructor(element?: any);
   }
   export class ejButton extends WidgetBase {
     constructor(element?: any);
@@ -151,17 +151,95 @@ declare module 'aurelia-syncfusion-bridge' {
   export class Series {
   
   }
-  export class ejColorPicker extends WidgetBase {
-    constructor(element?: any);
-  }
   export class ejCheckBox extends WidgetBase {
     constructor(element?: any);
   }
   export class ejCircularGauge extends WidgetBase {
     constructor(element?: any);
   }
+  export class ejColorPicker extends WidgetBase {
+    constructor(element?: any);
+  }
   export class ejComboBox extends WidgetBase {
     constructor(element?: any);
+  }
+  export {
+    customAttribute,
+    bindable,
+    inject,
+    inlineView,
+    customElement,
+    children,
+    TemplatingEngine
+  };
+  export const constants: any;
+  export function generateBindables(controlName?: any, inputs?: any, twoWayProperties?: any, abbrevProperties?: any, observerCollection?: any): any;
+  export function delayed(): any;
+  
+  /**
+  * To get binded events from the element
+  * @param element The Element from which events acquired
+  */
+  export function getEventOption(element?: any): any;
+  
+  /**
+  * Fire DOM event on an element
+  * @param element The Element which the DOM event will be fired on
+  * @param name The Event's name
+  * @param data Addition data to attach to an event
+  */
+  export function fireEvent(element: Element, name: string, data?: any): any;
+  export class TemplateProcessor {
+    constructor(context?: any, templateEngine?: any);
+    initTemplate(): any;
+    initWidgetDependancies(): any;
+    renderStringTemplate(self?: any, selector?: any, data?: any, index?: any): any;
+    compileTemplate(element?: any): any;
+    clearTempalte(): any;
+    unbindViews(obj?: any): any;
+  }
+  export class Template {
+    template: any;
+    constructor(target?: any);
+  }
+  export class Util {
+    getBindablePropertyName(propertyName: string): string;
+    _unhyphenate(name: string): string;
+    getOptions(model?: any, properties?: any): any;
+    getControlPropertyName(options?: any, propertyName?: any): any;
+    hasValue(prop?: any): any;
+    processData(value?: any): any;
+  }
+  export class WidgetBase {
+    
+    /**
+    * To Create an widget
+    * @param option Object which contains  Element in which  widget will be created
+    */
+    createWidget(option?: any): any;
+    bind(ctx?: any, overrideCtx?: any): any;
+    createTwoWays(): any;
+    addTwoways(prop?: any): any;
+    
+    /**
+    * To get property and event options from the element
+    * @param element Element from which options are acquired
+    */
+    getWidgetOptions(element?: any): any;
+    getChildProperties(options?: any): any;
+    attached(): any;
+    unsubscribe(): any;
+    unbind(): any;
+    
+    /**
+     * To change widget model value
+     * @param property The viewModel property name
+     * @param newValue New value of the property
+     * @param oldvalue Pld value of the property
+     */
+    propertyChanged(property?: any, newValue?: any, oldValue?: any): any;
+    update(e?: any): any;
+    detached(): any;
   }
   export class ejCurrencyTextbox extends WidgetBase {
     constructor(element?: any);
@@ -172,10 +250,10 @@ declare module 'aurelia-syncfusion-bridge' {
   export class ejDateRangePicker extends WidgetBase {
     constructor(element?: any);
   }
-  export class ejDiagram extends WidgetBase {
+  export class ejDateTimePicker extends WidgetBase {
     constructor(element?: any);
   }
-  export class ejDateTimePicker extends WidgetBase {
+  export class ejDiagram extends WidgetBase {
     constructor(element?: any);
   }
   export class ejDialog extends WidgetBase {
@@ -184,13 +262,13 @@ declare module 'aurelia-syncfusion-bridge' {
   export class ejDigitalGauge extends WidgetBase {
     constructor(element?: any);
   }
-  export class ejFileExplorer extends WidgetBase {
-    constructor(element?: any);
-  }
   export class ejDropDownList extends WidgetBase {
     constructor(element?: any);
   }
   export class ejGantt extends WidgetBase {
+    constructor(element?: any);
+  }
+  export class ejFileExplorer extends WidgetBase {
     constructor(element?: any);
   }
   export class Column {
@@ -318,16 +396,16 @@ declare module 'aurelia-syncfusion-bridge' {
   export class ScheduleResource {
   
   }
-  export class ejSignature extends WidgetBase {
-    constructor(element?: any);
-  }
   export class ejScroller extends WidgetBase {
     constructor(element?: any);
   }
-  export class ejSparkline extends WidgetBase {
+  export class ejSignature extends WidgetBase {
     constructor(element?: any);
   }
   export class ejSlider extends WidgetBase {
+    constructor(element?: any);
+  }
+  export class ejSparkline extends WidgetBase {
     constructor(element?: any);
   }
   export class ejSpellCheck extends WidgetBase {
@@ -392,91 +470,13 @@ declare module 'aurelia-syncfusion-bridge' {
     levels: any;
     constructor(element?: any);
   }
-  export class ejWaitingPopup extends WidgetBase {
+  export class ejTreeView extends WidgetBase {
     constructor(element?: any);
   }
   export class ejUploadbox extends WidgetBase {
     constructor(element?: any);
   }
-  export class ejTreeView extends WidgetBase {
+  export class ejWaitingPopup extends WidgetBase {
     constructor(element?: any);
-  }
-  export {
-    customAttribute,
-    bindable,
-    inject,
-    inlineView,
-    customElement,
-    children,
-    TemplatingEngine
-  };
-  export const constants: any;
-  export function generateBindables(controlName?: any, inputs?: any, twoWayProperties?: any, abbrevProperties?: any, observerCollection?: any): any;
-  export function delayed(): any;
-  
-  /**
-  * To get binded events from the element
-  * @param element The Element from which events acquired
-  */
-  export function getEventOption(element?: any): any;
-  
-  /**
-  * Fire DOM event on an element
-  * @param element The Element which the DOM event will be fired on
-  * @param name The Event's name
-  * @param data Addition data to attach to an event
-  */
-  export function fireEvent(element: Element, name: string, data?: any): any;
-  export class TemplateProcessor {
-    constructor(context?: any, templateEngine?: any);
-    initTemplate(): any;
-    initWidgetDependancies(): any;
-    renderStringTemplate(self?: any, selector?: any, data?: any, index?: any): any;
-    compileTemplate(element?: any): any;
-    clearTempalte(): any;
-    unbindViews(obj?: any): any;
-  }
-  export class Template {
-    template: any;
-    constructor(target?: any);
-  }
-  export class Util {
-    getBindablePropertyName(propertyName: string): string;
-    _unhyphenate(name: string): string;
-    getOptions(model?: any, properties?: any): any;
-    getControlPropertyName(options?: any, propertyName?: any): any;
-    hasValue(prop?: any): any;
-    processData(value?: any): any;
-  }
-  export class WidgetBase {
-    
-    /**
-    * To Create an widget
-    * @param option Object which contains  Element in which  widget will be created
-    */
-    createWidget(option?: any): any;
-    bind(ctx?: any, overrideCtx?: any): any;
-    createTwoWays(): any;
-    addTwoways(prop?: any): any;
-    
-    /**
-    * To get property and event options from the element
-    * @param element Element from which options are acquired
-    */
-    getWidgetOptions(element?: any): any;
-    getChildProperties(options?: any): any;
-    attached(): any;
-    unsubscribe(): any;
-    unbind(): any;
-    
-    /**
-     * To change widget model value
-     * @param property The viewModel property name
-     * @param newValue New value of the property
-     * @param oldvalue Pld value of the property
-     */
-    propertyChanged(property?: any, newValue?: any, oldValue?: any): any;
-    update(e?: any): any;
-    detached(): any;
   }
 }
