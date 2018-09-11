@@ -135,15 +135,15 @@ declare module 'aurelia-syncfusion-bridge' {
   export class ejAutocomplete extends WidgetBase {
     constructor(element?: any);
   }
+  export class ejBarcode extends WidgetBase {
+    constructor(element?: any);
+  }
   export class ejBulletGraph extends WidgetBase {
     qualitativeRanges: any;
     constructor(element?: any);
   }
   export class QualitativeRange {
   
-  }
-  export class ejBarcode extends WidgetBase {
-    constructor(element?: any);
   }
   export class ejButton extends WidgetBase {
     constructor(element?: any);
@@ -269,10 +269,10 @@ declare module 'aurelia-syncfusion-bridge' {
   export class ejDropDownList extends WidgetBase {
     constructor(element?: any);
   }
-  export class ejGantt extends WidgetBase {
+  export class ejFileExplorer extends WidgetBase {
     constructor(element?: any);
   }
-  export class ejFileExplorer extends WidgetBase {
+  export class ejGantt extends WidgetBase {
     constructor(element?: any);
   }
   export class Column {
