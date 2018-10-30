@@ -1,7 +1,7 @@
 <template>
 	<require from="./spreadsheet.css"></require>
 	<div class ="e-main-panel">
-		<ej-spreadsheet id="Spreadsheet1" e-scroll-settings.bind = "scroll" e-allow-formula-bar = "false" e-show-ribbon = "false" e-sheet-count = 9
+		<ej-spreadsheet ej-spreadsheet.ref= "spreadsheetObj" id="Spreadsheet1" e-scroll-settings.bind = "scroll" e-allow-formula-bar = "false" e-show-ribbon = "false" e-sheet-count = 9
          e-row-count= 32 e-page-settings.bind = "page" e-on-load-complete.trigger = "loadcomplete($event)" 
 		e-on-action-begin.trigger = "actionbegin($event)">
 			<ej-sheet e-range-settings.bind = "range1" e-sheet-name = "2D Column">

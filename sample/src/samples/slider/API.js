@@ -10,7 +10,7 @@
       this.status = false;
     }
     GetValue() {
-      let sliderObj = $('#slider').ejSlider('instance');
+      let sliderObj = this.sliderObj.widget;
        /*eslint-disable */
       alert('Selected value is : ' + sliderObj.getValue());
        /*eslint-enable */

@@ -28427,6 +28427,9 @@ ejSpreadsheet :function (options) {
 ///Gets or sets a value that indicates to define password while importing in the Spreadsheet.
 ///<br/>password-string	default-
 ///<br/><br/>
+///Gets a value that indicates whether importing or not while loading the sheets in Spreadsheet.
+///<br/>isImport-boolean	default-false
+///<br/><br/>
 ///Gets or sets a value that indicates whether to enable or disable readonly support in the Spreadsheet.
 ///<br/>isReadOnly-boolean	default-false
 ///<br/><br/>

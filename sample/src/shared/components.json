@@ -176,6 +176,10 @@
             "status": "done",
             "moduleId": "datetimepicker"
         },
+        "DateRangePicker": {
+            "status": "done",
+            "moduleId": "daterangepicker"
+        },
         "TextBoxes": {
             "status": "done",
             "moduleId": "editors"

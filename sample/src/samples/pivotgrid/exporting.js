@@ -57,7 +57,7 @@ export class BasicUse {
     this.textValue = 'Export';
   }
   btnExportClick(args) {
-    let gridObj = $('.e-pivotgrid').data('ejPivotGrid');
+    let gridObj = this.pivotGrid.widget;
     gridObj.exportPivotGrid('//js.syncfusion.com/demos/ejservices/api/JSPivotGridExport/ExcelExport');
   }
 }

@@ -14,7 +14,8 @@ export class Chart {
     this.page = {pageCount: 9};
   }
   loadcomplete(args) {
-    let xlObj = $('#Spreadsheet1').ejSpreadsheet('instance');
+	setTimeout(() => {
+    let xlObj = this.spreadsheetObj.widget;  
     let xlFormat = xlObj.XLFormat;
     let xlEdit = xlObj.XLEdit;
     let xlChart = xlObj.XLChart;
@@ -81,7 +82,7 @@ export class Chart {
     xlFormat.format({ 'type': 'currency' }, 'B2:B21');
     xlFormat.format({ 'style': { 'font-weight': 'bold' } }, 'F16:F16');
     xlFormat.format({ 'style': { 'font-weight': 'bold' } }, 'A1:C1');
-    xlChart.createChart('B1:C6', { type: 'pie', enable3D: true, marker: { visible: false }, top: 40, left: 260, width: 360, height: 250 });
+    xlChart.createChart('A1:C6', { type: 'pie', enable3D: true, marker: { visible: false }, top: 40, left: 260, width: 360, height: 250 });
     xlObj.gotoPage(9, false);
     xlObj.setWidthToColumns([90, 85, 100]);
     xlObj.mergeCells('F16:G16', true);
@@ -93,12 +94,14 @@ export class Chart {
     xlObj.gotoPage(1, false);
     xlObj.performSelection('A1');
     xlObj.setSheetFocus();
+	}, 10)
   }
   actionbegin(args) {
+	setTimeout(() => {
+    let xlObj = this.spreadsheetObj.widget;    
     let details = args.detail;
     if (details.reqType === 'gotoSheet' && !details.newSheet) {
       let i = 0;
-      let xlObj = $('#Spreadsheet1').data('ejSpreadsheet');
       let charts = xlObj.getSheetElement(details.gotoIndex).find('.e-datavisualization-chart');
       let len = charts.length;
       while (i < len) {
@@ -106,5 +109,6 @@ export class Chart {
         i++;
       }
     }
+	}, 10)
   }
 }

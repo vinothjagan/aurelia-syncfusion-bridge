@@ -5,7 +5,19 @@ constructor() {
   this.qualitativeRanges = [{rangeEnd: 4.3}, {rangeEnd: 7.3}, {rangeEnd: 10}];
   this.captionSettings = {textAngle: -90, location: {x: 15, y: 350}, text: 'Product (with IDs)', font: {color: null, fontFamily: 'Segoe UI', fontStyle: 'Normal', size: '12px', fontWeight: 'regular', opacity: 1}, subTitle: {textAngle: 0, text: 'Production in Units', location: {x: 170, y: 595}, font: {color: null, fontFamily: 'Segoe UI', fontStyle: 'Normal ', size: '12px', fontWeight: 'regular', opacity: 1}}};
 }
-  onLoad() {
-    this.update.loadBulletTheme();
+  onLoad(sender) {
+    let bulletObj = sender.detail;
+    this.update.loadBulletTheme(bulletObj);
+	if(bulletObj.model.theme.includes("dark") || bulletObj.model.theme.includes('contrast')){
+		bulletObj.model.quantitativeScaleSettings.labelSettings.stroke = "white";
+		bulletObj.model.captionSettings.font.color ="white";
+		bulletObj.model.captionSettings.subTitle.font.color ="white";
+	}
+	else{
+		bulletObj.model.quantitativeScaleSettings.labelSettings.stroke = "black";
+		bulletObj.model.captionSettings.font.color ="black";
+		bulletObj.model.captionSettings.subTitle.font.color ="black";
+	}
+	
   }
 }

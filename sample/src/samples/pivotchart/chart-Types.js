@@ -66,7 +66,7 @@ export class BasicUse {
     this.target = 'Type';
   }
   onChange(args) {
-    let chartTarget = $('.e-pivotchart').data('ejPivotChart');
+    let chartTarget = this.pivotChart.widget;
     chartTarget.model.type = args.detail.text.toLowerCase();
     chartTarget.model.commonSeriesOptions.type = args.detail.text.toLowerCase();
     if (jQuery.inArray(chartTarget.model.type, ['line', 'spline', 'area', 'splinearea', 'stepline', 'steparea', 'stackingarea', 'scatter']) > -1) {

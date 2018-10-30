@@ -1,11 +1,12 @@
-﻿import '../scripts/xljsondata.js';
+import '../scripts/xljsondata.js';
 export class Datavalidation {
   constructor() {
     this.scroll = { height: '100%', width: '100%', isResponsive: 'true' };
     this.range = [{ dataSource: window.validationData, startCell: 'A1', showHeader: false}];
   }
   loadcomplete(args) {
-    let xlObj = $('#Spreadsheet1').ejSpreadsheet('instance');
+	setTimeout(() => {
+    let xlObj = this.spreadsheetObj.widget;        
     let values = [];
     let xlFormat = xlObj.XLFormat;
     let xlValidate = xlObj.XLValidate;
@@ -32,5 +33,6 @@ export class Datavalidation {
     xlValidate.applyDVRules('K2:K15', values, 'time', true, true);
     xlValidate.highlightInvalidData('K2:K15');
     xlObj.performSelection('A2');
+	}, 10)
   }
 }

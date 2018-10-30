@@ -1,11 +1,12 @@
-﻿import '../scripts/xljsondata.js';
+import '../scripts/xljsondata.js';
 export class ConditionalFormat {
   constructor() {
     this.scroll = { height: '100%', width: '100%', isResponsive: 'true' };
     this.range = [{ dataSource: window.conditionalData, startCell: 'A1', showHeader: false}];
   }
   loadcomplete(args) {
-    let xlObj = $('#Spreadsheet1').ejSpreadsheet('instance');
+	setTimeout(() => {
+    let xlObj = this.spreadsheetObj.widget;        
     let xlFormat = xlObj.XLFormat;
     let xlCFormat = xlObj.XLCFormat;
     xlObj.sheetRename('Conditional Formatting');
@@ -26,5 +27,6 @@ export class ConditionalFormat {
     xlFormat.format({ 'style': { 'font-weight': 'bold', 'font-size': '10pt', 'vertical-align': 'middle', 'text-align': 'center' } }, 'D1:D13');
     xlFormat.format({ 'style': { 'font-weight': 'bold', 'font-size': '10pt', 'vertical-align': 'middle', 'text-align': 'center' } }, 'G1:G7');
     xlObj.performSelection('B1');
+	}, 10)
   }
 }

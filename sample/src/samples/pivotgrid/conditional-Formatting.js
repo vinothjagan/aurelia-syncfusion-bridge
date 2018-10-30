@@ -58,13 +58,13 @@ export class BasicUse {
     this.textValue2 = 'Reset';
   }
   ApplyChanges() {
-    let gridObj = $('.e-pivotgrid').data('ejPivotGrid');
+    let gridObj = this.pivotGrid.widget;
     if (gridObj.model.enableConditionalFormatting) {
       gridObj.openConditionalFormattingDialog();
     }
   }
   Reset() {
-    let gridObj = $('.e-pivotgrid').data('ejPivotGrid');
+    let gridObj = this.pivotGrid.widget;
     gridObj._removeCellFormatting(true, false);
     gridObj._formattingArrayClone = null;
     gridObj._list = ['Add New'];

@@ -3,7 +3,7 @@
   <div class="row">
       <div class="frame"><div>    
           <label>Select DateTime</label> 
-          <input id="datetimepick" ej-date-time-picker="e-value.two-way:datetimeValue;e-enabled.bind:dtStatus;e-width.bind:'100%'" e-on-open.trigger="onOpen()" e-on-close.trigger="onClose()"></input>
+          <input ej-date-time-picker.ref="datetimepicker" id="datetimepick" ej-date-time-picker="e-value.two-way:datetimeValue;e-enabled.bind:dtStatus;e-width.bind:'100%'" e-on-open.trigger="onOpen()" e-on-close.trigger="onClose()"></input>
       </div>
     </div>
   </div>  
@@ -17,7 +17,7 @@
           <button id="getval" ej-button="e-text.bind:'Get Value';e-size.bind:'medium';" e-on-click.trigger="getValue()"></button>
        </div>
        <div class="col-sm-2">         
-            <input type="checkbox" id="show" ej-toggle-button="e-size.bind:'medium';e-show-rounded-corner.bind:true;e-active-text.bind:'Hide';e-default-text.bind:'Show';e-enabled.bind:btnStatus" e-on-create.trigger="ontglbtnCreate()"  e-on-change.trigger="onShow($event)"></input>
+            <input ej-toggle-button.ref="togglebtn" type="checkbox" id="show" ej-toggle-button="e-size.bind:'medium';e-show-rounded-corner.bind:true;e-active-text.bind:'Hide';e-default-text.bind:'Show';e-enabled.bind:btnStatus" e-on-create.trigger="ontglbtnCreate()"  e-on-change.trigger="onShow($event)"></input>
             <label for="show">Toggle</label> 
        </div>
      </div>

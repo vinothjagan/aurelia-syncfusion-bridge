@@ -5,10 +5,9 @@ export class MultiDialog {
     this.dialog3Position = { X: 0, Y: 140 };
   }
 onOpen(args) {
-  $('#btnOpen').hide();
-  $('#basicDialog').ejDialog('open');
+  this.dialog1.widget.open();
+  this.dialog2.widget.open();
+  this.dialog3.widget.open();
 }
- onDialogClose(args) {
-   $('#btnOpen').show();
- }
+
 }

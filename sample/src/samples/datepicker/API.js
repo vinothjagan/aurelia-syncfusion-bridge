@@ -10,12 +10,10 @@ export class API {
       });
     }
     onClose() {
-      let tgleBtn = $('#show').ejToggleButton('instance');
-      tgleBtn.option('toggleState', false);
+      this.togglebtn.widget.option('toggleState', false);
     }
     onOpen() {
-      let tgleBtn = $('#show').ejToggleButton('instance');
-      tgleBtn.option('toggleState', true);
+     this.togglebtn.widget.option('toggleState', true);
     }
     onEnable(args) {
       if (args.detail.isChecked) {
@@ -27,14 +25,13 @@ export class API {
       }
     }
     getValue() {
-      let dateObj = $('#datepick').ejDatePicker('instance');
       /*eslint-disable */
-      alert('Selected Date is : ' + dateObj.getValue());
+      alert('Selected Date is : ' + this.datepicker.widget.getValue());
       /*eslint-enable */
     }
     onShow(args) {
-      let dateObj = $('#datepick').ejDatePicker('instance');
-      if (args.detail.isChecked) dateObj.show();
-      else dateObj.hide();
+      let dateObj = this.datepicker.widget;
+      if (args.detail.isChecked) this.datepicker.widget.show();
+      else this.datepicker.widget.hide();
     }
 }

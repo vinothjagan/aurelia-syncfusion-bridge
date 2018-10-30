@@ -4,7 +4,7 @@ export class Rtl {
   }
 onOpen(args) {
   $('#btnOpen').hide();
-  $('#rtlDialog').ejDialog('open');
+  this.dialog.widget.open();
 }
  onDialogClose(args) {
    $('#btnOpen').show();

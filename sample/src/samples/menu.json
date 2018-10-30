@@ -134,6 +134,9 @@
         "DateTimePicker": {
             "moduleId": "datetimepicker"
         },
+        "DateRangePicker": {
+            "moduleId": "daterangepicker"
+        },
         "TextBoxes": {
             "moduleId": "editors"
         },

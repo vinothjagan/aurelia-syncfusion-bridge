@@ -2,8 +2,8 @@
   <require from="./color-mapping.css"></require>
   
   <div>
-    <ej-pivot-tree-map id="pivotTreeMapColor" e-data-source.bind="pivotData" e-on-render-success.trigger="renderFieldList($event)">
-    </ej-pivot-tree-map>
+      <ej-pivot-tree-map view-model.ref="pivotTreeMap" id="pivotTreeMapColor" e-data-source.bind="pivotData" e-on-render-success.trigger="renderFieldList($event)">
+      </ej-pivot-tree-map>
   </div>
   <!--Tooltip labels can be localized here-->
   <script id="tooltipTemplate" type="application/jsrender">

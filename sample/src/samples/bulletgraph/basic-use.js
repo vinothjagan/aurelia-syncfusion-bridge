@@ -13,15 +13,20 @@ export class BasicUse {
     this.qualitativeRanges3 = [{rangeEnd: 4.3, rangeStroke: '#61a301', rangeOpacity: 1}, {rangeEnd: 7.3, rangeStroke: '#fcda21', rangeOpacity: 1}, {rangeEnd: 10, rangeStroke: '#d61e3f', rangeOpacity: 1}];
     this.captionSettings3 = {textAngle: 0, location: {x: 17, y: 20}, text: 'Revenue YTD', font: {color: null, fontFamily: 'Segoe UI', fontStyle: 'Normal', size: '12px', fontWeight: 'regular', opacity: 1}, subTitle: {textAngle: 0, text: '$ in Thousands', location: {x: 10, y: 35}, font: {color: null, fontFamily: 'Segoe UI', fontStyle: 'Normal ', size: '12px', fontWeight: 'regular', opacity: 1}}};
   }
-  onLoad() {
-	let bulletInstance = $("#graph").data('ejBulletGraph'); 
-	this.update.loadBulletTheme(bulletInstance);	     
-	let bulletInstance1 = $("#graph1").data('ejBulletGraph');   
-    this.update.loadBulletTheme(bulletInstance1);
-	let bulletInstance2 = $("#graph2").data('ejBulletGraph');   
-    this.update.loadBulletTheme(bulletInstance2);
-	let bulletInstance3 = $("#graph3").data('ejBulletGraph');   
-    this.update.loadBulletTheme(bulletInstance3);
-	
+  onLoad(sender) {
+	let bulletObj = sender.detail;	
+	this.update.loadBulletTheme(bulletObj);
+    if(bulletObj.model.theme.includes("dark") || bulletObj.model.theme.includes('contrast')){
+		bulletObj.model.quantitativeScaleSettings.labelSettings.stroke = "white";
+		bulletObj.model.captionSettings.font.color ="white";
+		bulletObj.model.captionSettings.subTitle.font.color ="white";
+	}
+	else{
+	    bulletObj.model.quantitativeScaleSettings.labelSettings.stroke = "black";
+		bulletObj.model.captionSettings.font.color ="black";
+		bulletObj.model.captionSettings.subTitle.font.color ="black";
+	}	
   }
+  
+ 
 }

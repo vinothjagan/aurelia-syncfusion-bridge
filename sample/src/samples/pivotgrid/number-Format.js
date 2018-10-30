@@ -62,7 +62,7 @@ export class BasicUse {
     this.Quantity = 'Decimal';
   }
   onChange(args) {
-    let pivotGrid = $('.e-pivotgrid').data('ejPivotGrid');
+    let pivotGrid = this.pivotGrid.widget;
     for (let i = 0; i < pivotGrid.model.dataSource.values.length; i++) {
       if (args.target.id.indexOf(pivotGrid.model.dataSource.values[i].fieldName) !== -1) {
         pivotGrid.model.dataSource.values[i].format = args.detail.text.toLowerCase();

@@ -4,7 +4,7 @@ export class Icons {
   }
 onOpen(args) {
   $('#btnOpen').hide();
-  $('#dialogIcon').ejDialog('open');
+  this.dialog.widget.open();
 }
  onDialogClose(args) {
    $('#btnOpen').show();

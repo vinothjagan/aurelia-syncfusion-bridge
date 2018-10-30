@@ -11,12 +11,14 @@ export class BasicUse {
   }
 
   onchartloaded(sender) {
-    let chartobj = $('#chart').data('ejChart');
+	setTimeout(() => {
+    let chartobj = this.naviChart.widget;
     if (chartobj) {
       chartobj.model.primaryXAxis.zoomPosition = sender.detail.zoomPosition;
       chartobj.model.primaryXAxis.zoomFactor = sender.detail.zoomFactor;
-      $('#chart').ejChart('redraw');
+      chartobj.redraw();
     }
+	},10)
   }
   onLoad() {
     this.update.loadRangeNavigatorTheme();

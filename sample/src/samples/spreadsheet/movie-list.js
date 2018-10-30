@@ -6,7 +6,8 @@ export class MovieList {
     this.import = { importMapper: '//js.syncfusion.com/demos/ejservices/api/Spreadsheet/Import'};
   }
   loadcomplete(args) {
-    let xlObj = $('#Spreadsheet1').ejSpreadsheet('instance');
+	setTimeout(() => {
+    let xlObj = this.spreadsheetObj.widget;    
     let xlFormat = xlObj.XLFormat;
     xlObj.setWidthToColumns([30, 55, 63, 120, 80, 215, 90, 98, 80, 85, 323 ]);
     xlFormat.format({ 'style': { 'background-color': '#000000', 'color': '#FFFFFF', 'font-size': '8pt' } }, 'A1:V40');
@@ -19,6 +20,7 @@ export class MovieList {
     xlFormat.format({ 'style': { 'background-color': '#262626' } }, 'B7:K7');
     xlFormat.format({ 'style': { 'text-align': 'left' } }, 'B4:C7');
     xlFormat.format({ 'style': { 'vertical-align': 'middle' } }, 'B4:K7');
-    $('#Spreadsheet1_picture1').css('background-color', 'transparent');
+	document.getElementById(xlObj._id + '_picture1').style.backgroundColor = 'transparent';
+	}, 10)
   }
 }

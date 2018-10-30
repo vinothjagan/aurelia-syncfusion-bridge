@@ -7,9 +7,7 @@ export class Default {
     }
     onClick(args) {
       if (!ej.isNullOrUndefined(args.detail.event)) {
-        let pagerObj = $('#pager').ejPager('instance');
-        pagerObj.goToPage(args.detail.currentPage);
-        pagerObj.refreshPager();
+       
         $('.dtlabel').html('Selected Page : ' + args.detail.currentPage);
       }
     }

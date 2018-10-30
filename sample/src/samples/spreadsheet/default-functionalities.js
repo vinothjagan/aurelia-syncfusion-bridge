@@ -7,21 +7,26 @@ export class DefaultFunctionalities {
     this.export = { excelUrl: '//js.syncfusion.com/demos/ejservices/api/Spreadsheet/ExcelExport',
         csvUrl: '//js.syncfusion.com/demos/ejservices/api/Spreadsheet/CsvExport',
         pdfUrl: '//js.syncfusion.com/demos/ejservices/api/Spreadsheet/PdfExport'};
+	
   }
   loadcomplete(event) {
-    let xlObj = $('#Spreadsheet1').ejSpreadsheet('instance');
+	setTimeout(() => {
+    let xlObj = this.spreadsheetObj.widget;
     let xlFormat = xlObj.XLFormat;
-    if (!xlObj.isImport) {
+    if (!xlObj.model.isImport) {
       xlObj.setWidthToColumns([140, 128, 105, 100, 100, 110, 120, 120, 100]);
       xlFormat.format({ 'style': { 'font-weight': 'bold' } }, 'A1:H1');
       xlFormat.format({ 'type': 'currency' }, 'E2:H11');
       xlObj.XLRibbon.updateRibbonIcons();
     }
+	 }, 10)
   }
+ 
   openfailure(args) {
-    let xlObj = $('#Spreadsheet1').data('ejSpreadsheet');
-    let alertDlg = $('#' + xlObj._id + '_alertdlg');
-    xlObj._renderAlertDlgContent(alertDlg, 'Alert', args.detail.statusText);
-    alertDlg.ejDialog('open');
+   setTimeout(() => {
+    let xlObj = this.spreadsheetObj.widget;
+	xlObj.alert(args.detail.statusText);
+	 },10)
   }
+  
 }

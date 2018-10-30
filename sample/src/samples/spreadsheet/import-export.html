@@ -1,7 +1,7 @@
-﻿<template>
+<template>
 	<require from="./spreadsheet.css"></require>
 	<div class ="e-main-panel">
-		<ej-spreadsheet id="Spreadsheet1" e-scroll-settings.bind = "scroll" e-import-settings.bind = "import" 
+		<ej-spreadsheet ej-spreadsheet.ref= "spreadsheetObj" id="Spreadsheet1" e-scroll-settings.bind = "scroll" e-import-settings.bind = "import" 
         e-export-settings.bind = "export" e-allow-formula-bar = "false" e-on-load-complete.trigger = "loadcomplete($event)"
          e-on-open-failure.trigger ="openfailure($event)" >
 			<ej-sheet e-range-settings.bind = "range">

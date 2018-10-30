@@ -30,8 +30,8 @@ export class BasicUse {
     } else {
       this.text = (Math.round(args.detail.pointerValue) / 1000).toFixed(3).toString().replace('.', ',');
     }
-    label = 'Loan Amount = $ ' + this.text;
-    $('#lbl').text(label);
+    label = 'Loan Amount = $ ' + this.text;    
+	this.lb.textContent = label;
   }
   drawindicators(args) {
     if (args.detail.indicatorIndex  ===  0) {

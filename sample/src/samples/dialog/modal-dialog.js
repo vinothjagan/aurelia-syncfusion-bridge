@@ -1,7 +1,7 @@
 export class ModalDialog {
 onOpen(args) {
   $('#btnOpen').hide();
-  $('#lognForm').ejDialog('open');
+  this.dialog.widget.open();
 }
  onDialogClose(args) {
    $('#btnOpen').show();

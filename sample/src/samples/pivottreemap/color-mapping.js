@@ -27,7 +27,7 @@ export class BasicUse {
     };
   }
   renderFieldList(args) {
-    let treemapTarget = $('#pivotTreeMapColorTreeMapContainer').data('ejTreeMap');
+    let treemapTarget = this.pivotTreeMap.widget._treeMap;
     treemapTarget.model.colorValuePath = '';
     treemapTarget.model.enableGradient = false;
     treemapTarget.model.showLegend = false;

@@ -9,7 +9,8 @@ export class BasicUse {
     });
   }
   rteChange(args) {
-    $('#defaultradialmenu').ejRadialMenu('enableItem', 'Undo');
+
+    this.radialmenu.widget.enableItem("Undo");
   }
   radialShow(e) {
     let target;
@@ -24,20 +25,20 @@ export class BasicUse {
     target = $('#radialtarget1');
     radialRadius = 150;
     radialDiameter = 2 * radialRadius;
-    $('#defaultradialmenu').ejRadialMenu({ autoOpen: true });
+    this.radialmenu.widget.option('autoOpen', true);
     iframeY = e.detail.event.clientY;
     iframeX = e.detail.event.clientX;
     xPos = (iframeX > radialRadius ? iframeX - radialRadius : 0);
     yPos = (iframeY > radialRadius ? iframeY - radialRadius : 0);
     x = iframeX > (target.width() - radialRadius) ? (target.width() - radialDiameter) : xPos;
     y = iframeY > (target.height() - radialRadius) ? (target.height() - radialDiameter) : yPos;
-    $('#defaultradialmenu').ejRadialMenu('setPosition', x, y);
+    this.radialmenu.widget.option('setPosition', x, y);
     $('iframe').contents().find('body').blur();
   }
   itemsClick(e) {
-    let rteObj = $('#rteSample1').data('ejRTE');
+
     if (e.detail.text && e.detail.text.toLowerCase() === 'bold') {
-      rteObj.executeCommand('bold');
+      this.rte.widget.executeCommand('bold');
     }
     if (e.detail.text && e.detail.text.toLowerCase() === 'italic') {
       this.italic(e.detail.text);
@@ -50,20 +51,18 @@ export class BasicUse {
     }
   }
   italic(e) {
-    let rteObj = $('#rteSample1').data('ejRTE');
-    rteObj.executeCommand('italic');
+    this.rte.widget.executeCommand('italic');
+   
   }
   undo(e) {
-    let rteObj = $('#rteSample1').data('ejRTE');
-    rteObj.executeCommand('undo');
-    $('#defaultradialmenu').ejRadialMenu('disableItem', 'Undo');
-    $('#defaultradialmenu').ejRadialMenu('enableItem', 'Redo');
+    this.rte.widget.executeCommand('undo');
+    this.radialmenu.widget.disableItem('Undo');
+    this.radialmenu.widget.enableItem('Redo');
   }
   redo(e) {
-    let rteObj = $('#rteSample1').data('ejRTE');
-    rteObj.executeCommand('redo');
-    $('#defaultradialmenu').ejRadialMenu('disableItem', 'Redo');
-    $('#defaultradialmenu').ejRadialMenu('enableItem', 'Undo');
+    this.rte.widget.executeCommand('redo');
+    this.radialmenu.widget.disableItem('Redo');
+    this.radialmenu.widget.enableItem('Undo');
   }
 
 

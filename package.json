@@ -1,6 +1,6 @@
 {
   "name": "aurelia-syncfusion-bridge",
-  "version": "5.5.2",
+  "version": "0.2.3",
   "registry": "github",
   "description": "A set of Syncfusion wrappers for Aurelia allowing developers to easily use Syncfusion components in their Aurelia application",
   "keywords": [
@@ -13,7 +13,6 @@
   "bugs": {
     "url": "https://github.com/aurelia-ui-toolkits/aurelia-syncfusion-bridge/issues"
   },
-  "license": "MIT",
   "author": "aurelia-ui-toolkits",
   "main": "dist/commonjs/index.js",
   "typings": "dist/amd/aurelia-syncfusion-bridge.d.ts",
@@ -109,12 +108,6 @@
     "usedBy": [],
     "documentation": {
       "links": [
-        {
-          "rel": "license",
-          "mediaType": "text/plain",
-          "title": "The MIT License (MIT)",
-          "href": "LICENSE"
-        },
         {
           "rel": "describedby",
           "mediaType": "application/aurelia-doc+json",

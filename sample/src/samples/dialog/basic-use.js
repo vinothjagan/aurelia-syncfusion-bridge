@@ -1,7 +1,7 @@
 export class BasicUse {
 onOpen(args) {
   $('#btnOpen').hide();
-  $('#basicDialog').ejDialog('open');
+  this.dialog.widget.open();
 }
  onDialogClose(args) {
    $('#btnOpen').show();

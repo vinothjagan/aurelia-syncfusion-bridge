@@ -40,7 +40,7 @@ export class BasicUse {
       };
     }
     onChange(args) {
-      let pivotGrid = $('.e-pivotgrid').data('ejPivotGrid');
+      let pivotGrid = this.pivotGrid.widget;
       let LCID;
       if (args.detail.text === 'fr-FR') {
         LCID = '1036';

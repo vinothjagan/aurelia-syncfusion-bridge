@@ -4,7 +4,7 @@
 <require from="./default.css"></require>
 <require from="syncfusion-javascript/Content/ej/web/ribbon-css/ej.icons.css!"></require>
   <div>
-     <ej-ribbon id="Default" e-width="100%" e-expand-pin-settings.bind="ExpandPinSettings" e-collapse-pin-settings.bind="CollapsePinSettings" e-application-tab.bind="ApplicationTab" e-tabs.bind="Tabs" e-on-create.trigger="createControl()" >
+     <ej-ribbon id="Default" e-width="100%" e-expand-pin-settings.bind="ExpandPinSettings" e-collapse-pin-settings.bind="CollapsePinSettings" e-application-tab.bind="ApplicationTab" e-tabs.bind="Tabs" e-on-create.trigger="createControl()">
 	 </ej-ribbon>
   </div>
   
@@ -16,8 +16,19 @@
 	<div style="display:table-cell;padding-top:10px">
 	<table> 
 	<tr>
-	<td> 
-	<button id="spltbutton1" class="e-bsinfobtnstyle e-bssplbtn1">Protect Workbook</button>
+	<td>  
+	<button id="spltbutton1"
+	ej-split-button="e-size: large;
+	e-content-type.bind :'textandimage';
+	e-target-id: Ul51;
+	e-text: Protect Workbook;
+	e-button-mode: dropdown;
+	e-prefix-icon: e-icon e-protect e-newpageicon;
+	e-width: 100px;
+	e-height: 90px;
+	e-image-position: imagetop;
+	e-arrow-position: bottom;
+	" class="e-bsinfobtnstyle e-bssplbtn1"></button> 
      <ul id="Ul51">
          <li><span>Mark as Final</span></li>
          <li><span>Encrypt Password</span></li>
@@ -30,7 +41,17 @@
 	</tr>
 	<tr>
 	<td style="padding-top:10px"> 
-	<button id="spltbutton2" class="e-bsinfobtnstyle e-bssplbtn2">Check for Issues</button>
+			<button id="spltbutton2"
+			ej-split-button="e-size: large;
+			e-content-type.bind :'textandimage';
+			e-target-id: Ul52;
+			e-button-mode: dropdown;
+			e-prefix-icon:e-icon e-check e-newpageicon;
+			e-width:100px;
+			e-height:90px;
+			e-image-position: imagetop;
+			e-arrow-position: bottom;
+			" class="e-bsinfobtnstyle e-bssplbtn2">Check for Issues</button>	  
      <ul id="Ul52">
          <li><span>Inspect Document</span></li>
      </ul>   
@@ -42,8 +63,18 @@
 	</td>
 	</tr>
 	<tr>
-	<td style="padding-top:10px"> 
-	<button id="spltbutton3" class="e-bsinfobtnstyle e-bssplbtn3" style="font-size:18px">Manage Versions</button>
+	<td style="padding-top:10px">
+			<button id="spltbutton3"
+			ej-split-button="e-size: large;
+			e-content-type.bind :'textandimage';
+			e-target-id: Ul53;
+			e-button-mode: dropdown;
+			e-prefix-icon:e-icon e-version e-newpageicon;
+			e-width:100px;
+			e-height:90px;
+			e-image-position: imagetop;
+			e-arrow-position: bottom;
+			" class="e-bsinfobtnstyle e-bssplbtn3" style="font-size:18px">Manage Versions</button> 
      <ul id="Ul53">
          <li><span>Recover Workbooks</span></li>
      </ul>       
@@ -54,8 +85,15 @@
 	</td>
 	</tr>
 	<tr>
-	<td style="padding-top:10px"> 
-	<button id="btnlast" class="e-bsinfobtnstyle">Browser view Options</button>           
+	<td style="padding-top:10px">
+			<button id="btnlast" 
+			ej-button="e-size.bind: large;
+			e-content-type: textandimage;
+			e-prefix-icon: e-icon e-browser e-newpageicon;
+			e-width:100px;
+			e-height:100px;
+			e-image-position: imagetop;
+			" class="e-bsinfobtnstyle">Browser view Options</button>          
 	 </td>
 	 <td style="vertical-align: top;padding-left:10px;padding-top:10px">
 	<span class="e-bsptitle" style="font-size:18px">Browser View Options</span>
@@ -114,7 +152,9 @@
 	</div>
 	<div id="newCon">
 	<table>
-	<tr><td><input type="text" id="autocomplete" /></tr></td>
+	<tr><td>
+	<input type="text" id="autocomplete" ej-autocomplete="e-width.bind:width; e-show-popup-button:true; e-watermark-text:Search for online templates; e-data-source.bind: languages;"/></tr>
+	</td>
 	<tr><td class="e-suggestsearch" style="padding-top:5px">Suggested searches:
 	<a href="#">Business</a>
 	<a href="#">Personal</a>
@@ -124,12 +164,15 @@
 	<a href="#">Finance-Accounting</a>
 	<a href="#">Lists</a>
 	</td></tr>
-	<tr>
-	<td><button id="btn1" class="e-bsnewbtnstyle">Blank WorkBook</button><button id="btn2" class="e-bsnewbtnstyle">Project cost tracker</button><button id="btn3" class=" e-bsnewbtnstyle">Gantt project planner</button></td>
-	</tr>
-	<tr>
-	<td><button id="btn4" class="e-bsnewbtnstyle">Diet and exercise journal</button><button id="btn5" class="e-bsnewbtnstyle">Sales invoice tracker</button></td>
-	</tr>
+	<tr><td><button id="btn1" ej-button="e-size.bind: large;e-content-type: textandimage;e-prefix-icon: e-icon e-blank e-infopageicon; e-width:225px;e-height:200px;e-image-position: imagetop;" class="e-bsnewbtnstyle">Blank WorkBook</button>
+			<button id="btn2" ej-button="e-size.bind: large;e-content-type: textandimage;e-prefix-icon: e-icon e-project e-infopageicon; e-width:225px;e-height:200px;e-image-position: imagetop;" class="e-bsnewbtnstyle">Project cost tracker</button>
+			<button id="btn3" ej-button="e-size.bind: large;e-content-type: textandimage;e-prefix-icon: e-icon e-gantt e-infopageicon;e-width:225px;e-height:200px;e-image-position: imagetop;" class="e-bsnewbtnstyle">Gantt project planner</button>
+			</td>
+			</tr>
+			<tr>
+			<td><button id="btn4" ej-button="e-size.bind: large;e-content-type: textandimage;e-prefix-icon: e-icon e-diet e-infopageicon;e-width:225px;e-height:200px;e-image-position: imagetop;" class="e-bsnewbtnstyle">Diet and exercise journal</button>
+			    <button id="btn5" ej-button="e-size.bind: large;e-content-type: textandimage;e-prefix-icon: e-icon e-sales e-infopageicon;e-width:225px;e-height:200px;e-image-position: imagetop;" class="e-bsnewbtnstyle">Sales invoice tracker</button></td>
+			</tr>
 	<tr>
 	<td></td>
 	</tr>
@@ -149,25 +192,23 @@
 	<a href="#" style="font-size:11px">Sign out</a>
 	<a href="#" style="display:table;font-size:11px">Switch Account</a>
 	<div style="padding-top:20px;padding-bottom:10px">Background:</div>
-                        <input type="text" id="background" />
-                        <div id="backgroundList">
-                            <ul>
-                                <li>No Background</li>
-                                <li>Calligraphy</li>
-                                <li>Doodle Circles</li>
-                                <li>Geometry</li>
-                                <li>Stars</li>
-                            </ul>
-							</div>
+	<div>
+	<select class="e-ddl" ej-drop-down-list="e-text:No Background;e-width.bind:width1;" id="background">
+	<option value="No Background">No Background</option>
+	<option value="Calligraphy">Calligraphy</option>
+	<option value="Doodle Circles">Doodle Circles</option>
+	<option value="Geometry">Geometry</option>
+	<option value="Stars">Stars</option>
+	</select>
+	</div>
 	<div style="padding-top:20px;padding-bottom:10px">Theme:</div>
-                        <input type="text" id="themes" />
-                        <div id="themeList">
-                            <ul>
-                                <li>White</li>
-                                <li>Light Gray</li>
-                                <li>Dark Gray</li>
-                            </ul>		
-							</div>
+	<div>
+	<select class="e-ddl" ej-drop-down-list="e-text:White;e-width.bind:width1;" id="themes">
+			<option value="White">White</option>
+			<option value="Light Gray">Light Gray</option>
+			<option value="Dark Gray">Dark Gray</option>
+	</select>
+	</div>
 	</div>
     </div>
 	</div>

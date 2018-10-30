@@ -4,7 +4,7 @@
             <tbody class='container-fluid'>                           
                 <tr class='row'>                  
                     <td colspan="2">
-                        <ul id="treeView" ej-tree-view="e-width:250px;
+                        <ul id="treeView" ej-tree-view.ref="treeView" ej-tree-view="e-width:250px;
                         e-show-checkbox:true">
                             <li>Cricket
                                 <ul>
@@ -127,18 +127,7 @@
             </div>
             <div class="col-md-3 top-margin">
                 <button id="removeNode" ej-button="e-width: 130px" e-on-click.trigger='removeNode($event)'>Remove Node</button>
-            </div>    
-            <div class="col-md-3 top-margin">   
-                <div>Destroy </div>               
-            </div>
-            <div class="col-md-3 top-margin">
-                <input type="checkbox" id="destroy" ej-toggle-button="e-size:large;
-                                e-show-rounded-corner: true;
-                                e-height:34px;
-                                e-active-text: Restore;
-                                e-default-text: Destroy" e-on-change.trigger="onDestroy($event)"></input>
-                                <label for="destroy">Toggle</label>
-            </div>    
+            </div> 
         </div>
     </div>
    </template>

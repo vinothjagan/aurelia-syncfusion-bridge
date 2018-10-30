@@ -8,25 +8,25 @@ export class ContextMenu {
       args.detail.events.preventDefault();
     }
     onBeforeOpen(args) {
-      this.treeviewObj = $('#treeView').data('ejTreeView');
-      this.contextMenuObj = $('#treeviewMenu').data('ejMenu');
+      this.treeviewObj = this.treeView.widget;
+      this.contextMenuObj = this.treeviewMenu.widget;
       this.childMenu = this.contextMenuObj.element.children();
-      if ($(args.detail.target).hasClass('e-node-hover')) {
-        $(this.childMenu).removeClass('e-disable-item');
-        $(this.childMenu[3]).addClass('e-disable-item');
-      } else if ($(args.detail.target).hasClass('e-node-disable')) {
-        $(this.childMenu).addClass('e-disable-item');
-        $(this.childMenu[3]).removeClass('e-disable-item');
+      if (args.detail.target.classList.contains('e-node-hover')) {
+        this.childMenu.removeClass('e-disable-item');
+        this.childMenu[3].classList.add('e-disable-item');
+      } else if (args.detail.target.classList.contains('e-node-disable')) {
+        this.childMenu.addClass('e-disable-item');
+        this.childMenu[3].classList.remove('e-disable-item');
       }
-      if (!$(args.detail.target).hasClass('e-text')) args.detail.cancel = true;
+      if (!args.detail.target.classList.contains('e-text')) args.detail.cancel = true;
       else {
-        this.selectedNode = $(args.detail.target).closest('.e-item');
-        if (!$(args.detail.target).hasClass('e-node-disable')) this.treeviewObj.selectNode(this.selectedNode);
+        this.selectedNode = args.detail.target.closest('.e-item');
+        if (!args.detail.target.classList.contains('e-node-disable')) this.treeviewObj.selectNode(this.selectedNode);
       }
     }
     onMenuClick(args) {
-      this.treeviewObj = $('#treeView').data('ejTreeView');
-      this.contextMenuObj = $('#treeviewMenu').data('ejMenu');
+      this.treeviewObj = this.treeView.widget;
+      this.contextMenuObj = this.treeviewMenu.widget;
       if (args.detail.events.text === 'Add New Item') {
         this.treeviewObj.addNode('Item' + this.tabIndex, this.selectedNode);
         this.tabIndex++;

@@ -91,8 +91,8 @@ export class BasicUse {
       chartobj.model.series[0].points = chartData;
       chartobj.model.series[1].points = chartData1;
 
-      setInterval((count) => {
-        let chart = jQuery('#verticalchart').data('ejChart');
+	  setInterval((chartobj) => {
+		let chart = this.chartObj ? this.chartObj.widget : chartobj;
         if (Math.random() > 0.5) {
           if (value < 45) {
             value += Math.random() * 2.0;

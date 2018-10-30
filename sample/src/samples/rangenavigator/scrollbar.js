@@ -12,33 +12,19 @@ export class BasicUse {
     this.sizeSettings = {width: '950', height: '120'};
     this.size = {width: '1000', height: '300'};
   }
-  onScrollStart(sender) {
-    $('#wait').ejWaitingPopup();
-    $('#wait').ejWaitingPopup('show');
-  }
-  onScrollchange(sender) {
-    let rangeobj = $('#navigator').data('ejRangeNavigator');
-    if ((rangeobj.model.leftScrollbarClicked ||  rangeobj.model.rightScrollbarClicked) && Math.ceil(rangeobj.model.rectWidth) < 48) {
-      $('#navigator').ejWaitingPopup();
-      $('#navigator').ejWaitingPopup('hide');
-    } else {
-      $('#wait').ejWaitingPopup();
-      $('#wait').ejWaitingPopup('show');
-    }
-  }
+  
+  
   onScrollbarChanged(sender) {
     let range = sender.detail;
     let startRange;
     let endRange;
-    let data;
-    $('#wait').ejWaitingPopup();
-    $('#wait').ejWaitingPopup('hide');
+    let data;    
     data = sender.detail.data;
     startRange = Date.parse(data.newRange.start);
     endRange = Date.parse(data.newRange.end);
     data = this.getdata(new Date(startRange), new Date(endRange));
-    range.model.dataSource = data.Open;
-    $('#navigator').ejRangeNavigator('redraw');
+    range.model.dataSource = data.Open;    
+	this.navi.widget.redraw();
   }
   onLoad() {
     this.update.loadRangeNavigatorTheme();
@@ -83,7 +69,8 @@ export class BasicUse {
     }
   }
   onchartloaded(sender) {
-    let chartobj = $('#chart').ejChart('instance');
+	setTimeout(() => {
+    let chartobj = this.naviChart.widget;
     let start = Date.parse(sender.detail.selectedRangeSettings.start);
     let end = Date.parse(sender.detail.selectedRangeSettings.end);
     let data = this.getdata(new Date(start), new Date(end));
@@ -92,6 +79,7 @@ export class BasicUse {
     chartobj.model.series[0].yName = 'YValue';
     chartobj.model.primaryXAxis.labelFormat = 'MMM/dd';
     chartobj.redraw();
+	},10)
   }
   getdata(start, end) {
     let series1 = [];

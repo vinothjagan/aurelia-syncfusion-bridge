@@ -5,7 +5,7 @@
                 </tr>
                 <tr class='row'>                    
                     <td colspan="2">
-                        <ul id="treeView" ej-tree-view="e-width:250">
+                        <ul id="treeView" ej-tree-view.ref="treeView" ej-tree-view="e-width:250">
                             <li class="expanded">ASP.NET MVC Team
                                 <ul>
                                     <li>Smith</li>
@@ -47,7 +47,7 @@
             </tbody>
         </table>
     <div>
-        <ul id="treeviewMenu" ej-menu="e-menu-type:contextmenu;
+        <ul id="treeviewMenu" ej-menu.ref="treeviewMenu" ej-menu="e-menu-type:contextmenu;
         e-open-on-click:false;
         e-context-menu-target:#treeView" e-on-click.trigger="onMenuClick($event)" e-on-before-open.trigger="onBeforeOpen($event)" e-on-close.trigger="onClose($event)">
             <li><a href="#">Add New Item</a></li>

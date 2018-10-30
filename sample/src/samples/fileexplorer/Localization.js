@@ -211,26 +211,21 @@
       this.localeValue = value;
     }
     onChange(args) {
-      $('#fileexplorer').ejFileExplorer('model.enableRTL', (args.value === 'ar-SA' ? true : false));
+      var fileObj = this.fileObj.widget
+      fileObj.model.enableRTL = (args.value === 'ar-SA' ? true : false);
       switch (args.detail.value) {
       case 'de-DE':
-        $('#fileexplorer').ejFileExplorer({
-          gridSettings: { columns: [{ field: 'name', headerText: 'Name' }, { field: 'type', headerText: 'Art' }, { field: 'dateModified', headerText: 'Änderungsdatum' }, { field: 'size', headerText: 'Größe' }] }
-        });
+        fileObj.model.gridSettings.columns = [{ field: 'name', headerText: 'Name' }, { field: 'type', headerText: 'Art' }, { field: 'dateModified', headerText: 'Änderungsdatum' }, { field: 'size', headerText: 'Größe' }];
         break;
       case 'en-US':
-        $('#fileexplorer').ejFileExplorer({
-          gridSettings: { columns: [{ field: 'name', headerText: 'Name' }, { field: 'type', headerText: 'Type' }, { field: 'dateModified', headerText: 'Date Modified' }, { field: 'size', headerText: 'Size' }] }
-        });
+        fileObj.model.gridSettings.columns = [{ field: 'name', headerText: 'Name' }, { field: 'type', headerText: 'Type' }, { field: 'dateModified', headerText: 'Date Modified' }, { field: 'size', headerText: 'Size' }];
         break;
       case 'ar-SA':
-        $('#fileexplorer').ejFileExplorer({
-          gridSettings: { columns: [{ field: 'name', headerText: 'اسم' }, { field: 'type', headerText: 'اكتب' }, { field: 'dateModified', headerText: 'تاريخ التعديل' }, { field: 'size', headerText: 'حجم' }] }
-        });
+        fileObj.model.gridSettings.columns = [{ field: 'name', headerText: 'اسم' }, { field: 'type', headerText: 'اكتب' }, { field: 'dateModified', headerText: 'تاريخ التعديل' }, { field: 'size', headerText: 'حجم' }];
         break;
       default : break;
       }
-      $('#fileexplorer').ejFileExplorer('model.locale', args.value);
+      fileObj.model.locale = args.value;
     }
 }
 

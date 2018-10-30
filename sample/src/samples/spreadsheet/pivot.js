@@ -9,8 +9,9 @@ export class Pivot {
         pdfUrl: '//js.syncfusion.com/demos/ejservices/api/Spreadsheet/PdfExport'};
   }
   loadcomplete(args) {
-    let xlObj = $('#Spreadsheet1').ejSpreadsheet('instance');
-    if (!xlObj.isImport) {
+	setTimeout(() => {
+    let xlObj = this.spreadsheetObj.widget;  
+    if (!xlObj.model.isImport) {
       let settings = {
         rows: [{ fieldName: 'Country'}, { fieldName: 'State'}],
         columns: [{ fieldName: 'Product'}],
@@ -19,5 +20,7 @@ export class Pivot {
       };
       xlObj.XLPivot.createPivotTable('Sheet1!$A$1:$F$25', null, null, settings);
     }
+	 }, 10)
   }
+ 
 }

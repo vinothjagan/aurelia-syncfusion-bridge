@@ -12,7 +12,7 @@
                                         <label>Kilometers</label>
                                     </td></tr> <tr>
                                     <td>
-                                        <input id="numeric" type="text" ej-numeric-textbox="e-value.bind:numericValue;e-width.bind:cwidth;e-enabled.bind:status;" />
+                                        <input id="numeric" ej-numeric-textbox.ref="numericObj" type="text" ej-numeric-textbox="e-value.bind:numericValue;e-width.bind:cwidth;e-enabled.bind:status;" />
                                     </td>
                                 </tr>
                                 <tr>
@@ -20,7 +20,7 @@
                                         <label>Service Tax</label>
                                     </td></tr> <tr>
                                     <td>
-                                        <input id="percent" type="text" ej-percentage-textbox="e-value.bind:percentValue;e-width.bind:cwidth;e-enabled.bind:status;" />
+                                        <input id="percent" ej-percentage-textbox.ref="percentObj" type="text" ej-percentage-textbox="e-value.bind:percentValue;e-width.bind:cwidth;e-enabled.bind:status;" />
                                     </td>
                                 </tr>
                                 <tr>
@@ -28,7 +28,7 @@
                                         <label>Fare</label>
                                     </td></tr> <tr>
                                     <td>
-                                        <input id="currency" type="text" ej-currency-textbox="e-value.bind:currencyValue;e-width.bind:cwidth;e-enabled.bind:status;" />
+                                        <input id="currency" ej-currency-textbox.ref="currencyObj" type="text" ej-currency-textbox="e-value.bind:currencyValue;e-width.bind:cwidth;e-enabled.bind:status;" />
                                     </td>
                                 </tr>                               
                             </tbody>
@@ -51,13 +51,13 @@
         <label>IncrementStep</label>
        </div>
        <div class="col-sm-2">         
-           <input type="text" id="incrementStep" class="form-control input-sm" placeholder="IncrementStep" />
+           <input type="text" id="incrementStep" ref="increment" class="form-control input-sm" placeholder="IncrementStep" />
        </div> 
        <div class="col-sm-2">        
         <label>Min Value</label>
        </div>
        <div class="col-sm-2">         
-           <input type="text" id="minValue" class="form-control input-sm" placeholder=" Min Value" />
+           <input type="text" id="minValue" ref="minValue" class="form-control input-sm" placeholder=" Min Value" />
        </div>       
      </div>    
      
@@ -66,20 +66,20 @@
             <label> Max Value</label> 
        </div>
        <div class="col-sm-2">         
-           <input type="text" id="maxValue" class="form-control input-sm" placeholder="Max Value" /> 
+           <input type="text" id="maxValue" ref="maxValue" class="form-control input-sm" placeholder="Max Value" /> 
        </div>
        <div class="col-sm-2">        
         <label>Decimal Value</label>
        </div>
        <div class="col-sm-2">         
-           <input type="text" id="decimalValue" class="form-control input-sm" placeholder="Decimal Value" />
+           <input type="text" id="decimalValue" ref="decimalValue" class="form-control input-sm" placeholder="Decimal Value" />
        </div> 
        <div class="col-sm-3">        
         <button ej-button="e-text.bind:'Apply';e-size.bind:'small';" e-on-click.trigger="onApply($event)" id="applyBtn" />
        </div>        
      </div>    
      <div class="row">
-         <span id="error" style="color: red"></span>
+         <span id="error" ref="error" style="color: red"></span>
      </div> 
   </div>
 </template>
