@@ -7523,6 +7523,12 @@ getValue:function(){
 /// Returns the current date value in the DatePicker control.
 /// </summary>
 },
+setValue:function(){
+/// <signature>
+/// <summary>
+/// sets the date value for the DatePicker.
+/// </summary>
+},
 hide:function(){
 /// <signature>
 /// <summary>
@@ -10942,6 +10948,15 @@ ejDraggable :function (options) {
 ///<br/><br/>
 ///Used to group sets of draggable and droppable items, in addition to droppable's accept option. A draggable with the same scope value as a droppable will be accepted by the droppable.
 ///<br/>scope-string	default-&#39;default&#39;
+///<br/><br/>
+///Used to enable auto scroll while drag and drop the element.
+///<br/>autoScroll-boolean	default-&#39;false&#39;
+///<br/><br/>
+///Represents when to start the scrolling inside the scroll container on dragging
+///<br/>scrollSensitivity-number	default-&#39;20&#39;
+///<br/><br/>
+///Specifies how much distance of scroll should move on dragging once reached scroll sensitivity area.
+///<br/>scrollSpeed-number	default-&#39;20&#39;
 ///</summary>
 ///<param name="options" type="Object">
 ///The widget configuration options
@@ -17872,7 +17887,7 @@ showItem:function(index){
 /// <summary>
 /// To show item in the given index.
 /// </summary>
-/// <param name="index"	type="number">Specifies the index value to show the hided item.</param>
+/// <param name="index"	type="number">Specifies the index value to show the hidden item.</param>
 /// </signature>
 },
 unCheckAllItem:function(){
@@ -18040,7 +18055,7 @@ ejListView :function (options) {
 ///<br/>itemRequestCount-number	default-5
 ///<br/><br/>
 ///Specifies the maximum number of items to be fetched. Note: This will work only with Virtual scrolling
-///<br/>totalItemsCount-number	default-null
+///<br/>totalItemsCount-number	default-5
 ///<br/><br/>
 ///Loads the list data on demand via scrolling behavior to improve the applicationâ€™s performance. There are two ways to load data which can be defined using virtualScrollMode property.
 ///<br/>allowVirtualScrolling-boolean	default-false
@@ -19516,6 +19531,12 @@ abortPrint:function(){
 /// Abort the printing function and restores the PDF viewer.
 /// </summary>
 },
+abortDownload:function(){
+/// <signature>
+/// <summary>
+/// Aborts the download operation.
+/// </summary>
+},
 showPrintTools:function(show){
 /// <signature>
 /// <summary>
@@ -19610,6 +19631,14 @@ showMagnificationTools:function(show){
 /// <param name="show"	type="boolean">shows/hides zoom tools in the toolbar</param>
 /// </signature>
 },
+showTextSearchTool:function(show){
+/// <signature>
+/// <summary>
+/// Shows/hides the search tool in the toolbar.
+/// </summary>
+/// <param name="show"	type="boolean">shows/hides search tool in the toolbar</param>
+/// </signature>
+},
 fitToPage:function(){
 /// <signature>
 /// <summary>
@@ -19632,6 +19661,12 @@ zoomOut:function(){
 /// <signature>
 /// <summary>
 /// Shrinks the page to the previous value in the magnification in the drop down list.
+/// </summary>
+},
+updateViewerSize:function(){
+/// <signature>
+/// <summary>
+/// Resize the viewer based on the parent element height.
 /// </summary>
 },
 zoomTo:function(zoomValue){
@@ -19661,6 +19696,20 @@ searchPrevious:function(){
 /// <summary>
 /// Searches the previous occurrence of the searched text from the current occurrence in the PDF viewer control.
 /// </summary>
+},
+cancelSearchText:function(){
+/// <signature>
+/// <summary>
+/// Aborts the search operation.
+/// </summary>
+},
+setJSONData:function(jsonData){
+/// <signature>
+/// <summary>
+/// Set the JSON data that are formed for rendering the document content in PDF viewer.
+/// </summary>
+/// <param name="jsonData"	type="any">Set the JSON data that are formed for rendering the document content.</param>
+/// </signature>
 },
 matchCase:function(enableMatchCase){
 /// <signature>
@@ -19837,6 +19886,39 @@ ejPdfViewer :function (options) {
 ///Gets/sets the opacity of the handwritten signature.
 ///<br/>opacity-number	default-
 ///<br/><br/>
+///Enables/ disables the text selection context menu.
+///<br/>textSelectionContextMenu-TextSelectionContextMenu	default-
+///<br/><br/>
+///Enables/ disables the text selection context menu.
+///<br/>isEnable-boolean	default-
+///<br/><br/>
+///Enables/disables the copy menu in the text selection context menu.
+///<br/>isCopyEnable-boolean	default-
+///<br/><br/>
+///Enables/disables the search menu in the text selection context menu.
+///<br/>isSearchEnable-boolean	default-
+///<br/><br/>
+///Enables/disables the highlight annotation menu in the text selection context menu.
+///<br/>isHighlightEnable-boolean	default-
+///<br/><br/>
+///Enables/disables the strikeout annotation menu in the text selection context menu.
+///<br/>isStrikeoutEnable-boolean	default-
+///<br/><br/>
+///Enables/disables the annotation context menu.
+///<br/>annotationContextMenu-AnnotationContextMenu	default-
+///<br/><br/>
+///Enables/disables the annotation context menu.
+///<br/>isEnable-boolean	default-
+///<br/><br/>
+///Enables/disables the popup menu in the annotation context menu.
+///<br/>isPopupEnable-boolean	default-
+///<br/><br/>
+///Enables/disables the delete menu in the annotation context menu.
+///<br/>isDeleteEnable-boolean	default-
+///<br/><br/>
+///Enables/disables the properties menu in the annotation context menu.
+///<br/>isPropertiesEnable-boolean	default-
+///<br/><br/>
 ///Specifies the type of the annotations.
 ///<br/>annotationType-ej.PdfViewer.AnnotationType|string	default-
 ///<br/><br/>
@@ -19854,6 +19936,9 @@ ejPdfViewer :function (options) {
 ///<br/><br/>
 ///Specifies the viewer interaction mode.
 ///<br/>interactionMode-ej.PdfViewer.InteractionMode|string	default-
+///<br/><br/>
+///Gets or sets the buffering mode of the PDF viewer control when allowClientBuffering is set to true.
+///<br/>bufferingMode-ej.PdfViewer.BufferingMode|string	default-
 ///<br/><br/>
 ///Specifies the open state of the hyperlink in the PDF document.
 ///<br/>hyperlinkOpenState-ej.PdfViewer.LinkTarget|string	default-
@@ -20645,6 +20730,9 @@ ejPivotClient :function (options) {
 ///<br/><br/>
 ///Allows you to set the number of members to be displayed in each page of the member editor on applying the paging in it.
 ///<br/>memberEditorPageSize-number	default-100
+///<br/><br/>
+///Enables/Disables sorting option in member editor dialog for the members of the respective field.
+///<br/>enableMemberEditorSorting-boolean	default-false
 ///<br/><br/>
 ///Sets the summary layout for the pivot grid. Following are the ways in which the summary can be positioned: normal summary (bottom), top summary, no summary, and Microsoft Excel summary.
 ///<br/>gridLayout-ej.PivotGrid.Layout|string	default-ej.PivotGrid.Layout.Normal
@@ -21482,6 +21570,9 @@ ejPivotGrid :function (options) {
 ///Allows you to set the number of members to be displayed in each page of member editor on applying paging in it.
 ///<br/>memberEditorPageSize-number	default-100
 ///<br/><br/>
+///Enables/Disables sorting option in member editor dialog for the members of the respective field.
+///<br/>enableMemberEditorSorting-boolean	default-false
+///<br/><br/>
 ///Enables/disables the display of grand total for rows and columns.
 ///<br/>enableGrandTotal-boolean	default-true
 ///<br/><br/>
@@ -22297,7 +22388,7 @@ requiresCount:function(){
 /// Specifies that the total number of records(count) is required in the result.
 /// </summary>
 },
-search:function(fieldName, operator, value, ignoreCase){
+search:function(fieldName, operator, value, ignoreCase, ignoreAccent){
 /// <signature>
 /// <summary>
 /// It is used to search the given search key value in JSON data
@@ -22321,6 +22412,12 @@ search:function(fieldName, operator, value, ignoreCase){
 /// It is used to search the given search key value in JSON data
 /// </summary>
 /// <param name="ignoreCase"	type="boolean">on/off case sensitive.</param>
+/// </signature>
+/// <signature>
+/// <summary>
+/// It is used to search the given search key value in JSON data
+/// </summary>
+/// <param name="ignoreAccent"	type="boolean">Filter diacritics based on the boolean value.</param>
 /// </signature>
 },
 select:function(fieldName){
@@ -22371,7 +22468,7 @@ using:function(dataManager){
 /// <param name="dataManager"	type="any">Pass new data source</param>
 /// </signature>
 },
-where:function(fieldName, operator, value, ignoreCase){
+where:function(fieldName, operator, value, ignoreCase, ignoreAccent){
 /// <signature>
 /// <summary>
 /// It is used to filter records based on the filter condition.
@@ -22395,6 +22492,12 @@ where:function(fieldName, operator, value, ignoreCase){
 /// It is used to filter records based on the filter condition.
 /// </summary>
 /// <param name="ignoreCase"	type="boolean">on/off case sensitive.</param>
+/// </signature>
+/// <signature>
+/// <summary>
+/// It is used to filter records based on the filter condition.
+/// </summary>
+/// <param name="ignoreAccent"	type="boolean">Filter diacritics based on the boolean value.</param>
 /// </signature>
 },
 });
@@ -26964,6 +27067,9 @@ ejSpellCheck :function (options) {
 ///When set to true, allows sending Asynchronous ajax request for checking the spelling errors.
 ///<br/>enableAsync-boolean	default-true
 ///<br/><br/>
+///To set either â€˜Postâ€™ or â€˜Getâ€™ for ajax request type which invokes when validate, get suggestion and dictionary action.Possible values are â€˜POSTâ€™ or â€˜GETâ€™
+///<br/>ajaxRequestType-string	default-GET
+///<br/><br/>
 ///Sets the data type for the ajax call used within the SpellCheck control, denoting the type of data that are expected to be retrieved from the server. The applicable values are json and jsonp.
 ///<br/>ajaxDataType-string	default-jsonp
 ///</summary>
@@ -27846,7 +27952,7 @@ redo:function(){
 refreshContent:function(sheetIdx){
 /// <signature>
 /// <summary>
-/// This method is used to refresh the content in Spreadsheet.
+/// This method is used to refresh the Spreadsheet based on the sheet model values.
 /// </summary>
 /// <param name="sheetIdx"	type="number">Pass the index of the sheet.</param>
 /// </signature>
@@ -27854,7 +27960,13 @@ refreshContent:function(sheetIdx){
 refreshSpreadsheet:function(){
 /// <signature>
 /// <summary>
-/// This method is used to refresh the Spreadsheet.
+/// This method is used to refresh the Spreadsheet element based on the page layout.
+/// </summary>
+},
+refresh:function(){
+/// <signature>
+/// <summary>
+/// This method destroys and re-creates the entire Spreadsheet control.
 /// </summary>
 },
 removeCustomFormula:function(formulaName, functionName){

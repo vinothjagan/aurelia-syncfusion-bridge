@@ -6,22 +6,22 @@ export class ExternalDragAndDrop {
     }
     onDropped(event) {
       let e = event.detail;
-      if ($(e.target).parents('.e-schedule').length !== 0) {
-        let scheduleObj = $('#Schedule1').data('ejSchedule');
-        let result = scheduleObj.getSlotByElement($(e.target));
+      if (e.target.parents('.e-schedule').length !== 0) {
+        let scheduleObj = this.schedule.widget;
+        let result = scheduleObj.getSlotByElement(e.target);
         // set value to custom appointmnt window fields
-        $("#subject").val(e.droppedElementData.text);
-        $("#customdescription").val(e.droppedElementData.text);
-        $("#StartTime").ejDateTimePicker({ value: new Date(result.startTime) });
-        $("#EndTime").ejDateTimePicker({ value: new Date(result.endTime) });
-        $("#resource").val(result.resources.text);
-        $("#ownerId").val(result.resources.id);
-        $("#customWindow").ejDialog("open");
+        this.dialogObj.element.querySelector('#subject').value = e.droppedElementData.text;
+        this.dialogObj.element.querySelector('#customdescription').value = e.droppedElementData.text;
+        this.startTime.widget.setModel({ value: new Date(result.startTime) });
+        this.endTime.widget.setModel({ value: new Date(result.endTime) });
+        this.dialogObj.element.querySelector('#resource').value = result.resources.text;
+        this.dialogObj.element.querySelector('#ownerId').value = result.resources.id;
+        this.dialogObj.widget.open();
       }
     }
     save() {
       let obj = {};
-      let formelement = $('#customWindow').find('#custom').get(0);
+      let formelement = this.dialogObj.widget.element.find('#custom').get(0);
       for (let index = 0; index < formelement.length; index++) {
         let columnName = formelement[index].name;
         let value;
@@ -34,13 +34,13 @@ export class ExternalDragAndDrop {
           if (columnName !== 'Resource') obj[columnName] = value;
         }
       }
-      $('#customWindow').ejDialog('close');
-      let object = $('#Schedule1').data('ejSchedule');
+      this.dialogObj.widget.close();
+      let object = this.schedule.widget;
       object.saveAppointment(obj);
     }
 
     cancel() {
-      $('#customWindow').ejDialog('close');
+      this.dialogObj.widget.close();
     }
 
 
@@ -144,19 +144,6 @@ export class ExternalDragAndDrop {
         resourceFields: 'ownerId'
       };
     }
-    attached() {
-      $('#StartTime').ejDateTimePicker({ width: '150px' });
-      $('#EndTime').ejDateTimePicker({ width: '150px' });
-      $('#customWindow').ejDialog({
-        width: 600,
-        height: 'auto',
-        position: { X: 200, Y: 100 },
-        showOnInit: false,
-        enableModal: true,
-        title: 'Create Appointment',
-        enableResize: false,
-        allowKeyboardNavigation: false,
-        close: 'clearFields'
-      });
+    attached() {    
     }
 }

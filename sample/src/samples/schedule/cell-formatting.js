@@ -1,7 +1,7 @@
 export class QueryCellInfo {
   onAppointmentWindowOpen(event) {
     let args = event.detail;
-    let schArgs = $('#Schedule1').ejSchedule('instance');
+    let schArgs = this.schedule.widget;
     if (schArgs._appointmentAddWindow.find('#EventType').length === 0) {
       let items = [
         { text: 'Public Event', value: 'Public Event' },
@@ -112,7 +112,7 @@ export class QueryCellInfo {
           args.element.find('.e-apptime ').html(args.appointment.Description);
           let imgName = (!ej.isNullOrUndefined(args.appointment.EventType)) ? args.appointment.EventType : 'Public Event';
           if (args.appointment.Subject !== 'Holiday') {
-            let imgHeight = ((args.element.width() * $('#Schedule1').find('.e-workcells').width()) / 100) - 10;
+            let imgHeight = ((args.element.width() * this.schedule.widget.element.find('.e-workcells').width()) / 100) - 10;
             args.element.append("<img type='image/svg+xml' style='position:absolute;opacity:0.3;left:50%;bottom:0;margin-bottom:5px;margin-left:-" + Math.round(imgHeight / 2) + 'px;height:' + imgHeight + 'px;width:' + imgHeight + "px;' id='E' src='images/Schedule/" + imgName + ".png'/>");
           } else {
             args.element.css({ 'background-image': 'url(images/Schedule/Holidays.png)', 'background-repeat': 'repeat-y', 'background-size': '80px auto' });

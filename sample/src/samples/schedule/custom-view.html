@@ -1,6 +1,6 @@
 <template>
     <div>
-        <ej-schedule id="Schedule1" e-width="100%" e-height="525px" e-appointment-settings.bind="AppointmentList" e-views.bind="Views"
+        <ej-schedule id="Schedule1" ej-schedule.ref="schedule" e-width="100%" e-height="525px" e-appointment-settings.bind="AppointmentList" e-views.bind="Views"
 e-current-view="customView" e-render-dates.bind="RenderDates" e-current-date="06/05/2017"></ej-schedule>
    </div>
 
@@ -10,19 +10,19 @@ e-current-view="customView" e-render-dates.bind="RenderDates" e-current-date="06
             <label>Select View</label>
         </div>
         <div class="col-sm-2">
-            <select ej-drop-down-list="e-data-source.bind:dropDownData;e-width:110px;e-selected-index:5" e-on-change.trigger="onChange($event)" id="ddlView"></select>
+            <select ej-drop-down-list="e-data-source.bind:dropDownData;e-width:110px;e-selected-index:5" ej-drop-down-list.ref="viewDDL" e-on-change.trigger="onChange($event)" id="ddlView"></select>
         </div>
         <div class="col-sm-2" style="top: 5px">
             <label>StartDate</label>
         </div>
         <div class="col-sm-2">
-            <input ej-date-picker="e-width:110;e-value.bind:Start" id="customstartdate" />
+            <input ej-date-picker="e-width:110;e-value.bind:Start" ej-date-picker.ref="startDate" id="customstartdate" />
         </div>
         <div class="col-sm-2" style="top: 5px">
             <label>EndDate</label>
         </div>
         <div class="col-sm-2">
-            <input ej-date-picker="e-width:110;e-value.bind:End" id="customenddate" />
+            <input ej-date-picker="e-width:110;e-value.bind:End" ej-date-picker.ref="endDate" id="customenddate" />
         </div>
     </div>
     <div class="row">

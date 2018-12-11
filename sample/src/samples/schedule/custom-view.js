@@ -1,18 +1,18 @@
 export class ViewCustomization {
     onChange(args) {
-      $('#Schedule1').ejSchedule({ views: [args.detail.value], currentView: args.detail.value.toLowerCase() });
+      this.schedule.widget.setModel({ views: [args.detail.value], currentView: args.detail.value.toLowerCase() });
     }
 
     changeDate(args) {
-      let startDate = $('#customstartdate').ejDatePicker('option', 'value');
+      let startDate = this.startDate.widget.Date;
       startDate = new Date(startDate.getFullYear(), startDate.getMonth(), startDate.getDate());
-      let endDate = $('#customenddate').ejDatePicker('option', 'value');
+      let endDate = this.endDate.widget.Date;
       endDate = new Date(endDate.getFullYear(), endDate.getMonth(), endDate.getDate());
       if (startDate <= endDate) {
-        $('#ddlView').ejDropDownList({
+        this.viewDDL.widget.setModel({
           select: 'onChange', selectedItemIndex: 5
         });
-        $('#Schedule1').ejSchedule({
+        this.schedule.widget.setModel({
           currentDate: new Date(startDate),
           renderDates: {
             start: new Date(startDate),

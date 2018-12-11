@@ -1,6 +1,6 @@
 <template>
     <div>
-        <ej-schedule id="Schedule1" e-width="100%" e-height="525px" e-start-hour="0" e-end-hour="24" e-time-mode="24" e-priority-settings.bind="Priority"
+        <ej-schedule id="Schedule1" ej-schedule.ref="schedule" e-width="100%" e-height="525px" e-start-hour="0" e-end-hour="24" e-time-mode="24" e-priority-settings.bind="Priority"
                      e-appointment-settings.bind="AppointmentList" e-categorize-settings.bind="CategorizeSettings" e-context-menu-settings.bind="contextMenu"
                      e-current-date="06/05/2017">
         </ej-schedule>
@@ -100,7 +100,7 @@
                 </label>
             </div>
             <div class="col-sm-2">
-                <input ej-numeric-textbox="e-name:numeric;e-value:0;e-width:110px;e-min-value.two-way:0;e-max-value.two-way:24"
+                <input ej-numeric-textbox="e-name:numeric;e-value:0;e-width:110px;e-min-value.two-way:0;e-max-value.two-way:24" ej-numeric-textbox.ref="sTime"
                        id="stime" />
             </div>
             <div class="col-sm-2">
@@ -109,7 +109,7 @@
                 </label>
             </div>
             <div class="col-sm-2">
-                <input ej-numeric-textbox="e-name:numeric;e-value:24;e-width:110px;e-min-value.two-way:0;e-max-value.two-way:24"
+                <input ej-numeric-textbox="e-name:numeric;e-value:24;e-width:110px;e-min-value.two-way:0;e-max-value.two-way:24" ej-numeric-textbox.ref="eTime"
                        id="etime" />
             </div>
         </div>

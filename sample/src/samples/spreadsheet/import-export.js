@@ -14,7 +14,7 @@ export class ImportExport {
     let xlObj = this.spreadsheetObj.widget;    
     let formatObj;
     let xlFormat = xlObj.XLFormat;
-    if (!xlObj.model.isImport) {
+    if (!xlObj.isImport) {
       formatObj = { header: true, formatName: 'TableStyleLight1', name: 'Table0', format: { contentBorder: { border: { bottom: '1px solid #000000' } }, contentLayout: [{ 'background-color': '#D9D9D9', color: '#000000' }, { color: '#000000' }], headerLayout: { 'font-weight': 'bold', color: '#000000', border: { top: '1px solid #000000', bottom: '1px solid #000000' } } } };
       xlObj.mergeCells('A1:F2', true);
       xlObj.XLEdit.updateValue('A1', 'SHIPMENT DETAIL ANALYSIS');

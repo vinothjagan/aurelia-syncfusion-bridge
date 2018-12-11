@@ -3,57 +3,54 @@ export class Api {
     /* eslint-disable radix */
     orientation1(args) {
       if (args.detail.value === 'Horizontal') {
-        $('#Schedule1').ejSchedule({ orientation: args.detail.value.toLowerCase() });
+        this.schedule.widget.setModel({ orientation: args.detail.value.toLowerCase() });
       }
-      else $('#Schedule1').ejSchedule({ orientation: args.detail.value.toLowerCase() });
+      else this.schedule.widget.setModel({ orientation: args.detail.value.toLowerCase() });
     }
     readOnlyMode(args) {
       if (args.detail.isChecked) {
-        $('#Schedule1').ejSchedule({ readOnly: true });
+        this.schedule.widget.setModel({ readOnly: true });
       }
-      else $('#Schedule1').ejSchedule({ readOnly: false });
+      else this.schedule.widget.setModel({ readOnly: false });
     }
     allDayRow(args) {
       if (args.detail.isChecked) {
-        $('#Schedule1').ejSchedule({ showAllDayRow: true });
+        this.schedule.widget.setModel({ showAllDayRow: true });
       }
-      else $('#Schedule1').ejSchedule({ showAllDayRow: false });
+      else this.schedule.widget.setModel({ showAllDayRow: false });
     }
     appointmentPriority(args) {
       if (args.detail.isChecked) {
-        $('#Schedule1').ejSchedule({ prioritySettings: { enable: true } });
+        this.schedule.widget.setModel({ prioritySettings: { enable: true } });
       }
-      else $('#Schedule1').ejSchedule({ prioritySettings: { enable: false } });
+      else this.schedule.widget.setModel({ prioritySettings: { enable: false } });
     }
     appointmentCategorize(args) {
-      if (args.detail.isChecked) $('#Schedule1').ejSchedule({ categorizeSettings: { enable: true } });
-      else $('#Schedule1').ejSchedule({ categorizeSettings: { enable: false } });
+      if (args.detail.isChecked) this.schedule.widget.setModel({ categorizeSettings: { enable: true } });
+      else this.schedule.widget.setModel({ categorizeSettings: { enable: false } });
     }
     contextmenu(args) {
-      if (args.detail.isChecked) $('#Schedule1').ejSchedule({ contextMenuSettings: { enable: true } });
-      else $('#Schedule1').ejSchedule({ contextMenuSettings: { enable: false } });
+      if (args.detail.isChecked) this.schedule.widget.setModel({ contextMenuSettings: { enable: true } });
+      else this.schedule.widget.setModel({ contextMenuSettings: { enable: false } });
     }
     onAutoChange(args) {
       if (args.detail.isChecked) {
-        $('#Schedule1').ejSchedule('option', 'showOverflowButton', true);
+        this.schedule.widget.setModel({ showOverflowButton: true });
       }
-      else $('#Schedule1').ejSchedule('option', 'showOverflowButton', false);
+      else this.schedule.widget.setModel({ showOverflowButton: false });
     }
-    onTooltipChange(event) {
-      if (event.detail.isChecked) {
-        $('#Schedule1').ejSchedule('option', 'tooltipSettings.enable', true);
-      }
-      else $('#Schedule1').ejSchedule('option', 'tooltipSettings.enable', false);
+    onTooltipChange(args) {
+      this.schedule.widget.setModel({ tooltipSettings: { enable: args.detail.isChecked } });
     }
     onTooltipTemp(event) {
       if (event.detail.isChecked) {
-        $('#Schedule1').ejSchedule('option', 'tooltipSettings.templateId', '#tooltipTemp');
+        this.schedule.widget.setModel({ tooltipSettings: { templateId: '#tooltipTemp' } });
       }
-      else $('#Schedule1').ejSchedule('option', 'tooltipSettings.templateId', null);
+      else this.schedule.widget.setModel({ tooltipSettings: { templateId: null } });
     }
     changeTime() {
       if (parseInt($('#stime').val()) < parseInt($('#etime').val())) {
-        $('#Schedule1').ejSchedule({
+        this.schedule.widget.setModel({
           startHour: parseInt($('#stime').val()),
           endHour: parseInt($('#etime').val())
         });
@@ -61,7 +58,7 @@ export class Api {
       else alert('Start hour should be less than end hour');
     }
     onChange(args) {
-      $('#Schedule1').ejSchedule({ firstDayOfWeek: args.detail.selectedValue });
+      this.schedule.widget.setModel({ firstDayOfWeek: args.detail.selectedValue });
     }
     constructor() {
       this.checked1 = true;

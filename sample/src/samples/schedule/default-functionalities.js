@@ -1,10 +1,6 @@
 export class DefaultSchedule {
     onChange(args) {
-      if (args.detail.value === 'Horizontal') {
-        $('#Schedule1').ejSchedule({ orientation: args.detail.value.toLowerCase() });
-      } else {
-        $('#Schedule1').ejSchedule({ orientation: args.detail.value.toLowerCase() });
-      }
+      this.schedule.widget.setModel({ orientation: args.detail.value.toLowerCase() });
     }
     constructor() {
       this.orientation = ['Vertical', 'Horizontal'];

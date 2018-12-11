@@ -64,70 +64,76 @@
           <div class="col-md-9 Schedule1">
             <span class=""><b> Training Scheduler Panel</b> </br></span>
             <i>Note</i>: To Schedule classes, drag the topics from <b>Tutorials</b> and drop it over <b>Training Scheduler Panel</b>
-            <ej-schedule id="Schedule1" e-width="100%" e-height="525px" e-cell-width="40px" e-show-current-time-navigator="false"
+            <ej-schedule id="Schedule1" ej-schedule.ref="schedule" e-width="100%" e-height="525px" e-cell-width="40px" e-show-current-time-navigator="false"
             e-orientation="horizontal" e-views.bind="views" e-current-view="workweek" e-group.bind="Group" e-resources.bind="Resources" e-appointment-settings.bind="AppointmentList" e-current-date="06/05/2017">
             </ej-schedule>
           </div>
         </div>
         
-    <div id="customWindow" style="display: none">
-      <form id="custom">
-            <table width="100%" cellpadding="5">
-                <tbody>
-                    <tr>
-                        <td>
-                            Subject:
-                        </td>
-                        <td colspan="2">
-                            <input id="subject" type="text" value="" name="Subject" style="width: 100%" readonly />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Description:
-                        </td>
-                        <td colspan="2">
-                            <textarea id="customdescription" name="Description" rows="3" cols="50" style="width: 100%; resize: vertical"></textarea>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            StartTime:
-                        </td>
-                        <td>
-                            <input id="StartTime" type="text" value="" name="StartTime" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            EndTime:
-                        </td>
-                        <td>
-                            <input id="EndTime" type="text" value="" name="EndTime" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Resource:
-                        </td>
-                        <td colspan="2">
-                            <input id="resource" type="text" value="" name="Resource" style="width: 100%" readonly/>
-                        </td>
-                    </tr>
-                    <tr style="display: none">
-                        <td>
-                            ownerId:
-                        </td>
-                        <td colspan="2">
-                            <input id="ownerId" type="text" name="ownerId" />
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </form>
-      <div>
-        <button type="submit" ej-button="e-width:85px" e-on-click.trigger="cancel()" id="btncancel" style="float: right; margin-right: 20px; margin-bottom: 10px;">Cancel</button>
-        <button type="submit" ej-button="e-width:85px" e-on-click.trigger="save()" id="btnsubmit" style="float: right; margin-right: 20px; margin-bottom: 10px;">Submit</button>
-      </div>
-    </div>
+        <div class="cwindow">
+            <ej-dialog id="customWindow" ej-dialog.ref="dialogObj" e-width="600px" e-target=".cwindow" e-height="auto" e-show-on-init="false"
+                e-enable-model="true" e-title="Create Appointment" e-enable-resize="false" e-allow-keyboard-navigation="false">
+                <div id="appointmentWindow" class="appointmentWindow">
+                    <form id="custom">
+                        <table width="100%" cellpadding="5">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        Subject:
+                                    </td>
+                                    <td colspan="2">
+                                        <input id="subject" type="text" value="" name="Subject" style="width: 100%" readonly />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Description:
+                                    </td>
+                                    <td colspan="2">
+                                        <textarea id="customdescription" name="Description" rows="3" cols="50" style="width: 100%; resize: vertical"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        StartTime:
+                                    </td>
+                                    <td>
+                                        <input ej-date-time-picker="e-width:150;e-value.bind:Start" ej-date-time-picker.ref="startTime" id="StartTime" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        EndTime:
+                                    </td>
+                                    <td>
+                                        <input ej-date-time-picker="e-width:150;e-value.bind:end" ej-date-time-picker.ref="endTime" id="EndTime" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Resource:
+                                    </td>
+                                    <td colspan="2">
+                                        <input id="resource" type="text" value="" name="Resource" style="width: 100%" readonly/>
+                                    </td>
+                                </tr>
+                                <tr style="display: none">
+                                    <td>
+                                        ownerId:
+                                    </td>
+                                    <td colspan="2">
+                                        <input id="ownerId" type="text" name="ownerId" />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+    
+                </div>
+                <div>
+                    <button type="submit" ej-button="e-width:85px" e-on-click.trigger="cancel()" id="btncancel" style="float: right; margin-right: 20px; margin-bottom: 10px;">Cancel</button>
+                    <button type="submit" ej-button="e-width:85px" e-on-click.trigger="save()" id="btnsubmit" style="float: right; margin-right: 20px; margin-bottom: 10px;">Submit</button>
+                </div>
+            </ej-dialog>
+        </div>
 </template>

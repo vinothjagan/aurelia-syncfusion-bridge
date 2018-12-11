@@ -11,7 +11,7 @@ export class Pivot {
   loadcomplete(args) {
 	setTimeout(() => {
     let xlObj = this.spreadsheetObj.widget;  
-    if (!xlObj.model.isImport) {
+    if (!xlObj.isImport) {
       let settings = {
         rows: [{ fieldName: 'Country'}, { fieldName: 'State'}],
         columns: [{ fieldName: 'Product'}],

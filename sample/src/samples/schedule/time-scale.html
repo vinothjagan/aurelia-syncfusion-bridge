@@ -1,7 +1,7 @@
 <template>
     <div>
-        <ej-schedule id="Schedule1" e-width="100%" e-height="525px" e-appointment-settings.bind="AppointmentList" e-time-scale.bind="TimeInterval"
-                     e-current-date="06/05/2017">
+        <ej-schedule id="Schedule1" ej-schedule.ref="schedule" e-width="100%" e-height="525px" e-appointment-settings.bind="AppointmentList"
+            e-time-scale.bind="TimeInterval" e-current-date="06/05/2017">
         </ej-schedule>
     </div>
     <div id="property-window" class="box wide">
@@ -12,7 +12,8 @@
                 </label>
             </div>
             <div class="col-sm-2">
-                <input id="minorslot" ej-drop-down-list="e-target-id.bind:minorSlotTimings;e-width:110px;e-selected-index:4" />
+                <input id="minorslot" ej-drop-down-list="e-target-id.bind:minorSlotTimings;e-width:110px;e-selected-index:4" ej-drop-down-list.ref="minorSlot"
+                />
                 <div id="minorslotlist">
                     <ul>
                         <li>1</li>
@@ -34,7 +35,8 @@
                 </label>
             </div>
             <div class="col-sm-2">
-                <input id="majorslot" ej-drop-down-list="e-target-id.bind:majorSlotTimings;e-width:110px;e-selected-index:0" />
+                <input id="majorslot" ej-drop-down-list="e-target-id.bind:majorSlotTimings;e-width:110px;e-selected-index:0" ej-drop-down-list.ref="majorSlot"
+                />
                 <div id="majorslotlist">
                     <ul>
                         <li>60</li>

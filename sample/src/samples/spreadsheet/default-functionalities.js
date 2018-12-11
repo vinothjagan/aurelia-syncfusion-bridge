@@ -13,7 +13,7 @@ export class DefaultFunctionalities {
 	setTimeout(() => {
     let xlObj = this.spreadsheetObj.widget;
     let xlFormat = xlObj.XLFormat;
-    if (!xlObj.model.isImport) {
+    if (!xlObj.isImport) {
       xlObj.setWidthToColumns([140, 128, 105, 100, 100, 110, 120, 120, 100]);
       xlFormat.format({ 'style': { 'font-weight': 'bold' } }, 'A1:H1');
       xlFormat.format({ 'type': 'currency' }, 'E2:H11');

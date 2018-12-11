@@ -2,7 +2,7 @@
 <template>
     <require from="./property_editor.css"></require>
     <div>
-        <ej-diagram id="diagram" e-width="100%" e-height="700px" e-nodes.bind="objects"
+        <ej-diagram id="diagram" ej-diagram.ref="diagram" e-width="100%" e-height="700px" e-nodes.bind="objects"
                     e-connectors.bind="connectors" e-snap-settings.bind="snapSettings" e-page-settings.bind="pageSettings" e-default-settings.bind="defaultSettings"
                     e-enable-context-menu="true" e-on-create.trigger="create($event)">
         </ej-diagram>
@@ -22,8 +22,8 @@
                         <li value="de-DE">Deutsch</li>
                         <li value="es-ES">Español</li>
                     </ul>
-                </div> 
-            </div> 
-        </div> 
-    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
 </template>

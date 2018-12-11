@@ -462,6 +462,12 @@ tiplabel {
 }
 .healthtext {
     vertical-align: super;
+    font-weight: normal;
+    margin-bottom: 0px;
+    display: inline-block;
+    max-width: 100%;
+    font-size: x-large;
+    margin-top: 4px;
 }
 #healthAddTemplate{
     display:none;

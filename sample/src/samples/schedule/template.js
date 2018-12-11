@@ -1,19 +1,19 @@
 export class Template {
     timeScale(args) {
-      if (args.detail.isChecked) { $('#Schedule1').ejSchedule({ timeScale: {enable: false} }); $('#allDay').ejCheckBox({ enabled: false }); }
-      else $('#Schedule1').ejSchedule({ timeScale: {enable: true} }); $('#allDay').ejCheckBox({ enabled: true });
+      if (args.detail.isChecked) { this.schedule.widget.setModel({ timeScale: {enable: false} }); this.allDay.widget.setModel({ enabled: false }); }
+      else this.schedule.widget.setModel({ timeScale: {enable: true} }); this.allDay.widget.setModel({ enabled: true });
     }
     allDayTemplate(args) {
-      if (args.detail.isChecked) { $('#Schedule1').ejSchedule({ allDayCellsTemplateId: '#allDayTemplate' }); }
-      else $('#Schedule1').ejSchedule({ allDayCellsTemplateId: null });
+      if (args.detail.isChecked) { this.schedule.widget.setModel({ allDayCellsTemplateId: '#allDayTemplate' }); }
+      else this.schedule.widget.setModel({ allDayCellsTemplateId: null });
     }
     dateHeaderTemplate(args) {
-      if (args.detail.isChecked) { $('#Schedule1').ejSchedule({ dateHeaderTemplateId: '#dateTemplate' }); }
-      else $('#Schedule1').ejSchedule({ dateHeaderTemplateId: null });
+      if (args.detail.isChecked) { this.schedule.widget.setModel({ dateHeaderTemplateId: '#dateTemplate' }); }
+      else this.schedule.widget.setModel({ dateHeaderTemplateId: null });
     }
     workCellsTemplate(args) {
-      if (args.detail.isChecked) { $('#Schedule1').ejSchedule({ workCellsTemplateId: '#workTemplate' }); }
-      else $('#Schedule1').ejSchedule({ workCellsTemplateId: null });
+      if (args.detail.isChecked) { this.schedule.widget.setModel({ workCellsTemplateId: '#workTemplate' }); }
+      else this.schedule.widget.setModel({ workCellsTemplateId: null });
     }
 
     constructor() {

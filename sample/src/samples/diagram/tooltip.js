@@ -59,15 +59,15 @@ export class Tooltip {
       this.verticalalignValue = 'Bottom';
     }
     changeOptions(args) {
-      $('#diagram').ejDiagram({ tooltip: { relativeMode: ej.datavisualization.Diagram.RelativeMode[args.detail.value] } });
+        this.diagram.widget.setModel({ tooltip: { relativeMode: ej.datavisualization.Diagram.RelativeMode[args.detail.value] } });
     }
     changeMargin(args) {
-      $('#diagram').ejDiagram({ tooltip: { margin: { left: args.detail.value, right: args.detail.value, top: args.detail.value, bottom: args.detail.value } } });
+        this.diagram.widget.setModel({ tooltip: { margin: { left: args.detail.value, right: args.detail.value, top: args.detail.value, bottom: args.detail.value } } });
     }
     changeHorizontalAlign(args) {
-      $('#diagram').ejDiagram({ tooltip: { alignment: { horizontal: args.detail.value } } });
+        this.diagram.widget.setModel({ tooltip: { alignment: { horizontal: args.detail.value } } });
     }
     changeVerticalAlign(args) {
-      $('#diagram').ejDiagram({ tooltip: { alignment: { vertical: args.detail.value } } });
+        this.diagram.widget.setModel({ tooltip: { alignment: { vertical: args.detail.value } } });
     }
 }

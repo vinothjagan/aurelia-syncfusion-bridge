@@ -1,9 +1,9 @@
 export class TimeScale {
     changeTime() {
-      $('#Schedule1').ejSchedule({
+      this.schedule.widget.setModel({
         timeScale: {
-          minorSlotCount: parseInt($('#minorslot').val()), // eslint-disable-line radix
-          majorSlot: parseInt($('#majorslot').val()) // eslint-disable-line radix
+          minorSlotCount: parseInt(this.minorSlot.widget.value()), // eslint-disable-line radix
+          majorSlot: parseInt(this.majorSlot.widget.value()) // eslint-disable-line radix
         }
       });
     }

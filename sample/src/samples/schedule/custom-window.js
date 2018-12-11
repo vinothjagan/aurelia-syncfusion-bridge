@@ -3,8 +3,8 @@ export class CustomAppointmentWindow {
     /* eslint-disable eqeqeq */
 
     onCreate(event) {
-      let proxy = $('#Schedule1').ejSchedule('instance');
-      proxy._customAppointmentWindow = $('#customWindow');
+      let proxy = this.schedule;
+      proxy._customAppointmentWindow = this.dialogObj.widget.element;;
       proxy._customAppointmentWindow.ejDialog({ width: (proxy._mediaQuery) ? '100%' : 600, target: '#' + proxy._id, enableModal: true });
       proxy._customAppointmentWindow.parents().find('.e-scheduledialog').find('.e-titlebar').addClass('e-dialogheader');
       proxy._customAppointmentWindow.find('#StartTime,#EndTime').ejDateTimePicker({ width: '150px' });
@@ -14,13 +14,13 @@ export class CustomAppointmentWindow {
     }
 
     onClick(event) {
-      let proxy = $('#Schedule1').ejSchedule('instance');
+      let proxy = this.schedule.widget;
       let args = event.detail;
-      proxy._customAllDay = $(args.target.currentTarget).closest('.e-alldaycells').hasClass('e-alldaycells');
+      proxy._customAllDay = args.target.currentTarget.classList.contains('e-alldaycells');
     }
 
     onAppointmentWindowOpen(event) {
-      let proxy = $('#Schedule1').ejSchedule('instance');
+      let proxy = this.schedule;
       let args = event.detail;
       args.cancel = true;
       proxy._customRecRule = null;
@@ -44,7 +44,7 @@ export class CustomAppointmentWindow {
         proxy._customAppointmentWindow.find('#StartTime').ejDateTimePicker({ value: args.startTime });
         proxy._customAppointmentWindow.find('#EndTime').ejDateTimePicker({ value: args.endTime });
         if (!ej.isNullOrUndefined(args.target)) {
-          if ($(args.target.currentTarget).closest('.e-alldaycells').hasClass('e-alldaycells') || proxy.currentView() == 'month' || proxy._customAllDay) {
+          if (args.target.currentTarget.classList.contains('e-alldaycells') || this.schedule.widget.currentView() == 'month' || this.schedule.widget._customAllDay) {
             proxy._customAppointmentWindow.find('#AllDay').ejCheckBox({ checked: true });
             proxy._customAppointmentWindow.find('#StartTime,#EndTime').ejDateTimePicker({ enabled: false });
           }
@@ -52,31 +52,31 @@ export class CustomAppointmentWindow {
       }
       proxy._customAppointmentWindow.find('#appointmentWindow').css({ display: 'block' });
       proxy._customAppointmentWindow.find('#recurrenceWindow').css({ display: 'none' });
-      proxy._customAppointmentWindow.ejDialog('open');
+      this.dialogObj.widget.open();
       let subject = proxy._customAppointmentWindow.find('#Subject');
-      subject.focusin(function() { $(subject).removeClass('validationError'); }).focusout(function() { if ($(subject).val() == '') $(subject).addClass('validationError'); });
+      subject.focusin(function () { subject.removeClass('validationError'); }).focusout(function () { if (subject.val() == '') subject.addClass('validationError'); });
     }
 
     onButtonClick(event) {
-      let proxy = $('#Schedule1').ejSchedule('instance');
+      let proxy = this.schedule;
       let args = event.detail;
-      if ($(args.target).hasClass('e-appButton')) {
-        if ($(args.target).hasClass('e-appOk')) {
+      if (args.target.classList.contains('e-appButton')) {
+        if (args.target.classList.contains('e-appOk')) {
           if (proxy._customAppointmentWindow.find('#Subject').val().trim() == '') return false;
           let appObj = {};
           let formelement = proxy._customAppointmentWindow.find('#customAppointmentWindow').get(0);
           for (let index = 0; index < formelement.length; index++) {
             let columnName = formelement[index].name;
-            let $element = $(formelement[index]);
+            let element = formelement.elements[index];
             if (!ej.isNullOrUndefined(columnName) && columnName != '' && ej.isNullOrUndefined(appObj[columnName])) {
               let value = formelement[index].value;
               if (columnName == 'Id' && value != '') {
-                value = parseInt(string, value);
+                value = parseInt(value, 10);
               }
-              if ($element.hasClass('e-datetimepicker')) {
+              if (element.classList.contains('e-datetimepicker')) {
                 value = new Date(value);
               }
-              if ($element.hasClass('e-checkbox')) {
+              if (element.classList.contains('e-checkbox')) {
                 value = formelement[index].checked;
               }
               if (columnName.indexOf('_hidden') == -1) {
@@ -89,12 +89,12 @@ export class CustomAppointmentWindow {
             let recurEdit = proxy._appointmentAddWindow.find('.e-recurrenceeditor').data('ejRecurrenceEditor');
             recurEdit._recRule = proxy._customRecRule;
           }
-          proxy.saveAppointment(appObj);
+          this.schedule.widget.saveAppointment(appObj);
         }
-        proxy._customAppointmentWindow.ejDialog('close');
+        this.dialogObj.widget.close();
       } else {
         proxy._customAppointmentWindow.find('#appointmentWindow,#recurrenceWindow').toggle();
-        if ($(args.target).hasClass('e-recurOk')) {
+        if (args.target.classList.contains('e-recurOk')) {
           let recurObj = proxy._customAppointmentWindow.find('#customRecurrenceEditor').ejRecurrenceEditor('instance');
           recurObj.closeRecurPublic();
           proxy._customRecRule = recurObj._recRule;
@@ -105,7 +105,7 @@ export class CustomAppointmentWindow {
     }
 
     onCheckboxChange(event) {
-      let proxy = $('#Schedule1').ejSchedule('instance');
+      let proxy = this.schedule;
       let args = event.detail;
       if (args.model.id == 'AllDay') {
         if (args.isChecked) {
@@ -123,7 +123,7 @@ export class CustomAppointmentWindow {
     }
 
     clearFields() {
-      let proxy = $('#Schedule1').ejSchedule('instance');
+      let proxy = this.schedule;
       proxy._customAppointmentWindow.find('#Id').val('');
       proxy._customAppointmentWindow.find('#Subject').val('');
       proxy._customAppointmentWindow.find('#Description').val('');

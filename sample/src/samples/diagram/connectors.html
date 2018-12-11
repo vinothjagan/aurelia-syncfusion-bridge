@@ -2,9 +2,9 @@
 <template>
     <require from="./property_editor.css"></require>
     <div>
-        <ej-diagram id="diagram" e-width="100%" e-height="500px" e-nodes.bind="nodes"
+        <ej-diagram id="diagram" ej-diagram.ref="diagram" e-width="100%" e-height="500px" e-nodes.bind="nodes"
                     e-connectors.bind="connectors" e-snap-settings.bind="snapSettings" e-page-settings.bind="pageSettings"
-                    e-default-settings.bind="defaultSettings"
+                    e-default-settings.bind="defaultSettings" e-on-selection-change.trigger="selectionChanged($event)"
                     e-enable-context-menu="false" e-on-create.trigger="create($event)">
         </ej-diagram>
     </div>
@@ -37,7 +37,7 @@
                 Corner Radius
             </div>
             <div class="col-md-3">
-                <input type="text" id="cornerRadius" ej-numeric-textbox="e-minValue.bind:cornerMinValue;e-maxValue.bind:cornerMaxValue;e-value.bind:cornerValue;" e-on-change.trigger="changeCornerRadius($event)" />
+                <input type="text" id="cornerRadius" ej-numeric-textbox="e-minValue.bind:cornerMinValue;e-maxValue.bind:cornerMaxValue;e-value.bind:cornerValue;" ej-numeric-textbox.ref="cornerRadius" e-on-change.trigger="changeCornerRadius($event)" />
             </div>
         </div>
         <div class="row">
@@ -45,7 +45,7 @@
                 Bridging
             </div>
             <div class="col-md-3">
-                <input ej-check-box="e-checked:true;" type="checkbox" id="bridge" e-on-change.trigger="updateConnectors('bridge', 128)" />
+                <input ej-check-box="e-checked:true;" type="checkbox" id="bridge" ej-check-box.ref="bridge" e-on-change.trigger="updateConnectors('bridge', 128)" />
             </div>
         </div>
         <div class="row">
@@ -74,7 +74,7 @@
                 Connector
             </div>
             <div class="col-md-3">
-                <input ej-check-box="e-checked:true;" type="checkbox" id="dragable" e-on-change.trigger="updateConnectors('bridge', 8)" />
+                <input ej-check-box="e-checked:true;" type="checkbox" id="dragable" ej-check-box.ref="dragable" e-on-change.trigger="updateConnectors('bridge', 8)" />
             </div>
         </div>
         <div class="row">
@@ -82,7 +82,7 @@
                 Source
             </div>
             <div class="col-md-3">
-                <input ej-check-box="e-checked:true;" type="checkbox" id="dragablesource" e-on-change.trigger="updateConnectors('bridge', 16)" />
+                <input ej-check-box="e-checked:true;" type="checkbox" id="dragablesource" ej-check-box.ref="dragablesource" e-on-change.trigger="updateConnectors('bridge', 16)" />
             </div>
         </div>
         <div class="row">
@@ -90,7 +90,7 @@
                 Target
             </div>
             <div class="col-md-3">
-                <input ej-check-box="e-checked:true;" type="checkbox" id="dragabletarget" e-on-change.trigger="updateConnectors('bridge', 32)" />
+                <input ej-check-box="e-checked:true;" type="checkbox" id="dragabletarget" ej-check-box.ref="dragabletarget" e-on-change.trigger="updateConnectors('bridge', 32)" />
             </div>
         </div>
         <div class="row">
@@ -98,7 +98,7 @@
                 Segments
             </div>
             <div class="col-md-3">
-                <input ej-check-box="e-checked:true;" type="checkbox" id="dragablesegment" e-on-change.trigger="updateConnectors('bridge', 64)" />
+                <input ej-check-box="e-checked:true;" type="checkbox" id="dragablesegment" ej-check-box.ref="dragablesegment" e-on-change.trigger="updateConnectors('bridge', 64)" />
             </div>
         </div>
     </div>

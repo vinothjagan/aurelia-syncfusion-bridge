@@ -1,6 +1,6 @@
 export class Localization {
   onChange(event) {
-    $('#Schedule1').ejSchedule({ locale: event.detail.value });
+    this.schedule.widget.setModel({ locale: event.detail.value });
   }
   constructor() {
     this.AppointmentList = {

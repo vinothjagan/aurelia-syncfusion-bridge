@@ -2,9 +2,9 @@ export class CustomResourceDays {
     /* eslint-disable radix */
     onChange() {
       let weekDays = ej.cultureObject.calendar.days.names;
-      let nancydays = $('#nancyworkdays').data('ejDropDownList');
-      let michaeldays = $('#michaelworkdays').data('ejDropDownList');
-      let stevendays = $('#stevenworkdays').data('ejDropDownList');
+      let nancydays = this.nancyDDL.widget;
+      let michaeldays = this.michaelDDL.widget;
+      let stevendays = this.stevenDDL.widget
 
       let nancy = nancydays.model.selectedItems.sort();
       let michael = michaeldays.model.selectedItems.sort();
@@ -14,20 +14,19 @@ export class CustomResourceDays {
       for (let i = 0; i < nancy.length; i++) { nancyWorkweek.push(weekDays[nancy[i]].toLowerCase()); }
       for (let i = 0; i < michael.length; i++) { michaelWorkweek.push(weekDays[michael[i]].toLowerCase()); }
       for (let i = 0; i < steven.length; i++) { stevenWorkweek.push(weekDays[steven[i]].toLowerCase()); }
+    
+      if (nancyWorkweek.length === 0) nancyWorkweek = this.schedule.widget.model.workWeek;
+      if (michaelWorkweek.length === 0) michaelWorkweek = this.schedule.widget.model.workWeek;
+      if (stevenWorkweek.length === 0) stevenWorkweek = this.schedule.widget.model.workWeek;
 
-      let schObj = $('#Schedule1').data('ejSchedule');
-      if (nancyWorkweek.length === 0) nancyWorkweek = schObj.model.workWeek;
-      if (michaelWorkweek.length === 0) michaelWorkweek = schObj.model.workWeek;
-      if (stevenWorkweek.length === 0) stevenWorkweek = schObj.model.workWeek;
+      let nancyStart = parseInt(this.nancyStart.widget.model.value);
+      let nancyEnd = parseInt(this.nancyEnd.widget.model.value);
+      let michaelStart = parseInt(this.michaeleStart.widget.model.value);
+      let michaelEnd = parseInt(this.michaeleEnd.widget.model.value);
+      let stevenStart = parseInt(this.stevenStart.widget.model.value);
+      let stevenEnd = parseInt(this.stevenEnd.widget.model.value);
 
-      let nancyStart = parseInt($('#nancyhourstart').val());
-      let nancyEnd = parseInt($('#nancyhourend').val());
-      let michaelStart = parseInt($('#michaelhourstart').val());
-      let michaelEnd = parseInt($('#michaelhourend').val());
-      let stevenStart = parseInt($('#stevenhourstart').val());
-      let stevenEnd = parseInt($('#stevenhourend').val());
-
-      $('#Schedule1').ejSchedule({
+      this.schedule.widget.setModel({
         resources: [{
           field: 'roomId',
           title: 'Room',
