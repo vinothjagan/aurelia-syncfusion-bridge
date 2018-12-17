@@ -154,10 +154,10 @@ declare module 'aurelia-syncfusion-bridge' {
   export class ejCheckBox extends WidgetBase {
     constructor(element?: any);
   }
-  export class ejColorPicker extends WidgetBase {
+  export class ejCircularGauge extends WidgetBase {
     constructor(element?: any);
   }
-  export class ejCircularGauge extends WidgetBase {
+  export class ejColorPicker extends WidgetBase {
     constructor(element?: any);
   }
   export class ejComboBox extends WidgetBase {
@@ -295,10 +295,10 @@ declare module 'aurelia-syncfusion-bridge' {
   export class KanbanColumn {
   
   }
-  export class ejListBox extends WidgetBase {
+  export class ejLinearGauge extends WidgetBase {
     constructor(element?: any);
   }
-  export class ejLinearGauge extends WidgetBase {
+  export class ejListBox extends WidgetBase {
     constructor(element?: any);
   }
   export class ejListView extends WidgetBase {
@@ -367,15 +367,15 @@ declare module 'aurelia-syncfusion-bridge' {
   export class ejRadioButton extends WidgetBase {
     constructor(element?: any);
   }
+  export class ejRating extends WidgetBase {
+    constructor(element?: any);
+  }
   export class ejRangeNavigator extends WidgetBase {
     series: any;
     constructor(element?: any);
   }
   export class RangeSeries {
   
-  }
-  export class ejRating extends WidgetBase {
-    constructor(element?: any);
   }
   export class ejReportViewer extends WidgetBase {
     constructor(element?: any);
