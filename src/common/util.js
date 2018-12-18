@@ -16,8 +16,11 @@ export class Util {
     let value;
     for (let prop of properties) {
       if (model.abbrevProperties && prop in model.abbrevProperties && model.abbrevProperties.hasOwnProperty(prop)) {
-        value = model[this.getBindablePropertyName(model.abbrevProperties[prop])];
-      }else {
+        model.abbrevProperties[prop].some(property => {
+          value = model[this.getBindablePropertyName(property)];
+          return this.hasValue(value);
+        });
+      } else {
         value = model[this.getBindablePropertyName(prop)];
       }
       if (this.hasValue(value)) {
@@ -33,7 +36,13 @@ export class Util {
   getControlPropertyName(options, propertyName) {
     let property;
     for (let prop of options.controlProperties) {
-      if (propertyName === this.getBindablePropertyName(prop)) {
+      if (options.abbrevProperties && prop in options.abbrevProperties && options.abbrevProperties.hasOwnProperty(prop)) {
+        options.abbrevProperties[prop].some(props => {
+          property = propertyName === this.getBindablePropertyName(props) ? prop : undefined;
+          return property;
+        });
+        if (property) break;
+      } else if (propertyName === this.getBindablePropertyName(prop)) {
         property = prop;
         break;
       }
