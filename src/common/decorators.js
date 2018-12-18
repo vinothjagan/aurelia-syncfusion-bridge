@@ -30,20 +30,28 @@ export function generateBindables(controlName, inputs, twoWayProperties, abbrevP
         let option = inputs[i];
         if (abbrevProperties && option in abbrevProperties) {
           option = abbrevProperties[option];
+          option.forEach((prop) => {
+            registerProp(util, prop, target, behaviorResource, descriptor);
+          });
+        } else {
+          registerProp(util, option, target, behaviorResource, descriptor);
         }
-        let nameOrConfigOrTarget = {
-          name: util.getBindablePropertyName(option)
-        };
-
-        if (option === 'widget') {
-          nameOrConfigOrTarget.defaultBindingMode = bindingMode.twoWay;
-        }
-
-        let prop = new BindableProperty(nameOrConfigOrTarget);
-        prop.registerWith(target, behaviorResource, descriptor);
       }
     }
   };
+}
+
+function registerProp(util, option, target, behaviorResource, descriptor) {
+  let nameOrConfigOrTarget = {
+    name: util.getBindablePropertyName(option)
+  };
+
+  if (option === 'widget') {
+    nameOrConfigOrTarget.defaultBindingMode = bindingMode.twoWay;
+  }
+
+  let prop = new BindableProperty(nameOrConfigOrTarget);
+  prop.registerWith(target, behaviorResource, descriptor);
 }
 
 export function delayed() {
@@ -54,7 +62,7 @@ export function delayed() {
     descriptor.value = function(...args) {
       if (this.childPropertyName) {
         taskQueue.queueTask(() => ptr.apply(this, args));
-      }else {
+      } else {
         ptr.apply(this, args);
       }
     };
