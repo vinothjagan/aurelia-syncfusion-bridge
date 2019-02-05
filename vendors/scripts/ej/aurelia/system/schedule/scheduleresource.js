@@ -21,7 +21,7 @@ System.register(['../common/constants', '../common/decorators', '../common/commo
       customElement = _commonCommon.customElement;
     }],
     execute: function () {
-      _export('ScheduleResource', ScheduleResource = (_dec = inlineView('' + constants.aureliaTemplateString), _dec2 = customElement(constants.elementPrefix + 'schedule-resource'), _dec3 = generateBindables('resources', ['field', 'title', 'name', 'allowMultiple', 'resourceSettings']), _dec(_class = _dec2(_class = _dec3(_class = function ScheduleResource() {
+      _export('ScheduleResource', ScheduleResource = (_dec = inlineView('' + constants.aureliaTemplateString), _dec2 = customElement(constants.elementPrefix + 'schedule-resource'), _dec3 = generateBindables('resources', ['field', 'title', 'name', 'allowMultiple', 'resourceSettings', 'resourceSettings', 'resourceSettings', 'resourceSettings', 'resourceSettings', 'resourceSettings', 'resourceSettings', 'resourceSettings', 'resourceSettings', 'resourceSettings']), _dec(_class = _dec2(_class = _dec3(_class = function ScheduleResource() {
         _classCallCheck(this, ScheduleResource);
       }) || _class) || _class) || _class));
 

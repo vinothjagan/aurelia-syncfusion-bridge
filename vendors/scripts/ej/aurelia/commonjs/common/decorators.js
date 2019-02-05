@@ -43,20 +43,28 @@ function generateBindables(controlName, inputs, twoWayProperties, abbrevProperti
         var option = inputs[i];
         if (abbrevProperties && option in abbrevProperties) {
           option = abbrevProperties[option];
+          option.forEach(function (prop) {
+            registerProp(util, prop, target, behaviorResource, descriptor);
+          });
+        } else {
+          registerProp(util, option, target, behaviorResource, descriptor);
         }
-        var nameOrConfigOrTarget = {
-          name: util.getBindablePropertyName(option)
-        };
-
-        if (option === 'widget') {
-          nameOrConfigOrTarget.defaultBindingMode = _aureliaBinding.bindingMode.twoWay;
-        }
-
-        var prop = new _aureliaTemplating.BindableProperty(nameOrConfigOrTarget);
-        prop.registerWith(target, behaviorResource, descriptor);
       }
     }
   };
+}
+
+function registerProp(util, option, target, behaviorResource, descriptor) {
+  var nameOrConfigOrTarget = {
+    name: util.getBindablePropertyName(option)
+  };
+
+  if (option === 'widget') {
+    nameOrConfigOrTarget.defaultBindingMode = _aureliaBinding.bindingMode.twoWay;
+  }
+
+  var prop = new _aureliaTemplating.BindableProperty(nameOrConfigOrTarget);
+  prop.registerWith(target, behaviorResource, descriptor);
 }
 
 function delayed() {

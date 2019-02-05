@@ -4,7 +4,8 @@ import {inlineView, customElement} from '../common/common';
 
 @inlineView(`${constants.aureliaTemplateString}`)
 @customElement(`${constants.elementPrefix}schedule-resource`)
-@generateBindables('resources', ['field', 'title', 'name', 'allowMultiple', 'resourceSettings'])
+
+@generateBindables('resources', ['field', 'title', 'name', 'allowMultiple', 'resourceSettings', 'resourceSettings', 'resourceSettings', 'resourceSettings', 'resourceSettings', 'resourceSettings', 'resourceSettings', 'resourceSettings', 'resourceSettings', 'resourceSettings'])
 
 export class ScheduleResource {
 }

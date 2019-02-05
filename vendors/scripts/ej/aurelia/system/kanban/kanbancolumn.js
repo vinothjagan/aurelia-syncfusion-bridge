@@ -21,7 +21,7 @@ System.register(['../common/constants', '../common/decorators', '../common/commo
       customElement = _commonCommon.customElement;
     }],
     execute: function () {
-      _export('KanbanColumn', KanbanColumn = (_dec = inlineView('' + constants.aureliaTemplateString), _dec2 = customElement(constants.elementPrefix + 'kanban-column'), _dec3 = generateBindables('columns', ['headerText', 'totalCount', 'key', 'allowDrop', 'allowDrag', 'isCollapsed', 'constraints', 'headerTemplate', 'width', 'visible', 'showAddButton']), _dec(_class = _dec2(_class = _dec3(_class = function KanbanColumn() {
+      _export('KanbanColumn', KanbanColumn = (_dec = inlineView('' + constants.aureliaTemplateString), _dec2 = customElement(constants.elementPrefix + 'kanban-column'), _dec3 = generateBindables('columns', ['headerText', 'totalCount', 'totalCount', 'key', 'allowDrop', 'allowDrag', 'isCollapsed', 'constraints', 'constraints', 'constraints', 'constraints', 'headerTemplate', 'width', 'visible', 'showAddButton']), _dec(_class = _dec2(_class = _dec3(_class = function KanbanColumn() {
         _classCallCheck(this, KanbanColumn);
       }) || _class) || _class) || _class));
 

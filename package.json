@@ -1,6 +1,6 @@
 {
   "name": "aurelia-syncfusion-bridge",
-  "version": "7.6.2",
+  "version": "0.2.2",
   "registry": "github",
   "description": "A set of Syncfusion wrappers for Aurelia allowing developers to easily use Syncfusion components in their Aurelia application",
   "keywords": [
@@ -12,7 +12,7 @@
   "homepage": "https://github.com/aurelia-ui-toolkits/aurelia-syncfusion-bridge",
   "bugs": {
     "url": "https://github.com/aurelia-ui-toolkits/aurelia-syncfusion-bridge/issues"
-  },
+  },  
   "author": "aurelia-ui-toolkits",
   "main": "dist/commonjs/index.js",
   "typings": "dist/amd/aurelia-syncfusion-bridge.d.ts",

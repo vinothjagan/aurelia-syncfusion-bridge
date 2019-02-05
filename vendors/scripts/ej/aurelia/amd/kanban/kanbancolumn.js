@@ -14,7 +14,7 @@ define(['exports', '../common/constants', '../common/decorators', '../common/com
 
   var _dec, _dec2, _dec3, _class;
 
-  var KanbanColumn = exports.KanbanColumn = (_dec = (0, _common.inlineView)('' + _constants.constants.aureliaTemplateString), _dec2 = (0, _common.customElement)(_constants.constants.elementPrefix + 'kanban-column'), _dec3 = (0, _decorators.generateBindables)('columns', ['headerText', 'totalCount', 'key', 'allowDrop', 'allowDrag', 'isCollapsed', 'constraints', 'headerTemplate', 'width', 'visible', 'showAddButton']), _dec(_class = _dec2(_class = _dec3(_class = function KanbanColumn() {
+  var KanbanColumn = exports.KanbanColumn = (_dec = (0, _common.inlineView)('' + _constants.constants.aureliaTemplateString), _dec2 = (0, _common.customElement)(_constants.constants.elementPrefix + 'kanban-column'), _dec3 = (0, _decorators.generateBindables)('columns', ['headerText', 'totalCount', 'totalCount', 'key', 'allowDrop', 'allowDrag', 'isCollapsed', 'constraints', 'constraints', 'constraints', 'constraints', 'headerTemplate', 'width', 'visible', 'showAddButton']), _dec(_class = _dec2(_class = _dec3(_class = function KanbanColumn() {
     _classCallCheck(this, KanbanColumn);
   }) || _class) || _class) || _class);
 });

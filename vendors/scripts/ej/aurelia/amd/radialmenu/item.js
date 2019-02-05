@@ -57,7 +57,7 @@ define(['exports', '../common/constants', '../common/decorators', '../common/com
 
   var _dec, _dec2, _dec3, _dec4, _class, _desc, _value, _class2, _descriptor;
 
-  var Item = exports.Item = (_dec = (0, _common.inlineView)('' + _constants.constants.aureliaTemplateString), _dec2 = (0, _common.customElement)(_constants.constants.elementPrefix + 'item'), _dec3 = (0, _decorators.generateBindables)('items', ['imageUrl', 'prependTo', 'text', 'enabled', 'click', 'badge', 'type', 'sliderSettings', 'items']), _dec4 = (0, _common.children)(_constants.constants.elementPrefix + 'template'), _dec(_class = _dec2(_class = _dec3(_class = (_class2 = function () {
+  var Item = exports.Item = (_dec = (0, _common.inlineView)('' + _constants.constants.aureliaTemplateString), _dec2 = (0, _common.customElement)(_constants.constants.elementPrefix + 'item'), _dec3 = (0, _decorators.generateBindables)('items', ['imageUrl', 'prependTo', 'text', 'enabled', 'click', 'badge', 'badge', 'badge', 'type', 'sliderSettings', 'sliderSettings', 'sliderSettings', 'sliderSettings', 'items']), _dec4 = (0, _common.children)(_constants.constants.elementPrefix + 'template'), _dec(_class = _dec2(_class = _dec3(_class = (_class2 = function () {
     function Item() {
       _classCallCheck(this, Item);
 

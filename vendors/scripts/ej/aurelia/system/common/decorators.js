@@ -29,23 +29,31 @@ System.register(['aurelia-templating', 'aurelia-dependency-injection', 'aurelia-
           var option = inputs[i];
           if (abbrevProperties && option in abbrevProperties) {
             option = abbrevProperties[option];
+            option.forEach(function (prop) {
+              registerProp(util, prop, target, behaviorResource, descriptor);
+            });
+          } else {
+            registerProp(util, option, target, behaviorResource, descriptor);
           }
-          var nameOrConfigOrTarget = {
-            name: util.getBindablePropertyName(option)
-          };
-
-          if (option === 'widget') {
-            nameOrConfigOrTarget.defaultBindingMode = bindingMode.twoWay;
-          }
-
-          var prop = new BindableProperty(nameOrConfigOrTarget);
-          prop.registerWith(target, behaviorResource, descriptor);
         }
       }
     };
   }
 
   _export('generateBindables', generateBindables);
+
+  function registerProp(util, option, target, behaviorResource, descriptor) {
+    var nameOrConfigOrTarget = {
+      name: util.getBindablePropertyName(option)
+    };
+
+    if (option === 'widget') {
+      nameOrConfigOrTarget.defaultBindingMode = bindingMode.twoWay;
+    }
+
+    var prop = new BindableProperty(nameOrConfigOrTarget);
+    prop.registerWith(target, behaviorResource, descriptor);
+  }
 
   function delayed() {
     return function (target, key, descriptor) {

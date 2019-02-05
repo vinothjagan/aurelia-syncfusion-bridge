@@ -38,7 +38,7 @@ define(['exports', '../common/widget-base', '../common/constants', '../common/de
 
   var _dec, _dec2, _dec3, _class;
 
-  var ejProgressBar = exports.ejProgressBar = (_dec = (0, _common.customAttribute)(_constants.constants.attributePrefix + 'progress-bar'), _dec2 = (0, _decorators.generateBindables)('ejProgressBar', ['cssClass', 'enabled', 'enablePersistence', 'enableRTL', 'height', 'htmlAttributes', 'maxValue', 'minValue', 'percentage', 'showRoundedCorner', 'text', 'value', 'width'], [], { 'enableRTL': 'enableRtl' }), _dec3 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = function (_WidgetBase) {
+  var ejProgressBar = exports.ejProgressBar = (_dec = (0, _common.customAttribute)(_constants.constants.attributePrefix + 'progress-bar'), _dec2 = (0, _decorators.generateBindables)('ejProgressBar', ['cssClass', 'enabled', 'enablePersistence', 'enableRTL', 'height', 'htmlAttributes', 'maxValue', 'minValue', 'percentage', 'showRoundedCorner', 'text', 'value', 'width'], [], { 'enableRTL': ['enableRtl'] }), _dec3 = (0, _common.inject)(Element), _dec(_class = _dec2(_class = _dec3(_class = function (_WidgetBase) {
     _inherits(ejProgressBar, _WidgetBase);
 
     function ejProgressBar(element) {
