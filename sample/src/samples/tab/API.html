@@ -1,6 +1,6 @@
 <template>
     <div>
-        <ej-tab id="apiTab" style="width: 500px" e-on-create.trigger="create()">
+        <ej-tab id="apiTab" style="width: 500px" ej-tab.ref="tabObj">
             <ul>
                 <li><a href="#javaScript">JavaScript</a></li>
                 <li><a href="#cSharp">C Sharp (C#)</a></li>
@@ -30,7 +30,7 @@
             </div>
             <div class="col-md-6 top-margin">
                 <select name="disableItem" class="e-ddl" id="optDisable" ej-drop-down-list="e-watermark-text:Select;e-width.bind:width"
-                e-on-create.trigger="disableDDL()" e-on-change.trigger="onDisableChange($event)">
+                ej-drop-down-list.ref="disableObj" e-on-change.trigger="onDisableChange($event)">
                     <option value="0">Item 1</option>
                     <option value="1">Item 2</option>
                     <option value="2">Item 3</option>
@@ -42,7 +42,7 @@
                 Enable Item
             </div>
             <div class="col-md-6 top-margin">
-                <select name="enableItem" class="e-ddl" id="optEnable" ej-drop-down-list="e-watermark-text:Select;e-width.bind:width" e-on-create.trigger="enableDDL()"
+                <select name="enableItem" class="e-ddl" id="optEnable" ej-drop-down-list="e-watermark-text:Select;e-width.bind:width" ej-drop-down-list.ref="enableObj"
                 e-on-change.trigger="onEnableChange($event)">
                     <option value="0">Item 1</option>
                     <option value="1">Item 2</option>
@@ -56,7 +56,7 @@
                 Remove Tab
             </div>
             <div class="col-md-6 top-margin">
-                <select name="enableItem" class="e-ddl" id="optRemove" ej-drop-down-list="e-watermark-text:Select;e-width.bind:width" e-on-create.trigger="removeDDL()"
+                <select name="enableItem" class="e-ddl" id="optRemove" ej-drop-down-list="e-watermark-text:Select;e-width.bind:width" ej-drop-down-list.ref="removeObj"
                 e-on-change.trigger="onRemoveChange($event)">
                     <option value="0">Item 1</option>
                     <option value="1">Item 2</option>

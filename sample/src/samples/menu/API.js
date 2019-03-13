@@ -2,27 +2,24 @@ export class ApiMenu {
   constructor() {
     this.width = '120px';
   }
-  create() {
-    this.menuObj = $('#JobSearch').data('ejMenu');
-  }
   disableChange(event) {
     let args = event.detail;
-    this.menuObj.disableItem(args.value);
-    $('#Enable').ejDropDownList('clearText');
+    this.menuObj.widget.disableItem(args.value);
+    this.ddlEnableObj.widget.clearText(); 
   }
   enableChange(event) {
     let args = event.detail;
-    this.menuObj.enableItem(args.value);
-    $('#Disable').ejDropDownList('clearText');
+    this.menuObj.widget.enableItem(args.value);
+    this.ddlDisableObj.widget.clearText();
   }
   disbaleEnableChange(event) {
     let args = event.detail;
-    $('#Disable').ejDropDownList('clearText');
-    $('#Enable').ejDropDownList('clearText');
+    this.ddlDisableObj.widget.clearText();
+    this.ddlEnableObj.widget.clearText(); 
     if (args.isChecked) {
-      this.menuObj.disable();
+      this.menuObj.widget.disable();
     } else {
-      this.menuObj.enable();
+      this.menuObj.widget.enable();
     }
   }
 }

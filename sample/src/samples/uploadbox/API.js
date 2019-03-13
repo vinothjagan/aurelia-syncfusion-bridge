@@ -4,25 +4,22 @@ export class ApiUploadbox {
     this.remove = '//js.syncfusion.com/demos/ejServices/api/uploadbox/Remove';
   }
 
-  create() {
-    this.target = $('#UploadMethods').data('ejUploadbox');
-  }
 
   onCheckUncheckAll(event) {
     let args = event.detail;
     if (args.isChecked) {
-      this.target.disable();
+      this.uploadObj.widget.disable();
     } else {
-      this.target.enable();
+      this.uploadObj.widget.enable();
     }
   }
 
   onCheck(event) {
     let args = event.detail;
     if (args.isChecked) {
-      this.target.setModel({ multipleFilesSelection: true });
+      this.uploadObj.widget.setModel({ multipleFilesSelection: true });
     } else {
-      this.target.setModel({ multipleFilesSelection: false });
+      this.uploadObj.widget.setModel({ multipleFilesSelection: false });
     }
   }
 }

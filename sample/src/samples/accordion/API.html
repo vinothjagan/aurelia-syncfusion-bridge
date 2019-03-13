@@ -1,6 +1,6 @@
 <template>
     <div>
-        <ej-accordion id="APIAccordion" style="width: 500px" e-on-create.trigger="create()">
+        <ej-accordion ej-accordion.ref="acrdnObj" id="APIAccordion" style="width: 500px">
             <h3><a href="#">London</a></h3>
             <div>
                 London is one of the most popular tourist destinations in the world for a reason. A cultural and historical hub, London has
@@ -28,7 +28,7 @@
                             Active Index
                         </div>
                         <div class="col-md-6 top-margin">
-                            <select name="selectIndex" class="e-ddl" id="optActiveChange" ej-drop-down-list="e-watermark-text:Select;e-width.bind:width" e-on-create.trigger="activeChangeDDL()" e-on-change.trigger="onActiveChange($event)">
+                            <select name="selectIndex" class="e-ddl" id="optActiveChange" ej-drop-down-list="e-watermark-text:Select;e-width.bind:width" ej-drop-down-list.ref="activeObj" e-on-change.trigger="onActiveChange($event)">
                                 <option value="0">London</option>
                                 <option value="1">Paris</option>
                                 <option value="2">Rome</option>
@@ -38,7 +38,7 @@
                             Disable Item
                         </div>
                         <div class="col-md-6 top-margin">
-                            <select name="disableItem" class="e-ddl" id="optDisableChange" ej-drop-down-list="e-watermark-text:Select;e-show-checkbox:true;e-width.bind:width" e-on-create.trigger="onDisableChangeDDL()" e-on-change.trigger="onDisableChange($event)">
+                            <select name="disableItem" class="e-ddl" id="optDisableChange" ej-drop-down-list="e-watermark-text:Select;e-show-checkbox:true;e-width.bind:width" ej-drop-down-list.ref="optDisable" e-on-change.trigger="onDisableChange($event)">
                                 <option value="0">London</option>
                                 <option value="1">Paris</option>
                                 <option value="2">Rome</option>
@@ -50,7 +50,7 @@
                             Enable Item
                         </div>
                         <div class="col-md-6 top-margin">
-                            <select name="enableItem" class="e-ddl" id="optEnableChange" ej-drop-down-list="e-watermark-text:Select;e-show-checkbox:true;e-width.bind:width" e-on-create.trigger="enableChangeDDL()" e-on-change.trigger="onEnableChange($event)">
+                            <select name="enableItem" class="e-ddl" id="optEnableChange" ej-drop-down-list="e-watermark-text:Select;e-show-checkbox:true;e-width.bind:width" ej-drop-down-list.ref="optEnable" e-on-change.trigger="onEnableChange($event)">
                                 <option value="0">London</option>
                                 <option value="1">Paris</option>
                                 <option value="2">Rome</option>

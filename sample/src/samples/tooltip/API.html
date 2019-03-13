@@ -5,13 +5,12 @@
                     <div class="api-ctrl">
                         <div class="input-group">
                             <span class="input-group-btn">
-                                <button class="btn btn-default" type="button" id="back" ej-tooltip="e-content.bind:backContent;e-position.bind:backPosition">Back</button>
+                                <button class="btn btn-default" type="button" id="back" ej-tooltip="e-content.bind:backContent;e-position.bind:backPosition" ej-tooltip.ref="tooltipBackObj">Back</button>
                             </span>
                             <input type="text" class="form-control" placeholder="Search for...">
                             <div class="input-group-btn">
-                                <button class="btn btn-default" type="button" id="go" ej-tooltip="e-content.bind:goContent;e-position.bind:goPosition">Go</button>
-                                <button class="btn btn-default" type="button" id="reload" ej-tooltip="e-is-balloon:false;e-content.bind:reloadContent;e-position.bind:reloadPosition"
-                                 e-on-create.trigger="reloadCreate()">
+                                <button class="btn btn-default" type="button" id="go" ej-tooltip="e-content.bind:goContent;e-position.bind:goPosition" ej-tooltip.ref="tooltipGoObj">Go</button>
+                                <button class="btn btn-default" type="button" id="reload" ej-tooltip="e-is-balloon:false;e-content.bind:reloadContent;e-position.bind:reloadPosition" ej-tooltip.ref="tooltipReloadObj">
                                     <span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>
                                 </button>
                             </div>
@@ -24,7 +23,7 @@
             <div class="row">
                         <div class="col-md-6 top-margin"> Target Element </div>
                         <div class="col-md-6 top-margin">
-                            <select id="refresh" ej-drop-down-list="e-selected-index:2;e-width:110px;" e-on-change.trigger="onEffectChange($event)">
+                            <select id="refresh" ej-drop-down-list="e-selected-index:2;e-width:110px;" ej-drop-down-list.ref="ddlObj" e-on-change.trigger="onEffectChange($event)">
                                 <option value="back">Back Button</option>
                                 <option value="go">Go Button</option>
                                 <option value="reload">Reload Button</option>
@@ -34,13 +33,13 @@
                     <div class="row">
                         <div class="col-md-6 top-margin"> Disable\Enable </div>
                         <div class="col-md-6 top-margin">
-                            <input type="button" id="btnEnable" ej-button="e-width:107px;e-text:Disable;e-show-rounded-corner:true;e-enabled:false" e-on-click.trigger="onEnableDisable($event)" />
+                            <input type="button" id="btnEnable" ej-button="e-width:107px;e-text:Disable;e-show-rounded-corner:true;e-enabled:false" ej-button.ref="btnEnableObj" e-on-click.trigger="onEnableDisable($event)" />
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6 top-margin"> Show\Hide </div>
                         <div class="col-md-6 top-margin">
-                            <input type="button" id="hideButton" ej-button="e-width:107px;e-text:Show;e-show-rounded-corner:true;" e-on-click.trigger="onShowHide($event)" />
+                            <input type="button" id="hideButton" ej-button="e-width:107px;e-text:Show;e-show-rounded-corner:true;" ej-button.ref="btnHideObj" e-on-click.trigger="onShowHide($event)" />
                         </div>
                     </div>
         </div>

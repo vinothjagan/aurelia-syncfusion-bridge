@@ -3,7 +3,7 @@
     <div class="row">
 <div class="tree-view-tooltip">
                 <div class="tree-view-tooltip-frame">
-                    <ul id="treeView" ej-tree-view="" ej-tooltip="e-width:230px;e-height:65px;e-target.bind:tooltipTarget;e-position.bind:tooltipPosition" e-on-create.trigger="onCreate()" e-on-before-open.trigger="onOpen($event)" 
+                    <ul id="treeView" ej-tree-view="" ej-tooltip="e-width:230px;e-height:65px;e-target.bind:tooltipTarget;e-position.bind:tooltipPosition" ej-tooltip.ref="tooltipObj" e-on-before-open.trigger="onOpen($event)" 
                     e-on-tracking.trigger="onOpen($event)" >
                         <li class="expanded">Fiction Book Lists
 							<ul>
@@ -43,7 +43,7 @@
                     <div class="row targetValue">
                         <div class="col-md-6 top-margin"> Target Position</div>
                         <div class="col-md-6 top-margin">
-                            <select id="targetHorizontal" ej-drop-down-list="e-selected-index:0;e-width:110px" e-on-change.trigger="targetHorizontalChange($event)">
+                            <select id="targetHorizontal" ej-drop-down-list="e-selected-index:0;e-width:110px" ej-drop-down-list.ref="ddlObj" e-on-change.trigger="targetHorizontalChange($event)">
                                 <option value="right-center">Right Center</option>
 								<option value="right-top">Right Top</option>
 								<option value="right-bottom">Right Bottom</option>
@@ -60,7 +60,7 @@
                     <div class="row stemValue">
                         <div class="col-md-6 top-margin"> Tooltip Position</div>
                         <div class="col-md-6 top-margin">
-                            <select id="stemHorizontal" ej-drop-down-list="e-selected-index:0;e-width:110px" e-on-change.trigger="stemHorizontalChange($event)">
+                            <select id="stemHorizontal" ej-drop-down-list="e-selected-index:0;e-width:110px" ej-drop-down-list.ref="ddlSteamObj" e-on-change.trigger="stemHorizontalChange($event)">
                                 <option value="left-center">Left Center</option>
 								<option value="left-top">Left Top</option>
 								<option value="left-bottom">Left Bottom</option>
@@ -76,11 +76,11 @@
                     <div class="row" id="axisValue">
                         <div class="col-md-6 top-margin"> x-Axis </div>
                         <div class="col-md-6 top-margin">
-                            <input type="text" id="xAxis" ej-numeric-textbox="e-value:400;e-width:100%;e-decimal-places:0" e-on-change.trigger="change($event)" />
+                            <input type="text" id="xAxis" ej-numeric-textbox="e-value:400;e-width:100%;e-decimal-places:0" ej-numeric-textbox.ref="xNumObj" e-on-change.trigger="change($event)" />
                         </div>
                         <div class="col-md-6 top-margin"> y-Axis </div>
                         <div class="col-md-6 top-margin">
-                            <input type="text" id="yAxis" ej-numeric-textbox="e-value:110;e-width:100%;e-decimal-places:0" e-on-change.trigger="change($event)" />
+                            <input type="text" id="yAxis" ej-numeric-textbox="e-value:110;e-width:100%;e-decimal-places:0" ej-numeric-textbox.ref="yNumObj" e-on-change.trigger="change($event)" />
                         </div>
                     </div>
         </div>

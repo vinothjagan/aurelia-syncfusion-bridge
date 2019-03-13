@@ -3,7 +3,7 @@
     <div>
         <div class="posupload">Select a file to upload </div>
         <div class="uploadbox-api-control">
-            <ej-uploadbox id="UploadMethods" e-save-url.bind="save" e-remove-url.bind="remove" e-on-create.trigger="create()">
+            <ej-uploadbox id="UploadMethods" e-save-url.bind="save" ej-uploadbox.ref="uploadObj" e-remove-url.bind="remove">
             </ej-uploadbox>
         </div>
     </div>

@@ -1,13 +1,13 @@
 <template>
     <div style="margin-left:400px">
-        <input type="text" id="bookSelect" ej-drop-down-list="e-data-source.bind:dataSource;e-fields.bind:fields;e-watermark-text:Select a section" e-on-create.trigger="create()" />
+        <input type="text" id="bookSelect" ej-drop-down-list="e-data-source.bind:dataSource;e-fields.bind:fields;e-watermark-text:Select a section" ej-drop-down-list.ref="ddlObj" />
     </div>
     <div id="property-window" class="box wide">
         <h4>Properties</h4>
         <div class="row">
             <div class="col-md-6 top-margin">Select an item by index</div>
             <div class="col-md-6 top-margin">
-                <select name="selectIndex" class="e-ddl" id="optIndexChange" ej-drop-down-list="e-watermark-text:select..;e-width.bind:width" e-on-change.trigger="onActiveIndexChange($event)">
+                <select name="selectIndex" class="e-ddl" id="optIndexChange" ej-drop-down-list="e-watermark-text:select..;e-width.bind:width" ej-drop-down-list.ref="ddlIndexObj" e-on-change.trigger="onActiveIndexChange($event)">
                     <option value="0">1 Item</option>
                     <option value="1">2 Item</option>
                     <option value="2">3 Item</option>
@@ -32,7 +32,7 @@
             </div>
             <div class="col-md-6 top-margin">Select an item by value</div>
             <div class="col-md-6 top-margin">
-                <select name="selectIndex" class="e-ddl" id="optValueChange" ej-drop-down-list="e-watermark-text:select..;e-width.bind:width" e-on-change.trigger="onActiveValueChange($event)">
+                <select name="selectIndex" class="e-ddl" id="optValueChange" ej-drop-down-list="e-watermark-text:select..;e-width.bind:width" ej-drop-down-list.ref="ddlValueObj" e-on-change.trigger="onActiveValueChange($event)">
                     <option value="Art">Art</option>
                     <option value="Architecture">Architecture</option>
                     <option value="Biographies">Biographies</option>
@@ -59,7 +59,7 @@
         <div class="row">
             <div class="col-md-6 top-margin">Select an item by text</div>
             <div class="col-md-6 top-margin">
-                <select name="selectIndex" class="e-ddl" id="optTextChange" ej-drop-down-list="e-watermark-text:select..;e-width.bind:width" e-on-change.trigger="onActiveTextChange($event)">
+                <select name="selectIndex" class="e-ddl" id="optTextChange" ej-drop-down-list="e-watermark-text:select..;e-width.bind:width" ej-drop-down-list.ref="ddlTextObj" e-on-change.trigger="onActiveTextChange($event)">
                     <option value="Art">Art</option>
                     <option value="Architecture">Architecture</option>
                     <option value="Biographies">Biographies</option>

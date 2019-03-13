@@ -1,4 +1,4 @@
-﻿export class CascadingComboBox {
+export class CascadingComboBox {
     country = [
 			{ countryName: 'United States', countryId: '1' },
 			{ countryName: 'Australia', countryId: '2' }
@@ -41,7 +41,6 @@
 		this.cityField= { text: 'cityName',value: 'cityName'};
 	}
 	onCountryChange(e){
-		var listObj1 = $('#stateList').ejComboBox("instance");
-		listObj1.option({ enabled: true, query: new ej.Query().where('countryId', 'equal', e.detail.model.value) ,value:null});
+		this.listObj1.widget.option({ enabled: true, query: new ej.Query().where('countryId', 'equal', e.detail.model.value) ,value:null});
 	}   
 }

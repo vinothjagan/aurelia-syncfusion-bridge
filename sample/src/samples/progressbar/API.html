@@ -2,7 +2,7 @@
     <require from="./API.css"></require>
     <div class="api-progress-bar-frame" style="margin-left:250px">
         <div class="api-progress-bar-control">
-            <div id="progressBar" ej-progress-bar="e-percentage.bind:percentage;e-height.bind:height" e-on-create.trigger="create()"></div>
+            <div id="progressBar" ej-progress-bar="e-percentage.bind:percentage;e-height.bind:height" ej-progress-bar.ref="progressObj" e-on-create.trigger="create()"></div>
         </div>
         <div class="api-progress-bar-txt"></div>
     </div>

@@ -2,44 +2,41 @@ export class APIToolbar {
   constructor() {
     this.width = '100px';
   }
-  create() {
-    this.toolbar1 = $('#toolbarMethods').data('ejToolbar');
-  }
   onSelectChange(event) {
-    $('#optDeselectId').data('ejDropDownList').option('selectedItemIndex', 0);
-    this.toolbar1.selectItemByID(event.detail.value);
+    this.ddlDeSelectObj.widget.setModel({selectedItemIndex: 0});
+    this.toolbarObj.widget.selectItemByID(event.detail.value);
   }
   onDeselectChange(event) {
-    $('#optSelectId').data('ejDropDownList').option('selectedItemIndex', 0);
-    this.toolbar1.deselectItemByID(event.detail.value);
+    this.ddlSelectObj.widget.setModel({selectedItemIndex: 0});
+    this.toolbarObj.widget.deselectItemByID(event.detail.value);
   }
   onDisableChange(event) {
-    $('#optEnableId').data('ejDropDownList').option('selectedItemIndex', 0);
-    this.toolbar1.disableItemByID(event.detail.value);
+    this.ddlEnableObj.widget.setModel({selectedItemIndex: 0});
+    this.toolbarObj.widget.disableItemByID(event.detail.value);
   }
   onEnableChange(event) {
-    $('#optDisableId').data('ejDropDownList').option('selectedItemIndex', 0);
-    this.toolbar1.enableItemByID(event.detail.value);
+    this.ddlDisableObj.widget.setModel({selectedItemIndex: 0});
+    this.toolbarObj.widget.enableItemByID(event.detail.value);
   }
 
   onEnableDisableAll(event) {
     let args = event.detail;
     if (args.isChecked) {
-      this.toolbar1.disable();
+      this.toolbarObj.widget.disable();
     } else {
-      this.toolbar1.enable();
+      this.toolbarObj.widget.enable();
     }
-    $('#optSelectId').data('ejDropDownList').option('selectedItemIndex', 0);
-    $('#optDeselectId').data('ejDropDownList').option('selectedItemIndex', 0);
-    $('#optDisableId').data('ejDropDownList').option('selectedItemIndex', 0);
-    $('#optEnableId').data('ejDropDownList').option('selectedItemIndex', 0);
+    this.ddlSelectObj.widget.setModel({selectedItemIndex: 0});
+    this.ddlDeSelectObj.widget.setModel({selectedItemIndex: 0});
+    this.ddlDisableObj.widget.setModel({selectedItemIndex: 0});
+    this.ddlEnableObj.widget.setModel({selectedItemIndex: 0});
   }
   onShowHide(event) {
     let args = event.detail;
     if (args.isChecked) {
-      this.toolbar1.hide();
+      this.toolbarObj.widget.hide();
     } else {
-      this.toolbar1.show();
+      this.toolbarObj.widget.show();
     }
   }
 }

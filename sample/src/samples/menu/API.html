@@ -1,6 +1,6 @@
 <template>
     <div>
-        <ul id="JobSearch" ej-menu="" e-on-create.trigger="create()">
+        <ul id="JobSearch" ej-menu="" ej-menu.ref="menuObj">
             <li id="Home"><a>Home</a></li>
             <li><a>Search Jobs</a>
                 <ul>
@@ -38,7 +38,7 @@
                 Disable Item
             </div>
             <div class="col-md-6 top-margin">
-                <select id="Disable" class="e-ddl" ej-drop-down-list="e-width.bind:width" e-on-change.trigger="disableChange($event)">
+                <select id="Disable" class="e-ddl" ej-drop-down-list="e-width.bind:width" ej-drop-down-list.ref="ddlDisableObj" e-on-change.trigger="disableChange($event)">
                     <option>Home</option>
                     <option>Search Jobs</option>
                     <option>Post Resume</option>
@@ -51,7 +51,7 @@
                 Enable Item
             </div>
             <div class="col-md-6 top-margin">
-                <select id="Enable" class="e-ddl" ej-drop-down-list="e-width.bind:width" e-on-change.trigger="enableChange($event)">
+                <select id="Enable" class="e-ddl" ej-drop-down-list="e-width.bind:width" ej-drop-down-list.ref="ddlEnableObj" e-on-change.trigger="enableChange($event)">
                     <option>Home</option>
                     <option>Search Jobs</option>
                     <option>Post Resume</option>

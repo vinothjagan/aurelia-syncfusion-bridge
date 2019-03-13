@@ -3,7 +3,7 @@
 <div class="toolbar-api-cols-sample-area">
                 <div class="toolbar-api-frame">
                     <div class="toolbar-api-control">
-                        <div id="toolbarMethods" ej-toolbar="" e-on-create.trigger="create()">
+                        <div id="toolbarMethods" ej-toolbar="" ej-toolbar.ref="toolbarObj">
                             <ul>
                                 <li id="Left" title="Left">
                                     <div class="ToolbarItems LeftAlign_tool"></div>
@@ -41,7 +41,7 @@
         <div class="row">
                         <div class="col-md-6 top-margin">Select Item By ID</div>
                         <div class="col-md-6 top-margin">
-                            <select name="selectIndex" class="e-ddl" id="optSelectId" ej-drop-down-list="e-width.bind:width;e-selected-item-index:0" e-on-change.trigger="onSelectChange($event)">
+                            <select name="selectIndex" class="e-ddl" id="optSelectId" ej-drop-down-list="e-width.bind:width;e-selected-item-index:0" ej-drop-down-list.ref="ddlSelectObj" e-on-change.trigger="onSelectChange($event)">
                                 <option value="none">None</option>
                                 <option value="Left">Left</option>
                                 <option value="Center">Center</option>
@@ -57,7 +57,7 @@
 					<div class="row">
                         <div class="col-md-6 top-margin">Deselect Item By ID</div>
                         <div class="col-md-6 top-margin">
-                            <select name="selectIndex" class="e-ddl" id="optDeselectId" ej-drop-down-list="e-width.bind:width;e-selected-item-index:0" e-on-change.trigger="onDeselectChange($event)">
+                            <select name="selectIndex" class="e-ddl" id="optDeselectId" ej-drop-down-list="e-width.bind:width;e-selected-item-index:0" ej-drop-down-list.ref="ddlDeSelectObj" e-on-change.trigger="onDeselectChange($event)">
                                 <option value="none">None</option>
                                 <option value="Left">Left</option>
                                 <option value="Center">Center</option>
@@ -73,7 +73,7 @@
                     <div class="row">
                         <div class="col-md-6 top-margin">Disable Item By ID</div>
                         <div class="col-md-6 top-margin">
-                            <select name="selectIndex" class="e-ddl" id="optDisableId" ej-drop-down-list="e-width.bind:width;e-selected-item-index:0" e-on-change.trigger="onDisableChange($event)">
+                            <select name="selectIndex" class="e-ddl" id="optDisableId" ej-drop-down-list="e-width.bind:width;e-selected-item-index:0" ej-drop-down-list.ref="ddlDisableObj" e-on-change.trigger="onDisableChange($event)">
                                 <option value="none">None</option>
                                 <option value="Left">Left</option>
                                 <option value="Center">Center</option>
@@ -89,7 +89,7 @@
 					<div class="row">
                         <div class="col-md-6 top-margin">Enable Item By ID</div>
                         <div class="col-md-6 top-margin">
-                            <select name="selectIndex" class="e-ddl" id="optEnableId" ej-drop-down-list="e-width.bind:width;e-selected-item-index:0" e-on-change.trigger="onEnableChange($event)">
+                            <select name="selectIndex" class="e-ddl" id="optEnableId" ej-drop-down-list="e-width.bind:width;e-selected-item-index:0" ej-drop-down-list.ref="ddlEnableObj" e-on-change.trigger="onEnableChange($event)">
                                 <option value="none">None</option>
                                 <option value="Left">Left</option>
                                 <option value="Center">Center</option>

@@ -12,11 +12,11 @@ export class ApiProgressBar {
 
   changeState(event) {
     let args = event.detail;
-    if (args.isChecked) this.progressBar.disable();
-    else this.progressBar.enable();
+    if (args.isChecked) this.progressObj.widget.disable();
+    else this.progressObj.widget.enable();
   }
 
   onGetPercentage() {
-    alert('Progress percentage : ' + this.progressBar.getPercentage()); // eslint-disable-line no-alert
+    alert('Progress percentage : ' + this.progressObj.widget.getPercentage()); // eslint-disable-line no-alert
   }
 }

@@ -6,9 +6,6 @@ export class AjaxContentToolTip {
       stem: {horizontal: 'left', vertical: 'top'}
     };
   }
-  create() {
-    this.target = $('.ajax-content-frame').data('ejTooltip');
-  }
   onOpen(event) {
     let proxy = event.detail;
     let content;
@@ -32,7 +29,7 @@ export class AjaxContentToolTip {
         $('.ajax-content-frame').data('ejTooltip').setModel({ content: content });
       }
     });
-    this.target.show(event.detail.event.target);
+    this.tooltipObj.widget.show(event.detail.event.target);
     event.detail.cancel = true;
   }
 }

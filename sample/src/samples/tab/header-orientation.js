@@ -5,6 +5,6 @@ export class HeaderOrientationTab {
 
   onTabDirectionChange(event) {
     let args = event.detail;
-    $('#directionTab').ejTab('setModel', { headerPosition: args.value });
+    this.tabObj.widget.setModel({headerPosition: args.value});
   }
 }

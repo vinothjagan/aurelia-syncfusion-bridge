@@ -1,6 +1,6 @@
 <template>
     <div style="margin-left:420px">
-        <input id="apiRating" type="text" class="rating" ej-rating="e-value.bind:ratingValue" e-on-create.trigger="create()" />
+        <input id="apiRating" type="text" class="rating" ej-rating="e-value.bind:ratingValue" ej-rating.ref="ratingObj" />
     </div>
     <div id="property-window" class="box wide">
         <h4>Properties</h4>
@@ -9,7 +9,7 @@
                             Set Value
                         </div>
                         <div class="col-md-6 top-margin">
-                            <select name="ddlSetValue" id="ddlRating" class="e-ddl" ej-drop-down-list="e-width.bind:width;e-watermark-text:Select;e-selected-index:0" e-on-create.trigger="dropdownCreate()" e-on-change.trigger="setRatingValue($event)">
+                            <select name="ddlSetValue" id="ddlRating" class="e-ddl" ej-drop-down-list="e-width.bind:width;e-watermark-text:Select;e-selected-index:0" ej-drop-down-list.ref="ddlObj" e-on-change.trigger="setRatingValue($event)">
                                 <option value="0">0</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>

@@ -14,24 +14,22 @@ export class APICombobox {
 	}
  
 	onAutofill(event) {
-		let listObj = $('#bookSelect').ejComboBox("instance");
-		if (listObj.model) {
+		if (this.listObj.widget.model) {
 		  if (event.detail.isChecked)
-			  listObj.option({ autofill: true});
+			  this.listObj.widget.option({ autofill: true});
 		  else
-			  listObj.option({ autofill: false });
+			  this.listObj.widget.option({ autofill: false });
 		}
 	}
 
 	onSorting(event) {
-		let listObj = $('#bookSelect').ejComboBox("instance");
-		if (listObj.model) {
+		if (this.listObj.widget.model) {
 			if (event.detail.isChecked){
-			  listObj.option({sortOrder: 'Descending'});
+			  this.listObj.widget.option({sortOrder: 'Descending'});
 			}
 			else
 			{
-			  listObj.option({sortOrder: 'Ascending'});
+			  this.listObj.widget.option({sortOrder: 'Ascending'});
 			}
 		}
 	}

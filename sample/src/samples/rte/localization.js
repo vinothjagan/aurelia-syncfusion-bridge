@@ -288,6 +288,6 @@ export class LocalizationRTE {
     };
   }
   onChange(event) {
-    $('#rteSample').ejRTE('model.locale', event.detail.value);
+    this.rteObj.widget.setModel({locale: event.detail.value})
   }
 }

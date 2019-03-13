@@ -12,37 +12,34 @@ export class APIDropDownList {
     this.fields = {text: 'category', value: 'category'};
     this.width = '107px';
   }
-  create() {
-    this.target = $('#bookSelect').data('ejDropDownList');
-  }
   onActiveIndexChange(event) {
     let args = event.detail;
-    this.target.option({ selectedIndex: parseInt(args.selectedValue, 10) });
-    $('#optValueChange').ejDropDownList('clearText');
-    $('#optTextChange').ejDropDownList('clearText');
+    this.ddlObj.widget.option({ selectedIndex: parseInt(args.selectedValue, 10) });
+    this.ddlValueObj.widget.clearText();
+    this.ddlTextObj.widget.clearText();
   }
   onActiveValueChange(event) {
     let args = event.detail;
-    this.target.selectItemByValue(args.selectedValue);
-    $('#optIndexChange').ejDropDownList('clearText');
-    $('#optTextChange').ejDropDownList('clearText');
+    this.ddlObj.widget.selectItemByValue(args.selectedValue);
+    this.ddlIndexObj.widget.clearText();
+    this.ddlTextObj.widget.clearText();
   }
   onActiveTextChange(event) {
     let args = event.detail;
-    this.target.selectItemByText(args.selectedValue);
-    $('#optIndexChange').ejDropDownList('clearText');
-    $('#optValueChange').ejDropDownList('clearText');
+    this.ddlObj.widget.selectItemByText(args.selectedValue);
+    this.ddlIndexObj.widget.clearText();
+    this.ddlValueObj.widget.clearText();
   }
   onEnableDisable(event) {
-    (event.detail.isChecked) ?  this.target.disable() : this.target.enable();
+    (event.detail.isChecked) ?  this.ddlObj.widget.disable() : this.ddlObj.widget.enable();
   }
   filterChange(event) {
-    (event.detail.isChecked) ? this.target.option({'enableFilterSearch': true}) : this.target.option({'enableFilterSearch': false});
+    (event.detail.isChecked) ? this.ddlObj.widget.option({'enableFilterSearch': true}) : this.ddlObj.widget.option({'enableFilterSearch': false});
   }
   casesensitiveChange(event) {
-    (event.detail.isChecked) ? this.target.option({'caseSensitiveSearch': true}) : this.target.option({'caseSensitiveSearch': false});
+    (event.detail.isChecked) ? this.ddlObj.widget.option({'caseSensitiveSearch': true}) : this.ddlObj.widget.option({'caseSensitiveSearch': false});
   }
   valueText(event) {
-    alert('Selected Item is ' + this.target.getValue()); // eslint-disable-line no-alert
+    alert('Selected Item is ' + this.ddlObj.widget.getValue()); // eslint-disable-line no-alert
   }
 }

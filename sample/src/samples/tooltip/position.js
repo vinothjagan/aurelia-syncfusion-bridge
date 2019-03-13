@@ -12,9 +12,6 @@ export class PositionTooltip {
       }
     };
   }
-  onCreate() {
-    this.target = $('#treeView').data('ejTooltip');
-  }
 
   onOpen(event) {
     this.contentFormation(event);
@@ -42,14 +39,14 @@ export class PositionTooltip {
         template = '<div class="main"> <img class="logo" src="images/tooltip/book.png" /> <div class="des"> <div class="artists"> Category&nbsp;:&nbsp; Mystery </div><div class="song"> Please choose your books</div></div> </div>';
       }
     }
-    this.target.setModel({ content: template });
+    this.tooltipObj.widget.setModel({ content: template });
   }
 
   associateChange(event) {
     let args = event.detail;
     this.associate = args.value;
     if (this.associate === 'window') {
-      $('#targetHorizontal').ejDropDownList({ value: 'right-bottom' });
+      this.ddlObj.widget.setModel({value: 'right-bottom'})
     }
     this.change();
   }
@@ -71,16 +68,14 @@ export class PositionTooltip {
   }
 
   change() {
-    this.tHorizontal = $('#targetHorizontal').ejDropDownList('getSelectedValue');
+    this.tHorizontal = this.ddlObj.widget.getSelectedValue();
     this.tVertical = this.tHorizontal.substr(this.tHorizontal.indexOf('-') + 1);
     this.tHorizontal = this.tHorizontal.substr(0, this.tHorizontal.indexOf('-'));
-    this.sHorizontal = $('#stemHorizontal').ejDropDownList('getSelectedValue');
+    this.sHorizontal = this.ddlSteamObj.widget.getSelectedValue();
     this.sVertical = this.sHorizontal.substr(this.sHorizontal.indexOf('-') + 1);
     this.sHorizontal = this.sHorizontal.substr(0, this.sHorizontal.indexOf('-'));
-    this.xNum = $('#xAxis').data('ejNumericTextbox');
-    this.yNum = $('#yAxis').data('ejNumericTextbox');
-    let xAxis = parseInt($('#xAxis').ejNumericTextbox('getValue'), 10);
-    let yAxis = parseInt($('#yAxis').ejNumericTextbox('getValue'), 10);
+    let xAxis = parseInt(this.xNumObj.widget.getValue(), 10);
+    let yAxis = parseInt(this.yNumObj.widget.getValue(), 10);
     if (this.associate === 'axis') {
       $('#axisValue').show();
       $('.targetValue').hide();
@@ -114,7 +109,7 @@ export class PositionTooltip {
     };
 
 
-    this.target.option('position', position);
-    this.target.option('associate', this.associate);
+    this.tooltipObj.widget.option('position', position);
+    this.tooltipObj.widget.option('associate', this.associate);
   }
 }

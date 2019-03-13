@@ -6,56 +6,53 @@ export class APIRating {
   create() {
     this.ratingObj = $('#apiRating').data('ejRating');
   }
-  dropdownCreate() {
-    this.ddlObj = $('#ddlRating').data('ejDropDownList');
-  }
   setRatingValue(event) {
     let args = event.detail;
-    if (this.ratingObj.model) {
-      this.ratingObj.setValue(args.value);
+    if (this.ratingObj.widget.model) {
+      this.ratingObj.widget.setValue(args.value);
     }
   }
   getValue(event) {
-    if (this.ratingObj.model) {
-      let val = this.ratingObj.getValue();
+    if (this.ratingObj.widget.model) {
+      let val = this.ratingObj.widget.getValue();
       alert('Current Value : ' + val); // eslint-disable-line no-alert
     }
   }
   reset(event) {
-    if (this.ratingObj.model) {
-      this.ratingObj.reset();
+    if (this.ratingObj.widget.model) {
+      this.ratingObj.widget.reset();
     }
-    this.ddlObj.option('selectedIndex', 0);
+    this.ddlObj.widget.option('selectedIndex', 0);
   }
   showHideReset(event) {
     let args = event.detail;
-    if (this.ratingObj.model) {
+    if (this.ratingObj.widget.model) {
       if (args.isChecked) {
-        this.ratingObj.option({ allowReset: false });
+        this.ratingObj.widget.option({ allowReset: false });
       } else {
-        this.ratingObj.option({ allowReset: true });
+        this.ratingObj.widget.option({ allowReset: true });
       }
     }
   }
   showHideRating(event) {
     let args = event.detail;
-    if (this.ratingObj.model) {
+    if (this.ratingObj.widget.model) {
       if (args.isChecked) {
-        this.ratingObj.hide();
+        this.ratingObj.widget.hide();
       } else {
-        this.ratingObj.show();
+        this.ratingObj.widget.show();
       }
     }
   }
   destroyRestore(event) {
     let args = event.detail;
     if (args.isChecked) {
-      this.ratingObj.destroy();
+      this.ratingObj.widget.destroy();
       this.stateChange('disable');
     } else {
       $('#apiRating').ejRating();
-      this.ratingObj = $('#apiRating').data('ejRating');
-      this.ddlObj.option('value', '');
+      this.ratingObj.widget = $('#apiRating').data('ejRating');
+      this.ddlObj.widget.option('value', '');
       this.stateChange('enable');
     }
   }

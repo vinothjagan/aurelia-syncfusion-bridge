@@ -5,23 +5,19 @@ export class FileInputUploadbox {
     this.multipleFiles = true;
   }
 
-  create() {
-    this.uploadobject = $('#UploadInput').data('ejUploadbox');
-  }
-
   error(event) {
     alert(event.detail.error); // eslint-disable-line no-alert
   }
 
   allowFileType(event) {
-    this.uploadobject.option('extensionsAllow', $('#fileallow').val());
-    this.uploadobject.option('extensionsDeny', '');
+    this.uploadObj.widget.option('extensionsAllow', $('#fileallow').val());
+    this.uploadObj.widget.option('extensionsDeny', '');
     $('#filedeny').val('');
   }
 
   denyFileType(event) {
-    this.uploadobject.option('extensionsAllow', '');
-    this.uploadobject.option('extensionsDeny', $('#filedeny').val());
+    this.uploadObj.widget.option('extensionsAllow', '');
+    this.uploadObj.widget.option('extensionsDeny', $('#filedeny').val());
     $('#fileallow').val('');
   }
 }

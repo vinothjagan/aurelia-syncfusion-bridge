@@ -11,15 +11,12 @@ export class EjDDLCheckBox {
     this.checkBox = true;
     this.watermarkText = 'Select your skill';
   }
-  create() {
-    this.target = $('#skillsets').data('ejDropDownList');
-  }
   checkUncheckAll(event) {
     let args = event.detail;
     if (args.isChecked) {
-      this.target.checkAll();
+      this.ddlObj.widget.checkAll();
     } else {
-      this.target.unCheckAll();
+      this.ddlObj.widget.unCheckAll();
     }
   }
 }

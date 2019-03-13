@@ -3,8 +3,8 @@
     <div>
         <div class="posupload">Select a file to upload </div>
         <div class="uploadbox-file-input-control">
-            <ej-uploadbox id="UploadInput" e-save-url.bind="save" e-remove-url.bind="remove" e-multiple-files-selection.bind="multipleFiles"
-            e-on-create.trigger="create()" e-on-error.trigger="error($event)">
+            <ej-uploadbox id="UploadInput" ej-uploadbox.ref="uploadObj" e-save-url.bind="save" e-remove-url.bind="remove" e-multiple-files-selection.bind="multipleFiles"
+            e-on-error.trigger="error($event)">
             </ej-uploadbox>
         </div>
     </div>
