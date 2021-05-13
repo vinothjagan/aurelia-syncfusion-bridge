@@ -584,7 +584,7 @@
         list-style-type: none;
     }
 
-    input.e-input, input[type="text"].e-input, .e-input.e-placeholder {
+     input.e-input,  input[type="text"].e-input,.e-input.e-placeholder,  .e-input.e-placeholder {
         border: medium none;
         height: 100%;
         width: 100%;
@@ -917,23 +917,23 @@
         opacity: 1 !important;
     }
 
-    .e-input::-webkit-input-placeholder, .e-textbox::-webkit-input-placeholder, .e-textarea::-webkit-input-placeholder {
+      .e-input::-webkit-input-placeholder,   .e-textbox::-webkit-input-placeholder,   .e-textarea::-webkit-input-placeholder {
         .watermerk-style();
     }
 
-    .e-input::-moz-placeholder, .e-textbox::-moz-placeholder, .e-textarea::-moz-placeholder {
+      .e-input::-moz-placeholder,   .e-textbox::-moz-placeholder,   .e-textarea::-moz-placeholder {
         .watermerk-style();
     }
 
-    .e-input:-moz-placeholder, .e-textbox:-moz-placeholder, .e-textarea:-moz-placeholder {
+      .e-input:-moz-placeholder,   .e-textbox:-moz-placeholder,  .e-textarea:-moz-placeholder {
         .watermerk-style();
     }
 
-    .e-input:-ms-input-placeholder, .e-textbox:-ms-input-placeholder, .e-textarea:-ms-input-placeholder {
+      .e-input:-ms-input-placeholder,   .e-textbox:-ms-input-placeholder,   .e-textarea:-ms-input-placeholder {
         .watermerk-style();
     }
 
-    .e-input.e-watermark {
+     .e-input.e-watermark {
         .watermerk-style();
     }
 
@@ -975,11 +975,11 @@
         }
     }
 
-    .e-textbox {
+    .e-textbox:not(.e-control) {
         height: @input-height;
     }
 
-    .e-textbox, .e-textarea {
+    .e-textbox:not(.e-control), .e-textarea:not(.e-control) {
         line-height: 1.908em;
         outline: medium none;
         border: 1px solid;
@@ -6303,6 +6303,11 @@
         position: absolute;
         right: 0;
         width: 16px;
+    }
+
+     .e-dialog .e-icon {
+        height: 20px;
+        width: 20px;
     }
 
     .e-dialog > .e-icon.e-resizable:before {
@@ -43685,6 +43690,8 @@ slideRight Animate
         }
     }
 }
+
+.mixin(@widget) when (@widget = mediaplayer), (@widget = none) {
 /*------------------------------------- Media Player-------------------------------------------*/
 .e-media-player .e-media-stop:before {
     content: "\e126";
@@ -45315,7 +45322,7 @@ slideRight Animate
             box-sizing: content-box;
 }
 
-
+}
 
 
 /*------------------------------------- End Media Player-------------------------------------------*/

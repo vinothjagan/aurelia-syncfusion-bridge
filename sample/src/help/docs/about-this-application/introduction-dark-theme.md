@@ -3,7 +3,7 @@
 ### 1. Introduction
 <br>
 <br>
-This application is an Aurelia application developers friendly **catalog** of all **[Syncfusion Essential Studio for JavaScript Widgets](http://js.syncfusion.com/demos/web)**, now available as Aurelia components. It is the Aurelia-UI-Toolkits **[Aurelia-Syncfusion bridge](https://github.com/aurelia-ui-toolkits/aurelia-syncfusion-bridge)** plugin that brings the Syncfusion Essential Studio for JavaScript widgets into Aurelia world and this **catalog** application is so far the most complex application using this interface.
+This application is an Aurelia application developers friendly **catalog** of all **[Syncfusion Essential Studio for JavaScript Widgets](http://js.syncfusion.com/demos/jquery)**, now available as Aurelia components. It is the Aurelia-UI-Toolkits **[Aurelia-Syncfusion bridge](https://github.com/aurelia-ui-toolkits/aurelia-syncfusion-bridge)** plugin that brings the Syncfusion Essential Studio for JavaScript widgets into Aurelia world and this **catalog** application is so far the most complex application using this interface.
 <br>
 <br>
 

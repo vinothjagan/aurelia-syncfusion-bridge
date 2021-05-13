@@ -500,8 +500,8 @@
     }
 
     .e-menu, input.e-input, input[type="text"].e-input, .e-widget.e-mask, .e-ul,  .e-btn .e-btn-span, .e-widget  .e-tbtn.e-chkbx-hidden,  .e-widget.e-datepicker table,  .e-widget.e-datepicker table th,  .e-widget.e-datepicker table td,
-    .e-menu.e-horizontal > .e-list, .e-menu.e-vertical > li.e-separator, .e-menu.e-context > li.e-separator, .e-js.e-tab.e-js > .e-header, .e-js.e-uploadbox .e-action-perform,
-    .e-js.e-uploadbox .e-uploaddialog.e-dialog.e-dialog-content, .e-js.e-tagcloud .e-load, .e-scale, .e-select, .e-input.e-placeholder {
+    .e-menu.e-horizontal > .e-list, .e-menu.e-vertical > li.e-separator, .e-menu.e-context > li.e-separator, .e-js.e-tab.e-js > .e-header, .e-widget.e-uploadbox .e-action-perform,
+    .e-widget.e-uploadbox .e-uploaddialog.e-dialog.e-dialog-content, .e-js.e-tagcloud .e-load, .e-scale, .e-select, .e-input.e-placeholder {
         margin: 0;
         padding: 0;
         outline: 0 none;
@@ -511,7 +511,7 @@
     .e-btn,  .e-btn .e-btn-span,  .e-widget.e-datepicker .e-header .e-next,  .e-widget.e-datepicker .e-header .e-prev,  .e-widget.e-datepicker .e-header .e-text, .e-menu > .e-list > a > img, .e-menu > .e-list > span > img,
     .e-menu > .e-list > a > div, .e-menu > .e-list > span > div, .e-menu > .e-list > a > span, .e-menu > .e-list > span > span, .e-menu .e-list > a span.e-icon, .e-menu .e-list > span span.e-icon, .e-menu.e-horizontal > .e-list,
     .e-menu.e-vertical, .e-menu.e-context,  .e-widget.e-chkbox-wrap,  .e-widget.e-radiobtn-wrap,  .e-widget.e-chkbox-wrap div,  .e-widget.e-chkbox-wrap .e-text,  .e-widget.e-radiobtn-wrap .e-text,
-    .e-js.e-tab.e-js > .e-header, .e-js.e-tab .e-header li, .e-js.e-tab .e-header li a, .e-widget.e-dialog .e-dialog-icon, .e-widget.e-dialog .e-icon, .e-js.e-uploadbox .e-selectpart, .e-js.e-uploadbox .e-file-list,
+    .e-js.e-tab.e-js > .e-header, .e-js.e-tab .e-header li, .e-js.e-tab .e-header li a, .e-widget.e-dialog .e-dialog-icon, .e-widget.e-dialog .e-icon, .e-js.e-uploadbox .e-selectpart, .e-widget.e-uploadbox .e-file-list,
     .e-js.e-treeview .e-text, .e-js.e-tagcloud .e-cloud, .e-js.e-tagcloud .e-list, .e-js.e-tagcloud .e-cloud .e-tagitems, .e-h-scale .e-tick, .e-grid .e-groupheadercell,
     .e-grid .e-groupheadercell:hover, .e-js.e-pager, .e-js.e-pager .e-disableditem, .e-grid div.e-parentmsgbar, .e-grid .e-toolbaricons,  .e-js.e-pager .e-pagercontainer {
         display: inline-block;
@@ -521,7 +521,7 @@
         list-style-type: none;
     }
 
-    input.e-input, input[type="text"].e-input, .e-input.e-placeholder {
+    .e-widget input.e-input, .e-widget input[type="text"].e-input,.e-widget.e-input.e-placeholder, .e-widget .e-input.e-placeholder {
         border: medium none;
         height: 100%;
         width: 100%;
@@ -854,23 +854,23 @@
         opacity: 1 !important;
     }
 
-    .e-input::-webkit-input-placeholder, .e-textbox::-webkit-input-placeholder, .e-textarea::-webkit-input-placeholder {
+     .e-widget .e-input::-webkit-input-placeholder,  .e-widget .e-textbox::-webkit-input-placeholder,  .e-widget .e-textarea::-webkit-input-placeholder {
         .watermerk-style();
     }
 
-    .e-input::-moz-placeholder, .e-textbox::-moz-placeholder, .e-textarea::-moz-placeholder {
+     .e-widget .e-input::-moz-placeholder,  .e-widget .e-textbox::-moz-placeholder,  .e-widget .e-textarea::-moz-placeholder {
         .watermerk-style();
     }
 
-    .e-input:-moz-placeholder, .e-textbox:-moz-placeholder, .e-textarea:-moz-placeholder {
+     .e-widget .e-input:-moz-placeholder,  .e-widget .e-textbox:-moz-placeholder, .e-widget .e-textarea:-moz-placeholder {
         .watermerk-style();
     }
 
-    .e-input:-ms-input-placeholder, .e-textbox:-ms-input-placeholder, .e-textarea:-ms-input-placeholder {
+     .e-widget .e-input:-ms-input-placeholder,  .e-widget .e-textbox:-ms-input-placeholder,  .e-widget .e-textarea:-ms-input-placeholder {
         .watermerk-style();
     }
 
-    .e-input.e-watermark {
+    .e-widget .e-input.e-watermark {
         .watermerk-style();
     }
 
@@ -912,11 +912,11 @@
         }
     }
 
-    .e-textbox {
+    .e-textbox:not(.e-control) {
         height: @input-height;
     }
 
-    .e-textbox, .e-textarea {
+    .e-textbox:not(.e-control), .e-textarea:not(.e-control) {
         line-height: 1.908em;
         outline: medium none;
         border: 1px solid;
@@ -5511,7 +5511,7 @@
             top: 3px;
         }
     }
-     .e-widget.e-excelfilter .e-menu.e-vertical .e-list .e-chkbox-small > span {
+     .e-widget.e-excelfilter.e-js .e-menu.e-vertical .e-list .e-chkbox-small > span {
         & when (@skin= "material") {
             /*material*/
             top: 4px;
@@ -6242,6 +6242,11 @@
         width: 16px;
     }
 
+    .e-widget .e-dialog .e-icon {
+        height: 20px;
+        width: 20px;
+    }
+
     .e-widget.e-dialog > .e-icon.e-resizable:before {
         position: absolute;
         top: 0;
@@ -6518,7 +6523,7 @@
         .border-radius(@border-radius);
     }
 
-    .e-js.e-uploadbox .e-action-container {
+    .e-widget.e-uploadbox .e-action-container {
         width: 233px;
 
         & when (@skin="material") {
@@ -6565,11 +6570,11 @@
         filter: alpha(opacity=0);
     }
 
-    .e-js.e-uploadbox .e-ul {
+    .e-widget.e-uploadbox .e-ul {
         width: 100%;
     }
 
-    .e-js.e-uploadbox .e-file-list {
+    .e-widget.e-uploadbox .e-file-list {
         & when (@skin= "material") {
             /*material*/
             height: 64px;
@@ -6587,7 +6592,7 @@
         position: relative;
     }
 
-    .e-js.e-uploadbox .e-file-list .file-status {
+    .e-widget.e-uploadbox .e-file-list .file-status {
         float: left;
         min-width: 77px;
         padding-right: 0;
@@ -6595,11 +6600,11 @@
         text-align: right;
     }
 
-    .e-js.e-uploadbox .e-file-list .e-file-view {
+    .e-widget.e-uploadbox .e-file-list .e-file-view {
         height: 85%;
     }
 
-    .e-js.e-uploadbox .e-file-list .e-file-percentage {
+    .e-widget.e-uploadbox .e-file-list .e-file-percentage {
         float: left;
         padding-left: 0;
         padding-right: 0;
@@ -6608,21 +6613,21 @@
         font-size: 10px;
     }
 
-    .e-js.e-uploadbox .e-file-progress {
+    .e-widget.e-uploadbox .e-file-progress {
         float: left;
         width: 200px;
         position: relative;
         overflow: hidden;
     }
 
-    .e-js.e-uploadbox .e-file-name {
+    .e-widget.e-uploadbox .e-file-name {
         display: block;
         height: 25px;
         text-align: left;
         width: 100%;
     }
 
-    .e-js.e-uploadbox .e-file-progress-bar {
+    .e-widget.e-uploadbox .e-file-progress-bar {
         & when (@skin= "material") {
             /*material*/
             height: 5px;
@@ -6648,7 +6653,7 @@
         }
     }
 
-    .e-js.e-uploadbox .e-ul > li {
+    .e-widget.e-uploadbox .e-ul > li {
         width: 100%;
 
         & when (@skin= "material") {
@@ -6662,12 +6667,12 @@
         }
     }
 
-    .e-js.e-uploadbox .e-ul li .e-file-list {
+    .e-widget.e-uploadbox .e-ul li .e-file-list {
         width: 100%;
         clear: both;
     }
 
-    .e-js.e-uploadbox .e-file-progress-status {
+    .e-widget.e-uploadbox .e-file-progress-status {
         & when (@skin= "material") {
             /*material*/
             height: 5px;
@@ -6688,7 +6693,7 @@
         }
     }
 
-    .e-js.e-uploadbox .e-file-list .e-file-size {
+    .e-widget.e-uploadbox .e-file-list .e-file-size {
         float: left;
         min-width: 100px;
         padding-left: 0;
@@ -6696,16 +6701,16 @@
         width: 100px;
     }
 
-    .e-js.e-uploadbox .e-file-name .e-file-name-txt, .e-uploadbox .e-drag-wrapper .e-file-name .e-file-name-txt, .e-uploadbox .e-file-head.e-head-name, .e-uploadbox .e-drag-wrapper .e-file-head.e-head-name {
+    .e-widget.e-uploadbox .e-file-name .e-file-name-txt, .e-uploadbox .e-drag-wrapper .e-file-name .e-file-name-txt, .e-uploadbox .e-file-head.e-head-name, .e-uploadbox .e-drag-wrapper .e-file-head.e-head-name {
         text-indent: 16px;
     }
 
-    .e-js.e-uploadbox .e-file-size .e-file-name-txt {
+    .e-widget.e-uploadbox .e-file-size .e-file-name-txt {
         left: -11px;
         text-align: left;
     }
 
-    .e-js.e-uploadbox .e-file-name-txt {
+    .e-widget.e-uploadbox .e-file-name-txt {
         position: relative;
         top: 13px;
         font-weight: @content-font-weight;
@@ -6716,7 +6721,7 @@
         text-indent: 20px;
     }
 
-    .e-js.e-uploadbox .e-file-upload {
+    .e-widget.e-uploadbox .e-file-upload {
         & when (@skin= "material") {
             /*material*/
             padding: 0;
@@ -6737,7 +6742,7 @@
         }
     }
 
-    .e-js.e-uploadbox .e-uploadbtn, .e-uploadbox .e-uploadclosebtn {
+    .e-widget.e-uploadbox .e-uploadbtn, .e-uploadbox .e-uploadclosebtn {
         font-weight: @content-font-weight;
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -6765,23 +6770,23 @@
         margin: 0;
     }
 
-    .e-js.e-uploadbox.e-rtl .e-icon.e-file-cancel:before,
-    .e-js.e-uploadbox.e-rtl .e-icon.e-delete:before,
-    .e-js.e-uploadbox.e-rtl .e-icon.e-reload:before {
+    .e-widget.e-uploadbox.e-rtl .e-icon.e-file-cancel:before,
+    .e-widget.e-uploadbox.e-rtl .e-icon.e-delete:before,
+    .e-widget.e-uploadbox.e-rtl .e-icon.e-reload:before {
         top: 0px;
         left: 2px;
     }
 
-    .e-js.e-uploadbox.e-rtl .e-file-name-txt, .e-js.e-mobile-upload.e-uploadbox.e-dialog.e-rtl .e-file-name-txt {
+    .e-widget.e-uploadbox.e-rtl .e-file-name-txt, .e-widget.e-mobile-upload.e-uploadbox.e-dialog.e-rtl .e-file-name-txt {
         text-align: right;
         left: 0px;
     }
 
-    .e-js.e-uploadbox.e-rtl .e-file-view, .e-js.e-uploadbox.e-rtl .e-file-head, .e-js.e-uploadbox.e-rtl .e-action-perform, .e-js.e-uploadbox.e-rtl .e-icon.e-file-cancel {
+    .e-widget.e-uploadbox.e-rtl .e-file-view, .e-widget.e-uploadbox.e-rtl .e-file-head, .e-widget.e-uploadbox.e-rtl .e-action-perform, .e-widget.e-uploadbox.e-rtl .e-icon.e-file-cancel {
         float: right;
     }
 
-    .e-js.e-uploadbox.e-rtl .e-action-perform {
+    .e-widget.e-uploadbox.e-rtl .e-action-perform {
         margin-left: 0px;
 
         & when (@skin= "material") {
@@ -6795,32 +6800,32 @@
         }
     }
 
-    .e-js.e-uploadbox.e-rtl .e-file-progress-bar {
+    .e-widget.e-uploadbox.e-rtl .e-file-progress-bar {
         & when (@skin= "material") {
             /*material*/
             margin-right: 30px;
         }
     }
 
-    .e-js.e-uploadbox.e-rtl .e-file-size .e-file-name-txt {
+    .e-widget.e-uploadbox.e-rtl .e-file-size .e-file-name-txt {
         left: 10px;
         text-align: right;
     }
 
-    .e-js.e-uploadbox.e-rtl .e-file-list {
+    .e-widget.e-uploadbox.e-rtl .e-file-list {
         text-align: right;
     }
 
-    .e-js.e-uploadbox.e-rtl .e-upload-file .e-icon {
+    .e-widget.e-uploadbox.e-rtl .e-upload-file .e-icon {
         margin-right: 35%;
         left: 0;
     }
 
-    .e-js.e-uploadbox .e-file-progress {
+    .e-widget.e-uploadbox .e-file-progress {
         border: @border-size @border-type transparent;
     }
 
-    .e-js.e-uploadbox .e-upload-progress {
+    .e-widget.e-uploadbox .e-upload-progress {
         border: @border-size @border-type transparent;
     }
 
@@ -6840,7 +6845,7 @@
             width: 30px;
         }
     }
-    .e-js.e-uploaddialog.e-dialog .e-ul .e-action-perform .e-icon {
+    .e-widget.e-uploaddialog.e-dialog .e-ul .e-action-perform .e-icon {
         float: left;
         margin-top: 5px;
         position: relative;
@@ -6856,7 +6861,7 @@
             width: 30px;
         }
     }
-    .e-js.e-uploadbox .e-file-list .e-checkmark, .e-js.e-uploadbox .e-file-list .e-file-percentage-failed {
+    .e-widget.e-uploadbox .e-file-list .e-checkmark, .e-widget.e-uploadbox .e-file-list .e-file-percentage-failed {
         margin-top: -5px;
         left: 43%;
         border-radius: 60px 60px 60px 60px;
@@ -6876,7 +6881,7 @@
         }
     }
 
-    .e-js.e-uploadbox .e-action-perform {
+    .e-widget.e-uploadbox .e-action-perform {
         border-radius: 4px 4px 4px 4px;
 
         & when (@skin= "material") {
@@ -6916,53 +6921,53 @@
         }
     }
 
-    .e-js.e-uploadbox.e-rtl .e-dialog .e-ul .e-action-perform .e-icon:before {
+    .e-widget.e-uploadbox.e-rtl .e-dialog .e-ul .e-action-perform .e-icon:before {
         & when (@skin= "material") {
             /*material*/
             margin-left: 3px;
         }
     }
 
-    .e-js.e-uploadbox .e-icon.e-checkmark:before {
+    .e-widget.e-uploadbox .e-icon.e-checkmark:before {
         top: 4px;
         position: relative;
         left: -3px;
     }
 
-    .e-js.e-uploadbox .e-head-name, .e-uploadbox .e-head-status {
+    .e-widget.e-uploadbox .e-head-name, .e-uploadbox .e-head-status {
         width: 200px;
     }
 
-    .e-js.e-uploadbox .e-file-list .e-image-wrapper {
+    .e-widget.e-uploadbox .e-file-list .e-image-wrapper {
         height: 85%;
         padding: 0 5px;
         float: left;
     }
 
-    .e-js.e-uploadbox .e-file-list .e-image-wrapper {
+    .e-widget.e-uploadbox .e-file-list .e-image-wrapper {
         text-align: left;
         width: 30px;
         margin-top: 1%;
         margin-left: 1%;
     }
 
-    .e-js.e-uploadbox .e-file-list .e-image-wrapper .e-fileformat-image {
+    .e-widget.e-uploadbox .e-file-list .e-image-wrapper .e-fileformat-image {
         height: 40px;
         width: 40px;
         display: block;
     }
 
-    .e-js.e-uploadbox .e-file-progress {
+    .e-widget.e-uploadbox .e-file-progress {
         width: 200px;
     }
 
-    .e-js.e-uploadbox.e-rtl .e-icon.e-file-percentage-failed:before, .e-js.e-uploadbox.e-rtl .e-icon.e-checkmark:before {
+    .e-widget.e-uploadbox.e-rtl .e-icon.e-file-percentage-failed:before, .e-widget.e-uploadbox.e-rtl .e-icon.e-checkmark:before {
         left: 3px;
     }
 
-    .e-js.e-uploadbox .e-icon.e-file-cancel:before,
-    .e-js.e-uploadbox .e-icon.e-delete:before,
-    .e-js.e-uploadbox .e-icon.e-reload:before {
+    .e-widget.e-uploadbox .e-icon.e-file-cancel:before,
+    .e-widget.e-uploadbox .e-icon.e-delete:before,
+    .e-widget.e-uploadbox .e-icon.e-reload:before {
         top: 0px;
         position: relative;
 
@@ -6979,7 +6984,7 @@
         }
     }
 
-    .e-js.e-uploadbox .e-uploaddialog.e-dialog.e-dialog-content {
+    .e-widget.e-uploadbox .e-uploaddialog.e-dialog.e-dialog-content {
         position: relative;
         border: 0;
         background: none;
@@ -7037,7 +7042,7 @@
         }
     }
 
-    .e-js.e-uploadbox .e-file-head {
+    .e-widget.e-uploadbox .e-file-head {
         & when (@skin= "material") {
             /*material*/
             font-size: 13px;
@@ -7063,11 +7068,11 @@
         top: 30%;
     }
 
-    .e-js.e-uploadbox .e-head-size {
+    .e-widget.e-uploadbox .e-head-size {
         width: 100px;
     }
 
-    .e-js.e-uploadbox .e-file-head.e-head-status {
+    .e-widget.e-uploadbox .e-file-head.e-head-status {
         text-indent: 50px;
 
         & when (@skin= "material") {
@@ -7076,7 +7081,7 @@
         }
     }
 
-    .e-js.e-uploadbox .e-head-content {
+    .e-widget.e-uploadbox .e-head-content {
         & when (@skin= "material") {
             /*material*/
             height: 64px;
@@ -7098,14 +7103,14 @@
         width: 100%;
     }
 
-    .e-js.e-uploadbox.e-rtl .e-head-content {
+    .e-widget.e-uploadbox.e-rtl .e-head-content {
         & when (@skin= "material") {
             /*material*/
             padding-right: 12px;
         }
     }
 
-    .e-js.e-uploadbox.e-rtl .e-file-upload {
+    .e-widget.e-uploadbox.e-rtl .e-file-upload {
         & when (@skin= "material") {
             /*material*/
             padding-right: 12px;
@@ -7113,11 +7118,11 @@
         }
     }
 
-    .e-js.e-uploadbox .e-dialog.e-widget-content {
+    .e-widget.e-uploadbox .e-dialog.e-widget-content {
         padding: 0px;
     }
 
-    .e-js.e-uploadbox .e-dialog.e-widget-content .e-icon {
+    .e-widget.e-uploadbox .e-dialog.e-widget-content .e-icon {
         display: block;
         vertical-align: middle;
     }
@@ -7286,7 +7291,7 @@
         }
     }
 
-    .e-js.e-uploadbox .e-icon.e-checkmark:before, .e-js.e-uploadbox .e-icon.e-file-percentage-failed:before {
+    .e-widget.e-uploadbox .e-icon.e-checkmark:before, .e-widget.e-uploadbox .e-icon.e-file-percentage-failed:before {
         position: relative;
 
         & when (@skin= "material") {
@@ -11874,7 +11879,7 @@ background-image: url('../@{font-path}/icons-white.png');
     }
     .e-js.e-grid .e-dialog.e-widget .e-dialog-icon, .e-js.e-grid .e-widget .e-pagercontainer > .e-icon, .e-js.e-grid .e-widget .e-pagercontainer .e-numericitem,
     .e-js.e-grid .e-widget .e-filtericon, .e-js.e-grid .e-widget .e-filtertext, .e-js.e-grid .e-widget .e-predicate span, .e-js.e-grid .e-widget .e-value .e-chk-act, .e-js.e-grid .e-detailcell .e-groupheadercell,
-    .e-js.e-grid .e-detailcell .e-ungroupbutton, .e-js.e-grid .e-excelfilter .e-chk-act {
+    .e-js.e-grid .e-detailcell .e-ungroupbutton, .e-js.e-grid .e-excelfilter.e-js .e-chk-act {
         box-sizing: content-box;
     }
 
@@ -13545,7 +13550,7 @@ background-image: url('../@{font-path}/icons-white.png');
         color: red;
     }
 
-    .e-js.e-grid .e-excelfilter .e-ejinputtext::-ms-clear {
+    .e-js.e-grid .e-excelfilter.e-js .e-ejinputtext::-ms-clear {
         display: none;
     }
 
@@ -13899,27 +13904,27 @@ background-image: url('../@{font-path}/icons-white.png');
         margin-left: 0px;
     }
 
-    .e-js.e-grid.e-rtl .e-checkboxlist.e-scroller.e-rtl .e-content > .e-ftrchk label, .e-js.e-grid.e-rtl .e-checkboxlist.e-scroller.e-rtl .e-content > .e-ftrchk, .e-js.e-grid.e-rtl .e-excelfilter .e-checkboxlist .e-ftrchk {
+    .e-js.e-grid.e-rtl .e-checkboxlist.e-scroller.e-rtl .e-content > .e-ftrchk label, .e-js.e-grid.e-rtl .e-checkboxlist.e-scroller.e-rtl .e-content > .e-ftrchk, .e-js.e-grid.e-rtl .e-excelfilter.e-js .e-checkboxlist .e-ftrchk {
         margin-right: 10px;
     }
 
-    .e-js.e-grid.e-rtl .e-excelfilter .e-menu.e-vertical.e-rtl .e-list {
+    .e-js.e-grid.e-rtl .e-excelfilter.e-js .e-menu.e-vertical.e-rtl .e-list {
         height: 27px;
     }
 
-    .e-js.e-grid.e-rtl .e-excelfilter .e-menu.e-vertical.e-rtl .e-list.e-separator {
+    .e-js.e-grid.e-rtl .e-excelfilter.e-js .e-menu.e-vertical.e-rtl .e-list.e-separator {
         height: 1px;
     }
 
-    .e-js.e-grid.e-rtl .e-excelfilter .e-menu.e-rtl .e-list > ul li.e-separator {
+    .e-js.e-grid.e-rtl .e-excelfilter.e-js .e-menu.e-rtl .e-list > ul li.e-separator {
         margin: 2px 0px 2px 0;
     }
 
-    .e-js.e-grid.e-rtl .e-excelfilter .e-menu.e-rtl.e-vertical .e-list > ul .e-list > a {
+    .e-js.e-grid.e-rtl .e-excelfilter.e-js .e-menu.e-rtl.e-vertical .e-list > ul .e-list > a {
         padding: 0px 22px 0px 15px;
     }
 
-    .e-js.e-grid.e-rtl .e-excelfilter .e-searchbox .e-icon.e-search, .e-js.e-grid.e-rtl .e-excelfilter .e-searchbox .e-icon.e-cancel {
+    .e-js.e-grid.e-rtl .e-excelfilter.e-js .e-searchbox .e-icon.e-search, .e-js.e-grid.e-rtl .e-excelfilter.e-js .e-searchbox .e-icon.e-cancel {
         position: absolute;
         right: 215px;
     }
@@ -13929,7 +13934,7 @@ background-image: url('../@{font-path}/icons-white.png');
         right: 189px;
     }
 
-    .e-js.e-grid.e-rtl .e-excelfilter .e-menu.e-rtl .e-list > a span.e-filternone.e-icon, .e-js.e-grid.e-rtl .e-excelfilter .e-menu.e-rtl .e-list > a span.e-sortdesc.e-icon, .e-js.e-grid.e-rtl .e-excelfilter .e-menu.e-rtl .e-list > a span.e-sortasc.e-icon, .e-js.e-grid.e-rtl .e-excelfilter .e-menu.e-rtl .e-list > a span.e-exceltick.e-icon {
+    .e-js.e-grid.e-rtl .e-excelfilter.e-js .e-menu.e-rtl .e-list > a span.e-filternone.e-icon, .e-js.e-grid.e-rtl .e-excelfilter.e-js .e-menu.e-rtl .e-list > a span.e-sortdesc.e-icon, .e-js.e-grid.e-rtl .e-excelfilter.e-js .e-menu.e-rtl .e-list > a span.e-sortasc.e-icon, .e-js.e-grid.e-rtl .e-excelfilter.e-js .e-menu.e-rtl .e-list > a span.e-exceltick.e-icon {
         right: 0px;
     }
 
@@ -29340,7 +29345,7 @@ background-image: url('../@{font-path}/icons-white.png');
 
 .mixin(@widget) when (@widget = excelfilter), (@widget = none) {
     /*Excel Filter Core*/
-    .e-excelfilter.e-dlgcontainer {
+    .e-excelfilter.e-js.e-dlgcontainer {
         min-width: 266px;
         padding: 0px;
         width: 266px;
@@ -29356,9 +29361,9 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-excelfilter.e-dlgcontainer,
-    .e-excelfilter .e-searchcontainer,
-    .e-excelfilter .e-searchcontainer input {
+    .e-excelfilter.e-js.e-dlgcontainer,
+    .e-excelfilter.e-js .e-searchcontainer,
+    .e-excelfilter.e-js .e-searchcontainer input {
         box-sizing: content-box;
     }
 
@@ -29374,7 +29379,7 @@ background-image: url('../@{font-path}/icons-white.png');
         content: "\e77a";
     }
 
-    .e-excelfilter .e-menu.e-vertical .e-list > a {
+    .e-excelfilter.e-js .e-menu.e-vertical .e-list > a {
           margin: 0px 10px 0px 15px;
         
 
@@ -29385,7 +29390,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-excelfilter .e-menu.e-vertical .e-list > ul .e-list > a {
+    .e-excelfilter.e-js .e-menu.e-vertical .e-list > ul .e-list > a {
         padding-left: 15px;
         & when (@skin= "material") {
             padding-left: 20px;
@@ -29395,32 +29400,32 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-excelfilter .e-menu.e-vertical li.e-separator,
-    .e-excelfilter .e-list > ul li.e-separator {
+    .e-excelfilter.e-js .e-menu.e-vertical li.e-separator,
+    .e-excelfilter.e-js .e-list > ul li.e-separator {
         margin: 4px 0px 4px 0px;
     }
 
-    .e-excelfilter .e-menu.e-vertical {
+    .e-excelfilter.e-js .e-menu.e-vertical {
         border: none;
     }
 
-    .e-excelfilter .e-menu .e-menulink .e-chkbox-wrap {
+    .e-excelfilter.e-js .e-menu .e-menulink .e-chkbox-wrap {
         top: 0;
         opacity: 1;
     }
 
-    .e-excelfilter .e-menu.e-vertical .e-exceltick::before {
+    .e-excelfilter.e-js .e-menu.e-vertical .e-exceltick::before {
         margin-left: -7px;
 		& when (@skin= "material") {
             margin-left: -1px;
         }
     }
 
-    .e-excelfilter .e-menu.e-vertical .e-exceltick:before {
+    .e-excelfilter.e-js .e-menu.e-vertical .e-exceltick:before {
         margin-left: ~"-7px\9";
     }
 
-    .e-excelfilter .e-searchcontainer {
+    .e-excelfilter.e-js .e-searchcontainer {
         position: relative;
         margin-left: 15px;
         margin-top: 4px;
@@ -29432,7 +29437,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-excelfilter .e-searchcontainer .e-fields {
+    .e-excelfilter.e-js .e-searchcontainer .e-fields {
         margin: 7px 0px;
 
         & when (@skin= "office-365") {
@@ -29440,27 +29445,27 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-excelfilter .e-checkboxlist {
+    .e-excelfilter.e-js .e-checkboxlist {
         width: 234px;
         height: 130px;
         outline: none;
     }
 
-    .e-excelfilter .e-searchbox .e-icon:before {
+    .e-excelfilter.e-js .e-searchbox .e-icon:before {
         display: inline-block;
     }
 
 
-    .e-excelfilter .e-searchbox .e-ejinputtext {
+    .e-excelfilter.e-js .e-searchbox .e-ejinputtext {
         width: 228px;
         height: 23px;
     }
 
-    .e-excelfilter .e-searchinput::-ms-check {
+    .e-excelfilter.e-js .e-searchinput::-ms-check {
         display: none;
     }
 
-    .e-excelfilter .e-btncontainer.e-fields {
+    .e-excelfilter.e-js .e-btncontainer.e-fields {
         & when not (@skin= "material") {
             width: 170px;
             margin: 16px 0px 0px 68px;
@@ -29472,8 +29477,8 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-excelfilter .e-btncontainer input,
-    .e-excelfilter .e-checkboxlist .e-ftrchk {
+    .e-excelfilter.e-js .e-btncontainer input,
+    .e-excelfilter.e-js .e-checkboxlist .e-ftrchk {
         margin-left: 10px;
 
         & when not (@skin= "material") {
@@ -29486,15 +29491,15 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-excelfilter .e-checkboxlist .e-ftrchk {
+    .e-excelfilter.e-js .e-checkboxlist .e-ftrchk {
         white-space: nowrap;
     }
 
-    .e-excelfilter .e-checkboxlist {
+    .e-excelfilter.e-js .e-checkboxlist {
         padding-top: 3px;
     }
 
-    .e-excelfilter .e-btncontainer > div {
+    .e-excelfilter.e-js .e-btncontainer > div {
         margin-bottom: 5px;
 
         & when (@skin= "office-365") {
@@ -29503,13 +29508,13 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-excelfilter .e-checkboxlist label.e-ftrchk,
-    .e-excelfilter .e-searchbox .e-searchitem {
+    .e-excelfilter.e-js .e-checkboxlist label.e-ftrchk,
+    .e-excelfilter.e-js .e-searchbox .e-searchitem {
         cursor: pointer;
         line-height: 11px;
     }
 
-    .e-excelfilter.e-dlgcustom {
+    .e-excelfilter.e-js.e-dlgcustom {
         width: 341px;
         padding: 10px 14px 0;
         box-sizing: content-box;
@@ -29519,7 +29524,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-excelfilter.e-dlgcustom .e-dlgfields {
+    .e-excelfilter.e-js.e-dlgcustom .e-dlgfields {
         padding-bottom: 14px;
         box-sizing: content-box;
 
@@ -29528,13 +29533,13 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-excelfilter.e-dlgcustom .e-dlgfields:last-child {
+    .e-excelfilter.e-js.e-dlgcustom .e-dlgfields:last-child {
         & when (@skin= "material") {
             padding-bottom: 0px;
         }
     }
 
-    .e-excelfilter.e-dlgcustom fieldset.e-fieldset {
+    .e-excelfilter.e-js.e-dlgcustom fieldset.e-fieldset {
         & when not (@skin= "material") {
             padding: 14px 8px 13px;
         }
@@ -29547,19 +29552,19 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-excelfilter.e-dlgcustom .e-fieldset legend {
+    .e-excelfilter.e-js.e-dlgcustom .e-fieldset legend {
         width: auto;
         margin-left: 3px;
         margin-bottom: 2px;
         padding: 0 3px;
     }
 
-    .e-excelfilter.e-dlgcustom .e-optable {
+    .e-excelfilter.e-js.e-dlgcustom .e-optable {
         border-collapse: separate;
         border-spacing: 1px;
     }
 
-    .e-excelfilter.e-dlgcustom .e-optable td {
+    .e-excelfilter.e-js.e-dlgcustom .e-optable td {
         width: 27px;
         padding: 0px 5px;
 
@@ -29568,7 +29573,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-excelfilter.e-dlgcustom .e-optable .e-predicate td {
+    .e-excelfilter.e-js.e-dlgcustom .e-optable .e-predicate td {
         padding-top: 11px;
         padding-bottom: 11px;
 
@@ -29582,7 +29587,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-excelfilter.e-dlgcustom .e-optable .e-predicate td:last-child {
+    .e-excelfilter.e-js.e-dlgcustom .e-optable .e-predicate td:last-child {
         padding-top: 8px;
 
         & when (@skin= "material") {
@@ -29594,7 +29599,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-excelfilter.e-dlgcustom .e-dlgfields .e-btncontainer {
+    .e-excelfilter.e-js.e-dlgcustom .e-dlgfields .e-btncontainer {
         width: 100%;
 
         & when not (@skin= "material") {
@@ -29613,7 +29618,7 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-excelfilter.e-dlgcustom .e-dlgfields .e-predicate .e-caption {
+    .e-excelfilter.e-js.e-dlgcustom .e-dlgfields .e-predicate .e-caption {
         margin-left: 5px;
         padding-right: 13px;
 
@@ -29625,19 +29630,19 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-excelfilter .e-dlgcustom.e-dialog .e-predicate td div.e-radsmall,
-    .e-excelfilter .e-dlgcustom.e-dialog .e-predicate td span.e-check-small {
+    .e-excelfilter.e-js .e-dlgcustom.e-dialog .e-predicate td div.e-radsmall,
+    .e-excelfilter.e-js .e-dlgcustom.e-dialog .e-predicate td span.e-check-small {
         & when (@skin= "office-365") {
             height: 32px;
             margin-bottom: -8px;
         }
     }
 
-    .e-excelfilter .e-hide {
+    .e-excelfilter.e-js .e-hide {
         display: none !important;
     }
 
-    .e-excelfilter .e-searchbox span {
+    .e-excelfilter.e-js.e-js .e-searchbox span {
         cursor: pointer;
         display: block;
         height: 16px;
@@ -29651,35 +29656,35 @@ background-image: url('../@{font-path}/icons-white.png');
         }
     }
 
-    .e-excelfilter.e-dlgcustom .e-widget [class^="e-"],
-    .e-excelfilter.e-dlgcustom.e-dialog,
-    .e-excelfilter.e-dlgcustom.e-dialog [class^="e-"] {
+    .e-excelfilter.e-js.e-dlgcustom .e-widget [class^="e-"],
+    .e-excelfilter.e-js.e-dlgcustom.e-dialog,
+    .e-excelfilter.e-js.e-dlgcustom.e-dialog [class^="e-"] {
         box-sizing: content-box;
     }
 
-    .e-excelfilter .e-ftrchk * {
+    .e-excelfilter.e-js .e-ftrchk * {
         box-sizing: content-box !important;
     }
 
-    .e-excelfilter.e-dlgcustom .e-ddl.e-widget [class^="e-"],
-    .e-excelfilter.e-dlgcustom .e-atc.e-widget [class^="e-"],
-    .e-excelfilter.e-dlgcustom .e-datewidget.e-widget [class^="e-"],
-    .e-excelfilter.e-dlgcustom .e-numeric.e-widget [class^="e-"],
-    .e-excelfilter.e-dlgcustom .e-ejinputtext {
+    .e-excelfilter.e-js.e-dlgcustom .e-ddl.e-widget [class^="e-"],
+    .e-excelfilter.e-js.e-dlgcustom .e-atc.e-widget [class^="e-"],
+    .e-excelfilter.e-js.e-dlgcustom .e-datewidget.e-widget [class^="e-"],
+    .e-excelfilter.e-js.e-dlgcustom .e-numeric.e-widget [class^="e-"],
+    .e-excelfilter.e-js.e-dlgcustom .e-ejinputtext {
         box-sizing: border-box;
     }
 
-    .e-excelfilter .e-menu .e-list .e-bghdrcolor {
+    .e-excelfilter.e-js .e-menu .e-list .e-bghdrcolor {
         padding: 0px;
         height: 26px;
     }
 
-    .e-excelfilter .e-menu .e-list .e-fghdrcolor {
+    .e-excelfilter.e-js .e-menu .e-list .e-fghdrcolor {
         padding-bottom: 4px;
         height: 26px;
     }
 
-    .e-excelfilter .e-menu.e-vertical .e-list ul li.e-bghdrcolor > a, .e-excelfilter .e-menu.e-vertical .e-list ul li.e-fghdrcolor > a {
+    .e-excelfilter.e-js .e-menu.e-vertical .e-list ul li.e-bghdrcolor > a, .e-excelfilter.e-js .e-menu.e-vertical .e-list ul li.e-fghdrcolor > a {
         padding: 0px;
     }
 
@@ -29687,7 +29692,7 @@ background-image: url('../@{font-path}/icons-white.png');
         font-size: 13px;
     }
 
-    .e-excelfilter .e-menu .e-list .e-valcolor {
+    .e-excelfilter.e-js .e-menu .e-list .e-valcolor {
         margin: 0 auto;
         height: 16px;
         width: 70px;
@@ -37580,7 +37585,7 @@ slideRight Animate
         color: inherit;
     }
 
-    .e-js.e-spreadsheet .e-excelfilter .e-in-wrap {
+    .e-js.e-spreadsheet .e-excelfilter.e-js .e-in-wrap {
         border: 1px solid;
     }
 
@@ -41451,7 +41456,7 @@ slideRight Animate
         display: none;
     }
     /*---------- Excel Like Filter Changes------- */
-    .e-js.e-spreadsheet .e-excelfilter .e-btncontainer input {
+    .e-js.e-spreadsheet .e-excelfilter.e-js .e-btncontainer input {
         padding: .2em .4em .3em;
     }
 
@@ -43622,6 +43627,8 @@ slideRight Animate
         }
     }
 }
+
+.mixin(@widget) when (@widget = mediaplayer), (@widget = none) {
 /*------------------------------------- Media Player-------------------------------------------*/
 .e-js.e-media-player .e-media-stop:before {
     content: "\e126";
@@ -45252,7 +45259,7 @@ slideRight Animate
             box-sizing: content-box;
 }
 
-
+}
 
 
 /*------------------------------------- End Media Player-------------------------------------------*/

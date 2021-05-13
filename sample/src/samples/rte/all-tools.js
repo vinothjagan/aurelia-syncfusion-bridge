@@ -23,7 +23,7 @@ export class AllToolsRTE {
       tooltip: 'Custom UnOrderList',
       css: 'e-rte-toolbar-icon e-rte-unlistitems customUnOrder',
       text: 'Smiley',
-      listImage: "url('//js.syncfusion.com/demos/web/content/images/rte/Smiley-GIF.gif')"
+      listImage: "url('//js.syncfusion.com/demos/jquery/content/images/rte/Smiley-GIF.gif')"
     }],
     customOrderedList: [{
       name: 'orderInsert',
